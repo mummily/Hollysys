@@ -1,0 +1,518 @@
+;*************************************************************************
+;***                                                                   ***
+;***      HollySys        (c) 2019                                     ***
+;***      Hollysys AutoThink K Series I/0                              ***
+;***      K-VIO01 Versatile Input Output  Module                       ***
+;***      Profibus-DP Slave                                            ***
+;***                                                                   ***
+;*************************************************************************
+;***                                                                   ***
+;***      Filename: K-VIO01.GSD                                        ***
+;***      Version : V1.0                                               ***
+;***      Data    : 6 May,2019                                        ***                                           
+;***                                                                   ***
+;*************************************************************************
+
+;*****************************************************************************
+;      ATTENTION:
+;      ==========
+;      Changes in this file can cause configuration or communication problems.
+;      This file is compatible to the firmware of the device.
+;
+;*****************************************************************************
+
+#Profibus_DP
+
+;Prm-Text-Def-List
+PrmText = 1
+Text(0) = "通道无类型"
+Text(1) = "配置为AI通道"
+Text(2) = "配置为AO通道"
+Text(3) = "配置为DI通道"
+Text(4) = "配置为DO通道"
+Text(5) = "配置为PI通道"
+EndPrmText
+
+PrmText = 2
+Text(2) = "50Hz/60Hz工频滤波"
+Text(1) = "无工频滤波"
+EndPrmText
+
+PrmText = 3
+Text(0) = "不使能通道"
+Text(2) = "使能通道和Namur诊断"
+Text(3) = "使能通道和常规诊断"
+EndPrmText
+
+PrmText = 4
+Text(1) = "二线制"
+Text(2) = "四线制"
+EndPrmText
+
+PrmText = 5
+Text(1) = "ai_hart不使能"
+Text(2) = "ai_hart使能"
+EndPrmText
+
+PrmText = 6
+Text(74) = "0~22.7mA"
+EndPrmText
+
+PrmText = 7
+Text(1)   = "0ms "
+Text(2)   = "20ms "
+Text(4)   = "50ms "
+Text(8)   = "100ms "
+Text(16)  = "150ms "
+Text(32)  = "200ms "
+Text(64)  = "500ms "
+Text(128) = "1s "
+
+EndPrmText
+
+PrmText = 8
+Text(0) = "不使能通道"
+Text(2) = "使能通道但不使能断线诊断"
+Text(3) = "使能通道和断线诊断"
+EndPrmText
+
+PrmText = 9
+Text(0) = "输出保持"
+Text(3) = "输出安全预设值"
+EndPrmText
+
+PrmText = 10
+Text(1) = "ao_hart不使能"
+Text(2) = "ao_hart使能"
+EndPrmText
+
+PrmText     = 11
+Text(85)    = "触点型"
+Text(204)   = "电平型"
+EndPrmtext
+
+PrmText     = 12
+Text(85)    = "扰动使能"
+Text(204)   = "扰动关闭"
+EndPrmtext
+
+PrmText     = 13
+Text(85)    = "SOE使能"
+Text(204)   = "SOE关闭"
+EndPrmtext
+
+PrmText = 14
+Text(0) = "通道不使能"
+Text(3) = "使能通道"
+EndPrmText
+
+PrmText     = 15
+Text(0)     = "通道线路故障不使能"
+Text(3)     = "通道线路故障使能"
+EndPrmtext
+
+PrmText     = 16
+Text(1)     = "无Namur功能"
+Text(2)     = "电平型2.5mA"
+Text(3)     = "电平型7mA"
+EndPrmtext
+
+PrmText     = 17
+Text(1)     = "0ms"
+Text(2)     = "10ms"
+Text(4)     = "20ms"
+Text(8)     = "50ms"
+Text(16)    = "100ms"
+Text(32)    = "200ms"
+Text(64)    = "500ms"
+Text(128)    = "1s"
+EndPrmtext
+
+;DO模块参数
+PrmText = 18
+Text(0) = "通道不使能"
+Text(3) = "使能通道"
+EndPrmText
+
+PrmText = 19
+Text(0) = "不使能通道诊断"
+Text(1) = "使能通道查询诊断"
+Text(2) = "使能通道过流诊断"
+EndPrmText
+
+PrmText = 20
+Text(0) = "输出保持"
+Text(3) = "输出安全预设值"
+EndPrmText
+
+PrmText = 21
+Text(0) = "断开" 
+Text(3) = "闭合"
+EndPrmText
+
+PrmText = 22
+Text(0) = "电平型输出" 
+Text(3) = "触点型输出"
+EndPrmText
+
+PrmText     = 23  	 ;通道级选择，默认测频
+Text(0)    = "计数模式"
+Text(1)    = "测频模式"               
+EndPrmtext
+
+PrmText     = 24 	;通道级选择，默认值下降沿
+Text(0)    = "上升沿触发"
+Text(3)    = "下降沿触发"
+EndPrmtext 
+
+PrmText     = 25  	 ;
+Text(0)    = "正弦波"
+Text(1)    = "脉冲"               
+EndPrmtext
+
+PrmText     = 26  	 ;
+Text(0)    = "1ms"
+Text(1)    = "500us"  
+Text(2)    = "200us" 
+Text(3)    = "20us"              
+EndPrmtext
+
+PrmText     = 27 	;通道级选择
+Text(0)    = "下限频率1hz"
+Text(1)    = "下限频率0.1hz"
+Text(3)    = "下限频率0hz"
+EndPrmtext 
+
+PrmText     = 28	;通道级选择，默认使能
+Text(0)     = "不使能"
+Text(3)     = "使能"
+EndPrmtext
+
+PrmText     = 29 	;通道级选择，默认值100us
+Text(1)    = "10ms"
+Text(2)    = "20ms"
+Text(4)    = "50ms"
+Text(8)    = "100ms"
+Text(16)    = "200ms"
+Text(32)    = "500ms"
+Text(64)    = "1s"
+EndPrmtext 
+
+
+;<Ext-User-Prm-Data-Def-List>
+
+ExtUserPrmData = 1 "AI通道类型"
+Unsigned8 1 0,1,2,3,4,5
+Prm_Text_Ref = 1
+EndExtUserPrmData
+
+ExtUserPrmData = 2 "AI工频抑制"
+Unsigned8 2 1,2
+Prm_Text_Ref = 2
+EndExtUserPrmData
+
+ExtUserPrmData = 3 "AI通道状态"
+BitArea(6-7) 3 0,2,3                      ;Default=3, Min=0, Max=3
+Prm_Text_Ref = 3
+EndExtUserPrmData
+
+ExtUserPrmData = 4 "AI接线方式"
+BitArea(4-5) 1 1,2                      
+Prm_Text_Ref = 4
+EndExtUserPrmData
+
+ExtUserPrmData = 5 "AI_HART功能"
+BitArea(2-3) 1 1,2                      
+Prm_Text_Ref = 5
+EndExtUserPrmData
+
+ExtUserPrmData = 6 "AI通道量程"
+Unsigned8 74 74
+Prm_Text_Ref = 6
+EndExtUserPrmData
+
+ExtUserPrmData = 7 "AI通道滤波"
+Unsigned8 1 1,2,4,8,16,32,64,128
+Prm_Text_Ref = 7
+EndExtUserPrmData
+
+ExtUserPrmData = 8 "AO通道类型"
+Unsigned8 2 0,1,2,3,4,5
+Prm_Text_Ref = 1
+EndExtUserPrmData
+
+ExtUserPrmData = 9 "AO通道状态"
+BitArea(6-7) 3 0,2,3                      ;Default=3, Min=0, Max=3
+Prm_Text_Ref = 8
+EndExtUserPrmData
+
+ExtUserPrmData = 10 "AO通道故障输出模式"
+BitArea(4-5) 0 0,3                      ;Default=0, Min=0, Max=3
+Prm_Text_Ref = 9
+EndExtUserPrmData
+
+ExtUserPrmData = 11 "AO_HART功能"
+BitArea(2-3) 1 1,2                      ;Default=0, Min=0, Max=3
+Prm_Text_Ref = 10
+EndExtUserPrmData
+
+ExtUserPrmData = 12 "AO通道量程"
+Unsigned8 74 74
+Prm_Text_Ref = 6
+EndExtUserPrmData
+
+ExtUserPrmData = 13 "AO通道安全预设值"
+Unsigned16  10400 0-65535         ;Default=10400, Min=0, Max=65535
+EndExtUserPrmData
+
+ExtUserPrmData = 14 "DI通道类型"
+Unsigned8 3 0,1,2,3,4,5
+Prm_Text_Ref = 1
+EndExtUserPrmData
+
+ExtUserPrmData = 15 "DI输入信号类型选择"
+Unsigned8 85 85,204 
+Prm_Text_Ref = 11
+EndExtUserPrmData
+
+ExtUserPrmData  = 16 "DI扰动监测模式选择" 
+Unsigned8 85 85,204
+Prm_Text_Ref    = 12
+EndExtUserPrmData
+
+ExtUserPrmData  = 17 "SOE功能"
+Unsigned8 204 85,204
+Prm_Text_Ref    = 13
+EndExtUserPrmData
+
+ExtUserPrmData = 18 "DI通道状态"
+BitArea(6-7) 3 0,3			                
+Prm_Text_Ref = 14
+EndExtUserPrmData
+
+ExtUserPrmData  = 19 "DI通道线路故障"
+BitArea(4-5) 0 0,3
+Prm_Text_Ref    = 15
+EndExtUserPrmData
+
+ExtUserPrmData  = 20 "Namur功能"
+BitArea(2-3) 1 1,2,3
+Prm_Text_Ref    = 16
+EndExtUserPrmData
+
+ExtUserPrmData = 21  "DI滤波时间"
+Unsigned8 8 1,2,4,8,16,32,64
+Prm_Text_Ref    = 17
+EndExtUserPrmData
+
+ExtUserPrmData = 22 "DO通道类型"
+Unsigned8 4 0,1,2,3,4,5
+Prm_Text_Ref = 1
+EndExtUserPrmData
+
+ExtUserPrmData = 23 "DO通道状态"
+BitArea(6-7) 2 0,3
+Prm_Text_Ref = 18
+EndExtUserPrmData
+
+ExtUserPrmData = 24 "DO通道诊断"
+BitArea(4-5) 1 0,1,2
+Prm_Text_Ref = 19
+EndExtUserPrmData
+
+ExtUserPrmData = 25 "DO通道故障输出模式"
+BitArea(2-3) 0 0,3			                
+Prm_Text_Ref = 20
+EndExtUserPrmData
+
+ExtUserPrmData = 26 "DO通道安全预设值"
+BitArea(0-1) 0 0,3			                
+Prm_Text_Ref = 21
+EndExtUserPrmData
+
+ExtUserPrmData = 27 "DO通道触点类型"
+BitArea(6-7) 0 0,3			                
+Prm_Text_Ref = 22
+EndExtUserPrmData
+
+ExtUserPrmData = 28 "PI通道类型"
+Unsigned8 4 0,1,2,3,4,5
+Prm_Text_Ref = 1
+EndExtUserPrmData
+
+ExtUserPrmData  = 29 "PI工作模式 "                 
+Bit(6-7) 1 0,1
+Prm_Text_Ref    = 23
+EndExtUserPrmData
+
+ExtUserPrmData  = 30 "PI 触发模式" 
+BitArea(4-5) 3 0,3
+Prm_Text_Ref    = 24
+EndExtUserPrmData
+
+ExtUserPrmData  = 31 "PI 信号类型" 
+BitArea(2-3) 1 0,1
+Prm_Text_Ref    = 25
+EndExtUserPrmData
+
+ExtUserPrmData  = 32 "PI通道脉冲电平最小宽度" 
+BitArea(0-1) 3 0,1,2,3
+Prm_Text_Ref    = 26
+EndExtUserPrmData
+
+ExtUserPrmData  = 33 "PI通道断路报警频率" 
+BitArea(6-7) 2 0,1,2
+Prm_Text_Ref    = 27
+EndExtUserPrmData
+
+ExtUserPrmData = 34 "DI通道状态"
+BitArea(6-7) 3 0,3			                
+Prm_Text_Ref = 28
+EndExtUserPrmData
+
+ExtUserPrmData = 35  "PI滤波时间"
+Unsigned8 8 1,2,4,8,16,32,64
+Prm_Text_Ref    = 29
+EndExtUserPrmData
+
+;General parameters
+GSD_Revision        = 1			
+Vendor_Name         = "HollySys"
+Model_Name          = "K-VIO01"
+Revision            = "Version 1.0"
+Ident_Number        = 0x0790
+Protocol_Ident      = 0
+Station_Type        = 0
+FMS_supp            = 0
+Hardware_Release    = "K-VIO01-XXX"
+Software_Release    = "K-VIO01-XXX"
+9.6_supp            = 0
+19.2_supp           = 0
+31.25_supp	    	= 0
+45.45_supp 	    	= 0
+93.75_supp          = 0
+187.5_supp          = 1
+500_supp            = 1
+1.5M_supp           = 1
+3M_supp             = 1
+6M_supp             = 0
+12M_supp            = 0
+MaxTsdr_9.6         = 60
+MaxTsdr_19.2        = 60
+MaxTsdr_31.25       = 60
+MaxTsdr_45.45       = 60
+MaxTsdr_93.75       = 60
+MaxTsdr_187.5       = 100
+MaxTsdr_500         = 100
+MaxTsdr_1.5M        = 150
+MaxTsdr_3M          = 250 
+MaxTsdr_6M          = 450 
+MaxTsdr_12M         = 800
+
+Redundancy          = 0 ; don't support redundancy 
+Repeater_Ctrl_Sig   = 0
+24V_Pins            = 0
+DPV1_Slave          = 1
+
+;Slave-Specification:
+Freeze_Mode_supp     = 1 ;support freeze mode
+Sync_Mode_supp       = 1 ;support synchronism mode
+Auto_Baud_supp       = 1 ;support baudrate auto detect
+Slave_Family         = 3@Turbin Speed Input/Output		
+Set_Slave_Add_supp   = 0 ;donot support slave address config
+Min_Slave_Intervall  = 20 ;mininum slave interval is 2ms
+Modular_Station      = 0
+Max_Output_Len	     = 72
+Max_Input_Len        = 82
+Max_Data_Len         = 154
+Max_Diag_Data_Len    = 59
+
+;UserPrmData:
+Max_User_Prm_Data_Len      = 96
+;User_Prm_Data_Len     =      3
+User_Prm_Data         =      0x00,0x00,0x00,\ ;3 bytes prm_data for dpv1 
+
+							 0x01,\ ;Channel type:AI.
+							 0x02,\ ;50/60Hz suppression
+							 0xD4,\ ;Channel status:2bit. wiring mode:2bit.hart function:2bit.reserved:2bit.
+							 0x4A,\ ;Ch scale.	
+                             0x01,\ ;Filter time
+							 
+							 0x02,\ ;Channel type:AO.
+							 0xC4,\ ;Channel status:2bit. CH fault action mode:2bit.hart function:2bit.reserved:2bit.
+							 0x4A,\ ;Ch scale.		
+							 0x28,0xA0,;preset safe value
+							 
+							 0x03,\ ;Channel type:DI.							 
+							 0x55,\ ;DI channel input type
+							 0x55,\ ;DI channel Chatter alarm
+							 0xCC,\; Current Channel SOE Function	
+							 0xF4,\ ;Channel status:2bit. External line alert:2bit.Namur function:2bit.reserved:2bit.
+							 0x08,\ ;DI Channel filter time
+
+							 0x04,\ ;Channel type:DO.	
+							 0xD0,\ ;Channel status:2bit. CH diag:2bit.CH fault action mode:2bit.CH preset safe value:2bit.
+							 0x00,\ ;Channel contact type:2bit.reserved:6bit. 	
+							 							 
+							 0x05,\ ;Channel type:PI.
+							 0x77,\ ;Channel Work Mode:2bit. Channel Trigge Mode:2bit.Channel Signal Mode:2bit.Channel Minimum Pulse Width:2bit.
+							 0x80,\ ;Channel Disconnection Alarm Frequency:2bit. Channel status:2bit.reserved:4bit.
+							 0x01,\ ;Channel filter time:PI.							 
+
+Ext_User_Prm_Data_Ref(3) = 1
+Ext_User_Prm_Data_Ref(4) = 2
+Ext_User_Prm_Data_Ref(5) = 3
+;Ext_User_Prm_Data_Ref(5) = 4
+Ext_User_Prm_Data_Ref(5) = 5
+Ext_User_Prm_Data_Ref(6) = 6
+Ext_User_Prm_Data_Ref(7) = 7
+
+Ext_User_Prm_Data_Ref(8) = 8
+Ext_User_Prm_Data_Ref(9) = 9
+Ext_User_Prm_Data_Ref(9) = 10
+Ext_User_Prm_Data_Ref(9) = 11
+Ext_User_Prm_Data_Ref(10) = 12
+Ext_User_Prm_Data_Ref(11) = 13
+
+Ext_User_Prm_Data_Ref(13) = 14
+Ext_User_Prm_Data_Ref(14) = 15
+Ext_User_Prm_Data_Ref(15) = 16
+Ext_User_Prm_Data_Ref(16) = 17
+Ext_User_Prm_Data_Ref(17) = 18
+Ext_User_Prm_Data_Ref(17) = 19
+Ext_User_Prm_Data_Ref(17) = 20
+Ext_User_Prm_Data_Ref(17) = 21
+
+Ext_User_Prm_Data_Ref(18) = 22
+Ext_User_Prm_Data_Ref(19) = 23
+Ext_User_Prm_Data_Ref(19) = 24
+Ext_User_Prm_Data_Ref(19) = 25
+Ext_User_Prm_Data_Ref(19) = 26
+Ext_User_Prm_Data_Ref(20) = 27
+
+Ext_User_Prm_Data_Ref(21) = 28
+Ext_User_Prm_Data_Ref(22) = 29
+Ext_User_Prm_Data_Ref(22) = 30
+Ext_User_Prm_Data_Ref(22) = 31
+Ext_User_Prm_Data_Ref(22) = 32
+Ext_User_Prm_Data_Ref(23) = 33
+Ext_User_Prm_Data_Ref(23) = 33
+Ext_User_Prm_Data_Ref(25) = 35
+
+;Module Definition List
+
+Module = "empty" 	   			0xFF
+EndModule
+Module = "输出校验" 	   		0x82,0x03,0xE1,0x00
+EndModule
+Module = "输出通道品质"         0x82,0x03,0xE1,0x00
+EndModule
+Module = "心跳冗余"             0x42,0x01,0xE1,0x00
+EndModule
+Module = "模块状态"             0x42,0x43,0xE1,0x00
+EndModule
+Module = "输入校验"             0x42,0x03,0xE1,0x00
+EndModule
+Module = "输入通道品质"         0x42,0x03,0xE1,0x00
+EndModule
+
