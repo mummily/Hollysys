@@ -6825,7 +6825,7 @@
 <XPD:REF name="Context">t94phOXpvEa+5iBBwC3KDgAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLSequenceDiagram" guid="DGhFJoqsrUCZSqIZOMWgWQAA">
-<XPD:ATTR name="Name" type="string">SequenceDiagram1</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">设备树.添加设备</XPD:ATTR>
 <XPD:REF name="DiagramOwner">Oziq+nzy8Uuzqh6RXn2RpAAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLSequenceDiagramView" guid="iaQuiZOGy0y2USfdLn4O8QAA">
 <XPD:REF name="Diagram">DGhFJoqsrUCZSqIZOMWgWQAA</XPD:REF>
@@ -7810,7 +7810,7 @@
 <XPD:REF name="Context">t94phOXpvEa+5iBBwC3KDgAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLSequenceDiagram" guid="pA4/YI5lMEaiDAAOewKGHAAA">
-<XPD:ATTR name="Name" type="string">SequenceDiagram1</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">远程机柜.冗余设备</XPD:ATTR>
 <XPD:REF name="DiagramOwner">IIk/csdPwE6UTy+nMTGr0wAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLSequenceDiagramView" guid="NEQP8GIi+0KRtak5Jf/EVwAA">
 <XPD:REF name="Diagram">pA4/YI5lMEaiDAAOewKGHAAA</XPD:REF>
