@@ -71,12 +71,14 @@ Private Sub InitProperty(sPouName As String)
         For index = 1 To 12
             With .HN_INPUT(index)
                 .LISRC = ULOGIC_arr(rowLogic, ULOGIC("LISRC(" & index & ")"))
+                .LISRC = ReplaceLISRCSuffix(.LISRC)
             End With
         Next
         
         For index = 1 To 12
             With .HN_OUTPUT(index)
                 .LODSTN = ULOGIC_arr(rowLogic, ULOGIC("LODSTN(" & index & ")"))
+                .LODSTN = ReplaceLODSTNSuffix(.LODSTN)
                 .LOSRC = ULOGIC_arr(rowLogic, ULOGIC("LOSRC(" & index & ")"))
                 .LOENBL = ULOGIC_arr(rowLogic, ULOGIC("LOENBL(" & index & ")"))
             End With
@@ -1034,3 +1036,28 @@ Private Function GetOutputYPosition(outputElement As T_HN_OUTPUT, lastYPosition 
     
 End Function
 
+'-----------------------------------------------------------------------------------------------------------
+' Purpose: LISRC替换后缀
+' Remark:
+'-----------------------------------------------------------------------------------------------------------
+Private Function ReplaceLISRCSuffix(LISRC As String)
+    Dim newLISRC As String
+    newLISRC = LISRC
+    
+    newLISRC = Replace(newLISRC, ".PVFL", ".DV")
+    newLISRC = Replace(newLISRC, ".SO", ".DI")
+    newLISRC = Replace(newLISRC, ".PVLOFL", ".ALIND")
+    newLISRC = Replace(newLISRC, ".PVLLFL", ".LLIND")
+    newLISRC = Replace(newLISRC, ".PVHIFL", ".AHIND")
+    newLISRC = Replace(newLISRC, ".PVHHFL", ".HHIND")
+    
+    ReplaceLISRCSuffix = newLISRC
+End Function
+
+'-----------------------------------------------------------------------------------------------------------
+' Purpose: LODSTN替换后缀
+' Remark: 目前替换的项和LISRC一致，若不一致需要更新
+'-----------------------------------------------------------------------------------------------------------
+Private Function ReplaceLODSTNSuffix(LODSTN As String)
+    ReplaceLODSTNSuffix = ReplaceLISRCSuffix(LODSTN)
+End Function
