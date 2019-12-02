@@ -359,7 +359,7 @@ Private Sub WriteXML(sPouName As String)
                 POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID_DT & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
-                POU.WriteLine "<text>" & .DLYTIME & "</text>"
+                POU.WriteLine "<text>" & "T#" & .DLYTIME & "s" & "</text>"
                 POU.WriteLine "<Comment>?????</Comment>"
                 POU.WriteLine "<negate>false</negate>"
                 POU.WriteLine "<ttype>4</ttype>"
