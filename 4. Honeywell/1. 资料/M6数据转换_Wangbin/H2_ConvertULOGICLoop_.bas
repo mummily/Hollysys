@@ -45,7 +45,7 @@ Sub H2_ConvertULOGICLoop()
             Call InitProperty(sPouName)
         
             '输出至XML
-            Call WriteXML
+            Call WriteXML(sPouName)
         End If
     Next ULOGIC_i
 End Sub
@@ -257,7 +257,7 @@ End Sub
 'Purpose: EXCEL信息写入XML
 'History: 9-25-2019
 '-----------------------------------------------------------------------------------------------------------
-Private Sub WriteXML()
+Private Sub WriteXML(sPouName As String)
      '创建文件
     Set fs = CreateObject("Scripting.FileSystemObject")
     Set POU = fs.CreateTextFile(ExcelInfo.PATH, True)
@@ -331,7 +331,7 @@ Private Sub WriteXML()
                 POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID_R1 & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
-                POU.WriteLine "<text>" & .R1 & "</text>"
+                POU.WriteLine "<text>" & sPouName & "_" & .R1 & "</text>"
                 POU.WriteLine "<Comment>?????</Comment>"
                 POU.WriteLine "<negate>false</negate>"
                 POU.WriteLine "<ttype>4</ttype>"
@@ -342,7 +342,7 @@ Private Sub WriteXML()
                 POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID_R2 & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
-                POU.WriteLine "<text>" & .R2 & "</text>"
+                POU.WriteLine "<text>" & sPouName & "_" & .R2 & "</text>"
                 POU.WriteLine "<Comment>?????</Comment>"
                 POU.WriteLine "<negate>false</negate>"
                 POU.WriteLine "<ttype>4</ttype>"
@@ -1044,12 +1044,14 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
     Dim newLISRC As String
     newLISRC = LISRC
     
-    newLISRC = Replace(newLISRC, ".PVFL", ".DV")
-    newLISRC = Replace(newLISRC, ".SO", ".DI")
-    newLISRC = Replace(newLISRC, ".PVLOFL", ".ALIND")
-    newLISRC = Replace(newLISRC, ".PVLLFL", ".LLIND")
-    newLISRC = Replace(newLISRC, ".PVHIFL", ".AHIND")
-    newLISRC = Replace(newLISRC, ".PVHHFL", ".HHIND")
+    If newLISRC <> "--.--" Then
+        newLISRC = Replace(newLISRC, ".PVFL", ".DV")
+        newLISRC = Replace(newLISRC, ".SO", ".DI")
+        newLISRC = Replace(newLISRC, ".PVLOFL", ".ALIND")
+        newLISRC = Replace(newLISRC, ".PVLLFL", ".LLIND")
+        newLISRC = Replace(newLISRC, ".PVHIFL", ".AHIND")
+        newLISRC = Replace(newLISRC, ".PVHHFL", ".HHIND")
+    End If
     
     ReplaceLISRCSuffix = newLISRC
 End Function
@@ -1059,5 +1061,15 @@ End Function
 ' Remark: 目前替换的项和LISRC一致，若不一致需要更新
 '-----------------------------------------------------------------------------------------------------------
 Private Function ReplaceLODSTNSuffix(LODSTN As String)
-    ReplaceLODSTNSuffix = ReplaceLISRCSuffix(LODSTN)
+    Dim newLISRC As String
+    newLISRC = LODSTN
+    
+    If newLISRC <> "--.--" Then
+        newLISRC = ReplaceLISRCSuffix(newLISRC)
+        newLISRC = Replace(newLISRC, ".", "_")
+        newLISRC = Replace(newLISRC, "(", "")
+        newLISRC = Replace(newLISRC, ")", "")
+    End If
+    
+    ReplaceLODSTNSuffix = newLISRC
 End Function
