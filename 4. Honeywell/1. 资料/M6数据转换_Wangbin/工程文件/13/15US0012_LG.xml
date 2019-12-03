@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+<path><![CDATA[\/ULOGIC]]></path>
+<name>15US0012_LG</name>
+<secondName></secondName>
+<description></description>
+<flags>2048</flags>
+<POUCycle>500</POUCycle>
+<auto-sort>0</auto-sort>
+<exporttime>2014-04-29 21:41:00</exporttime>
+<amendtime>2014-04-29 21:40:40</amendtime>
+<downloadtime></downloadtime>
+<modifier></modifier>
+<PouPaperSize>AX</PouPaperSize>
+<PouPrintType>0</PouPrintType>
+<interface>
+<![CDATA[PROGRAM 15US0012_LG
+VAR
+END_VAR]]>
+</interface>
+<cfc>
+<element type="input">
+<id>1</id>
+<AT_position>10,2</AT_position>
+<text>15GSC0030.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>2</id>
+<AT_position>10,8</AT_position>
+<text>15GSC0031.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="output">
+<id>3</id>
+<position>20,2</position>
+<text>15XV0036_LG.FL(8)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
+<element type="output">
+<id>4</id>
+<position>20,8</position>
+<text>15XV0037_LG.FL(8)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>2</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>1</sortid>
+</element>
+</cfc>
+</pou>

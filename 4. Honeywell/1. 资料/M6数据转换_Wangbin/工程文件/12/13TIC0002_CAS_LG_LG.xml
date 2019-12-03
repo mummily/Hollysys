@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+<path><![CDATA[\/ULOGIC]]></path>
+<name>13TIC0002_CAS_LG_LG</name>
+<secondName></secondName>
+<description></description>
+<flags>2048</flags>
+<POUCycle>500</POUCycle>
+<auto-sort>0</auto-sort>
+<exporttime>2014-04-29 21:41:00</exporttime>
+<amendtime>2014-04-29 21:40:40</amendtime>
+<downloadtime></downloadtime>
+<modifier></modifier>
+<PouPaperSize>AX</PouPaperSize>
+<PouPrintType>0</PouPrintType>
+<interface>
+<![CDATA[PROGRAM 13TIC0002_CAS_LG_LG
+VAR
+NN2(2070): REAL := 2.000000 ;       (*NN2ÃèÊö*)
+NN3(2070): REAL := 0.000000 ;       (*NN3ÃèÊö*)
+NN4(2070): REAL := 3.000000 ;       (*NN4ÃèÊö*)
+NN5(2070): REAL := 180.0000 ;       (*NN5ÃèÊö*)
+NN6(2070): REAL := 260.0000;       (*NN6ÃèÊö*)
+END_VAR]]>
+</interface>
+<cfc>
+<element type="input">
+<id>1</id>
+<AT_position>10,2</AT_position>
+<text>13GSO0039.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>2</id>
+<AT_position>10,8</AT_position>
+<text>13TIC0002_CAS.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>4</id>
+<AT_position>15,5</AT_position>
+<isinst>TRUE</isinst>
+<text>AND</text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>5</id>
+<AT_position>25,5</AT_position>
+<isinst>TRUE</isinst>
+<text>TP</text>
+<AT_type>TP</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>1</sortid>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<output negate="false" visible="true" pinname="Q"/>
+<output negate="false" visible="true" pinname="ET"/>
+</element>
+<element type="input">
+<id>3</id>
+<AT_position>24,7</AT_position>
+<text>3.000000</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="output">
+<id>6</id>
+<position>35,4</position>
+<text>13TY0002_4.MODATTR</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>5</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>2</sortid>
+</element>
+<element type="output">
+<id>7</id>
+<position>35,6</position>
+<text>13TY0002_4.MODE</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>5</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>3</sortid>
+</element>
+<element type="output">
+<id>8</id>
+<position>35,8</position>
+<text>13TIC0002A.MODATTR</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>5</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>4</sortid>
+</element>
+<element type="output">
+<id>9</id>
+<position>35,10</position>
+<text>13TIC0002A.MODE</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>5</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>5</sortid>
+</element>
+<element type="output">
+<id>10</id>
+<position>35,12</position>
+<text>13TIC0002A.SP</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>5</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>6</sortid>
+</element>
+<element type="output">
+<id>11</id>
+<position>35,14</position>
+<text>13TIC0002B.MODATTR</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>5</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>7</sortid>
+</element>
+<element type="output">
+<id>12</id>
+<position>35,16</position>
+<text>13TIC0002B.MODE</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>5</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>8</sortid>
+</element>
+<element type="output">
+<id>13</id>
+<position>35,18</position>
+<text>13TIC0002B.SP</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>5</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>9</sortid>
+</element>
+</cfc>
+</pou>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+<path><![CDATA[\/ULOGIC]]></path>
+<name>13XV0112_LG_LG</name>
+<secondName></secondName>
+<description>N2 PURGE PC CIR OF A1301</description>
+<flags>2048</flags>
+<POUCycle>500</POUCycle>
+<auto-sort>0</auto-sort>
+<exporttime>2014-04-29 21:41:00</exporttime>
+<amendtime>2014-04-29 21:40:40</amendtime>
+<downloadtime></downloadtime>
+<modifier></modifier>
+<PouPaperSize>AX</PouPaperSize>
+<PouPrintType>0</PouPrintType>
+<interface>
+<![CDATA[PROGRAM 13XV0112_LG_LG
+VAR
+END_VAR]]>
+</interface>
+<cfc>
+<element type="input">
+<id>1</id>
+<AT_position>10,2</AT_position>
+<text>13GSC0113.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>3</id>
+<AT_position>15,2</AT_position>
+<isinst>TRUE</isinst>
+<text>NOT</text>
+<AT_type>NOT</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>4</id>
+<AT_position>25,2</AT_position>
+<isinst>TRUE</isinst>
+<text>TP</text>
+<AT_type>TP</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>1</sortid>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="2" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<output negate="false" visible="true" pinname="Q"/>
+<output negate="false" visible="true" pinname="ET"/>
+</element>
+<element type="input">
+<id>2</id>
+<AT_position>24,4</AT_position>
+<text>2.000000</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="output">
+<id>5</id>
+<position>35,2</position>
+<text>13XV0112.I0</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>4</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>2</sortid>
+</element>
+</cfc>
+</pou>

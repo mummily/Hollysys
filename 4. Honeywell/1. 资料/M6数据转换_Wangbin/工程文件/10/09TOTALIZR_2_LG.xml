@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+<path><![CDATA[\/ULOGIC]]></path>
+<name>09TOTALIZR_2_LG</name>
+<secondName></secondName>
+<description></description>
+<flags>2048</flags>
+<POUCycle>500</POUCycle>
+<auto-sort>0</auto-sort>
+<exporttime>2014-04-29 21:41:00</exporttime>
+<amendtime>2014-04-29 21:40:40</amendtime>
+<downloadtime></downloadtime>
+<modifier></modifier>
+<PouPaperSize>AX</PouPaperSize>
+<PouPrintType>0</PouPrintType>
+<interface>
+<![CDATA[PROGRAM 09TOTALIZR_2_LG
+VAR
+END_VAR]]>
+</interface>
+<cfc>
+<element type="input">
+<id>1</id>
+<AT_position>10,2</AT_position>
+<text>TIME1.FL(9)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="output">
+<id>2</id>
+<position>20,2</position>
+<text>11FQ0101_DAY.RESETFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
+<element type="output">
+<id>3</id>
+<position>20,2</position>
+<text>11FQ0201_DAY.RESETFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>1</sortid>
+</element>
+<element type="output">
+<id>4</id>
+<position>20,2</position>
+<text>11FQ0102_DAY.RESETFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>2</sortid>
+</element>
+<element type="output">
+<id>5</id>
+<position>20,2</position>
+<text>11FQ0202_DAY.RESETFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>3</sortid>
+</element>
+</cfc>
+</pou>

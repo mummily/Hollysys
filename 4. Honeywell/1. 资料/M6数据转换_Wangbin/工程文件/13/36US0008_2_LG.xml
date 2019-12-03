@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+<path><![CDATA[\/ULOGIC]]></path>
+<name>36US0008_2_LG</name>
+<secondName></secondName>
+<description></description>
+<flags>2048</flags>
+<POUCycle>500</POUCycle>
+<auto-sort>0</auto-sort>
+<exporttime>2014-04-29 21:41:00</exporttime>
+<amendtime>2014-04-29 21:40:40</amendtime>
+<downloadtime></downloadtime>
+<modifier></modifier>
+<PouPaperSize>AX</PouPaperSize>
+<PouPrintType>0</PouPrintType>
+<interface>
+<![CDATA[PROGRAM 36US0008_2_LG
+VAR
+END_VAR]]>
+</interface>
+<cfc>
+<element type="input">
+<id>1</id>
+<AT_position>10,2</AT_position>
+<text>36HS2US08.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>5</id>
+<AT_position>15,2</AT_position>
+<isinst>TRUE</isinst>
+<text>TP</text>
+<AT_type>TP</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="1" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="2" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<output negate="false" visible="true" pinname="Q"/>
+<output negate="false" visible="true" pinname="ET"/>
+</element>
+<element type="box">
+<id>6</id>
+<AT_position>25,2</AT_position>
+<isinst>TRUE</isinst>
+<text>TP</text>
+<AT_type>TP</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>1</sortid>
+<input inputid="5" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<output negate="false" visible="true" pinname="Q"/>
+<output negate="false" visible="true" pinname="ET"/>
+</element>
+<element type="box">
+<id>7</id>
+<AT_position>35,2</AT_position>
+<isinst>TRUE</isinst>
+<text>TON</text>
+<AT_type>TON</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>2</sortid>
+<input inputid="6" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<output negate="false" visible="true" pinname="Q"/>
+<output negate="false" visible="true" pinname="ET"/>
+</element>
+<element type="input">
+<id>2</id>
+<AT_position>14,4</AT_position>
+<text>2.000000</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>3</id>
+<AT_position>24,4</AT_position>
+<text>7.000000</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>4</id>
+<AT_position>34,4</AT_position>
+<text>5.000000</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="output">
+<id>8</id>
+<position>45,2</position>
+<text>36FIC0003_LG.FL(7)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>5</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>3</sortid>
+</element>
+<element type="output">
+<id>9</id>
+<position>45,2</position>
+<text>36FIC0004_LG.FL(7)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>5</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>4</sortid>
+</element>
+<element type="output">
+<id>10</id>
+<position>45,2</position>
+<text>P3604_LG.FL(7)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>7</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>5</sortid>
+</element>
+<element type="output">
+<id>11</id>
+<position>45,2</position>
+<text>36XV0003_LG.FL(7)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>7</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>6</sortid>
+</element>
+<element type="output">
+<id>12</id>
+<position>45,2</position>
+<text>36XV0004_LG.FL(7)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>7</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>7</sortid>
+</element>
+<element type="output">
+<id>13</id>
+<position>45,2</position>
+<text>36HS2US08.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>5</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>8</sortid>
+</element>
+</cfc>
+</pou>

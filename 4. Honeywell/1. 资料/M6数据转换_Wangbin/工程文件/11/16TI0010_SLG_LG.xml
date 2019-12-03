@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+<path><![CDATA[\/ULOGIC]]></path>
+<name>16TI0010_SLG_LG</name>
+<secondName></secondName>
+<description>16TI0010A/B/C SELECT</description>
+<flags>2048</flags>
+<POUCycle>500</POUCycle>
+<auto-sort>0</auto-sort>
+<exporttime>2014-04-29 21:41:00</exporttime>
+<amendtime>2014-04-29 21:40:40</amendtime>
+<downloadtime></downloadtime>
+<modifier></modifier>
+<PouPaperSize>AX</PouPaperSize>
+<PouPrintType>0</PouPrintType>
+<interface>
+<![CDATA[PROGRAM 16TI0010_SLG_LG
+VAR
+NN1(2070): REAL := 147.1620;       (*NN1ÃèÊö*)
+END_VAR]]>
+</interface>
+<cfc>
+<element type="input">
+<id>1</id>
+<AT_position>10,2</AT_position>
+<text>16TI0010A.PV</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>2</id>
+<AT_position>10,8</AT_position>
+<text>16TI0010B.PV</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>3</id>
+<AT_position>10,14</AT_position>
+<text>16TI0010C.PV</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>4</id>
+<AT_position>10,20</AT_position>
+<text>16TI0010A.PVHIFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>5</id>
+<AT_position>10,26</AT_position>
+<text>16TI0010B.PVHIFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>6</id>
+<AT_position>10,32</AT_position>
+<text>16TI0010C.PVHIFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>7</id>
+<AT_position>15,26</AT_position>
+<isinst>TRUE</isinst>
+<text>QOR2</text>
+<AT_type>QOR2</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname="S1"/>
+<input inputid="5" inputidx="0" negate="false" visible="true" pinname="S2"/>
+<input inputid="6" inputidx="0" negate="false" visible="true" pinname="S3"/>
+<output negate="false" visible="true" pinname="SO"/>
+</element>
+<element type="output">
+<id>8</id>
+<position>25,2</position>
+<text>16TI0010_SLG.NN(1)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>1</sortid>
+</element>
+<element type="output">
+<id>9</id>
+<position>25,8</position>
+<text>16TI0010_SLG.NN(1)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>2</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>2</sortid>
+</element>
+<element type="output">
+<id>10</id>
+<position>25,14</position>
+<text>16TI0010_SLG.NN(1)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>3</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>3</sortid>
+</element>
+<element type="output">
+<id>11</id>
+<position>25,26</position>
+<text>16TAH0010.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>7</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>4</sortid>
+</element>
+</cfc>
+</pou>

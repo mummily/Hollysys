@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+<path><![CDATA[\/ULOGIC]]></path>
+<name>30US0002_1_LG</name>
+<secondName></secondName>
+<description></description>
+<flags>2048</flags>
+<POUCycle>500</POUCycle>
+<auto-sort>0</auto-sort>
+<exporttime>2014-04-29 21:41:00</exporttime>
+<amendtime>2014-04-29 21:40:40</amendtime>
+<downloadtime></downloadtime>
+<modifier></modifier>
+<PouPaperSize>AX</PouPaperSize>
+<PouPrintType>0</PouPrintType>
+<interface>
+<![CDATA[PROGRAM 30US0002_1_LG
+VAR
+NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
+NN2(2070): REAL := 0.000000 ;       (*NN2ÃèÊö*)
+NN3(2070): REAL := 3.000000 ;       (*NN3ÃèÊö*)
+NN4(2070): REAL := 0.000000;       (*NN4ÃèÊö*)
+END_VAR]]>
+</interface>
+<cfc>
+<element type="input">
+<id>1</id>
+<AT_position>10,2</AT_position>
+<text>30PSLLL0002.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="output">
+<id>2</id>
+<position>20,2</position>
+<text>30XV0010.I0</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
+<element type="output">
+<id>3</id>
+<position>20,4</position>
+<text>30PY0003A.MODATTR</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>1</sortid>
+</element>
+<element type="output">
+<id>4</id>
+<position>20,6</position>
+<text>30PY0003A.MODE</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>2</sortid>
+</element>
+<element type="output">
+<id>5</id>
+<position>20,8</position>
+<text>30PY0003A.OP</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>3</sortid>
+</element>
+<element type="output">
+<id>6</id>
+<position>20,10</position>
+<text>30PY0003B.MODATTR</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>4</sortid>
+</element>
+<element type="output">
+<id>7</id>
+<position>20,12</position>
+<text>30PY0003B.MODE</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>5</sortid>
+</element>
+<element type="output">
+<id>8</id>
+<position>20,14</position>
+<text>30PY0003B.OP</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>6</sortid>
+</element>
+<element type="output">
+<id>9</id>
+<position>20,2</position>
+<text>30XV0002.I0</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>7</sortid>
+</element>
+<element type="output">
+<id>10</id>
+<position>20,4</position>
+<text>30PICA0004.MODATTR</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>8</sortid>
+</element>
+<element type="output">
+<id>11</id>
+<position>20,6</position>
+<text>30PICA0004.MODE</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>9</sortid>
+</element>
+<element type="output">
+<id>12</id>
+<position>20,8</position>
+<text>30PICA0004.OP</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>10</sortid>
+</element>
+<element type="output">
+<id>13</id>
+<position>20,2</position>
+<text>13XV0010_LG.FL(10)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>11</sortid>
+</element>
+</cfc>
+</pou>

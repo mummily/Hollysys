@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+<path><![CDATA[\/ULOGIC]]></path>
+<name>13KS0010_LG_LG</name>
+<secondName></secondName>
+<description>13KS0010 LG</description>
+<flags>2048</flags>
+<POUCycle>500</POUCycle>
+<auto-sort>0</auto-sort>
+<exporttime>2014-04-29 21:41:00</exporttime>
+<amendtime>2014-04-29 21:40:40</amendtime>
+<downloadtime></downloadtime>
+<modifier></modifier>
+<PouPaperSize>AX</PouPaperSize>
+<PouPrintType>0</PouPrintType>
+<interface>
+<![CDATA[PROGRAM 13KS0010_LG_LG
+VAR
+END_VAR]]>
+</interface>
+<cfc>
+<element type="input">
+<id>1</id>
+<AT_position>10,2</AT_position>
+<text>13FIA9001A.PVLLFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>2</id>
+<AT_position>10,8</AT_position>
+<text>13FIA9001B.PVLLFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>3</id>
+<AT_position>10,14</AT_position>
+<text>30PSLLL0002.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>4</id>
+<AT_position>10,20</AT_position>
+<text>13KS1001_UZ10J.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>5</id>
+<AT_position>10,26</AT_position>
+<text>13KS1005_UZ10A.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>6</id>
+<AT_position>10,32</AT_position>
+<text>13KS1006_UZ10B.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>7</id>
+<AT_position>10,38</AT_position>
+<text>13KS1008_UZ10C.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>8</id>
+<AT_position>10,44</AT_position>
+<text>13KS1010_UZ10D.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>9</id>
+<AT_position>10,50</AT_position>
+<text>13KS1011_UZ10E.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>10</id>
+<AT_position>10,56</AT_position>
+<text>13KS1013_UZ10F.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="output">
+<id>11</id>
+<position>20,2</position>
+<text>13FALL9001A_FL.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
+<element type="output">
+<id>12</id>
+<position>20,8</position>
+<text>13FALL9001B_FL.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>2</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>1</sortid>
+</element>
+<element type="output">
+<id>13</id>
+<position>20,14</position>
+<text>30PALLL0002.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>3</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>2</sortid>
+</element>
+<element type="output">
+<id>14</id>
+<position>20,20</position>
+<text>13UZ0010J_DO.SO</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>4</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>3</sortid>
+</element>
+<element type="output">
+<id>15</id>
+<position>20,26</position>
+<text>13UZ0010A_DO.SO</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>5</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>4</sortid>
+</element>
+<element type="output">
+<id>16</id>
+<position>20,32</position>
+<text>13UZ0010B_DO.SO</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>6</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>5</sortid>
+</element>
+<element type="output">
+<id>17</id>
+<position>20,38</position>
+<text>13UZ0010C_DO.SO</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>7</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>6</sortid>
+</element>
+<element type="output">
+<id>18</id>
+<position>20,44</position>
+<text>13UZ0010D_DO.SO</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>8</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>7</sortid>
+</element>
+<element type="output">
+<id>19</id>
+<position>20,50</position>
+<text>13UZ0010E_DO.SO</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>9</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>8</sortid>
+</element>
+<element type="output">
+<id>20</id>
+<position>20,56</position>
+<text>13UZ0010F_DO.SO</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>10</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>9</sortid>
+</element>
+</cfc>
+</pou>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+<path><![CDATA[\/ULOGIC]]></path>
+<name>12PALLLL0214_LG</name>
+<secondName></secondName>
+<description></description>
+<flags>2048</flags>
+<POUCycle>500</POUCycle>
+<auto-sort>0</auto-sort>
+<exporttime>2014-04-29 21:41:00</exporttime>
+<amendtime>2014-04-29 21:40:40</amendtime>
+<downloadtime></downloadtime>
+<modifier></modifier>
+<PouPaperSize>AX</PouPaperSize>
+<PouPrintType>0</PouPrintType>
+<interface>
+<![CDATA[PROGRAM 12PALLLL0214_LG
+VAR
+NN1(2070): REAL := 0.250000 ;       (*NN1ÃèÊö*)
+NN2(2070): REAL := 0.250000 ;       (*NN2ÃèÊö*)
+NN3(2070): REAL := 0.250000;       (*NN3ÃèÊö*)
+END_VAR]]>
+</interface>
+<cfc>
+<element type="input">
+<id>1</id>
+<AT_position>10,2</AT_position>
+<text>12PIRS0214A.PV</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>2</id>
+<AT_position>10,8</AT_position>
+<text>12PIRS0214B.PV</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>3</id>
+<AT_position>10,14</AT_position>
+<text>12PIRS0214C.PV</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>7</id>
+<AT_position>15,2</AT_position>
+<isinst>TRUE</isinst>
+<text>LT</text>
+<AT_type>LT</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>8</id>
+<AT_position>15,8</AT_position>
+<isinst>TRUE</isinst>
+<text>LT</text>
+<AT_type>LT</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>1</sortid>
+<input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>9</id>
+<AT_position>15,14</AT_position>
+<isinst>TRUE</isinst>
+<text>LT</text>
+<AT_type>LT</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>2</sortid>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="6" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>10</id>
+<AT_position>25,8</AT_position>
+<isinst>TRUE</isinst>
+<text>QOR2</text>
+<AT_type>QOR2</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>3</sortid>
+<input inputid="7" inputidx="0" negate="false" visible="true" pinname="S1"/>
+<input inputid="8" inputidx="0" negate="false" visible="true" pinname="S2"/>
+<input inputid="9" inputidx="0" negate="false" visible="true" pinname="S3"/>
+<output negate="false" visible="true" pinname="SO"/>
+</element>
+<element type="input">
+<id>4</id>
+<AT_position>14,4</AT_position>
+<text>NN1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>5</id>
+<AT_position>14,10</AT_position>
+<text>NN2</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>6</id>
+<AT_position>14,16</AT_position>
+<text>NN3</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="output">
+<id>11</id>
+<position>35,8</position>
+<text>12PALLLL0214.FL(7)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>10</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>4</sortid>
+</element>
+</cfc>
+</pou>

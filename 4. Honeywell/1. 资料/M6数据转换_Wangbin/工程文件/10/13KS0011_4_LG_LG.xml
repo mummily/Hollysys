@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+<path><![CDATA[\/ULOGIC]]></path>
+<name>13KS0011_4_LG_LG</name>
+<secondName></secondName>
+<description></description>
+<flags>2048</flags>
+<POUCycle>500</POUCycle>
+<auto-sort>0</auto-sort>
+<exporttime>2014-04-29 21:41:00</exporttime>
+<amendtime>2014-04-29 21:40:40</amendtime>
+<downloadtime></downloadtime>
+<modifier></modifier>
+<PouPaperSize>AX</PouPaperSize>
+<PouPrintType>0</PouPrintType>
+<interface>
+<![CDATA[PROGRAM 13KS0011_4_LG_LG
+VAR
+NN1(2070): REAL := 1.000000;       (*NN1ÃèÊö*)
+END_VAR]]>
+</interface>
+<cfc>
+<element type="input">
+<id>1</id>
+<AT_position>10,2</AT_position>
+<text>12PDY0128_8.SELXINP</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>2</id>
+<AT_position>10,8</AT_position>
+<text>12PDY0228_8.SELXINP</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>3</id>
+<AT_position>10,14</AT_position>
+<text>13FIA9001A.PVHIFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>4</id>
+<AT_position>10,20</AT_position>
+<text>13FIA9001B.PVHIFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>5</id>
+<AT_position>10,26</AT_position>
+<text>13GSC0125.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>6</id>
+<AT_position>10,32</AT_position>
+<text>13GSC0225.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>7</id>
+<AT_position>10,38</AT_position>
+<text>13GSC0325.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>8</id>
+<AT_position>10,44</AT_position>
+<text>13GSC0425.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>11</id>
+<AT_position>15,2</AT_position>
+<isinst>TRUE</isinst>
+<text>EQ</text>
+<AT_type>EQ</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="9" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>12</id>
+<AT_position>15,8</AT_position>
+<isinst>TRUE</isinst>
+<text>EQ</text>
+<AT_type>EQ</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>1</sortid>
+<input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="10" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>13</id>
+<AT_position>15,17</AT_position>
+<isinst>TRUE</isinst>
+<text>OR</text>
+<AT_type>OR</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>2</sortid>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="input">
+<id>9</id>
+<AT_position>14,4</AT_position>
+<text>NN1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>10</id>
+<AT_position>14,10</AT_position>
+<text>NN1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="output">
+<id>14</id>
+<position>25,2</position>
+<text>13KS0011.FL(31)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>11</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>3</sortid>
+</element>
+<element type="output">
+<id>15</id>
+<position>25,2</position>
+<text>13KS0012.FL(31)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>11</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>4</sortid>
+</element>
+<element type="output">
+<id>16</id>
+<position>25,8</position>
+<text>13KS0013.FL(31)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>12</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>5</sortid>
+</element>
+<element type="output">
+<id>17</id>
+<position>25,8</position>
+<text>13KS0014.FL(31)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>12</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>6</sortid>
+</element>
+<element type="output">
+<id>18</id>
+<position>25,17</position>
+<text>13KS0011.FL(32)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>13</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>7</sortid>
+</element>
+<element type="output">
+<id>19</id>
+<position>25,17</position>
+<text>13KS0012.FL(32)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>13</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>8</sortid>
+</element>
+<element type="output">
+<id>20</id>
+<position>25,17</position>
+<text>13KS0013.FL(32)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>13</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>9</sortid>
+</element>
+<element type="output">
+<id>21</id>
+<position>25,17</position>
+<text>13KS0014.FL(32)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>13</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>10</sortid>
+</element>
+<element type="output">
+<id>22</id>
+<position>25,26</position>
+<text>13KS0011.FL(33)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>5</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>11</sortid>
+</element>
+<element type="output">
+<id>23</id>
+<position>25,32</position>
+<text>13KS0012.FL(33)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>6</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>12</sortid>
+</element>
+<element type="output">
+<id>24</id>
+<position>25,38</position>
+<text>13KS0013.FL(33)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>7</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>13</sortid>
+</element>
+<element type="output">
+<id>25</id>
+<position>25,44</position>
+<text>13KS0014.FL(33)</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>8</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>14</sortid>
+</element>
+</cfc>
+</pou>

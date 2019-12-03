@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+<path><![CDATA[\/ULOGIC]]></path>
+<name>13QC1300_LG_LG</name>
+<secondName></secondName>
+<description>13QC1300_SW2 CONTROL LG</description>
+<flags>2048</flags>
+<POUCycle>500</POUCycle>
+<auto-sort>0</auto-sort>
+<exporttime>2014-04-29 21:41:00</exporttime>
+<amendtime>2014-04-29 21:40:40</amendtime>
+<downloadtime></downloadtime>
+<modifier></modifier>
+<PouPaperSize>AX</PouPaperSize>
+<PouPrintType>0</PouPrintType>
+<interface>
+<![CDATA[PROGRAM 13QC1300_LG_LG
+VAR
+NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
+NN2(2070): REAL := 2.000000 ;       (*NN2ÃèÊö*)
+NN3(2070): REAL := 3.000000 ;       (*NN3ÃèÊö*)
+NN4(2070): REAL := 0.000000 ;       (*NN4ÃèÊö*)
+NN5(2070): REAL := 60.00000 ;       (*NN5ÃèÊö*)
+NN6(2070): REAL := 60.00000;       (*NN6ÃèÊö*)
+END_VAR]]>
+</interface>
+<cfc>
+<element type="input">
+<id>1</id>
+<AT_position>10,2</AT_position>
+<text>13UZ0001E.PVFL</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>2</id>
+<AT_position>10,8</AT_position>
+<text>13QC1300_SW2.SELXINP</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>3</id>
+<AT_position>10,14</AT_position>
+<text>13QC1300_SW3.X1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>4</id>
+<AT_position>10,20</AT_position>
+<text>13QC1300_SW3.X2</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>5</id>
+<AT_position>10,26</AT_position>
+<text>13QC1300_SW3.OPEU</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>6</id>
+<AT_position>10,32</AT_position>
+<text>13QC1300_SW3.SELXINP</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>7</id>
+<AT_position>10,38</AT_position>
+<text>13QC1300_SW1.SELXINP</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>13</id>
+<AT_position>15,8</AT_position>
+<isinst>TRUE</isinst>
+<text>EQ</text>
+<AT_type>EQ</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="8" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>14</id>
+<AT_position>15,20</AT_position>
+<isinst>TRUE</isinst>
+<text>GE</text>
+<AT_type>GE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>1</sortid>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>15</id>
+<AT_position>15,32</AT_position>
+<isinst>TRUE</isinst>
+<text>EQ</text>
+<AT_type>EQ</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>2</sortid>
+<input inputid="6" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="9" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>20</id>
+<AT_position>25,26</AT_position>
+<isinst>TRUE</isinst>
+<text>AND</text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>7</sortid>
+<input inputid="14" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="15" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>16</id>
+<AT_position>15,23</AT_position>
+<isinst>TRUE</isinst>
+<text>GE</text>
+<AT_type>GE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>3</sortid>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>17</id>
+<AT_position>15,32</AT_position>
+<isinst>TRUE</isinst>
+<text>EQ</text>
+<AT_type>EQ</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>4</sortid>
+<input inputid="6" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="10" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>21</id>
+<AT_position>25,28</AT_position>
+<isinst>TRUE</isinst>
+<text>AND</text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>8</sortid>
+<input inputid="16" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="17" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>26</id>
+<AT_position>35,27</AT_position>
+<isinst>TRUE</isinst>
+<text>OR</text>
+<AT_type>OR</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>13</sortid>
+<input inputid="20" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="21" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>22</id>
+<AT_position>25,26</AT_position>
+<isinst>TRUE</isinst>
+<text>AND</text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>9</sortid>
+<input inputid="14" inputidx="0" negate="true" visible="true" pinname=""/>
+<input inputid="15" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>23</id>
+<AT_position>25,28</AT_position>
+<isinst>TRUE</isinst>
+<text>AND</text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>10</sortid>
+<input inputid="16" inputidx="0" negate="true" visible="true" pinname=""/>
+<input inputid="17" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>27</id>
+<AT_position>35,27</AT_position>
+<isinst>TRUE</isinst>
+<text>OR</text>
+<AT_type>OR</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>14</sortid>
+<input inputid="22" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="23" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>18</id>
+<AT_position>15,38</AT_position>
+<isinst>TRUE</isinst>
+<text>EQ</text>
+<AT_type>EQ</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>5</sortid>
+<input inputid="7" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="11" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>24</id>
+<AT_position>25,23</AT_position>
+<isinst>TRUE</isinst>
+<text>OR</text>
+<AT_type>OR</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>11</sortid>
+<input inputid="13" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="18" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>19</id>
+<AT_position>15,38</AT_position>
+<isinst>TRUE</isinst>
+<text>EQ</text>
+<AT_type>EQ</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>6</sortid>
+<input inputid="7" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="12" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>25</id>
+<AT_position>25,23</AT_position>
+<isinst>TRUE</isinst>
+<text>OR</text>
+<AT_type>OR</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>12</sortid>
+<input inputid="13" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="19" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="input">
+<id>8</id>
+<AT_position>14,10</AT_position>
+<text>NN1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>9</id>
+<AT_position>14,34</AT_position>
+<text>NN1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>10</id>
+<AT_position>14,34</AT_position>
+<text>NN2</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>11</id>
+<AT_position>14,40</AT_position>
+<text>NN1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>12</id>
+<AT_position>14,40</AT_position>
+<text>NN2</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="output">
+<id>28</id>
+<position>45,2</position>
+<text>13QC1300_SW2.S1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>1</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>15</sortid>
+</element>
+<element type="output">
+<id>29</id>
+<position>45,4</position>
+<text>16QIC0004.MODATTR</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>25</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>16</sortid>
+</element>
+<element type="output">
+<id>30</id>
+<position>45,6</position>
+<text>16QIC0004.MODE</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>25</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>17</sortid>
+</element>
+<element type="output">
+<id>31</id>
+<position>45,8</position>
+<text>16QICA0013.MODATTR</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>24</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>18</sortid>
+</element>
+<element type="output">
+<id>32</id>
+<position>45,10</position>
+<text>16QICA0013.MODE</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>24</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>19</sortid>
+</element>
+<element type="output">
+<id>33</id>
+<position>45,12</position>
+<text>13QC1300_SW3.OPROCLM</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>26</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>20</sortid>
+</element>
+<element type="output">
+<id>34</id>
+<position>45,14</position>
+<text>13QC1300_SW3.OPROCLM</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>27</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>21</sortid>
+</element>
+</cfc>
+</pou>
