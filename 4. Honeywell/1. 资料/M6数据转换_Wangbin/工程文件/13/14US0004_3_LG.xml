@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>14TY20001.PVFL</text>
+<text>14TY20001.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -32,7 +32,7 @@ END_VAR]]>
 <id>2</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>14US0004_3_NOT0</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -67,7 +67,7 @@ END_VAR]]>
 <element type="output">
 <id>5</id>
 <position>25,2</position>
-<text>14XV0009_LG.FL(8)</text>
+<text>14XV0009_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -79,7 +79,7 @@ END_VAR]]>
 <element type="output">
 <id>6</id>
 <position>25,2</position>
-<text>14XV0010_LG.FL(8)</text>
+<text>14XV0010_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -91,7 +91,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>25,2</position>
-<text>14XV0011_LG.FL(8)</text>
+<text>14XV0011_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -103,7 +103,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>25,2</position>
-<text>14XV0012_LG.FL(8)</text>
+<text>14XV0012_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

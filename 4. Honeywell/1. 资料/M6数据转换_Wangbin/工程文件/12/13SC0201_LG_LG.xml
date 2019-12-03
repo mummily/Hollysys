@@ -16,7 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 13SC0201_LG_LG
 VAR
-NN1(2070): REAL := 2.000000;       (*NN1ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -33,7 +32,7 @@ END_VAR]]>
 <id>4</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>EQ</text>
+<text>13SC0201_LG_EQ0</text>
 <AT_type>EQ</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -46,7 +45,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>25,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13SC0201_LG_TP1</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -59,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>14,4</AT_position>
-<text>NN1</text>
+<text>13SC0201_LG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -68,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>24,4</AT_position>
-<text>5.000000</text>
+<text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

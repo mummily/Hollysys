@@ -16,15 +16,13 @@
 <interface>
 <![CDATA[PROGRAM 13FAL0003_LG_LG
 VAR
-NN2(2070): REAL := 0.000000 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 1.000000;       (*NN3ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13FIR0003.PVLOFL</text>
+<text>13FIR0003.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -33,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13GZH002403.PVFL</text>
+<text>13GZH002403.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -42,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13UZ0005D.PVFL</text>
+<text>13UZ0005D.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -52,7 +50,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13FAL0003_LG_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -65,7 +63,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>25,14</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13FAL0003_LG_TP2</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -79,7 +77,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>13FAL0003_LG_NOT1</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -90,7 +88,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>24,16</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

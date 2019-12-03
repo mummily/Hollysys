@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>TIME1.FL(9)</text>
+<text>TIME1_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

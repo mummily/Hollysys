@@ -16,9 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 11ALARM_1_LG
 VAR
-NN1(2070): REAL := 360.0000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 35.00000 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 30.00000;       (*NN3ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -107,7 +104,7 @@ END_VAR]]>
 <id>28</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>11ALARM_1_LE0</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -120,7 +117,7 @@ END_VAR]]>
 <id>37</id>
 <AT_position>25,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>11ALARM_1_TP9</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -134,7 +131,7 @@ END_VAR]]>
 <id>29</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>11ALARM_1_LE1</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -147,7 +144,7 @@ END_VAR]]>
 <id>38</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>11ALARM_1_TP10</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -161,7 +158,7 @@ END_VAR]]>
 <id>30</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>11ALARM_1_LE2</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -174,7 +171,7 @@ END_VAR]]>
 <id>39</id>
 <AT_position>25,14</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>11ALARM_1_TP11</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -188,7 +185,7 @@ END_VAR]]>
 <id>31</id>
 <AT_position>15,20</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>11ALARM_1_LE3</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -201,7 +198,7 @@ END_VAR]]>
 <id>40</id>
 <AT_position>25,20</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>11ALARM_1_TP12</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -215,7 +212,7 @@ END_VAR]]>
 <id>32</id>
 <AT_position>15,26</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>11ALARM_1_LE4</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -228,7 +225,7 @@ END_VAR]]>
 <id>41</id>
 <AT_position>25,26</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>11ALARM_1_TP13</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -242,7 +239,7 @@ END_VAR]]>
 <id>33</id>
 <AT_position>15,32</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>11ALARM_1_LE5</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -255,7 +252,7 @@ END_VAR]]>
 <id>42</id>
 <AT_position>25,32</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>11ALARM_1_TP14</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -269,7 +266,7 @@ END_VAR]]>
 <id>34</id>
 <AT_position>15,38</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>11ALARM_1_LE6</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -282,7 +279,7 @@ END_VAR]]>
 <id>43</id>
 <AT_position>25,38</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>11ALARM_1_TP15</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -296,7 +293,7 @@ END_VAR]]>
 <id>35</id>
 <AT_position>15,44</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>11ALARM_1_LE7</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -309,7 +306,7 @@ END_VAR]]>
 <id>44</id>
 <AT_position>25,44</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>11ALARM_1_TP16</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -323,7 +320,7 @@ END_VAR]]>
 <id>36</id>
 <AT_position>15,50</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>11ALARM_1_LE8</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -336,7 +333,7 @@ END_VAR]]>
 <id>45</id>
 <AT_position>25,50</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>11ALARM_1_TP17</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -350,7 +347,7 @@ END_VAR]]>
 <id>46</id>
 <AT_position>35,8</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>11ALARM_1_OR18</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -364,7 +361,7 @@ END_VAR]]>
 <id>47</id>
 <AT_position>35,26</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>11ALARM_1_OR19</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -378,7 +375,7 @@ END_VAR]]>
 <id>48</id>
 <AT_position>35,44</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>11ALARM_1_OR20</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -392,7 +389,7 @@ END_VAR]]>
 <id>49</id>
 <AT_position>45,26</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>11ALARM_1_OR21</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -405,7 +402,7 @@ END_VAR]]>
 <element type="input">
 <id>10</id>
 <AT_position>14,4</AT_position>
-<text>NN1</text>
+<text>11ALARM_1_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -414,7 +411,7 @@ END_VAR]]>
 <element type="input">
 <id>11</id>
 <AT_position>14,10</AT_position>
-<text>NN1</text>
+<text>11ALARM_1_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -423,7 +420,7 @@ END_VAR]]>
 <element type="input">
 <id>12</id>
 <AT_position>14,16</AT_position>
-<text>NN1</text>
+<text>11ALARM_1_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -432,7 +429,7 @@ END_VAR]]>
 <element type="input">
 <id>13</id>
 <AT_position>14,22</AT_position>
-<text>NN2</text>
+<text>11ALARM_1_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -441,7 +438,7 @@ END_VAR]]>
 <element type="input">
 <id>14</id>
 <AT_position>14,28</AT_position>
-<text>NN2</text>
+<text>11ALARM_1_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -450,7 +447,7 @@ END_VAR]]>
 <element type="input">
 <id>15</id>
 <AT_position>14,34</AT_position>
-<text>NN2</text>
+<text>11ALARM_1_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -459,7 +456,7 @@ END_VAR]]>
 <element type="input">
 <id>16</id>
 <AT_position>14,40</AT_position>
-<text>NN3</text>
+<text>11ALARM_1_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -468,7 +465,7 @@ END_VAR]]>
 <element type="input">
 <id>17</id>
 <AT_position>14,46</AT_position>
-<text>NN3</text>
+<text>11ALARM_1_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -477,7 +474,7 @@ END_VAR]]>
 <element type="input">
 <id>18</id>
 <AT_position>14,52</AT_position>
-<text>NN3</text>
+<text>11ALARM_1_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -486,7 +483,7 @@ END_VAR]]>
 <element type="input">
 <id>19</id>
 <AT_position>24,4</AT_position>
-<text>3.000000</text>
+<text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -495,7 +492,7 @@ END_VAR]]>
 <element type="input">
 <id>20</id>
 <AT_position>24,10</AT_position>
-<text>3.000000</text>
+<text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -504,7 +501,7 @@ END_VAR]]>
 <element type="input">
 <id>21</id>
 <AT_position>24,16</AT_position>
-<text>3.000000</text>
+<text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -513,7 +510,7 @@ END_VAR]]>
 <element type="input">
 <id>22</id>
 <AT_position>24,22</AT_position>
-<text>3.000000</text>
+<text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -522,7 +519,7 @@ END_VAR]]>
 <element type="input">
 <id>23</id>
 <AT_position>24,28</AT_position>
-<text>3.000000</text>
+<text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -531,7 +528,7 @@ END_VAR]]>
 <element type="input">
 <id>24</id>
 <AT_position>24,34</AT_position>
-<text>3.000000</text>
+<text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -540,7 +537,7 @@ END_VAR]]>
 <element type="input">
 <id>25</id>
 <AT_position>24,40</AT_position>
-<text>3.000000</text>
+<text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -549,7 +546,7 @@ END_VAR]]>
 <element type="input">
 <id>26</id>
 <AT_position>24,46</AT_position>
-<text>3.000000</text>
+<text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -558,7 +555,7 @@ END_VAR]]>
 <element type="input">
 <id>27</id>
 <AT_position>24,52</AT_position>
-<text>3.000000</text>
+<text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -567,7 +564,7 @@ END_VAR]]>
 <element type="output">
 <id>50</id>
 <position>55,26</position>
-<text>11ALARM_1.FL(7)</text>
+<text>11ALARM_1_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

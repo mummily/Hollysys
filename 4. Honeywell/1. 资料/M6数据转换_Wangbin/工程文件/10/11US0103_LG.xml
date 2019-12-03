@@ -16,13 +16,14 @@
 <interface>
 <![CDATA[PROGRAM 11US0103_LG
 VAR
+11US0103_TON3(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>11WISA0104.PVLLFL</text>
+<text>11WISA0104.LLIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +32,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>11BS0110_4.PVFL</text>
+<text>11BS0110_4.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +41,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>11GSO0121.PVFL</text>
+<text>11GSO0121.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +50,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>11GSO0139.PVFL</text>
+<text>11GSO0139.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -58,7 +59,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>11BS0110_10.PVFL</text>
+<text>11BS0110_10.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -68,7 +69,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>11US0103_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -81,7 +82,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>25,14</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>11US0103_OR2</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -95,7 +96,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>35,14</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>11US0103_TON3</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -109,7 +110,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>15,23</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>11US0103_AND1</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -121,7 +122,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>34,16</AT_position>
-<text>1.000000</text>
+<text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

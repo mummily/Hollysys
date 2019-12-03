@@ -16,15 +16,13 @@
 <interface>
 <![CDATA[PROGRAM 15XV0037_LG_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 0.000000;       (*NN2ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>15GSC0036.PVFL</text>
+<text>15GSC0036.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -34,7 +32,7 @@ END_VAR]]>
 <id>2</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>15XV0037_LG_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -46,7 +44,7 @@ END_VAR]]>
 <id>3</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>15XV0037_LG_AND1</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>

@@ -16,15 +16,13 @@
 <interface>
 <![CDATA[PROGRAM 13PDICS0203_LG_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 0.000000;       (*NN2ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13GSC0212.PVFL</text>
+<text>13GSC0212.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -34,7 +32,7 @@ END_VAR]]>
 <id>2</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>13PDICS0203_LG_NOT0</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>

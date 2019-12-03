@@ -16,13 +16,14 @@
 <interface>
 <![CDATA[PROGRAM 36US0008_2_LG
 VAR
+36US0008_2_TON2(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>36HS2US08.PVFL</text>
+<text>36HS2US08.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -32,7 +33,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>36US0008_2_TP0</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -46,7 +47,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>25,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>36US0008_2_TP1</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -60,7 +61,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>35,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>36US0008_2_TON2</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -73,7 +74,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>14,4</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -82,7 +83,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>24,4</AT_position>
-<text>7.000000</text>
+<text>T#7s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -91,7 +92,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>34,4</AT_position>
-<text>5.000000</text>
+<text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -100,7 +101,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>45,2</position>
-<text>36FIC0003_LG.FL(7)</text>
+<text>36FIC0003_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -112,7 +113,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>45,2</position>
-<text>36FIC0004_LG.FL(7)</text>
+<text>36FIC0004_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -124,7 +125,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>45,2</position>
-<text>P3604_LG.FL(7)</text>
+<text>P3604_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -136,7 +137,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>45,2</position>
-<text>36XV0003_LG.FL(7)</text>
+<text>36XV0003_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -148,7 +149,7 @@ END_VAR]]>
 <element type="output">
 <id>12</id>
 <position>45,2</position>
-<text>36XV0004_LG.FL(7)</text>
+<text>36XV0004_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -160,7 +161,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>45,2</position>
-<text>36HS2US08.PVFL</text>
+<text>36HS2US08.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

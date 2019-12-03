@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13KS0003.FL(11)</text>
+<text>13KS0003_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13KS0003.FL(12)</text>
+<text>13KS0003_FL12</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13KS0010.FL(16)</text>
+<text>13KS0010_FL16</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>13KS0003.FL(13)</text>
+<text>13KS0003_FL13</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -58,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>13KS0003.FL(14)</text>
+<text>13KS0003_FL14</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -67,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>10,32</AT_position>
-<text>13KS0010.FL(17)</text>
+<text>13KS0010_FL17</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -76,7 +76,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>10,38</AT_position>
-<text>13XS0003A.PVFL</text>
+<text>13XS0003A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -85,7 +85,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>10,44</AT_position>
-<text>13XS0003B.PVFL</text>
+<text>13XS0003B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -95,7 +95,7 @@ END_VAR]]>
 <id>11</id>
 <AT_position>15,38</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13KS0003_LG4_TP0</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -109,7 +109,7 @@ END_VAR]]>
 <id>12</id>
 <AT_position>15,44</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13KS0003_LG4_TP1</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -122,7 +122,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>14,40</AT_position>
-<text>15.00000</text>
+<text>T#15s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -131,7 +131,7 @@ END_VAR]]>
 <element type="input">
 <id>10</id>
 <AT_position>14,46</AT_position>
-<text>15.00000</text>
+<text>T#15s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -140,7 +140,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>25,2</position>
-<text>KS0317_KS04START.PVFL</text>
+<text>KS0317_KS04START.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -152,7 +152,7 @@ END_VAR]]>
 <element type="output">
 <id>14</id>
 <position>25,8</position>
-<text>KS0318_KS04STOP.PVFL</text>
+<text>KS0318_KS04STOP.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -164,7 +164,7 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>25,14</position>
-<text>KS1019_KS04STOP.PVFL</text>
+<text>KS1019_KS04STOP.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -176,7 +176,7 @@ END_VAR]]>
 <element type="output">
 <id>16</id>
 <position>25,20</position>
-<text>KS0317_KS05START.PVFL</text>
+<text>KS0317_KS05START.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -188,7 +188,7 @@ END_VAR]]>
 <element type="output">
 <id>17</id>
 <position>25,26</position>
-<text>KS0318_KS05STOP.PVFL</text>
+<text>KS0318_KS05STOP.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -200,7 +200,7 @@ END_VAR]]>
 <element type="output">
 <id>18</id>
 <position>25,32</position>
-<text>KS1019_KS05STOP.PVFL</text>
+<text>KS1019_KS05STOP.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -212,7 +212,7 @@ END_VAR]]>
 <element type="output">
 <id>19</id>
 <position>25,38</position>
-<text>13KS0003.FL(15)</text>
+<text>13KS0003_FL15</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -224,7 +224,7 @@ END_VAR]]>
 <element type="output">
 <id>20</id>
 <position>25,44</position>
-<text>13KS0003.FL(16)</text>
+<text>13KS0003_FL16</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

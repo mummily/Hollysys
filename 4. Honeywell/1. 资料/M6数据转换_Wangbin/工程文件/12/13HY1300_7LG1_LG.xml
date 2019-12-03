@@ -16,13 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 13HY1300_7LG1_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 2.000000 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 0.000000 ;       (*NN3ÃèÊö*)
-NN5(2070): REAL := 0.000000 ;       (*NN5ÃèÊö*)
-NN6(2070): REAL := 0.000000 ;       (*NN6ÃèÊö*)
-NN7(2070): REAL := 1.000000 ;       (*NN7ÃèÊö*)
-NN8(2070): REAL := 0.000000;       (*NN8ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -92,7 +85,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>10,44</AT_position>
-<text>13GSO0120.PVFL</text>
+<text>13GSO0120.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -110,7 +103,7 @@ END_VAR]]>
 <element type="input">
 <id>10</id>
 <AT_position>10,56</AT_position>
-<text>13GSO0220.PVFL</text>
+<text>13GSO0220.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -120,7 +113,7 @@ END_VAR]]>
 <id>17</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>EQ</text>
+<text>13HY1300_7LG1_EQ0</text>
 <AT_type>EQ</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -133,7 +126,7 @@ END_VAR]]>
 <id>18</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>EQ</text>
+<text>13HY1300_7LG1_EQ1</text>
 <AT_type>EQ</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -146,7 +139,7 @@ END_VAR]]>
 <id>23</id>
 <AT_position>25,20</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13HY1300_7LG1_AND6</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -160,7 +153,7 @@ END_VAR]]>
 <id>25</id>
 <AT_position>35,20</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>13HY1300_7LG1_NOT8</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -172,7 +165,7 @@ END_VAR]]>
 <id>19</id>
 <AT_position>15,20</AT_position>
 <isinst>TRUE</isinst>
-<text>EQ</text>
+<text>13HY1300_7LG1_EQ2</text>
 <AT_type>EQ</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -185,7 +178,7 @@ END_VAR]]>
 <id>20</id>
 <AT_position>15,26</AT_position>
 <isinst>TRUE</isinst>
-<text>EQ</text>
+<text>13HY1300_7LG1_EQ3</text>
 <AT_type>EQ</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -198,7 +191,7 @@ END_VAR]]>
 <id>24</id>
 <AT_position>25,35</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13HY1300_7LG1_AND7</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -212,7 +205,7 @@ END_VAR]]>
 <id>26</id>
 <AT_position>35,35</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>13HY1300_7LG1_NOT9</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -224,7 +217,7 @@ END_VAR]]>
 <id>21</id>
 <AT_position>15,38</AT_position>
 <isinst>TRUE</isinst>
-<text>EQ</text>
+<text>13HY1300_7LG1_EQ4</text>
 <AT_type>EQ</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -237,7 +230,7 @@ END_VAR]]>
 <id>27</id>
 <AT_position>35,32</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>13HY1300_7LG1_OR10</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -250,7 +243,7 @@ END_VAR]]>
 <id>29</id>
 <AT_position>45,32</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13HY1300_7LG1_AND12</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -263,7 +256,7 @@ END_VAR]]>
 <id>22</id>
 <AT_position>15,50</AT_position>
 <isinst>TRUE</isinst>
-<text>EQ</text>
+<text>13HY1300_7LG1_EQ5</text>
 <AT_type>EQ</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -276,7 +269,7 @@ END_VAR]]>
 <id>28</id>
 <AT_position>35,46</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>13HY1300_7LG1_OR11</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -289,7 +282,7 @@ END_VAR]]>
 <id>30</id>
 <AT_position>45,46</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13HY1300_7LG1_AND13</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -301,7 +294,7 @@ END_VAR]]>
 <element type="input">
 <id>11</id>
 <AT_position>14,4</AT_position>
-<text>NN2</text>
+<text>13HY1300_7LG1_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -310,7 +303,7 @@ END_VAR]]>
 <element type="input">
 <id>12</id>
 <AT_position>14,10</AT_position>
-<text>NN1</text>
+<text>13HY1300_7LG1_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -319,7 +312,7 @@ END_VAR]]>
 <element type="input">
 <id>13</id>
 <AT_position>14,22</AT_position>
-<text>NN2</text>
+<text>13HY1300_7LG1_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -328,7 +321,7 @@ END_VAR]]>
 <element type="input">
 <id>14</id>
 <AT_position>14,28</AT_position>
-<text>NN1</text>
+<text>13HY1300_7LG1_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -337,7 +330,7 @@ END_VAR]]>
 <element type="input">
 <id>15</id>
 <AT_position>14,40</AT_position>
-<text>NN2</text>
+<text>13HY1300_7LG1_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -346,7 +339,7 @@ END_VAR]]>
 <element type="input">
 <id>16</id>
 <AT_position>14,52</AT_position>
-<text>NN2</text>
+<text>13HY1300_7LG1_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -355,7 +348,7 @@ END_VAR]]>
 <element type="output">
 <id>31</id>
 <position>55,4</position>
-<text>13HY1300_7LG1.NN(5)</text>
+<text>13HY1300_7LG1_NN5</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -367,7 +360,7 @@ END_VAR]]>
 <element type="output">
 <id>32</id>
 <position>55,6</position>
-<text>13HY1300_7LG1.NN(5)</text>
+<text>13HY1300_7LG1_NN5</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -379,7 +372,7 @@ END_VAR]]>
 <element type="output">
 <id>33</id>
 <position>55,8</position>
-<text>13HY1300_7LG1.NN(6)</text>
+<text>13HY1300_7LG1_NN6</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -391,7 +384,7 @@ END_VAR]]>
 <element type="output">
 <id>34</id>
 <position>55,14</position>
-<text>13HY1300_7LG1.NN(6)</text>
+<text>13HY1300_7LG1_NN6</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -403,7 +396,7 @@ END_VAR]]>
 <element type="output">
 <id>35</id>
 <position>55,16</position>
-<text>13HY1300_7LG1.NN(7)</text>
+<text>13HY1300_7LG1_NN7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -415,7 +408,7 @@ END_VAR]]>
 <element type="output">
 <id>36</id>
 <position>55,18</position>
-<text>13HY1300_7LG1.NN(7)</text>
+<text>13HY1300_7LG1_NN7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -427,7 +420,7 @@ END_VAR]]>
 <element type="output">
 <id>37</id>
 <position>55,20</position>
-<text>13HY1300_7LG1.NN(8)</text>
+<text>13HY1300_7LG1_NN8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -439,7 +432,7 @@ END_VAR]]>
 <element type="output">
 <id>38</id>
 <position>55,32</position>
-<text>13HY1300_7LG1.NN(8)</text>
+<text>13HY1300_7LG1_NN8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

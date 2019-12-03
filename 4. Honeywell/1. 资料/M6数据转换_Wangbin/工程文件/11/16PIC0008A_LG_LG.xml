@@ -16,15 +16,13 @@
 <interface>
 <![CDATA[PROGRAM 16PIC0008A_LG_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 0.000000;       (*NN2ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13PDZHH0065.PVFL</text>
+<text>13PDZHH0065.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -33,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13UZ0001A.PVFL</text>
+<text>13UZ0001A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -42,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13HZ1300A.PVFL</text>
+<text>13HZ1300A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -52,7 +50,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>16PIC0008A_LG_OR0</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -65,7 +63,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>16PIC0008A_LG_OR1</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -77,7 +75,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>25,14</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>16PIC0008A_LG_TP2</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -91,7 +89,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>35,10</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>16PIC0008A_LG_OR3</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -103,7 +101,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>24,16</AT_position>
-<text>5.000000</text>
+<text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

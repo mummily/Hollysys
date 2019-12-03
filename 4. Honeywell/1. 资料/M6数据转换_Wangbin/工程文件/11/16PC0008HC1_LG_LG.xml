@@ -16,10 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 16PC0008HC1_LG_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 2.000000 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 0.833300 ;       (*NN3ÃèÊö*)
-NN4(2070): REAL := 1.500000;       (*NN4ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -63,7 +59,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>GE</text>
+<text>16PC0008HC1_LG_GE0</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -76,7 +72,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>15,20</AT_position>
 <isinst>TRUE</isinst>
-<text>EQ</text>
+<text>16PC0008HC1_LG_EQ1</text>
 <AT_type>EQ</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -89,7 +85,7 @@ END_VAR]]>
 <id>11</id>
 <AT_position>25,14</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>16PC0008HC1_LG_AND4</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -102,7 +98,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>15,11</AT_position>
 <isinst>TRUE</isinst>
-<text>GE</text>
+<text>16PC0008HC1_LG_GE2</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -115,7 +111,7 @@ END_VAR]]>
 <id>12</id>
 <AT_position>25,16</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>16PC0008HC1_LG_AND5</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -128,7 +124,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>15,20</AT_position>
 <isinst>TRUE</isinst>
-<text>EQ</text>
+<text>16PC0008HC1_LG_EQ3</text>
 <AT_type>EQ</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -141,7 +137,7 @@ END_VAR]]>
 <id>15</id>
 <AT_position>35,15</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>16PC0008HC1_LG_OR8</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -154,7 +150,7 @@ END_VAR]]>
 <id>13</id>
 <AT_position>25,14</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>16PC0008HC1_LG_AND6</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -167,7 +163,7 @@ END_VAR]]>
 <id>14</id>
 <AT_position>25,16</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>16PC0008HC1_LG_AND7</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -180,7 +176,7 @@ END_VAR]]>
 <id>16</id>
 <AT_position>35,15</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>16PC0008HC1_LG_OR9</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -192,7 +188,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>14,22</AT_position>
-<text>NN1</text>
+<text>16PC0008HC1_LG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -201,7 +197,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>14,22</AT_position>
-<text>NN2</text>
+<text>16PC0008HC1_LG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

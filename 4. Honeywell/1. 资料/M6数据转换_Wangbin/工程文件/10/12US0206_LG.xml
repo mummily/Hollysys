@@ -16,13 +16,14 @@
 <interface>
 <![CDATA[PROGRAM 12US0206_LG
 VAR
+12US0206_TON2(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>12GSC0227.PVFL</text>
+<text>12GSC0227.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +32,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>12GSC0226.PVFL</text>
+<text>12GSC0226.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +41,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>12GSC0231.PVFL</text>
+<text>12GSC0231.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +50,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>12GSC0232.PVFL</text>
+<text>12GSC0232.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -59,7 +60,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>12US0206_OR0</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -73,7 +74,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>25,14</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>12US0206_OR1</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -86,7 +87,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>35,14</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>12US0206_TON2</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -99,7 +100,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>34,16</AT_position>
-<text>1.000000</text>
+<text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -108,7 +109,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>45,14</position>
-<text>12US0206.FL(7)</text>
+<text>12US0206_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

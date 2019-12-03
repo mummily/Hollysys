@@ -16,13 +16,14 @@
 <interface>
 <![CDATA[PROGRAM 16XV0001_LG_LG
 VAR
+16XV0001_LG_TON2(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>P3601A.SO(1)</text>
+<text>P3601A.DI(1)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +32,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>P3601B.SO(1)</text>
+<text>P3601B.DI(1)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -41,7 +42,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>16XV0001_LG_OR0</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -54,7 +55,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,11</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>16XV0001_LG_OR1</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -65,7 +66,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>25,11</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>16XV0001_LG_TON2</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -79,7 +80,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>25,5</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>16XV0001_LG_TP3</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -92,7 +93,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>24,13</AT_position>
-<text>1.000000</text>
+<text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -101,7 +102,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>24,7</AT_position>
-<text>4.000000</text>
+<text>T#4s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -134,7 +135,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>35,5</position>
-<text>16XV0001_LG.FL(9)</text>
+<text>16XV0001_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

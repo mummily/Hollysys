@@ -16,17 +16,13 @@
 <interface>
 <![CDATA[PROGRAM 13FC0008_MODE_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 2.000000 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 0.000000 ;       (*NN3ÃèÊö*)
-NN4(2070): REAL := 100.0000;       (*NN4ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13K1301A.PVFL(1)</text>
+<text>13K1301A.DV(1)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -35,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13K1301B.PVFL(1)</text>
+<text>13K1301B.DV(1)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -44,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13ISA9003A.PVFL</text>
+<text>13ISA9003A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -53,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>13ISA9003B.PVFL</text>
+<text>13ISA9003B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -63,7 +59,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>13FC0008_MODE_OR0</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -76,7 +72,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>15,17</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13FC0008_MODE_AND1</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -89,7 +85,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>25,11</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13FC0008_MODE_AND2</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -102,7 +98,7 @@ END_VAR]]>
 <id>11</id>
 <AT_position>35,11</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13FC0008_MODE_TP4</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -116,7 +112,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>25,17</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13FC0008_MODE_TP3</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -129,7 +125,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>34,13</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -138,7 +134,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>24,19</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

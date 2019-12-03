@@ -16,9 +16,7 @@
 <interface>
 <![CDATA[PROGRAM 16FIC0014_LG_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 0.000000 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 2.000000;       (*NN3ÃèÊö*)
+16FIC0014_LG_TON1(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
@@ -26,7 +24,7 @@ END_VAR]]>
 <id>2</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>16FIC0014_LG_OR0</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -37,7 +35,7 @@ END_VAR]]>
 <id>3</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>16FIC0014_LG_TON1</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -49,7 +47,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>14,16</AT_position>
-<text>1.000000</text>
+<text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

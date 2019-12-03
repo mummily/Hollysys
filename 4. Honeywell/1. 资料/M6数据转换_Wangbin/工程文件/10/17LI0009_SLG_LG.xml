@@ -16,8 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 17LI0009_SLG_LG
 VAR
-NN1(2070): REAL := 46.96230 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 49.13210;       (*NN2ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -61,7 +59,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>17LI0009_SLG_NOT0</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -71,7 +69,7 @@ END_VAR]]>
 <element type="output">
 <id>6</id>
 <position>25,2</position>
-<text>17LI0009_SLG.NN(2)</text>
+<text>17LI0009_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -83,7 +81,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>25,8</position>
-<text>17LI0009_SLG.NN(2)</text>
+<text>17LI0009_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -95,7 +93,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>25,14</position>
-<text>17LI0009_SLG.NN(2)</text>
+<text>17LI0009_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -107,7 +105,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>25,20</position>
-<text>17LI0009_SLG.NN(1)</text>
+<text>17LI0009_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -119,7 +117,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>25,22</position>
-<text>17LI0009_SLG.NN(1)</text>
+<text>17LI0009_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

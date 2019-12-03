@@ -16,12 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 13LC0040A_MODE_LG
 VAR
-NN1(2070): REAL := 0.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 1.000000 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 3.000000 ;       (*NN3ÃèÊö*)
-NN4(2070): REAL := 70.00000 ;       (*NN4ÃèÊö*)
-NN5(2070): REAL := 65.00000 ;       (*NN5ÃèÊö*)
-NN6(2070): REAL := 55.00000;       (*NN6ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -56,7 +50,7 @@ END_VAR]]>
 <id>12</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>GE</text>
+<text>13LC0040A_MODE_GE0</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -69,7 +63,7 @@ END_VAR]]>
 <id>13</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>GE</text>
+<text>13LC0040A_MODE_GE1</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -82,7 +76,7 @@ END_VAR]]>
 <id>14</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>GE</text>
+<text>13LC0040A_MODE_GE2</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -95,7 +89,7 @@ END_VAR]]>
 <id>18</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
-<text>QOR2</text>
+<text>13LC0040A_MODE_QOR26</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -109,7 +103,7 @@ END_VAR]]>
 <id>20</id>
 <AT_position>35,8</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13LC0040A_MODE_TP8</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -123,7 +117,7 @@ END_VAR]]>
 <id>15</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>13LC0040A_MODE_LE3</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -136,7 +130,7 @@ END_VAR]]>
 <id>16</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>13LC0040A_MODE_LE4</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -149,7 +143,7 @@ END_VAR]]>
 <id>17</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>13LC0040A_MODE_LE5</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -162,7 +156,7 @@ END_VAR]]>
 <id>19</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
-<text>QOR2</text>
+<text>13LC0040A_MODE_QOR27</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -176,7 +170,7 @@ END_VAR]]>
 <id>21</id>
 <AT_position>35,8</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13LC0040A_MODE_TP9</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -189,7 +183,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>14,4</AT_position>
-<text>NN5</text>
+<text>13LC0040A_MODE_NN5</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -198,7 +192,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>14,10</AT_position>
-<text>NN5</text>
+<text>13LC0040A_MODE_NN5</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -207,7 +201,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>14,16</AT_position>
-<text>NN5</text>
+<text>13LC0040A_MODE_NN5</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -216,7 +210,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>14,4</AT_position>
-<text>NN6</text>
+<text>13LC0040A_MODE_NN6</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -225,7 +219,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>14,10</AT_position>
-<text>NN6</text>
+<text>13LC0040A_MODE_NN6</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -234,7 +228,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>14,16</AT_position>
-<text>NN6</text>
+<text>13LC0040A_MODE_NN6</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -243,7 +237,7 @@ END_VAR]]>
 <element type="input">
 <id>10</id>
 <AT_position>34,10</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -252,7 +246,7 @@ END_VAR]]>
 <element type="input">
 <id>11</id>
 <AT_position>34,10</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

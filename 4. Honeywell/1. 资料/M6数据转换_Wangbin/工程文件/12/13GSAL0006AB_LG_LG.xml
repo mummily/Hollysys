@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13GSC0006A.PVFL</text>
+<text>13GSC0006A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13GZL0006AB.PVFL</text>
+<text>13GZL0006AB.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13GSC0006B.PVFL</text>
+<text>13GSC0006B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -50,7 +50,7 @@ END_VAR]]>
 <id>4</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13GSAL0006AB_LG_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -63,7 +63,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>15,11</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13GSAL0006AB_LG_AND1</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -75,7 +75,7 @@ END_VAR]]>
 <element type="output">
 <id>6</id>
 <position>25,5</position>
-<text>13GSAL0006AB_LG.FL(7)</text>
+<text>13GSAL0006AB_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -87,7 +87,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>25,11</position>
-<text>13GSAL0006AB_LG.FL(8)</text>
+<text>13GSAL0006AB_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

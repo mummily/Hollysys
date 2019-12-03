@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13LISA0005.PVHIFL</text>
+<text>13LISA0005.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13LISA0005.PVLOFL</text>
+<text>13LISA0005.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="output">
 <id>3</id>
 <position>20,2</position>
-<text>13XI0011.SO</text>
+<text>13XI0011.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -52,7 +52,7 @@ END_VAR]]>
 <element type="output">
 <id>4</id>
 <position>20,8</position>
-<text>13XI0010.SO</text>
+<text>13XI0010.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

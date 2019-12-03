@@ -16,13 +16,14 @@
 <interface>
 <![CDATA[PROGRAM 11KS0021_LG_LG
 VAR
+11KS0021_LG_TON0(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>K1103B.PVFL(1)</text>
+<text>K1103B.DV(1)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -32,7 +33,7 @@ END_VAR]]>
 <id>3</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>11KS0021_LG_TON0</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -45,7 +46,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>14,4</AT_position>
-<text>60.00000</text>
+<text>T#60s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -54,7 +55,7 @@ END_VAR]]>
 <element type="output">
 <id>4</id>
 <position>25,2</position>
-<text>11KS0021_LG.FL(7)</text>
+<text>11KS0021_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

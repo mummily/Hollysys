@@ -16,15 +16,14 @@
 <interface>
 <![CDATA[PROGRAM 17US0006_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 0.000000;       (*NN2ÃèÊö*)
+17US0006_TON1(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>17LISA0007LG.FL(8)</text>
+<text>17LISA0007LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -33,7 +32,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>17GSO0012A.PVFL</text>
+<text>17GSO0012A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -42,7 +41,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>17GSO0012B.PVFL</text>
+<text>17GSO0012B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -52,7 +51,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,11</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>17US0006_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -65,7 +64,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>25,11</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>17US0006_TON1</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -79,7 +78,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>45,6</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>17US0006_OR3</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -92,7 +91,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>35,11</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>17US0006_TP2</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -105,7 +104,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>24,13</AT_position>
-<text>300.0000</text>
+<text>T#300s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -114,7 +113,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>34,13</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -123,7 +122,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>55,6</position>
-<text>P1701A_LG.FL(9)</text>
+<text>P1701A_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -135,7 +134,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>55,6</position>
-<text>P1701B_LG.FL(9)</text>
+<text>P1701B_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -147,7 +146,7 @@ END_VAR]]>
 <element type="output">
 <id>12</id>
 <position>55,6</position>
-<text>17FIC0004_LG.FL(9)</text>
+<text>17FIC0004_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -159,7 +158,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>55,6</position>
-<text>17XV0003_LG.FL(9)</text>
+<text>17XV0003_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

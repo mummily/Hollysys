@@ -16,17 +16,13 @@
 <interface>
 <![CDATA[PROGRAM 30US0002_1_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 0.000000 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 3.000000 ;       (*NN3ÃèÊö*)
-NN4(2070): REAL := 0.000000;       (*NN4ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>30PSLLL0002.PVFL</text>
+<text>30PSLLL0002.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -167,7 +163,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>20,2</position>
-<text>13XV0010_LG.FL(10)</text>
+<text>13XV0010_LG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

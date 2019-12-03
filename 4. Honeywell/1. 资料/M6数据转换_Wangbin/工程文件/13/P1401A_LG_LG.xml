@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>14GSO0003.PVFL</text>
+<text>14GSO0003.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -32,7 +32,7 @@ END_VAR]]>
 <id>2</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>P1401A_LG_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -43,7 +43,7 @@ END_VAR]]>
 <element type="output">
 <id>3</id>
 <position>25,2</position>
-<text>P1401A_DO.SO</text>
+<text>P1401A_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

@@ -16,7 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 13LALLLL0002_LG
 VAR
-NN1(2070): REAL := 5.000000;       (*NN1ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -51,7 +50,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>13LALLLL0002_LE0</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -64,7 +63,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>13LALLLL0002_LE1</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -77,7 +76,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>13LALLLL0002_LE2</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -90,7 +89,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
-<text>QOR2</text>
+<text>13LALLLL0002_QOR23</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -103,7 +102,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>14,4</AT_position>
-<text>NN1</text>
+<text>13LALLLL0002_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -112,7 +111,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>14,10</AT_position>
-<text>NN1</text>
+<text>13LALLLL0002_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -121,7 +120,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>14,16</AT_position>
-<text>NN1</text>
+<text>13LALLLL0002_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -130,7 +129,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>35,8</position>
-<text>13LALLLL0002.FL(7)</text>
+<text>13LALLLL0002_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

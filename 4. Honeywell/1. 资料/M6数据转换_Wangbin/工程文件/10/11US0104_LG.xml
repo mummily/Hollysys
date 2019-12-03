@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>11LSA0105.PVFL</text>
+<text>11LSA0105.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>11LSA0106.PVFL</text>
+<text>11LSA0106.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>12WIRSA0101.PVHHFL</text>
+<text>12WIRSA0101.HHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>11BS0110_5.PVFL</text>
+<text>11BS0110_5.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -58,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>12WIRSA0201.PVHHFL</text>
+<text>12WIRSA0201.HHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -67,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>10,32</AT_position>
-<text>11BS0110_6.PVFL</text>
+<text>11BS0110_6.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -76,7 +76,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>10,38</AT_position>
-<text>11TI0104.PVHIFL</text>
+<text>11TI0104.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -85,7 +85,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>10,44</AT_position>
-<text>11GSO0146.PVFL</text>
+<text>11GSO0146.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -94,7 +94,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>10,50</AT_position>
-<text>11GSO0134.PVFL</text>
+<text>11GSO0134.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -103,7 +103,7 @@ END_VAR]]>
 <element type="input">
 <id>10</id>
 <AT_position>10,56</AT_position>
-<text>11GSO0145.PVFL</text>
+<text>11GSO0145.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -112,7 +112,7 @@ END_VAR]]>
 <element type="input">
 <id>11</id>
 <AT_position>10,62</AT_position>
-<text>11BS0110_21.PVFL</text>
+<text>11BS0110_21.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -122,7 +122,7 @@ END_VAR]]>
 <id>12</id>
 <AT_position>15,17</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>11US0104_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -135,7 +135,7 @@ END_VAR]]>
 <id>13</id>
 <AT_position>15,29</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>11US0104_AND1</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -148,7 +148,7 @@ END_VAR]]>
 <id>15</id>
 <AT_position>25,10</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>11US0104_OR3</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -162,7 +162,7 @@ END_VAR]]>
 <id>16</id>
 <AT_position>25,34</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>11US0104_OR4</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -175,7 +175,7 @@ END_VAR]]>
 <id>14</id>
 <AT_position>15,50</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>11US0104_OR2</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -189,7 +189,7 @@ END_VAR]]>
 <id>18</id>
 <AT_position>35,33</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>11US0104_OR6</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -203,7 +203,7 @@ END_VAR]]>
 <id>17</id>
 <AT_position>25,56</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>11US0104_AND5</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -215,7 +215,7 @@ END_VAR]]>
 <element type="output">
 <id>19</id>
 <position>45,33</position>
-<text>11US0104.FL(7)</text>
+<text>11US0104_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

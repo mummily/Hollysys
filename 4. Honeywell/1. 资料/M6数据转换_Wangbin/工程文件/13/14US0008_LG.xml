@@ -16,13 +16,14 @@
 <interface>
 <![CDATA[PROGRAM 14US0008_LG
 VAR
+14US0008_TON2(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>14GSC0015.PVFL</text>
+<text>14GSC0015.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +32,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>14GSC0016.PVFL</text>
+<text>14GSC0016.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +41,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>14GSC0017.PVFL</text>
+<text>14GSC0017.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +50,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>14GSC0018.PVFL</text>
+<text>14GSC0018.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -59,7 +60,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>14US0008_OR0</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -73,7 +74,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>25,14</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>14US0008_OR1</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -86,7 +87,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>35,14</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>14US0008_TON2</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -99,7 +100,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>34,16</AT_position>
-<text>1.000000</text>
+<text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -108,7 +109,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>45,14</position>
-<text>14XV0009_LG.FL(7)</text>
+<text>14XV0009_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -120,7 +121,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>45,14</position>
-<text>14XV0010_LG.FL(7)</text>
+<text>14XV0010_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -132,7 +133,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>45,14</position>
-<text>14XV0011_LG.FL(7)</text>
+<text>14XV0011_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -144,7 +145,7 @@ END_VAR]]>
 <element type="output">
 <id>12</id>
 <position>45,14</position>
-<text>14XV0012_LG.FL(7)</text>
+<text>14XV0012_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -156,7 +157,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>45,14</position>
-<text>14US0008.FL(7)</text>
+<text>14US0008_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

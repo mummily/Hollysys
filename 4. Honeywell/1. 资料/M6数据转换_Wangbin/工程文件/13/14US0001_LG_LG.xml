@@ -16,13 +16,17 @@
 <interface>
 <![CDATA[PROGRAM 14US0001_LG_LG
 VAR
+14US0001_LG_TON0(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+14US0001_LG_TON4(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+14US0001_LG_TON2(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+14US0001_LG_TON5(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>14DY0001_2.PVHIFL</text>
+<text>14DY0001_2.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +35,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>14DY0001_2.PVHHFL</text>
+<text>14DY0001_2.HHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -41,7 +45,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>14US0001_LG_TON0</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -55,7 +59,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>14US0001_LG_NOT1</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -67,7 +71,7 @@ END_VAR]]>
 <id>11</id>
 <AT_position>25,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>14US0001_LG_TON4</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -81,7 +85,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>14US0001_LG_TON2</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -95,7 +99,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>14US0001_LG_NOT3</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -107,7 +111,7 @@ END_VAR]]>
 <id>12</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>14US0001_LG_TON5</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -120,7 +124,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>14,4</AT_position>
-<text>1800.000</text>
+<text>T#1800s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -129,7 +133,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>24,4</AT_position>
-<text>1800.000</text>
+<text>T#1800s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -138,7 +142,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>14,10</AT_position>
-<text>1800.000</text>
+<text>T#1800s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -147,7 +151,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>24,10</AT_position>
-<text>1800.000</text>
+<text>T#1800s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -156,7 +160,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>35,2</position>
-<text>14US0001_LG.FL(7)</text>
+<text>14US0001_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -168,7 +172,7 @@ END_VAR]]>
 <element type="output">
 <id>14</id>
 <position>35,2</position>
-<text>14US0001_LG.FL(8)</text>
+<text>14US0001_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -180,7 +184,7 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>35,8</position>
-<text>14DAHHH0001.PVFL</text>
+<text>14DAHHH0001.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -192,7 +196,7 @@ END_VAR]]>
 <element type="output">
 <id>16</id>
 <position>35,8</position>
-<text>14US0001_LG.FL(9)</text>
+<text>14US0001_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -204,7 +208,7 @@ END_VAR]]>
 <element type="output">
 <id>17</id>
 <position>35,8</position>
-<text>14US0001_LG.FL(10)</text>
+<text>14US0001_LG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13GSO0059.PVFL</text>
+<text>13GSO0059.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13GSC0022.PVFL</text>
+<text>13GSC0022.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13GSC0023.PVFL</text>
+<text>13GSC0023.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>13GSC0024.PVFL</text>
+<text>13GSC0024.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -58,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>13GSC0025.PVFL</text>
+<text>13GSC0025.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -67,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>10,32</AT_position>
-<text>13GSC0026.PVFL</text>
+<text>13GSC0026.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -76,7 +76,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>10,38</AT_position>
-<text>13GSC0027.PVFL</text>
+<text>13GSC0027.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -86,7 +86,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13X1305C_LG_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -100,7 +100,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>15,26</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13X1305C_LG_AND1</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -114,7 +114,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>25,26</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13X1305C_LG_AND2</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>

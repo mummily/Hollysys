@@ -16,9 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 16QY0013_LG_LG
 VAR
-NN1(2070): REAL := 4.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 50.00000 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 76.01970;       (*NN3ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -44,7 +41,7 @@ END_VAR]]>
 <id>4</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>16QY0013_LG_LE0</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -57,7 +54,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>25,2</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>16QY0013_LG_NOT1</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -68,7 +65,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>14,4</AT_position>
-<text>NN1</text>
+<text>16QY0013_LG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -77,7 +74,7 @@ END_VAR]]>
 <element type="output">
 <id>6</id>
 <position>35,4</position>
-<text>16QY0013_LG.NN(3)</text>
+<text>16QY0013_LG_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -89,7 +86,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>35,8</position>
-<text>16QY0013_LG.NN(3)</text>
+<text>16QY0013_LG_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

@@ -16,14 +16,14 @@
 <interface>
 <![CDATA[PROGRAM 13FC0301_LG_LG
 VAR
-NN2(2070): REAL := 2.000000;       (*NN2ÃèÊö*)
+13FC0301_LG_TON0(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13GSO0307.PVFL</text>
+<text>13GSO0307.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -69,7 +69,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>13FC0301_LG_TON0</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -83,7 +83,7 @@ END_VAR]]>
 <id>12</id>
 <AT_position>25,5</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13FC0301_LG_AND3</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -96,7 +96,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>EQ</text>
+<text>13FC0301_LG_EQ1</text>
 <AT_type>EQ</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -109,7 +109,7 @@ END_VAR]]>
 <id>13</id>
 <AT_position>25,17</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13FC0301_LG_AND4</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -122,7 +122,7 @@ END_VAR]]>
 <id>14</id>
 <AT_position>35,17</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>13FC0301_LG_NOT5</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -134,7 +134,7 @@ END_VAR]]>
 <id>11</id>
 <AT_position>15,20</AT_position>
 <isinst>TRUE</isinst>
-<text>EQ</text>
+<text>13FC0301_LG_EQ2</text>
 <AT_type>EQ</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -146,7 +146,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>14,16</AT_position>
-<text>NN2</text>
+<text>13FC0301_LG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -155,7 +155,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>14,22</AT_position>
-<text>NN2</text>
+<text>13FC0301_LG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -164,7 +164,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>14,4</AT_position>
-<text>5.000000</text>
+<text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

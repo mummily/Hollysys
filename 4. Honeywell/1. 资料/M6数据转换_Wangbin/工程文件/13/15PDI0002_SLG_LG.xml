@@ -16,7 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 15PDI0002_SLG_LG
 VAR
-NN1(2070): REAL := 5.924340;       (*NN1ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -50,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>15PDI0002A.PVHIFL</text>
+<text>15PDI0002A.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -59,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>15PDI0002B.PVHIFL</text>
+<text>15PDI0002B.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -68,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>10,32</AT_position>
-<text>15PDI0002C.PVHIFL</text>
+<text>15PDI0002C.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -77,7 +76,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>10,38</AT_position>
-<text>15PDI0002A.PVHHFL</text>
+<text>15PDI0002A.HHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -86,7 +85,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>10,44</AT_position>
-<text>15PDI0002B.PVHHFL</text>
+<text>15PDI0002B.HHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -95,7 +94,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>10,50</AT_position>
-<text>15PDI0002C.PVHHFL</text>
+<text>15PDI0002C.HHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -105,7 +104,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>15,26</AT_position>
 <isinst>TRUE</isinst>
-<text>QOR2</text>
+<text>15PDI0002_SLG_QOR20</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -119,7 +118,7 @@ END_VAR]]>
 <id>11</id>
 <AT_position>15,44</AT_position>
 <isinst>TRUE</isinst>
-<text>QOR2</text>
+<text>15PDI0002_SLG_QOR21</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -132,7 +131,7 @@ END_VAR]]>
 <element type="output">
 <id>12</id>
 <position>25,2</position>
-<text>15PDI0002_SLG.NN(1)</text>
+<text>15PDI0002_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -144,7 +143,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>25,8</position>
-<text>15PDI0002_SLG.NN(1)</text>
+<text>15PDI0002_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -156,7 +155,7 @@ END_VAR]]>
 <element type="output">
 <id>14</id>
 <position>25,14</position>
-<text>15PDI0002_SLG.NN(1)</text>
+<text>15PDI0002_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -168,7 +167,7 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>25,26</position>
-<text>I2.SO</text>
+<text>I2.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -180,7 +179,7 @@ END_VAR]]>
 <element type="output">
 <id>16</id>
 <position>25,44</position>
-<text>I1I2.SO</text>
+<text>I1I2.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -192,7 +191,7 @@ END_VAR]]>
 <element type="output">
 <id>17</id>
 <position>25,44</position>
-<text>15PDAHH0002.PVFL</text>
+<text>15PDAHH0002.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

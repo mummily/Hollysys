@@ -16,10 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 12PDI0216_217SLG_LG
 VAR
-NN1(2070): REAL := 7.653630 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 1.020290 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 25.00000 ;       (*NN3ÃèÊö*)
-NN4(2070): REAL := -25.0000;       (*NN4ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -45,7 +41,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>GE</text>
+<text>12PDI0216_217SLG_GE0</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -58,7 +54,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>12PDI0216_217SLG_LE1</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -70,7 +66,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>14,10</AT_position>
-<text>NN2</text>
+<text>12PDI0216_217SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -79,7 +75,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>14,10</AT_position>
-<text>NN3</text>
+<text>12PDI0216_217SLG_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -88,7 +84,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>14,16</AT_position>
-<text>NN2</text>
+<text>12PDI0216_217SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -97,7 +93,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>14,16</AT_position>
-<text>NN4</text>
+<text>12PDI0216_217SLG_NN4</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -106,7 +102,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>25,2</position>
-<text>12PDI0216_217SLG.NN(1)</text>
+<text>12PDI0216_217SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -118,7 +114,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>25,2</position>
-<text>12PDI0216_217SLG.NN(2)</text>
+<text>12PDI0216_217SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -130,7 +126,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>25,8</position>
-<text>12PDI0216_217SLG.NN(1)</text>
+<text>12PDI0216_217SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -142,7 +138,7 @@ END_VAR]]>
 <element type="output">
 <id>12</id>
 <position>25,8</position>
-<text>12PDI0216_217SLG.NN(2)</text>
+<text>12PDI0216_217SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -154,7 +150,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>25,2</position>
-<text>12PDI0216_217SLG.NN(1)</text>
+<text>12PDI0216_217SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -166,7 +162,7 @@ END_VAR]]>
 <element type="output">
 <id>14</id>
 <position>25,8</position>
-<text>12PDI0216_217SLG.NN(2)</text>
+<text>12PDI0216_217SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -178,7 +174,7 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>25,8</position>
-<text>12PDI0216_217SLG.FL(10)</text>
+<text>12PDI0216_217SLG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -190,7 +186,7 @@ END_VAR]]>
 <element type="output">
 <id>16</id>
 <position>25,14</position>
-<text>12PDI0216_217SLG.FL(11)</text>
+<text>12PDI0216_217SLG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

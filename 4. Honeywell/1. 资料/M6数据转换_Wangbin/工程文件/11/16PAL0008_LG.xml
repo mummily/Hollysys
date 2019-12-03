@@ -16,14 +16,13 @@
 <interface>
 <![CDATA[PROGRAM 16PAL0008_LG
 VAR
-NN1(2070): REAL := 3.000000;       (*NN1ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>16PI0008_SLG.FL(10)</text>
+<text>16PI0008_SLG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -32,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>16PVGSC0008B.PVFL</text>
+<text>16PVGSC0008B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -50,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>16PI0008_SLG.FL(11)</text>
+<text>16PI0008_SLG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -60,7 +59,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>EQ</text>
+<text>16PAL0008_EQ0</text>
 <AT_type>EQ</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -73,7 +72,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>25,14</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>16PAL0008_AND1</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -86,7 +85,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>14,16</AT_position>
-<text>NN1</text>
+<text>16PAL0008_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -95,7 +94,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>35,2</position>
-<text>16PALL0008_DO.SO</text>
+<text>16PALL0008_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

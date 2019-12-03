@@ -16,13 +16,14 @@
 <interface>
 <![CDATA[PROGRAM 12US0205_LG
 VAR
+12US0205_TON3(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>12GSC0233.PVFL</text>
+<text>12GSC0233.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +32,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>12GSC0223.PVFL</text>
+<text>12GSC0223.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +41,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>12GSC0222.PVFL</text>
+<text>12GSC0222.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +50,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>12GSC0218.PVFL</text>
+<text>12GSC0218.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -58,7 +59,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>12GSC0221.PVFL</text>
+<text>12GSC0221.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -67,7 +68,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>10,32</AT_position>
-<text>12GSC0220.PVFL</text>
+<text>12GSC0220.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -76,7 +77,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>10,38</AT_position>
-<text>12GSC0224.PVFL</text>
+<text>12GSC0224.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -86,7 +87,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>12US0205_OR0</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -100,7 +101,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>15,26</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>12US0205_OR1</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -114,7 +115,7 @@ END_VAR]]>
 <id>11</id>
 <AT_position>25,23</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>12US0205_OR2</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -128,7 +129,7 @@ END_VAR]]>
 <id>12</id>
 <AT_position>35,23</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>12US0205_TON3</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -141,7 +142,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>34,25</AT_position>
-<text>1.000000</text>
+<text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

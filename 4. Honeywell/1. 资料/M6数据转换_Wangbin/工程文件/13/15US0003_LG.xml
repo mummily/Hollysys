@@ -16,15 +16,14 @@
 <interface>
 <![CDATA[PROGRAM 15US0003_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 0.000000;       (*NN2ÃèÊö*)
+15US0003_TON1(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>15PDISA0010.PVLOFL</text>
+<text>15PDISA0010.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -33,7 +32,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>15US0003_FORCE.PVFL</text>
+<text>15US0003_FORCE.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -43,7 +42,7 @@ END_VAR]]>
 <id>4</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>15US0003_OR0</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -56,7 +55,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>25,5</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>15US0003_TON1</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -69,7 +68,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>24,7</AT_position>
-<text>1.000000</text>
+<text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -90,7 +89,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>35,5</position>
-<text>15US0003.FL(7)</text>
+<text>15US0003_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

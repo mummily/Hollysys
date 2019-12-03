@@ -16,13 +16,14 @@
 <interface>
 <![CDATA[PROGRAM 13K1301B_LG_LG
 VAR
+13K1301B_LG_TON2(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13ISA9003B.PVFL</text>
+<text>13ISA9003B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +32,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13GSO0001B.PVFL</text>
+<text>13GSO0001B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +41,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13GSC0001B.PVFL</text>
+<text>13GSC0001B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -50,7 +51,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>25,6</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>13K1301B_LG_OR1</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -63,7 +64,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>35,6</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>13K1301B_LG_TON2</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -77,7 +78,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>45,6</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13K1301B_LG_TP3</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -91,7 +92,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,11</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13K1301B_LG_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -103,7 +104,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>34,8</AT_position>
-<text>1.000000</text>
+<text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -112,7 +113,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>44,8</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

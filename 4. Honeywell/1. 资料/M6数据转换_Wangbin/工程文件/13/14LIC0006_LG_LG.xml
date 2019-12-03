@@ -16,17 +16,13 @@
 <interface>
 <![CDATA[PROGRAM 14LIC0006_LG_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 0.000000 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 3.000000 ;       (*NN3ÃèÊö*)
-NN4(2070): REAL := 90.00000;       (*NN4ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>14LISA0006B.PVLOFL</text>
+<text>14LISA0006B.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -35,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>14GSC0035.PVFL</text>
+<text>14GSC0035.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -44,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>14LISA0006A.PVLOFL</text>
+<text>14LISA0006A.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -53,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>14GSO0035.PVFL</text>
+<text>14GSO0035.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -62,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>14LISA0006A.PVHIFL</text>
+<text>14LISA0006A.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -71,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>10,32</AT_position>
-<text>14LISA0006B.PVHIFL</text>
+<text>14LISA0006B.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -99,7 +95,7 @@ END_VAR]]>
 <id>13</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>14LIC0006_LG_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -112,7 +108,7 @@ END_VAR]]>
 <id>14</id>
 <AT_position>15,17</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>14LIC0006_LG_AND1</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -125,7 +121,7 @@ END_VAR]]>
 <id>15</id>
 <AT_position>15,23</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>14LIC0006_LG_AND2</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -138,7 +134,7 @@ END_VAR]]>
 <id>16</id>
 <AT_position>15,20</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>14LIC0006_LG_AND3</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -151,7 +147,7 @@ END_VAR]]>
 <id>19</id>
 <AT_position>25,11</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>14LIC0006_LG_OR6</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -164,7 +160,7 @@ END_VAR]]>
 <id>20</id>
 <AT_position>25,22</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>14LIC0006_LG_OR7</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -177,7 +173,7 @@ END_VAR]]>
 <id>17</id>
 <AT_position>15,38</AT_position>
 <isinst>TRUE</isinst>
-<text>GT</text>
+<text>14LIC0006_LG_GT4</text>
 <AT_type>GT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -190,7 +186,7 @@ END_VAR]]>
 <id>18</id>
 <AT_position>15,44</AT_position>
 <isinst>TRUE</isinst>
-<text>GT</text>
+<text>14LIC0006_LG_GT5</text>
 <AT_type>GT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -203,7 +199,7 @@ END_VAR]]>
 <id>21</id>
 <AT_position>35,11</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>14LIC0006_LG_TP8</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -217,7 +213,7 @@ END_VAR]]>
 <id>22</id>
 <AT_position>35,22</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>14LIC0006_LG_TP9</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -230,7 +226,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>14,40</AT_position>
-<text>NN4</text>
+<text>14LIC0006_LG_NN4</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -239,7 +235,7 @@ END_VAR]]>
 <element type="input">
 <id>10</id>
 <AT_position>14,46</AT_position>
-<text>NN4</text>
+<text>14LIC0006_LG_NN4</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -248,7 +244,7 @@ END_VAR]]>
 <element type="input">
 <id>11</id>
 <AT_position>34,13</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -257,7 +253,7 @@ END_VAR]]>
 <element type="input">
 <id>12</id>
 <AT_position>34,24</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -326,7 +322,7 @@ END_VAR]]>
 <element type="output">
 <id>28</id>
 <position>45,38</position>
-<text>14LIC0006_LG.FL(7)</text>
+<text>14LIC0006_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -338,7 +334,7 @@ END_VAR]]>
 <element type="output">
 <id>29</id>
 <position>45,44</position>
-<text>14LIC0006_LG.FL(8)</text>
+<text>14LIC0006_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

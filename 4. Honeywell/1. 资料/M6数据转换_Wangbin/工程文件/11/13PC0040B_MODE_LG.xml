@@ -16,15 +16,14 @@
 <interface>
 <![CDATA[PROGRAM 13PC0040B_MODE_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 0.000000;       (*NN2ÃèÊö*)
+13PC0040B_MODE_TON3(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13GSO0043.PVFL</text>
+<text>13GSO0043.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -34,7 +33,7 @@ END_VAR]]>
 <id>3</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>13PC0040B_MODE_NOT0</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -46,7 +45,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>13PC0040B_MODE_NOT2</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -58,7 +57,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>25,14</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>13PC0040B_MODE_TON3</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -72,7 +71,7 @@ END_VAR]]>
 <id>4</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>13PC0040B_MODE_NOT1</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -83,7 +82,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>24,16</AT_position>
-<text>30.00000</text>
+<text>T#30s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

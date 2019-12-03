@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>15PDISA0025.PVLOFL</text>
+<text>15PDISA0025.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>15PDISA0025.PVHIFL</text>
+<text>15PDISA0025.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -52,7 +52,7 @@ END_VAR]]>
 <element type="output">
 <id>4</id>
 <position>20,8</position>
-<text>15XV0014_LG.FL(7)</text>
+<text>15XV0014_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -64,7 +64,7 @@ END_VAR]]>
 <element type="output">
 <id>5</id>
 <position>20,2</position>
-<text>15XV0014_LG.FL(8)</text>
+<text>15XV0014_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

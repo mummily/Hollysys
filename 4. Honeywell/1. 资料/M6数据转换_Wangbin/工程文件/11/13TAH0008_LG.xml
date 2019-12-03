@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13TIA0006.PVHIFL</text>
+<text>13TIA0006.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13TI0007.PVHIFL</text>
+<text>13TI0007.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13TIA0006.PVLOFL</text>
+<text>13TIA0006.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>13TI0007.PVLOFL</text>
+<text>13TI0007.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -59,7 +59,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13TAH0008_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -72,7 +72,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,17</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>13TAH0008_OR1</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -84,7 +84,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>25,5</position>
-<text>13TAH0008.FL(7)</text>
+<text>13TAH0008_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -96,7 +96,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>25,17</position>
-<text>13TAH0008.FL(8)</text>
+<text>13TAH0008_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13FIA9001A.PVLLFL</text>
+<text>13FIA9001A.LLIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13FIA9001B.PVLLFL</text>
+<text>13FIA9001B.LLIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>30PSLLL0002.PVFL</text>
+<text>30PSLLL0002.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>13KS1001_UZ10J.PVFL</text>
+<text>13KS1001_UZ10J.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -58,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>13KS1005_UZ10A.PVFL</text>
+<text>13KS1005_UZ10A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -67,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>10,32</AT_position>
-<text>13KS1006_UZ10B.PVFL</text>
+<text>13KS1006_UZ10B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -76,7 +76,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>10,38</AT_position>
-<text>13KS1008_UZ10C.PVFL</text>
+<text>13KS1008_UZ10C.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -85,7 +85,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>10,44</AT_position>
-<text>13KS1010_UZ10D.PVFL</text>
+<text>13KS1010_UZ10D.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -94,7 +94,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>10,50</AT_position>
-<text>13KS1011_UZ10E.PVFL</text>
+<text>13KS1011_UZ10E.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -103,7 +103,7 @@ END_VAR]]>
 <element type="input">
 <id>10</id>
 <AT_position>10,56</AT_position>
-<text>13KS1013_UZ10F.PVFL</text>
+<text>13KS1013_UZ10F.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -112,7 +112,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>20,2</position>
-<text>13FALL9001A_FL.PVFL</text>
+<text>13FALL9001A_FL.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -124,7 +124,7 @@ END_VAR]]>
 <element type="output">
 <id>12</id>
 <position>20,8</position>
-<text>13FALL9001B_FL.PVFL</text>
+<text>13FALL9001B_FL.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -136,7 +136,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>20,14</position>
-<text>30PALLL0002.PVFL</text>
+<text>30PALLL0002.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -148,7 +148,7 @@ END_VAR]]>
 <element type="output">
 <id>14</id>
 <position>20,20</position>
-<text>13UZ0010J_DO.SO</text>
+<text>13UZ0010J_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -160,7 +160,7 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>20,26</position>
-<text>13UZ0010A_DO.SO</text>
+<text>13UZ0010A_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -172,7 +172,7 @@ END_VAR]]>
 <element type="output">
 <id>16</id>
 <position>20,32</position>
-<text>13UZ0010B_DO.SO</text>
+<text>13UZ0010B_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -184,7 +184,7 @@ END_VAR]]>
 <element type="output">
 <id>17</id>
 <position>20,38</position>
-<text>13UZ0010C_DO.SO</text>
+<text>13UZ0010C_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -196,7 +196,7 @@ END_VAR]]>
 <element type="output">
 <id>18</id>
 <position>20,44</position>
-<text>13UZ0010D_DO.SO</text>
+<text>13UZ0010D_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -208,7 +208,7 @@ END_VAR]]>
 <element type="output">
 <id>19</id>
 <position>20,50</position>
-<text>13UZ0010E_DO.SO</text>
+<text>13UZ0010E_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -220,7 +220,7 @@ END_VAR]]>
 <element type="output">
 <id>20</id>
 <position>20,56</position>
-<text>13UZ0010F_DO.SO</text>
+<text>13UZ0010F_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

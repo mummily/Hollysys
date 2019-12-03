@@ -16,13 +16,15 @@
 <interface>
 <![CDATA[PROGRAM 11US0106_LG
 VAR
+11US0106_TON1(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+11US0106_TON2(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>11GSO0139.PVFL</text>
+<text>11GSO0139.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +33,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>11BS0110_9.PVFL</text>
+<text>11BS0110_9.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -41,7 +43,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>11US0106_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -54,7 +56,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>25,5</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>11US0106_TON1</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -68,7 +70,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>25,5</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>11US0106_TON2</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -81,7 +83,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>24,7</AT_position>
-<text>1.000000</text>
+<text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -90,7 +92,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>24,7</AT_position>
-<text>1200.000</text>
+<text>T#1200s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

@@ -16,13 +16,14 @@
 <interface>
 <![CDATA[PROGRAM 13XV0006_LG_LG
 VAR
+13XV0006_LG_TON2(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13GSC0001.PVFL</text>
+<text>13GSC0001.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +32,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13GSC0002.PVFL</text>
+<text>13GSC0002.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +41,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13GSC0003.PVFL</text>
+<text>13GSC0003.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +50,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>13GSC0004.PVFL</text>
+<text>13GSC0004.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -58,7 +59,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>13GSC0005.PVFL</text>
+<text>13GSC0005.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -68,7 +69,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13XV0006_LG_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -82,7 +83,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>25,17</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13XV0006_LG_AND1</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -96,7 +97,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>35,17</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>13XV0006_LG_TON2</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -110,7 +111,7 @@ END_VAR]]>
 <id>11</id>
 <AT_position>45,17</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13XV0006_LG_TP3</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -123,7 +124,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>34,19</AT_position>
-<text>5.000000</text>
+<text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -132,7 +133,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>44,19</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

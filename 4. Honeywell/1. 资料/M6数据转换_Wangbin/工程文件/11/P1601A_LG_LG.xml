@@ -16,13 +16,14 @@
 <interface>
 <![CDATA[PROGRAM P1601A_LG_LG
 VAR
+P1601A_LG_TON1(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>16GSO0010A.PVFL</text>
+<text>16GSO0010A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -32,7 +33,7 @@ END_VAR]]>
 <id>4</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>P1601A_LG_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -44,7 +45,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>P1601A_LG_TON1</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -57,7 +58,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>P1601A_LG_NOT2</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -69,7 +70,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>25,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>P1601A_LG_TP3</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -83,7 +84,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>35,5</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>P1601A_LG_OR4</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -95,7 +96,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>14,10</AT_position>
-<text>1.000000</text>
+<text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -104,7 +105,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>24,4</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -113,7 +114,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>45,2</position>
-<text>P1601A_DO.SO</text>
+<text>P1601A_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

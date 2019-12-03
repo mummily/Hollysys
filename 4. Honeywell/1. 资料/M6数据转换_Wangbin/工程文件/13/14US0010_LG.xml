@@ -16,13 +16,14 @@
 <interface>
 <![CDATA[PROGRAM 14US0010_LG
 VAR
+14US0010_TON2(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>14PISA0011.PVHHFL</text>
+<text>14PISA0011.HHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +32,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>14GSC0021.PVFL</text>
+<text>14GSC0021.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +41,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>14KS0001.FL(28)</text>
+<text>14KS0001_FL28</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -50,7 +51,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>25,5</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>14US0010_TON2</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -64,7 +65,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>14US0010_OR0</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -77,7 +78,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>14US0010_TP1</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -91,7 +92,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>35,10</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>14US0010_AND3</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -103,7 +104,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>24,7</AT_position>
-<text>1.000000</text>
+<text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -112,7 +113,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>14,16</AT_position>
-<text>20.00000</text>
+<text>T#20s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -133,7 +134,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>45,10</position>
-<text>14US0010.FL(7)</text>
+<text>14US0010_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

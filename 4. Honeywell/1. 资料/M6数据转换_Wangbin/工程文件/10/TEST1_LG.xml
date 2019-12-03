@@ -16,9 +16,6 @@
 <interface>
 <![CDATA[PROGRAM TEST1_LG
 VAR
-NN1(2070): REAL := 12.00000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 10.00000 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 15.00000;       (*NN3ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -26,7 +23,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>GE</text>
+<text>TEST1_GE0</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -39,7 +36,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>GT</text>
+<text>TEST1_GT1</text>
 <AT_type>GT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -51,7 +48,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>14,10</AT_position>
-<text>NN1</text>
+<text>TEST1_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -60,7 +57,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>14,10</AT_position>
-<text>NN2</text>
+<text>TEST1_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -69,7 +66,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>14,16</AT_position>
-<text>NN3</text>
+<text>TEST1_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -78,7 +75,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>14,16</AT_position>
-<text>NN2</text>
+<text>TEST1_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

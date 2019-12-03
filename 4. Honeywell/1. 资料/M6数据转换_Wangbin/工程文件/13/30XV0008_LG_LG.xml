@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>30GSC0005.PVFL</text>
+<text>30GSC0005.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>30GSC0009.PVFL</text>
+<text>30GSC0009.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -41,7 +41,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>25,5</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>30XV0008_LG_OR1</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -55,7 +55,7 @@ END_VAR]]>
 <id>4</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>30XV0008_LG_TP0</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -67,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>14,10</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

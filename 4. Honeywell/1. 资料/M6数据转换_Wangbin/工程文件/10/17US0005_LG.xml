@@ -16,15 +16,13 @@
 <interface>
 <![CDATA[PROGRAM 17US0005_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 0.000000;       (*NN2ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>17PDISA0012.PVLLFL</text>
+<text>17PDISA0012.LLIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -33,7 +31,7 @@ END_VAR]]>
 <element type="output">
 <id>2</id>
 <position>20,2</position>
-<text>P1702A_LG.FL(9)</text>
+<text>P1702A_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -45,7 +43,7 @@ END_VAR]]>
 <element type="output">
 <id>3</id>
 <position>20,2</position>
-<text>P1702B_LG.FL(9)</text>
+<text>P1702B_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -57,7 +55,7 @@ END_VAR]]>
 <element type="output">
 <id>4</id>
 <position>20,2</position>
-<text>17FIC0006_LG.FL(9)</text>
+<text>17FIC0006_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -81,7 +79,7 @@ END_VAR]]>
 <element type="output">
 <id>6</id>
 <position>20,2</position>
-<text>17FIC0004_LG.FL(8)</text>
+<text>17FIC0004_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -93,7 +91,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>20,2</position>
-<text>17XV0003_LG.FL(8)</text>
+<text>17XV0003_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -105,7 +103,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>20,2</position>
-<text>P1701A_LG.FL(8)</text>
+<text>P1701A_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -117,7 +115,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>20,2</position>
-<text>P1701B_LG.FL(8)</text>
+<text>P1701B_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

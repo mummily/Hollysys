@@ -1060,6 +1060,11 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
         newLISRC = Replace(newLISRC, ".PVLLFL", ".LLIND")
         newLISRC = Replace(newLISRC, ".PVHIFL", ".AHIND")
         newLISRC = Replace(newLISRC, ".PVHHFL", ".HHIND")
+        If newLISRC Like "*.FL(*)" Or newLISRC Like "*.NN(*)" Then
+            newLISRC = Replace(newLISRC, ".", "_")
+            newLISRC = Replace(newLISRC, "(", "")
+            newLISRC = Replace(newLISRC, ")", "")
+        End If
     End If
     
     ReplaceLISRCSuffix = newLISRC
@@ -1070,15 +1075,5 @@ End Function
 ' Remark: 目前替换的项和LISRC一致，若不一致需要更新
 '-----------------------------------------------------------------------------------------------------------
 Private Function ReplaceLODSTNSuffix(LODSTN As String)
-    Dim newLISRC As String
-    newLISRC = LODSTN
-    
-    If newLISRC <> "--.--" Then
-        newLISRC = ReplaceLISRCSuffix(newLISRC)
-        newLISRC = Replace(newLISRC, ".", "_")
-        newLISRC = Replace(newLISRC, "(", "")
-        newLISRC = Replace(newLISRC, ")", "")
-    End If
-    
-    ReplaceLODSTNSuffix = newLISRC
+    ReplaceLODSTNSuffix = ReplaceLISRCSuffix(LODSTN)
 End Function

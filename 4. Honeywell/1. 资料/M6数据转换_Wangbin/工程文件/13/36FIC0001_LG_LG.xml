@@ -16,15 +16,13 @@
 <interface>
 <![CDATA[PROGRAM 36FIC0001_LG_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 0.000000;       (*NN2ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>36GSO0013.PVFL</text>
+<text>36GSO0013.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -34,7 +32,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>35,2</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>36FIC0001_LG_OR2</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -46,7 +44,7 @@ END_VAR]]>
 <id>3</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>36FIC0001_LG_NOT0</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -58,7 +56,7 @@ END_VAR]]>
 <id>4</id>
 <AT_position>25,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>36FIC0001_LG_TP1</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -71,7 +69,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>24,4</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

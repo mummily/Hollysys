@@ -16,9 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 13PI0040_SLG_LG
 VAR
-NN1(2070): REAL := 5.400510 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 5.600000 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 5.404250;       (*NN3ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -52,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>13PI0040A.PVHIFL</text>
+<text>13PI0040A.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -61,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>13PI0040B.PVHIFL</text>
+<text>13PI0040B.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -70,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>10,32</AT_position>
-<text>13PI0040C.PVHIFL</text>
+<text>13PI0040C.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -79,7 +76,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>10,38</AT_position>
-<text>13PI0040A.PVLOFL</text>
+<text>13PI0040A.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -88,7 +85,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>10,44</AT_position>
-<text>13PI0040B.PVLOFL</text>
+<text>13PI0040B.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -97,7 +94,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>10,50</AT_position>
-<text>13PI0040C.PVLOFL</text>
+<text>13PI0040C.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -115,7 +112,7 @@ END_VAR]]>
 <element type="input">
 <id>11</id>
 <AT_position>10,62</AT_position>
-<text>13PI0040_FL.PVFL</text>
+<text>13PI0040_FL.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -125,7 +122,7 @@ END_VAR]]>
 <id>15</id>
 <AT_position>15,26</AT_position>
 <isinst>TRUE</isinst>
-<text>QOR2</text>
+<text>13PI0040_SLG_QOR20</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -139,7 +136,7 @@ END_VAR]]>
 <id>16</id>
 <AT_position>15,44</AT_position>
 <isinst>TRUE</isinst>
-<text>QOR2</text>
+<text>13PI0040_SLG_QOR21</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -153,7 +150,7 @@ END_VAR]]>
 <id>17</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>GE</text>
+<text>13PI0040_SLG_GE2</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -166,7 +163,7 @@ END_VAR]]>
 <id>18</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>GE</text>
+<text>13PI0040_SLG_GE3</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -179,7 +176,7 @@ END_VAR]]>
 <id>19</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>GE</text>
+<text>13PI0040_SLG_GE4</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -192,7 +189,7 @@ END_VAR]]>
 <id>21</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
-<text>QOR2</text>
+<text>13PI0040_SLG_QOR26</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -206,7 +203,7 @@ END_VAR]]>
 <id>20</id>
 <AT_position>15,62</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>13PI0040_SLG_NOT5</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -217,7 +214,7 @@ END_VAR]]>
 <element type="input">
 <id>12</id>
 <AT_position>14,4</AT_position>
-<text>NN2</text>
+<text>13PI0040_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -226,7 +223,7 @@ END_VAR]]>
 <element type="input">
 <id>13</id>
 <AT_position>14,10</AT_position>
-<text>NN2</text>
+<text>13PI0040_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -235,7 +232,7 @@ END_VAR]]>
 <element type="input">
 <id>14</id>
 <AT_position>14,16</AT_position>
-<text>NN2</text>
+<text>13PI0040_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -244,7 +241,7 @@ END_VAR]]>
 <element type="output">
 <id>22</id>
 <position>35,2</position>
-<text>13PI0040_SLG.NN(3)</text>
+<text>13PI0040_SLG_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -256,7 +253,7 @@ END_VAR]]>
 <element type="output">
 <id>23</id>
 <position>35,8</position>
-<text>13PI0040_SLG.NN(3)</text>
+<text>13PI0040_SLG_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -268,7 +265,7 @@ END_VAR]]>
 <element type="output">
 <id>24</id>
 <position>35,14</position>
-<text>13PI0040_SLG.NN(3)</text>
+<text>13PI0040_SLG_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -280,7 +277,7 @@ END_VAR]]>
 <element type="output">
 <id>25</id>
 <position>35,26</position>
-<text>13PI0040_SLG.FL(10)</text>
+<text>13PI0040_SLG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -292,7 +289,7 @@ END_VAR]]>
 <element type="output">
 <id>26</id>
 <position>35,44</position>
-<text>13PI0040_SLG.FL(11)</text>
+<text>13PI0040_SLG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -304,7 +301,7 @@ END_VAR]]>
 <element type="output">
 <id>27</id>
 <position>35,8</position>
-<text>13PI0040_SLG.FL(12)</text>
+<text>13PI0040_SLG_FL12</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -316,7 +313,7 @@ END_VAR]]>
 <element type="output">
 <id>28</id>
 <position>35,56</position>
-<text>13PI0040_SLG.NN(1)</text>
+<text>13PI0040_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -328,7 +325,7 @@ END_VAR]]>
 <element type="output">
 <id>29</id>
 <position>35,58</position>
-<text>13PI0040_SLG.NN(1)</text>
+<text>13PI0040_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

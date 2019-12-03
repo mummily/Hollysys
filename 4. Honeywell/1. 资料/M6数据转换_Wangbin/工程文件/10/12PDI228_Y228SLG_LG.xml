@@ -16,10 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 12PDI228_Y228SLG_LG
 VAR
-NN1(2070): REAL := 0.915963 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := -256.204 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 25.00000 ;       (*NN3ÃèÊö*)
-NN4(2070): REAL := -25.0000;       (*NN4ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -44,7 +40,7 @@ END_VAR]]>
 <element type="output">
 <id>3</id>
 <position>20,2</position>
-<text>12PDI228_Y228SLG.NN(1)</text>
+<text>12PDI228_Y228SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -56,7 +52,7 @@ END_VAR]]>
 <element type="output">
 <id>4</id>
 <position>20,8</position>
-<text>12PDI228_Y228SLG.NN(1)</text>
+<text>12PDI228_Y228SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

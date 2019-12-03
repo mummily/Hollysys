@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>15GSC0011.PVFL</text>
+<text>15GSC0011.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>15GSC0012.PVFL</text>
+<text>15GSC0012.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -41,7 +41,7 @@ END_VAR]]>
 <id>3</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>15US0008_OR0</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -53,7 +53,7 @@ END_VAR]]>
 <element type="output">
 <id>4</id>
 <position>25,5</position>
-<text>15XV0002_LG.FL(8)</text>
+<text>15XV0002_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -65,7 +65,7 @@ END_VAR]]>
 <element type="output">
 <id>5</id>
 <position>25,5</position>
-<text>15XV0003_LG.FL(8)</text>
+<text>15XV0003_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -77,7 +77,7 @@ END_VAR]]>
 <element type="output">
 <id>6</id>
 <position>25,5</position>
-<text>15XV0009_LG.FL(8)</text>
+<text>15XV0009_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -89,7 +89,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>25,5</position>
-<text>15XV0008_LG.FL(8)</text>
+<text>15XV0008_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -101,7 +101,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>25,5</position>
-<text>15XV0006_LG.FL(11)</text>
+<text>15XV0006_LG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -113,7 +113,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>25,5</position>
-<text>15XV0007_LG.FL(11)</text>
+<text>15XV0007_LG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -125,7 +125,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>25,5</position>
-<text>15XV0010_LG.FL(8)</text>
+<text>15XV0010_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -137,7 +137,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>25,5</position>
-<text>15PDIC0009_LG.FL(8)</text>
+<text>15PDIC0009_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

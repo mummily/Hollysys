@@ -16,19 +16,13 @@
 <interface>
 <![CDATA[PROGRAM 16QY0004_LG_LG
 VAR
-NN1(2070): REAL := 4.500000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 4.000000 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 1.219570 ;       (*NN3ÃèÊö*)
-NN4(2070): REAL := 4.140000 ;       (*NN4ÃèÊö*)
-NN5(2070): REAL := 3.680000 ;       (*NN5ÃèÊö*)
-NN6(2070): REAL := 2.065050;       (*NN6ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>16QT0004DI.PVFL</text>
+<text>16QT0004DI.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -74,7 +68,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>16QY0004_LG_NOT0</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -86,7 +80,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>16QY0004_LG_LE1</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -99,7 +93,7 @@ END_VAR]]>
 <id>11</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>16QY0004_LG_NOT3</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -111,7 +105,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>16QY0004_LG_LE2</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -124,7 +118,7 @@ END_VAR]]>
 <id>12</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>16QY0004_LG_NOT4</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -135,7 +129,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>14,10</AT_position>
-<text>NN2</text>
+<text>16QY0004_LG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -144,7 +138,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>14,10</AT_position>
-<text>NN5</text>
+<text>16QY0004_LG_NN5</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -177,7 +171,7 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>35,4</position>
-<text>16QY0004_LG.NN(3)</text>
+<text>16QY0004_LG_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -189,7 +183,7 @@ END_VAR]]>
 <element type="output">
 <id>16</id>
 <position>35,14</position>
-<text>16QY0004_LG.NN(3)</text>
+<text>16QY0004_LG_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -201,7 +195,7 @@ END_VAR]]>
 <element type="output">
 <id>17</id>
 <position>35,26</position>
-<text>16QY0004_LG.NN(6)</text>
+<text>16QY0004_LG_NN6</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -213,7 +207,7 @@ END_VAR]]>
 <element type="output">
 <id>18</id>
 <position>35,20</position>
-<text>16QY0004_LG.NN(6)</text>
+<text>16QY0004_LG_NN6</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

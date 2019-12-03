@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13PISA0019.PVLOFL</text>
+<text>13PISA0019.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>34GSO0001.PVFL</text>
+<text>34GSO0001.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13TISA0005.PVHIFL</text>
+<text>13TISA0005.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -50,7 +50,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13XV0039_LG_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -63,7 +63,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>13XV0039_LG_NOT1</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -75,7 +75,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13XV0039_LG_TP2</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -89,7 +89,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>35,11</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>13XV0039_LG_OR4</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -102,7 +102,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>25,5</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13XV0039_LG_TP3</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -115,7 +115,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>24,10</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -124,7 +124,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>24,7</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

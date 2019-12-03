@@ -41,7 +41,7 @@ END_VAR]]>
 <id>3</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>LE</text>
+<text>15PSLLL0006_LE0</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -53,7 +53,7 @@ END_VAR]]>
 <element type="output">
 <id>4</id>
 <position>25,5</position>
-<text>15PSLLL0006.FL(7)</text>
+<text>15PSLLL0006_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

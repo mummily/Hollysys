@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>33GSO0012A.PVFL</text>
+<text>33GSO0012A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>33GSO0012B.PVFL</text>
+<text>33GSO0012B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>14GSO0030A.PVFL</text>
+<text>14GSO0030A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>14GSO0030B.PVFL</text>
+<text>14GSO0030B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -58,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>14FZLL0002O.PVFL</text>
+<text>14FZLL0002O.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -68,7 +68,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>13KS0003S1_15LG_OR0</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -81,7 +81,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>15,17</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>13KS0003S1_15LG_OR1</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -94,7 +94,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>25,16</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13KS0003S1_15LG_AND2</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -107,7 +107,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>35,16</position>
-<text>13KS03_FL1.PVFL</text>
+<text>13KS03_FL1.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

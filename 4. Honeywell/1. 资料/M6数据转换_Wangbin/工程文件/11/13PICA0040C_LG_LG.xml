@@ -16,9 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 13PICA0040C_LG_LG
 VAR
-NN1(2070): REAL := 5.500000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 0.000000 ;       (*NN2ÃèÊö*)
-NN3(2070): REAL := 3.000000;       (*NN3ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -53,7 +50,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>GE</text>
+<text>13PICA0040C_LG_GE0</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -66,7 +63,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>GE</text>
+<text>13PICA0040C_LG_GE1</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -79,7 +76,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>GE</text>
+<text>13PICA0040C_LG_GE2</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -92,7 +89,7 @@ END_VAR]]>
 <id>11</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
-<text>QOR2</text>
+<text>13PICA0040C_LG_QOR23</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -106,7 +103,7 @@ END_VAR]]>
 <id>12</id>
 <AT_position>35,8</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13PICA0040C_LG_TP4</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -119,7 +116,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>14,4</AT_position>
-<text>NN1</text>
+<text>13PICA0040C_LG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -128,7 +125,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>14,10</AT_position>
-<text>NN1</text>
+<text>13PICA0040C_LG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -137,7 +134,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>14,16</AT_position>
-<text>NN1</text>
+<text>13PICA0040C_LG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -146,7 +143,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>34,10</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

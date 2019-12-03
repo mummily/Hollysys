@@ -16,13 +16,15 @@
 <interface>
 <![CDATA[PROGRAM 13XV0003_LG_LG
 VAR
+13XV0003_LG_TON3(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+13XV0003_LG_TON6(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13GSC0006A.PVFL</text>
+<text>13GSC0006A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +33,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13GSC0006B.PVFL</text>
+<text>13GSC0006B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +42,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13GSC0028.PVFL</text>
+<text>13GSC0028.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +51,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>13GSC0022.PVFL</text>
+<text>13GSC0022.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -58,7 +60,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>13GSC0023.PVFL</text>
+<text>13GSC0023.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -67,7 +69,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>10,32</AT_position>
-<text>13UZ0005D.PVFL</text>
+<text>13UZ0005D.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -77,7 +79,7 @@ END_VAR]]>
 <id>11</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13XV0003_LG_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -91,7 +93,7 @@ END_VAR]]>
 <id>12</id>
 <AT_position>15,23</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>13XV0003_LG_OR1</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -104,7 +106,7 @@ END_VAR]]>
 <id>14</id>
 <AT_position>25,23</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>13XV0003_LG_TON3</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -118,7 +120,7 @@ END_VAR]]>
 <id>16</id>
 <AT_position>35,23</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13XV0003_LG_TP5</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -132,7 +134,7 @@ END_VAR]]>
 <id>13</id>
 <AT_position>15,32</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>13XV0003_LG_NOT2</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -144,7 +146,7 @@ END_VAR]]>
 <id>15</id>
 <AT_position>25,32</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13XV0003_LG_TP4</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -158,7 +160,7 @@ END_VAR]]>
 <id>17</id>
 <AT_position>35,32</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>13XV0003_LG_TON6</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -172,7 +174,7 @@ END_VAR]]>
 <id>18</id>
 <AT_position>45,28</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>13XV0003_LG_OR7</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -184,7 +186,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>24,25</AT_position>
-<text>30.00000</text>
+<text>T#30s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -193,7 +195,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>34,25</AT_position>
-<text>5.000000</text>
+<text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -202,7 +204,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>24,34</AT_position>
-<text>4.000000</text>
+<text>T#4s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -211,7 +213,7 @@ END_VAR]]>
 <element type="input">
 <id>10</id>
 <AT_position>34,34</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

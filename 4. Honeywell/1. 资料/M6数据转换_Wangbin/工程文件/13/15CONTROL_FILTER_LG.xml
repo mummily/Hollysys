@@ -16,7 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 15CONTROL_FILTER_LG
 VAR
-NN1(2070): REAL := 3.000000;       (*NN1ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -32,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>15PIA0051.PVLOFL</text>
+<text>15PIA0051.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -41,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>15TISA0003.PVLOFL</text>
+<text>15TISA0003.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -50,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>15TIA0004.PVLOFL</text>
+<text>15TIA0004.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -59,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>15PDI0002_SLG.NN(1)</text>
+<text>15PDI0002_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -77,7 +76,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>10,38</AT_position>
-<text>ALARM_ACK.PVFL</text>
+<text>ALARM_ACK.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -86,7 +85,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>10,44</AT_position>
-<text>15FILTER_VALVE.PVFL</text>
+<text>15FILTER_VALVE.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -104,7 +103,7 @@ END_VAR]]>
 <element type="input">
 <id>10</id>
 <AT_position>10,56</AT_position>
-<text>ALARM_TEST.PVFL</text>
+<text>ALARM_TEST.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -113,7 +112,7 @@ END_VAR]]>
 <element type="input">
 <id>11</id>
 <AT_position>10,62</AT_position>
-<text>13PAH0013.FL(8)</text>
+<text>13PAH0013_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -122,7 +121,7 @@ END_VAR]]>
 <element type="input">
 <id>12</id>
 <AT_position>10,68</AT_position>
-<text>15ALARM_1.SO(19)</text>
+<text>15ALARM_1.DI(19)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -132,7 +131,7 @@ END_VAR]]>
 <id>21</id>
 <AT_position>25,17</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>15CONTROL_FILTER_AND5</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -146,7 +145,7 @@ END_VAR]]>
 <id>22</id>
 <AT_position>35,18</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>15CONTROL_FILTER_AND6</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -159,7 +158,7 @@ END_VAR]]>
 <id>16</id>
 <AT_position>15,56</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>15CONTROL_FILTER_TP0</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -173,7 +172,7 @@ END_VAR]]>
 <id>17</id>
 <AT_position>15,29</AT_position>
 <isinst>TRUE</isinst>
-<text>GE</text>
+<text>15CONTROL_FILTER_GE1</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -186,7 +185,7 @@ END_VAR]]>
 <id>23</id>
 <AT_position>45,31</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>15CONTROL_FILTER_OR7</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -199,7 +198,7 @@ END_VAR]]>
 <id>24</id>
 <AT_position>55,31</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>15CONTROL_FILTER_TP8</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -213,7 +212,7 @@ END_VAR]]>
 <id>29</id>
 <AT_position>95,49</AT_position>
 <isinst>TRUE</isinst>
-<text>FLIPFLOP</text>
+<text>15CONTROL_FILTER_FLIPFLOP13</text>
 <AT_type>FLIPFLOP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -226,7 +225,7 @@ END_VAR]]>
 <id>18</id>
 <AT_position>15,38</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>15CONTROL_FILTER_TP2</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -240,7 +239,7 @@ END_VAR]]>
 <id>19</id>
 <AT_position>15,26</AT_position>
 <isinst>TRUE</isinst>
-<text>GT</text>
+<text>15CONTROL_FILTER_GT3</text>
 <AT_type>GT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -253,7 +252,7 @@ END_VAR]]>
 <id>25</id>
 <AT_position>65,44</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>15CONTROL_FILTER_OR9</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -266,7 +265,7 @@ END_VAR]]>
 <id>20</id>
 <AT_position>15,38</AT_position>
 <isinst>TRUE</isinst>
-<text>FLIPFLOP</text>
+<text>15CONTROL_FILTER_FLIPFLOP4</text>
 <AT_type>FLIPFLOP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -278,7 +277,7 @@ END_VAR]]>
 <id>26</id>
 <AT_position>65,34</AT_position>
 <isinst>TRUE</isinst>
-<text>FLIPFLOP</text>
+<text>15CONTROL_FILTER_FLIPFLOP10</text>
 <AT_type>FLIPFLOP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -291,7 +290,7 @@ END_VAR]]>
 <id>27</id>
 <AT_position>75,53</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>15CONTROL_FILTER_OR11</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -304,7 +303,7 @@ END_VAR]]>
 <id>28</id>
 <AT_position>85,60</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>15CONTROL_FILTER_OR12</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -316,7 +315,7 @@ END_VAR]]>
 <element type="input">
 <id>13</id>
 <AT_position>14,58</AT_position>
-<text>5.000000</text>
+<text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -325,7 +324,7 @@ END_VAR]]>
 <element type="input">
 <id>14</id>
 <AT_position>54,33</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -334,7 +333,7 @@ END_VAR]]>
 <element type="input">
 <id>15</id>
 <AT_position>14,40</AT_position>
-<text>1.000000</text>
+<text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -343,7 +342,7 @@ END_VAR]]>
 <element type="output">
 <id>30</id>
 <position>105,18</position>
-<text>I1I3.SO</text>
+<text>I1I3.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -355,7 +354,7 @@ END_VAR]]>
 <element type="output">
 <id>31</id>
 <position>105,29</position>
-<text>DO1.SO</text>
+<text>DO1.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -367,7 +366,7 @@ END_VAR]]>
 <element type="output">
 <id>32</id>
 <position>105,49</position>
-<text>15FILTER_ALARM.SO</text>
+<text>15FILTER_ALARM.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -379,7 +378,7 @@ END_VAR]]>
 <element type="output">
 <id>33</id>
 <position>105,38</position>
-<text>ALARM_ACK.PVFL</text>
+<text>ALARM_ACK.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -391,7 +390,7 @@ END_VAR]]>
 <element type="output">
 <id>34</id>
 <position>105,56</position>
-<text>ALARM_TEST.PVFL</text>
+<text>ALARM_TEST.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -403,7 +402,7 @@ END_VAR]]>
 <element type="output">
 <id>35</id>
 <position>105,38</position>
-<text>CBSTOP_FL.PVFL</text>
+<text>CBSTOP_FL.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -415,7 +414,7 @@ END_VAR]]>
 <element type="output">
 <id>36</id>
 <position>105,34</position>
-<text>15ALARM_FL.PVFL</text>
+<text>15ALARM_FL.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

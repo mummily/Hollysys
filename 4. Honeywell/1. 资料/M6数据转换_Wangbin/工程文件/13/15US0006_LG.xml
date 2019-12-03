@@ -16,15 +16,13 @@
 <interface>
 <![CDATA[PROGRAM 15US0006_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN8(2070): REAL := 0.000000;       (*NN8ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>15GSC0004.PVFL</text>
+<text>15GSC0004.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -33,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>15GSC0013.PVFL</text>
+<text>15GSC0013.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -43,7 +41,7 @@ END_VAR]]>
 <id>3</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>15US0006_OR0</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -55,7 +53,7 @@ END_VAR]]>
 <element type="output">
 <id>4</id>
 <position>25,5</position>
-<text>15XV0002_LG.FL(7)</text>
+<text>15XV0002_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -67,7 +65,7 @@ END_VAR]]>
 <element type="output">
 <id>5</id>
 <position>25,5</position>
-<text>15XV0003_LG.FL(7)</text>
+<text>15XV0003_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -79,7 +77,7 @@ END_VAR]]>
 <element type="output">
 <id>6</id>
 <position>25,5</position>
-<text>15XV0009_LG.FL(7)</text>
+<text>15XV0009_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -91,7 +89,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>25,5</position>
-<text>15XV0008_LG.FL(7)</text>
+<text>15XV0008_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -103,7 +101,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>25,5</position>
-<text>15XV0010_LG.FL(7)</text>
+<text>15XV0010_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -115,7 +113,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>25,5</position>
-<text>15PDIC0009_LG.FL(7)</text>
+<text>15PDIC0009_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

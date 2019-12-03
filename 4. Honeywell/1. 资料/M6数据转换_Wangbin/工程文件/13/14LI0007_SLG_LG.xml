@@ -16,7 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 14LI0007_SLG_LG
 VAR
-NN1(2070): REAL := 105.0180;       (*NN1ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -41,7 +40,7 @@ END_VAR]]>
 <element type="output">
 <id>3</id>
 <position>20,2</position>
-<text>14LI0007_SLG.NN(1)</text>
+<text>14LI0007_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -53,7 +52,7 @@ END_VAR]]>
 <element type="output">
 <id>4</id>
 <position>20,8</position>
-<text>14LI0007_SLG.NN(1)</text>
+<text>14LI0007_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

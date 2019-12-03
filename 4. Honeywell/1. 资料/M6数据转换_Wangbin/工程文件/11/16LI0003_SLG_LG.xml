@@ -16,8 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 16LI0003_SLG_LG
 VAR
-NN1(2070): REAL := 60.00550 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 57.80610;       (*NN2ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -60,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>16LI0003A.PVLOFL</text>
+<text>16LI0003A.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -69,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>10,32</AT_position>
-<text>16LI0003B.PVLOFL</text>
+<text>16LI0003B.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -78,7 +76,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>10,38</AT_position>
-<text>16LI0003C.PVLOFL</text>
+<text>16LI0003C.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -88,7 +86,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>16LI0003_SLG_NOT0</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -99,7 +97,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>15,32</AT_position>
 <isinst>TRUE</isinst>
-<text>QOR2</text>
+<text>16LI0003_SLG_QOR21</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -112,7 +110,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>25,2</position>
-<text>16LI0003_SLG.NN(2)</text>
+<text>16LI0003_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -124,7 +122,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>25,8</position>
-<text>16LI0003_SLG.NN(2)</text>
+<text>16LI0003_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -136,7 +134,7 @@ END_VAR]]>
 <element type="output">
 <id>12</id>
 <position>25,14</position>
-<text>16LI0003_SLG.NN(2)</text>
+<text>16LI0003_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -148,7 +146,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>25,20</position>
-<text>16LI0003_SLG.NN(1)</text>
+<text>16LI0003_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -160,7 +158,7 @@ END_VAR]]>
 <element type="output">
 <id>14</id>
 <position>25,22</position>
-<text>16LI0003_SLG.NN(1)</text>
+<text>16LI0003_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -172,7 +170,7 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>25,32</position>
-<text>16LAL0003.PVFL</text>
+<text>16LAL0003.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

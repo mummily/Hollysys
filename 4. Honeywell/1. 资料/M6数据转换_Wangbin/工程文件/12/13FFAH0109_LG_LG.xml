@@ -16,13 +16,15 @@
 <interface>
 <![CDATA[PROGRAM 13FFAH0109_LG_LG
 VAR
+13FFAH0109_LG_TON0(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+13FFAH0109_LG_TON1(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13FFIA0109.PVHIFL</text>
+<text>13FFIA0109.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +33,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13GSO0120.PVFL</text>
+<text>13GSO0120.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -41,7 +43,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>13FFAH0109_LG_TON0</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -55,7 +57,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>13FFAH0109_LG_TON1</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -69,7 +71,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>25,5</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>13FFAH0109_LG_AND2</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -81,7 +83,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>14,4</AT_position>
-<text>30.00000</text>
+<text>T#30s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -90,7 +92,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>14,10</AT_position>
-<text>60.00000</text>
+<text>T#60s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -99,7 +101,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>35,5</position>
-<text>13FFAH0109_LG.FL(7)</text>
+<text>13FFAH0109_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

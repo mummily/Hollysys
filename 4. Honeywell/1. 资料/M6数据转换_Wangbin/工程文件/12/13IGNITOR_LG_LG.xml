@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13KS0208_13UZ6C.PVFL</text>
+<text>13KS0208_13UZ6C.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13KS0211_13UZ6C.PVFL</text>
+<text>13KS0211_13UZ6C.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13UZ0006C.PVFL</text>
+<text>13UZ0006C.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -50,7 +50,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13IGNITOR_LG_TP0</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -64,7 +64,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>13IGNITOR_LG_NOT1</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -76,7 +76,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>25,14</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>13IGNITOR_LG_TP2</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -89,7 +89,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>14,16</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -98,7 +98,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>24,16</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -107,7 +107,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>35,2</position>
-<text>13UZ0006C01.SO</text>
+<text>13UZ0006C01.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -119,7 +119,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>35,8</position>
-<text>13UZ0006C02.SO</text>
+<text>13UZ0006C02.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

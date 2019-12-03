@@ -16,13 +16,16 @@
 <interface>
 <![CDATA[PROGRAM 33US0010_1_LG
 VAR
+33US0010_1_TOF1(2086): TOF := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+33US0010_1_TOF7(2086): TOF := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+33US0010_1_TOF3(2086): TOF := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>33GSO0011B.PVFL</text>
+<text>33GSO0011B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +34,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>33FISA0001.PVHHFL</text>
+<text>33FISA0001.HHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +43,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>BSP3301AB.PVFL</text>
+<text>BSP3301AB.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +52,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>33GSO0011A.PVFL</text>
+<text>33GSO0011A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -58,7 +61,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>33BSF0001.PVFL</text>
+<text>33BSF0001.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -68,7 +71,7 @@ END_VAR]]>
 <id>11</id>
 <AT_position>15,17</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>33US0010_1_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -81,7 +84,7 @@ END_VAR]]>
 <id>12</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TOF</text>
+<text>33US0010_1_TOF1</text>
 <AT_type>TOF</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -95,7 +98,7 @@ END_VAR]]>
 <id>17</id>
 <AT_position>25,10</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>33US0010_1_OR6</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -108,7 +111,7 @@ END_VAR]]>
 <id>21</id>
 <AT_position>45,11</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>33US0010_1_AND10</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -121,7 +124,7 @@ END_VAR]]>
 <id>23</id>
 <AT_position>55,11</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>33US0010_1_TP12</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -135,7 +138,7 @@ END_VAR]]>
 <id>13</id>
 <AT_position>15,11</AT_position>
 <isinst>TRUE</isinst>
-<text>XOR</text>
+<text>33US0010_1_XOR2</text>
 <AT_type>XOR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -148,7 +151,7 @@ END_VAR]]>
 <id>18</id>
 <AT_position>25,11</AT_position>
 <isinst>TRUE</isinst>
-<text>TOF</text>
+<text>33US0010_1_TOF7</text>
 <AT_type>TOF</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -162,7 +165,7 @@ END_VAR]]>
 <id>20</id>
 <AT_position>35,12</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>33US0010_1_AND9</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -175,7 +178,7 @@ END_VAR]]>
 <id>14</id>
 <AT_position>15,20</AT_position>
 <isinst>TRUE</isinst>
-<text>TOF</text>
+<text>33US0010_1_TOF3</text>
 <AT_type>TOF</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -189,7 +192,7 @@ END_VAR]]>
 <id>19</id>
 <AT_position>25,18</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>33US0010_1_OR8</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -202,7 +205,7 @@ END_VAR]]>
 <id>22</id>
 <AT_position>45,15</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>33US0010_1_AND11</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -215,7 +218,7 @@ END_VAR]]>
 <id>24</id>
 <AT_position>55,15</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>33US0010_1_TP13</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -229,7 +232,7 @@ END_VAR]]>
 <id>15</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>33US0010_1_NOT4</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -241,7 +244,7 @@ END_VAR]]>
 <id>16</id>
 <AT_position>15,20</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>33US0010_1_NOT5</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -252,7 +255,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>14,4</AT_position>
-<text>5.000000</text>
+<text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -261,7 +264,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>54,13</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -270,7 +273,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>24,13</AT_position>
-<text>8.000000</text>
+<text>T#8s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -279,7 +282,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>14,22</AT_position>
-<text>5.000000</text>
+<text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -288,7 +291,7 @@ END_VAR]]>
 <element type="input">
 <id>10</id>
 <AT_position>54,17</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

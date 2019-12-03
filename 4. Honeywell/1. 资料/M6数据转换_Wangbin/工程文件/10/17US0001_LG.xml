@@ -16,15 +16,13 @@
 <interface>
 <![CDATA[PROGRAM 17US0001_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 0.000000;       (*NN2ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>17LISA0005LG.FL(8)</text>
+<text>17LISA0005LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -33,7 +31,7 @@ END_VAR]]>
 <element type="output">
 <id>2</id>
 <position>20,2</position>
-<text>16XV0017_LG.FL(7)</text>
+<text>16XV0017_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -45,7 +43,7 @@ END_VAR]]>
 <element type="output">
 <id>3</id>
 <position>20,2</position>
-<text>16FIC0016_LG.FL(8)</text>
+<text>16FIC0016_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -57,7 +55,7 @@ END_VAR]]>
 <element type="output">
 <id>4</id>
 <position>20,2</position>
-<text>17FIC0001_LG.FL(7)</text>
+<text>17FIC0001_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -69,7 +67,7 @@ END_VAR]]>
 <element type="output">
 <id>5</id>
 <position>20,2</position>
-<text>17XV0001_LG.FL(7)</text>
+<text>17XV0001_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -81,7 +79,7 @@ END_VAR]]>
 <element type="output">
 <id>6</id>
 <position>20,2</position>
-<text>14XV0023_LG.FL(11)</text>
+<text>14XV0023_LG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -93,7 +91,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>20,2</position>
-<text>14XV0024_LG.FL(12)</text>
+<text>14XV0024_LG_FL12</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -105,7 +103,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>20,2</position>
-<text>14XV0025_LG.FL(12)</text>
+<text>14XV0025_LG_FL12</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

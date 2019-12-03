@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>16PI0008_SLG.FL(10)</text>
+<text>16PI0008_SLG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>16GSC0002.PVFL</text>
+<text>16GSC0002.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13UZ0001A.PVFL</text>
+<text>13UZ0001A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -50,7 +50,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>16US0003_OR0</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -63,7 +63,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>25,10</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>16US0003_AND1</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -76,7 +76,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>25,5</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>16US0003_NOT2</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -88,7 +88,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>25,5</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>16US0003_TP3</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -101,7 +101,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>24,7</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -134,7 +134,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>35,10</position>
-<text>16PIC0008A_LG.FL(7)</text>
+<text>16PIC0008A_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -146,7 +146,7 @@ END_VAR]]>
 <element type="output">
 <id>12</id>
 <position>35,10</position>
-<text>16XV0002_LG.FL(8)</text>
+<text>16XV0002_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

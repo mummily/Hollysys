@@ -16,15 +16,13 @@
 <interface>
 <![CDATA[PROGRAM 14US0012_LG
 VAR
-NN1(2070): REAL := 1.000000 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 0.000000;       (*NN2ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>14FISA0001.PVLOFL</text>
+<text>14FISA0001.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -33,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>14GSC0023.PVFL</text>
+<text>14GSC0023.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -42,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>14GSC0024.PVFL</text>
+<text>14GSC0024.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -51,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>14GSC0025.PVFL</text>
+<text>14GSC0025.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -61,7 +59,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>14US0012_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -75,7 +73,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>14US0012_OR1</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -87,7 +85,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>35,8</position>
-<text>17XV0001_LG.FL(8)</text>
+<text>17XV0001_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -135,7 +133,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>35,8</position>
-<text>14US0012.FL(7)</text>
+<text>14US0012_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

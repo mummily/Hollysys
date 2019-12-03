@@ -16,13 +16,15 @@
 <interface>
 <![CDATA[PROGRAM 31US0002_LG
 VAR
+31US0002_TON4(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+31US0002_TON5(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>31LIS0001.PVHIFL</text>
+<text>31LIS0001.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +33,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>31GSO0001.PVFL</text>
+<text>31GSO0001.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +42,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>31LIS0001.PVLOFL</text>
+<text>31LIS0001.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +51,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>31GSO0010A.PVFL</text>
+<text>31GSO0010A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -59,7 +61,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>31US0002_AND0</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -72,7 +74,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>31US0002_NOT1</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -84,7 +86,7 @@ END_VAR]]>
 <id>13</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>31US0002_TON4</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -98,7 +100,7 @@ END_VAR]]>
 <id>16</id>
 <AT_position>35,11</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>31US0002_OR7</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -111,7 +113,7 @@ END_VAR]]>
 <id>11</id>
 <AT_position>15,20</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>31US0002_NOT2</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -123,7 +125,7 @@ END_VAR]]>
 <id>14</id>
 <AT_position>25,20</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>31US0002_TON5</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -137,7 +139,7 @@ END_VAR]]>
 <id>17</id>
 <AT_position>35,17</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>31US0002_AND8</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -150,7 +152,7 @@ END_VAR]]>
 <id>12</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>31US0002_TP3</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -164,7 +166,7 @@ END_VAR]]>
 <id>15</id>
 <AT_position>25,5</AT_position>
 <isinst>TRUE</isinst>
-<text>TP</text>
+<text>31US0002_TP6</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -177,7 +179,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>24,10</AT_position>
-<text>5.000000</text>
+<text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -186,7 +188,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>24,22</AT_position>
-<text>5.000000</text>
+<text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -195,7 +197,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>14,4</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -204,7 +206,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>24,7</AT_position>
-<text>2.000000</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -237,7 +239,7 @@ END_VAR]]>
 <element type="output">
 <id>20</id>
 <position>45,11</position>
-<text>P3100_LG.FL(7)</text>
+<text>P3100_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -249,7 +251,7 @@ END_VAR]]>
 <element type="output">
 <id>21</id>
 <position>45,17</position>
-<text>31XV0001_LG.FL(7)</text>
+<text>31XV0001_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

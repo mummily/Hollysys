@@ -16,8 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 16PI0008_SLG_LG
 VAR
-NN1(2070): REAL := 3.257440 ;       (*NN1ÃèÊö*)
-NN2(2070): REAL := 3.258010;       (*NN2ÃèÊö*)
 END_VAR]]>
 </interface>
 <cfc>
@@ -51,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>16PI0008A.PVLLFL</text>
+<text>16PI0008A.LLIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -60,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>16PI0008B.PVLLFL</text>
+<text>16PI0008B.LLIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -69,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>10,32</AT_position>
-<text>16PI0008C.PVLLFL</text>
+<text>16PI0008C.LLIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -78,7 +76,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>10,38</AT_position>
-<text>16PI0008A.PVLOFL</text>
+<text>16PI0008A.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -87,7 +85,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>10,44</AT_position>
-<text>16PI0008B.PVLOFL</text>
+<text>16PI0008B.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -96,7 +94,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>10,50</AT_position>
-<text>16PI0008C.PVLOFL</text>
+<text>16PI0008C.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -105,7 +103,7 @@ END_VAR]]>
 <element type="input">
 <id>10</id>
 <AT_position>10,56</AT_position>
-<text>16PI0008A.PVHIFL</text>
+<text>16PI0008A.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -114,7 +112,7 @@ END_VAR]]>
 <element type="input">
 <id>11</id>
 <AT_position>10,62</AT_position>
-<text>16PI0008B.PVHIFL</text>
+<text>16PI0008B.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -123,7 +121,7 @@ END_VAR]]>
 <element type="input">
 <id>12</id>
 <AT_position>10,68</AT_position>
-<text>16PI0008C.PVHIFL</text>
+<text>16PI0008C.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -133,7 +131,7 @@ END_VAR]]>
 <id>13</id>
 <AT_position>15,26</AT_position>
 <isinst>TRUE</isinst>
-<text>QOR2</text>
+<text>16PI0008_SLG_QOR20</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -147,7 +145,7 @@ END_VAR]]>
 <id>14</id>
 <AT_position>15,44</AT_position>
 <isinst>TRUE</isinst>
-<text>QOR2</text>
+<text>16PI0008_SLG_QOR21</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -161,7 +159,7 @@ END_VAR]]>
 <id>15</id>
 <AT_position>15,62</AT_position>
 <isinst>TRUE</isinst>
-<text>QOR2</text>
+<text>16PI0008_SLG_QOR22</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -174,7 +172,7 @@ END_VAR]]>
 <element type="output">
 <id>16</id>
 <position>25,2</position>
-<text>16PI0008_SLG.NN(2)</text>
+<text>16PI0008_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -186,7 +184,7 @@ END_VAR]]>
 <element type="output">
 <id>17</id>
 <position>25,8</position>
-<text>16PI0008_SLG.NN(2)</text>
+<text>16PI0008_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -198,7 +196,7 @@ END_VAR]]>
 <element type="output">
 <id>18</id>
 <position>25,14</position>
-<text>16PI0008_SLG.NN(2)</text>
+<text>16PI0008_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -210,7 +208,7 @@ END_VAR]]>
 <element type="output">
 <id>19</id>
 <position>25,26</position>
-<text>16PI0008_SLG.FL(10)</text>
+<text>16PI0008_SLG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -222,7 +220,7 @@ END_VAR]]>
 <element type="output">
 <id>20</id>
 <position>25,44</position>
-<text>16PI0008_SLG.FL(11)</text>
+<text>16PI0008_SLG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -234,7 +232,7 @@ END_VAR]]>
 <element type="output">
 <id>21</id>
 <position>25,62</position>
-<text>16PI0008_SLG.FL(12)</text>
+<text>16PI0008_SLG_FL12</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

@@ -16,13 +16,15 @@
 <interface>
 <![CDATA[PROGRAM 14US0006_LG
 VAR
+14US0006_TON2(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+14US0006_TON1(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>14SS0002.PVFL</text>
+<text>14SS0002.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +33,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>14GSO0034A.PVFL</text>
+<text>14GSO0034A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -41,7 +43,7 @@ END_VAR]]>
 <id>5</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
-<text>NOT</text>
+<text>14US0006_NOT0</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -53,7 +55,7 @@ END_VAR]]>
 <id>7</id>
 <AT_position>25,2</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>14US0006_TON2</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -67,7 +69,7 @@ END_VAR]]>
 <id>9</id>
 <AT_position>45,5</AT_position>
 <isinst>TRUE</isinst>
-<text>OR</text>
+<text>14US0006_OR4</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -79,7 +81,7 @@ END_VAR]]>
 <id>6</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
-<text>TON</text>
+<text>14US0006_TON1</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -93,7 +95,7 @@ END_VAR]]>
 <id>8</id>
 <AT_position>35,5</AT_position>
 <isinst>TRUE</isinst>
-<text>AND</text>
+<text>14US0006_AND3</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -105,7 +107,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>24,4</AT_position>
-<text>30.00000</text>
+<text>T#30s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -114,7 +116,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>14,10</AT_position>
-<text>10.00000</text>
+<text>T#10s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -123,7 +125,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>55,5</position>
-<text>X1402A_LG.FL(8)</text>
+<text>X1402A_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -135,7 +137,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>55,5</position>
-<text>X1402B_LG.FL(8)</text>
+<text>X1402B_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

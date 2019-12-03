@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13P1304A.PVFL(1)</text>
+<text>13P1304A.DV(1)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13P1304B.PVFL(1)</text>
+<text>13P1304B.DV(1)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>16GSC0002.PVFL</text>
+<text>16GSC0002.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>16GSO0003.PVFL</text>
+<text>16GSO0003.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -58,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>16GSO0004.PVFL</text>
+<text>16GSO0004.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -67,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>10,32</AT_position>
-<text>16PVGSC0008A.PVFL</text>
+<text>16PVGSC0008A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -76,7 +76,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>10,38</AT_position>
-<text>16PVGSC0008B.PVFL</text>
+<text>16PVGSC0008B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -85,7 +85,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>20,2</position>
-<text>13KS0002.FL(11)</text>
+<text>13KS0002_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -97,7 +97,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>20,8</position>
-<text>13KS0002.FL(12)</text>
+<text>13KS0002_FL12</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -109,7 +109,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>20,14</position>
-<text>13KS0002.FL(13)</text>
+<text>13KS0002_FL13</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -121,7 +121,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>20,20</position>
-<text>13KS0002.FL(14)</text>
+<text>13KS0002_FL14</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -133,7 +133,7 @@ END_VAR]]>
 <element type="output">
 <id>12</id>
 <position>20,26</position>
-<text>13KS0002.FL(15)</text>
+<text>13KS0002_FL15</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -145,7 +145,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>20,32</position>
-<text>13KS0002.FL(16)</text>
+<text>13KS0002_FL16</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -157,7 +157,7 @@ END_VAR]]>
 <element type="output">
 <id>14</id>
 <position>20,38</position>
-<text>13KS0002.FL(17)</text>
+<text>13KS0002_FL17</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -169,7 +169,7 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>20,38</position>
-<text>16PVGSC0008B_F.PVFL</text>
+<text>16PVGSC0008B_F.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
