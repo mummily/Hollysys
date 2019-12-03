@@ -98,6 +98,9 @@ Private Sub InitProperty(sPouName As String)
                 .R1 = ULOGIC1_arr(rowLogic1, ULOGIC1("R1(" & index & ")"))
                 .R2 = ULOGIC1_arr(rowLogic1, ULOGIC1("R2(" & index & ")"))
                 .DLYTIME = ULOGIC2_arr(rowLogic2, ULOGIC2("DLYTIME(" & index & ")"))
+                If .DLYTIME <> "" Then
+                    .DLYTIME = Split(.DLYTIME, ".")(0)
+                End If
             End With
         Next
         
@@ -115,6 +118,9 @@ Private Sub InitProperty(sPouName As String)
                 .R1 = ULOGIC2_arr(rowLogic2, ULOGIC2("R1(" & index & ")"))
                 .R2 = ULOGIC2_arr(rowLogic2, ULOGIC2("R2(" & index & ")"))
                 .DLYTIME = ULOGIC2_arr(rowLogic2, ULOGIC2("DLYTIME(" & index & ")"))
+                If .DLYTIME <> "" Then
+                    .DLYTIME = Split(.DLYTIME, ".")(0)
+                End If
             End With
         Next
     
@@ -282,7 +288,7 @@ Private Sub WriteXML(sPouName As String)
     POU.WriteLine "<interface>"
     
     'NN变量  写入XML
-    Call WriteVar
+    Call WriteVar(sPouName)
     
     POU.WriteLine "</interface>"
     POU.WriteLine "<cfc>"
@@ -312,7 +318,7 @@ Private Sub WriteXML(sPouName As String)
                 POU.WriteLine "<id>" & .ElementID & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
                 POU.WriteLine "<isinst>TRUE</isinst>"
-                POU.WriteLine "<text>" & .ElementATType & "</text>"
+                POU.WriteLine "<text>" & sPouName & "_" & .ElementATType & .ElementSortID & "</text>"
                 POU.WriteLine "<AT_type>" & .ElementATType & "</AT_type>"
                 POU.WriteLine "<typetext>BT_FB</typetext>"
                 POU.WriteLine "<ttype>9</ttype>"
@@ -452,14 +458,17 @@ End Sub
 'Purpose: 写入Var变量信息到XML
 'History: 9-26-2019
 '-----------------------------------------------------------------------------------------------------------
-Private Sub WriteVar()
+Private Sub WriteVar(sPouName As String)
     POU.WriteLine "<![CDATA[PROGRAM " & ExcelInfo.NAME
     POU.WriteLine "VAR"
     
-    For index = 1 To 8
-        If ExcelInfo.HN_NN(index).NN <> "" Then
-            POU.WriteLine "NN" & index & "(2070): REAL := " & ExcelInfo.HN_NN(index).NN & ";       (*NN" & index & "描述*)"
-        End If
+    ' 计时器变量
+    For index = 1 To 24
+        With ExcelInfo.HN_BOX(index)
+            If .ElementATType = "TON" Or .ElementATType = "TOF" Then
+                POU.WriteLine sPouName & "_" & .ElementATType & .ElementSortID & "(2086): " & .ElementATType & " := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );"
+            End If
+        End With
     Next
     
     POU.WriteLine "END_VAR]]>"
