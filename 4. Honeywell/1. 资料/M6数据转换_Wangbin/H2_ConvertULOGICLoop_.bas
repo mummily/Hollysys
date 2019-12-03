@@ -450,7 +450,7 @@ Private Sub InitNN()
         iPos = InStr(strCur, "=")
         iIndex = CInt(Mid(strCur, iPos - 4, 3))
         strCur = Mid(strCur, iPos + 1, Len(strCur) - iPos)
-        ExcelInfo.HN_NN(iIndex).NN = strCur
+        ExcelInfo.HN_NN(iIndex) = strCur
     Loop
 End Sub
 
@@ -701,13 +701,6 @@ Private Function GetInputIndex(strIndexName As String)
         Trim (strIndexName)
         strIndex = Mid(strIndexName, 8, Len(strIndexName) - 7)
         GetInputIndex = str(ExcelInfo.HN_BOX(CInt(strIndex)).ElementID_DT)
-    ElseIf strIndexName Like "NN*" Then
-        If strPinName = "R1" Then
-            strIndex = Mid(strIndexName, 3, Len(strIndexName) - 2)
-        Else
-        End If
-        strIndex = Mid(strIndexName, 3, Len(strIndexName) - 2)
-        GetInputIndex = str(ExcelInfo.HN_NN(CInt(strIndex)).ElementID)
     ElseIf strIndexName Like "L*" Then
         strIndex = Mid(strIndexName, 2, Len(strIndexName) - 1)
         GetInputIndex = str(ExcelInfo.HN_INPUT(CInt(strIndex)).ElementID)

@@ -46,16 +46,6 @@ Type T_HN_INPUT
 End Type
 
 '-----------------------------------------------------------------------------------------------------------
-'Purpose: ULOGIC NN变量数据结构
-'History: 9-24-2019
-'-----------------------------------------------------------------------------------------------------------
-Type T_HN_NN
-    ElementID As Integer
-    
-    NN As String
-End Type
-
-'-----------------------------------------------------------------------------------------------------------
 'Purpose: ULOGIC OUTPUT数据结构
 'History: 9-24-2019
 '-----------------------------------------------------------------------------------------------------------
@@ -80,7 +70,7 @@ Type T_EXCELINFO
     PTDESC As String    '方案页描述
     PATH As String      '方案页XML路径
     
-    HN_NN(1 To 8) As T_HN_NN            'NN变量信息
+    HN_NN(1 To 8) As String             'NN变量信息
     HN_INPUT(1 To 12) As T_HN_INPUT     'INPUT信息
     HN_OUTPUT(1 To 12) As T_HN_OUTPUT   'OUTPUT信息
     HN_BOX(1 To 24) As T_HN_BOX         'BOX信息
