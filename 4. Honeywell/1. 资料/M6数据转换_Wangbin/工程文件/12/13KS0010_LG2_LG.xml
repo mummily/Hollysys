@@ -128,7 +128,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="box">
-<id>14</id>
+<id>17</id>
 <AT_position>15,23</AT_position>
 <isinst>TRUE</isinst>
 <text>13KS0010_LG2_OR0</text>
@@ -138,10 +138,11 @@ END_VAR]]>
 <sortid>0</sortid>
 <input inputid="4" inputidx="0" negate="true" visible="true" pinname=""/>
 <input inputid="5" inputidx="0" negate="true" visible="true" pinname=""/>
+<input inputid="13" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>17</id>
+<id>20</id>
 <AT_position>25,28</AT_position>
 <isinst>TRUE</isinst>
 <text>13KS0010_LG2_AND3</text>
@@ -149,12 +150,13 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>3</sortid>
-<input inputid="14" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="17" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="6" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="14" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>15</id>
+<id>18</id>
 <AT_position>15,50</AT_position>
 <isinst>TRUE</isinst>
 <text>13KS0010_LG2_EQ1</text>
@@ -163,11 +165,11 @@ END_VAR]]>
 <ttype>9</ttype>
 <sortid>1</sortid>
 <input inputid="9" inputidx="0" negate="false" visible="true" pinname=""/>
-<input inputid="13" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="15" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>16</id>
+<id>19</id>
 <AT_position>15,41</AT_position>
 <isinst>TRUE</isinst>
 <text>13KS0010_LG2_AND2</text>
@@ -177,10 +179,11 @@ END_VAR]]>
 <sortid>2</sortid>
 <input inputid="7" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="8" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="16" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="input">
-<id>13</id>
+<id>15</id>
 <AT_position>14,52</AT_position>
 <text>13KS0010_LG2_NN2</text>
 <Comment>?????</Comment>
@@ -188,8 +191,35 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
+<element type="input">
+<id>13</id>
+<AT_position>14,25</AT_position>
+<text>0</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>14</id>
+<AT_position>24,30</AT_position>
+<text>1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>16</id>
+<AT_position>14,43</AT_position>
+<text>1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="output">
-<id>18</id>
+<id>21</id>
 <position>35,2</position>
 <text>13UZ0010G_DO.DI</text>
 <Comment>?????</Comment>
@@ -201,7 +231,7 @@ END_VAR]]>
 <sortid>4</sortid>
 </element>
 <element type="output">
-<id>19</id>
+<id>22</id>
 <position>35,8</position>
 <text>13UZ0010H_DO.DI</text>
 <Comment>?????</Comment>
@@ -213,7 +243,7 @@ END_VAR]]>
 <sortid>5</sortid>
 </element>
 <element type="output">
-<id>20</id>
+<id>23</id>
 <position>35,14</position>
 <text>13UZ0010I_DO.DI</text>
 <Comment>?????</Comment>
@@ -225,55 +255,55 @@ END_VAR]]>
 <sortid>6</sortid>
 </element>
 <element type="output">
-<id>21</id>
+<id>24</id>
 <position>35,16</position>
 <text>16PIRCSA0008B.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>17</Inputid>
+<Inputid>20</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>7</sortid>
 </element>
 <element type="output">
-<id>22</id>
+<id>25</id>
 <position>35,18</position>
 <text>16PIRCSA0008B.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>17</Inputid>
+<Inputid>20</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>8</sortid>
 </element>
 <element type="output">
-<id>23</id>
+<id>26</id>
 <position>35,28</position>
 <text>16UZ0001_IN.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>17</Inputid>
+<Inputid>20</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>9</sortid>
 </element>
 <element type="output">
-<id>24</id>
+<id>27</id>
 <position>35,41</position>
 <text>16XV02_P8A_KS10.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>16</Inputid>
+<Inputid>19</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>10</sortid>
 </element>
 <element type="output">
-<id>25</id>
+<id>28</id>
 <position>35,56</position>
 <text>16GSC0007_FL.DV</text>
 <Comment>?????</Comment>
@@ -285,7 +315,7 @@ END_VAR]]>
 <sortid>11</sortid>
 </element>
 <element type="output">
-<id>26</id>
+<id>29</id>
 <position>35,62</position>
 <text>16GSO0003_FL.DV</text>
 <Comment>?????</Comment>
@@ -297,7 +327,7 @@ END_VAR]]>
 <sortid>12</sortid>
 </element>
 <element type="output">
-<id>27</id>
+<id>30</id>
 <position>35,68</position>
 <text>16GSO0004_FL.DV</text>
 <Comment>?????</Comment>
@@ -309,13 +339,13 @@ END_VAR]]>
 <sortid>13</sortid>
 </element>
 <element type="output">
-<id>28</id>
+<id>31</id>
 <position>35,50</position>
 <text>16PIRCS0008B_CAS.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>15</Inputid>
+<Inputid>18</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>14</sortid>

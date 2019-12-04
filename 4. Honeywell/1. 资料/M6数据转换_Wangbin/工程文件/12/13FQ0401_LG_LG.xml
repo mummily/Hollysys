@@ -28,6 +28,7 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>0</sortid>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
 <output negate="false" visible="true" pinname="ET"/>
@@ -41,6 +42,7 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>1</sortid>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="2" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
 <output negate="false" visible="true" pinname="ET"/>
@@ -54,6 +56,7 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>2</sortid>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
 <output negate="false" visible="true" pinname="ET"/>

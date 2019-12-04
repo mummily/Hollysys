@@ -50,7 +50,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="box">
-<id>7</id>
+<id>9</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
 <text>12SA0203ALARM_TON0</text>
@@ -59,12 +59,12 @@ END_VAR]]>
 <ttype>9</ttype>
 <sortid>0</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname="IN"/>
-<input inputid="4" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<input inputid="6" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
 <output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="box">
-<id>8</id>
+<id>10</id>
 <AT_position>25,5</AT_position>
 <isinst>TRUE</isinst>
 <text>12SA0203ALARM_AND1</text>
@@ -72,12 +72,13 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>1</sortid>
-<input inputid="7" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="9" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>10</id>
+<id>12</id>
 <AT_position>35,8</AT_position>
 <isinst>TRUE</isinst>
 <text>12SA0203ALARM_TON3</text>
@@ -85,13 +86,13 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>3</sortid>
-<input inputid="9" inputidx="0" negate="false" visible="true" pinname="IN"/>
-<input inputid="5" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<input inputid="11" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="7" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
 <output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="box">
-<id>9</id>
+<id>11</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
 <text>12SA0203ALARM_AND2</text>
@@ -99,12 +100,13 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>2</sortid>
-<input inputid="7" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="9" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>11</id>
+<id>13</id>
 <AT_position>45,8</AT_position>
 <isinst>TRUE</isinst>
 <text>12SA0203ALARM_TOF4</text>
@@ -112,13 +114,13 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>4</sortid>
-<input inputid="10" inputidx="0" negate="false" visible="true" pinname="IN"/>
-<input inputid="6" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<input inputid="12" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="8" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
 <output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="input">
-<id>4</id>
+<id>6</id>
 <AT_position>14,4</AT_position>
 <text>T#10s</text>
 <Comment>?????</Comment>
@@ -127,7 +129,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>5</id>
+<id>7</id>
 <AT_position>34,10</AT_position>
 <text>T#1s</text>
 <Comment>?????</Comment>
@@ -136,7 +138,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>6</id>
+<id>8</id>
 <AT_position>44,10</AT_position>
 <text>T#60s</text>
 <Comment>?????</Comment>
@@ -144,38 +146,56 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
-<element type="output">
-<id>12</id>
-<position>55,5</position>
-<text>12SA0203ALARM_FL7</text>
+<element type="input">
+<id>4</id>
+<AT_position>24,7</AT_position>
+<text>1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>8</Inputid>
-<Inputidx>0</Inputidx>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>5</id>
+<AT_position>24,10</AT_position>
+<text>1</text>
+<Comment>?????</Comment>
 <negate>false</negate>
-<sortid>5</sortid>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
 </element>
 <element type="output">
-<id>13</id>
-<position>55,8</position>
-<text>12SA0203ALARM_FL8</text>
+<id>14</id>
+<position>55,5</position>
+<text>12SA0203ALARM_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>10</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
+<sortid>5</sortid>
+</element>
+<element type="output">
+<id>15</id>
+<position>55,8</position>
+<text>12SA0203ALARM_FL8</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>12</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
 <sortid>6</sortid>
 </element>
 <element type="output">
-<id>14</id>
+<id>16</id>
 <position>55,8</position>
 <text>12SA0203ALARM_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>11</Inputid>
+<Inputid>13</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>7</sortid>

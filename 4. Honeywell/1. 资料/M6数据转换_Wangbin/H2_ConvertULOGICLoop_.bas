@@ -147,17 +147,33 @@ Private Sub InitProperty(sPouName As String)
         End With
     Next
     
-    'NN 赋值
+    'NN FL赋值
     For index = 1 To 24
         With ExcelInfo.HN_BOX(index)
             If .R1 Like "NN*" Then
                 .ElementID_R1 = LElement_ID
                 LElement_ID = LElement_ID + 1
-             End If
+            End If
             If .R2 Like "NN*" Then
                 .ElementID_R2 = LElement_ID
                 LElement_ID = LElement_ID + 1
-             End If
+            End If
+            If .S1 = "FL1" Or .S1 = "FL2" Then
+                .ElementID_S1 = LElement_ID
+                LElement_ID = LElement_ID + 1
+            End If
+            If .S2 = "FL1" Or .S2 = "FL2" Then
+                .ElementID_S2 = LElement_ID
+                LElement_ID = LElement_ID + 1
+            End If
+            If .S3 = "FL1" Or .S3 = "FL2" Then
+                .ElementID_S3 = LElement_ID
+                LElement_ID = LElement_ID + 1
+            End If
+            If .S4 = "FL1" Or .S4 = "FL2" Then
+                .ElementID_S4 = LElement_ID
+                LElement_ID = LElement_ID + 1
+            End If
         End With
     Next
     
@@ -375,6 +391,72 @@ Private Sub WriteXML(sPouName As String)
         End With
     Next
     
+    'S1 S2 S3 S4中FL写入XML
+    For index = 1 To 24
+        With ExcelInfo.HN_BOX(index)
+           If .S1 = "FL1" Or .S1 = "FL2" Then
+                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+                POU.WriteLine "<id>" & .ElementID_S1 & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
+                If .S1 = "FL1" Then
+                    POU.WriteLine "<text>0</text>"
+                Else
+                    POU.WriteLine "<text>1</text>"
+                End If
+                POU.WriteLine "<Comment>?????</Comment>"
+                POU.WriteLine "<negate>false</negate>"
+                POU.WriteLine "<ttype>4</ttype>"
+                POU.WriteLine "<Flag>FALSE</Flag>"
+                POU.WriteLine "</element>"
+           End If
+           If .S2 = "FL1" Or .S2 = "FL2" Then
+                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+                POU.WriteLine "<id>" & .ElementID_S2 & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
+                If .S2 = "FL1" Then
+                    POU.WriteLine "<text>0</text>"
+                Else
+                    POU.WriteLine "<text>1</text>"
+                End If
+                POU.WriteLine "<Comment>?????</Comment>"
+                POU.WriteLine "<negate>false</negate>"
+                POU.WriteLine "<ttype>4</ttype>"
+                POU.WriteLine "<Flag>FALSE</Flag>"
+                POU.WriteLine "</element>"
+           End If
+           If .S3 = "FL1" Or .S3 = "FL2" Then
+                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+                POU.WriteLine "<id>" & .ElementID_S3 & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
+                If .S3 = "FL1" Then
+                    POU.WriteLine "<text>0</text>"
+                Else
+                    POU.WriteLine "<text>1</text>"
+                End If
+                POU.WriteLine "<Comment>?????</Comment>"
+                POU.WriteLine "<negate>false</negate>"
+                POU.WriteLine "<ttype>4</ttype>"
+                POU.WriteLine "<Flag>FALSE</Flag>"
+                POU.WriteLine "</element>"
+           End If
+           If .S4 = "FL1" Or .S4 = "FL2" Then
+                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+                POU.WriteLine "<id>" & .ElementID_S4 & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
+                If .S4 = "FL1" Then
+                    POU.WriteLine "<text>0</text>"
+                Else
+                    POU.WriteLine "<text>1</text>"
+                End If
+                POU.WriteLine "<Comment>?????</Comment>"
+                POU.WriteLine "<negate>false</negate>"
+                POU.WriteLine "<ttype>4</ttype>"
+                POU.WriteLine "<Flag>FALSE</Flag>"
+                POU.WriteLine "</element>"
+           End If
+        End With
+    Next
+    
     '输出  写入XML
     For index = 1 To 12
         With ExcelInfo.HN_OUTPUT(index)
@@ -552,156 +634,143 @@ End Sub
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 写Box输入引脚
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
 '-----------------------------------------------------------------------------------------------------------
 Private Function WriteBoxInputs(iIndex As Integer)
-    If iIndex > 0 And iIndex < 25 Then
-        Dim bIsRPin As Boolean
-        Dim bHasDlyTime As Boolean
-        
-        If ExcelInfo.HN_BOX(iIndex).LOGALGID = "EQ" Then
+    Dim bIsRPin As Boolean
+    Dim bHasDlyTime As Boolean
+    bIsRPin = False
+    bHasDlyTime = False
+    
+    With ExcelInfo.HN_BOX(iIndex)
+        If .LOGALGID = "EQ" Or .LOGALGID = "NE" Or .LOGALGID = "GT" Or .LOGALGID = "GE" Or .LOGALGID = "LT" Or .LOGALGID = "LE" Then
             bIsRPin = True
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "NE" Then
-            bIsRPin = True
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "GT" Then
-            bIsRPin = True
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "GE" Then
-            bIsRPin = True
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "LT" Then
-            bIsRPin = True
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "LE" Then
-            bIsRPin = True
-        Else
-            bIsRPin = False
+        ElseIf .LOGALGID = "PULSE" Or .LOGALGID = "MAXPULSE" Or .LOGALGID = "MINPULSE" Or .LOGALGID = "ONDLY" Or .LOGALGID = "OFFDLY" Then
+            bHasDlyTime = True
         End If
-        
-        If ExcelInfo.HN_BOX(iIndex).LOGALGID = "PULSE" Then
-            bHasDlyTime = True
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "MAXPULSE" Then
-            bHasDlyTime = True
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "MINPULSE" Then
-            bHasDlyTime = True
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "ONDLY" Then
-            bHasDlyTime = True
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "OFFDLY" Then
-            bHasDlyTime = True
-        Else
-            bHasDlyTime = False
-        End If
-        
+    
         If bIsRPin Then
-            Call WriteBoxInput(ExcelInfo.HN_BOX(iIndex).LOGALGID, ExcelInfo.HN_BOX(iIndex).R1, "OFF", "R1", iIndex)
-            Call WriteBoxInput(ExcelInfo.HN_BOX(iIndex).LOGALGID, ExcelInfo.HN_BOX(iIndex).R2, "OFF", "R2", iIndex)
+            Call WriteBoxInput(.LOGALGID, .R1, "OFF", "R1", iIndex)
+            Call WriteBoxInput(.LOGALGID, .R2, "OFF", "R2", iIndex)
         ElseIf bHasDlyTime Then
-            Call WriteBoxInput(ExcelInfo.HN_BOX(iIndex).LOGALGID, ExcelInfo.HN_BOX(iIndex).S1, ExcelInfo.HN_BOX(iIndex).S1REV, "S1", iIndex)
-            Call WriteBoxInput(ExcelInfo.HN_BOX(iIndex).LOGALGID, "DLYTIME" & str(iIndex), "OFF", "DLYTIME" & str(iIndex), iIndex)
+            Call WriteBoxInput(.LOGALGID, .S1, .S1REV, "S1", iIndex)
+            Call WriteBoxInput(.LOGALGID, "DLYTIME" & str(iIndex), "OFF", "DLYTIME" & str(iIndex), iIndex)
         Else
-            Call WriteBoxInput(ExcelInfo.HN_BOX(iIndex).LOGALGID, ExcelInfo.HN_BOX(iIndex).S1, ExcelInfo.HN_BOX(iIndex).S1REV, "S1", iIndex)
-            Call WriteBoxInput(ExcelInfo.HN_BOX(iIndex).LOGALGID, ExcelInfo.HN_BOX(iIndex).S2, ExcelInfo.HN_BOX(iIndex).S2REV, "S2", iIndex)
-            Call WriteBoxInput(ExcelInfo.HN_BOX(iIndex).LOGALGID, ExcelInfo.HN_BOX(iIndex).S3, ExcelInfo.HN_BOX(iIndex).S3REV, "S3", iIndex)
-            Call WriteBoxInput(ExcelInfo.HN_BOX(iIndex).LOGALGID, ExcelInfo.HN_BOX(iIndex).S4, ExcelInfo.HN_BOX(iIndex).S4REV, "S4", iIndex)
+            Call WriteBoxInput(.LOGALGID, .S1, .S1REV, "S1", iIndex)
+            Call WriteBoxInput(.LOGALGID, .S2, .S2REV, "S2", iIndex)
+            Call WriteBoxInput(.LOGALGID, .S3, .S3REV, "S3", iIndex)
+            Call WriteBoxInput(.LOGALGID, .S4, .S4REV, "S4", iIndex)
         End If
-    End If
+    End With
 End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 写Box输出引脚
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
 '-----------------------------------------------------------------------------------------------------------
 Private Function WriteBoxOutputs(iIndex As Integer)
-    If iIndex > 0 And iIndex < 25 Then
-        If ExcelInfo.HN_BOX(iIndex).LOGALGID = "NAND" Then
+    With ExcelInfo.HN_BOX(iIndex)
+        If .LOGALGID = "NAND" Or .LOGALGID = "NOR" Or .LOGALGID = "QOR2" Or .LOGALGID = "QOR3" Or .LOGALGID = "MINPULSE" Or .LOGALGID = "MAXPULSE" Then
             WriteBoxOutput ("SO")
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "NOR" Then
-            WriteBoxOutput ("SO")
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "QOR2" Then
-            WriteBoxOutput ("SO")
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "QOR3" Then
-            WriteBoxOutput ("SO")
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "PULSE" Then
+        ElseIf .LOGALGID = "PULSE" Or .LOGALGID = "ONDLY" Or .LOGALGID = "OFFDLY" Then
             WriteBoxOutput ("Q")
             WriteBoxOutput ("ET")
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "MINPULSE" Then
-            WriteBoxOutput ("SO")
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "MAXPULSE" Then
-            WriteBoxOutput ("SO")
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "ONDLY" Then
-            WriteBoxOutput ("Q")
-            WriteBoxOutput ("ET")
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "OFFDLY" Then
-            WriteBoxOutput ("Q")
-            WriteBoxOutput ("ET")
-        ElseIf ExcelInfo.HN_BOX(iIndex).LOGALGID = "FLIPFLOP" Then
+        ElseIf .LOGALGID = "FLIPFLOP" Then
             WriteBoxOutput ("Q1")
         Else
             WriteBoxOutput ("")
         End If
-    End If
+    End With
 End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 写入一个输入引脚
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
+' Remark:  <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
 '-----------------------------------------------------------------------------------------------------------
 Private Function WriteBoxInput(strBoxName As String, strIndexName As String, strNagetive As String, strPinName As String, iIndex As Integer)
-    If strIndexName <> "" And strIndexName <> "NULL" And Not strIndexName Like "FL*" Then
-        Dim strInputIndexName As String
-        Dim strInputPinName As String
-        Dim strInputNagetive As String
+    If strIndexName <> "" And strIndexName <> "NULL" Then
+        Dim sInputid As String  ' inputid
+        Dim sPinname As String  ' pinname
+        Dim sNegate As String   ' negate
         
-        strInputIndexName = GetInputIndex(strIndexName)
-        If strIndexName Like "NN*" Then
-            If strPinName = "R1" Or strPinName = "R2" Then
-                strInputIndexName = GetInputNNIndex(iIndex, strPinName)
-            End If
+        If strIndexName Like "DLYTIME*" Then
+            sInputid = GetDlytimeInputIndex(iIndex)
+        ElseIf strIndexName Like "NN*" Then
+            sInputid = GetNNInputIndex(iIndex, strPinName)
+        ElseIf strIndexName Like "FL*" Then
+            sInputid = GetFLInputIndex(iIndex, strPinName)
+        Else
+            sInputid = GetInputIndex(strIndexName)
         End If
         
-        strInputPinName = ConvertPinName(strBoxName, strPinName)
-        strInputNagetive = ConvertNagetive(strNagetive)
-        strInputIndexName = Trim(strInputIndexName)
+        sInputid = Trim(sInputid)
+        sPinname = ConvertPinName(strBoxName, strPinName)
+        sNegate = ConvertNagetive(strNagetive)
         
-        POU.WriteLine "<input inputid=""" & strInputIndexName & """ inputidx=""0"" negate=""" & strInputNagetive & """ visible=""true"" pinname=""" & strInputPinName & """/>"
+        POU.WriteLine "<input inputid=""" & sInputid & """ inputidx=""0"" negate=""" & sNegate & """ visible=""true"" pinname=""" & sPinname & """/>"
     End If
 End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 写入一个输出引脚
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
 '-----------------------------------------------------------------------------------------------------------
 Private Function WriteBoxOutput(strPinName As String)
-
     POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""" & strPinName & """/>"
-
 End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 获取输入引脚连接的块索引
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
 '-----------------------------------------------------------------------------------------------------------
-Private Function GetInputNNIndex(iIndex As Integer, strPinName As String)
-    If strPinName = "R1" Then
-        GetInputNNIndex = str(ExcelInfo.HN_BOX(iIndex).ElementID_R1)
-    Else
-        GetInputNNIndex = str(ExcelInfo.HN_BOX(iIndex).ElementID_R2)
-    End If
+Private Function GetDlytimeInputIndex(iIndex As Integer)
+    With ExcelInfo.HN_BOX(iIndex)
+        GetDlytimeInputIndex = str(.ElementID_DT)
+    End With
 End Function
+
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 获取输入引脚连接的块索引
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
+'-----------------------------------------------------------------------------------------------------------
+Private Function GetNNInputIndex(iIndex As Integer, strPinName As String)
+    With ExcelInfo.HN_BOX(iIndex)
+        If strPinName = "R1" Then
+            GetNNInputIndex = str(.ElementID_R1)
+        Else
+            GetNNInputIndex = str(.ElementID_R2)
+        End If
+    End With
+End Function
+
+'-----------------------------------------------------------------------------------------------------------
+' Purpose: 获取输入引脚连接的块索引
+' History: sw create function on 2019.9.25
+'-----------------------------------------------------------------------------------------------------------
+Private Function GetFLInputIndex(iIndex As Integer, strPinName As String)
+    With ExcelInfo.HN_BOX(iIndex)
+        If strPinName = "S1" Then
+            GetFLInputIndex = str(.ElementID_S1)
+        ElseIf strPinName = "S2" Then
+            GetFLInputIndex = str(.ElementID_S2)
+        ElseIf strPinName = "S3" Then
+            GetFLInputIndex = str(.ElementID_S3)
+        ElseIf strPinName = "S4" Then
+            GetFLInputIndex = str(.ElementID_S4)
+        Else
+            GetFLInputIndex = "0"
+        End If
+    End With
+End Function
+
+'-----------------------------------------------------------------------------------------------------------
+' Purpose: 获取输入引脚连接的块索引
+' History: sw create function on 2019.9.25
 '-----------------------------------------------------------------------------------------------------------
 Private Function GetInputIndex(strIndexName As String)
     Dim strIndex As String
-    If strIndexName Like "DLYTIME*" Then
-        Trim (strIndexName)
-        strIndex = Mid(strIndexName, 8, Len(strIndexName) - 7)
-        GetInputIndex = str(ExcelInfo.HN_BOX(CInt(strIndex)).ElementID_DT)
-    ElseIf strIndexName Like "L*" Then
+    If strIndexName Like "L*" Then
         strIndex = Mid(strIndexName, 2, Len(strIndexName) - 1)
         GetInputIndex = str(ExcelInfo.HN_INPUT(CInt(strIndex)).ElementID)
     ElseIf strIndexName Like "SO*" Then
@@ -714,8 +783,7 @@ End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 转换置反
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
 '-----------------------------------------------------------------------------------------------------------
 Private Function ConvertNagetive(strNagetive As String)
     If strNagetive = "ON" Then
@@ -727,8 +795,8 @@ End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 转换引脚名称
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
+'
 '-----------------------------------------------------------------------------------------------------------
 Private Function ConvertPinName(strBoxName As String, strPinName As String) As String
     If strBoxName = "NAND" Then
@@ -758,8 +826,8 @@ End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 转换NAND引脚名称
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
+'
 '-----------------------------------------------------------------------------------------------------------
 Private Function ConvertNANDPinName(strPinName As String)
     ConvertNANDPinName = strPinName
@@ -767,8 +835,8 @@ End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 转换NOR引脚名称
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
+'
 '-----------------------------------------------------------------------------------------------------------
 Private Function ConvertNORPinName(strPinName As String)
     ConvertNORPinName = strPinName
@@ -776,8 +844,8 @@ End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 转换QOR2引脚名称
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
+'
 '-----------------------------------------------------------------------------------------------------------
 Private Function ConvertQOR2PinName(strPinName As String)
     ConvertQOR2PinName = strPinName
@@ -785,16 +853,17 @@ End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 转换QOR3引脚名称
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
+'
 '-----------------------------------------------------------------------------------------------------------
 Private Function ConvertQOR3PinName(strPinName As String)
     ConvertQOR3PinName = strPinName
 End Function
+
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 转换 PULSE 引脚名称
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
+'
 '-----------------------------------------------------------------------------------------------------------
 Private Function ConvertPULSEPinName(strPinName As String)
     If strPinName = "S1" Then
@@ -807,8 +876,8 @@ Private Function ConvertPULSEPinName(strPinName As String)
 End Function
 
 ' Purpose: 转换 MINPULSE 引脚名称
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
+'
 '-----------------------------------------------------------------------------------------------------------
 Private Function ConvertMINPULSEPinName(strPinName As String)
     If strPinName = "S1" Then
@@ -819,8 +888,8 @@ Private Function ConvertMINPULSEPinName(strPinName As String)
 End Function
 
 ' Purpose: 转换 MAXPULSE 引脚名称
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
+'
 '-----------------------------------------------------------------------------------------------------------
 Private Function ConvertMAXPULSEPinName(strPinName As String)
     If strPinName = "S1" Then
@@ -832,8 +901,8 @@ End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 转换 ONDLY 引脚名称
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
+'
 '-----------------------------------------------------------------------------------------------------------
 Private Function ConvertONDLYPinName(strPinName As String)
     If strPinName = "S1" Then
@@ -847,8 +916,8 @@ End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 转换 OFFDLY 引脚名称
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
+'
 '-----------------------------------------------------------------------------------------------------------
 Private Function ConvertOFFDLYPinName(strPinName As String)
     If strPinName = "S1" Then
@@ -862,8 +931,8 @@ End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 转换 FLIPFLOP 引脚名称
-' History:
-'            sw create function on 2019.9.25
+' History: sw create function on 2019.9.25
+'
 '-----------------------------------------------------------------------------------------------------------
 Private Function ConvertFLIPFLOPPinName(strPinName As String, strPinType As String)
     If strPinName = "S1" Then
@@ -997,7 +1066,6 @@ Private Function GetBoxYPosition(boxElement As T_HN_BOX, lastYPosition As Intege
     End If
     
 End Function
-
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 获取OUTPUT坐标Y值

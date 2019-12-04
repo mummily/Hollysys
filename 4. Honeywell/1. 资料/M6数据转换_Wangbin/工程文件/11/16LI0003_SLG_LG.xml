@@ -83,7 +83,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="box">
-<id>8</id>
+<id>9</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
 <text>16LI0003_SLG_NOT0</text>
@@ -91,10 +91,11 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>0</sortid>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>9</id>
+<id>10</id>
 <AT_position>15,32</AT_position>
 <isinst>TRUE</isinst>
 <text>16LI0003_SLG_QOR21</text>
@@ -105,10 +106,20 @@ END_VAR]]>
 <input inputid="5" inputidx="0" negate="false" visible="true" pinname="S1"/>
 <input inputid="6" inputidx="0" negate="false" visible="true" pinname="S2"/>
 <input inputid="7" inputidx="0" negate="false" visible="true" pinname="S3"/>
+<input inputid="8" inputidx="0" negate="false" visible="true" pinname="S4"/>
 <output negate="false" visible="true" pinname="SO"/>
 </element>
+<element type="input">
+<id>8</id>
+<AT_position>14,34</AT_position>
+<text>0</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="output">
-<id>10</id>
+<id>11</id>
 <position>25,2</position>
 <text>16LI0003_SLG_NN2</text>
 <Comment>?????</Comment>
@@ -120,7 +131,7 @@ END_VAR]]>
 <sortid>2</sortid>
 </element>
 <element type="output">
-<id>11</id>
+<id>12</id>
 <position>25,8</position>
 <text>16LI0003_SLG_NN2</text>
 <Comment>?????</Comment>
@@ -132,7 +143,7 @@ END_VAR]]>
 <sortid>3</sortid>
 </element>
 <element type="output">
-<id>12</id>
+<id>13</id>
 <position>25,14</position>
 <text>16LI0003_SLG_NN2</text>
 <Comment>?????</Comment>
@@ -144,7 +155,7 @@ END_VAR]]>
 <sortid>4</sortid>
 </element>
 <element type="output">
-<id>13</id>
+<id>14</id>
 <position>25,20</position>
 <text>16LI0003_SLG_NN1</text>
 <Comment>?????</Comment>
@@ -156,25 +167,25 @@ END_VAR]]>
 <sortid>5</sortid>
 </element>
 <element type="output">
-<id>14</id>
+<id>15</id>
 <position>25,22</position>
 <text>16LI0003_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>8</Inputid>
+<Inputid>9</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>6</sortid>
 </element>
 <element type="output">
-<id>15</id>
+<id>16</id>
 <position>25,32</position>
 <text>16LAL0003.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>9</Inputid>
+<Inputid>10</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>7</sortid>

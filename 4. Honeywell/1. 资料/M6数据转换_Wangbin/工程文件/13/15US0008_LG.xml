@@ -38,7 +38,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="box">
-<id>3</id>
+<id>4</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0008_OR0</text>
@@ -48,100 +48,110 @@ END_VAR]]>
 <sortid>0</sortid>
 <input inputid="1" inputidx="0" negate="true" visible="true" pinname=""/>
 <input inputid="2" inputidx="0" negate="true" visible="true" pinname=""/>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
+<element type="input">
+<id>3</id>
+<AT_position>14,7</AT_position>
+<text>0</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="output">
-<id>4</id>
+<id>5</id>
 <position>25,5</position>
 <text>15XV0002_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>1</sortid>
 </element>
 <element type="output">
-<id>5</id>
+<id>6</id>
 <position>25,5</position>
 <text>15XV0003_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>2</sortid>
 </element>
 <element type="output">
-<id>6</id>
+<id>7</id>
 <position>25,5</position>
 <text>15XV0009_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>3</sortid>
 </element>
 <element type="output">
-<id>7</id>
+<id>8</id>
 <position>25,5</position>
 <text>15XV0008_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>4</sortid>
 </element>
 <element type="output">
-<id>8</id>
+<id>9</id>
 <position>25,5</position>
 <text>15XV0006_LG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>5</sortid>
 </element>
 <element type="output">
-<id>9</id>
+<id>10</id>
 <position>25,5</position>
 <text>15XV0007_LG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>6</sortid>
 </element>
 <element type="output">
-<id>10</id>
+<id>11</id>
 <position>25,5</position>
 <text>15XV0010_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>7</sortid>
 </element>
 <element type="output">
-<id>11</id>
+<id>12</id>
 <position>25,5</position>
 <text>15PDIC0009_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>8</sortid>

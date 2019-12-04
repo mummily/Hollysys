@@ -20,7 +20,7 @@ END_VAR]]>
 </interface>
 <cfc>
 <element type="box">
-<id>1</id>
+<id>2</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305A_LG_OR0</text>
@@ -28,16 +28,28 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>0</sortid>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
+<element type="input">
+<id>1</id>
+<AT_position>14,10</AT_position>
+<text>0</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="output">
-<id>2</id>
+<id>3</id>
 <position>25,8</position>
 <text>P3305A.I0</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>1</Inputid>
+<Inputid>2</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>1</sortid>

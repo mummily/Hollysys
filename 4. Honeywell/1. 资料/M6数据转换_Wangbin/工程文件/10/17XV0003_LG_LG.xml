@@ -28,6 +28,9 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>0</sortid>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
@@ -40,6 +43,8 @@ END_VAR]]>
 <ttype>9</ttype>
 <sortid>1</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="output">

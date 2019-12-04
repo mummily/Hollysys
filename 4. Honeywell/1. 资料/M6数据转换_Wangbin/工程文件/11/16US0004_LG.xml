@@ -38,7 +38,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="box">
-<id>3</id>
+<id>4</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
 <text>16US0004_OR0</text>
@@ -48,28 +48,38 @@ END_VAR]]>
 <sortid>0</sortid>
 <input inputid="1" inputidx="0" negate="true" visible="true" pinname=""/>
 <input inputid="2" inputidx="0" negate="true" visible="true" pinname=""/>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
+<element type="input">
+<id>3</id>
+<AT_position>14,7</AT_position>
+<text>0</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="output">
-<id>4</id>
+<id>5</id>
 <position>25,5</position>
 <text>P1601A_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>1</sortid>
 </element>
 <element type="output">
-<id>5</id>
+<id>6</id>
 <position>25,5</position>
 <text>P1601B_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>2</sortid>

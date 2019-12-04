@@ -56,7 +56,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="box">
-<id>8</id>
+<id>9</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0017_TP0</text>
@@ -65,12 +65,12 @@ END_VAR]]>
 <ttype>9</ttype>
 <sortid>0</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname="IN"/>
-<input inputid="5" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<input inputid="6" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
 <output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="box">
-<id>9</id>
+<id>10</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0017_TP1</text>
@@ -79,12 +79,12 @@ END_VAR]]>
 <ttype>9</ttype>
 <sortid>1</sortid>
 <input inputid="2" inputidx="0" negate="false" visible="true" pinname="IN"/>
-<input inputid="6" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<input inputid="7" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
 <output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="box">
-<id>10</id>
+<id>11</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0017_TP2</text>
@@ -93,12 +93,12 @@ END_VAR]]>
 <ttype>9</ttype>
 <sortid>2</sortid>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname="IN"/>
-<input inputid="7" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<input inputid="8" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
 <output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="box">
-<id>11</id>
+<id>12</id>
 <AT_position>15,20</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0017_NOT3</text>
@@ -110,7 +110,7 @@ END_VAR]]>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>12</id>
+<id>13</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0017_FLIPFLOP4</text>
@@ -120,10 +120,11 @@ END_VAR]]>
 <sortid>4</sortid>
 <input inputid="2" inputidx="0" negate="false" visible="true" pinname="SET"/>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname="RESET1"/>
+<input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname="Q1"/>
 </element>
 <element type="input">
-<id>5</id>
+<id>6</id>
 <AT_position>14,4</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
@@ -132,7 +133,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>6</id>
+<id>7</id>
 <AT_position>14,10</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
@@ -141,7 +142,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>7</id>
+<id>8</id>
 <AT_position>14,16</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
@@ -149,44 +150,53 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
-<element type="output">
-<id>13</id>
-<position>25,2</position>
-<text>I1IA.DI</text>
+<element type="input">
+<id>5</id>
+<AT_position>14,7</AT_position>
+<text>0</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>8</Inputid>
-<Inputidx>0</Inputidx>
-<negate>false</negate>
-<sortid>5</sortid>
+<Flag>FALSE</Flag>
 </element>
 <element type="output">
 <id>14</id>
-<position>25,8</position>
-<text>I1IB.DI</text>
+<position>25,2</position>
+<text>I1IA.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>9</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>6</sortid>
+<sortid>5</sortid>
 </element>
 <element type="output">
 <id>15</id>
-<position>25,14</position>
-<text>I1IC.DI</text>
+<position>25,8</position>
+<text>I1IB.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>10</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>7</sortid>
+<sortid>6</sortid>
 </element>
 <element type="output">
 <id>16</id>
+<position>25,14</position>
+<text>I1IC.DI</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>11</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>7</sortid>
+</element>
+<element type="output">
+<id>17</id>
 <position>25,20</position>
 <text>I1ID.DI</text>
 <Comment>?????</Comment>
@@ -198,61 +208,61 @@ END_VAR]]>
 <sortid>8</sortid>
 </element>
 <element type="output">
-<id>17</id>
+<id>18</id>
 <position>25,20</position>
 <text>I1IE.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>11</Inputid>
+<Inputid>12</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>9</sortid>
 </element>
 <element type="output">
-<id>18</id>
+<id>19</id>
 <position>25,2</position>
 <text>15HS1US17.DV</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Inputid>8</Inputid>
-<Inputidx>0</Inputidx>
-<negate>false</negate>
-<sortid>10</sortid>
-</element>
-<element type="output">
-<id>19</id>
-<position>25,8</position>
-<text>15HS2US17.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>9</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>11</sortid>
+<sortid>10</sortid>
 </element>
 <element type="output">
 <id>20</id>
-<position>25,14</position>
-<text>15HS3US17.DV</text>
+<position>25,8</position>
+<text>15HS2US17.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>10</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>12</sortid>
+<sortid>11</sortid>
 </element>
 <element type="output">
 <id>21</id>
+<position>25,14</position>
+<text>15HS3US17.DV</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>11</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>12</sortid>
+</element>
+<element type="output">
+<id>22</id>
 <position>25,5</position>
 <text>15FILTER_START.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>12</Inputid>
+<Inputid>13</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>13</sortid>

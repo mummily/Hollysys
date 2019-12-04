@@ -15,6 +15,11 @@ Type T_HN_BOX
     ElementID_R1 As Integer 'R1如果是NN，对应的元素ID
     ElementID_R2 As Integer 'R2如果是NN，对应的元素ID
     
+    ElementID_S1 As Integer 'S1如果是FL1 Or FL2，对应的元素ID
+    ElementID_S2 As Integer 'S2如果是FL1 Or FL2，对应的元素ID
+    ElementID_S3 As Integer 'S3如果是FL1 Or FL2，对应的元素ID
+    ElementID_S4 As Integer 'S4如果是FL1 Or FL2，对应的元素ID
+    
     LBINDEX As String
     LOGALGID As String
     S1 As String

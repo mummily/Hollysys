@@ -29,7 +29,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="box">
-<id>2</id>
+<id>3</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
 <text>34US0002_1_AND0</text>
@@ -38,16 +38,27 @@ END_VAR]]>
 <ttype>9</ttype>
 <sortid>0</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
+<element type="input">
+<id>2</id>
+<AT_position>14,4</AT_position>
+<text>1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="output">
-<id>3</id>
+<id>4</id>
 <position>25,2</position>
 <text>13P3402_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>2</Inputid>
+<Inputid>3</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>1</sortid>

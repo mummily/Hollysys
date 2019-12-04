@@ -47,7 +47,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="box">
-<id>7</id>
+<id>8</id>
 <AT_position>15,2</AT_position>
 <isinst>TRUE</isinst>
 <text>12PALLLL0214_LT0</text>
@@ -60,7 +60,7 @@ END_VAR]]>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>8</id>
+<id>9</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
 <text>12PALLLL0214_LT1</text>
@@ -73,7 +73,7 @@ END_VAR]]>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>9</id>
+<id>10</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
 <text>12PALLLL0214_LT2</text>
@@ -86,7 +86,7 @@ END_VAR]]>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>10</id>
+<id>11</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
 <text>12PALLLL0214_QOR23</text>
@@ -94,9 +94,10 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>3</sortid>
-<input inputid="7" inputidx="0" negate="false" visible="true" pinname="S1"/>
-<input inputid="8" inputidx="0" negate="false" visible="true" pinname="S2"/>
-<input inputid="9" inputidx="0" negate="false" visible="true" pinname="S3"/>
+<input inputid="8" inputidx="0" negate="false" visible="true" pinname="S1"/>
+<input inputid="9" inputidx="0" negate="false" visible="true" pinname="S2"/>
+<input inputid="10" inputidx="0" negate="false" visible="true" pinname="S3"/>
+<input inputid="7" inputidx="0" negate="false" visible="true" pinname="S4"/>
 <output negate="false" visible="true" pinname="SO"/>
 </element>
 <element type="input">
@@ -126,14 +127,23 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
+<element type="input">
+<id>7</id>
+<AT_position>24,10</AT_position>
+<text>0</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="output">
-<id>11</id>
+<id>12</id>
 <position>35,8</position>
 <text>12PALLLL0214_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>10</Inputid>
+<Inputid>11</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>4</sortid>

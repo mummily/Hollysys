@@ -38,7 +38,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="box">
-<id>3</id>
+<id>4</id>
 <AT_position>15,5</AT_position>
 <isinst>TRUE</isinst>
 <text>13FAL0105A_LG_AND0</text>
@@ -48,7 +48,17 @@ END_VAR]]>
 <sortid>0</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
+</element>
+<element type="input">
+<id>3</id>
+<AT_position>14,7</AT_position>
+<text>1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
 </element>
 </cfc>
 </pou>
