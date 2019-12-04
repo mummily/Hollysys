@@ -158,19 +158,19 @@ Private Sub InitProperty(sPouName As String)
                 .ElementID_R2 = LElement_ID
                 LElement_ID = LElement_ID + 1
             End If
-            If .S1 = "FL1" Or .S1 = "FL2" Then
+            If .S1 Like "FL*" Then
                 .ElementID_S1 = LElement_ID
                 LElement_ID = LElement_ID + 1
             End If
-            If .S2 = "FL1" Or .S2 = "FL2" Then
+            If .S2 Like "FL*" Then
                 .ElementID_S2 = LElement_ID
                 LElement_ID = LElement_ID + 1
             End If
-            If .S3 = "FL1" Or .S3 = "FL2" Then
+            If .S3 Like "FL*" Then
                 .ElementID_S3 = LElement_ID
                 LElement_ID = LElement_ID + 1
             End If
-            If .S4 = "FL1" Or .S4 = "FL2" Then
+            If .S4 Like "FL*" Then
                 .ElementID_S4 = LElement_ID
                 LElement_ID = LElement_ID + 1
             End If
@@ -260,10 +260,7 @@ Private Sub InitProperty(sPouName As String)
                 
                 Dim strSo As String
                 strSo = .LOSRC
-                If strSo Like "NN*" Then
-                    strSo = .LOENBL
-                End If
-                If strSo Like "FL*" Then
+                If strSo Like "NN*" Or strSo Like "FL*" Then
                     strSo = .LOENBL
                 End If
                 
@@ -394,14 +391,16 @@ Private Sub WriteXML(sPouName As String)
     'S1 S2 S3 S4÷–FL–¥»ÎXML
     For index = 1 To 24
         With ExcelInfo.HN_BOX(index)
-           If .S1 = "FL1" Or .S1 = "FL2" Then
+           If .S1 Like "FL*" Then
                 POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID_S1 & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                 If .S1 = "FL1" Then
                     POU.WriteLine "<text>0</text>"
-                Else
+                ElseIf .S1 = "FL2" Then
                     POU.WriteLine "<text>1</text>"
+                Else
+                    POU.WriteLine "<text>" & sPouName & "_" & .S1 & "</text>"
                 End If
                 POU.WriteLine "<Comment>?????</Comment>"
                 POU.WriteLine "<negate>false</negate>"
@@ -409,14 +408,16 @@ Private Sub WriteXML(sPouName As String)
                 POU.WriteLine "<Flag>FALSE</Flag>"
                 POU.WriteLine "</element>"
            End If
-           If .S2 = "FL1" Or .S2 = "FL2" Then
+           If .S2 Like "FL*" Then
                 POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID_S2 & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                 If .S2 = "FL1" Then
                     POU.WriteLine "<text>0</text>"
-                Else
+                ElseIf .S2 = "FL2" Then
                     POU.WriteLine "<text>1</text>"
+                Else
+                    POU.WriteLine "<text>" & sPouName & "_" & .S2 & "</text>"
                 End If
                 POU.WriteLine "<Comment>?????</Comment>"
                 POU.WriteLine "<negate>false</negate>"
@@ -424,14 +425,16 @@ Private Sub WriteXML(sPouName As String)
                 POU.WriteLine "<Flag>FALSE</Flag>"
                 POU.WriteLine "</element>"
            End If
-           If .S3 = "FL1" Or .S3 = "FL2" Then
+           If .S3 Like "FL*" Then
                 POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID_S3 & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                 If .S3 = "FL1" Then
                     POU.WriteLine "<text>0</text>"
-                Else
+                ElseIf .S3 = "FL2" Then
                     POU.WriteLine "<text>1</text>"
+                Else
+                    POU.WriteLine "<text>" & sPouName & "_" & .S3 & "</text>"
                 End If
                 POU.WriteLine "<Comment>?????</Comment>"
                 POU.WriteLine "<negate>false</negate>"
@@ -439,14 +442,16 @@ Private Sub WriteXML(sPouName As String)
                 POU.WriteLine "<Flag>FALSE</Flag>"
                 POU.WriteLine "</element>"
            End If
-           If .S4 = "FL1" Or .S4 = "FL2" Then
+           If .S4 Like "FL*" Then
                 POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID_S4 & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                 If .S4 = "FL1" Then
                     POU.WriteLine "<text>0</text>"
-                Else
+                ElseIf .S4 = "FL2" Then
                     POU.WriteLine "<text>1</text>"
+                Else
+                    POU.WriteLine "<text>" & sPouName & "_" & .S4 & "</text>"
                 End If
                 POU.WriteLine "<Comment>?????</Comment>"
                 POU.WriteLine "<negate>false</negate>"

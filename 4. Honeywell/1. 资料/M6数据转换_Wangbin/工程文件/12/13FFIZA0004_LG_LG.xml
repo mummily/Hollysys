@@ -29,7 +29,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="box">
-<id>2</id>
+<id>5</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
 <text>13FFIZA0004_LG_FLIPFLOP0</text>
@@ -37,13 +37,40 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>0</sortid>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname="SET"/>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname="RESET1"/>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="2" inputidx="0" negate="false" visible="true" pinname="SET"/>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname="RESET1"/>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname="Q1"/>
 </element>
-<element type="output">
+<element type="input">
+<id>2</id>
+<AT_position>14,10</AT_position>
+<text>13FFIZA0004_LG_FL8</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
 <id>3</id>
+<AT_position>14,10</AT_position>
+<text>13FFIZA0004_LG_FL7</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>4</id>
+<AT_position>14,10</AT_position>
+<text>13FFIZA0004_LG_FL8</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="output">
+<id>6</id>
 <position>25,2</position>
 <text>13FFZHL0004.DI</text>
 <Comment>?????</Comment>

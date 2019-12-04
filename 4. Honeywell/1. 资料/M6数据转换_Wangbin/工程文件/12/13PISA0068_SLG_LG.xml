@@ -110,7 +110,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="box">
-<id>13</id>
+<id>14</id>
 <AT_position>15,26</AT_position>
 <isinst>TRUE</isinst>
 <text>13PISA0068_SLG_QOR20</text>
@@ -125,7 +125,7 @@ END_VAR]]>
 <output negate="false" visible="true" pinname="SO"/>
 </element>
 <element type="box">
-<id>14</id>
+<id>15</id>
 <AT_position>15,44</AT_position>
 <isinst>TRUE</isinst>
 <text>13PISA0068_SLG_QOR21</text>
@@ -140,7 +140,7 @@ END_VAR]]>
 <output negate="false" visible="true" pinname="SO"/>
 </element>
 <element type="box">
-<id>15</id>
+<id>16</id>
 <AT_position>15,50</AT_position>
 <isinst>TRUE</isinst>
 <text>13PISA0068_SLG_NOT2</text>
@@ -148,7 +148,7 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>2</sortid>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="13" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="input">
@@ -169,8 +169,17 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
+<element type="input">
+<id>13</id>
+<AT_position>14,52</AT_position>
+<text>13PISA0068_SLG_FL10</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="output">
-<id>16</id>
+<id>17</id>
 <position>25,2</position>
 <text>13PISA0068_SLG_NN2</text>
 <Comment>?????</Comment>
@@ -182,7 +191,7 @@ END_VAR]]>
 <sortid>3</sortid>
 </element>
 <element type="output">
-<id>17</id>
+<id>18</id>
 <position>25,8</position>
 <text>13PISA0068_SLG_NN2</text>
 <Comment>?????</Comment>
@@ -194,7 +203,7 @@ END_VAR]]>
 <sortid>4</sortid>
 </element>
 <element type="output">
-<id>18</id>
+<id>19</id>
 <position>25,14</position>
 <text>13PISA0068_SLG_NN2</text>
 <Comment>?????</Comment>
@@ -206,31 +215,31 @@ END_VAR]]>
 <sortid>5</sortid>
 </element>
 <element type="output">
-<id>19</id>
+<id>20</id>
 <position>25,26</position>
 <text>13PAHH0068.DV</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Inputid>13</Inputid>
-<Inputidx>0</Inputidx>
-<negate>false</negate>
-<sortid>6</sortid>
-</element>
-<element type="output">
-<id>20</id>
-<position>25,44</position>
-<text>13PALL0068.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>14</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>7</sortid>
+<sortid>6</sortid>
 </element>
 <element type="output">
 <id>21</id>
+<position>25,44</position>
+<text>13PALL0068.DV</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>15</Inputid>
+<Inputidx>0</Inputidx>
+<negate>false</negate>
+<sortid>7</sortid>
+</element>
+<element type="output">
+<id>22</id>
 <position>25,56</position>
 <text>13PISA0068_SLG_NN1</text>
 <Comment>?????</Comment>
@@ -242,13 +251,13 @@ END_VAR]]>
 <sortid>8</sortid>
 </element>
 <element type="output">
-<id>22</id>
+<id>23</id>
 <position>25,58</position>
 <text>13PISA0068_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>15</Inputid>
+<Inputid>16</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>9</sortid>

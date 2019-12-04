@@ -21,7 +21,7 @@ END_VAR]]>
 </interface>
 <cfc>
 <element type="box">
-<id>3</id>
+<id>5</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15XV0012_LG_OR0</text>
@@ -29,13 +29,13 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>0</sortid>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>4</id>
+<id>6</id>
 <AT_position>25,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15XV0012_LG_TON1</text>
@@ -43,13 +43,13 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>1</sortid>
-<input inputid="3" inputidx="0" negate="false" visible="true" pinname="IN"/>
-<input inputid="2" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<input inputid="5" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
 <output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="input">
-<id>2</id>
+<id>4</id>
 <AT_position>24,10</AT_position>
 <text>T#1s</text>
 <Comment>?????</Comment>
@@ -60,6 +60,24 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>14,10</AT_position>
+<text>15XV0012_LG_FL7</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>2</id>
+<AT_position>14,10</AT_position>
+<text>15XV0012_LG_FL8</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>3</id>
+<AT_position>14,10</AT_position>
 <text>0</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -67,13 +85,13 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="output">
-<id>5</id>
+<id>7</id>
 <position>35,8</position>
 <text>15XV0012.I0</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>4</Inputid>
+<Inputid>6</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>2</sortid>

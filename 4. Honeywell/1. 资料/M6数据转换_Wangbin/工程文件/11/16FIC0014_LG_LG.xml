@@ -21,7 +21,7 @@ END_VAR]]>
 </interface>
 <cfc>
 <element type="box">
-<id>3</id>
+<id>6</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
 <text>16FIC0014_LG_OR0</text>
@@ -29,13 +29,13 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>0</sortid>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>4</id>
+<id>7</id>
 <AT_position>15,14</AT_position>
 <isinst>TRUE</isinst>
 <text>16FIC0014_LG_TON1</text>
@@ -43,13 +43,13 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>1</sortid>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname="IN"/>
-<input inputid="2" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="5" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
 <output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="input">
-<id>2</id>
+<id>5</id>
 <AT_position>14,16</AT_position>
 <text>T#1s</text>
 <Comment>?????</Comment>
@@ -60,68 +60,95 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>14,10</AT_position>
+<text>16FIC0014_LG_FL7</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>2</id>
+<AT_position>14,10</AT_position>
+<text>16FIC0014_LG_FL8</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>3</id>
+<AT_position>14,10</AT_position>
 <text>0</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
+<element type="input">
+<id>4</id>
+<AT_position>14,16</AT_position>
+<text>16FIC0014_LG_FL9</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="output">
-<id>5</id>
+<id>8</id>
 <position>25,4</position>
 <text>16FIC0014.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>6</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>2</sortid>
 </element>
 <element type="output">
-<id>6</id>
+<id>9</id>
 <position>25,6</position>
 <text>16FIC0014.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>6</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>3</sortid>
 </element>
 <element type="output">
-<id>7</id>
+<id>10</id>
 <position>25,8</position>
 <text>16FIC0014.OP</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>6</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>4</sortid>
 </element>
 <element type="output">
-<id>8</id>
+<id>11</id>
 <position>25,10</position>
 <text>16FIC0014.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>4</Inputid>
+<Inputid>7</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>5</sortid>
 </element>
 <element type="output">
-<id>9</id>
+<id>12</id>
 <position>25,12</position>
 <text>16FIC0014.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>4</Inputid>
+<Inputid>7</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>6</sortid>

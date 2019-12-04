@@ -56,7 +56,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="box">
-<id>5</id>
+<id>6</id>
 <AT_position>15,8</AT_position>
 <isinst>TRUE</isinst>
 <text>17LI0005_SLG_NOT0</text>
@@ -64,11 +64,20 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>0</sortid>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
+<element type="input">
+<id>5</id>
+<AT_position>14,10</AT_position>
+<text>17LI0005_SLG_FL10</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="output">
-<id>6</id>
+<id>7</id>
 <position>25,2</position>
 <text>17LI0005_SLG_NN2</text>
 <Comment>?????</Comment>
@@ -80,7 +89,7 @@ END_VAR]]>
 <sortid>1</sortid>
 </element>
 <element type="output">
-<id>7</id>
+<id>8</id>
 <position>25,8</position>
 <text>17LI0005_SLG_NN2</text>
 <Comment>?????</Comment>
@@ -92,7 +101,7 @@ END_VAR]]>
 <sortid>2</sortid>
 </element>
 <element type="output">
-<id>8</id>
+<id>9</id>
 <position>25,14</position>
 <text>17LI0005_SLG_NN2</text>
 <Comment>?????</Comment>
@@ -104,7 +113,7 @@ END_VAR]]>
 <sortid>3</sortid>
 </element>
 <element type="output">
-<id>9</id>
+<id>10</id>
 <position>25,20</position>
 <text>17LI0005_SLG_NN1</text>
 <Comment>?????</Comment>
@@ -116,13 +125,13 @@ END_VAR]]>
 <sortid>4</sortid>
 </element>
 <element type="output">
-<id>10</id>
+<id>11</id>
 <position>25,22</position>
 <text>17LI0005_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>5</Inputid>
+<Inputid>6</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>5</sortid>
