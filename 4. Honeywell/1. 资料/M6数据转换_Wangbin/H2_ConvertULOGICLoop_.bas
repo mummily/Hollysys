@@ -55,7 +55,7 @@ End Sub
 'History: 9-25-2019
 '-----------------------------------------------------------------------------------------------------------
 Private Sub InitProperty(sPouName As String)
-    Dim rowLogic, rowLogic1, rowLogic2 As Integer
+    Dim rowLogic As Integer, rowLogic1 As Integer, rowLogic2 As Integer
     rowLogic = ULOGIC_i
     rowLogic1 = ULOGIC1Name(sPouName)
     rowLogic2 = ULOGIC2Name(sPouName)
@@ -126,7 +126,7 @@ Private Sub InitProperty(sPouName As String)
     
     End With
     
-    Dim LElement_X, LElement_Y, LElement_ID, LSort_ID As Integer
+    Dim LElement_X As Integer, LElement_Y As Integer, LElement_ID As Integer, LSort_ID As Integer
     LSort_ID = 0
     LElement_ID = 1
     LElement_Y = 2
@@ -191,7 +191,7 @@ Private Sub InitProperty(sPouName As String)
     Call InitAllBoxLevel
     
     LElement_Y = 2
-    Dim LElementLevel_X_Max, LElementLevel_X As Integer
+    Dim LElementLevel_X_Max As Integer, LElementLevel_X As Integer
     LElementLevel_X = LElement_X
     LElementLevel_X_Max = LElement_X
     
@@ -498,7 +498,7 @@ End Sub
 'History: 9-26-2019
 '-----------------------------------------------------------------------------------------------------------
 Private Sub InitNN()
-    Dim strVarTemp, strVar, strCur As String
+    Dim strVarTemp As String, strVar As String, strCur As String
     Dim iIndex As Integer
     
     strVarTemp = "" ' Excel读取到的NN值
@@ -629,7 +629,7 @@ End Sub
 ' History: sw create function on 2019.9.25
 '-----------------------------------------------------------------------------------------------------------
 Private Function WriteBoxInputs(iIndex As Integer)
-    Dim bIsRPin, bHasDlyTime As Boolean
+    Dim bIsRPin As Boolean, bHasDlyTime As Boolean
     bIsRPin = False
     bHasDlyTime = False
     
@@ -681,7 +681,7 @@ End Function
 '-----------------------------------------------------------------------------------------------------------
 Private Function WriteBoxInput(strBoxName As String, strIndexName As String, strNagetive As String, strPinName As String, iIndex As Integer)
     If strIndexName <> "" And strIndexName <> "NULL" Then
-        Dim sInputid, sPinname, sNegate As String
+        Dim sInputid As String, sPinname As String, sNegate As String
         sInputid = "" ' inputid
         sPinname = "" ' pinname
         sNegate = "" ' negate
@@ -949,8 +949,7 @@ End Function
 ' History:
 '-----------------------------------------------------------------------------------------------------------
 Private Function GetBoxYPosition(boxElement As T_HN_BOX, lastYPosition As Integer)
-    Dim YPos_Min, YPos_Max As Integer
-    Dim YPos_Temp As Integer
+    Dim YPos_Min As Integer, YPos_Max As Integer, YPos_Temp As Integer
     YPos_Temp = 0
     YPos_Min = 1000
     YPos_Max = 0
@@ -1064,8 +1063,7 @@ End Function
 ' History:
 '-----------------------------------------------------------------------------------------------------------
 Private Function GetOutputYPosition(outputElement As T_HN_OUTPUT, lastYPosition As Integer)
-    Dim YPos_Min, YPos_Max As Integer
-    Dim YPos_Temp As Integer
+    Dim YPos_Min As Integer, YPos_Max As Integer, YPos_Temp As Integer
     YPos_Temp = 0
     YPos_Min = 1000
     YPos_Max = 0
