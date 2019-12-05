@@ -264,7 +264,7 @@ Private Sub InitProperty(sPouName As String)
                     strSo = .LOENBL
                 End If
                 
-                .ElementInputID = CInt(Trim(GetInputIndex(strSo)))
+                .ElementInputID = GetInputIndex(strSo)
                 .ElementSortID = LSort_ID
                 LSort_ID = LSort_ID + 1
             End If
@@ -708,31 +708,31 @@ End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 写入一个输入引脚
-' History: sw create function on 2019.9.25
-' Remark:  <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
+' History: 2019.9.25
 '-----------------------------------------------------------------------------------------------------------
 Private Function WriteBoxInput(strBoxName As String, strIndexName As String, strNagetive As String, strPinName As String, iIndex As Integer)
     If strIndexName <> "" And strIndexName <> "NULL" Then
-        Dim sInputid As String, sPinname As String, sNegate As String
-        sInputid = "" ' inputid
+        Dim sPinname As String, sNegate As String
         sPinname = "" ' pinname
         sNegate = "" ' negate
         
+        Dim nInputid As Integer
+        nInputid = 0  ' inputid
+        
         If strIndexName Like "DLYTIME*" Then
-            sInputid = GetDlytimeInputIndex(iIndex)
+            nInputid = GetDlytimeInputIndex(iIndex)
         ElseIf strIndexName Like "NN*" Then
-            sInputid = GetNNInputIndex(iIndex, strPinName)
+            nInputid = GetNNInputIndex(iIndex, strPinName)
         ElseIf strIndexName Like "FL*" Then
-            sInputid = GetFLInputIndex(iIndex, strPinName)
+            nInputid = GetFLInputIndex(iIndex, strPinName)
         Else
-            sInputid = GetInputIndex(strIndexName)
+            nInputid = GetInputIndex(strIndexName)
         End If
         
-        sInputid = Trim(sInputid)
         sPinname = ConvertPinName(strBoxName, strPinName)
         sNegate = ConvertNagetive(strNagetive)
         
-        POU.WriteLine "<input inputid=""" & sInputid & """ inputidx=""0"" negate=""" & sNegate & """ visible=""true"" pinname=""" & sPinname & """/>"
+        POU.WriteLine "<input inputid=""" & nInputid & """ inputidx=""0"" negate=""" & sNegate & """ visible=""true"" pinname=""" & sPinname & """/>"
     End If
 End Function
 
@@ -750,7 +750,7 @@ End Function
 '-----------------------------------------------------------------------------------------------------------
 Private Function GetDlytimeInputIndex(iIndex As Integer)
     With ExcelInfo.HN_BOX(iIndex)
-        GetDlytimeInputIndex = str(.ElementID_DT)
+        GetDlytimeInputIndex = .ElementID_DT
     End With
 End Function
 
@@ -761,9 +761,9 @@ End Function
 Private Function GetNNInputIndex(iIndex As Integer, strPinName As String)
     With ExcelInfo.HN_BOX(iIndex)
         If strPinName = "R1" Then
-            GetNNInputIndex = str(.ElementID_R1)
+            GetNNInputIndex = .ElementID_R1
         Else
-            GetNNInputIndex = str(.ElementID_R2)
+            GetNNInputIndex = .ElementID_R2
         End If
     End With
 End Function
@@ -775,15 +775,15 @@ End Function
 Private Function GetFLInputIndex(iIndex As Integer, strPinName As String)
     With ExcelInfo.HN_BOX(iIndex)
         If strPinName = "S1" Then
-            GetFLInputIndex = str(.ElementID_S1)
+            GetFLInputIndex = .ElementID_S1
         ElseIf strPinName = "S2" Then
-            GetFLInputIndex = str(.ElementID_S2)
+            GetFLInputIndex = .ElementID_S2
         ElseIf strPinName = "S3" Then
-            GetFLInputIndex = str(.ElementID_S3)
+            GetFLInputIndex = .ElementID_S3
         ElseIf strPinName = "S4" Then
-            GetFLInputIndex = str(.ElementID_S4)
+            GetFLInputIndex = .ElementID_S4
         Else
-            GetFLInputIndex = "0"
+            GetFLInputIndex = 0
         End If
     End With
 End Function
@@ -797,12 +797,12 @@ Private Function GetInputIndex(strIndexName As String)
     
     If strIndexName Like "L*" Then
         nIndex = CInt(Right(strIndexName, Len(strIndexName) - 1))
-        GetInputIndex = str(ExcelInfo.HN_INPUT(nIndex).ElementID)
+        GetInputIndex = ExcelInfo.HN_INPUT(nIndex).ElementID
     ElseIf strIndexName Like "SO*" Then
         nIndex = CInt(Right(strIndexName, Len(strIndexName) - 2))
-        GetInputIndex = str(ExcelInfo.HN_BOX(nIndex).ElementID)
+        GetInputIndex = ExcelInfo.HN_BOX(nIndex).ElementID
     Else
-        GetInputIndex = "0"
+        GetInputIndex = 0
     End If
 End Function
 
@@ -821,7 +821,6 @@ End Function
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 转换引脚名称
 ' History: sw create function on 2019.9.25
-'
 '-----------------------------------------------------------------------------------------------------------
 Private Function ConvertPinName(strBoxName As String, strPinName As String) As String
     If strBoxName = "NAND" Then
