@@ -16,8 +16,12 @@
 <interface>
 <![CDATA[PROGRAM P3303AB2_LG_LG
 VAR
+P3303AB2_LG_TP0(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 P3303AB2_LG_TON6(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+P3303AB2_LG_TP8(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+P3303AB2_LG_TP3(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 P3303AB2_LG_TON7(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+P3303AB2_LG_TP9(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
@@ -150,7 +154,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>14,4</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -168,7 +172,7 @@ END_VAR]]>
 <element type="input">
 <id>11</id>
 <AT_position>14,10</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -195,7 +199,7 @@ END_VAR]]>
 <element type="input">
 <id>14</id>
 <AT_position>14,22</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -213,7 +217,7 @@ END_VAR]]>
 <element type="input">
 <id>16</id>
 <AT_position>14,28</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

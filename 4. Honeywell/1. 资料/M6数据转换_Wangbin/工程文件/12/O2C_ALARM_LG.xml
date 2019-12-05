@@ -112,7 +112,7 @@ END_VAR]]>
 <element type="input">
 <id>11</id>
 <AT_position>24,30</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -121,7 +121,7 @@ END_VAR]]>
 <element type="input">
 <id>12</id>
 <AT_position>24,34</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -130,7 +130,7 @@ END_VAR]]>
 <element type="input">
 <id>13</id>
 <AT_position>24,38</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -139,7 +139,7 @@ END_VAR]]>
 <element type="input">
 <id>14</id>
 <AT_position>24,42</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

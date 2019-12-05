@@ -16,6 +16,8 @@
 <interface>
 <![CDATA[PROGRAM 14US0003_LG
 VAR
+14US0003_TP12(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+14US0003_TP13(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
@@ -166,7 +168,7 @@ END_VAR]]>
 <element type="input">
 <id>11</id>
 <AT_position>34,31</AT_position>
-<text>0</text>
+<text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -175,7 +177,7 @@ END_VAR]]>
 <element type="input">
 <id>16</id>
 <AT_position>24,16</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -184,7 +186,7 @@ END_VAR]]>
 <element type="input">
 <id>17</id>
 <AT_position>24,22</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -193,7 +195,7 @@ END_VAR]]>
 <element type="input">
 <id>18</id>
 <AT_position>34,19</AT_position>
-<text>0</text>
+<text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -202,7 +204,7 @@ END_VAR]]>
 <element type="input">
 <id>19</id>
 <AT_position>44,30</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -211,7 +213,7 @@ END_VAR]]>
 <element type="input">
 <id>20</id>
 <AT_position>44,32</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

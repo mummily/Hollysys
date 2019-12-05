@@ -17,6 +17,8 @@
 <![CDATA[PROGRAM 13XV0211_LG_LG
 VAR
 13XV0211_LG_TOF1(2086): TOF := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+13XV0211_LG_TP7(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+13XV0211_LG_TP2(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 13XV0211_LG_TON4(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
@@ -132,7 +134,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>24,22</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -141,7 +143,7 @@ END_VAR]]>
 <element type="input">
 <id>10</id>
 <AT_position>44,31</AT_position>
-<text>0</text>
+<text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -150,7 +152,7 @@ END_VAR]]>
 <element type="input">
 <id>11</id>
 <AT_position>14,25</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -159,7 +161,7 @@ END_VAR]]>
 <element type="input">
 <id>12</id>
 <AT_position>24,36</AT_position>
-<text>0</text>
+<text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

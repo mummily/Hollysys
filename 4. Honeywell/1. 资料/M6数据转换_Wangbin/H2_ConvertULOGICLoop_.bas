@@ -325,7 +325,7 @@ Private Sub WriteInterface(sPouName As String)
     ' 计时器变量
     For index = 1 To 24
         With ExcelInfo.HN_BOX(index)
-            If .ElementATType = "TON" Or .ElementATType = "TOF" Then
+            If .ElementATType = "TON" Or .ElementATType = "TOF" Or .ElementATType = "TP" Then
                 POU.WriteLine sPouName & "_" & .ElementATType & .ElementSortID & "(2086): " & .ElementATType & " := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );"
             End If
         End With
@@ -424,9 +424,9 @@ Private Sub WriteInput(sPouName As String)
                 POU.WriteLine "<id>" & .ElementID_S1 & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                 If .S1 = "FL1" Then
-                    POU.WriteLine "<text>0</text>"
+                    POU.WriteLine "<text>FALSE</text>"
                 ElseIf .S1 = "FL2" Then
-                    POU.WriteLine "<text>1</text>"
+                    POU.WriteLine "<text>TRUE</text>"
                 Else
                     POU.WriteLine "<text>" & sPouName & "_" & .S1 & "</text>"
                 End If
@@ -441,9 +441,9 @@ Private Sub WriteInput(sPouName As String)
                 POU.WriteLine "<id>" & .ElementID_S2 & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                 If .S2 = "FL1" Then
-                    POU.WriteLine "<text>0</text>"
+                    POU.WriteLine "<text>FALSE</text>"
                 ElseIf .S2 = "FL2" Then
-                    POU.WriteLine "<text>1</text>"
+                    POU.WriteLine "<text>TRUE</text>"
                 Else
                     POU.WriteLine "<text>" & sPouName & "_" & .S2 & "</text>"
                 End If
@@ -458,9 +458,9 @@ Private Sub WriteInput(sPouName As String)
                 POU.WriteLine "<id>" & .ElementID_S3 & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                 If .S3 = "FL1" Then
-                    POU.WriteLine "<text>0</text>"
+                    POU.WriteLine "<text>FALSE</text>"
                 ElseIf .S3 = "FL2" Then
-                    POU.WriteLine "<text>1</text>"
+                    POU.WriteLine "<text>TRUE</text>"
                 Else
                     POU.WriteLine "<text>" & sPouName & "_" & .S3 & "</text>"
                 End If
@@ -475,9 +475,9 @@ Private Sub WriteInput(sPouName As String)
                 POU.WriteLine "<id>" & .ElementID_S4 & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                 If .S4 = "FL1" Then
-                    POU.WriteLine "<text>0</text>"
+                    POU.WriteLine "<text>FALSE</text>"
                 ElseIf .S4 = "FL2" Then
-                    POU.WriteLine "<text>1</text>"
+                    POU.WriteLine "<text>TRUE</text>"
                 Else
                     POU.WriteLine "<text>" & sPouName & "_" & .S4 & "</text>"
                 End If

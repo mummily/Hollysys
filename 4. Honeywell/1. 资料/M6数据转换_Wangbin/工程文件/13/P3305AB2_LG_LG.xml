@@ -16,10 +16,14 @@
 <interface>
 <![CDATA[PROGRAM P3305AB2_LG_LG
 VAR
+P3305AB2_LG_TP0(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 P3305AB2_LG_TON10(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 P3305AB2_LG_TON11(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+P3305AB2_LG_TP14(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+P3305AB2_LG_TP3(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 P3305AB2_LG_TON12(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 P3305AB2_LG_TON13(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+P3305AB2_LG_TP15(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
@@ -170,7 +174,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>14,4</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -179,7 +183,7 @@ END_VAR]]>
 <element type="input">
 <id>10</id>
 <AT_position>14,10</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -188,7 +192,7 @@ END_VAR]]>
 <element type="input">
 <id>11</id>
 <AT_position>24,10</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -197,7 +201,7 @@ END_VAR]]>
 <element type="input">
 <id>12</id>
 <AT_position>24,10</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -224,7 +228,7 @@ END_VAR]]>
 <element type="input">
 <id>15</id>
 <AT_position>14,22</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -233,7 +237,7 @@ END_VAR]]>
 <element type="input">
 <id>16</id>
 <AT_position>14,28</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -242,7 +246,7 @@ END_VAR]]>
 <element type="input">
 <id>17</id>
 <AT_position>24,28</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -251,7 +255,7 @@ END_VAR]]>
 <element type="input">
 <id>18</id>
 <AT_position>24,28</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

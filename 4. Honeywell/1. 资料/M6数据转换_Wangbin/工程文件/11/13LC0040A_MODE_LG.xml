@@ -16,6 +16,8 @@
 <interface>
 <![CDATA[PROGRAM 13LC0040A_MODE_LG
 VAR
+13LC0040A_MODE_TP8(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+13LC0040A_MODE_TP9(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
@@ -121,7 +123,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>24,10</AT_position>
-<text>0</text>
+<text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -130,7 +132,7 @@ END_VAR]]>
 <element type="input">
 <id>11</id>
 <AT_position>24,10</AT_position>
-<text>0</text>
+<text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

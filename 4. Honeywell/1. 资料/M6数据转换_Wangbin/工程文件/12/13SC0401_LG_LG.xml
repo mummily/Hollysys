@@ -16,6 +16,7 @@
 <interface>
 <![CDATA[PROGRAM 13SC0401_LG_LG
 VAR
+13SC0401_LG_TP1(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>

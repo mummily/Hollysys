@@ -16,6 +16,7 @@
 <interface>
 <![CDATA[PROGRAM 36FIC0001_LG_LG
 VAR
+36FIC0001_LG_TP1(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
@@ -49,7 +50,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>34,4</AT_position>
-<text>0</text>
+<text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

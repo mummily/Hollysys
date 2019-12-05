@@ -145,7 +145,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>14,25</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

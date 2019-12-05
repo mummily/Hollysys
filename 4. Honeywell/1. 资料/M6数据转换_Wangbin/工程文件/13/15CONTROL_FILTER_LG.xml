@@ -16,6 +16,9 @@
 <interface>
 <![CDATA[PROGRAM 15CONTROL_FILTER_LG
 VAR
+15CONTROL_FILTER_TP0(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+15CONTROL_FILTER_TP8(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
+15CONTROL_FILTER_TP2(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>
@@ -157,7 +160,7 @@ END_VAR]]>
 <element type="input">
 <id>13</id>
 <AT_position>34,20</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -166,7 +169,7 @@ END_VAR]]>
 <element type="input">
 <id>14</id>
 <AT_position>44,33</AT_position>
-<text>0</text>
+<text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -175,7 +178,7 @@ END_VAR]]>
 <element type="input">
 <id>15</id>
 <AT_position>94,51</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -202,7 +205,7 @@ END_VAR]]>
 <element type="input">
 <id>18</id>
 <AT_position>14,40</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -211,7 +214,7 @@ END_VAR]]>
 <element type="input">
 <id>19</id>
 <AT_position>64,36</AT_position>
-<text>1</text>
+<text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

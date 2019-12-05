@@ -68,7 +68,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>24,16</AT_position>
-<text>0</text>
+<text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
