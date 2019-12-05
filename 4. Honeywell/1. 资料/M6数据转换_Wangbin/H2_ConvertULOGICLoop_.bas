@@ -398,6 +398,7 @@ Private Sub WriteInput(sPouName As String)
              End If
         End With
     Next
+    
     'DLYTIME  写入XML
     For index = 1 To 24
         With ExcelInfo.HN_BOX(index)
@@ -499,7 +500,7 @@ Private Sub WriteBox(sPouName As String)
     For index = 1 To 24
         With ExcelInfo.HN_BOX(index)
            If .LOGALGID <> "" And .LOGALGID <> "NULL" And .ElementLevel > 0 Then
-               POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+                POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
                 POU.WriteLine "<isinst>TRUE</isinst>"
@@ -508,8 +509,10 @@ Private Sub WriteBox(sPouName As String)
                 POU.WriteLine "<typetext>BT_FB</typetext>"
                 POU.WriteLine "<ttype>9</ttype>"
                 POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
+                
                 Call WriteBoxInputs(CInt(index))
                 Call WriteBoxOutputs(CInt(index))
+                
                 POU.WriteLine "</element>"
             End If
         End With
@@ -691,14 +694,14 @@ End Function
 Private Function WriteBoxOutputs(iIndex As Integer)
     With ExcelInfo.HN_BOX(iIndex)
         If .LOGALGID = "NAND" Or .LOGALGID = "NOR" Or .LOGALGID = "QOR2" Or .LOGALGID = "QOR3" Or .LOGALGID = "MINPULSE" Or .LOGALGID = "MAXPULSE" Then
-            WriteBoxOutput ("SO")
+            Call WriteBoxOutput("SO")
         ElseIf .LOGALGID = "PULSE" Or .LOGALGID = "ONDLY" Or .LOGALGID = "OFFDLY" Then
-            WriteBoxOutput ("Q")
-            WriteBoxOutput ("ET")
+            Call WriteBoxOutput("Q")
+            Call WriteBoxOutput("ET")
         ElseIf .LOGALGID = "FLIPFLOP" Then
-            WriteBoxOutput ("Q1")
+            Call WriteBoxOutput("Q1")
         Else
-            WriteBoxOutput ("")
+            Call WriteBoxOutput("")
         End If
     End With
 End Function
@@ -735,7 +738,7 @@ End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 写入一个输出引脚
-' History: sw create function on 2019.9.25
+' History: 2019.12.01
 '-----------------------------------------------------------------------------------------------------------
 Private Function WriteBoxOutput(strPinName As String)
     POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""" & strPinName & """/>"
@@ -743,7 +746,7 @@ End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 获取输入引脚连接的块索引
-' History: sw create function on 2019.9.25
+' History: 2019.12.01
 '-----------------------------------------------------------------------------------------------------------
 Private Function GetDlytimeInputIndex(iIndex As Integer)
     With ExcelInfo.HN_BOX(iIndex)
@@ -753,7 +756,7 @@ End Function
 
 '-----------------------------------------------------------------------------------------------------------
 ' Purpose: 获取输入引脚连接的块索引
-' History: sw create function on 2019.9.25
+' History: 2019.12.01
 '-----------------------------------------------------------------------------------------------------------
 Private Function GetNNInputIndex(iIndex As Integer, strPinName As String)
     With ExcelInfo.HN_BOX(iIndex)
@@ -790,13 +793,14 @@ End Function
 ' History: sw create function on 2019.9.25
 '-----------------------------------------------------------------------------------------------------------
 Private Function GetInputIndex(strIndexName As String)
-    Dim strIndex As String
+    Dim nIndex As Integer
+    
     If strIndexName Like "L*" Then
-        strIndex = Mid(strIndexName, 2, Len(strIndexName) - 1)
-        GetInputIndex = str(ExcelInfo.HN_INPUT(CInt(strIndex)).ElementID)
+        nIndex = CInt(Right(strIndexName, Len(strIndexName) - 1))
+        GetInputIndex = str(ExcelInfo.HN_INPUT(nIndex).ElementID)
     ElseIf strIndexName Like "SO*" Then
-        strIndex = Mid(strIndexName, 3, Len(strIndexName) - 2)
-        GetInputIndex = str(ExcelInfo.HN_BOX(CInt(strIndex)).ElementID)
+        nIndex = CInt(Right(strIndexName, Len(strIndexName) - 2))
+        GetInputIndex = str(ExcelInfo.HN_BOX(nIndex).ElementID)
     Else
         GetInputIndex = "0"
     End If
