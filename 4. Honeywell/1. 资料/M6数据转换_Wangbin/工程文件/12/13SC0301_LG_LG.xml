@@ -28,6 +28,24 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
+<element type="input">
+<id>2</id>
+<AT_position>14,4</AT_position>
+<text>13SC0301_LG_NN1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>3</id>
+<AT_position>24,4</AT_position>
+<text>T#5s</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="box">
 <id>4</id>
 <AT_position>15,2</AT_position>
@@ -54,24 +72,6 @@ END_VAR]]>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
 <output negate="false" visible="true" pinname="ET"/>
-</element>
-<element type="input">
-<id>2</id>
-<AT_position>14,4</AT_position>
-<text>13SC0301_LG_NN1</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
-<id>3</id>
-<AT_position>24,4</AT_position>
-<text>T#5s</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
 </element>
 <element type="output">
 <id>6</id>

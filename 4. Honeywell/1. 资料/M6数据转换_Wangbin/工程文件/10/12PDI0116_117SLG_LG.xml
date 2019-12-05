@@ -37,32 +37,6 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
-<element type="box">
-<id>7</id>
-<AT_position>15,8</AT_position>
-<isinst>TRUE</isinst>
-<text>12PDI0116_117SLG_GE0</text>
-<AT_type>GE</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>0</sortid>
-<input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
-<input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname=""/>
-</element>
-<element type="box">
-<id>8</id>
-<AT_position>15,14</AT_position>
-<isinst>TRUE</isinst>
-<text>12PDI0116_117SLG_LE1</text>
-<AT_type>LE</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>1</sortid>
-<input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
-<input inputid="6" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname=""/>
-</element>
 <element type="input">
 <id>3</id>
 <AT_position>14,10</AT_position>
@@ -98,6 +72,32 @@ END_VAR]]>
 <negate>false</negate>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>7</id>
+<AT_position>15,8</AT_position>
+<isinst>TRUE</isinst>
+<text>12PDI0116_117SLG_GE0</text>
+<AT_type>GE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>8</id>
+<AT_position>15,14</AT_position>
+<isinst>TRUE</isinst>
+<text>12PDI0116_117SLG_LE1</text>
+<AT_type>LE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>1</sortid>
+<input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="6" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
 </element>
 <element type="output">
 <id>9</id>

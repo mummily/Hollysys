@@ -50,6 +50,42 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
+<element type="input">
+<id>4</id>
+<AT_position>24,10</AT_position>
+<text>T#10s</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>5</id>
+<AT_position>14,4</AT_position>
+<text>T#30s</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>6</id>
+<AT_position>14,10</AT_position>
+<text>T#30s</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>7</id>
+<AT_position>14,16</AT_position>
+<text>T#30s</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="box">
 <id>8</id>
 <AT_position>15,8</AT_position>
@@ -117,42 +153,6 @@ END_VAR]]>
 <input inputid="7" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
 <output negate="false" visible="true" pinname="ET"/>
-</element>
-<element type="input">
-<id>4</id>
-<AT_position>24,10</AT_position>
-<text>T#10s</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
-<id>5</id>
-<AT_position>14,4</AT_position>
-<text>T#30s</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
-<id>6</id>
-<AT_position>14,10</AT_position>
-<text>T#30s</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
-<id>7</id>
-<AT_position>14,16</AT_position>
-<text>T#30s</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
 </element>
 <element type="output">
 <id>13</id>

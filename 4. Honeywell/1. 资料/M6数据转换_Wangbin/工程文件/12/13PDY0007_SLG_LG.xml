@@ -73,6 +73,15 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
+<element type="input">
+<id>7</id>
+<AT_position>14,28</AT_position>
+<text>0</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="box">
 <id>8</id>
 <AT_position>15,26</AT_position>
@@ -87,15 +96,6 @@ END_VAR]]>
 <input inputid="6" inputidx="0" negate="false" visible="true" pinname="S3"/>
 <input inputid="7" inputidx="0" negate="false" visible="true" pinname="S4"/>
 <output negate="false" visible="true" pinname="SO"/>
-</element>
-<element type="input">
-<id>7</id>
-<AT_position>14,28</AT_position>
-<text>0</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
 </element>
 <element type="output">
 <id>9</id>

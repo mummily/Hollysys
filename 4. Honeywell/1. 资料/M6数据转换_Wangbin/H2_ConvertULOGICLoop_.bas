@@ -280,11 +280,24 @@ Private Sub WriteXML(sPouName As String)
      '创建文件
     Set fs = CreateObject("Scripting.FileSystemObject")
     Set POU = fs.CreateTextFile(ExcelInfo.PATH, True)
-                
-    '(*XML文件开始公用部分*)
-    '--------------------------------------------------------------------------------------------------------
+    
     POU.WriteLine "<?xml version=" & Lab & "1.0" & Lab & " encoding=" & Lab & "ISO-8859-1" & Lab & "?>"
     POU.WriteLine "<pou>"
+                
+    Call WriteHead
+    Call WriteInterface(sPouName)
+    Call WriteCFC(sPouName)
+    
+    POU.WriteLine "</pou>"
+     
+    POU.Close
+End Sub
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 12-05-2019
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteHead()
     POU.WriteLine "<path><![CDATA[\/" & "ULOGIC" & "]]></path>"
     POU.WriteLine "<name>" & ExcelInfo.NAME & "</name>" '方案页名
     POU.WriteLine "<secondName></secondName>"
@@ -298,14 +311,49 @@ Private Sub WriteXML(sPouName As String)
     POU.WriteLine "<modifier></modifier>"
     POU.WriteLine "<PouPaperSize>AX</PouPaperSize>"
     POU.WriteLine "<PouPrintType>0</PouPrintType>"
+End Sub
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 12-05-2019
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteInterface(sPouName As String)
     POU.WriteLine "<interface>"
+    POU.WriteLine "<![CDATA[PROGRAM " & ExcelInfo.NAME
+    POU.WriteLine "VAR"
     
-    'NN变量  写入XML
-    Call WriteVar(sPouName)
+    ' 计时器变量
+    For index = 1 To 24
+        With ExcelInfo.HN_BOX(index)
+            If .ElementATType = "TON" Or .ElementATType = "TOF" Then
+                POU.WriteLine sPouName & "_" & .ElementATType & .ElementSortID & "(2086): " & .ElementATType & " := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );"
+            End If
+        End With
+    Next
     
+    POU.WriteLine "END_VAR]]>"
     POU.WriteLine "</interface>"
+End Sub
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 12-05-2019
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteCFC(sPouName As String)
     POU.WriteLine "<cfc>"
     
+    Call WriteInput(sPouName)
+    Call WriteBox(sPouName)
+    Call WriteOutput
+    
+    POU.WriteLine "</cfc>"
+End Sub
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 12-05-2019
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteInput(sPouName As String)
     '输入 写入XML
     For index = 1 To 12
         With ExcelInfo.HN_INPUT(index)
@@ -320,26 +368,6 @@ Private Sub WriteXML(sPouName As String)
                 POU.WriteLine "<Flag>FALSE</Flag>"
                 POU.WriteLine "</element>"
              End If
-        End With
-    Next
-    
-    'BOX 写入XML
-    For index = 1 To 24
-        With ExcelInfo.HN_BOX(index)
-           If .LOGALGID <> "" And .LOGALGID <> "NULL" And .ElementLevel > 0 Then
-               POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
-                POU.WriteLine "<id>" & .ElementID & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
-                POU.WriteLine "<isinst>TRUE</isinst>"
-                POU.WriteLine "<text>" & sPouName & "_" & .ElementATType & .ElementSortID & "</text>"
-                POU.WriteLine "<AT_type>" & .ElementATType & "</AT_type>"
-                POU.WriteLine "<typetext>BT_FB</typetext>"
-                POU.WriteLine "<ttype>9</ttype>"
-                POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
-                Call WriteBoxInputs(CInt(index))
-                Call WriteBoxOutputs(CInt(index))
-                POU.WriteLine "</element>"
-            End If
         End With
     Next
     
@@ -370,7 +398,6 @@ Private Sub WriteXML(sPouName As String)
              End If
         End With
     Next
-    
     'DLYTIME  写入XML
     For index = 1 To 24
         With ExcelInfo.HN_BOX(index)
@@ -461,7 +488,39 @@ Private Sub WriteXML(sPouName As String)
            End If
         End With
     Next
-    
+End Sub
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 12-05-2019
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteBox(sPouName As String)
+    'BOX 写入XML
+    For index = 1 To 24
+        With ExcelInfo.HN_BOX(index)
+           If .LOGALGID <> "" And .LOGALGID <> "NULL" And .ElementLevel > 0 Then
+               POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+                POU.WriteLine "<id>" & .ElementID & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
+                POU.WriteLine "<isinst>TRUE</isinst>"
+                POU.WriteLine "<text>" & sPouName & "_" & .ElementATType & .ElementSortID & "</text>"
+                POU.WriteLine "<AT_type>" & .ElementATType & "</AT_type>"
+                POU.WriteLine "<typetext>BT_FB</typetext>"
+                POU.WriteLine "<ttype>9</ttype>"
+                POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
+                Call WriteBoxInputs(CInt(index))
+                Call WriteBoxOutputs(CInt(index))
+                POU.WriteLine "</element>"
+            End If
+        End With
+    Next
+End Sub
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 12-05-2019
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteOutput()
     '输出  写入XML
     For index = 1 To 12
         With ExcelInfo.HN_OUTPUT(index)
@@ -481,17 +540,7 @@ Private Sub WriteXML(sPouName As String)
             End If
         End With
     Next
-
-    '(*XML文件结束公用部分*)
-    '--------------------------
-    POU.WriteLine "</cfc>"
-    POU.WriteLine "</pou>"
-     
-    '(*方案页文件关闭*)
-    '---------------------------
-    POU.Close
 End Sub
-
 
 '-----------------------------------------------------------------------------------------------------------
 'Purpose: 写入NN变量信息
@@ -527,26 +576,6 @@ Private Sub InitNN()
             ExcelInfo.HN_NN(iIndex) = Mid(strCur, 9)
         End If
     Next
-End Sub
-
-'-----------------------------------------------------------------------------------------------------------
-'Purpose: 写入Var变量信息到XML
-'History: 9-26-2019
-'-----------------------------------------------------------------------------------------------------------
-Private Sub WriteVar(sPouName As String)
-    POU.WriteLine "<![CDATA[PROGRAM " & ExcelInfo.NAME
-    POU.WriteLine "VAR"
-    
-    ' 计时器变量
-    For index = 1 To 24
-        With ExcelInfo.HN_BOX(index)
-            If .ElementATType = "TON" Or .ElementATType = "TOF" Then
-                POU.WriteLine sPouName & "_" & .ElementATType & .ElementSortID & "(2086): " & .ElementATType & " := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );"
-            End If
-        End With
-    Next
-    
-    POU.WriteLine "END_VAR]]>"
 End Sub
 
 '-----------------------------------------------------------------------------------------------------------

@@ -29,6 +29,15 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
+<element type="input">
+<id>2</id>
+<AT_position>24,16</AT_position>
+<text>T#30s</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="box">
 <id>3</id>
 <AT_position>15,2</AT_position>
@@ -78,15 +87,6 @@ END_VAR]]>
 <sortid>1</sortid>
 <input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
-</element>
-<element type="input">
-<id>2</id>
-<AT_position>24,16</AT_position>
-<text>T#30s</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
 </element>
 <element type="output">
 <id>7</id>

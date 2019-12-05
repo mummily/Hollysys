@@ -39,62 +39,6 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
-<element type="box">
-<id>11</id>
-<AT_position>15,8</AT_position>
-<isinst>TRUE</isinst>
-<text>14XV0025_LG_TON0</text>
-<AT_type>TON</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>0</sortid>
-<input inputid="3" inputidx="0" negate="false" visible="true" pinname="IN"/>
-<input inputid="9" inputidx="0" negate="false" visible="true" pinname="PT"/>
-<output negate="false" visible="true" pinname="Q"/>
-<output negate="false" visible="true" pinname="ET"/>
-</element>
-<element type="box">
-<id>12</id>
-<AT_position>15,14</AT_position>
-<isinst>TRUE</isinst>
-<text>14XV0025_LG_AND1</text>
-<AT_type>AND</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>1</sortid>
-<input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
-<input inputid="5" inputidx="0" negate="true" visible="true" pinname=""/>
-<input inputid="6" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname=""/>
-</element>
-<element type="box">
-<id>13</id>
-<AT_position>25,14</AT_position>
-<isinst>TRUE</isinst>
-<text>14XV0025_LG_OR2</text>
-<AT_type>OR</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>2</sortid>
-<input inputid="7" inputidx="0" negate="false" visible="true" pinname=""/>
-<input inputid="12" inputidx="0" negate="false" visible="true" pinname=""/>
-<input inputid="8" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname=""/>
-</element>
-<element type="box">
-<id>14</id>
-<AT_position>35,14</AT_position>
-<isinst>TRUE</isinst>
-<text>14XV0025_LG_TON3</text>
-<AT_type>TON</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>3</sortid>
-<input inputid="13" inputidx="0" negate="false" visible="true" pinname="IN"/>
-<input inputid="10" inputidx="0" negate="false" visible="true" pinname="PT"/>
-<output negate="false" visible="true" pinname="Q"/>
-<output negate="false" visible="true" pinname="ET"/>
-</element>
 <element type="input">
 <id>9</id>
 <AT_position>14,10</AT_position>
@@ -166,6 +110,62 @@ END_VAR]]>
 <negate>false</negate>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>11</id>
+<AT_position>15,8</AT_position>
+<isinst>TRUE</isinst>
+<text>14XV0025_LG_TON0</text>
+<AT_type>TON</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="9" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<output negate="false" visible="true" pinname="Q"/>
+<output negate="false" visible="true" pinname="ET"/>
+</element>
+<element type="box">
+<id>12</id>
+<AT_position>15,14</AT_position>
+<isinst>TRUE</isinst>
+<text>14XV0025_LG_AND1</text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>1</sortid>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="5" inputidx="0" negate="true" visible="true" pinname=""/>
+<input inputid="6" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>13</id>
+<AT_position>25,14</AT_position>
+<isinst>TRUE</isinst>
+<text>14XV0025_LG_OR2</text>
+<AT_type>OR</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>2</sortid>
+<input inputid="7" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="12" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="8" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>14</id>
+<AT_position>35,14</AT_position>
+<isinst>TRUE</isinst>
+<text>14XV0025_LG_TON3</text>
+<AT_type>TON</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>3</sortid>
+<input inputid="13" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="10" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<output negate="false" visible="true" pinname="Q"/>
+<output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="output">
 <id>15</id>
