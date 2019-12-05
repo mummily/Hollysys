@@ -126,7 +126,7 @@ Private Sub InitProperty(sPouName As String)
     
     End With
     
-    Dim LElement_X As Integer, LElement_Y As Integer, LElement_ID As Integer, LSort_ID As Integer
+    Dim LElement_X, LElement_Y, LElement_ID, LSort_ID As Integer
     LSort_ID = 0
     LElement_ID = 1
     LElement_Y = 2
@@ -498,15 +498,13 @@ End Sub
 'History: 9-26-2019
 '-----------------------------------------------------------------------------------------------------------
 Private Sub InitNN()
-    Dim strVarTemp As String
-    Dim strVar As String
-    Dim strCur As String
+    Dim strVarTemp, strVar, strCur As String
     Dim iIndex As Integer
-    Dim iPos As Integer
     
-    strVarTemp = ""
-    strVar = ""
-    iIndex = 1
+    strVarTemp = "" ' Excel读取到的NN值
+    strVar = "" ' Excel读取到的全部NN值
+    strCur = "" ' 解析后的每个NN值
+    iIndex = 0 ' NN索引值
     
     ' 拼接NN的字符串到strVar
     For index = 1 To 8
@@ -519,26 +517,16 @@ Private Sub InitNN()
             strVar = strVar & "NN(00" & index & ")=" & strVarTemp
         End If
     Next
-                  
-    ' 对Var数据进行逻辑拆分
-    Do While strVar <> ""
-        iPos = InStr(strVar, " ")
-        If iPos <> 0 Then
-            strCur = Mid(strVar, 1, iPos)
-            strVar = Mid(strVar, iPos + 1, Len(strVar) - iPos)
-            Do While Len(strVar) > 0 And Mid(strVar, 1, 1) = " "
-                strVar = Mid(strVar, 2, Len(strVar) - 1)
-            Loop
-        Else
-            strCur = strVar
-            strVar = ""
+    
+    ' 解析NN值
+    strVarArr = Split(strVar, " ")
+    For i = 0 To UBound(strVarArr)
+        strCur = strVarArr(i)
+        If strCur <> "" Then
+            iIndex = CInt(Mid(strCur, 4, 3))
+            ExcelInfo.HN_NN(iIndex) = Mid(strCur, 9)
         End If
-        
-        iPos = InStr(strCur, "=")
-        iIndex = CInt(Mid(strCur, iPos - 4, 3))
-        strCur = Mid(strCur, iPos + 1, Len(strCur) - iPos)
-        ExcelInfo.HN_NN(iIndex) = strCur
-    Loop
+    Next
 End Sub
 
 '-----------------------------------------------------------------------------------------------------------
@@ -582,7 +570,6 @@ End Sub
 Private Sub InitBoxLevel(boxIndex As Integer)
     With ExcelInfo.HN_BOX(boxIndex)
         If .ElementLevel = 0 Then
-            
             nLevel = 0
             If .S1 Like "S*" Then
                 sIndex = Right(.S1, Len(.S1) - 2)
@@ -642,8 +629,7 @@ End Sub
 ' History: sw create function on 2019.9.25
 '-----------------------------------------------------------------------------------------------------------
 Private Function WriteBoxInputs(iIndex As Integer)
-    Dim bIsRPin As Boolean
-    Dim bHasDlyTime As Boolean
+    Dim bIsRPin, bHasDlyTime As Boolean
     bIsRPin = False
     bHasDlyTime = False
     
@@ -695,9 +681,10 @@ End Function
 '-----------------------------------------------------------------------------------------------------------
 Private Function WriteBoxInput(strBoxName As String, strIndexName As String, strNagetive As String, strPinName As String, iIndex As Integer)
     If strIndexName <> "" And strIndexName <> "NULL" Then
-        Dim sInputid As String  ' inputid
-        Dim sPinname As String  ' pinname
-        Dim sNegate As String   ' negate
+        Dim sInputid, sPinname, sNegate As String
+        sInputid = "" ' inputid
+        sPinname = "" ' pinname
+        sNegate = "" ' negate
         
         If strIndexName Like "DLYTIME*" Then
             sInputid = GetDlytimeInputIndex(iIndex)
