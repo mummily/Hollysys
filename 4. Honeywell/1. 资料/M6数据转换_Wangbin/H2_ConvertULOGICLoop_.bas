@@ -301,7 +301,7 @@ Private Sub WriteHead()
     POU.WriteLine "<path><![CDATA[\/" & "ULOGIC" & "]]></path>"
     POU.WriteLine "<name>" & ExcelInfo.NAME & "</name>" '方案页名
     POU.WriteLine "<secondName></secondName>"
-    POU.WriteLine "<description>" & ExcelInfo.PTDESC & "</description>" '方案页描述
+    POU.WriteLine "<description>" & ReplacePredefinedEntity(ExcelInfo.PTDESC) & "</description>" '方案页描述
     POU.WriteLine "<flags>2048</flags>"
     POU.WriteLine "<POUCycle>500</POUCycle>"
     POU.WriteLine "<auto-sort>0</auto-sort>"
@@ -1159,4 +1159,17 @@ End Function
 '-----------------------------------------------------------------------------------------------------------
 Private Function ReplaceLODSTNSuffix(LODSTN As String)
     ReplaceLODSTNSuffix = ReplaceLISRCSuffix(LODSTN)
+End Function
+
+'-----------------------------------------------------------------------------------------------------------
+' Purpose: 替换XML预定义实体
+' Remark:  <>&'"共5个，目前只用到了&
+'-----------------------------------------------------------------------------------------------------------
+Private Function ReplacePredefinedEntity(str As String)
+    Dim newStr As String
+    newStr = str
+    
+    newStr = Replace(newStr, "&", "&amp;")
+    
+    ReplacePredefinedEntity = newStr
 End Function
