@@ -181,7 +181,7 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>25,20</position>
-<text>13FQ0301.RESETFL</text>
+<text>13FQ0301_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -217,7 +217,7 @@ END_VAR]]>
 <element type="output">
 <id>18</id>
 <position>25,20</position>
-<text>13FQ0301_X.RESETFL</text>
+<text>13FQ0301_X_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

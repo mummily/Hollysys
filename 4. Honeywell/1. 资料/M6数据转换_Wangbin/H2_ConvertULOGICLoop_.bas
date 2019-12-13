@@ -1158,7 +1158,14 @@ End Function
 ' Remark: 目前替换的项和LISRC一致，若不一致需要更新
 '-----------------------------------------------------------------------------------------------------------
 Private Function ReplaceLODSTNSuffix(LODSTN As String)
-    ReplaceLODSTNSuffix = ReplaceLISRCSuffix(LODSTN)
+    Dim newLODSTN As String
+    newLODSTN = LODSTN
+
+    newLODSTN = ReplaceLISRCSuffix(newLODSTN)
+    newLODSTN = Replace(newLODSTN, ".RESETFL", "_RS")
+    
+    ReplaceLODSTNSuffix = newLODSTN
+    
 End Function
 
 '-----------------------------------------------------------------------------------------------------------
