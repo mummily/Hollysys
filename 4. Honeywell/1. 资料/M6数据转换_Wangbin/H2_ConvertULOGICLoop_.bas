@@ -1143,6 +1143,7 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
         newLISRC = Replace(newLISRC, ".PVLLFL", ".LLIND")
         newLISRC = Replace(newLISRC, ".PVHIFL", ".AHIND")
         newLISRC = Replace(newLISRC, ".PVHHFL", ".HHIND")
+        newLISRC = Replace(newLISRC, ".PV", ".AV")
         If newLISRC Like "*.FL(*)" Or newLISRC Like "*.NN(*)" Then
             newLISRC = Replace(newLISRC, ".", "_")
             newLISRC = Replace(newLISRC, "(", "")

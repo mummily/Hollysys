@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13TI0007.PV</text>
+<text>13TI0007.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13TIA0006.PV</text>
+<text>13TIA0006.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

@@ -27,7 +27,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13FFIA0109.PV</text>
+<text>13FFIA0109.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -36,7 +36,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13FFIA0209.PV</text>
+<text>13FFIA0209.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -45,7 +45,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13FFIA0309.PV</text>
+<text>13FFIA0309.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -54,7 +54,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>13FFIA0409.PV</text>
+<text>13FFIA0409.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -63,7 +63,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>13LI0090.PV</text>
+<text>13LI0090.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

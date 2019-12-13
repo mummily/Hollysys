@@ -25,7 +25,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>30PISZA0002A.PV</text>
+<text>30PISZA0002A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -34,7 +34,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>30PISZA0002B.PV</text>
+<text>30PISZA0002B.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -43,7 +43,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>30PISZA0002C.PV</text>
+<text>30PISZA0002C.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

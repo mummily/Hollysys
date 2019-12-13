@@ -23,7 +23,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13PISA0008A.PV</text>
+<text>13PISA0008A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -32,7 +32,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13PISA0008B.PV</text>
+<text>13PISA0008B.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -41,7 +41,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13PISA0008C.PV</text>
+<text>13PISA0008C.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

@@ -455,7 +455,7 @@ END_VAR]]>
 <element type="output">
 <id>40</id>
 <position>45,18</position>
-<text>13HC1300_NN.PV</text>
+<text>13HC1300_NN.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

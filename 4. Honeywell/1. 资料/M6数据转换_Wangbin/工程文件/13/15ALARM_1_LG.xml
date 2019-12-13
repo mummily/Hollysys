@@ -30,7 +30,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>14LIRSZA0001A.PV</text>
+<text>14LIRSZA0001A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -39,7 +39,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>14LIRSZA0001A.PV</text>
+<text>14LIRSZA0001A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -48,7 +48,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>14LIRSZA0001A.PV</text>
+<text>14LIRSZA0001A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -57,7 +57,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>14FISZA0002.PV</text>
+<text>14FISZA0002.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -102,7 +102,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>10,50</AT_position>
-<text>14DISA0001.PV</text>
+<text>14DISA0001.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

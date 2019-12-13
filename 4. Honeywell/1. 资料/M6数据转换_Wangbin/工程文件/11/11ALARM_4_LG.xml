@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>10,2</AT_position>
-<text>13TI0030A.PV</text>
+<text>13TI0030A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>10,8</AT_position>
-<text>13TI0030B.PV</text>
+<text>13TI0030B.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>10,14</AT_position>
-<text>13TI0031A.PV</text>
+<text>13TI0031A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -58,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>10,20</AT_position>
-<text>13TI0031B.PV</text>
+<text>13TI0031B.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -67,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>10,26</AT_position>
-<text>13TI0032A.PV</text>
+<text>13TI0032A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -76,7 +76,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>10,32</AT_position>
-<text>13TI0032B.PV</text>
+<text>13TI0032B.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -85,7 +85,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>10,38</AT_position>
-<text>16LI0003A.PV</text>
+<text>16LI0003A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -94,7 +94,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>10,44</AT_position>
-<text>16LI0003B.PV</text>
+<text>16LI0003B.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -103,7 +103,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>10,50</AT_position>
-<text>16LI0003C.PV</text>
+<text>16LI0003C.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

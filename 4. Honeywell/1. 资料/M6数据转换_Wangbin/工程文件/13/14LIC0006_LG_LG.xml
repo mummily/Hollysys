@@ -78,7 +78,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>10,38</AT_position>
-<text>14LISA0006A.PV</text>
+<text>14LISA0006A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -87,7 +87,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>10,44</AT_position>
-<text>14LISA0006B.PV</text>
+<text>14LISA0006B.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
