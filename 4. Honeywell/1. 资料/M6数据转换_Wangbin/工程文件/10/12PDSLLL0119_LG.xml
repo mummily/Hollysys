@@ -21,7 +21,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>12PDY0119.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -30,7 +30,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>17,4</AT_position>
+<AT_position>20,4</AT_position>
 <text>12PDSLLL0119_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -39,7 +39,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>3</id>
-<AT_position>18,2</AT_position>
+<AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
 <text>12PDSLLL0119_LE0</text>
 <AT_type>LE</AT_type>
@@ -52,7 +52,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>4</id>
-<position>28,2</position>
+<position>31,2</position>
 <text>12PDSLLL0119_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

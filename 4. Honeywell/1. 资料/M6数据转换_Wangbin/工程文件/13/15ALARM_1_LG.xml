@@ -29,7 +29,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>14LIRSZA0001A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -38,7 +38,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>10,8</AT_position>
+<AT_position>13,8</AT_position>
 <text>14LIRSZA0001A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -47,7 +47,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>10,14</AT_position>
+<AT_position>13,14</AT_position>
 <text>14LIRSZA0001A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -56,7 +56,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>10,20</AT_position>
+<AT_position>13,20</AT_position>
 <text>14FISZA0002.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -65,7 +65,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>10,26</AT_position>
+<AT_position>13,26</AT_position>
 <text>9ALARM_1.DI(5)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -74,7 +74,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>10,32</AT_position>
+<AT_position>13,32</AT_position>
 <text>11ALARM_5.DI(17)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -83,7 +83,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>10,38</AT_position>
+<AT_position>13,38</AT_position>
 <text>13ALARM_2.DI(19)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -92,7 +92,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>10,44</AT_position>
+<AT_position>13,44</AT_position>
 <text>15ALARM_2.DI(22)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -101,7 +101,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>9</id>
-<AT_position>10,50</AT_position>
+<AT_position>13,50</AT_position>
 <text>14DISA0001.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -110,7 +110,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>10</id>
-<AT_position>17,4</AT_position>
+<AT_position>20,4</AT_position>
 <text>15ALARM_1_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -119,7 +119,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>11</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>15ALARM_1_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -128,7 +128,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>12</id>
-<AT_position>17,16</AT_position>
+<AT_position>20,16</AT_position>
 <text>15ALARM_1_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -137,7 +137,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>13</id>
-<AT_position>17,4</AT_position>
+<AT_position>20,4</AT_position>
 <text>15ALARM_1_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -146,7 +146,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>14</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>15ALARM_1_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -155,7 +155,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>15</id>
-<AT_position>17,16</AT_position>
+<AT_position>20,16</AT_position>
 <text>15ALARM_1_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -164,7 +164,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>16</id>
-<AT_position>17,22</AT_position>
+<AT_position>20,22</AT_position>
 <text>15ALARM_1_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -173,7 +173,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>18</id>
-<AT_position>17,52</AT_position>
+<AT_position>20,52</AT_position>
 <text>15ALARM_1_NN4</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -182,7 +182,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>19</id>
-<AT_position>32,4</AT_position>
+<AT_position>35,4</AT_position>
 <text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -191,7 +191,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>20</id>
-<AT_position>32,10</AT_position>
+<AT_position>35,10</AT_position>
 <text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -200,7 +200,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>21</id>
-<AT_position>32,16</AT_position>
+<AT_position>35,16</AT_position>
 <text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -209,7 +209,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>22</id>
-<AT_position>32,4</AT_position>
+<AT_position>35,4</AT_position>
 <text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -218,7 +218,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>23</id>
-<AT_position>32,10</AT_position>
+<AT_position>35,10</AT_position>
 <text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -227,7 +227,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>24</id>
-<AT_position>32,16</AT_position>
+<AT_position>35,16</AT_position>
 <text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -236,7 +236,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>25</id>
-<AT_position>32,22</AT_position>
+<AT_position>35,22</AT_position>
 <text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -245,7 +245,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>26</id>
-<AT_position>32,52</AT_position>
+<AT_position>35,52</AT_position>
 <text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -254,7 +254,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>17</id>
-<AT_position>77,26</AT_position>
+<AT_position>80,26</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -263,7 +263,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>27</id>
-<AT_position>18,2</AT_position>
+<AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_GT0</text>
 <AT_type>GT</AT_type>
@@ -276,7 +276,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>36</id>
-<AT_position>33,2</AT_position>
+<AT_position>36,2</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_TP9</text>
 <AT_type>TP</AT_type>
@@ -290,7 +290,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>28</id>
-<AT_position>18,8</AT_position>
+<AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_GT1</text>
 <AT_type>GT</AT_type>
@@ -303,7 +303,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>37</id>
-<AT_position>33,8</AT_position>
+<AT_position>36,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_TP10</text>
 <AT_type>TP</AT_type>
@@ -317,7 +317,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>29</id>
-<AT_position>18,14</AT_position>
+<AT_position>21,14</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_GT2</text>
 <AT_type>GT</AT_type>
@@ -330,7 +330,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>38</id>
-<AT_position>33,14</AT_position>
+<AT_position>36,14</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_TP11</text>
 <AT_type>TP</AT_type>
@@ -344,7 +344,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>30</id>
-<AT_position>18,2</AT_position>
+<AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_LE3</text>
 <AT_type>LE</AT_type>
@@ -357,7 +357,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>39</id>
-<AT_position>33,2</AT_position>
+<AT_position>36,2</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_TP12</text>
 <AT_type>TP</AT_type>
@@ -371,7 +371,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>31</id>
-<AT_position>18,8</AT_position>
+<AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_LE4</text>
 <AT_type>LE</AT_type>
@@ -384,7 +384,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>40</id>
-<AT_position>33,8</AT_position>
+<AT_position>36,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_TP13</text>
 <AT_type>TP</AT_type>
@@ -398,7 +398,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>32</id>
-<AT_position>18,14</AT_position>
+<AT_position>21,14</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_LE5</text>
 <AT_type>LE</AT_type>
@@ -411,7 +411,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>41</id>
-<AT_position>33,14</AT_position>
+<AT_position>36,14</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_TP14</text>
 <AT_type>TP</AT_type>
@@ -425,7 +425,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>33</id>
-<AT_position>18,20</AT_position>
+<AT_position>21,20</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_LE6</text>
 <AT_type>LE</AT_type>
@@ -438,7 +438,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>42</id>
-<AT_position>33,20</AT_position>
+<AT_position>36,20</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_TP15</text>
 <AT_type>TP</AT_type>
@@ -452,7 +452,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>44</id>
-<AT_position>48,8</AT_position>
+<AT_position>51,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_OR17</text>
 <AT_type>OR</AT_type>
@@ -466,7 +466,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>45</id>
-<AT_position>48,8</AT_position>
+<AT_position>51,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_OR18</text>
 <AT_type>OR</AT_type>
@@ -480,7 +480,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>46</id>
-<AT_position>63,14</AT_position>
+<AT_position>66,14</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_OR19</text>
 <AT_type>OR</AT_type>
@@ -494,7 +494,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>34</id>
-<AT_position>18,32</AT_position>
+<AT_position>21,32</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_OR7</text>
 <AT_type>OR</AT_type>
@@ -508,7 +508,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>48</id>
-<AT_position>93,36</AT_position>
+<AT_position>96,36</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_OR21</text>
 <AT_type>OR</AT_type>
@@ -522,7 +522,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>47</id>
-<AT_position>78,23</AT_position>
+<AT_position>81,23</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_OR20</text>
 <AT_type>OR</AT_type>
@@ -536,7 +536,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>35</id>
-<AT_position>18,50</AT_position>
+<AT_position>21,50</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_GE8</text>
 <AT_type>GE</AT_type>
@@ -549,7 +549,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>43</id>
-<AT_position>33,50</AT_position>
+<AT_position>36,50</AT_position>
 <isinst>TRUE</isinst>
 <text>15ALARM_1_TP16</text>
 <AT_type>TP</AT_type>
@@ -563,7 +563,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>49</id>
-<position>103,14</position>
+<position>106,14</position>
 <text>13ALARM_2_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -21,7 +21,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>17FIC0001_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -30,7 +30,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>17FIC0001_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -39,7 +39,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>17FIC0001_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -48,7 +48,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>4</id>
-<AT_position>18,8</AT_position>
+<AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
 <text>17FIC0001_LG_OR0</text>
 <AT_type>OR</AT_type>
@@ -62,7 +62,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>5</id>
-<position>28,8</position>
+<position>31,8</position>
 <text>17FIC0001.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -74,7 +74,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>6</id>
-<position>28,8</position>
+<position>31,8</position>
 <text>17FIC0001.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -86,7 +86,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>7</id>
-<position>28,8</position>
+<position>31,8</position>
 <text>17FIC0001.OP</text>
 <Comment>?????</Comment>
 <negate>false</negate>

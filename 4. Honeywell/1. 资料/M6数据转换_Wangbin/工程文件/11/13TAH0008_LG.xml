@@ -21,7 +21,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>13TIA0006.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -30,7 +30,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>10,8</AT_position>
+<AT_position>13,8</AT_position>
 <text>13TI0007.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -39,7 +39,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>10,14</AT_position>
+<AT_position>13,14</AT_position>
 <text>13TIA0006.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -48,7 +48,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>10,20</AT_position>
+<AT_position>13,20</AT_position>
 <text>13TI0007.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -57,7 +57,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>17,8</AT_position>
+<AT_position>20,8</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -66,7 +66,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>17,20</AT_position>
+<AT_position>20,20</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -75,7 +75,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>7</id>
-<AT_position>18,5</AT_position>
+<AT_position>21,5</AT_position>
 <isinst>TRUE</isinst>
 <text>13TAH0008_AND0</text>
 <AT_type>AND</AT_type>
@@ -89,7 +89,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>8</id>
-<AT_position>18,17</AT_position>
+<AT_position>21,17</AT_position>
 <isinst>TRUE</isinst>
 <text>13TAH0008_OR1</text>
 <AT_type>OR</AT_type>
@@ -103,7 +103,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>28,5</position>
+<position>31,5</position>
 <text>13TAH0008_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -115,7 +115,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>28,17</position>
+<position>31,17</position>
 <text>13TAH0008_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>

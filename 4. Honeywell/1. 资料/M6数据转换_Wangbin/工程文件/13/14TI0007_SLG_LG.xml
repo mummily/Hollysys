@@ -21,7 +21,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>14TISZA0007A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -30,7 +30,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>10,8</AT_position>
+<AT_position>13,8</AT_position>
 <text>14TISZA0007B.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -39,7 +39,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>10,14</AT_position>
+<AT_position>13,14</AT_position>
 <text>14TISZA0007C.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -48,7 +48,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>10,20</AT_position>
+<AT_position>13,20</AT_position>
 <text>14TISZA0007A.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -57,7 +57,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>10,26</AT_position>
+<AT_position>13,26</AT_position>
 <text>14TISZA0007B.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -66,7 +66,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>10,32</AT_position>
+<AT_position>13,32</AT_position>
 <text>14TISZA0007C.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -75,7 +75,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>17,29</AT_position>
+<AT_position>20,29</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -84,7 +84,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>8</id>
-<AT_position>18,26</AT_position>
+<AT_position>21,26</AT_position>
 <isinst>TRUE</isinst>
 <text>14TI0007_SLG_QOR20</text>
 <AT_type>QOR2</AT_type>
@@ -99,7 +99,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>28,2</position>
+<position>31,2</position>
 <text>14TI0007_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -111,7 +111,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>28,8</position>
+<position>31,8</position>
 <text>14TI0007_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -123,7 +123,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>28,14</position>
+<position>31,14</position>
 <text>14TI0007_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -135,7 +135,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>28,26</position>
+<position>31,26</position>
 <text>14TI0007_SLG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -147,7 +147,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>28,26</position>
+<position>31,26</position>
 <text>14TAH0007.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>

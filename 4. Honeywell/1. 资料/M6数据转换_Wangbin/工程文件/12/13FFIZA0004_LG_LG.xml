@@ -21,7 +21,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>13KS03S15_13FF04.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -30,7 +30,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>13FFIZA0004_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -39,7 +39,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>13FFIZA0004_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -48,7 +48,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>13FFIZA0004_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -57,7 +57,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>5</id>
-<AT_position>18,8</AT_position>
+<AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
 <text>13FFIZA0004_LG_FLIPFLOP0</text>
 <AT_type>FLIPFLOP</AT_type>
@@ -71,7 +71,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>6</id>
-<position>28,2</position>
+<position>31,2</position>
 <text>13FFZHL0004.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

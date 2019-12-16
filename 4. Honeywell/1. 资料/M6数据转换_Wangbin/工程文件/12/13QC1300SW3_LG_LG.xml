@@ -21,7 +21,7 @@ END_VAR]]>
 <cfc>
 <element type="output">
 <id>1</id>
-<position>20,4</position>
+<position>23,4</position>
 <text>13QC1300_SW3.S1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -33,7 +33,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>2</id>
-<position>20,6</position>
+<position>23,6</position>
 <text>13QC1300_SW3.S2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -45,7 +45,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>3</id>
-<position>20,8</position>
+<position>23,8</position>
 <text>13QC1300_SW2.S1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -57,7 +57,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>4</id>
-<position>20,10</position>
+<position>23,10</position>
 <text>13QC1300_SW2.S2</text>
 <Comment>?????</Comment>
 <negate>false</negate>

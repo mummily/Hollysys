@@ -22,7 +22,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>17GSO0012A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -31,7 +31,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>10,8</AT_position>
+<AT_position>13,8</AT_position>
 <text>17GSO0012B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -40,7 +40,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>10</id>
-<AT_position>47,8</AT_position>
+<AT_position>50,8</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -49,7 +49,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>17FIC0006_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -58,7 +58,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>17FIC0006_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -67,7 +67,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>17FIC0006_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -76,7 +76,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>17,8</AT_position>
+<AT_position>20,8</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -85,7 +85,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>17,8</AT_position>
+<AT_position>20,8</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -94,7 +94,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>32,9</AT_position>
+<AT_position>35,9</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -103,7 +103,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>9</id>
-<AT_position>32,9</AT_position>
+<AT_position>35,9</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -112,7 +112,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>11</id>
-<AT_position>18,8</AT_position>
+<AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
 <text>17FIC0006_LG_OR0</text>
 <AT_type>OR</AT_type>
@@ -126,7 +126,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>12</id>
-<AT_position>18,5</AT_position>
+<AT_position>21,5</AT_position>
 <isinst>TRUE</isinst>
 <text>17FIC0006_LG_OR1</text>
 <AT_type>OR</AT_type>
@@ -140,7 +140,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>13</id>
-<AT_position>18,5</AT_position>
+<AT_position>21,5</AT_position>
 <isinst>TRUE</isinst>
 <text>17FIC0006_LG_AND2</text>
 <AT_type>AND</AT_type>
@@ -154,7 +154,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>14</id>
-<AT_position>33,6</AT_position>
+<AT_position>36,6</AT_position>
 <isinst>TRUE</isinst>
 <text>17FIC0006_LG_AND3</text>
 <AT_type>AND</AT_type>
@@ -168,7 +168,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>15</id>
-<AT_position>33,6</AT_position>
+<AT_position>36,6</AT_position>
 <isinst>TRUE</isinst>
 <text>17FIC0006_LG_OR4</text>
 <AT_type>OR</AT_type>
@@ -182,7 +182,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>16</id>
-<AT_position>48,6</AT_position>
+<AT_position>51,6</AT_position>
 <isinst>TRUE</isinst>
 <text>17FIC0006_LG_TP5</text>
 <AT_type>TP</AT_type>
@@ -196,7 +196,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>58,6</position>
+<position>61,6</position>
 <text>17FIC0006.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -208,7 +208,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>58,6</position>
+<position>61,6</position>
 <text>17FIC0006.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -220,7 +220,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>58,6</position>
+<position>61,6</position>
 <text>17FIC0006.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -232,7 +232,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>58,6</position>
+<position>61,6</position>
 <text>17FIC0006.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -244,7 +244,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>21</id>
-<position>58,6</position>
+<position>61,6</position>
 <text>17FIC0006.OP</text>
 <Comment>?????</Comment>
 <negate>false</negate>

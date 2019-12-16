@@ -21,7 +21,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>13FICA0301.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -30,7 +30,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>10,8</AT_position>
+<AT_position>13,8</AT_position>
 <text>13FICA0401.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -39,7 +39,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>17,4</AT_position>
+<AT_position>20,4</AT_position>
 <text>13FV0301_401MODE_NN5</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -48,7 +48,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>13FV0301_401MODE_NN5</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -57,7 +57,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>5</id>
-<AT_position>18,2</AT_position>
+<AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
 <text>13FV0301_401MODE_EQ0</text>
 <AT_type>EQ</AT_type>
@@ -70,7 +70,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>7</id>
-<AT_position>33,2</AT_position>
+<AT_position>36,2</AT_position>
 <isinst>TRUE</isinst>
 <text>13FV0301_401MODE_NOT2</text>
 <AT_type>NOT</AT_type>
@@ -82,7 +82,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>6</id>
-<AT_position>18,8</AT_position>
+<AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
 <text>13FV0301_401MODE_EQ1</text>
 <AT_type>EQ</AT_type>
@@ -95,7 +95,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>8</id>
-<AT_position>33,8</AT_position>
+<AT_position>36,8</AT_position>
 <isinst>TRUE</isinst>
 <text>13FV0301_401MODE_NOT3</text>
 <AT_type>NOT</AT_type>
@@ -107,7 +107,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>43,2</position>
+<position>46,2</position>
 <text>13FICA0301.OPHILM</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -119,7 +119,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>43,2</position>
+<position>46,2</position>
 <text>13FICA0301.OPLOLM</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -131,7 +131,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>43,2</position>
+<position>46,2</position>
 <text>13FICA0301.OPHILM</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -143,7 +143,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>43,2</position>
+<position>46,2</position>
 <text>13FICA0301.OPLOLM</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -155,7 +155,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>43,8</position>
+<position>46,8</position>
 <text>13FICA0401.OPHILM</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -167,7 +167,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>43,8</position>
+<position>46,8</position>
 <text>13FICA0401.OPLOLM</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -179,7 +179,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>43,8</position>
+<position>46,8</position>
 <text>13FICA0401.OPHILM</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -191,7 +191,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>43,8</position>
+<position>46,8</position>
 <text>13FICA0401.OPLOLM</text>
 <Comment>?????</Comment>
 <negate>false</negate>

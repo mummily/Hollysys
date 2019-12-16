@@ -22,7 +22,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>13GSO0043.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -31,7 +31,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>32,16</AT_position>
+<AT_position>35,16</AT_position>
 <text>T#30s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -40,7 +40,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>3</id>
-<AT_position>18,2</AT_position>
+<AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
 <text>13PC0040B_MODE_NOT0</text>
 <AT_type>NOT</AT_type>
@@ -52,7 +52,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>5</id>
-<AT_position>33,8</AT_position>
+<AT_position>36,8</AT_position>
 <isinst>TRUE</isinst>
 <text>13PC0040B_MODE_NOT2</text>
 <AT_type>NOT</AT_type>
@@ -64,7 +64,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>6</id>
-<AT_position>33,14</AT_position>
+<AT_position>36,14</AT_position>
 <isinst>TRUE</isinst>
 <text>13PC0040B_MODE_TON3</text>
 <AT_type>TON</AT_type>
@@ -78,7 +78,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>4</id>
-<AT_position>18,8</AT_position>
+<AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
 <text>13PC0040B_MODE_NOT1</text>
 <AT_type>NOT</AT_type>
@@ -90,7 +90,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>7</id>
-<position>43,2</position>
+<position>46,2</position>
 <text>13PICA0040B.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -102,7 +102,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>43,2</position>
+<position>46,2</position>
 <text>13PICA0040B.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>

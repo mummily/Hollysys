@@ -22,7 +22,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>13FIR0003.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -31,7 +31,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>10,8</AT_position>
+<AT_position>13,8</AT_position>
 <text>13GZH002403.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -40,7 +40,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>10,14</AT_position>
+<AT_position>13,14</AT_position>
 <text>13UZ0005D.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -49,7 +49,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>32,16</AT_position>
+<AT_position>35,16</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -58,7 +58,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>17,8</AT_position>
+<AT_position>20,8</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -67,7 +67,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>6</id>
-<AT_position>18,5</AT_position>
+<AT_position>21,5</AT_position>
 <isinst>TRUE</isinst>
 <text>13FAL0003_LG_AND0</text>
 <AT_type>AND</AT_type>
@@ -81,7 +81,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>8</id>
-<AT_position>33,14</AT_position>
+<AT_position>36,14</AT_position>
 <isinst>TRUE</isinst>
 <text>13FAL0003_LG_TP2</text>
 <AT_type>TP</AT_type>
@@ -95,7 +95,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>7</id>
-<AT_position>18,14</AT_position>
+<AT_position>21,14</AT_position>
 <isinst>TRUE</isinst>
 <text>13FAL0003_LG_NOT1</text>
 <AT_type>NOT</AT_type>
@@ -107,7 +107,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>43,14</position>
+<position>46,14</position>
 <text>13FIRCZA0003.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -119,7 +119,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>43,14</position>
+<position>46,14</position>
 <text>13FIRCZA0003.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -131,7 +131,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>43,14</position>
+<position>46,14</position>
 <text>13FIRCZA0003.OP</text>
 <Comment>?????</Comment>
 <negate>false</negate>

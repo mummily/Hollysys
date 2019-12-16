@@ -21,7 +21,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>17LISA0007LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -30,7 +30,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>2</id>
-<position>20,2</position>
+<position>23,2</position>
 <text>P1702A_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -42,7 +42,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>3</id>
-<position>20,2</position>
+<position>23,2</position>
 <text>P1702B_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -54,7 +54,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>4</id>
-<position>20,2</position>
+<position>23,2</position>
 <text>17FIC0006_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -21,7 +21,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>17FIC0004_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -30,7 +30,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>17FIC0004_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -39,7 +39,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>17FIC0004_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -48,7 +48,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>32,10</AT_position>
+<AT_position>35,10</AT_position>
 <text>17FIC0004_LG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -57,7 +57,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>32,10</AT_position>
+<AT_position>35,10</AT_position>
 <text>17FIC0004_LG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -66,7 +66,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>6</id>
-<AT_position>18,8</AT_position>
+<AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
 <text>17FIC0004_LG_OR0</text>
 <AT_type>OR</AT_type>
@@ -80,7 +80,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>7</id>
-<AT_position>33,8</AT_position>
+<AT_position>36,8</AT_position>
 <isinst>TRUE</isinst>
 <text>17FIC0004_LG_OR1</text>
 <AT_type>OR</AT_type>
@@ -94,7 +94,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>43,8</position>
+<position>46,8</position>
 <text>17FIC0004.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -106,7 +106,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>43,8</position>
+<position>46,8</position>
 <text>17FIC0004.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -118,7 +118,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>43,8</position>
+<position>46,8</position>
 <text>17FIC0004.OP</text>
 <Comment>?????</Comment>
 <negate>false</negate>

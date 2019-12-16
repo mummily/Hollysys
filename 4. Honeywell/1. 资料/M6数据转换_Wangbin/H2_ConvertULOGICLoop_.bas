@@ -130,7 +130,7 @@ Private Sub InitProperty(sPouName As String)
     LSort_ID = 0
     LElement_ID = 1
     LElement_Y = 2
-    LElement_X = 10
+    LElement_X = 13
     
     ' ‰»Î ∏≥÷µ
     For index = 1 To 12

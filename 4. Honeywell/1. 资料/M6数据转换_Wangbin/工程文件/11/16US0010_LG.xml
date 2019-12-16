@@ -22,7 +22,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>16PDISA0014.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -31,7 +31,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>10,8</AT_position>
+<AT_position>13,8</AT_position>
 <text>16PDISA0014.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -40,7 +40,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -49,7 +49,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>4</id>
-<AT_position>18,8</AT_position>
+<AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
 <text>16US0010_TP0</text>
 <AT_type>TP</AT_type>
@@ -63,7 +63,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>5</id>
-<position>28,2</position>
+<position>31,2</position>
 <text>16FIC0014_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -75,7 +75,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>6</id>
-<position>28,2</position>
+<position>31,2</position>
 <text>16XV0012_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -87,7 +87,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>7</id>
-<position>28,8</position>
+<position>31,8</position>
 <text>16FIC0014_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -99,7 +99,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>28,8</position>
+<position>31,8</position>
 <text>16XV0012_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>

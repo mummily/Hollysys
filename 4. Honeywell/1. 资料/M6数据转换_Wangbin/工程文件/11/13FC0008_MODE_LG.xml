@@ -23,7 +23,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>13K1301A.DV(1)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -32,7 +32,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>10,8</AT_position>
+<AT_position>13,8</AT_position>
 <text>13K1301B.DV(1)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -41,7 +41,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>10,14</AT_position>
+<AT_position>13,14</AT_position>
 <text>13ISA9003A.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -50,7 +50,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>10,20</AT_position>
+<AT_position>13,20</AT_position>
 <text>13ISA9003B.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -59,7 +59,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>47,13</AT_position>
+<AT_position>50,13</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -68,7 +68,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>9</id>
-<AT_position>32,19</AT_position>
+<AT_position>35,19</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -77,7 +77,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>17,8</AT_position>
+<AT_position>20,8</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -86,7 +86,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>17,20</AT_position>
+<AT_position>20,20</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -95,7 +95,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>32,14</AT_position>
+<AT_position>35,14</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -104,7 +104,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>10</id>
-<AT_position>18,5</AT_position>
+<AT_position>21,5</AT_position>
 <isinst>TRUE</isinst>
 <text>13FC0008_MODE_OR0</text>
 <AT_type>OR</AT_type>
@@ -118,7 +118,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>11</id>
-<AT_position>18,17</AT_position>
+<AT_position>21,17</AT_position>
 <isinst>TRUE</isinst>
 <text>13FC0008_MODE_AND1</text>
 <AT_type>AND</AT_type>
@@ -132,7 +132,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>12</id>
-<AT_position>33,11</AT_position>
+<AT_position>36,11</AT_position>
 <isinst>TRUE</isinst>
 <text>13FC0008_MODE_AND2</text>
 <AT_type>AND</AT_type>
@@ -146,7 +146,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>14</id>
-<AT_position>48,11</AT_position>
+<AT_position>51,11</AT_position>
 <isinst>TRUE</isinst>
 <text>13FC0008_MODE_TP4</text>
 <AT_type>TP</AT_type>
@@ -160,7 +160,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>13</id>
-<AT_position>33,17</AT_position>
+<AT_position>36,17</AT_position>
 <isinst>TRUE</isinst>
 <text>13FC0008_MODE_TP3</text>
 <AT_type>TP</AT_type>
@@ -174,7 +174,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>58,11</position>
+<position>61,11</position>
 <text>13FICA0008.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -186,7 +186,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>58,11</position>
+<position>61,11</position>
 <text>13FICA0008.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -198,7 +198,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>58,17</position>
+<position>61,17</position>
 <text>13FICA0008.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -210,7 +210,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>58,17</position>
+<position>61,17</position>
 <text>13FICA0008.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -222,7 +222,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>58,17</position>
+<position>61,17</position>
 <text>13FICA0008.OP</text>
 <Comment>?????</Comment>
 <negate>false</negate>

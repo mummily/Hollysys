@@ -21,7 +21,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>14LIRSZA0001A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -30,7 +30,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>10,8</AT_position>
+<AT_position>13,8</AT_position>
 <text>14LIRSZA0001B.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -39,7 +39,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>10,14</AT_position>
+<AT_position>13,14</AT_position>
 <text>14LIRSZA0001C.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -48,7 +48,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>10,20</AT_position>
+<AT_position>13,20</AT_position>
 <text>14LIRSZA0001.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -57,7 +57,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>10,26</AT_position>
+<AT_position>13,26</AT_position>
 <text>14LIRSZA0001A.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -66,7 +66,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>10,32</AT_position>
+<AT_position>13,32</AT_position>
 <text>14LIRSZA0001B.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -75,7 +75,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>10,38</AT_position>
+<AT_position>13,38</AT_position>
 <text>14LIRSZA0001C.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -84,7 +84,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>10,44</AT_position>
+<AT_position>13,44</AT_position>
 <text>14LIRSZA0001A.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -93,7 +93,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>9</id>
-<AT_position>10,50</AT_position>
+<AT_position>13,50</AT_position>
 <text>14LIRSZA0001B.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -102,7 +102,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>10</id>
-<AT_position>10,56</AT_position>
+<AT_position>13,56</AT_position>
 <text>14LIRSZA0001C.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -111,7 +111,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>11</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>14LI0001_SLG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -120,7 +120,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>12</id>
-<AT_position>17,35</AT_position>
+<AT_position>20,35</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -129,7 +129,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>13</id>
-<AT_position>17,53</AT_position>
+<AT_position>20,53</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -138,7 +138,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>14</id>
-<AT_position>18,8</AT_position>
+<AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
 <text>14LI0001_SLG_NOT0</text>
 <AT_type>NOT</AT_type>
@@ -150,7 +150,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>15</id>
-<AT_position>18,32</AT_position>
+<AT_position>21,32</AT_position>
 <isinst>TRUE</isinst>
 <text>14LI0001_SLG_QOR21</text>
 <AT_type>QOR2</AT_type>
@@ -165,7 +165,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>16</id>
-<AT_position>18,50</AT_position>
+<AT_position>21,50</AT_position>
 <isinst>TRUE</isinst>
 <text>14LI0001_SLG_QOR22</text>
 <AT_type>QOR2</AT_type>
@@ -180,7 +180,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>28,2</position>
+<position>31,2</position>
 <text>14LI0001_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -192,7 +192,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>28,8</position>
+<position>31,8</position>
 <text>14LI0001_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -204,7 +204,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>28,14</position>
+<position>31,14</position>
 <text>14LI0001_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -216,7 +216,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>28,20</position>
+<position>31,20</position>
 <text>14LI0001_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -228,7 +228,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>21</id>
-<position>28,8</position>
+<position>31,8</position>
 <text>14LI0001_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -240,7 +240,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>22</id>
-<position>28,32</position>
+<position>31,32</position>
 <text>14LAH0001.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -252,7 +252,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>23</id>
-<position>28,50</position>
+<position>31,50</position>
 <text>14LAL0001.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>

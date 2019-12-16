@@ -21,7 +21,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>15PISZA0017A.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -30,7 +30,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>10,8</AT_position>
+<AT_position>13,8</AT_position>
 <text>15PISZA0017B.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -39,7 +39,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>10,14</AT_position>
+<AT_position>13,14</AT_position>
 <text>15PISZA0017C.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -48,7 +48,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>10,20</AT_position>
+<AT_position>13,20</AT_position>
 <text>15PISZA0017A.HHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -57,7 +57,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>10,26</AT_position>
+<AT_position>13,26</AT_position>
 <text>15PISZA0017B.HHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -66,7 +66,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>10,32</AT_position>
+<AT_position>13,32</AT_position>
 <text>15PISZA0017C.HHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -75,7 +75,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>10,38</AT_position>
+<AT_position>13,38</AT_position>
 <text>15PISZA0017A.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -84,7 +84,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>10,44</AT_position>
+<AT_position>13,44</AT_position>
 <text>15PISZA0017B.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -93,7 +93,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>9</id>
-<AT_position>10,50</AT_position>
+<AT_position>13,50</AT_position>
 <text>15PISZA0017C.AHIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -102,7 +102,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>10</id>
-<AT_position>10,56</AT_position>
+<AT_position>13,56</AT_position>
 <text>15PISZA0017A.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -111,7 +111,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>11</id>
-<AT_position>10,62</AT_position>
+<AT_position>13,62</AT_position>
 <text>15PISZA0017B.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -120,7 +120,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>12</id>
-<AT_position>10,68</AT_position>
+<AT_position>13,68</AT_position>
 <text>15PISZA0017C.ALIND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -129,7 +129,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>13</id>
-<AT_position>17,29</AT_position>
+<AT_position>20,29</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -138,7 +138,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>14</id>
-<AT_position>17,47</AT_position>
+<AT_position>20,47</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -147,7 +147,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>15</id>
-<AT_position>17,65</AT_position>
+<AT_position>20,65</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -156,7 +156,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>16</id>
-<AT_position>18,26</AT_position>
+<AT_position>21,26</AT_position>
 <isinst>TRUE</isinst>
 <text>15PISZA0017_SLG_QOR20</text>
 <AT_type>QOR2</AT_type>
@@ -171,7 +171,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>17</id>
-<AT_position>18,44</AT_position>
+<AT_position>21,44</AT_position>
 <isinst>TRUE</isinst>
 <text>15PISZA0017_SLG_QOR21</text>
 <AT_type>QOR2</AT_type>
@@ -186,7 +186,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>18</id>
-<AT_position>18,62</AT_position>
+<AT_position>21,62</AT_position>
 <isinst>TRUE</isinst>
 <text>15PISZA0017_SLG_QOR22</text>
 <AT_type>QOR2</AT_type>
@@ -201,7 +201,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>28,2</position>
+<position>31,2</position>
 <text>15PISZA0017_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -213,7 +213,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>28,8</position>
+<position>31,8</position>
 <text>15PISZA0017_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -225,7 +225,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>21</id>
-<position>28,14</position>
+<position>31,14</position>
 <text>15PISZA0017_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -237,7 +237,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>22</id>
-<position>28,26</position>
+<position>31,26</position>
 <text>15PISZA0017_SLG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -249,7 +249,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>23</id>
-<position>28,44</position>
+<position>31,44</position>
 <text>15PISZA0017_SLG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -261,7 +261,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>24</id>
-<position>28,62</position>
+<position>31,62</position>
 <text>15PISZA0017_SLG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>

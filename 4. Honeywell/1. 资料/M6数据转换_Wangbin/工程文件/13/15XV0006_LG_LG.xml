@@ -22,7 +22,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>6</id>
-<AT_position>47,10</AT_position>
+<AT_position>50,10</AT_position>
 <text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -31,7 +31,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>1</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>15XV0006_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -40,7 +40,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>15XV0006_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -49,7 +49,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>17,11</AT_position>
+<AT_position>20,11</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -58,7 +58,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>32,10</AT_position>
+<AT_position>35,10</AT_position>
 <text>15XV0006_LG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -67,7 +67,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>32,10</AT_position>
+<AT_position>35,10</AT_position>
 <text>15XV0006_LG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -76,7 +76,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>7</id>
-<AT_position>18,8</AT_position>
+<AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15XV0006_LG_OR0</text>
 <AT_type>OR</AT_type>
@@ -90,7 +90,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>8</id>
-<AT_position>33,8</AT_position>
+<AT_position>36,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15XV0006_LG_OR1</text>
 <AT_type>OR</AT_type>
@@ -104,7 +104,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>9</id>
-<AT_position>48,8</AT_position>
+<AT_position>51,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15XV0006_LG_TON2</text>
 <AT_type>TON</AT_type>
@@ -118,7 +118,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>58,8</position>
+<position>61,8</position>
 <text>15XV0006.I0</text>
 <Comment>?????</Comment>
 <negate>false</negate>

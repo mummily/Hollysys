@@ -23,7 +23,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>1</id>
-<AT_position>10,2</AT_position>
+<AT_position>13,2</AT_position>
 <text>13GSO0103.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -32,7 +32,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>10,8</AT_position>
+<AT_position>13,8</AT_position>
 <text>13GSC0103.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -41,7 +41,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>17,4</AT_position>
+<AT_position>20,4</AT_position>
 <text>T#6s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -50,7 +50,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>17,10</AT_position>
+<AT_position>20,10</AT_position>
 <text>T#900s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -59,7 +59,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>5</id>
-<AT_position>18,2</AT_position>
+<AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
 <text>13KS0005_LG1_TON0</text>
 <AT_type>TON</AT_type>
@@ -73,7 +73,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>6</id>
-<AT_position>18,8</AT_position>
+<AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
 <text>13KS0005_LG1_TON1</text>
 <AT_type>TON</AT_type>
@@ -87,7 +87,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>7</id>
-<position>28,2</position>
+<position>31,2</position>
 <text>13KS0005_FL30</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -99,7 +99,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>28,8</position>
+<position>31,8</position>
 <text>13KS0005_FL31</text>
 <Comment>?????</Comment>
 <negate>false</negate>
