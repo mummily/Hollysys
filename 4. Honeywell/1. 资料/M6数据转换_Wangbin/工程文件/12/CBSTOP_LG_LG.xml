@@ -61,7 +61,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>24,4</AT_position>
+<AT_position>32,4</AT_position>
 <text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -70,7 +70,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>24,10</AT_position>
+<AT_position>32,10</AT_position>
 <text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -79,7 +79,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>24,16</AT_position>
+<AT_position>32,16</AT_position>
 <text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -88,7 +88,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>9</id>
-<AT_position>24,22</AT_position>
+<AT_position>32,22</AT_position>
 <text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -97,7 +97,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>44,16</AT_position>
+<AT_position>62,17</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -106,7 +106,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>10</id>
-<AT_position>15,2</AT_position>
+<AT_position>18,2</AT_position>
 <isinst>TRUE</isinst>
 <text>CBSTOP_LG_NOT0</text>
 <AT_type>NOT</AT_type>
@@ -118,7 +118,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>11</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>CBSTOP_LG_NOT1</text>
 <AT_type>NOT</AT_type>
@@ -130,7 +130,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>12</id>
-<AT_position>15,14</AT_position>
+<AT_position>18,14</AT_position>
 <isinst>TRUE</isinst>
 <text>CBSTOP_LG_NOT2</text>
 <AT_type>NOT</AT_type>
@@ -142,7 +142,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>13</id>
-<AT_position>15,20</AT_position>
+<AT_position>18,20</AT_position>
 <isinst>TRUE</isinst>
 <text>CBSTOP_LG_NOT3</text>
 <AT_type>NOT</AT_type>
@@ -154,7 +154,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>14</id>
-<AT_position>25,2</AT_position>
+<AT_position>33,2</AT_position>
 <isinst>TRUE</isinst>
 <text>CBSTOP_LG_TP4</text>
 <AT_type>TP</AT_type>
@@ -168,7 +168,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>15</id>
-<AT_position>25,8</AT_position>
+<AT_position>33,8</AT_position>
 <isinst>TRUE</isinst>
 <text>CBSTOP_LG_TP5</text>
 <AT_type>TP</AT_type>
@@ -182,7 +182,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>16</id>
-<AT_position>25,14</AT_position>
+<AT_position>33,14</AT_position>
 <isinst>TRUE</isinst>
 <text>CBSTOP_LG_TP6</text>
 <AT_type>TP</AT_type>
@@ -196,7 +196,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>17</id>
-<AT_position>25,20</AT_position>
+<AT_position>33,20</AT_position>
 <isinst>TRUE</isinst>
 <text>CBSTOP_LG_TP7</text>
 <AT_type>TP</AT_type>
@@ -210,7 +210,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>18</id>
-<AT_position>35,8</AT_position>
+<AT_position>48,8</AT_position>
 <isinst>TRUE</isinst>
 <text>CBSTOP_LG_OR8</text>
 <AT_type>OR</AT_type>
@@ -224,7 +224,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>19</id>
-<AT_position>45,14</AT_position>
+<AT_position>63,14</AT_position>
 <isinst>TRUE</isinst>
 <text>CBSTOP_LG_OR9</text>
 <AT_type>OR</AT_type>
@@ -238,7 +238,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>55,14</position>
+<position>73,14</position>
 <text>15CONTROL_FILTER_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -67,7 +67,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>34,19</AT_position>
+<AT_position>47,19</AT_position>
 <text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -76,7 +76,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>7</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0005_OR0</text>
 <AT_type>OR</AT_type>
@@ -90,7 +90,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>8</id>
-<AT_position>25,17</AT_position>
+<AT_position>33,17</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0005_OR1</text>
 <AT_type>OR</AT_type>
@@ -104,7 +104,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>9</id>
-<AT_position>35,17</AT_position>
+<AT_position>48,17</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0005_TON2</text>
 <AT_type>TON</AT_type>
@@ -118,7 +118,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>45,17</position>
+<position>58,17</position>
 <text>15XV0004.I0</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -130,7 +130,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>45,17</position>
+<position>58,17</position>
 <text>15XV0011_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -142,7 +142,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>45,17</position>
+<position>58,17</position>
 <text>15XV0012_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -154,7 +154,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>45,17</position>
+<position>58,17</position>
 <text>15XV0006_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -166,7 +166,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>45,17</position>
+<position>58,17</position>
 <text>15XV0007_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -178,7 +178,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>45,17</position>
+<position>58,17</position>
 <text>15XV0013_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -190,7 +190,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>45,19</position>
+<position>58,17</position>
 <text>15PIC0005.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -202,7 +202,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>45,21</position>
+<position>58,17</position>
 <text>15PIC0005.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -214,7 +214,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>45,23</position>
+<position>58,17</position>
 <text>15PIC0005.OP</text>
 <Comment>?????</Comment>
 <negate>false</negate>

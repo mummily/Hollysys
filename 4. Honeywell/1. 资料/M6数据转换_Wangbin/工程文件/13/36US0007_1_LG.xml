@@ -70,7 +70,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>9</id>
-<AT_position>14,4</AT_position>
+<AT_position>17,4</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -79,7 +79,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>10</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,10</AT_position>
 <text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -88,7 +88,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>11</id>
-<AT_position>44,18</AT_position>
+<AT_position>62,18</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -97,7 +97,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>12</id>
-<AT_position>44,8</AT_position>
+<AT_position>62,8</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -106,7 +106,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>24,7</AT_position>
+<AT_position>32,8</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -115,7 +115,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>34,8</AT_position>
+<AT_position>47,9</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -124,7 +124,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,11</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -133,7 +133,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>13</id>
-<AT_position>15,2</AT_position>
+<AT_position>18,2</AT_position>
 <isinst>TRUE</isinst>
 <text>36US0007_1_TP0</text>
 <AT_type>TP</AT_type>
@@ -147,7 +147,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>14</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>36US0007_1_TON1</text>
 <AT_type>TON</AT_type>
@@ -161,7 +161,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>16</id>
-<AT_position>25,5</AT_position>
+<AT_position>33,5</AT_position>
 <isinst>TRUE</isinst>
 <text>36US0007_1_FLIPFLOP3</text>
 <AT_type>FLIPFLOP</AT_type>
@@ -175,7 +175,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>17</id>
-<AT_position>35,6</AT_position>
+<AT_position>48,6</AT_position>
 <isinst>TRUE</isinst>
 <text>36US0007_1_AND4</text>
 <AT_type>AND</AT_type>
@@ -189,7 +189,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>18</id>
-<AT_position>35,16</AT_position>
+<AT_position>48,16</AT_position>
 <isinst>TRUE</isinst>
 <text>36US0007_1_AND5</text>
 <AT_type>AND</AT_type>
@@ -203,7 +203,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>19</id>
-<AT_position>45,16</AT_position>
+<AT_position>63,16</AT_position>
 <isinst>TRUE</isinst>
 <text>36US0007_1_TP6</text>
 <AT_type>TP</AT_type>
@@ -217,7 +217,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>15</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>36US0007_1_FLIPFLOP2</text>
 <AT_type>FLIPFLOP</AT_type>
@@ -231,7 +231,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>20</id>
-<AT_position>45,6</AT_position>
+<AT_position>63,6</AT_position>
 <isinst>TRUE</isinst>
 <text>36US0007_1_TP7</text>
 <AT_type>TP</AT_type>
@@ -245,7 +245,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>21</id>
-<position>55,2</position>
+<position>73,2</position>
 <text>36XV0001.I1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -257,7 +257,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>22</id>
-<position>55,2</position>
+<position>73,2</position>
 <text>36XV0002.I1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -269,7 +269,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>23</id>
-<position>55,4</position>
+<position>73,6</position>
 <text>36FIC0001.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -281,7 +281,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>24</id>
-<position>55,6</position>
+<position>73,6</position>
 <text>36FIC0001.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -293,7 +293,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>25</id>
-<position>55,16</position>
+<position>73,16</position>
 <text>P3603.I1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -305,7 +305,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>26</id>
-<position>55,18</position>
+<position>73,6</position>
 <text>36FIC0002.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -317,7 +317,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>27</id>
-<position>55,20</position>
+<position>73,6</position>
 <text>36FIC0002.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -329,7 +329,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>28</id>
-<position>55,2</position>
+<position>73,2</position>
 <text>36HS1US07.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -39,7 +39,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>14,7</AT_position>
+<AT_position>17,8</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -48,7 +48,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>4</id>
-<AT_position>15,5</AT_position>
+<AT_position>18,5</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0008_OR0</text>
 <AT_type>OR</AT_type>
@@ -62,7 +62,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>5</id>
-<position>25,5</position>
+<position>28,5</position>
 <text>15XV0002_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -74,7 +74,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>6</id>
-<position>25,5</position>
+<position>28,5</position>
 <text>15XV0003_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -86,7 +86,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>7</id>
-<position>25,5</position>
+<position>28,5</position>
 <text>15XV0009_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -98,7 +98,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>25,5</position>
+<position>28,5</position>
 <text>15XV0008_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -110,7 +110,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>25,5</position>
+<position>28,5</position>
 <text>15XV0006_LG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -122,7 +122,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>25,5</position>
+<position>28,5</position>
 <text>15XV0007_LG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -134,7 +134,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>25,5</position>
+<position>28,5</position>
 <text>15XV0010_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -146,7 +146,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>25,5</position>
+<position>28,5</position>
 <text>15PDIC0009_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>

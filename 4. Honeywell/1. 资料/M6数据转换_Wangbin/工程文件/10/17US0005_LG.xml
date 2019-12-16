@@ -126,7 +126,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>20,4</position>
+<position>20,2</position>
 <text>17FICA0002.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -138,7 +138,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>20,6</position>
+<position>20,2</position>
 <text>17FICA0002.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -150,7 +150,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>20,8</position>
+<position>20,2</position>
 <text>17FICA0002.OP</text>
 <Comment>?????</Comment>
 <negate>false</negate>

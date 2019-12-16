@@ -129,7 +129,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>15</id>
-<AT_position>14,52</AT_position>
+<AT_position>17,52</AT_position>
 <text>13KS0010_LG2_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -138,7 +138,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>13</id>
-<AT_position>14,25</AT_position>
+<AT_position>17,26</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -147,7 +147,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>14</id>
-<AT_position>24,30</AT_position>
+<AT_position>32,31</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -156,7 +156,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>16</id>
-<AT_position>14,43</AT_position>
+<AT_position>17,44</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -165,7 +165,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>17</id>
-<AT_position>15,23</AT_position>
+<AT_position>18,23</AT_position>
 <isinst>TRUE</isinst>
 <text>13KS0010_LG2_OR0</text>
 <AT_type>OR</AT_type>
@@ -179,7 +179,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>20</id>
-<AT_position>25,28</AT_position>
+<AT_position>33,28</AT_position>
 <isinst>TRUE</isinst>
 <text>13KS0010_LG2_AND3</text>
 <AT_type>AND</AT_type>
@@ -193,7 +193,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>18</id>
-<AT_position>15,50</AT_position>
+<AT_position>18,50</AT_position>
 <isinst>TRUE</isinst>
 <text>13KS0010_LG2_EQ1</text>
 <AT_type>EQ</AT_type>
@@ -206,7 +206,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>19</id>
-<AT_position>15,41</AT_position>
+<AT_position>18,41</AT_position>
 <isinst>TRUE</isinst>
 <text>13KS0010_LG2_AND2</text>
 <AT_type>AND</AT_type>
@@ -220,7 +220,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>21</id>
-<position>35,2</position>
+<position>43,2</position>
 <text>13UZ0010G_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -232,7 +232,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>22</id>
-<position>35,8</position>
+<position>43,8</position>
 <text>13UZ0010H_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -244,7 +244,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>23</id>
-<position>35,14</position>
+<position>43,14</position>
 <text>13UZ0010I_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -256,7 +256,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>24</id>
-<position>35,16</position>
+<position>43,28</position>
 <text>16PIRCSA0008B.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -268,7 +268,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>25</id>
-<position>35,18</position>
+<position>43,28</position>
 <text>16PIRCSA0008B.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -280,7 +280,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>26</id>
-<position>35,28</position>
+<position>43,28</position>
 <text>16UZ0001_IN.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -292,7 +292,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>27</id>
-<position>35,41</position>
+<position>43,41</position>
 <text>16XV02_P8A_KS10.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -304,7 +304,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>28</id>
-<position>35,56</position>
+<position>43,56</position>
 <text>16GSC0007_FL.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -316,7 +316,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>29</id>
-<position>35,62</position>
+<position>43,62</position>
 <text>16GSO0003_FL.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -328,7 +328,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>30</id>
-<position>35,68</position>
+<position>43,68</position>
 <text>16GSO0004_FL.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -340,7 +340,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>31</id>
-<position>35,50</position>
+<position>43,50</position>
 <text>16PIRCS0008B_CAS.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>

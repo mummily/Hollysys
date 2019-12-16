@@ -48,7 +48,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>4</id>
-<AT_position>15,14</AT_position>
+<AT_position>18,14</AT_position>
 <isinst>TRUE</isinst>
 <text>16PI0008_SLG2_NOT0</text>
 <AT_type>NOT</AT_type>
@@ -60,7 +60,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>5</id>
-<position>25,2</position>
+<position>28,2</position>
 <text>16PI0008_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -72,7 +72,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>6</id>
-<position>25,8</position>
+<position>28,8</position>
 <text>16PI0008_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>

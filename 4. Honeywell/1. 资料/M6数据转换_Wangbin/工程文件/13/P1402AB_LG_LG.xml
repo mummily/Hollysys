@@ -48,7 +48,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>14,7</AT_position>
+<AT_position>17,8</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -57,7 +57,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>24,12</AT_position>
+<AT_position>32,13</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -66,7 +66,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>6</id>
-<AT_position>15,5</AT_position>
+<AT_position>18,5</AT_position>
 <isinst>TRUE</isinst>
 <text>P1402AB_LG_AND0</text>
 <AT_type>AND</AT_type>
@@ -80,7 +80,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>7</id>
-<AT_position>25,10</AT_position>
+<AT_position>33,10</AT_position>
 <isinst>TRUE</isinst>
 <text>P1402AB_LG_OR1</text>
 <AT_type>OR</AT_type>
@@ -94,7 +94,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>35,10</position>
+<position>43,10</position>
 <text>P1402A.P1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -106,7 +106,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>35,10</position>
+<position>43,10</position>
 <text>P1402B.P1</text>
 <Comment>?????</Comment>
 <negate>false</negate>

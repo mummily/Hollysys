@@ -31,7 +31,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>14,4</AT_position>
+<AT_position>17,4</AT_position>
 <text>13SC0201_LG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -40,7 +40,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>24,4</AT_position>
+<AT_position>32,4</AT_position>
 <text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -49,7 +49,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>4</id>
-<AT_position>15,2</AT_position>
+<AT_position>18,2</AT_position>
 <isinst>TRUE</isinst>
 <text>13SC0201_LG_EQ0</text>
 <AT_type>EQ</AT_type>
@@ -62,7 +62,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>5</id>
-<AT_position>25,2</AT_position>
+<AT_position>33,2</AT_position>
 <isinst>TRUE</isinst>
 <text>13SC0201_LG_TP1</text>
 <AT_type>TP</AT_type>
@@ -76,7 +76,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>6</id>
-<position>35,2</position>
+<position>43,2</position>
 <text>13SC0201_SW.S2</text>
 <Comment>?????</Comment>
 <negate>false</negate>

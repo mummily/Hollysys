@@ -49,7 +49,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>24,16</AT_position>
+<AT_position>32,16</AT_position>
 <text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -58,7 +58,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>14,7</AT_position>
+<AT_position>17,8</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -67,7 +67,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>14,16</AT_position>
+<AT_position>17,16</AT_position>
 <text>16PIC0008A_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -76,7 +76,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>14,16</AT_position>
+<AT_position>17,16</AT_position>
 <text>16PIC0008A_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -85,7 +85,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>34,12</AT_position>
+<AT_position>47,13</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -94,7 +94,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>9</id>
-<AT_position>15,5</AT_position>
+<AT_position>18,5</AT_position>
 <isinst>TRUE</isinst>
 <text>16PIC0008A_LG_OR0</text>
 <AT_type>OR</AT_type>
@@ -108,7 +108,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>10</id>
-<AT_position>15,14</AT_position>
+<AT_position>18,14</AT_position>
 <isinst>TRUE</isinst>
 <text>16PIC0008A_LG_OR1</text>
 <AT_type>OR</AT_type>
@@ -122,7 +122,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>11</id>
-<AT_position>25,14</AT_position>
+<AT_position>33,14</AT_position>
 <isinst>TRUE</isinst>
 <text>16PIC0008A_LG_TP2</text>
 <AT_type>TP</AT_type>
@@ -136,7 +136,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>12</id>
-<AT_position>35,10</AT_position>
+<AT_position>48,10</AT_position>
 <isinst>TRUE</isinst>
 <text>16PIC0008A_LG_OR3</text>
 <AT_type>OR</AT_type>
@@ -150,7 +150,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>45,4</position>
+<position>58,10</position>
 <text>16PIRCSA0008A.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -162,7 +162,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>45,6</position>
+<position>58,10</position>
 <text>16PIRCSA0008A.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -174,7 +174,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>45,8</position>
+<position>58,10</position>
 <text>16PIRCSA0008A.OP</text>
 <Comment>?????</Comment>
 <negate>false</negate>

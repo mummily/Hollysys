@@ -24,7 +24,7 @@ END_VAR]]>
 <cfc>
 <element type="input">
 <id>4</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,10</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -33,7 +33,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>14,16</AT_position>
+<AT_position>17,16</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -42,7 +42,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>14,22</AT_position>
+<AT_position>17,22</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -51,7 +51,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>1</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,10</AT_position>
 <text>13FQ0101_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -60,7 +60,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>14,16</AT_position>
+<AT_position>17,16</AT_position>
 <text>13FQ0101_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -69,7 +69,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>14,22</AT_position>
+<AT_position>17,22</AT_position>
 <text>13FQ0101_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -78,7 +78,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>7</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>13FQ0101_LG_TP0</text>
 <AT_type>TP</AT_type>
@@ -92,7 +92,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>8</id>
-<AT_position>15,14</AT_position>
+<AT_position>18,14</AT_position>
 <isinst>TRUE</isinst>
 <text>13FQ0101_LG_TP1</text>
 <AT_type>TP</AT_type>
@@ -106,7 +106,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>9</id>
-<AT_position>15,20</AT_position>
+<AT_position>18,20</AT_position>
 <isinst>TRUE</isinst>
 <text>13FQ0101_LG_TP2</text>
 <AT_type>TP</AT_type>
@@ -120,7 +120,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>25,4</position>
+<position>28,8</position>
 <text>13FQ0101_T.COMMAND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -132,7 +132,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>25,6</position>
+<position>28,14</position>
 <text>13FQ0101_T.COMMAND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -144,7 +144,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>25,8</position>
+<position>28,20</position>
 <text>13FQ0101_T.COMMAND</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -156,7 +156,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>25,8</position>
+<position>28,8</position>
 <text>13FQ0101.STARTFL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -168,7 +168,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>25,14</position>
+<position>28,14</position>
 <text>13FQ0101.STOPFL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -180,7 +180,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>25,20</position>
+<position>28,20</position>
 <text>13FQ0101_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -192,7 +192,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>25,8</position>
+<position>28,8</position>
 <text>13FQ0101_X.STARTFL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -204,7 +204,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>25,14</position>
+<position>28,14</position>
 <text>13FQ0101_X.STOPFL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -216,7 +216,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>25,20</position>
+<position>28,20</position>
 <text>13FQ0101_X_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>

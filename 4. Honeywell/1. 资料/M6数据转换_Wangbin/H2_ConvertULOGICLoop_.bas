@@ -191,7 +191,8 @@ Private Sub InitProperty(sPouName As String)
     Call InitAllBoxLevel
     
     LElement_Y = 2
-    Dim LElementLevel_X_Max As Integer, LElementLevel_X As Integer
+    Dim LElementLevel_X_Max As Integer, LElementLevel_X As Integer, LBoxInterval_X As Integer
+    LBoxInterval_X = 15
     LElementLevel_X = LElement_X
     LElementLevel_X_Max = LElement_X
     
@@ -215,7 +216,7 @@ Private Sub InitProperty(sPouName As String)
                     .ElementID = LElement_ID
                     LElement_ID = LElement_ID + 1
                    
-                    LElementLevel_X = LElement_X * .ElementLevel + 5
+                    LElementLevel_X = (nLevelIndex - 1) * LBoxInterval_X + LElement_X + 8
                     If LElementLevel_X > LElementLevel_X_Max Then
                          LElementLevel_X_Max = LElementLevel_X
                     End If
@@ -422,12 +423,14 @@ Private Sub WriteInput(sPouName As String)
            If .S1 Like "FL*" Then
                 POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID_S1 & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                 If .S1 = "FL1" Then
+                    POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 3 & "</AT_position>"
                     POU.WriteLine "<text>FALSE</text>"
                 ElseIf .S1 = "FL2" Then
+                    POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 3 & "</AT_position>"
                     POU.WriteLine "<text>TRUE</text>"
                 Else
+                    POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                     POU.WriteLine "<text>" & sPouName & "_" & .S1 & "</text>"
                 End If
                 POU.WriteLine "<Comment>?????</Comment>"
@@ -439,12 +442,14 @@ Private Sub WriteInput(sPouName As String)
            If .S2 Like "FL*" Then
                 POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID_S2 & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                 If .S2 = "FL1" Then
+                    POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 3 & "</AT_position>"
                     POU.WriteLine "<text>FALSE</text>"
                 ElseIf .S2 = "FL2" Then
+                    POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 3 & "</AT_position>"
                     POU.WriteLine "<text>TRUE</text>"
                 Else
+                    POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                     POU.WriteLine "<text>" & sPouName & "_" & .S2 & "</text>"
                 End If
                 POU.WriteLine "<Comment>?????</Comment>"
@@ -456,12 +461,14 @@ Private Sub WriteInput(sPouName As String)
            If .S3 Like "FL*" Then
                 POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID_S3 & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                 If .S3 = "FL1" Then
+                    POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 3 & "</AT_position>"
                     POU.WriteLine "<text>FALSE</text>"
                 ElseIf .S3 = "FL2" Then
+                    POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 3 & "</AT_position>"
                     POU.WriteLine "<text>TRUE</text>"
                 Else
+                    POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                     POU.WriteLine "<text>" & sPouName & "_" & .S3 & "</text>"
                 End If
                 POU.WriteLine "<Comment>?????</Comment>"
@@ -473,12 +480,14 @@ Private Sub WriteInput(sPouName As String)
            If .S4 Like "FL*" Then
                 POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID_S4 & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                 If .S4 = "FL1" Then
+                    POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 3 & "</AT_position>"
                     POU.WriteLine "<text>FALSE</text>"
                 ElseIf .S4 = "FL2" Then
+                    POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 3 & "</AT_position>"
                     POU.WriteLine "<text>TRUE</text>"
                 Else
+                    POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
                     POU.WriteLine "<text>" & sPouName & "_" & .S4 & "</text>"
                 End If
                 POU.WriteLine "<Comment>?????</Comment>"
@@ -1095,22 +1104,27 @@ End Function
 ' History:
 '-----------------------------------------------------------------------------------------------------------
 Private Function GetOutputYPosition(outputElement As T_HN_OUTPUT, lastYPosition As Integer)
-    Dim YPos_Min As Integer, YPos_Max As Integer, YPos_Temp As Integer
+    Dim YPos_Min As Integer, YPos_Max As Integer, YPos_Temp As Integer, strSo As String
     YPos_Temp = 0
     YPos_Min = 1000
     YPos_Max = 0
     
     With outputElement
-        If .LOSRC Like "L*" Then
-            YPos_Temp = ExcelInfo.HN_INPUT(CInt(Right(.LOSRC, Len(.LOSRC) - 1))).Element_Y
+        strSo = .LOSRC
+        If strSo Like "NN*" Or strSo Like "FL*" Then
+            strSo = .LOENBL
+        End If
+        
+        If strSo Like "L*" Then
+            YPos_Temp = ExcelInfo.HN_INPUT(CInt(Right(strSo, Len(strSo) - 1))).Element_Y
             If YPos_Temp > YPos_Max Then
                 YPos_Max = YPos_Temp
             End If
             If YPos_Temp < YPos_Min Then
                 YPos_Min = YPos_Temp
             End If
-        ElseIf .LOSRC Like "SO*" Then
-            YPos_Temp = ExcelInfo.HN_BOX(CInt(Right(.LOSRC, Len(.LOSRC) - 2))).Element_Y
+        ElseIf strSo Like "SO*" Then
+            YPos_Temp = ExcelInfo.HN_BOX(CInt(Right(strSo, Len(strSo) - 2))).Element_Y
             If YPos_Temp > YPos_Max Then
                 YPos_Max = YPos_Temp
             End If

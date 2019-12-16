@@ -111,7 +111,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>11</id>
-<AT_position>24,31</AT_position>
+<AT_position>32,32</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -120,7 +120,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>12</id>
-<AT_position>44,36</AT_position>
+<AT_position>62,37</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -129,7 +129,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>13</id>
-<AT_position>44,35</AT_position>
+<AT_position>62,36</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -138,7 +138,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>14</id>
-<AT_position>14,31</AT_position>
+<AT_position>17,32</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -147,7 +147,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>15</id>
-<AT_position>15,20</AT_position>
+<AT_position>18,20</AT_position>
 <isinst>TRUE</isinst>
 <text>13X1305B1_LG_AND0</text>
 <AT_type>AND</AT_type>
@@ -161,7 +161,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>16</id>
-<AT_position>15,38</AT_position>
+<AT_position>18,38</AT_position>
 <isinst>TRUE</isinst>
 <text>13X1305B1_LG_AND1</text>
 <AT_type>AND</AT_type>
@@ -175,7 +175,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>18</id>
-<AT_position>25,29</AT_position>
+<AT_position>33,29</AT_position>
 <isinst>TRUE</isinst>
 <text>13X1305B1_LG_AND3</text>
 <AT_type>AND</AT_type>
@@ -189,7 +189,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>19</id>
-<AT_position>35,16</AT_position>
+<AT_position>48,16</AT_position>
 <isinst>TRUE</isinst>
 <text>13X1305B1_LG_AND4</text>
 <AT_type>AND</AT_type>
@@ -203,7 +203,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>20</id>
-<AT_position>35,18</AT_position>
+<AT_position>48,18</AT_position>
 <isinst>TRUE</isinst>
 <text>13X1305B1_LG_AND5</text>
 <AT_type>AND</AT_type>
@@ -217,7 +217,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>21</id>
-<AT_position>45,34</AT_position>
+<AT_position>63,34</AT_position>
 <isinst>TRUE</isinst>
 <text>13X1305B1_LG_AND6</text>
 <AT_type>AND</AT_type>
@@ -231,7 +231,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>22</id>
-<AT_position>45,33</AT_position>
+<AT_position>63,33</AT_position>
 <isinst>TRUE</isinst>
 <text>13X1305B1_LG_AND7</text>
 <AT_type>AND</AT_type>
@@ -245,7 +245,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>17</id>
-<AT_position>15,29</AT_position>
+<AT_position>18,29</AT_position>
 <isinst>TRUE</isinst>
 <text>13X1305B1_LG_OR2</text>
 <AT_type>OR</AT_type>
@@ -259,7 +259,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>23</id>
-<position>55,33</position>
+<position>73,33</position>
 <text>13X1305B1.P1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -271,7 +271,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>24</id>
-<position>55,34</position>
+<position>73,34</position>
 <text>13X1305B1.P0</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -49,7 +49,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>24,13</AT_position>
+<AT_position>32,13</AT_position>
 <text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -58,7 +58,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>14,13</AT_position>
+<AT_position>17,14</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -67,7 +67,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>34,8</AT_position>
+<AT_position>47,9</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -76,7 +76,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>7</id>
-<AT_position>15,11</AT_position>
+<AT_position>18,11</AT_position>
 <isinst>TRUE</isinst>
 <text>14FAL0002_OR0</text>
 <AT_type>OR</AT_type>
@@ -90,7 +90,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>8</id>
-<AT_position>25,11</AT_position>
+<AT_position>33,11</AT_position>
 <isinst>TRUE</isinst>
 <text>14FAL0002_TON1</text>
 <AT_type>TON</AT_type>
@@ -104,7 +104,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>9</id>
-<AT_position>35,6</AT_position>
+<AT_position>48,6</AT_position>
 <isinst>TRUE</isinst>
 <text>14FAL0002_AND2</text>
 <AT_type>AND</AT_type>
@@ -118,7 +118,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>45,11</position>
+<position>58,11</position>
 <text>14FZLL0002I.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

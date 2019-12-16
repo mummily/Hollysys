@@ -51,7 +51,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>14,4</AT_position>
+<AT_position>17,4</AT_position>
 <text>30PSL0002_ALARM_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -60,7 +60,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,10</AT_position>
 <text>30PSL0002_ALARM_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -69,7 +69,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>14,16</AT_position>
+<AT_position>17,16</AT_position>
 <text>30PSL0002_ALARM_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -78,7 +78,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>24,4</AT_position>
+<AT_position>32,4</AT_position>
 <text>T#10s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -87,7 +87,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>34,4</AT_position>
+<AT_position>47,4</AT_position>
 <text>T#10s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -96,7 +96,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>9</id>
-<AT_position>24,16</AT_position>
+<AT_position>32,16</AT_position>
 <text>T#10s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -105,7 +105,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>10</id>
-<AT_position>15,2</AT_position>
+<AT_position>18,2</AT_position>
 <isinst>TRUE</isinst>
 <text>30PSL0002_ALARM_LE0</text>
 <AT_type>LE</AT_type>
@@ -118,7 +118,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>13</id>
-<AT_position>25,2</AT_position>
+<AT_position>33,2</AT_position>
 <isinst>TRUE</isinst>
 <text>30PSL0002_ALARM_TP3</text>
 <AT_type>TP</AT_type>
@@ -132,7 +132,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>11</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>30PSL0002_ALARM_LE1</text>
 <AT_type>LE</AT_type>
@@ -145,7 +145,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>15</id>
-<AT_position>35,2</AT_position>
+<AT_position>48,2</AT_position>
 <isinst>TRUE</isinst>
 <text>30PSL0002_ALARM_TP5</text>
 <AT_type>TP</AT_type>
@@ -159,7 +159,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>12</id>
-<AT_position>15,14</AT_position>
+<AT_position>18,14</AT_position>
 <isinst>TRUE</isinst>
 <text>30PSL0002_ALARM_LE2</text>
 <AT_type>LE</AT_type>
@@ -172,7 +172,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>14</id>
-<AT_position>25,14</AT_position>
+<AT_position>33,14</AT_position>
 <isinst>TRUE</isinst>
 <text>30PSL0002_ALARM_TP4</text>
 <AT_type>TP</AT_type>
@@ -186,7 +186,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>16</id>
-<AT_position>45,8</AT_position>
+<AT_position>63,8</AT_position>
 <isinst>TRUE</isinst>
 <text>30PSL0002_ALARM_OR6</text>
 <AT_type>OR</AT_type>
@@ -200,7 +200,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>55,8</position>
+<position>73,8</position>
 <text>15CONTROL_FILTER_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -212,7 +212,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>55,8</position>
+<position>73,8</position>
 <text>30PSL0002.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>

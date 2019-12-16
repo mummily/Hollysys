@@ -39,7 +39,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>3</id>
-<AT_position>15,2</AT_position>
+<AT_position>18,2</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0011_NOT0</text>
 <AT_type>NOT</AT_type>
@@ -51,7 +51,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>4</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0011_NOT1</text>
 <AT_type>NOT</AT_type>
@@ -63,7 +63,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>5</id>
-<position>25,2</position>
+<position>28,2</position>
 <text>15XV0037_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -75,7 +75,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>6</id>
-<position>25,8</position>
+<position>28,8</position>
 <text>15XV0036_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

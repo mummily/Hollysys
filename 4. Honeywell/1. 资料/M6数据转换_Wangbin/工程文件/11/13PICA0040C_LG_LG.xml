@@ -49,7 +49,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>14,4</AT_position>
+<AT_position>17,4</AT_position>
 <text>13PICA0040C_LG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -58,7 +58,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,10</AT_position>
 <text>13PICA0040C_LG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -67,7 +67,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>14,16</AT_position>
+<AT_position>17,16</AT_position>
 <text>13PICA0040C_LG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -76,7 +76,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>34,10</AT_position>
+<AT_position>47,10</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -85,7 +85,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>24,10</AT_position>
+<AT_position>32,11</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -94,7 +94,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>9</id>
-<AT_position>15,2</AT_position>
+<AT_position>18,2</AT_position>
 <isinst>TRUE</isinst>
 <text>13PICA0040C_LG_GE0</text>
 <AT_type>GE</AT_type>
@@ -107,7 +107,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>10</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>13PICA0040C_LG_GE1</text>
 <AT_type>GE</AT_type>
@@ -120,7 +120,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>11</id>
-<AT_position>15,14</AT_position>
+<AT_position>18,14</AT_position>
 <isinst>TRUE</isinst>
 <text>13PICA0040C_LG_GE2</text>
 <AT_type>GE</AT_type>
@@ -133,7 +133,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>12</id>
-<AT_position>25,8</AT_position>
+<AT_position>33,8</AT_position>
 <isinst>TRUE</isinst>
 <text>13PICA0040C_LG_QOR23</text>
 <AT_type>QOR2</AT_type>
@@ -148,7 +148,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>13</id>
-<AT_position>35,8</AT_position>
+<AT_position>48,8</AT_position>
 <isinst>TRUE</isinst>
 <text>13PICA0040C_LG_TP4</text>
 <AT_type>TP</AT_type>
@@ -162,7 +162,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>45,4</position>
+<position>58,8</position>
 <text>13PICA0040C.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -174,7 +174,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>45,6</position>
+<position>58,8</position>
 <text>13PICA0040C.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -186,7 +186,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>45,8</position>
+<position>58,8</position>
 <text>13PICA0040C.SP</text>
 <Comment>?????</Comment>
 <negate>false</negate>

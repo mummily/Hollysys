@@ -59,7 +59,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>24,13</AT_position>
+<AT_position>32,13</AT_position>
 <text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -68,7 +68,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>9</id>
-<AT_position>14,22</AT_position>
+<AT_position>17,22</AT_position>
 <text>T#10s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -77,7 +77,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>44,11</AT_position>
+<AT_position>62,12</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -86,7 +86,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>14,13</AT_position>
+<AT_position>17,14</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -95,7 +95,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>34,18</AT_position>
+<AT_position>47,19</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -104,7 +104,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>14</id>
-<AT_position>45,9</AT_position>
+<AT_position>63,9</AT_position>
 <isinst>TRUE</isinst>
 <text>16US0007_OR4</text>
 <AT_type>OR</AT_type>
@@ -118,7 +118,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>10</id>
-<AT_position>15,11</AT_position>
+<AT_position>18,11</AT_position>
 <isinst>TRUE</isinst>
 <text>16US0007_AND0</text>
 <AT_type>AND</AT_type>
@@ -132,7 +132,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>12</id>
-<AT_position>25,11</AT_position>
+<AT_position>33,11</AT_position>
 <isinst>TRUE</isinst>
 <text>16US0007_TON2</text>
 <AT_type>TON</AT_type>
@@ -146,7 +146,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>13</id>
-<AT_position>35,16</AT_position>
+<AT_position>48,16</AT_position>
 <isinst>TRUE</isinst>
 <text>16US0007_AND3</text>
 <AT_type>AND</AT_type>
@@ -160,7 +160,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>11</id>
-<AT_position>15,20</AT_position>
+<AT_position>18,20</AT_position>
 <isinst>TRUE</isinst>
 <text>16US0007_TP1</text>
 <AT_type>TP</AT_type>
@@ -174,7 +174,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>55,9</position>
+<position>73,9</position>
 <text>16XV0001_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -186,7 +186,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>55,2</position>
+<position>73,2</position>
 <text>P3601A_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -198,7 +198,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>55,2</position>
+<position>73,2</position>
 <text>P3601B_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

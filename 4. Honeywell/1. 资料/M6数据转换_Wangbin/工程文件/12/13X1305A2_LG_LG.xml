@@ -57,7 +57,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>24,10</AT_position>
+<AT_position>32,11</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -66,7 +66,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>6</id>
-<AT_position>15,14</AT_position>
+<AT_position>18,14</AT_position>
 <isinst>TRUE</isinst>
 <text>13X1305A2_LG_OR0</text>
 <AT_type>OR</AT_type>
@@ -80,7 +80,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>7</id>
-<AT_position>25,8</AT_position>
+<AT_position>33,8</AT_position>
 <isinst>TRUE</isinst>
 <text>13X1305A2_LG_OR1</text>
 <AT_type>OR</AT_type>
@@ -94,7 +94,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>35,8</position>
+<position>43,8</position>
 <text>13X1305A2.I0</text>
 <Comment>?????</Comment>
 <negate>false</negate>

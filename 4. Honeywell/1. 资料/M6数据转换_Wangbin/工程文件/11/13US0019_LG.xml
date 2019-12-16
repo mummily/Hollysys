@@ -30,7 +30,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>2</id>
-<AT_position>15,2</AT_position>
+<AT_position>18,2</AT_position>
 <isinst>TRUE</isinst>
 <text>13US0019_NOT0</text>
 <AT_type>NOT</AT_type>
@@ -42,7 +42,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>3</id>
-<position>25,2</position>
+<position>28,2</position>
 <text>13XV0037.I0</text>
 <Comment>?????</Comment>
 <negate>false</negate>

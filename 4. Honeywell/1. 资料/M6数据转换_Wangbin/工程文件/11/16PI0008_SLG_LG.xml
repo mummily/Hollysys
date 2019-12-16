@@ -129,7 +129,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>13</id>
-<AT_position>14,28</AT_position>
+<AT_position>17,29</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -138,7 +138,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>14</id>
-<AT_position>14,46</AT_position>
+<AT_position>17,47</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -147,7 +147,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>15</id>
-<AT_position>14,64</AT_position>
+<AT_position>17,65</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -156,7 +156,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>16</id>
-<AT_position>15,26</AT_position>
+<AT_position>18,26</AT_position>
 <isinst>TRUE</isinst>
 <text>16PI0008_SLG_QOR20</text>
 <AT_type>QOR2</AT_type>
@@ -171,7 +171,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>17</id>
-<AT_position>15,44</AT_position>
+<AT_position>18,44</AT_position>
 <isinst>TRUE</isinst>
 <text>16PI0008_SLG_QOR21</text>
 <AT_type>QOR2</AT_type>
@@ -186,7 +186,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>18</id>
-<AT_position>15,62</AT_position>
+<AT_position>18,62</AT_position>
 <isinst>TRUE</isinst>
 <text>16PI0008_SLG_QOR22</text>
 <AT_type>QOR2</AT_type>
@@ -201,7 +201,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>25,2</position>
+<position>28,2</position>
 <text>16PI0008_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -213,7 +213,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>25,8</position>
+<position>28,8</position>
 <text>16PI0008_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -225,7 +225,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>21</id>
-<position>25,14</position>
+<position>28,14</position>
 <text>16PI0008_SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -237,7 +237,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>22</id>
-<position>25,26</position>
+<position>28,26</position>
 <text>16PI0008_SLG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -249,7 +249,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>23</id>
-<position>25,44</position>
+<position>28,44</position>
 <text>16PI0008_SLG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -261,7 +261,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>24</id>
-<position>25,62</position>
+<position>28,62</position>
 <text>16PI0008_SLG_FL12</text>
 <Comment>?????</Comment>
 <negate>false</negate>

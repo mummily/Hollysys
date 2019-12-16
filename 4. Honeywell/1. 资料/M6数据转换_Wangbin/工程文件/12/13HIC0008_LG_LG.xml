@@ -30,7 +30,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>2</id>
-<position>20,4</position>
+<position>20,2</position>
 <text>13HIC0008.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -42,7 +42,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>3</id>
-<position>20,6</position>
+<position>20,2</position>
 <text>13HIC0008.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -54,7 +54,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>4</id>
-<position>20,8</position>
+<position>20,2</position>
 <text>13HIC0008.OP</text>
 <Comment>?????</Comment>
 <negate>false</negate>

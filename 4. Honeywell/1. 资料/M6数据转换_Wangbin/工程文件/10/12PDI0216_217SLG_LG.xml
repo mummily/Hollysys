@@ -39,7 +39,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,10</AT_position>
 <text>12PDI0216_217SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -48,7 +48,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,10</AT_position>
 <text>12PDI0216_217SLG_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -57,7 +57,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>14,16</AT_position>
+<AT_position>17,16</AT_position>
 <text>12PDI0216_217SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -66,7 +66,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>14,16</AT_position>
+<AT_position>17,16</AT_position>
 <text>12PDI0216_217SLG_NN4</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -75,7 +75,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>7</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>12PDI0216_217SLG_GE0</text>
 <AT_type>GE</AT_type>
@@ -88,7 +88,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>8</id>
-<AT_position>15,14</AT_position>
+<AT_position>18,14</AT_position>
 <isinst>TRUE</isinst>
 <text>12PDI0216_217SLG_LE1</text>
 <AT_type>LE</AT_type>
@@ -101,7 +101,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>25,2</position>
+<position>28,2</position>
 <text>12PDI0216_217SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -113,7 +113,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>25,2</position>
+<position>28,2</position>
 <text>12PDI0216_217SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -125,7 +125,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>25,8</position>
+<position>28,8</position>
 <text>12PDI0216_217SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -137,7 +137,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>25,8</position>
+<position>28,8</position>
 <text>12PDI0216_217SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -149,7 +149,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>25,2</position>
+<position>28,2</position>
 <text>12PDI0216_217SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -161,7 +161,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>25,8</position>
+<position>28,8</position>
 <text>12PDI0216_217SLG_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -173,7 +173,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>25,8</position>
+<position>28,8</position>
 <text>12PDI0216_217SLG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -185,7 +185,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>25,14</position>
+<position>28,14</position>
 <text>12PDI0216_217SLG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>

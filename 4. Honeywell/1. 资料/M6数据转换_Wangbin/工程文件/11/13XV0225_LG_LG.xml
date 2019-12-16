@@ -51,7 +51,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>24,7</AT_position>
+<AT_position>32,7</AT_position>
 <text>T#60s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -60,7 +60,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>34,7</AT_position>
+<AT_position>47,7</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -69,7 +69,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>24,16</AT_position>
+<AT_position>32,16</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -78,7 +78,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>14,7</AT_position>
+<AT_position>17,8</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -87,7 +87,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>8</id>
-<AT_position>15,5</AT_position>
+<AT_position>18,5</AT_position>
 <isinst>TRUE</isinst>
 <text>13XV0225_LG_AND0</text>
 <AT_type>AND</AT_type>
@@ -101,7 +101,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>10</id>
-<AT_position>25,5</AT_position>
+<AT_position>33,5</AT_position>
 <isinst>TRUE</isinst>
 <text>13XV0225_LG_TON2</text>
 <AT_type>TON</AT_type>
@@ -115,7 +115,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>12</id>
-<AT_position>35,5</AT_position>
+<AT_position>48,5</AT_position>
 <isinst>TRUE</isinst>
 <text>13XV0225_LG_TP4</text>
 <AT_type>TP</AT_type>
@@ -129,7 +129,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>9</id>
-<AT_position>15,14</AT_position>
+<AT_position>18,14</AT_position>
 <isinst>TRUE</isinst>
 <text>13XV0225_LG_NOT1</text>
 <AT_type>NOT</AT_type>
@@ -141,7 +141,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>11</id>
-<AT_position>25,14</AT_position>
+<AT_position>33,14</AT_position>
 <isinst>TRUE</isinst>
 <text>13XV0225_LG_TP3</text>
 <AT_type>TP</AT_type>
@@ -155,7 +155,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>13</id>
-<AT_position>35,8</AT_position>
+<AT_position>48,8</AT_position>
 <isinst>TRUE</isinst>
 <text>13XV0225_LG_OR5</text>
 <AT_type>OR</AT_type>
@@ -169,7 +169,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>45,5</position>
+<position>58,5</position>
 <text>13XV0225.I1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -181,7 +181,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>45,8</position>
+<position>58,8</position>
 <text>13XV0225.I0</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -193,7 +193,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>45,14</position>
+<position>58,14</position>
 <text>13XV0225.P1</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -120,7 +120,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>12</id>
-<AT_position>14,19</AT_position>
+<AT_position>17,20</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -129,7 +129,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>13</id>
-<AT_position>14,31</AT_position>
+<AT_position>17,32</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -138,7 +138,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>14</id>
-<AT_position>24,36</AT_position>
+<AT_position>32,37</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -147,7 +147,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>15</id>
-<AT_position>24,58</AT_position>
+<AT_position>32,59</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -156,7 +156,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>16</id>
-<AT_position>15,17</AT_position>
+<AT_position>18,17</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0104_AND0</text>
 <AT_type>AND</AT_type>
@@ -170,7 +170,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>17</id>
-<AT_position>15,29</AT_position>
+<AT_position>18,29</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0104_AND1</text>
 <AT_type>AND</AT_type>
@@ -184,7 +184,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>19</id>
-<AT_position>25,10</AT_position>
+<AT_position>33,10</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0104_OR3</text>
 <AT_type>OR</AT_type>
@@ -198,7 +198,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>20</id>
-<AT_position>25,34</AT_position>
+<AT_position>33,34</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0104_OR4</text>
 <AT_type>OR</AT_type>
@@ -212,7 +212,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>18</id>
-<AT_position>15,50</AT_position>
+<AT_position>18,50</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0104_OR2</text>
 <AT_type>OR</AT_type>
@@ -226,7 +226,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>22</id>
-<AT_position>35,33</AT_position>
+<AT_position>48,33</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0104_OR6</text>
 <AT_type>OR</AT_type>
@@ -240,7 +240,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>21</id>
-<AT_position>25,56</AT_position>
+<AT_position>33,56</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0104_AND5</text>
 <AT_type>AND</AT_type>
@@ -254,7 +254,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>23</id>
-<position>45,33</position>
+<position>58,33</position>
 <text>11US0104_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

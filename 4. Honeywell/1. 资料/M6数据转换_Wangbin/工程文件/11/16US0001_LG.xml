@@ -31,7 +31,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>24,4</AT_position>
+<AT_position>32,4</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -40,7 +40,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>3</id>
-<AT_position>15,2</AT_position>
+<AT_position>18,2</AT_position>
 <isinst>TRUE</isinst>
 <text>16US0001_NOT0</text>
 <AT_type>NOT</AT_type>
@@ -52,7 +52,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>4</id>
-<AT_position>25,2</AT_position>
+<AT_position>33,2</AT_position>
 <isinst>TRUE</isinst>
 <text>16US0001_TP1</text>
 <AT_type>TP</AT_type>
@@ -66,7 +66,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>5</id>
-<position>35,2</position>
+<position>43,2</position>
 <text>16XV0010A_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -78,7 +78,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>6</id>
-<position>35,2</position>
+<position>43,2</position>
 <text>16XV0010B_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -90,7 +90,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>7</id>
-<position>35,2</position>
+<position>43,2</position>
 <text>16XV0017_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -102,7 +102,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>35,2</position>
+<position>43,2</position>
 <text>16FIC0016_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -114,7 +114,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>35,2</position>
+<position>43,2</position>
 <text>16XV0001_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -126,7 +126,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>35,4</position>
+<position>43,2</position>
 <text>16FICA0012.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -138,7 +138,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>35,6</position>
+<position>43,2</position>
 <text>16FICA0012.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -150,7 +150,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>35,8</position>
+<position>43,2</position>
 <text>16FICA0012.OP</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -162,7 +162,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>35,10</position>
+<position>43,2</position>
 <text>16FICSA0015.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -174,7 +174,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>35,12</position>
+<position>43,2</position>
 <text>16FICSA0015.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -186,7 +186,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>35,14</position>
+<position>43,2</position>
 <text>16FICSA0015.OP</text>
 <Comment>?????</Comment>
 <negate>false</negate>

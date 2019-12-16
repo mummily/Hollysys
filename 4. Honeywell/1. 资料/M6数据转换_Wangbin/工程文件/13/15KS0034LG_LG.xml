@@ -81,7 +81,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>14,4</AT_position>
+<AT_position>17,4</AT_position>
 <text>T#30s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -90,7 +90,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,10</AT_position>
 <text>T#10s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -99,7 +99,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>9</id>
-<AT_position>14,16</AT_position>
+<AT_position>17,16</AT_position>
 <text>T#10s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -108,7 +108,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>10</id>
-<AT_position>14,22</AT_position>
+<AT_position>17,22</AT_position>
 <text>T#30s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -117,7 +117,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>11</id>
-<AT_position>14,28</AT_position>
+<AT_position>17,28</AT_position>
 <text>T#10s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -126,7 +126,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>12</id>
-<AT_position>14,34</AT_position>
+<AT_position>17,34</AT_position>
 <text>T#10s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -135,7 +135,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>13</id>
-<AT_position>15,2</AT_position>
+<AT_position>18,2</AT_position>
 <isinst>TRUE</isinst>
 <text>15KS0034LG_TON0</text>
 <AT_type>TON</AT_type>
@@ -149,7 +149,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>14</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15KS0034LG_TON1</text>
 <AT_type>TON</AT_type>
@@ -163,7 +163,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>15</id>
-<AT_position>15,14</AT_position>
+<AT_position>18,14</AT_position>
 <isinst>TRUE</isinst>
 <text>15KS0034LG_TON2</text>
 <AT_type>TON</AT_type>
@@ -177,7 +177,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>16</id>
-<AT_position>15,20</AT_position>
+<AT_position>18,20</AT_position>
 <isinst>TRUE</isinst>
 <text>15KS0034LG_TON3</text>
 <AT_type>TON</AT_type>
@@ -191,7 +191,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>17</id>
-<AT_position>15,26</AT_position>
+<AT_position>18,26</AT_position>
 <isinst>TRUE</isinst>
 <text>15KS0034LG_TON4</text>
 <AT_type>TON</AT_type>
@@ -205,7 +205,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>18</id>
-<AT_position>15,32</AT_position>
+<AT_position>18,32</AT_position>
 <isinst>TRUE</isinst>
 <text>15KS0034LG_TON5</text>
 <AT_type>TON</AT_type>
@@ -219,7 +219,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>25,2</position>
+<position>28,2</position>
 <text>15KS0034LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -231,7 +231,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>25,8</position>
+<position>28,8</position>
 <text>15KS0034LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -243,7 +243,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>21</id>
-<position>25,14</position>
+<position>28,14</position>
 <text>15KS0034LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -255,7 +255,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>22</id>
-<position>25,20</position>
+<position>28,20</position>
 <text>15KS0034LG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -267,7 +267,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>23</id>
-<position>25,26</position>
+<position>28,26</position>
 <text>15KS0034LG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -279,7 +279,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>24</id>
-<position>25,32</position>
+<position>28,32</position>
 <text>15KS0034LG_FL12</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -57,7 +57,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>14,16</AT_position>
+<AT_position>17,16</AT_position>
 <text>16PAL0008_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -66,7 +66,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>6</id>
-<AT_position>15,14</AT_position>
+<AT_position>18,14</AT_position>
 <isinst>TRUE</isinst>
 <text>16PAL0008_EQ0</text>
 <AT_type>EQ</AT_type>
@@ -79,7 +79,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>7</id>
-<AT_position>25,14</AT_position>
+<AT_position>33,14</AT_position>
 <isinst>TRUE</isinst>
 <text>16PAL0008_AND1</text>
 <AT_type>AND</AT_type>
@@ -93,7 +93,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>35,2</position>
+<position>43,2</position>
 <text>16PALL0008_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

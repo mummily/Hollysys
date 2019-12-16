@@ -31,7 +31,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>14,4</AT_position>
+<AT_position>17,4</AT_position>
 <text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -40,7 +40,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>3</id>
-<AT_position>15,2</AT_position>
+<AT_position>18,2</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0108_TON0</text>
 <AT_type>TON</AT_type>
@@ -54,7 +54,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>4</id>
-<position>25,2</position>
+<position>28,2</position>
 <text>K1102A.I0</text>
 <Comment>?????</Comment>
 <negate>false</negate>

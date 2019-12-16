@@ -40,7 +40,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>24,7</AT_position>
+<AT_position>32,7</AT_position>
 <text>T#3s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -49,7 +49,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>14,7</AT_position>
+<AT_position>17,8</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -58,7 +58,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>5</id>
-<AT_position>15,5</AT_position>
+<AT_position>18,5</AT_position>
 <isinst>TRUE</isinst>
 <text>13TIC0002_CAS_LG_AND0</text>
 <AT_type>AND</AT_type>
@@ -72,7 +72,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>6</id>
-<AT_position>25,5</AT_position>
+<AT_position>33,5</AT_position>
 <isinst>TRUE</isinst>
 <text>13TIC0002_CAS_LG_TP1</text>
 <AT_type>TP</AT_type>
@@ -86,7 +86,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>7</id>
-<position>35,4</position>
+<position>43,5</position>
 <text>13TY0002_4.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -98,7 +98,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>35,6</position>
+<position>43,5</position>
 <text>13TY0002_4.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -110,7 +110,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>35,8</position>
+<position>43,5</position>
 <text>13TIC0002A.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -122,7 +122,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>35,10</position>
+<position>43,5</position>
 <text>13TIC0002A.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -134,7 +134,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>35,12</position>
+<position>43,5</position>
 <text>13TIC0002A.SP</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -146,7 +146,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>35,14</position>
+<position>43,5</position>
 <text>13TIC0002B.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -158,7 +158,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>35,16</position>
+<position>43,5</position>
 <text>13TIC0002B.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -170,7 +170,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>35,18</position>
+<position>43,5</position>
 <text>13TIC0002B.SP</text>
 <Comment>?????</Comment>
 <negate>false</negate>

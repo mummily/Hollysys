@@ -85,7 +85,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>10</id>
-<AT_position>14,40</AT_position>
+<AT_position>17,40</AT_position>
 <text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -94,7 +94,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>14,28</AT_position>
+<AT_position>17,29</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -103,7 +103,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>9</id>
-<AT_position>24,34</AT_position>
+<AT_position>32,35</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -112,7 +112,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>11</id>
-<AT_position>15,26</AT_position>
+<AT_position>18,26</AT_position>
 <isinst>TRUE</isinst>
 <text>13PI0008_SLG_QOR20</text>
 <AT_type>QOR2</AT_type>
@@ -127,7 +127,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>12</id>
-<AT_position>15,38</AT_position>
+<AT_position>18,38</AT_position>
 <isinst>TRUE</isinst>
 <text>13PI0008_SLG_TON1</text>
 <AT_type>TON</AT_type>
@@ -141,7 +141,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>13</id>
-<AT_position>25,32</AT_position>
+<AT_position>33,32</AT_position>
 <isinst>TRUE</isinst>
 <text>13PI0008_SLG_AND2</text>
 <AT_type>AND</AT_type>
@@ -155,7 +155,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>35,2</position>
+<position>43,2</position>
 <text>13PI0008_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -167,7 +167,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>35,8</position>
+<position>43,8</position>
 <text>13PI0008_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -179,7 +179,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>35,14</position>
+<position>43,14</position>
 <text>13PI0008_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -191,7 +191,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>35,26</position>
+<position>43,26</position>
 <text>13PAL0008.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>

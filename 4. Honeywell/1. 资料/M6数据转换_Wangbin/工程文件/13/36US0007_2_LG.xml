@@ -33,7 +33,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>2</id>
-<AT_position>14,4</AT_position>
+<AT_position>17,4</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -42,7 +42,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>3</id>
-<AT_position>24,4</AT_position>
+<AT_position>32,4</AT_position>
 <text>T#10s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -51,7 +51,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>34,4</AT_position>
+<AT_position>47,4</AT_position>
 <text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -60,7 +60,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>5</id>
-<AT_position>15,2</AT_position>
+<AT_position>18,2</AT_position>
 <isinst>TRUE</isinst>
 <text>36US0007_2_TP0</text>
 <AT_type>TP</AT_type>
@@ -74,7 +74,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>6</id>
-<AT_position>25,2</AT_position>
+<AT_position>33,2</AT_position>
 <isinst>TRUE</isinst>
 <text>36US0007_2_TP1</text>
 <AT_type>TP</AT_type>
@@ -88,7 +88,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>7</id>
-<AT_position>35,2</AT_position>
+<AT_position>48,2</AT_position>
 <isinst>TRUE</isinst>
 <text>36US0007_2_TON2</text>
 <AT_type>TON</AT_type>
@@ -102,7 +102,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>45,2</position>
+<position>58,2</position>
 <text>36FIC0001_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -114,7 +114,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>45,2</position>
+<position>58,2</position>
 <text>36FIC0002_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -126,7 +126,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>45,2</position>
+<position>58,2</position>
 <text>P3603_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -138,7 +138,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>45,2</position>
+<position>58,2</position>
 <text>36XV0001_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -150,7 +150,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>45,2</position>
+<position>58,2</position>
 <text>36XV0002_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -162,7 +162,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>45,2</position>
+<position>58,2</position>
 <text>36HS2US07.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>

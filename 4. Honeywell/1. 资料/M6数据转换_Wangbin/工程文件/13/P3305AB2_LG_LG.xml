@@ -83,7 +83,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>19</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,10</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -92,7 +92,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>20</id>
-<AT_position>34,10</AT_position>
+<AT_position>47,10</AT_position>
 <text>T#15s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -101,7 +101,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>21</id>
-<AT_position>34,10</AT_position>
+<AT_position>47,10</AT_position>
 <text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -110,7 +110,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>22</id>
-<AT_position>44,10</AT_position>
+<AT_position>62,10</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -119,7 +119,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>23</id>
-<AT_position>14,16</AT_position>
+<AT_position>17,16</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -128,7 +128,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>24</id>
-<AT_position>34,28</AT_position>
+<AT_position>47,28</AT_position>
 <text>T#15s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -137,7 +137,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>25</id>
-<AT_position>34,28</AT_position>
+<AT_position>47,28</AT_position>
 <text>T#5s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -146,7 +146,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>26</id>
-<AT_position>44,28</AT_position>
+<AT_position>62,28</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -155,7 +155,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,10</AT_position>
 <text>P3305AB2_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -164,7 +164,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>14,4</AT_position>
+<AT_position>17,4</AT_position>
 <text>P3305AB2_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -173,7 +173,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>9</id>
-<AT_position>14,4</AT_position>
+<AT_position>17,5</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -182,7 +182,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>10</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,11</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -191,7 +191,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>11</id>
-<AT_position>24,10</AT_position>
+<AT_position>32,11</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -200,7 +200,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>12</id>
-<AT_position>24,10</AT_position>
+<AT_position>32,11</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -209,7 +209,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>13</id>
-<AT_position>14,16</AT_position>
+<AT_position>17,16</AT_position>
 <text>P3305AB2_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -218,7 +218,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>14</id>
-<AT_position>14,22</AT_position>
+<AT_position>17,22</AT_position>
 <text>P3305AB2_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -227,7 +227,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>15</id>
-<AT_position>14,22</AT_position>
+<AT_position>17,23</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -236,7 +236,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>16</id>
-<AT_position>14,28</AT_position>
+<AT_position>17,29</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -245,7 +245,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>17</id>
-<AT_position>24,28</AT_position>
+<AT_position>32,29</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -254,7 +254,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>18</id>
-<AT_position>24,28</AT_position>
+<AT_position>32,29</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -263,7 +263,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>27</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_TP0</text>
 <AT_type>TP</AT_type>
@@ -277,7 +277,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>28</id>
-<AT_position>15,2</AT_position>
+<AT_position>18,2</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_AND1</text>
 <AT_type>AND</AT_type>
@@ -291,7 +291,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>29</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_AND2</text>
 <AT_type>AND</AT_type>
@@ -305,7 +305,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>33</id>
-<AT_position>25,8</AT_position>
+<AT_position>33,8</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_AND6</text>
 <AT_type>AND</AT_type>
@@ -319,7 +319,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>37</id>
-<AT_position>35,8</AT_position>
+<AT_position>48,8</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_TON10</text>
 <AT_type>TON</AT_type>
@@ -333,7 +333,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>34</id>
-<AT_position>25,8</AT_position>
+<AT_position>33,8</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_AND7</text>
 <AT_type>AND</AT_type>
@@ -347,7 +347,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>38</id>
-<AT_position>35,8</AT_position>
+<AT_position>48,8</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_TON11</text>
 <AT_type>TON</AT_type>
@@ -361,7 +361,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>41</id>
-<AT_position>45,8</AT_position>
+<AT_position>63,8</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_TP14</text>
 <AT_type>TP</AT_type>
@@ -375,7 +375,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>30</id>
-<AT_position>15,14</AT_position>
+<AT_position>18,14</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_TP3</text>
 <AT_type>TP</AT_type>
@@ -389,7 +389,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>31</id>
-<AT_position>15,20</AT_position>
+<AT_position>18,20</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_AND4</text>
 <AT_type>AND</AT_type>
@@ -403,7 +403,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>32</id>
-<AT_position>15,26</AT_position>
+<AT_position>18,26</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_AND5</text>
 <AT_type>AND</AT_type>
@@ -417,7 +417,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>35</id>
-<AT_position>25,26</AT_position>
+<AT_position>33,26</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_AND8</text>
 <AT_type>AND</AT_type>
@@ -431,7 +431,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>39</id>
-<AT_position>35,26</AT_position>
+<AT_position>48,26</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_TON12</text>
 <AT_type>TON</AT_type>
@@ -445,7 +445,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>36</id>
-<AT_position>25,26</AT_position>
+<AT_position>33,26</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_AND9</text>
 <AT_type>AND</AT_type>
@@ -459,7 +459,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>40</id>
-<AT_position>35,26</AT_position>
+<AT_position>48,26</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_TON13</text>
 <AT_type>TON</AT_type>
@@ -473,7 +473,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>42</id>
-<AT_position>45,26</AT_position>
+<AT_position>63,26</AT_position>
 <isinst>TRUE</isinst>
 <text>P3305AB2_LG_TP15</text>
 <AT_type>TP</AT_type>
@@ -487,7 +487,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>43</id>
-<position>55,8</position>
+<position>73,8</position>
 <text>P3305A2.I1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -499,7 +499,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>44</id>
-<position>55,2</position>
+<position>73,2</position>
 <text>P3305A_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -511,7 +511,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>45</id>
-<position>55,8</position>
+<position>73,8</position>
 <text>P3305A2.I0</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -523,7 +523,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>46</id>
-<position>55,14</position>
+<position>73,14</position>
 <text>P3305B2.I1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -535,7 +535,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>47</id>
-<position>55,20</position>
+<position>73,20</position>
 <text>P3305B_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -547,7 +547,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>48</id>
-<position>55,26</position>
+<position>73,26</position>
 <text>P3305B2.I0</text>
 <Comment>?????</Comment>
 <negate>false</negate>

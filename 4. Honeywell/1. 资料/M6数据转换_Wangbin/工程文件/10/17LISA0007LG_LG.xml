@@ -75,7 +75,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,11</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -84,7 +84,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>14,28</AT_position>
+<AT_position>17,29</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -93,7 +93,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>9</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>17LISA0007LG_QOR20</text>
 <AT_type>QOR2</AT_type>
@@ -108,7 +108,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>10</id>
-<AT_position>15,26</AT_position>
+<AT_position>18,26</AT_position>
 <isinst>TRUE</isinst>
 <text>17LISA0007LG_QOR21</text>
 <AT_type>QOR2</AT_type>
@@ -123,7 +123,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>25,8</position>
+<position>28,8</position>
 <text>17LISA0007LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -135,7 +135,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>25,26</position>
+<position>28,26</position>
 <text>17LISA0007LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -96,7 +96,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>14</id>
-<AT_position>44,31</AT_position>
+<AT_position>62,31</AT_position>
 <text>T#1s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -105,7 +105,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>15</id>
-<AT_position>54,31</AT_position>
+<AT_position>77,31</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -114,7 +114,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>16</id>
-<AT_position>54,31</AT_position>
+<AT_position>77,31</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -123,7 +123,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>9</id>
-<AT_position>14,7</AT_position>
+<AT_position>17,8</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -132,7 +132,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>10</id>
-<AT_position>14,19</AT_position>
+<AT_position>17,20</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -141,7 +141,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>11</id>
-<AT_position>14,31</AT_position>
+<AT_position>17,32</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -150,7 +150,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>12</id>
-<AT_position>14,43</AT_position>
+<AT_position>17,44</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -159,7 +159,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>13</id>
-<AT_position>34,31</AT_position>
+<AT_position>47,32</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -168,7 +168,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>17</id>
-<AT_position>15,5</AT_position>
+<AT_position>18,5</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0102_AND0</text>
 <AT_type>AND</AT_type>
@@ -182,7 +182,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>18</id>
-<AT_position>15,17</AT_position>
+<AT_position>18,17</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0102_AND1</text>
 <AT_type>AND</AT_type>
@@ -196,7 +196,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>19</id>
-<AT_position>15,29</AT_position>
+<AT_position>18,29</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0102_AND2</text>
 <AT_type>AND</AT_type>
@@ -210,7 +210,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>21</id>
-<AT_position>25,17</AT_position>
+<AT_position>33,17</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0102_OR4</text>
 <AT_type>OR</AT_type>
@@ -224,7 +224,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>23</id>
-<AT_position>45,29</AT_position>
+<AT_position>63,29</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0102_TON6</text>
 <AT_type>TON</AT_type>
@@ -238,7 +238,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>20</id>
-<AT_position>15,41</AT_position>
+<AT_position>18,41</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0102_AND3</text>
 <AT_type>AND</AT_type>
@@ -252,7 +252,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>22</id>
-<AT_position>35,29</AT_position>
+<AT_position>48,29</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0102_OR5</text>
 <AT_type>OR</AT_type>
@@ -266,7 +266,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>24</id>
-<AT_position>55,29</AT_position>
+<AT_position>78,29</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0102_TP7</text>
 <AT_type>TP</AT_type>
@@ -280,7 +280,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>25</id>
-<AT_position>55,29</AT_position>
+<AT_position>78,29</AT_position>
 <isinst>TRUE</isinst>
 <text>11US0102_TP8</text>
 <AT_type>TP</AT_type>
@@ -294,7 +294,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>26</id>
-<position>65,29</position>
+<position>88,29</position>
 <text>X1101A.I0</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -42,7 +42,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>3</id>
-<position>20,4</position>
+<position>20,2</position>
 <text>17PICA0026A.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -54,7 +54,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>4</id>
-<position>20,6</position>
+<position>20,2</position>
 <text>17PICA0026A.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -66,7 +66,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>5</id>
-<position>20,8</position>
+<position>20,2</position>
 <text>17PICA0026A.OP</text>
 <Comment>?????</Comment>
 <negate>false</negate>

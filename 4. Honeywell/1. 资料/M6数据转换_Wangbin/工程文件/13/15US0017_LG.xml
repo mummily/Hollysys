@@ -60,7 +60,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>14,4</AT_position>
+<AT_position>17,4</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -69,7 +69,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,10</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -78,7 +78,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>8</id>
-<AT_position>14,16</AT_position>
+<AT_position>17,16</AT_position>
 <text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -87,7 +87,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>14,7</AT_position>
+<AT_position>17,8</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -96,7 +96,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>9</id>
-<AT_position>15,2</AT_position>
+<AT_position>18,2</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0017_TP0</text>
 <AT_type>TP</AT_type>
@@ -110,7 +110,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>10</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0017_TP1</text>
 <AT_type>TP</AT_type>
@@ -124,7 +124,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>11</id>
-<AT_position>15,14</AT_position>
+<AT_position>18,14</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0017_TP2</text>
 <AT_type>TP</AT_type>
@@ -138,7 +138,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>12</id>
-<AT_position>15,20</AT_position>
+<AT_position>18,20</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0017_NOT3</text>
 <AT_type>NOT</AT_type>
@@ -150,7 +150,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>13</id>
-<AT_position>15,5</AT_position>
+<AT_position>18,5</AT_position>
 <isinst>TRUE</isinst>
 <text>15US0017_FLIPFLOP4</text>
 <AT_type>FLIPFLOP</AT_type>
@@ -164,7 +164,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>25,2</position>
+<position>28,2</position>
 <text>I1IA.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -176,7 +176,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>25,8</position>
+<position>28,8</position>
 <text>I1IB.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -188,7 +188,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>25,14</position>
+<position>28,14</position>
 <text>I1IC.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -200,7 +200,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>25,20</position>
+<position>28,20</position>
 <text>I1ID.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -212,7 +212,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>25,20</position>
+<position>28,20</position>
 <text>I1IE.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -224,7 +224,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>25,2</position>
+<position>28,2</position>
 <text>15HS1US17.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -236,7 +236,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>25,8</position>
+<position>28,8</position>
 <text>15HS2US17.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -248,7 +248,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>21</id>
-<position>25,14</position>
+<position>28,14</position>
 <text>15HS3US17.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -260,7 +260,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>22</id>
-<position>25,5</position>
+<position>28,5</position>
 <text>15FILTER_START.DV</text>
 <Comment>?????</Comment>
 <negate>false</negate>

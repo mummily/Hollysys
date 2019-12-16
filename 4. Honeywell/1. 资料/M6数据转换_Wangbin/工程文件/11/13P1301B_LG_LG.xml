@@ -49,7 +49,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>7</id>
-<AT_position>24,16</AT_position>
+<AT_position>32,16</AT_position>
 <text>T#150s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -58,7 +58,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>14,7</AT_position>
+<AT_position>17,8</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -67,7 +67,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>5</id>
-<AT_position>24,7</AT_position>
+<AT_position>32,7</AT_position>
 <text>13P1301B_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -76,7 +76,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>24,7</AT_position>
+<AT_position>32,8</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -85,7 +85,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>8</id>
-<AT_position>15,5</AT_position>
+<AT_position>18,5</AT_position>
 <isinst>TRUE</isinst>
 <text>13P1301B_LG_AND0</text>
 <AT_type>AND</AT_type>
@@ -99,7 +99,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>10</id>
-<AT_position>25,5</AT_position>
+<AT_position>33,5</AT_position>
 <isinst>TRUE</isinst>
 <text>13P1301B_LG_AND2</text>
 <AT_type>AND</AT_type>
@@ -113,7 +113,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>9</id>
-<AT_position>15,14</AT_position>
+<AT_position>18,14</AT_position>
 <isinst>TRUE</isinst>
 <text>13P1301B_LG_NOT1</text>
 <AT_type>NOT</AT_type>
@@ -125,7 +125,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>11</id>
-<AT_position>25,14</AT_position>
+<AT_position>33,14</AT_position>
 <isinst>TRUE</isinst>
 <text>13P1301B_LG_TON3</text>
 <AT_type>TON</AT_type>
@@ -139,7 +139,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>35,14</position>
+<position>43,14</position>
 <text>13P1301B.I0</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -151,7 +151,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>35,5</position>
+<position>43,5</position>
 <text>13P1301B.P1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -163,7 +163,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>35,5</position>
+<position>43,5</position>
 <text>13P1301B.I1</text>
 <Comment>?????</Comment>
 <negate>false</negate>

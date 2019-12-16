@@ -111,7 +111,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>11</id>
-<AT_position>14,4</AT_position>
+<AT_position>17,4</AT_position>
 <text>13HY1300_7LG2_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -120,7 +120,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>12</id>
-<AT_position>14,10</AT_position>
+<AT_position>17,10</AT_position>
 <text>13HY1300_7LG2_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -129,7 +129,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>13</id>
-<AT_position>14,22</AT_position>
+<AT_position>17,22</AT_position>
 <text>13HY1300_7LG2_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -138,7 +138,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>14</id>
-<AT_position>14,28</AT_position>
+<AT_position>17,28</AT_position>
 <text>13HY1300_7LG2_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -147,7 +147,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>15</id>
-<AT_position>14,40</AT_position>
+<AT_position>17,40</AT_position>
 <text>13HY1300_7LG2_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -156,7 +156,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>18</id>
-<AT_position>14,52</AT_position>
+<AT_position>17,52</AT_position>
 <text>13HY1300_7LG2_NN2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -165,7 +165,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>16</id>
-<AT_position>34,34</AT_position>
+<AT_position>47,35</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -174,7 +174,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>17</id>
-<AT_position>44,34</AT_position>
+<AT_position>62,35</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -183,7 +183,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>19</id>
-<AT_position>34,48</AT_position>
+<AT_position>47,49</AT_position>
 <text>FALSE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -192,7 +192,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>20</id>
-<AT_position>44,48</AT_position>
+<AT_position>62,49</AT_position>
 <text>TRUE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -201,7 +201,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>21</id>
-<AT_position>15,2</AT_position>
+<AT_position>18,2</AT_position>
 <isinst>TRUE</isinst>
 <text>13HY1300_7LG2_EQ0</text>
 <AT_type>EQ</AT_type>
@@ -214,7 +214,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>22</id>
-<AT_position>15,8</AT_position>
+<AT_position>18,8</AT_position>
 <isinst>TRUE</isinst>
 <text>13HY1300_7LG2_EQ1</text>
 <AT_type>EQ</AT_type>
@@ -227,7 +227,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>27</id>
-<AT_position>25,20</AT_position>
+<AT_position>33,20</AT_position>
 <isinst>TRUE</isinst>
 <text>13HY1300_7LG2_AND6</text>
 <AT_type>AND</AT_type>
@@ -241,7 +241,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>29</id>
-<AT_position>35,20</AT_position>
+<AT_position>48,20</AT_position>
 <isinst>TRUE</isinst>
 <text>13HY1300_7LG2_NOT8</text>
 <AT_type>NOT</AT_type>
@@ -253,7 +253,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>23</id>
-<AT_position>15,20</AT_position>
+<AT_position>18,20</AT_position>
 <isinst>TRUE</isinst>
 <text>13HY1300_7LG2_EQ2</text>
 <AT_type>EQ</AT_type>
@@ -266,7 +266,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>24</id>
-<AT_position>15,26</AT_position>
+<AT_position>18,26</AT_position>
 <isinst>TRUE</isinst>
 <text>13HY1300_7LG2_EQ3</text>
 <AT_type>EQ</AT_type>
@@ -279,7 +279,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>28</id>
-<AT_position>25,35</AT_position>
+<AT_position>33,35</AT_position>
 <isinst>TRUE</isinst>
 <text>13HY1300_7LG2_AND7</text>
 <AT_type>AND</AT_type>
@@ -293,7 +293,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>30</id>
-<AT_position>35,35</AT_position>
+<AT_position>48,35</AT_position>
 <isinst>TRUE</isinst>
 <text>13HY1300_7LG2_NOT9</text>
 <AT_type>NOT</AT_type>
@@ -305,7 +305,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>25</id>
-<AT_position>15,38</AT_position>
+<AT_position>18,38</AT_position>
 <isinst>TRUE</isinst>
 <text>13HY1300_7LG2_EQ4</text>
 <AT_type>EQ</AT_type>
@@ -318,7 +318,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>31</id>
-<AT_position>35,32</AT_position>
+<AT_position>48,32</AT_position>
 <isinst>TRUE</isinst>
 <text>13HY1300_7LG2_OR10</text>
 <AT_type>OR</AT_type>
@@ -332,7 +332,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>33</id>
-<AT_position>45,32</AT_position>
+<AT_position>63,32</AT_position>
 <isinst>TRUE</isinst>
 <text>13HY1300_7LG2_AND12</text>
 <AT_type>AND</AT_type>
@@ -346,7 +346,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>26</id>
-<AT_position>15,50</AT_position>
+<AT_position>18,50</AT_position>
 <isinst>TRUE</isinst>
 <text>13HY1300_7LG2_EQ5</text>
 <AT_type>EQ</AT_type>
@@ -359,7 +359,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>32</id>
-<AT_position>35,46</AT_position>
+<AT_position>48,46</AT_position>
 <isinst>TRUE</isinst>
 <text>13HY1300_7LG2_OR11</text>
 <AT_type>OR</AT_type>
@@ -373,7 +373,7 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>34</id>
-<AT_position>45,46</AT_position>
+<AT_position>63,46</AT_position>
 <isinst>TRUE</isinst>
 <text>13HY1300_7LG2_AND13</text>
 <AT_type>AND</AT_type>
@@ -387,7 +387,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>35</id>
-<position>55,4</position>
+<position>73,20</position>
 <text>13HY1300_7LG2_NN5</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -399,7 +399,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>36</id>
-<position>55,6</position>
+<position>73,20</position>
 <text>13HY1300_7LG2_NN5</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -411,7 +411,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>37</id>
-<position>55,8</position>
+<position>73,32</position>
 <text>13HY1300_7LG2_NN6</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -423,7 +423,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>38</id>
-<position>55,14</position>
+<position>73,14</position>
 <text>13HY1300_7LG2_NN6</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -435,7 +435,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>39</id>
-<position>55,16</position>
+<position>73,35</position>
 <text>13HY1300_7LG2_NN7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -447,7 +447,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>40</id>
-<position>55,18</position>
+<position>73,35</position>
 <text>13HY1300_7LG2_NN7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -459,7 +459,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>41</id>
-<position>55,20</position>
+<position>73,46</position>
 <text>13HY1300_7LG2_NN8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -471,7 +471,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>42</id>
-<position>55,32</position>
+<position>73,32</position>
 <text>13HY1300_7LG2_NN8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
