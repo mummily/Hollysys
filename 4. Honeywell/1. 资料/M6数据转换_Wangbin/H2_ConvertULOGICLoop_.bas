@@ -9,6 +9,7 @@ Public LSort_ID As Long         'LOGIC Sid数据流存贮号
 Public LElement_ID As Long      'LOGIC 元件id号变量
 
 Public ExcelInfo As T_EXCELINFO
+Public VarInfo As T_VARINFO
 
 '-----------------------------------------------------------------------------------------------------------
 'Purpose: 转化UREGC公用
@@ -31,6 +32,10 @@ Sub H2_ConvertULOGICLoop()
         ULOGIC2Name.Add ULOGIC2_arr(i, ULOGIC2("NAME")), i
     Next
     
+    '初始化VarInfo
+    Dim VarInfo_Temp As T_VARINFO
+    VarInfo = VarInfo_Temp
+    
     '03--创建XML文件
     '--------------------------------------------------------------------------------------------------------
     For ULOGIC_i = 2 To UBound(ULOGIC_arr(), 1)
@@ -43,11 +48,17 @@ Sub H2_ConvertULOGICLoop()
             
             '初始化属性
             Call InitProperty(sPouName)
+            
+            '初始化变量
+            Call InitVar(sPouName)
         
             '输出至XML
             Call WriteXML(sPouName)
         End If
     Next ULOGIC_i
+    
+    '输出变量
+    Call WriteVar
 End Sub
 
 '-----------------------------------------------------------------------------------------------------------
@@ -268,6 +279,28 @@ Private Sub InitProperty(sPouName As String)
                 .ElementInputID = GetInputIndex(strSo)
                 .ElementSortID = LSort_ID
                 LSort_ID = LSort_ID + 1
+            End If
+        End With
+    Next
+End Sub
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: 初始化变量
+'History: 12-25-2019
+'-----------------------------------------------------------------------------------------------------------
+Private Sub InitVar(sPouName As String)
+    ' 计时器变量
+    For index = 1 To 24
+        With ExcelInfo.HN_BOX(index)
+            If .ElementATType = "TON" Or .ElementATType = "TOF" Or .ElementATType = "TP" Then
+                Dim var As T_HN_VAR
+                
+                var.TT = .ElementATType
+                var.PN = sPouName & "_" & .ElementATType & .ElementSortID
+                var.SN = SN(ULOGIC_arr(ULOGIC_i, ULOGIC("NODENUM")))
+                
+                VarInfo.VarNum = VarInfo.VarNum + 1
+                VarInfo.HN_VAR(VarInfo.VarNum) = var
             End If
         End With
     Next
@@ -1195,3 +1228,130 @@ Private Function ReplacePredefinedEntity(str As String)
     
     ReplacePredefinedEntity = newStr
 End Function
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Purpose: 写入变量信息
+' Remark:
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Sub WriteVar()
+    Dim srcPath As String, desPath As String, ftime As String, fname As String, ccb As String
+    srcPath = PATH & "\源文件\计时器组态数据库.xlsx"  '模板文件
+    
+    If FileExists(srcPath) Then '判断工作簿是否存在如果存在先判断是否打开如打开就关闭
+        If WorkbookOpen("计时器组态数据库.xlsx") Then
+          Workbooks("计时器组态数据库.xlsx").Save
+          Workbooks("计时器组态数据库.xlsx").Close
+        End If
+    Else
+        MsgBox "请确认" & srcPath & "是否存在！"
+    End If
+    
+    ftime = Replace(Replace(Replace(VBA.Now, "/", "_"), " ", "_"), ":", "_") '时间
+    desPath = PATH & "\工程文件\计时器组态数据库" & ftime & ".xlsx"
+    
+    FileCopy srcPath, desPath
+    
+    Workbooks.Open (desPath)
+    With ActiveWorkbook
+        .Sheets("TON").Select
+        WriteTON
+     
+        .Sheets("TOF").Select
+        WriteTOF
+     
+        .Sheets("TP").Select
+        WriteTP
+    End With
+     
+    ActiveWorkbook.Save
+    ActiveWorkbook.Close
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Purpose: 写入TOF的变量信息
+' Remark:
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Private Sub WriteTOF()
+    Dim arr(1 To 1000, 1 To 10)
+    Dim index As Integer
+    index = 1
+    
+    For varindex = 1 To VarInfo.VarNum
+        If VarInfo.HN_VAR(varindex).TT = "TOF" Then
+            arr(index, 1) = VarInfo.HN_VAR(varindex).PN
+            arr(index, 2) = "计时器"
+            arr(index, 3) = ""
+            arr(index, 4) = VarInfo.HN_VAR(varindex).SN
+            arr(index, 5) = ""
+            arr(index, 6) = "0"
+            arr(index, 7) = "0"
+            arr(index, 8) = "0"
+            arr(index, 9) = ""
+            arr(index, 10) = "T#0ms"
+            
+            index = index + 1
+        End If
+    Next
+
+    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).value = arr
+End Sub
+
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Purpose: 写入TON的变量信息
+' Remark:
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Private Sub WriteTON()
+    Dim arr(1 To 1000, 1 To 10)
+    Dim index As Integer
+    index = 1
+    
+    For varindex = 1 To VarInfo.VarNum
+        If VarInfo.HN_VAR(varindex).TT = "TON" Then
+            arr(index, 1) = VarInfo.HN_VAR(varindex).PN
+            arr(index, 2) = "计时器"
+            arr(index, 3) = ""
+            arr(index, 4) = VarInfo.HN_VAR(varindex).SN
+            arr(index, 5) = ""
+            arr(index, 6) = "0"
+            arr(index, 7) = "0"
+            arr(index, 8) = "0"
+            arr(index, 9) = ""
+            arr(index, 10) = "T#0ms"
+            
+            index = index + 1
+        End If
+    Next
+
+    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).value = arr
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Purpose: 写入TP的变量信息
+' Remark:
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Private Sub WriteTP()
+    Dim arr(1 To 1000, 1 To 10)
+    Dim index As Integer
+    index = 1
+    
+    For varindex = 1 To VarInfo.VarNum
+        If VarInfo.HN_VAR(varindex).TT = "TP" Then
+            arr(index, 1) = VarInfo.HN_VAR(varindex).PN
+            arr(index, 2) = "计时器"
+            arr(index, 3) = ""
+            arr(index, 4) = VarInfo.HN_VAR(varindex).SN
+            arr(index, 5) = "0"
+            arr(index, 6) = "0"
+            arr(index, 7) = ""
+            arr(index, 8) = "0"
+            arr(index, 9) = ""
+            arr(index, 10) = "T#0ms"
+            
+            index = index + 1
+        End If
+    Next
+    
+    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).value = arr
+End Sub
+
