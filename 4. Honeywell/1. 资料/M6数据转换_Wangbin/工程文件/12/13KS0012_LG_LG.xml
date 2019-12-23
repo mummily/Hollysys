@@ -16,7 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 13KS0012_LG_LG
 VAR
-13KS0012_LG_TON0(2086): TON := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>

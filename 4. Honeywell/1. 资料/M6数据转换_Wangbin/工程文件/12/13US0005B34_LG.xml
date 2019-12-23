@@ -16,8 +16,6 @@
 <interface>
 <![CDATA[PROGRAM 13US0005B34_LG
 VAR
-13US0005B34_TP0(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
-13US0005B34_TP3(2086): TP := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );
 END_VAR]]>
 </interface>
 <cfc>

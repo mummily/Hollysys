@@ -355,16 +355,6 @@ Private Sub WriteInterface(sPouName As String)
     POU.WriteLine "<interface>"
     POU.WriteLine "<![CDATA[PROGRAM " & ExcelInfo.NAME
     POU.WriteLine "VAR"
-    
-    ' 计时器变量
-    For index = 1 To 24
-        With ExcelInfo.HN_BOX(index)
-            If .ElementATType = "TON" Or .ElementATType = "TOF" Or .ElementATType = "TP" Then
-                POU.WriteLine sPouName & "_" & .ElementATType & .ElementSortID & "(2086): " & .ElementATType & " := ( IN:=FALSE, PT:=T#0S, Q:=FALSE, ET:=T#0S, M:=FALSE, StartTime:=T#0S );"
-            End If
-        End With
-    Next
-    
     POU.WriteLine "END_VAR]]>"
     POU.WriteLine "</interface>"
 End Sub
@@ -1252,7 +1242,7 @@ Sub WriteVar()
     FileCopy srcPath, desPath
     
     Workbooks.Open (desPath)
-    With ActiveWorkbook
+    With ActiveWorkbook 'Workbooks("计时器组态数据库.xlsx")
         .Sheets("TON").Select
         WriteTON
      
