@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[USER]]></path>
+	<name>HILOAVG</name>
+	<secondName></secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2019-12-05 08:17:42</exporttime>
+	<amendtime>2019-09-12 13:29:19</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A0</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION_BLOCK HILOAVG
+VAR
+END_VAR
+VAR_INPUT
+		MAN(2119): BOOL := FALSE;
+		CAS(2119): BOOL := TRUE;
+		X1(2119): REAL := 0;
+		X2(2119): REAL := 0;
+		X3(2119): REAL := 0;
+		X4(2119): REAL := 0;
+		EQU(2119): REAL := 0;
+END_VAR
+VAR_IN_OUT
+END_VAR
+VAR_OUTPUT
+		OP(2118): REAL := 0;
+		OPEU(2118): REAL := 0;
+END_VAR]]>
+	</interface>
+	<cfc>
+	</cfc>
+</pou>
