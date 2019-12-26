@@ -99,3 +99,15 @@ Type T_VARINFO
     HN_VAR(1 To 1000) As T_HN_VAR    'TON、TOF、TP变量
     VarNum As Integer 'TON、TOF、TP变量数目
 End Type
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: 模块地址
+'History: 12-25-2019
+'-----------------------------------------------------------------------------------------------------------
+Type T_HN_DN
+    NODENUM As String 'HN站号
+    INDEX As Integer '索引 1~40
+    TYPE As String  '类型
+    NAME As String  'POU名称
+    DN   As Integer '模块地址
+End Type
