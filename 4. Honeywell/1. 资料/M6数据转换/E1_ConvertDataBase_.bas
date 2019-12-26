@@ -2,7 +2,10 @@ Attribute VB_Name = "E1_ConvertDataBase_"
 'ver20190814_by cjt
 '转换HN数据库到M6数据库
 
-Dim DNArr(1 To 3000) As T_HN_DN
+Dim AIArr(1 To 844) As T_HN_DN
+Dim AOArr(1 To 184) As T_HN_DN
+Dim DIArr(1 To 1213) As T_HN_DN
+Dim DOArr(1 To 511) As T_HN_DN
 
 '-----------------------------------------------------------------------------------------------------------
 'Purpose: 转换组态数据库 - cjt
@@ -891,8 +894,11 @@ End Sub
 'History: 12-26-2019
 '-----------------------------------------------------------------------------------------------------------
 Sub InitDN()
-    Dim arrIndex As Integer, DN As Integer
-    arrIndex = 1
+    Dim aiIndex As Integer, aoIndex As Integer, diIndex As Integer, doIndex As Integer, DN As Integer
+    aiIndex = 1
+    aoIndex = 1
+    diIndex = 1
+    doIndex = 1
     DN = 10 '模块地址从10开始
     
     Dim IOMTYPE As String, IOMTYPE_Value As String
@@ -923,24 +929,22 @@ Sub InitDN()
                 For i = 2 To UBound(UAO_arr, 1)
                     If UAO_arr(i, UAO("NODENUM")) = NODENUM And UAO_arr(i, UAO("MODNUM")) = CStr(Column) Then
                         If UAO_arr(i, UAO("SLOTNUM")) <= 8 Then
-                            DNArr(arrIndex).NODENUM = NODENUM
-                            DNArr(arrIndex).INDEX = Column
-                            DNArr(arrIndex).TYPE = "AO"
-                            DNArr(arrIndex).NAME = UAO_arr(i, UAO("NAME"))
-                            DNArr(arrIndex).DN = DN
-                            arrIndex = arrIndex + 1
+                            AOArr(aoIndex).NODENUM = NODENUM
+                            AOArr(aoIndex).INDEX = Column
+                            AOArr(aoIndex).NAME = UAO_arr(i, UAO("NAME"))
+                            AOArr(aoIndex).DN = DN
+                            aoIndex = aoIndex + 1
                         Else
-                            DNArr(arrIndex).NODENUM = NODENUM
-                            DNArr(arrIndex).INDEX = Column
-                            DNArr(arrIndex).TYPE = "AO"
-                            DNArr(arrIndex).NAME = UAO_arr(i, UAO("NAME"))
+                            AOArr(aoIndex).NODENUM = NODENUM
+                            AOArr(aoIndex).INDEX = Column
+                            AOArr(aoIndex).NAME = UAO_arr(i, UAO("NAME"))
                             If IOREDOPT_Value = "REDUN" Then
-                                DNArr(arrIndex).DN = DN + 2
+                                AOArr(aoIndex).DN = DN + 2
                             Else
-                                DNArr(arrIndex).DN = DN + 1
+                                AOArr(aoIndex).DN = DN + 1
                             End If
                             
-                            arrIndex = arrIndex + 1
+                            aoIndex = aoIndex + 1
                         End If
                     End If
                 Next
@@ -954,13 +958,12 @@ Sub InitDN()
             ElseIf IOMTYPE_Value = "HLAI" Then
                 For i = 2 To UBound(UAI_arr, 1)
                     If UAI_arr(i, UAI("NODENUM")) = NODENUM And UAI_arr(i, UAI("MODNUM")) = CStr(Column) Then
-                        DNArr(arrIndex).NODENUM = NODENUM
-                        DNArr(arrIndex).INDEX = Column
-                        DNArr(arrIndex).TYPE = "AI"
-                        DNArr(arrIndex).NAME = UAI_arr(i, UAI("NAME"))
-                        DNArr(arrIndex).DN = DN
+                        AIArr(aiIndex).NODENUM = NODENUM
+                        AIArr(aiIndex).INDEX = Column
+                        AIArr(aiIndex).NAME = UAI_arr(i, UAI("NAME"))
+                        AIArr(aiIndex).DN = DN
                         
-                        arrIndex = arrIndex + 1
+                        aiIndex = aiIndex + 1
                     End If
                 Next
                 
@@ -973,13 +976,12 @@ Sub InitDN()
             ElseIf IOMTYPE_Value = "DI" Then
                 For i = 2 To UBound(UDI_arr, 1)
                     If UDI_arr(i, UDI("NODENUM")) = NODENUM And UDI_arr(i, UDI("MODNUM")) = CStr(Column) Then
-                        DNArr(arrIndex).NODENUM = NODENUM
-                        DNArr(arrIndex).INDEX = Column
-                        DNArr(arrIndex).TYPE = "DI"
-                        DNArr(arrIndex).NAME = UDI_arr(i, UDI("NAME"))
-                        DNArr(arrIndex).DN = DN
+                        DIArr(diIndex).NODENUM = NODENUM
+                        DIArr(diIndex).INDEX = Column
+                        DIArr(diIndex).NAME = UDI_arr(i, UDI("NAME"))
+                        DIArr(diIndex).DN = DN
                         
-                        arrIndex = arrIndex + 1
+                        diIndex = diIndex + 1
                     End If
                 Next
                 
@@ -993,23 +995,21 @@ Sub InitDN()
                 For i = 2 To UBound(UDO_arr, 1)
                     If UDO_arr(i, UDO("NODENUM")) = NODENUM And UDO_arr(i, UDO("MODNUM")) = CStr(Column) Then
                         If UDO_arr(i, UDO("SLOTNUM")) <= 16 Then
-                            DNArr(arrIndex).NODENUM = NODENUM
-                            DNArr(arrIndex).INDEX = Column
-                            DNArr(arrIndex).TYPE = "DO"
-                            DNArr(arrIndex).NAME = UDO_arr(i, UDO("NAME"))
-                            DNArr(arrIndex).DN = DN
-                            arrIndex = arrIndex + 1
+                            DOArr(doIndex).NODENUM = NODENUM
+                            DOArr(doIndex).INDEX = Column
+                            DOArr(doIndex).NAME = UDO_arr(i, UDO("NAME"))
+                            DOArr(doIndex).DN = DN
+                            doIndex = doIndex + 1
                         Else
-                            DNArr(arrIndex).NODENUM = NODENUM
-                            DNArr(arrIndex).INDEX = Column
-                            DNArr(arrIndex).TYPE = "DO"
-                            DNArr(arrIndex).NAME = UDO_arr(i, UDO("NAME"))
+                            DOArr(doIndex).NODENUM = NODENUM
+                            DOArr(doIndex).INDEX = Column
+                            DOArr(doIndex).NAME = UDO_arr(i, UDO("NAME"))
                             If IOREDOPT_Value = "REDUN" Then
-                                DNArr(arrIndex).DN = DN + 2
+                                DOArr(doIndex).DN = DN + 2
                             Else
-                                DNArr(arrIndex).DN = DN + 1
+                                DOArr(doIndex).DN = DN + 1
                             End If
-                            arrIndex = arrIndex + 1
+                            doIndex = doIndex + 1
                         End If
                     End If
                 Next 'i
@@ -1040,23 +1040,21 @@ Sub InitDN()
                 For i = 2 To UBound(UAO_arr, 1)
                     If UAO_arr(i, UAO("NODENUM")) = NODENUM And UAO_arr(i, UAO("MODNUM")) = CStr(Column) Then
                         If UAO_arr(i, UAO("SLOTNUM")) <= 8 Then
-                            DNArr(arrIndex).NODENUM = NODENUM
-                            DNArr(arrIndex).INDEX = Column
-                            DNArr(arrIndex).TYPE = "AO"
-                            DNArr(arrIndex).NAME = UAO_arr(i, UAO("NAME"))
-                            DNArr(arrIndex).DN = DN
-                            arrIndex = arrIndex + 1
+                            AOArr(aoIndex).NODENUM = NODENUM
+                            AOArr(aoIndex).INDEX = Column
+                            AOArr(aoIndex).NAME = UAO_arr(i, UAO("NAME"))
+                            AOArr(aoIndex).DN = DN
+                            aoIndex = aoIndex + 1
                         Else
-                            DNArr(arrIndex).NODENUM = NODENUM
-                            DNArr(arrIndex).INDEX = Column
-                            DNArr(arrIndex).TYPE = "AO"
-                            DNArr(arrIndex).NAME = UAO_arr(i, UAO("NAME"))
+                            AOArr(aoIndex).NODENUM = NODENUM
+                            AOArr(aoIndex).INDEX = Column
+                            AOArr(aoIndex).NAME = UAO_arr(i, UAO("NAME"))
                             If IOREDOPT_Value = "REDUN" Then
-                                DNArr(arrIndex).DN = DN + 2
+                                AOArr(aoIndex).DN = DN + 2
                             Else
-                                DNArr(arrIndex).DN = DN + 1
+                                AOArr(aoIndex).DN = DN + 1
                             End If
-                            arrIndex = arrIndex + 1
+                            aoIndex = aoIndex + 1
                         End If
                     End If
                 Next
@@ -1070,13 +1068,12 @@ Sub InitDN()
             ElseIf IOMTYPE_Value = "HLAI" Then
                 For i = 2 To UBound(UAI_arr, 1)
                     If UAI_arr(i, UAI("NODENUM")) = NODENUM And UAI_arr(i, UAI("MODNUM")) = CStr(Column) Then
-                        DNArr(arrIndex).NODENUM = NODENUM
-                        DNArr(arrIndex).INDEX = Column
-                        DNArr(arrIndex).TYPE = "AI"
-                        DNArr(arrIndex).NAME = UAI_arr(i, UAI("NAME"))
-                        DNArr(arrIndex).DN = DN
+                        AIArr(aiIndex).NODENUM = NODENUM
+                        AIArr(aiIndex).INDEX = Column
+                        AIArr(aiIndex).NAME = UAI_arr(i, UAI("NAME"))
+                        AIArr(aiIndex).DN = DN
 
-                        arrIndex = arrIndex + 1
+                        aiIndex = aiIndex + 1
                     End If
                 Next
                 
@@ -1089,13 +1086,12 @@ Sub InitDN()
             ElseIf IOMTYPE_Value = "DI" Then
                 For i = 2 To UBound(UDI_arr, 1)
                     If UDI_arr(i, UDI("NODENUM")) = NODENUM And UDI_arr(i, UDI("MODNUM")) = CStr(Column) Then
-                        DNArr(arrIndex).NODENUM = NODENUM
-                        DNArr(arrIndex).INDEX = Column
-                        DNArr(arrIndex).TYPE = "DI"
-                        DNArr(arrIndex).NAME = UDI_arr(i, UDI("NAME"))
-                        DNArr(arrIndex).DN = DN
+                        DIArr(diIndex).NODENUM = NODENUM
+                        DIArr(diIndex).INDEX = Column
+                        DIArr(diIndex).NAME = UDI_arr(i, UDI("NAME"))
+                        DIArr(diIndex).DN = DN
 
-                        arrIndex = arrIndex + 1
+                        diIndex = diIndex + 1
                     End If
                 Next
                 
@@ -1109,25 +1105,23 @@ Sub InitDN()
                 For i = 2 To UBound(UDO_arr, 1)
                     If UDO_arr(i, UDO("NODENUM")) = NODENUM And UDO_arr(i, UDO("MODNUM")) = CStr(Column) Then
                         If UDO_arr(i, UDO("SLOTNUM")) <= 16 Then
-                            DNArr(arrIndex).NODENUM = NODENUM
-                            DNArr(arrIndex).INDEX = Column
-                            DNArr(arrIndex).TYPE = "DO"
-                            DNArr(arrIndex).NAME = UDO_arr(i, UDO("NAME"))
-                            DNArr(arrIndex).DN = DN
+                            DOArr(doIndex).NODENUM = NODENUM
+                            DOArr(doIndex).INDEX = Column
+                            DOArr(doIndex).NAME = UDO_arr(i, UDO("NAME"))
+                            DOArr(doIndex).DN = DN
                             
-                            arrIndex = arrIndex + 1
+                            doIndex = doIndex + 1
                         Else
-                            DNArr(arrIndex).NODENUM = NODENUM
-                            DNArr(arrIndex).INDEX = Column
-                            DNArr(arrIndex).TYPE = "DO"
-                            DNArr(arrIndex).NAME = UDO_arr(i, UDO("NAME"))
+                            DOArr(doIndex).NODENUM = NODENUM
+                            DOArr(doIndex).INDEX = Column
+                            DOArr(doIndex).NAME = UDO_arr(i, UDO("NAME"))
                             If IOREDOPT_Value = "REDUN" Then
-                                DNArr(arrIndex).DN = DN + 2
+                                DOArr(doIndex).DN = DN + 2
                             Else
-                                DNArr(arrIndex).DN = DN + 1
+                                DOArr(doIndex).DN = DN + 1
                             End If
                             
-                            arrIndex = arrIndex + 1
+                            doIndex = doIndex + 1
                         End If
                     End If
                 Next 'i = 2 To UBound(UDO_arr, 1)
@@ -1142,13 +1136,7 @@ Sub InitDN()
             End If
         Next 'Column = 21 To 40
     Next 'Row = 2 To 5
-    
-    ' 输出调试信息 add by wb at 2019-12-26
-    ' Dim result As String
-    ' For i = 1 To arrIndex - 1
-    '     result = result & DNArr(i).NODENUM & vbTab & DNArr(i).INDEX & vbTab & DNArr(i).DN & vbTab & DNArr(i).TYPE & vbTab & DNArr(i).NAME & vbTab & vbCrLf
-    ' Next
-    ' setClipBoard (result)
+
 End Sub
 
 '-----------------------------------------------------------------------------------------------------------
@@ -1169,33 +1157,33 @@ End Function
 '-----------------------------------------------------------------------------------------------------------
 Sub SetDN()
     For INDEX = 1 To UBound(AI_arr, 1)
-        For arrIndex = 1 To UBound(DNArr, 1)
-            If AI_arr(INDEX, AI("PN")) <> "" And AI_arr(INDEX, AI("PN")) = DNArr(arrIndex).NAME Then
-                AI_arr(INDEX, AI("DN")) = DNArr(arrIndex).DN
+        For arrIndex = 1 To UBound(AIArr, 1)
+            If AI_arr(INDEX, AI("PN")) <> "" And AI_arr(INDEX, AI("PN")) = AIArr(arrIndex).NAME Then
+                AI_arr(INDEX, AI("DN")) = AIArr(arrIndex).DN
             End If
         Next
     Next
     
     For INDEX = 1 To UBound(AO_arr, 1)
-        For arrIndex = 1 To UBound(DNArr, 1)
-            If AO_arr(INDEX, AO("PN")) <> "" And AO_arr(INDEX, AO("PN")) = DNArr(arrIndex).NAME Then
-                AO_arr(INDEX, AO("DN")) = DNArr(arrIndex).DN
+        For arrIndex = 1 To UBound(AOArr, 1)
+            If AO_arr(INDEX, AO("PN")) <> "" And AO_arr(INDEX, AO("PN")) = AOArr(arrIndex).NAME Then
+                AO_arr(INDEX, AO("DN")) = AOArr(arrIndex).DN
             End If
         Next
     Next
     
     For INDEX = 1 To UBound(DI_arr, 1)
-        For arrIndex = 1 To UBound(DNArr, 1)
-            If DI_arr(INDEX, DI("PN")) <> "" And DI_arr(INDEX, DI("PN")) = DNArr(arrIndex).NAME Then
-                DI_arr(INDEX, DI("DN")) = DNArr(arrIndex).DN
+        For arrIndex = 1 To UBound(DIArr, 1)
+            If DI_arr(INDEX, DI("PN")) <> "" And DI_arr(INDEX, DI("PN")) = DIArr(arrIndex).NAME Then
+                DI_arr(INDEX, DI("DN")) = DIArr(arrIndex).DN
             End If
         Next
     Next
     
     For INDEX = 1 To UBound(DOV_arr, 1)
-        For arrIndex = 1 To UBound(DNArr, 1)
-            If DOV_arr(INDEX, DOV("PN")) <> "" And DOV_arr(INDEX, DOV("PN")) = DNArr(arrIndex).NAME Then
-                DOV_arr(INDEX, DOV("DN")) = DNArr(arrIndex).DN
+        For arrIndex = 1 To UBound(DOArr, 1)
+            If DOV_arr(INDEX, DOV("PN")) <> "" And DOV_arr(INDEX, DOV("PN")) = DOArr(arrIndex).NAME Then
+                DOV_arr(INDEX, DOV("DN")) = DOArr(arrIndex).DN
             End If
         Next
     Next

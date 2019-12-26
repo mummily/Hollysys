@@ -107,7 +107,6 @@ End Type
 Type T_HN_DN
     NODENUM As String 'HN站号
     INDEX As Integer '索引 1~40
-    TYPE As String  '类型
     NAME As String  'POU名称
     DN   As Integer '模块地址
 End Type
