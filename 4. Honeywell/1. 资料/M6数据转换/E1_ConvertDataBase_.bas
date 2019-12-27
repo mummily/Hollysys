@@ -899,7 +899,6 @@ Sub InitDN()
     aoIndex = 1
     diIndex = 1
     doIndex = 1
-    DN = 10 '模块地址从10开始
     
     Dim IOMTYPE As String, IOMTYPE_Value As String
     Dim IOREDOPT As String, IOREDOPT_Value As String
@@ -907,6 +906,8 @@ Sub InitDN()
     
     '遍历UPMCONFIG行，共2~5行
     For Row = 2 To 5
+        '模块地址从10开始
+        DN = 10
         'NODENUM
         NODENUM = UPMCONFIG_arr(Row, UPMCONFIG("NODENUM"))
         If Left(NODENUM, 1) = "0" Then
