@@ -1173,20 +1173,43 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
     Dim newLISRC As String
     newLISRC = LISRC
     
+    Set DicStr = CreateObject("Scripting.Dictionary")
+    DicStr.Add ".PVFL", ".DV"
+    DicStr.Add ".SO", ".DI"
+    DicStr.Add ".PVLOFL", ".ALIND"
+    DicStr.Add ".PVLLFL", ".LLIND"
+    DicStr.Add ".PVHIFL", ".AHIND"
+    DicStr.Add ".PVHHFL", ".HHIND"
+    DicStr.Add ".PV", ".AV"
+    DicStr.Add ".I0", ".INOF"
+    DicStr.Add ".I1", ".INON"
+    
+    Dim dsKeys, dsItems
+    dsKeys = DicStr.Keys
+    dsItems = DicStr.Items
+    
+    Dim dsKey As String, dsItem As String
+    
     If newLISRC <> "--.--" Then
-        newLISRC = Replace(newLISRC, ".PVFL", ".DV")
-        newLISRC = Replace(newLISRC, ".SO", ".DI")
-        newLISRC = Replace(newLISRC, ".PVLOFL", ".ALIND")
-        newLISRC = Replace(newLISRC, ".PVLLFL", ".LLIND")
-        newLISRC = Replace(newLISRC, ".PVHIFL", ".AHIND")
-        newLISRC = Replace(newLISRC, ".PVHHFL", ".HHIND")
-        newLISRC = Replace(newLISRC, ".PV", ".AV")
-        newLISRC = Replace(newLISRC, ".I0", ".INOF")
-        newLISRC = Replace(newLISRC, ".I1", ".INON")
         If newLISRC Like "*.FL(*)" Or newLISRC Like "*.NN(*)" Then
             newLISRC = Replace(newLISRC, ".", "_")
             newLISRC = Replace(newLISRC, "(", "")
             newLISRC = Replace(newLISRC, ")", "")
+        Else
+            For index = 0 To DicStr.Count - 1
+                dsKey = dsKeys(index)
+                dsItem = dsItems(index)
+                
+                If dsKey = ".PVFL" Then
+                    If dsKey = Right(newLISRC, Len(dsKey)) Then
+                        newLISRC = Replace(newLISRC, dsKey, dsItem)
+                    End If
+                Else
+                    If dsKey = Right(newLISRC, Len(dsKey)) Or newLISRC Like "*" & dsKey & "(*)" Then
+                        newLISRC = Replace(newLISRC, dsKey, dsItem)
+                    End If
+                End If
+            Next
         End If
     End If
     

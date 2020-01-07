@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>13,2</AT_position>
-<text>11WISA0103.AVRAW</text>
+<text>11WISA0103.PVRAW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>13,8</AT_position>
-<text>11WISA0203.AVRAW</text>
+<text>11WISA0203.PVRAW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>13,14</AT_position>
-<text>11WISA0104.AVRAW</text>
+<text>11WISA0104.PVRAW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -49,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>13,20</AT_position>
-<text>11WISA0204.AVRAW</text>
+<text>11WISA0204.PVRAW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

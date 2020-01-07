@@ -76,7 +76,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>13,38</AT_position>
-<text>16XV0002.DV(0)</text>
+<text>16XV0002.PVFL(0)</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
