@@ -177,7 +177,7 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>76,5</position>
-<text>X1403.I0</text>
+<text>X1403.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

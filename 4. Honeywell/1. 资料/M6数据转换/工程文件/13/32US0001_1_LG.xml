@@ -503,7 +503,7 @@ END_VAR]]>
 <element type="output">
 <id>44</id>
 <position>121,12</position>
-<text>P3202A.I1</text>
+<text>P3202A.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -515,7 +515,7 @@ END_VAR]]>
 <element type="output">
 <id>45</id>
 <position>121,13</position>
-<text>P3202B.I1</text>
+<text>P3202B.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -527,7 +527,7 @@ END_VAR]]>
 <element type="output">
 <id>46</id>
 <position>121,5</position>
-<text>32XV0001.I1</text>
+<text>32XV0001.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

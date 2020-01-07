@@ -130,7 +130,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>46,8</position>
-<text>14HS1US16.I0</text>
+<text>14HS1US16.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -142,7 +142,7 @@ END_VAR]]>
 <element type="output">
 <id>12</id>
 <position>46,14</position>
-<text>14HS2US16.I0</text>
+<text>14HS2US16.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -154,7 +154,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>46,2</position>
-<text>14HS1US16.I1</text>
+<text>14HS1US16.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

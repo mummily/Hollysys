@@ -118,7 +118,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>46,5</position>
-<text>16XV0007.I1</text>
+<text>16XV0007.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -130,7 +130,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>46,14</position>
-<text>16XV0007.I0</text>
+<text>16XV0007.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

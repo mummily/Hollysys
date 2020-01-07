@@ -118,7 +118,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>61,17</position>
-<text>14XV0015.I0</text>
+<text>14XV0015.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -130,7 +130,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>61,17</position>
-<text>14XV0016.I0</text>
+<text>14XV0016.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -142,7 +142,7 @@ END_VAR]]>
 <element type="output">
 <id>12</id>
 <position>61,17</position>
-<text>14XV0006.I0</text>
+<text>14XV0006.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -154,7 +154,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>61,17</position>
-<text>14XV0017.I0</text>
+<text>14XV0017.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -166,7 +166,7 @@ END_VAR]]>
 <element type="output">
 <id>14</id>
 <position>61,17</position>
-<text>14XV0018.I0</text>
+<text>14XV0018.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -178,7 +178,7 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>61,17</position>
-<text>14XV0008.I0</text>
+<text>14XV0008.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

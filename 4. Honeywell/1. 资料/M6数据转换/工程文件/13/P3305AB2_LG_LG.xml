@@ -480,7 +480,7 @@ END_VAR]]>
 <element type="output">
 <id>43</id>
 <position>76,8</position>
-<text>P3305A2.I1</text>
+<text>P3305A2.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -504,7 +504,7 @@ END_VAR]]>
 <element type="output">
 <id>45</id>
 <position>76,8</position>
-<text>P3305A2.I0</text>
+<text>P3305A2.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -516,7 +516,7 @@ END_VAR]]>
 <element type="output">
 <id>46</id>
 <position>76,14</position>
-<text>P3305B2.I1</text>
+<text>P3305B2.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -540,7 +540,7 @@ END_VAR]]>
 <element type="output">
 <id>48</id>
 <position>76,26</position>
-<text>P3305B2.I0</text>
+<text>P3305B2.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

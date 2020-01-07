@@ -1181,6 +1181,8 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
         newLISRC = Replace(newLISRC, ".PVHIFL", ".AHIND")
         newLISRC = Replace(newLISRC, ".PVHHFL", ".HHIND")
         newLISRC = Replace(newLISRC, ".PV", ".AV")
+        newLISRC = Replace(newLISRC, ".I0", ".INOF")
+        newLISRC = Replace(newLISRC, ".I1", ".INON")
         If newLISRC Like "*.FL(*)" Or newLISRC Like "*.NN(*)" Then
             newLISRC = Replace(newLISRC, ".", "_")
             newLISRC = Replace(newLISRC, "(", "")
@@ -1344,4 +1346,3 @@ Private Sub WriteTP()
     
     ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).value = arr
 End Sub
-

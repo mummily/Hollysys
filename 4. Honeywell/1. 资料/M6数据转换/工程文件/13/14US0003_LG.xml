@@ -412,7 +412,7 @@ END_VAR]]>
 <element type="output">
 <id>37</id>
 <position>91,29</position>
-<text>P1403A.I0</text>
+<text>P1403A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -424,7 +424,7 @@ END_VAR]]>
 <element type="output">
 <id>38</id>
 <position>91,29</position>
-<text>P1403B.I0</text>
+<text>P1403B.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -436,7 +436,7 @@ END_VAR]]>
 <element type="output">
 <id>39</id>
 <position>91,28</position>
-<text>P1403A.I1</text>
+<text>P1403A.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -448,7 +448,7 @@ END_VAR]]>
 <element type="output">
 <id>40</id>
 <position>91,30</position>
-<text>P1403B.I1</text>
+<text>P1403B.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

@@ -360,7 +360,7 @@ END_VAR]]>
 <element type="output">
 <id>33</id>
 <position>61,8</position>
-<text>P3303A2.I1</text>
+<text>P3303A2.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -384,7 +384,7 @@ END_VAR]]>
 <element type="output">
 <id>35</id>
 <position>61,8</position>
-<text>P3303A.I0</text>
+<text>P3303A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -396,7 +396,7 @@ END_VAR]]>
 <element type="output">
 <id>36</id>
 <position>61,14</position>
-<text>P3303B2.I1</text>
+<text>P3303B2.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -420,7 +420,7 @@ END_VAR]]>
 <element type="output">
 <id>38</id>
 <position>61,26</position>
-<text>P3303B.I0</text>
+<text>P3303B.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -432,7 +432,7 @@ END_VAR]]>
 <element type="output">
 <id>39</id>
 <position>61,8</position>
-<text>P3303A2.I0</text>
+<text>P3303A2.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -444,7 +444,7 @@ END_VAR]]>
 <element type="output">
 <id>40</id>
 <position>61,26</position>
-<text>P3303B2.I0</text>
+<text>P3303B2.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

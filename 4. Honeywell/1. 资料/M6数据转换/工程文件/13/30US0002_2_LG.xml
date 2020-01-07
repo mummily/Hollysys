@@ -63,7 +63,7 @@ END_VAR]]>
 <element type="output">
 <id>5</id>
 <position>31,2</position>
-<text>30XV0010.I1</text>
+<text>30XV0010.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -123,7 +123,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>31,2</position>
-<text>30XV0002.I1</text>
+<text>30XV0002.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -135,7 +135,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>31,8</position>
-<text>30XV0011.I0</text>
+<text>30XV0011.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -147,7 +147,7 @@ END_VAR]]>
 <element type="output">
 <id>12</id>
 <position>31,2</position>
-<text>30XV0011.I1</text>
+<text>30XV0011.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

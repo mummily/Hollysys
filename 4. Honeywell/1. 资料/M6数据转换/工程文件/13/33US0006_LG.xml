@@ -270,7 +270,7 @@ END_VAR]]>
 <element type="output">
 <id>23</id>
 <position>91,5</position>
-<text>P3306A.I1</text>
+<text>P3306A.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -282,7 +282,7 @@ END_VAR]]>
 <element type="output">
 <id>24</id>
 <position>91,11</position>
-<text>P3306B.I1</text>
+<text>P3306B.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

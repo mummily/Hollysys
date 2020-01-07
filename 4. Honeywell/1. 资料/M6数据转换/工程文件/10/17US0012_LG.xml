@@ -334,7 +334,7 @@ END_VAR]]>
 <element type="output">
 <id>29</id>
 <position>91,6</position>
-<text>P1705A.I1</text>
+<text>P1705A.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -346,7 +346,7 @@ END_VAR]]>
 <element type="output">
 <id>30</id>
 <position>91,9</position>
-<text>P1705B.I1</text>
+<text>P1705B.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -358,7 +358,7 @@ END_VAR]]>
 <element type="output">
 <id>31</id>
 <position>91,23</position>
-<text>P1705A.I0</text>
+<text>P1705A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -370,7 +370,7 @@ END_VAR]]>
 <element type="output">
 <id>32</id>
 <position>91,23</position>
-<text>P1705B.I0</text>
+<text>P1705B.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

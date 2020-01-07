@@ -66,7 +66,7 @@ END_VAR]]>
 <element type="output">
 <id>5</id>
 <position>46,2</position>
-<text>13XV0118.I1</text>
+<text>13XV0118.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -78,7 +78,7 @@ END_VAR]]>
 <element type="output">
 <id>6</id>
 <position>46,2</position>
-<text>13XV0218.I1</text>
+<text>13XV0218.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -90,7 +90,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>46,2</position>
-<text>13XV0318.I1</text>
+<text>13XV0318.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -102,7 +102,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>46,2</position>
-<text>13XV0418.I1</text>
+<text>13XV0418.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

@@ -198,7 +198,7 @@ END_VAR]]>
 <element type="output">
 <id>17</id>
 <position>46,2</position>
-<text>X1109A.I0</text>
+<text>X1109A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -210,7 +210,7 @@ END_VAR]]>
 <element type="output">
 <id>18</id>
 <position>46,8</position>
-<text>X1109B.I0</text>
+<text>X1109B.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -222,7 +222,7 @@ END_VAR]]>
 <element type="output">
 <id>19</id>
 <position>46,14</position>
-<text>X1109C.I0</text>
+<text>X1109C.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -234,7 +234,7 @@ END_VAR]]>
 <element type="output">
 <id>20</id>
 <position>46,20</position>
-<text>X1109D.I0</text>
+<text>X1109D.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -246,7 +246,7 @@ END_VAR]]>
 <element type="output">
 <id>21</id>
 <position>46,2</position>
-<text>X1102A.I0</text>
+<text>X1102A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -258,7 +258,7 @@ END_VAR]]>
 <element type="output">
 <id>22</id>
 <position>46,8</position>
-<text>X1104A.I0</text>
+<text>X1104A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -270,7 +270,7 @@ END_VAR]]>
 <element type="output">
 <id>23</id>
 <position>46,14</position>
-<text>X1102B.I0</text>
+<text>X1102B.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -282,7 +282,7 @@ END_VAR]]>
 <element type="output">
 <id>24</id>
 <position>46,20</position>
-<text>X1102C.I0</text>
+<text>X1102C.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

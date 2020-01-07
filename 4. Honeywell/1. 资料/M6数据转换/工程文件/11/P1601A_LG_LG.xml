@@ -165,7 +165,7 @@ END_VAR]]>
 <element type="output">
 <id>14</id>
 <position>61,5</position>
-<text>P1601A.I0</text>
+<text>P1601A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

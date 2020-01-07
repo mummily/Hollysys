@@ -150,7 +150,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>61,14</position>
-<text>X1106A.I0</text>
+<text>X1106A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

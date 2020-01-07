@@ -54,7 +54,7 @@ END_VAR]]>
 <element type="output">
 <id>4</id>
 <position>31,2</position>
-<text>K1102A.I0</text>
+<text>K1102A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

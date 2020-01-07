@@ -272,7 +272,7 @@ END_VAR]]>
 <element type="output">
 <id>24</id>
 <position>76,27</position>
-<text>11XV0207.I0</text>
+<text>11XV0207.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -284,7 +284,7 @@ END_VAR]]>
 <element type="output">
 <id>25</id>
 <position>76,27</position>
-<text>11XV0208.I1</text>
+<text>11XV0208.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -296,7 +296,7 @@ END_VAR]]>
 <element type="output">
 <id>26</id>
 <position>76,27</position>
-<text>11XV0209.I0</text>
+<text>11XV0209.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -308,7 +308,7 @@ END_VAR]]>
 <element type="output">
 <id>27</id>
 <position>76,27</position>
-<text>11XV0210.I0</text>
+<text>11XV0210.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
