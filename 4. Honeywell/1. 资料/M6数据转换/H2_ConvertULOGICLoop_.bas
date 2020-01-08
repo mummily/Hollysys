@@ -378,10 +378,94 @@ End Sub
 'History: 12-05-2019
 '-----------------------------------------------------------------------------------------------------------
 Private Sub WriteInput(sPouName As String)
+    Dim ElementID As Integer, SortID As Integer
+    
+    For index = 1 To 12
+        With ExcelInfo.HN_INPUT(index)
+            If .ElementID > ElementID Then
+                ElementID = .ElementID
+            End If
+        End With
+    Next
+    
+    For index = 1 To 24
+        With ExcelInfo.HN_BOX(index)
+            If .ElementID > ElementID Then
+                ElementID = .ElementID
+            End If
+            If .ElementSortID > SortID Then
+                SortID = .ElementSortID
+            End If
+        End With
+    Next
+    
+    For index = 1 To 12
+        With ExcelInfo.HN_OUTPUT(index)
+            If .ElementID > ElementID Then
+                ElementID = .ElementID
+            End If
+            If .ElementSortID > SortID Then
+                SortID = .ElementSortID
+            End If
+        End With
+    Next
+    
     ' ‰»Î –¥»ÎXML
     For index = 1 To 12
         With ExcelInfo.HN_INPUT(index)
-            If .LISRC <> "" And .LISRC <> "--.--" Then
+            If .LISRC Like "*.PVFL(0)" Or .LISRC Like "*.PVFL(1)" Then
+                Dim liSrcPrefix As String
+                liSrcPrefix = Left(.LISRC, Len(.LISRC) - 8)
+                
+                Dim liSrcSuffix As String
+                liSrcSuffix = Mid(.LISRC, Len(.LISRC) - 1, 1)
+                
+                ElementID = ElementID + 1
+                
+                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+                POU.WriteLine "<id>" & ElementID & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X - 2 & "," & .Element_Y + 1 & "</AT_position>"
+                POU.WriteLine "<text>" & liSrcPrefix & ".FBKON" & "</text>"
+                POU.WriteLine "<Comment>?????</Comment>"
+                POU.WriteLine "<negate>false</negate>"
+                POU.WriteLine "<ttype>4</ttype>"
+                POU.WriteLine "<Flag>FALSE</Flag>"
+                POU.WriteLine "</element>"
+                
+                ElementID = ElementID + 1
+                
+                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+                POU.WriteLine "<id>" & ElementID & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X - 2 & "," & .Element_Y + 2 & "</AT_position>"
+                POU.WriteLine "<text>" & liSrcPrefix & ".FBKOF" & "</text>"
+                POU.WriteLine "<Comment>?????</Comment>"
+                POU.WriteLine "<negate>false</negate>"
+                POU.WriteLine "<ttype>4</ttype>"
+                POU.WriteLine "<Flag>FALSE</Flag>"
+                POU.WriteLine "</element>"
+                
+                SortID = SortID + 1
+                
+                POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+                POU.WriteLine "<id>" & .ElementID & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
+                POU.WriteLine "<isinst>TRUE</isinst>"
+                POU.WriteLine "<text></text>"
+                POU.WriteLine "<AT_type>AND</AT_type>"
+                POU.WriteLine "<typetext>BT_FB</typetext>"
+                POU.WriteLine "<ttype>9</ttype>"
+                POU.WriteLine "<sortid>" & SortID & "</sortid>"
+
+                If liSrcSuffix = "0" Then
+                    POU.WriteLine "<input inputid=""" & ElementID - 1 & """ inputidx=""0"" negate=""True"" visible=""true"" pinname=""" & sPinname & """/>"
+                    POU.WriteLine "<input inputid=""" & ElementID & """ inputidx=""0"" negate=""False"" visible=""true"" pinname=""" & sPinname & """/>"
+                Else
+                    POU.WriteLine "<input inputid=""" & ElementID - 1 & """ inputidx=""0"" negate=""False"" visible=""true"" pinname=""" & sPinname & """/>"
+                    POU.WriteLine "<input inputid=""" & ElementID & """ inputidx=""0"" negate=""True"" visible=""true"" pinname=""" & sPinname & """/>"
+                End If
+
+                POU.WriteLine "</element>"
+            ElseIf .LISRC <> "" And .LISRC <> "--.--" Then
                 POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"

@@ -29,13 +29,34 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>2</id>
-<AT_position>13,8</AT_position>
-<text>12XV0131.PVFL(0)</text>
+<id>30</id>
+<AT_position>11,9</AT_position>
+<text>12XV0131.FBKON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>31</id>
+<AT_position>11,10</AT_position>
+<text>12XV0131.FBKOF</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>2</id>
+<AT_position>13,8</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>15</sortid>
+<input inputid="30" inputidx="0" negate="True" visible="true" pinname=""/>
+<input inputid="31" inputidx="0" negate="False" visible="true" pinname=""/>
 </element>
 <element type="input">
 <id>3</id>
@@ -47,22 +68,64 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>4</id>
-<AT_position>13,20</AT_position>
-<text>12XV0120.PVFL(1)</text>
+<id>32</id>
+<AT_position>11,21</AT_position>
+<text>12XV0120.FBKON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>5</id>
-<AT_position>13,26</AT_position>
-<text>12XV0121.PVFL(1)</text>
+<id>33</id>
+<AT_position>11,22</AT_position>
+<text>12XV0120.FBKOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>4</id>
+<AT_position>13,20</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>16</sortid>
+<input inputid="32" inputidx="0" negate="False" visible="true" pinname=""/>
+<input inputid="33" inputidx="0" negate="True" visible="true" pinname=""/>
+</element>
+<element type="input">
+<id>34</id>
+<AT_position>11,27</AT_position>
+<text>12XV0121.FBKON</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>35</id>
+<AT_position>11,28</AT_position>
+<text>12XV0121.FBKOF</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>5</id>
+<AT_position>13,26</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>17</sortid>
+<input inputid="34" inputidx="0" negate="False" visible="true" pinname=""/>
+<input inputid="35" inputidx="0" negate="True" visible="true" pinname=""/>
 </element>
 <element type="input">
 <id>6</id>
@@ -74,13 +137,34 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>7</id>
-<AT_position>13,38</AT_position>
-<text>12XV0125.PVFL(1)</text>
+<id>36</id>
+<AT_position>11,39</AT_position>
+<text>12XV0125.FBKON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>37</id>
+<AT_position>11,40</AT_position>
+<text>12XV0125.FBKOF</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>7</id>
+<AT_position>13,38</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>18</sortid>
+<input inputid="36" inputidx="0" negate="False" visible="true" pinname=""/>
+<input inputid="37" inputidx="0" negate="True" visible="true" pinname=""/>
 </element>
 <element type="input">
 <id>9</id>

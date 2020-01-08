@@ -20,13 +20,34 @@ END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
-<id>1</id>
-<AT_position>13,2</AT_position>
-<text>K1103A.PVFL(1)</text>
+<id>5</id>
+<AT_position>11,3</AT_position>
+<text>K1103A.FBKON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>6</id>
+<AT_position>11,4</AT_position>
+<text>K1103A.FBKOF</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>1</id>
+<AT_position>13,2</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>2</sortid>
+<input inputid="5" inputidx="0" negate="False" visible="true" pinname=""/>
+<input inputid="6" inputidx="0" negate="True" visible="true" pinname=""/>
 </element>
 <element type="input">
 <id>2</id>

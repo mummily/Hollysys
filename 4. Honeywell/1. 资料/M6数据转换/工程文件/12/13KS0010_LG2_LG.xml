@@ -74,13 +74,34 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>7</id>
-<AT_position>13,38</AT_position>
-<text>16XV0002.PVFL(0)</text>
+<id>32</id>
+<AT_position>11,39</AT_position>
+<text>16XV0002.FBKON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>33</id>
+<AT_position>11,40</AT_position>
+<text>16XV0002.FBKOF</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>7</id>
+<AT_position>13,38</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>15</sortid>
+<input inputid="32" inputidx="0" negate="True" visible="true" pinname=""/>
+<input inputid="33" inputidx="0" negate="False" visible="true" pinname=""/>
 </element>
 <element type="input">
 <id>8</id>

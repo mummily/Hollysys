@@ -38,31 +38,94 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
+<id>24</id>
+<AT_position>11,15</AT_position>
+<text>12XV0231.FBKON</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>25</id>
+<AT_position>11,16</AT_position>
+<text>12XV0231.FBKOF</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
 <id>3</id>
 <AT_position>13,14</AT_position>
-<text>12XV0231.PVFL(0)</text>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>11</sortid>
+<input inputid="24" inputidx="0" negate="True" visible="true" pinname=""/>
+<input inputid="25" inputidx="0" negate="False" visible="true" pinname=""/>
+</element>
+<element type="input">
+<id>26</id>
+<AT_position>11,21</AT_position>
+<text>12XV0226.FBKON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
+<id>27</id>
+<AT_position>11,22</AT_position>
+<text>12XV0226.FBKOF</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
 <id>4</id>
 <AT_position>13,20</AT_position>
-<text>12XV0226.PVFL(0)</text>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>12</sortid>
+<input inputid="26" inputidx="0" negate="True" visible="true" pinname=""/>
+<input inputid="27" inputidx="0" negate="False" visible="true" pinname=""/>
+</element>
+<element type="input">
+<id>28</id>
+<AT_position>11,27</AT_position>
+<text>12XV0231.FBKON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>5</id>
-<AT_position>13,26</AT_position>
-<text>12XV0231.PVFL(0)</text>
+<id>29</id>
+<AT_position>11,28</AT_position>
+<text>12XV0231.FBKOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>5</id>
+<AT_position>13,26</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>13</sortid>
+<input inputid="28" inputidx="0" negate="True" visible="true" pinname=""/>
+<input inputid="29" inputidx="0" negate="False" visible="true" pinname=""/>
 </element>
 <element type="input">
 <id>6</id>

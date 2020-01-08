@@ -20,22 +20,64 @@ END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
-<id>1</id>
-<AT_position>13,2</AT_position>
-<text>13P1304A.PVFL(1)</text>
+<id>16</id>
+<AT_position>11,3</AT_position>
+<text>13P1304A.FBKON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>2</id>
-<AT_position>13,8</AT_position>
-<text>13P1304B.PVFL(1)</text>
+<id>17</id>
+<AT_position>11,4</AT_position>
+<text>13P1304A.FBKOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>1</id>
+<AT_position>13,2</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>8</sortid>
+<input inputid="16" inputidx="0" negate="False" visible="true" pinname=""/>
+<input inputid="17" inputidx="0" negate="True" visible="true" pinname=""/>
+</element>
+<element type="input">
+<id>18</id>
+<AT_position>11,9</AT_position>
+<text>13P1304B.FBKON</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>19</id>
+<AT_position>11,10</AT_position>
+<text>13P1304B.FBKOF</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
+<id>2</id>
+<AT_position>13,8</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>AND</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>9</sortid>
+<input inputid="18" inputidx="0" negate="False" visible="true" pinname=""/>
+<input inputid="19" inputidx="0" negate="True" visible="true" pinname=""/>
 </element>
 <element type="input">
 <id>3</id>
