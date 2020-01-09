@@ -1259,6 +1259,33 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
     
     Set DicStr = CreateObject("Scripting.Dictionary")
     DicStr.Add ".PVFL", ".DV"
+    
+    Dim dsKeys, dsItems
+    dsKeys = DicStr.Keys
+    dsItems = DicStr.Items
+    
+    Dim dsKey As String, dsItem As String
+    
+    If newLISRC <> "--.--" Then
+        For index = 0 To DicStr.Count - 1
+            dsKey = dsKeys(index)
+            dsItem = dsItems(index)
+            newLISRC = ReplaceSuffix(newLISRC, dsKey, dsItem)
+        Next
+    End If
+
+    ReplaceLISRCSuffix = ReplaceCommonSuffix(newLISRC)
+End Function
+
+'-----------------------------------------------------------------------------------------------------------
+' Purpose: Ìæ»»ºó×º
+' Remark:
+'-----------------------------------------------------------------------------------------------------------
+Private Function ReplaceCommonSuffix(str As String)
+    Dim newStr As String
+    newStr = str
+    
+    Set DicStr = CreateObject("Scripting.Dictionary")
     DicStr.Add ".SO", ".DI"
     DicStr.Add ".PVLOFL", ".ALIND"
     DicStr.Add ".PVLLFL", ".LLIND"
@@ -1274,30 +1301,39 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
     
     Dim dsKey As String, dsItem As String
     
-    If newLISRC <> "--.--" Then
-        If newLISRC Like "*.FL(*)" Or newLISRC Like "*.NN(*)" Then
-            newLISRC = Replace(newLISRC, ".", "_")
-            newLISRC = Replace(newLISRC, "(", "")
-            newLISRC = Replace(newLISRC, ")", "")
+    If newStr <> "--.--" Then
+        If newStr Like "*.FL(*)" Or newStr Like "*.NN(*)" Then
+            newStr = Replace(newStr, ".", "_")
+            newStr = Replace(newStr, "(", "")
+            newStr = Replace(newStr, ")", "")
         Else
             For index = 0 To DicStr.Count - 1
                 dsKey = dsKeys(index)
                 dsItem = dsItems(index)
-                
-                If dsKey = ".PVFL" Then
-                    If dsKey = Right(newLISRC, Len(dsKey)) Then
-                        newLISRC = Replace(newLISRC, dsKey, dsItem)
-                    End If
-                Else
-                    If dsKey = Right(newLISRC, Len(dsKey)) Or newLISRC Like "*" & dsKey & "(*)" Then
-                        newLISRC = Replace(newLISRC, dsKey, dsItem)
-                    End If
-                End If
+                newStr = ReplaceSuffix(newStr, dsKey, dsItem)
             Next
         End If
     End If
     
-    ReplaceLISRCSuffix = newLISRC
+    ReplaceCommonSuffix = newStr
+End Function
+
+
+Private Function ReplaceSuffix(str As String, strKey As String, strItem As String)
+    Dim newStr As String
+    newStr = str
+    
+    If strKey = ".PVFL" Then
+        If strKey = Right(newStr, Len(strKey)) Then
+            newStr = Replace(newStr, strKey, strItem)
+        End If
+    Else
+        If strKey = Right(newStr, Len(strKey)) Or newStr Like "*" & strKey & "(*)" Then
+            newStr = Replace(newStr, strKey, strItem)
+        End If
+    End If
+    
+    ReplaceSuffix = newStr
 End Function
 
 '-----------------------------------------------------------------------------------------------------------
@@ -1307,12 +1343,26 @@ End Function
 Private Function ReplaceLODSTNSuffix(LODSTN As String)
     Dim newLODSTN As String
     newLODSTN = LODSTN
+    
+    Set DicStr = CreateObject("Scripting.Dictionary")
+    DicStr.Add ".PVFL", ".DV"
+    DicStr.Add ".RESETFL", "_RS"
+    
+    Dim dsKeys, dsItems
+    dsKeys = DicStr.Keys
+    dsItems = DicStr.Items
+    
+    Dim dsKey As String, dsItem As String
+    
+    If newLODSTN <> "--.--" Then
+        For index = 0 To DicStr.Count - 1
+            dsKey = dsKeys(index)
+            dsItem = dsItems(index)
+            newLODSTN = ReplaceSuffix(newLODSTN, dsKey, dsItem)
+        Next
+    End If
 
-    newLODSTN = ReplaceLISRCSuffix(newLODSTN)
-    newLODSTN = Replace(newLODSTN, ".RESETFL", "_RS")
-    
-    ReplaceLODSTNSuffix = newLODSTN
-    
+    ReplaceLODSTNSuffix = ReplaceCommonSuffix(newLODSTN)
 End Function
 
 '-----------------------------------------------------------------------------------------------------------
