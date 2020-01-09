@@ -292,7 +292,7 @@ Private Sub InitVar(sPouName As String)
     ' 计时器变量
     For index = 1 To 24
         With ExcelInfo.HN_BOX(index)
-            If .ElementATType = "TON" Or .ElementATType = "TOF" Or .ElementATType = "TP" Then
+            If .ElementATType = "TON" Or .ElementATType = "TOF" Or .ElementATType = "TP" Or .ElementATType = "QOR2" Or .ElementATType = "QOR3" Then
                 Dim var As T_HN_VAR
                 
                 var.TT = .ElementATType
@@ -1389,6 +1389,12 @@ Sub WriteVar()
      
         .Sheets("TP").Select
         WriteTP
+        
+        .Sheets("QOR2").Select
+        WriteQOR ("QOR2")
+        
+        .Sheets("QOR3").Select
+        WriteQOR ("QOR3")
     End With
      
     ActiveWorkbook.Save
@@ -1475,6 +1481,29 @@ Private Sub WriteTP()
             arr(index, 8) = "0"
             arr(index, 9) = ""
             arr(index, 10) = "T#0ms"
+            
+            index = index + 1
+        End If
+    Next
+    
+    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).value = arr
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Purpose: 写入QOR2、QOR3的变量信息
+' Remark:
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Private Sub WriteQOR(strQOR As String)
+    Dim arr(1 To 1000, 1 To 10)
+    Dim index As Integer
+    index = 1
+    
+    For varindex = 1 To VarInfo.VarNum
+        If VarInfo.HN_VAR(varindex).TT = strQOR Then
+            arr(index, 1) = VarInfo.HN_VAR(varindex).PN
+            arr(index, 2) = ""
+            arr(index, 3) = ""
+            arr(index, 4) = VarInfo.HN_VAR(varindex).SN
             
             index = index + 1
         End If
