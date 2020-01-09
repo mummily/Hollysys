@@ -1259,6 +1259,10 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
     
     If ".PVFL" = Right(newLISRC, 5) Then
         newLISRC = Replace(newLISRC, ".PVFL", ".DV")
+    ElseIf ".OP" = Right(newLISRC, 3) Then
+        If "UAO" = NameType(Left(newLISRC, Len(newLISRC) - 3)) Then
+            newLISRC = ReplaceSuffix(newLISRC, ".OP", ".AI")
+        End If
     Else
         newLISRC = ReplaceSuffix(newLISRC, ".PV", ".AV")
         newLISRC = ReplaceCommonSuffix(newLISRC)
@@ -1327,6 +1331,10 @@ Private Function ReplaceLODSTNSuffix(LODSTN As String)
     
     If ".PVFL" = Right(newLODSTN, 5) Then
         newLODSTN = Replace(newLODSTN, ".PVFL", ".DI")
+    ElseIf ".OP" = Right(newLODSTN, 3) Then
+        If "UAO" = NameType(Left(newLODSTN, Len(newLODSTN) - 3)) Then
+            newLODSTN = ReplaceSuffix(newLODSTN, ".OP", ".AI")
+        End If
     Else
         newLODSTN = ReplaceSuffix(newLODSTN, ".PV", ".AI")
         newLODSTN = ReplaceSuffix(newLODSTN, ".RESETFL", "_RS")

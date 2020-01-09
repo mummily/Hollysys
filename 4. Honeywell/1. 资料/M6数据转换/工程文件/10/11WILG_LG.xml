@@ -58,7 +58,7 @@ END_VAR]]>
 <element type="output">
 <id>5</id>
 <position>23,2</position>
-<text>11WISA0103_AO.OP</text>
+<text>11WISA0103_AO.AI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -70,7 +70,7 @@ END_VAR]]>
 <element type="output">
 <id>6</id>
 <position>23,8</position>
-<text>11WISA0203_AO.OP</text>
+<text>11WISA0203_AO.AI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -82,7 +82,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>23,14</position>
-<text>11WISA0104_AO.OP</text>
+<text>11WISA0104_AO.AI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -94,7 +94,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>23,20</position>
-<text>11WISA0204_AO.OP</text>
+<text>11WISA0204_AO.AI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
