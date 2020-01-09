@@ -1257,25 +1257,15 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
     Dim newLISRC As String
     newLISRC = LISRC
     
-    Set DicStr = CreateObject("Scripting.Dictionary")
-    DicStr.Add ".PVFL", ".DV"
-    DicStr.Add ".PV", ".AV"
-    
-    Dim dsKeys, dsItems
-    dsKeys = DicStr.Keys
-    dsItems = DicStr.Items
-    
-    Dim dsKey As String, dsItem As String
-    
-    If newLISRC <> "--.--" Then
-        For index = 0 To DicStr.Count - 1
-            dsKey = dsKeys(index)
-            dsItem = dsItems(index)
-            newLISRC = ReplaceSuffix(newLISRC, dsKey, dsItem)
-        Next
+    If ".PVFL" = Right(newLISRC, 5) Then
+        newLISRC = Replace(newLISRC, ".PVFL", ".DV")
+    Else
+        newLISRC = ReplaceSuffix(newLISRC, ".PV", ".AV")
+        newLISRC = ReplaceCommonSuffix(newLISRC)
     End If
 
-    ReplaceLISRCSuffix = ReplaceCommonSuffix(newLISRC)
+    ReplaceLISRCSuffix = newLISRC
+    
 End Function
 
 '-----------------------------------------------------------------------------------------------------------
@@ -1286,33 +1276,30 @@ Private Function ReplaceCommonSuffix(str As String)
     Dim newStr As String
     newStr = str
     
-    Set DicStr = CreateObject("Scripting.Dictionary")
-    DicStr.Add ".SO", ".DI"
-    DicStr.Add ".PVLOFL", ".ALIND"
-    DicStr.Add ".PVLLFL", ".LLIND"
-    DicStr.Add ".PVHIFL", ".AHIND"
-    DicStr.Add ".PVHHFL", ".HHIND"
-    DicStr.Add ".I0", ".INOF"
-    DicStr.Add ".I1", ".INON"
-    
-    Dim dsKeys, dsItems
-    dsKeys = DicStr.Keys
-    dsItems = DicStr.Items
-    
-    Dim dsKey As String, dsItem As String
-    
-    If newStr <> "--.--" Then
-        If newStr Like "*.FL(*)" Or newStr Like "*.NN(*)" Then
-            newStr = Replace(newStr, ".", "_")
-            newStr = Replace(newStr, "(", "")
-            newStr = Replace(newStr, ")", "")
-        Else
-            For index = 0 To DicStr.Count - 1
-                dsKey = dsKeys(index)
-                dsItem = dsItems(index)
-                newStr = ReplaceSuffix(newStr, dsKey, dsItem)
-            Next
-        End If
+    If newStr Like "*.FL(*)" Or newStr Like "*.NN(*)" Then
+        newStr = Replace(newStr, ".", "_")
+        newStr = Replace(newStr, "(", "")
+        newStr = Replace(newStr, ")", "")
+    ElseIf newStr <> "--.--" Then
+        Set DicStr = CreateObject("Scripting.Dictionary")
+        DicStr.Add ".SO", ".DI"
+        DicStr.Add ".PVLOFL", ".ALIND"
+        DicStr.Add ".PVLLFL", ".LLIND"
+        DicStr.Add ".PVHIFL", ".AHIND"
+        DicStr.Add ".PVHHFL", ".HHIND"
+        DicStr.Add ".I0", ".INOF"
+        DicStr.Add ".I1", ".INON"
+        
+        Dim dsKeys, dsItems
+        dsKeys = DicStr.Keys
+        dsItems = DicStr.Items
+        
+        Dim dsKey As String, dsItem As String
+        For index = 0 To DicStr.Count - 1
+            dsKey = dsKeys(index)
+            dsItem = dsItems(index)
+            newStr = ReplaceSuffix(newStr, dsKey, dsItem)
+        Next
     End If
     
     ReplaceCommonSuffix = newStr
@@ -1323,14 +1310,8 @@ Private Function ReplaceSuffix(str As String, strKey As String, strItem As Strin
     Dim newStr As String
     newStr = str
     
-    If strKey = ".PVFL" Then
-        If strKey = Right(newStr, Len(strKey)) Then
-            newStr = Replace(newStr, strKey, strItem)
-        End If
-    Else
-        If strKey = Right(newStr, Len(strKey)) Or newStr Like "*" & strKey & "(*)" Then
-            newStr = Replace(newStr, strKey, strItem)
-        End If
+    If strKey = Right(newStr, Len(strKey)) Or newStr Like "*" & strKey & "(*)" Then
+        newStr = Replace(newStr, strKey, strItem)
     End If
     
     ReplaceSuffix = newStr
@@ -1344,26 +1325,15 @@ Private Function ReplaceLODSTNSuffix(LODSTN As String)
     Dim newLODSTN As String
     newLODSTN = LODSTN
     
-    Set DicStr = CreateObject("Scripting.Dictionary")
-    DicStr.Add ".PVFL", ".DI"
-    DicStr.Add ".PV", ".AI"
-    DicStr.Add ".RESETFL", "_RS"
-    
-    Dim dsKeys, dsItems
-    dsKeys = DicStr.Keys
-    dsItems = DicStr.Items
-    
-    Dim dsKey As String, dsItem As String
-    
-    If newLODSTN <> "--.--" Then
-        For index = 0 To DicStr.Count - 1
-            dsKey = dsKeys(index)
-            dsItem = dsItems(index)
-            newLODSTN = ReplaceSuffix(newLODSTN, dsKey, dsItem)
-        Next
+    If ".PVFL" = Right(newLODSTN, 5) Then
+        newLODSTN = Replace(newLODSTN, ".PVFL", ".DI")
+    Else
+        newLODSTN = ReplaceSuffix(newLODSTN, ".PV", ".AI")
+        newLODSTN = ReplaceSuffix(newLODSTN, ".RESETFL", "_RS")
+        newLODSTN = ReplaceCommonSuffix(newLODSTN)
     End If
 
-    ReplaceLODSTNSuffix = ReplaceCommonSuffix(newLODSTN)
+    ReplaceLODSTNSuffix = newLODSTN
 End Function
 
 '-----------------------------------------------------------------------------------------------------------
