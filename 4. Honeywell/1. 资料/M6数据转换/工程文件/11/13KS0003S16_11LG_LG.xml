@@ -295,7 +295,7 @@ END_VAR]]>
 <element type="output">
 <id>27</id>
 <position>61,8</position>
-<text>16QSL0014_FL.DV</text>
+<text>16QSL0014_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -307,7 +307,7 @@ END_VAR]]>
 <element type="output">
 <id>28</id>
 <position>61,20</position>
-<text>16PV0008B_FL.DV</text>
+<text>16PV0008B_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -319,7 +319,7 @@ END_VAR]]>
 <element type="output">
 <id>29</id>
 <position>61,29</position>
-<text>16GSC0304_FL.DV</text>
+<text>16GSC0304_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -331,7 +331,7 @@ END_VAR]]>
 <element type="output">
 <id>30</id>
 <position>61,38</position>
-<text>16PVGSC0008B_FL.DV</text>
+<text>16PVGSC0008B_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -343,7 +343,7 @@ END_VAR]]>
 <element type="output">
 <id>31</id>
 <position>61,44</position>
-<text>16GSO0304_FL.DV</text>
+<text>16GSO0304_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

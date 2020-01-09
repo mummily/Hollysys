@@ -426,7 +426,7 @@ END_VAR]]>
 <element type="output">
 <id>37</id>
 <position>76,2</position>
-<text>31HS1US04.DV</text>
+<text>31HS1US04.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -438,7 +438,7 @@ END_VAR]]>
 <element type="output">
 <id>38</id>
 <position>76,8</position>
-<text>31HS2US04.DV</text>
+<text>31HS2US04.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

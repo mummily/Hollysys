@@ -58,7 +58,7 @@ END_VAR]]>
 <element type="output">
 <id>5</id>
 <position>23,2</position>
-<text>13UZ0010B_ONDLY.DV</text>
+<text>13UZ0010B_ONDLY.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -70,7 +70,7 @@ END_VAR]]>
 <element type="output">
 <id>6</id>
 <position>23,8</position>
-<text>13UZ0010E_ONDLY.DV</text>
+<text>13UZ0010E_ONDLY.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -82,7 +82,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>23,14</position>
-<text>13UZ0010H_ONDLY.DV</text>
+<text>13UZ0010H_ONDLY.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

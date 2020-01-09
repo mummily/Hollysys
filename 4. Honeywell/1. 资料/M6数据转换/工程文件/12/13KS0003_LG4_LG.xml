@@ -140,7 +140,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>31,2</position>
-<text>KS0317_KS04START.DV</text>
+<text>KS0317_KS04START.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -152,7 +152,7 @@ END_VAR]]>
 <element type="output">
 <id>14</id>
 <position>31,8</position>
-<text>KS0318_KS04STOP.DV</text>
+<text>KS0318_KS04STOP.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -164,7 +164,7 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>31,14</position>
-<text>KS1019_KS04STOP.DV</text>
+<text>KS1019_KS04STOP.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -176,7 +176,7 @@ END_VAR]]>
 <element type="output">
 <id>16</id>
 <position>31,20</position>
-<text>KS0317_KS05START.DV</text>
+<text>KS0317_KS05START.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -188,7 +188,7 @@ END_VAR]]>
 <element type="output">
 <id>17</id>
 <position>31,26</position>
-<text>KS0318_KS05STOP.DV</text>
+<text>KS0318_KS05STOP.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -200,7 +200,7 @@ END_VAR]]>
 <element type="output">
 <id>18</id>
 <position>31,32</position>
-<text>KS1019_KS05STOP.DV</text>
+<text>KS1019_KS05STOP.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

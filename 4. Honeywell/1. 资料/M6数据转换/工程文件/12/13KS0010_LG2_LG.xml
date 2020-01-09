@@ -302,7 +302,7 @@ END_VAR]]>
 <element type="output">
 <id>26</id>
 <position>46,28</position>
-<text>16UZ0001_IN.DV</text>
+<text>16UZ0001_IN.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -314,7 +314,7 @@ END_VAR]]>
 <element type="output">
 <id>27</id>
 <position>46,41</position>
-<text>16XV02_P8A_KS10.DV</text>
+<text>16XV02_P8A_KS10.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -326,7 +326,7 @@ END_VAR]]>
 <element type="output">
 <id>28</id>
 <position>46,56</position>
-<text>16GSC0007_FL.DV</text>
+<text>16GSC0007_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -338,7 +338,7 @@ END_VAR]]>
 <element type="output">
 <id>29</id>
 <position>46,62</position>
-<text>16GSO0003_FL.DV</text>
+<text>16GSO0003_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -350,7 +350,7 @@ END_VAR]]>
 <element type="output">
 <id>30</id>
 <position>46,68</position>
-<text>16GSO0004_FL.DV</text>
+<text>16GSO0004_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -362,7 +362,7 @@ END_VAR]]>
 <element type="output">
 <id>31</id>
 <position>46,50</position>
-<text>16PIRCS0008B_CAS.DV</text>
+<text>16PIRCS0008B_CAS.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

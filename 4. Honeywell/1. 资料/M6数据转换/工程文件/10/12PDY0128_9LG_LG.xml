@@ -165,7 +165,7 @@ END_VAR]]>
 <element type="output">
 <id>14</id>
 <position>46,2</position>
-<text>12PC0127_SEL.DV</text>
+<text>12PC0127_SEL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -177,7 +177,7 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>46,8</position>
-<text>12PDC0128_SEL.DV</text>
+<text>12PDC0128_SEL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

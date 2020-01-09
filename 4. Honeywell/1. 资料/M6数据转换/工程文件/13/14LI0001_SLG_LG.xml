@@ -241,7 +241,7 @@ END_VAR]]>
 <element type="output">
 <id>22</id>
 <position>31,32</position>
-<text>14LAH0001.DV</text>
+<text>14LAH0001.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -253,7 +253,7 @@ END_VAR]]>
 <element type="output">
 <id>23</id>
 <position>31,50</position>
-<text>14LAL0001.DV</text>
+<text>14LAL0001.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

@@ -112,7 +112,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>23,2</position>
-<text>13FALL9001A_FL.DV</text>
+<text>13FALL9001A_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -124,7 +124,7 @@ END_VAR]]>
 <element type="output">
 <id>12</id>
 <position>23,8</position>
-<text>13FALL9001B_FL.DV</text>
+<text>13FALL9001B_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -136,7 +136,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>23,14</position>
-<text>30PALLL0002.DV</text>
+<text>30PALLL0002.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

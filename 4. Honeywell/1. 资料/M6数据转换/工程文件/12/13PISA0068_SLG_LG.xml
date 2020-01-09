@@ -217,7 +217,7 @@ END_VAR]]>
 <element type="output">
 <id>20</id>
 <position>31,26</position>
-<text>13PAHH0068.DV</text>
+<text>13PAHH0068.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -229,7 +229,7 @@ END_VAR]]>
 <element type="output">
 <id>21</id>
 <position>31,44</position>
-<text>13PALL0068.DV</text>
+<text>13PALL0068.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

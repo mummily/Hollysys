@@ -207,7 +207,7 @@ END_VAR]]>
 <element type="output">
 <id>18</id>
 <position>46,14</position>
-<text>13PC0040_SW1_SEL.DV</text>
+<text>13PC0040_SW1_SEL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

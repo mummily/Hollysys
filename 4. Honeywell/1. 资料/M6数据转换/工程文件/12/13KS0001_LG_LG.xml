@@ -86,7 +86,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>31,2</position>
-<text>13XS0003A_FL.DV</text>
+<text>13XS0003A_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -98,7 +98,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>31,8</position>
-<text>13XS0003B_FL.DV</text>
+<text>13XS0003B_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

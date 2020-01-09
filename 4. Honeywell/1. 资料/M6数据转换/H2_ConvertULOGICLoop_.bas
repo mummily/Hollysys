@@ -1259,6 +1259,7 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
     
     Set DicStr = CreateObject("Scripting.Dictionary")
     DicStr.Add ".PVFL", ".DV"
+    DicStr.Add ".PV", ".AV"
     
     Dim dsKeys, dsItems
     dsKeys = DicStr.Keys
@@ -1291,7 +1292,6 @@ Private Function ReplaceCommonSuffix(str As String)
     DicStr.Add ".PVLLFL", ".LLIND"
     DicStr.Add ".PVHIFL", ".AHIND"
     DicStr.Add ".PVHHFL", ".HHIND"
-    DicStr.Add ".PV", ".AV"
     DicStr.Add ".I0", ".INOF"
     DicStr.Add ".I1", ".INON"
     
@@ -1345,7 +1345,8 @@ Private Function ReplaceLODSTNSuffix(LODSTN As String)
     newLODSTN = LODSTN
     
     Set DicStr = CreateObject("Scripting.Dictionary")
-    DicStr.Add ".PVFL", ".DV"
+    DicStr.Add ".PVFL", ".DI"
+    DicStr.Add ".PV", ".AI"
     DicStr.Add ".RESETFL", "_RS"
     
     Dim dsKeys, dsItems
