@@ -1427,7 +1427,7 @@ Private Sub WriteTOF()
         End If
     Next
 
-    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).value = arr
+    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).Value = arr
 End Sub
 
 
@@ -1457,7 +1457,7 @@ Private Sub WriteTON()
         End If
     Next
 
-    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).value = arr
+    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).Value = arr
 End Sub
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -1486,7 +1486,7 @@ Private Sub WriteTP()
         End If
     Next
     
-    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).value = arr
+    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).Value = arr
 End Sub
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -1509,5 +1509,5 @@ Private Sub WriteQOR(strQOR As String)
         End If
     Next
     
-    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).value = arr
+    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).Value = arr
 End Sub

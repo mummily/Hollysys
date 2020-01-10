@@ -30,7 +30,7 @@ Sub E1_ConvertDataBase()
     Dim ThisChalRD As Variant
     Dim NextChalRD As Variant
     Dim LastChalRD As Variant
-    
+    Dim PVALGID As String 'UREGPV类型
     '0---------------------------------------------------------------初始化设备号通道号
     For i = 10 To 30
         dn_arr(i) = 10
@@ -267,18 +267,21 @@ Sub E1_ConvertDataBase()
         ii = ii + 1 '行计数
     Next
     
-    'UREGPV转化为REAL
-    For i = 2 To UBound(UREGPV_arr, 1)
-        REAL_arr(ii, REAL("PN")) = UREGPV_arr(i, UREGPV("NAME")) '点名
-        REAL_arr(ii, REAL("DS")) = UREGPV_arr(i, UREGPV("PTDESC")) '点描述
-        REAL_arr(ii, REAL("DT")) = "REAL" '数据类型
-        REAL_arr(ii, REAL("MD")) = UREGPV_arr(i, UREGPV("PVEULO")) '下限
-        REAL_arr(ii, REAL("MU")) = UREGPV_arr(i, UREGPV("PVEUHI")) '上限
-        REAL_arr(ii, REAL("UT")) = UREGPV_arr(i, UREGPV("EUDESC")) '量纲
-        REAL_arr(ii, REAL("OF")) = DelDit(UREGPV_arr(i, UREGPV("PVFORMAT"))) '小数位数
-        REAL_arr(ii, REAL("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))  '站号
-        ii = ii + 1 '行计数
-    Next
+'    'UREGPV转化为REAL
+'    For i = 2 To UBound(UREGPV_arr, 1)
+'        PVALGID = UREGPV_arr(i, UREGPV("PVALGID"))
+'        If PVALGID <> "CALCULTR" Then
+'            REAL_arr(ii, REAL("PN")) = UREGPV_arr(i, UREGPV("NAME")) '点名
+'            REAL_arr(ii, REAL("DS")) = UREGPV_arr(i, UREGPV("PTDESC")) '点描述
+'            REAL_arr(ii, REAL("DT")) = "REAL" '数据类型
+'            REAL_arr(ii, REAL("MD")) = UREGPV_arr(i, UREGPV("PVEULO")) '下限
+'            REAL_arr(ii, REAL("MU")) = UREGPV_arr(i, UREGPV("PVEUHI")) '上限
+'            REAL_arr(ii, REAL("UT")) = UREGPV_arr(i, UREGPV("EUDESC")) '量纲
+'            REAL_arr(ii, REAL("OF")) = DelDit(UREGPV_arr(i, UREGPV("PVFORMAT"))) '小数位数
+'            REAL_arr(ii, REAL("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))  '站号
+'            ii = ii + 1 '行计数
+'        End If
+'    Next
     
     'ULOGIC变量NN转为转化为REAL，每个变量增加NN1~NN8
     For i = 2 To UBound(ULOGIC_arr, 1)
@@ -296,18 +299,23 @@ Sub E1_ConvertDataBase()
     Next
     
     '1-06--------------------转换AM
-    'ii = 3 '第三行开始
-    'For i = 2 To UBound(UREGPV_arr, 1)
-    '
-    '        AM_arr(ii, AM("PN")) = UREGPV_arr(i, UREGPV("NAME")) '点名
-    '        AM_arr(ii, AM("DS")) = UREGPV_arr(i, UREGPV("PTDESC")) '点描述
-    '        AM_arr(ii, AM("MD")) = UREGPV_arr(i, UREGPV("PVEULO")) '下限
-    '        AM_arr(ii, AM("MU")) = UREGPV_arr(i, UREGPV("PVEUHI")) '上限
-    '        AM_arr(ii, AM("UT")) = UREGPV_arr(i, UREGPV("EUDESC")) '量纲
-    '        AM_arr(ii, AM("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))  '站号
-    '
-    '        ii = ii + 1 '行计数
-    'Next
+    ii = 3 '第三行开始
+    For i = 2 To UBound(UREGPV_arr, 1)
+           
+                AM_arr(ii, AM("PN")) = UREGPV_arr(i, UREGPV("NAME")) '点名
+                AM_arr(ii, AM("DS")) = UREGPV_arr(i, UREGPV("PTDESC")) '点描述
+                AM_arr(ii, AM("MD")) = UREGPV_arr(i, UREGPV("PVEULO")) '下限
+                AM_arr(ii, AM("MU")) = UREGPV_arr(i, UREGPV("PVEUHI")) '上限
+                
+'                AM_arr(ii, AM("MD")) = UREGPV_arr(i, UREGPV("PVEXEULO")) '下限
+'                AM_arr(ii, AM("MU")) = UREGPV_arr(i, UREGPV("PVEXEUHI")) '上限
+                
+                AM_arr(ii, AM("UT")) = UREGPV_arr(i, UREGPV("EUDESC")) '量纲
+                AM_arr(ii, AM("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))  '站号
+        
+                ii = ii + 1 '行计数
+            
+    Next
     
     
     '1-07--------------------转换UREGC PID ,MAN,自定义块
@@ -392,64 +400,73 @@ Sub E1_ConvertDataBase()
     Next
     
     '1-08--------------------转换UREGPV 自定义块
-    'j1 = 3 '第三行开始
-    'j2 = 3 '第三行开始
-    'j3 = 3 '第三行开始
-    'j4 = 3 '第三行开始
-    'j5 = 3 '第三行开始
-    'j6 = 3 '第三行开始
-    'j7 = 3 '第三行开始
-    'j8 = 3 '第三行开始
-    'For i = 2 To UBound(UREGPV_arr, 1)
-    '    If UREGPV_arr(i, UREGPV("PVALGID")) = "FLOWCOMP" Then
-    '        FLOWCOMP_arr(j1, FLOWCOMP("PN")) = UREGPV_arr(i, UREGPV("NAME"))  '点名
-    '        FLOWCOMP_arr(j1, FLOWCOMP("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
-    '        FLOWCOMP_arr(j1, FLOWCOMP("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
-    '        FLOWCOMP_arr(j1, FLOWCOMP("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
-    '        j1 = j1 + 1 '行计数
-    '    End If
-    '
-    '    If UREGPV_arr(i, UREGPV("PVALGID")) = "GENLIN" Then
-    '        GENLIN_arr(j2, GENLIN("PN")) = UREGPV_arr(i, UREGPV("NAME"))  '点名
-    '        GENLIN_arr(j2, GENLIN("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
-    '        GENLIN_arr(j2, GENLIN("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
-    '        GENLIN_arr(j2, GENLIN("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
-    '        j2 = j2 + 1 '行计数
-    '    End If
-    '
-    '    If UREGPV_arr(i, UREGPV("PVALGID")) = "HILOAVG" Then
-    '        HILOAVG_arr(j3, HILOAVG("PN")) = UREGPV_arr(i, UREGPV("NAME"))  '点名
-    '        HILOAVG_arr(j3, HILOAVG("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
-    '        HILOAVG_arr(j3, HILOAVG("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
-    '        HILOAVG_arr(j3, HILOAVG("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
-    '        j3 = j3 + 1 '行计数
-    '    End If
-    '
-    '    If UREGPV_arr(i, UREGPV("PVALGID")) = "MIDOF3" Then
-    '        MIDOF3_arr(j4, MIDOF3("PN")) = UREGPV_arr(i, UREGPV("NAME"))  '点名
-    '        MIDOF3_arr(j4, MIDOF3("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
-    '        MIDOF3_arr(j4, MIDOF3("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
-    '        MIDOF3_arr(j4, MIDOF3("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
-    '        j4 = j4 + 1 '行计数
-    '    End If
-    '
-    '    If UREGPV_arr(i, UREGPV("PVALGID")) = "TOTALIZR" Then
-    '        TOTALIZR_arr(j5, TOTALIZR("PN")) = UREGPV_arr(i, UREGPV("NAME"))  '点名
-    '        TOTALIZR_arr(j5, TOTALIZR("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
-    '        TOTALIZR_arr(j5, TOTALIZR("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
-    '        TOTALIZR_arr(j5, TOTALIZR("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
-    '        j5 = j5 + 1 '行计数
-    '    End If
-    '
-    '    If UREGPV_arr(i, UREGPV("PVALGID")) = "VDTLDLAG" Then
-    '        VDTLDLAG_arr(j6, VDTLDLAG("PN")) = UREGPV_arr(i, UREGPV("NAME"))  '点名
-    '        VDTLDLAG_arr(j6, VDTLDLAG("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
-    '        VDTLDLAG_arr(j6, VDTLDLAG("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
-    '        VDTLDLAG_arr(j6, VDTLDLAG("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
-    '        j6 = j6 + 1 '行计数
-    '    End If
-    '
-    'Next
+    J1 = 3 '第三行开始
+    j2 = 3 '第三行开始
+    j3 = 3 '第三行开始
+    j4 = 3 '第三行开始
+    j5 = 3 '第三行开始
+    j6 = 3 '第三行开始
+    j7 = 3 '第三行开始
+    j8 = 3 '第三行开始
+    For i = 2 To UBound(UREGPV_arr, 1)
+        If UREGPV_arr(i, UREGPV("PVALGID")) = "FLOWCOMP" Then
+            FLOWCOMP_arr(J1, FLOWCOMP("PN")) = UREGPV_arr(i, UREGPV("NAME")) & "_OMP" '点名
+            FLOWCOMP_arr(J1, FLOWCOMP("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
+            FLOWCOMP_arr(J1, FLOWCOMP("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
+            FLOWCOMP_arr(J1, FLOWCOMP("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
+            J1 = J1 + 1 '行计数
+        End If
+    
+'        If UREGPV_arr(i, UREGPV("PVALGID")) = "GENLIN" Then
+'            GENLIN_arr(j2, GENLIN("PN")) = UREGPV_arr(i, UREGPV("NAME"))  '点名
+'            GENLIN_arr(j2, GENLIN("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
+'            GENLIN_arr(j2, GENLIN("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
+'            GENLIN_arr(j2, GENLIN("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
+'            j2 = j2 + 1 '行计数
+'        End If
+    
+        If UREGPV_arr(i, UREGPV("PVALGID")) = "HILOAVG" Then
+            HILOAVG_arr(j3, HILOAVG("PN")) = UREGPV_arr(i, UREGPV("NAME")) & "_AVG"  '点名
+            HILOAVG_arr(j3, HILOAVG("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
+            HILOAVG_arr(j3, HILOAVG("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
+            HILOAVG_arr(j3, HILOAVG("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
+            j3 = j3 + 1 '行计数
+        End If
+    
+        If UREGPV_arr(i, UREGPV("PVALGID")) = "MIDOF3" Then
+            MIDOF3_arr(j4, MIDOF3("PN")) = UREGPV_arr(i, UREGPV("NAME")) & "_OF3" '点名
+            MIDOF3_arr(j4, MIDOF3("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
+            MIDOF3_arr(j4, MIDOF3("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
+            MIDOF3_arr(j4, MIDOF3("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
+            j4 = j4 + 1 '行计数
+        End If
+    
+'        If UREGPV_arr(i, UREGPV("PVALGID")) = "TOTALIZR" Then
+'            TOTALIZR_arr(j5, TOTALIZR("PN")) = UREGPV_arr(i, UREGPV("NAME"))  '点名
+'            TOTALIZR_arr(j5, TOTALIZR("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
+'            TOTALIZR_arr(j5, TOTALIZR("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
+'            TOTALIZR_arr(j5, TOTALIZR("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
+'            j5 = j5 + 1 '行计数
+'        End If
+    
+        If UREGPV_arr(i, UREGPV("PVALGID")) = "TOTALIZR" Then
+            FLOWSUM_arr(j5, FLOWSUM("PN")) = UREGPV_arr(i, UREGPV("NAME")) & "_SUM" '点名
+            FLOWSUM_arr(j5, FLOWSUM("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
+            FLOWSUM_arr(j5, FLOWSUM("PVUT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
+            FLOWSUM_arr(j5, FLOWSUM("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
+            j5 = j5 + 1 '行计数
+        End If
+    
+    
+        If UREGPV_arr(i, UREGPV("PVALGID")) = "VDTLDLAG" Then
+            VDTLDLAG_arr(j6, VDTLDLAG("PN")) = UREGPV_arr(i, UREGPV("NAME")) & "_LAG" '点名
+            VDTLDLAG_arr(j6, VDTLDLAG("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
+            VDTLDLAG_arr(j6, VDTLDLAG("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
+            VDTLDLAG_arr(j6, VDTLDLAG("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
+            j6 = j6 + 1 '行计数
+        End If
+    
+    Next
     '1-09--------------------转换DM
     ii = 3 '第三行开始
     'UREGPV转化为DM
@@ -462,6 +479,17 @@ Sub E1_ConvertDataBase()
             ii = ii + 1 '行计数
         End If
     Next
+
+    'UFLG转化为DM
+    For i = 2 To UBound(UFLG_arr, 1)
+  
+            DM_arr(ii, DM("PN")) = UFLG_arr(i, UFLG("NAME")) & "_RS" '点名
+            DM_arr(ii, DM("DS")) = UFLG_arr(i, UFLG("PTDESC")) '点描述
+            DM_arr(ii, DM("SN")) = SN(UFLG_arr(i, UFLG("NODENUM")))  '站号
+            ii = ii + 1 '行计数
+
+    Next
+    
     
     '1-10--------------------转换BOOL DS
     ii = 3 '第三行开始
@@ -474,7 +502,16 @@ Sub E1_ConvertDataBase()
             ii = ii + 1 '行计数
         Next
     Next
-    
+     'UREGPV变量TOTALIZR转为转化为BOOL
+    For i = 2 To UBound(UREGPV_arr, 1)
+        If UREGPV_arr(i, UREGPV("PVALGID")) = "TOTALIZR" Then
+            DS_arr(ii, DS("PN")) = UREGPV_arr(i, UREGPV("NAME")) & "_RS" '点名
+            DS_arr(ii, DS("DS")) = UREGPV_arr(i, UREGPV("PTDESC")) '点描述
+            DS_arr(ii, DS("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))  '站号
+            ii = ii + 1 '行计数
+        End If
+    Next
+     
     '1-11-----转换VAL2和MOT2
     ii = 3 '第三行开始
     jj = 3 '第三行开始
@@ -721,95 +758,110 @@ Sub E1_ConvertDataBase()
         .Cells(1, 1).Resize(UBound(SUMMER_arr(), 1), UBound(SUMMER_arr(), 2)) = SUMMER_arr
     End With
     
-    '    '2-15------删除旧表建立新表-FLOWCOMP
-    '    Application.DisplayAlerts = False '关闭删除工作表提示框
-    '    For Each sht In Workbooks(wb_name).Worksheets
-    '       If sht.Name = "FLOWCOMP" Then
-    '           sht.Delete
-    '       End If
-    '    Next
-    '    Sheets.Add After:=ActiveSheet
-    '    ActiveSheet.Name = "FLOWCOMP"
-    '
-    '    Sheets("FLOWCOMP").Select
-    '    With Sheets("FLOWCOMP")
-    '        .Cells(1, 1).Resize(UBound(FLOWCOMP_arr(), 1), UBound(FLOWCOMP_arr(), 2)) = FLOWCOMP_arr
-    '    End With
-    '
-    '    '2-16------删除旧表建立新表-GENLIN
-    '    Application.DisplayAlerts = False '关闭删除工作表提示框
-    '    For Each sht In Workbooks(wb_name).Worksheets
-    '       If sht.Name = "GENLIN" Then
-    '           sht.Delete
-    '       End If
-    '    Next
-    '    Sheets.Add After:=ActiveSheet
-    '    ActiveSheet.Name = "GENLIN"
-    '
-    '    Sheets("GENLIN").Select
-    '    With Sheets("GENLIN")
-    '        .Cells(1, 1).Resize(UBound(GENLIN_arr(), 1), UBound(GENLIN_arr(), 2)) = GENLIN_arr
-    '    End With
-    '
-    '    '2-17------删除旧表建立新表-HILOAVG
-    '    Application.DisplayAlerts = False '关闭删除工作表提示框
-    '    For Each sht In Workbooks(wb_name).Worksheets
-    '       If sht.Name = "HILOAVG" Then
-    '           sht.Delete
-    '       End If
-    '    Next
-    '    Sheets.Add After:=ActiveSheet
-    '    ActiveSheet.Name = "HILOAVG"
-    '
-    '    Sheets("HILOAVG").Select
-    '    With Sheets("HILOAVG")
-    '        .Cells(1, 1).Resize(UBound(HILOAVG_arr(), 1), UBound(HILOAVG_arr(), 2)) = HILOAVG_arr
-    '    End With
-    '
-    '    '2-18------删除旧表建立新表-MIDOF3
-    '    Application.DisplayAlerts = False '关闭删除工作表提示框
-    '    For Each sht In Workbooks(wb_name).Worksheets
-    '       If sht.Name = "MIDOF3" Then
-    '           sht.Delete
-    '       End If
-    '    Next
-    '    Sheets.Add After:=ActiveSheet
-    '    ActiveSheet.Name = "MIDOF3"
-    '
-    '    Sheets("MIDOF3").Select
-    '    With Sheets("MIDOF3")
-    '        .Cells(1, 1).Resize(UBound(MIDOF3_arr(), 1), UBound(MIDOF3_arr(), 2)) = MIDOF3_arr
-    '    End With
-    '
-    '    '2-19------删除旧表建立新表-TOTALIZR
-    '    Application.DisplayAlerts = False '关闭删除工作表提示框
-    '    For Each sht In Workbooks(wb_name).Worksheets
-    '       If sht.Name = "TOTALIZR" Then
-    '           sht.Delete
-    '       End If
-    '    Next
-    '    Sheets.Add After:=ActiveSheet
-    '    ActiveSheet.Name = "TOTALIZR"
-    '
-    '    Sheets("TOTALIZR").Select
-    '    With Sheets("TOTALIZR")
-    '        .Cells(1, 1).Resize(UBound(TOTALIZR_arr(), 1), UBound(TOTALIZR_arr(), 2)) = TOTALIZR_arr
-    '    End With
-    '
-    '    '2-20------删除旧表建立新表-VDTLDLAG
-    '    Application.DisplayAlerts = False '关闭删除工作表提示框
-    '    For Each sht In Workbooks(wb_name).Worksheets
-    '       If sht.Name = "VDTLDLAG" Then
-    '           sht.Delete
-    '       End If
-    '    Next
-    '    Sheets.Add After:=ActiveSheet
-    '    ActiveSheet.Name = "VDTLDLAG"
-    '
-    '    Sheets("VDTLDLAG").Select
-    '    With Sheets("VDTLDLAG")
-    '        .Cells(1, 1).Resize(UBound(VDTLDLAG_arr(), 1), UBound(VDTLDLAG_arr(), 2)) = VDTLDLAG_arr
-    '    End With
+        '2-15------删除旧表建立新表-FLOWCOMP
+        Application.DisplayAlerts = False '关闭删除工作表提示框
+        For Each sht In Workbooks(wb_name).Worksheets
+           If sht.NAME = "FLOWCOMP" Then
+               sht.Delete
+           End If
+        Next
+        Sheets.Add After:=ActiveSheet
+        ActiveSheet.NAME = "FLOWCOMP"
+    
+        Sheets("FLOWCOMP").Select
+        With Sheets("FLOWCOMP")
+            .Cells(1, 1).Resize(UBound(FLOWCOMP_arr(), 1), UBound(FLOWCOMP_arr(), 2)) = FLOWCOMP_arr
+        End With
+    
+'        '2-16------删除旧表建立新表-GENLIN
+'        Application.DisplayAlerts = False '关闭删除工作表提示框
+'        For Each sht In Workbooks(wb_name).Worksheets
+'           If sht.NAME = "GENLIN" Then
+'               sht.Delete
+'           End If
+'        Next
+'        Sheets.Add After:=ActiveSheet
+'        ActiveSheet.NAME = "GENLIN"
+'
+'        Sheets("GENLIN").Select
+'        With Sheets("GENLIN")
+'            .Cells(1, 1).Resize(UBound(GENLIN_arr(), 1), UBound(GENLIN_arr(), 2)) = GENLIN_arr
+'        End With
+    
+        '2-17------删除旧表建立新表-HILOAVG
+        Application.DisplayAlerts = False '关闭删除工作表提示框
+        For Each sht In Workbooks(wb_name).Worksheets
+           If sht.NAME = "HILOAVG" Then
+               sht.Delete
+           End If
+        Next
+        Sheets.Add After:=ActiveSheet
+        ActiveSheet.NAME = "HILOAVG"
+    
+        Sheets("HILOAVG").Select
+        With Sheets("HILOAVG")
+            .Cells(1, 1).Resize(UBound(HILOAVG_arr(), 1), UBound(HILOAVG_arr(), 2)) = HILOAVG_arr
+        End With
+    
+        '2-18------删除旧表建立新表-MIDOF3
+        Application.DisplayAlerts = False '关闭删除工作表提示框
+        For Each sht In Workbooks(wb_name).Worksheets
+           If sht.NAME = "MIDOF3" Then
+               sht.Delete
+           End If
+        Next
+        Sheets.Add After:=ActiveSheet
+        ActiveSheet.NAME = "MIDOF3"
+    
+        Sheets("MIDOF3").Select
+        With Sheets("MIDOF3")
+            .Cells(1, 1).Resize(UBound(MIDOF3_arr(), 1), UBound(MIDOF3_arr(), 2)) = MIDOF3_arr
+        End With
+    
+'        '2-19------删除旧表建立新表-TOTALIZR
+'        Application.DisplayAlerts = False '关闭删除工作表提示框
+'        For Each sht In Workbooks(wb_name).Worksheets
+'           If sht.NAME = "TOTALIZR" Then
+'               sht.Delete
+'           End If
+'        Next
+'        Sheets.Add After:=ActiveSheet
+'        ActiveSheet.NAME = "TOTALIZR"
+'
+'        Sheets("TOTALIZR").Select
+'        With Sheets("TOTALIZR")
+'            .Cells(1, 1).Resize(UBound(TOTALIZR_arr(), 1), UBound(TOTALIZR_arr(), 2)) = TOTALIZR_arr
+'        End With
+    
+        '2-20------删除旧表建立新表-VDTLDLAG
+        Application.DisplayAlerts = False '关闭删除工作表提示框
+        For Each sht In Workbooks(wb_name).Worksheets
+           If sht.NAME = "VDTLDLAG" Then
+               sht.Delete
+           End If
+        Next
+        Sheets.Add After:=ActiveSheet
+        ActiveSheet.NAME = "VDTLDLAG"
+    
+        Sheets("VDTLDLAG").Select
+        With Sheets("VDTLDLAG")
+            .Cells(1, 1).Resize(UBound(VDTLDLAG_arr(), 1), UBound(VDTLDLAG_arr(), 2)) = VDTLDLAG_arr
+        End With
+    
+        '2-20_1------删除旧表建立新表-FLOWSUM
+        Application.DisplayAlerts = False '关闭删除工作表提示框
+        For Each sht In Workbooks(wb_name).Worksheets
+           If sht.NAME = "FLOWSUM" Then
+               sht.Delete
+           End If
+        Next
+        Sheets.Add After:=ActiveSheet
+        ActiveSheet.NAME = "FLOWSUM"
+    
+        Sheets("FLOWSUM").Select
+        With Sheets("FLOWSUM")
+            .Cells(1, 1).Resize(UBound(FLOWSUM_arr(), 1), UBound(FLOWSUM_arr(), 2)) = FLOWSUM_arr
+        End With
     
     '2-21------删除旧表建立新表-DM
     Application.DisplayAlerts = False '关闭删除工作表提示框
@@ -870,12 +922,13 @@ Sub E1_ConvertDataBase()
     Workbooks(project_sjk).Sheets("MULDIV").Cells(1, 1).Resize(UBound(MULDIV_arr(), 1), UBound(MULDIV_arr(), 2)) = MULDIV_arr
     Workbooks(project_sjk).Sheets("SUMMER").Cells(1, 1).Resize(UBound(SUMMER_arr(), 1), UBound(SUMMER_arr(), 2)) = SUMMER_arr
     
-    'Workbooks(project_sjk).Sheets("FLOWCOMP").Cells(1, 1).Resize(UBound(FLOWCOMP_arr(), 1), UBound(FLOWCOMP_arr(), 2)) = FLOWCOMP_arr
-    'Workbooks(project_sjk).Sheets("GENLIN").Cells(1, 1).Resize(UBound(GENLIN_arr(), 1), UBound(GENLIN_arr(), 2)) = GENLIN_arr
-    'Workbooks(project_sjk).Sheets("HILOAVG").Cells(1, 1).Resize(UBound(HILOAVG_arr(), 1), UBound(HILOAVG_arr(), 2)) = HILOAVG_arr
-    'Workbooks(project_sjk).Sheets("MIDOF3").Cells(1, 1).Resize(UBound(MIDOF3_arr(), 1), UBound(MIDOF3_arr(), 2)) = MIDOF3_arr
-    'Workbooks(project_sjk).Sheets("TOTALIZR").Cells(1, 1).Resize(UBound(TOTALIZR_arr(), 1), UBound(TOTALIZR_arr(), 2)) = TOTALIZR_arr
-    'Workbooks(project_sjk).Sheets("VDTLDLAG").Cells(1, 1).Resize(UBound(VDTLDLAG_arr(), 1), UBound(VDTLDLAG_arr(), 2)) = VDTLDLAG_arr
+    Workbooks(project_sjk).Sheets("FLOWCOMP").Cells(1, 1).Resize(UBound(FLOWCOMP_arr(), 1), UBound(FLOWCOMP_arr(), 2)) = FLOWCOMP_arr
+'    Workbooks(project_sjk).Sheets("GENLIN").Cells(1, 1).Resize(UBound(GENLIN_arr(), 1), UBound(GENLIN_arr(), 2)) = GENLIN_arr
+    Workbooks(project_sjk).Sheets("HILOAVG").Cells(1, 1).Resize(UBound(HILOAVG_arr(), 1), UBound(HILOAVG_arr(), 2)) = HILOAVG_arr
+    Workbooks(project_sjk).Sheets("MIDOF3").Cells(1, 1).Resize(UBound(MIDOF3_arr(), 1), UBound(MIDOF3_arr(), 2)) = MIDOF3_arr
+'    Workbooks(project_sjk).Sheets("TOTALIZR").Cells(1, 1).Resize(UBound(TOTALIZR_arr(), 1), UBound(TOTALIZR_arr(), 2)) = TOTALIZR_arr
+    Workbooks(project_sjk).Sheets("VDTLDLAG").Cells(1, 1).Resize(UBound(VDTLDLAG_arr(), 1), UBound(VDTLDLAG_arr(), 2)) = VDTLDLAG_arr
+    Workbooks(project_sjk).Sheets("FLOWSUM").Cells(1, 1).Resize(UBound(FLOWSUM_arr(), 1), UBound(FLOWSUM_arr(), 2)) = FLOWSUM_arr
     Workbooks(project_sjk).Sheets("DM").Cells(1, 1).Resize(UBound(DM_arr(), 1), UBound(DM_arr(), 2)) = DM_arr
     Workbooks(project_sjk).Sheets("DS").Cells(1, 1).Resize(UBound(DS_arr(), 1), UBound(DS_arr(), 2)) = DS_arr
     
@@ -931,13 +984,13 @@ Sub InitDN()
                     If UAO_arr(i, UAO("NODENUM")) = NODENUM And UAO_arr(i, UAO("MODNUM")) = CStr(Column) Then
                         If UAO_arr(i, UAO("SLOTNUM")) <= 8 Then
                             AOArr(aoIndex).NODENUM = NODENUM
-                            AOArr(aoIndex).INDEX = Column
+                            AOArr(aoIndex).index = Column
                             AOArr(aoIndex).NAME = UAO_arr(i, UAO("NAME"))
                             AOArr(aoIndex).DN = DN
                             aoIndex = aoIndex + 1
                         Else
                             AOArr(aoIndex).NODENUM = NODENUM
-                            AOArr(aoIndex).INDEX = Column
+                            AOArr(aoIndex).index = Column
                             AOArr(aoIndex).NAME = UAO_arr(i, UAO("NAME"))
                             If IOREDOPT_Value = "REDUN" Then
                                 AOArr(aoIndex).DN = DN + 2
@@ -960,7 +1013,7 @@ Sub InitDN()
                 For i = 2 To UBound(UAI_arr, 1)
                     If UAI_arr(i, UAI("NODENUM")) = NODENUM And UAI_arr(i, UAI("MODNUM")) = CStr(Column) Then
                         AIArr(aiIndex).NODENUM = NODENUM
-                        AIArr(aiIndex).INDEX = Column
+                        AIArr(aiIndex).index = Column
                         AIArr(aiIndex).NAME = UAI_arr(i, UAI("NAME"))
                         AIArr(aiIndex).DN = DN
                         
@@ -978,7 +1031,7 @@ Sub InitDN()
                 For i = 2 To UBound(UDI_arr, 1)
                     If UDI_arr(i, UDI("NODENUM")) = NODENUM And UDI_arr(i, UDI("MODNUM")) = CStr(Column) Then
                         DIArr(diIndex).NODENUM = NODENUM
-                        DIArr(diIndex).INDEX = Column
+                        DIArr(diIndex).index = Column
                         DIArr(diIndex).NAME = UDI_arr(i, UDI("NAME"))
                         DIArr(diIndex).DN = DN
                         
@@ -997,13 +1050,13 @@ Sub InitDN()
                     If UDO_arr(i, UDO("NODENUM")) = NODENUM And UDO_arr(i, UDO("MODNUM")) = CStr(Column) Then
                         If UDO_arr(i, UDO("SLOTNUM")) <= 16 Then
                             DOArr(doIndex).NODENUM = NODENUM
-                            DOArr(doIndex).INDEX = Column
+                            DOArr(doIndex).index = Column
                             DOArr(doIndex).NAME = UDO_arr(i, UDO("NAME"))
                             DOArr(doIndex).DN = DN
                             doIndex = doIndex + 1
                         Else
                             DOArr(doIndex).NODENUM = NODENUM
-                            DOArr(doIndex).INDEX = Column
+                            DOArr(doIndex).index = Column
                             DOArr(doIndex).NAME = UDO_arr(i, UDO("NAME"))
                             If IOREDOPT_Value = "REDUN" Then
                                 DOArr(doIndex).DN = DN + 2
@@ -1042,13 +1095,13 @@ Sub InitDN()
                     If UAO_arr(i, UAO("NODENUM")) = NODENUM And UAO_arr(i, UAO("MODNUM")) = CStr(Column) Then
                         If UAO_arr(i, UAO("SLOTNUM")) <= 8 Then
                             AOArr(aoIndex).NODENUM = NODENUM
-                            AOArr(aoIndex).INDEX = Column
+                            AOArr(aoIndex).index = Column
                             AOArr(aoIndex).NAME = UAO_arr(i, UAO("NAME"))
                             AOArr(aoIndex).DN = DN
                             aoIndex = aoIndex + 1
                         Else
                             AOArr(aoIndex).NODENUM = NODENUM
-                            AOArr(aoIndex).INDEX = Column
+                            AOArr(aoIndex).index = Column
                             AOArr(aoIndex).NAME = UAO_arr(i, UAO("NAME"))
                             If IOREDOPT_Value = "REDUN" Then
                                 AOArr(aoIndex).DN = DN + 2
@@ -1070,7 +1123,7 @@ Sub InitDN()
                 For i = 2 To UBound(UAI_arr, 1)
                     If UAI_arr(i, UAI("NODENUM")) = NODENUM And UAI_arr(i, UAI("MODNUM")) = CStr(Column) Then
                         AIArr(aiIndex).NODENUM = NODENUM
-                        AIArr(aiIndex).INDEX = Column
+                        AIArr(aiIndex).index = Column
                         AIArr(aiIndex).NAME = UAI_arr(i, UAI("NAME"))
                         AIArr(aiIndex).DN = DN
 
@@ -1088,7 +1141,7 @@ Sub InitDN()
                 For i = 2 To UBound(UDI_arr, 1)
                     If UDI_arr(i, UDI("NODENUM")) = NODENUM And UDI_arr(i, UDI("MODNUM")) = CStr(Column) Then
                         DIArr(diIndex).NODENUM = NODENUM
-                        DIArr(diIndex).INDEX = Column
+                        DIArr(diIndex).index = Column
                         DIArr(diIndex).NAME = UDI_arr(i, UDI("NAME"))
                         DIArr(diIndex).DN = DN
 
@@ -1107,14 +1160,14 @@ Sub InitDN()
                     If UDO_arr(i, UDO("NODENUM")) = NODENUM And UDO_arr(i, UDO("MODNUM")) = CStr(Column) Then
                         If UDO_arr(i, UDO("SLOTNUM")) <= 16 Then
                             DOArr(doIndex).NODENUM = NODENUM
-                            DOArr(doIndex).INDEX = Column
+                            DOArr(doIndex).index = Column
                             DOArr(doIndex).NAME = UDO_arr(i, UDO("NAME"))
                             DOArr(doIndex).DN = DN
                             
                             doIndex = doIndex + 1
                         Else
                             DOArr(doIndex).NODENUM = NODENUM
-                            DOArr(doIndex).INDEX = Column
+                            DOArr(doIndex).index = Column
                             DOArr(doIndex).NAME = UDO_arr(i, UDO("NAME"))
                             If IOREDOPT_Value = "REDUN" Then
                                 DOArr(doIndex).DN = DN + 2
@@ -1157,34 +1210,34 @@ End Function
 'History: 12-26-2019
 '-----------------------------------------------------------------------------------------------------------
 Sub SetDN()
-    For INDEX = 1 To UBound(AI_arr, 1)
+    For index = 1 To UBound(AI_arr, 1)
         For arrIndex = 1 To UBound(AIArr, 1)
-            If AI_arr(INDEX, AI("PN")) <> "" And AI_arr(INDEX, AI("PN")) = AIArr(arrIndex).NAME Then
-                AI_arr(INDEX, AI("DN")) = AIArr(arrIndex).DN
+            If AI_arr(index, AI("PN")) <> "" And AI_arr(index, AI("PN")) = AIArr(arrIndex).NAME Then
+                AI_arr(index, AI("DN")) = AIArr(arrIndex).DN
             End If
         Next
     Next
     
-    For INDEX = 1 To UBound(AO_arr, 1)
+    For index = 1 To UBound(AO_arr, 1)
         For arrIndex = 1 To UBound(AOArr, 1)
-            If AO_arr(INDEX, AO("PN")) <> "" And AO_arr(INDEX, AO("PN")) = AOArr(arrIndex).NAME Then
-                AO_arr(INDEX, AO("DN")) = AOArr(arrIndex).DN
+            If AO_arr(index, AO("PN")) <> "" And AO_arr(index, AO("PN")) = AOArr(arrIndex).NAME Then
+                AO_arr(index, AO("DN")) = AOArr(arrIndex).DN
             End If
         Next
     Next
     
-    For INDEX = 1 To UBound(DI_arr, 1)
+    For index = 1 To UBound(DI_arr, 1)
         For arrIndex = 1 To UBound(DIArr, 1)
-            If DI_arr(INDEX, DI("PN")) <> "" And DI_arr(INDEX, DI("PN")) = DIArr(arrIndex).NAME Then
-                DI_arr(INDEX, DI("DN")) = DIArr(arrIndex).DN
+            If DI_arr(index, DI("PN")) <> "" And DI_arr(index, DI("PN")) = DIArr(arrIndex).NAME Then
+                DI_arr(index, DI("DN")) = DIArr(arrIndex).DN
             End If
         Next
     Next
     
-    For INDEX = 1 To UBound(DOV_arr, 1)
+    For index = 1 To UBound(DOV_arr, 1)
         For arrIndex = 1 To UBound(DOArr, 1)
-            If DOV_arr(INDEX, DOV("PN")) <> "" And DOV_arr(INDEX, DOV("PN")) = DOArr(arrIndex).NAME Then
-                DOV_arr(INDEX, DOV("DN")) = DOArr(arrIndex).DN
+            If DOV_arr(index, DOV("PN")) <> "" And DOV_arr(index, DOV("PN")) = DOArr(arrIndex).NAME Then
+                DOV_arr(index, DOV("DN")) = DOArr(arrIndex).DN
             End If
         Next
     Next
