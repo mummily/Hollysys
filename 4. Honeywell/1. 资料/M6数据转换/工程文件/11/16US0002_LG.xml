@@ -451,7 +451,7 @@ END_VAR]]>
 <element type="output">
 <id>39</id>
 <position>106,8</position>
-<text>P1601AB_BK.P0</text>
+<text>P1601AB_BK.OFFEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -463,7 +463,7 @@ END_VAR]]>
 <element type="output">
 <id>40</id>
 <position>106,20</position>
-<text>P1601AB_BK.P1</text>
+<text>P1601AB_BK.ONEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

@@ -1263,6 +1263,10 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
         If "UAO" = NameType(Left(newLISRC, Len(newLISRC) - 3)) Then
             newLISRC = ReplaceSuffix(newLISRC, ".OP", ".AI")
         End If
+    ElseIf ".OPLOLM" = Right(newLISRC, 7) Then
+        If "PID" = NameType(Left(newLISRC, Len(newLISRC) - 7)) Then
+            newLISRC = ReplaceSuffix(newLISRC, ".OPLOLM", ".ENGL")
+        End If
     Else
         newLISRC = ReplaceSuffix(newLISRC, ".PV", ".AV")
         newLISRC = ReplaceCommonSuffix(newLISRC)
@@ -1293,6 +1297,10 @@ Private Function ReplaceCommonSuffix(str As String)
         DicStr.Add ".PVHHFL", ".HHIND"
         DicStr.Add ".I0", ".INOF"
         DicStr.Add ".I1", ".INON"
+        DicStr.Add ".P0", ".OFFEN"
+        DicStr.Add ".P1", ".ONEN"
+        DicStr.Add ".OPHILM", ".ENGU"
+        DicStr.Add ".OPROCLM", ".OUTRAT"
         
         Dim dsKeys, dsItems
         dsKeys = DicStr.Keys
@@ -1334,6 +1342,10 @@ Private Function ReplaceLODSTNSuffix(LODSTN As String)
     ElseIf ".OP" = Right(newLODSTN, 3) Then
         If "UAO" = NameType(Left(newLODSTN, Len(newLODSTN) - 3)) Then
             newLODSTN = ReplaceSuffix(newLODSTN, ".OP", ".AI")
+        End If
+    ElseIf ".OPLOLM" = Right(newLODSTN, 7) Then
+        If "PID" = NameType(Left(newLODSTN, Len(newLODSTN) - 7)) Then
+            newLODSTN = ReplaceSuffix(newLODSTN, ".OPLOLM", ".ENGL")
         End If
     Else
         newLODSTN = ReplaceSuffix(newLODSTN, ".PV", ".AI")

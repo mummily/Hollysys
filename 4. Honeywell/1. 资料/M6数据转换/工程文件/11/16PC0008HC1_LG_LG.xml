@@ -266,7 +266,7 @@ END_VAR]]>
 <element type="output">
 <id>23</id>
 <position>61,15</position>
-<text>16PC0008HC1.OPROCLM</text>
+<text>16PC0008HC1.OUTRAT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -278,7 +278,7 @@ END_VAR]]>
 <element type="output">
 <id>24</id>
 <position>61,15</position>
-<text>16PC0008HC1.OPROCLM</text>
+<text>16PC0008HC1.OUTRAT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

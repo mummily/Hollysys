@@ -465,7 +465,7 @@ END_VAR]]>
 <element type="output">
 <id>41</id>
 <position>61,27</position>
-<text>13QC1300_SW3.OPROCLM</text>
+<text>13QC1300_SW3.OUTRAT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -477,7 +477,7 @@ END_VAR]]>
 <element type="output">
 <id>42</id>
 <position>61,27</position>
-<text>13QC1300_SW3.OPROCLM</text>
+<text>13QC1300_SW3.OUTRAT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

@@ -407,7 +407,7 @@ END_VAR]]>
 <element type="output">
 <id>36</id>
 <position>61,17</position>
-<text>13HY1300_4.OPROCLM</text>
+<text>13HY1300_4.OUTRAT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -419,7 +419,7 @@ END_VAR]]>
 <element type="output">
 <id>37</id>
 <position>61,17</position>
-<text>13HY1300_4.OPROCLM</text>
+<text>13HY1300_4.OUTRAT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -431,7 +431,7 @@ END_VAR]]>
 <element type="output">
 <id>38</id>
 <position>61,39</position>
-<text>13HC1300_SW1.OPROCLM</text>
+<text>13HC1300_SW1.OUTRAT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -443,7 +443,7 @@ END_VAR]]>
 <element type="output">
 <id>39</id>
 <position>61,39</position>
-<text>13HC1300_SW1.OPROCLM</text>
+<text>13HC1300_SW1.OUTRAT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

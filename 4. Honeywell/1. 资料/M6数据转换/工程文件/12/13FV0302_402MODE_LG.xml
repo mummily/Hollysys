@@ -108,7 +108,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>46,2</position>
-<text>13FICSA0302.OPHILM</text>
+<text>13FICSA0302.ENGU</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -120,7 +120,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>46,2</position>
-<text>13FICSA0302.OPLOLM</text>
+<text>13FICSA0302.ENGL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -132,7 +132,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>46,2</position>
-<text>13FICSA0302.OPHILM</text>
+<text>13FICSA0302.ENGU</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -144,7 +144,7 @@ END_VAR]]>
 <element type="output">
 <id>12</id>
 <position>46,2</position>
-<text>13FICSA0302.OPLOLM</text>
+<text>13FICSA0302.ENGL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -156,7 +156,7 @@ END_VAR]]>
 <element type="output">
 <id>13</id>
 <position>46,8</position>
-<text>13FICSA0402.OPHILM</text>
+<text>13FICSA0402.ENGU</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -168,7 +168,7 @@ END_VAR]]>
 <element type="output">
 <id>14</id>
 <position>46,8</position>
-<text>13FICSA0402.OPLOLM</text>
+<text>13FICSA0402.ENGL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -180,7 +180,7 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>46,8</position>
-<text>13FICSA0402.OPHILM</text>
+<text>13FICSA0402.ENGU</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -192,7 +192,7 @@ END_VAR]]>
 <element type="output">
 <id>16</id>
 <position>46,8</position>
-<text>13FICSA0402.OPLOLM</text>
+<text>13FICSA0402.ENGL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
