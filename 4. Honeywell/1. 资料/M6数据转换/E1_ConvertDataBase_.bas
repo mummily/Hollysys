@@ -284,7 +284,26 @@ Sub E1_ConvertDataBase()
 '    Next
     
     'ULOGIC变量NN转为转化为REAL，每个变量增加NN1~NN8
+    Dim NNstr As String 'NN字符串
     For i = 2 To UBound(ULOGIC_arr, 1)
+    
+        '----提取NN初始值
+        '初始化
+        NNstr = ""
+        '累计1~8
+        For jj = 1 To 8
+        
+            If Len(ULOGIC_arr(i, ULOGIC("NN(00" & jj & ")"))) Then
+               NNstr = NNstr & "NN(00" & jj & ")=" & ULOGIC_arr(i, ULOGIC("NN(00" & jj & ")"))
+            End If
+   
+        Next
+        '去无意义字符
+        NNstr = Replace(NNstr, " ", "")
+        NNstr = Replace(NNstr, "(00", "")
+        NNstr = Replace(NNstr, ")", "")
+        NNarr = Split(NNstr, "NN", 8)
+        '转化
         For jj = 1 To 8
             REAL_arr(ii, REAL("PN")) = ULOGIC_arr(i, ULOGIC("NAME")) & "_NN" & jj '点名
             REAL_arr(ii, REAL("DS")) = ULOGIC_arr(i, ULOGIC("PTDESC")) & "数值寄存器" & jj '点描述
@@ -294,8 +313,12 @@ Sub E1_ConvertDataBase()
             REAL_arr(ii, REAL("UT")) = "" '量纲
             REAL_arr(ii, REAL("OF")) = "%-8.2f" '小数位数
             REAL_arr(ii, REAL("SN")) = SN(ULOGIC_arr(i, ULOGIC("NODENUM")))  '站号
+            If jj <= UBound(NNarr) Then
+            REAL_arr(ii, REAL("AV")) = Replace(NNarr(jj), jj & "=", "") '数据类型
+            End If
             ii = ii + 1 '行计数
         Next
+        
     Next
     
     '1-06--------------------转换AM
@@ -417,13 +440,21 @@ Sub E1_ConvertDataBase()
             J1 = J1 + 1 '行计数
         End If
     
-'        If UREGPV_arr(i, UREGPV("PVALGID")) = "GENLIN" Then
-'            GENLIN_arr(j2, GENLIN("PN")) = UREGPV_arr(i, UREGPV("NAME"))  '点名
-'            GENLIN_arr(j2, GENLIN("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
-'            GENLIN_arr(j2, GENLIN("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
-'            GENLIN_arr(j2, GENLIN("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
-'            j2 = j2 + 1 '行计数
-'        End If
+        If UREGPV_arr(i, UREGPV("PVALGID")) = "GENLIN" Then
+            ONEFOLD_arr(j2, ONEFOLD("PN")) = UREGPV_arr(i, UREGPV("NAME")) & "_FOLD" '点名
+            ONEFOLD_arr(j2, ONEFOLD("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
+            ONEFOLD_arr(j2, ONEFOLD("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
+            
+            Dim jj2 As Integer
+            PNTNUM = 0
+            For jj2 = 0 To 12
+                 If Len(UREGPV_arr(i, UREGPV("IN" & jj2))) > 0 Then
+                    PNTNUM = PNTNUM + 1
+                 End If
+            Next
+            ONEFOLD_arr(j2, ONEFOLD("PNTNUM")) = PNTNUM   '点数
+            j2 = j2 + 1 '行计数
+        End If
     
         If UREGPV_arr(i, UREGPV("PVALGID")) = "HILOAVG" Then
             HILOAVG_arr(j3, HILOAVG("PN")) = UREGPV_arr(i, UREGPV("NAME")) & "_AVG"  '点名
@@ -486,6 +517,9 @@ Sub E1_ConvertDataBase()
             DM_arr(ii, DM("PN")) = UFLG_arr(i, UFLG("NAME")) & "_RS" '点名
             DM_arr(ii, DM("DS")) = UFLG_arr(i, UFLG("PTDESC")) '点描述
             DM_arr(ii, DM("SN")) = SN(UFLG_arr(i, UFLG("NODENUM")))  '站号
+            DM_arr(ii, DM("E0")) = UFLG_arr(i, UFLG("STATETXT(0)")) '置0说明
+            DM_arr(ii, DM("E1")) = UFLG_arr(i, UFLG("STATETXT(1)")) '置0说明
+            
             ii = ii + 1 '行计数
 
     Next
@@ -788,6 +822,22 @@ Sub E1_ConvertDataBase()
 '            .Cells(1, 1).Resize(UBound(GENLIN_arr(), 1), UBound(GENLIN_arr(), 2)) = GENLIN_arr
 '        End With
     
+        '2-16------删除旧表建立新表-ONEFOLD
+        Application.DisplayAlerts = False '关闭删除工作表提示框
+        For Each sht In Workbooks(wb_name).Worksheets
+           If sht.NAME = "ONEFOLD" Then
+               sht.Delete
+           End If
+        Next
+        Sheets.Add After:=ActiveSheet
+        ActiveSheet.NAME = "ONEFOLD"
+
+        Sheets("ONEFOLD").Select
+        With Sheets("ONEFOLD")
+            .Cells(1, 1).Resize(UBound(ONEFOLD_arr(), 1), UBound(ONEFOLD_arr(), 2)) = ONEFOLD_arr
+        End With
+    
+    
         '2-17------删除旧表建立新表-HILOAVG
         Application.DisplayAlerts = False '关闭删除工作表提示框
         For Each sht In Workbooks(wb_name).Worksheets
@@ -924,6 +974,7 @@ Sub E1_ConvertDataBase()
     
     Workbooks(project_sjk).Sheets("FLOWCOMP").Cells(1, 1).Resize(UBound(FLOWCOMP_arr(), 1), UBound(FLOWCOMP_arr(), 2)) = FLOWCOMP_arr
 '    Workbooks(project_sjk).Sheets("GENLIN").Cells(1, 1).Resize(UBound(GENLIN_arr(), 1), UBound(GENLIN_arr(), 2)) = GENLIN_arr
+    Workbooks(project_sjk).Sheets("ONEFOLD").Cells(1, 1).Resize(UBound(ONEFOLD_arr(), 1), UBound(ONEFOLD_arr(), 2)) = ONEFOLD_arr
     Workbooks(project_sjk).Sheets("HILOAVG").Cells(1, 1).Resize(UBound(HILOAVG_arr(), 1), UBound(HILOAVG_arr(), 2)) = HILOAVG_arr
     Workbooks(project_sjk).Sheets("MIDOF3").Cells(1, 1).Resize(UBound(MIDOF3_arr(), 1), UBound(MIDOF3_arr(), 2)) = MIDOF3_arr
 '    Workbooks(project_sjk).Sheets("TOTALIZR").Cells(1, 1).Resize(UBound(TOTALIZR_arr(), 1), UBound(TOTALIZR_arr(), 2)) = TOTALIZR_arr
