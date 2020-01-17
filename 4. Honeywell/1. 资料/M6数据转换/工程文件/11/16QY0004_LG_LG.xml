@@ -82,6 +82,15 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
+<element type="input">
+<id>14</id>
+<AT_position>50,10</AT_position>
+<text>16QY0004_LG_NN1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="box">
 <id>8</id>
 <AT_position>21,2</AT_position>
@@ -144,9 +153,65 @@ END_VAR]]>
 <input inputid="10" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
-<element type="output">
+<element type="box">
 <id>13</id>
-<position>46,2</position>
+<AT_position>51,8</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>5</sortid>
+<input inputid="9" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="14" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>15</id>
+<AT_position>51,8</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>6</sortid>
+<input inputid="11" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>16</id>
+<AT_position>51,8</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>7</sortid>
+<input inputid="10" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>17</id>
+<AT_position>51,8</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>8</sortid>
+<input inputid="12" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="output">
+<id>18</id>
+<position>61,2</position>
 <text>16QY0004.S1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -154,11 +219,11 @@ END_VAR]]>
 <Inputid>1</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>5</sortid>
+<sortid>9</sortid>
 </element>
 <element type="output">
-<id>14</id>
-<position>46,2</position>
+<id>19</id>
+<position>61,2</position>
 <text>16QY0004.S2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -166,55 +231,55 @@ END_VAR]]>
 <Inputid>8</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>6</sortid>
+<sortid>10</sortid>
 </element>
 <element type="output">
-<id>15</id>
-<position>46,8</position>
+<id>20</id>
+<position>61,8</position>
 <text>16QY0004_LG_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>9</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>13</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>7</sortid>
+<sortid>11</sortid>
 </element>
 <element type="output">
-<id>16</id>
-<position>46,14</position>
+<id>21</id>
+<position>61,14</position>
 <text>16QY0004_LG_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>3</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>8</sortid>
+<sortid>12</sortid>
 </element>
 <element type="output">
-<id>17</id>
-<position>46,26</position>
+<id>22</id>
+<position>61,26</position>
 <text>16QY0004_LG_NN6</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>5</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>9</sortid>
+<sortid>13</sortid>
 </element>
 <element type="output">
-<id>18</id>
-<position>46,20</position>
+<id>23</id>
+<position>61,20</position>
 <text>16QY0004_LG_NN6</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>4</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>10</sortid>
+<sortid>14</sortid>
 </element>
 </cfc>
 </pou>

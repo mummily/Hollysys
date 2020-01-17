@@ -99,7 +99,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>31,2</position>
+<position>46,2</position>
 <text>14TI0001_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -111,7 +111,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>31,8</position>
+<position>46,8</position>
 <text>14TI0001_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -123,7 +123,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>31,14</position>
+<position>46,14</position>
 <text>14TI0001_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -135,7 +135,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>31,26</position>
+<position>46,26</position>
 <text>14TAH0001.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

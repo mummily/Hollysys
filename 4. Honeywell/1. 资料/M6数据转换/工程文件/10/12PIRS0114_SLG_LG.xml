@@ -240,7 +240,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>22</id>
-<position>46,2</position>
+<position>61,2</position>
 <text>12PIRS0114_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -252,7 +252,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>23</id>
-<position>46,8</position>
+<position>61,8</position>
 <text>12PIRS0114_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -264,7 +264,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>24</id>
-<position>46,14</position>
+<position>61,14</position>
 <text>12PIRS0114_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -276,7 +276,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>25</id>
-<position>46,26</position>
+<position>61,26</position>
 <text>12PSL0114.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -288,7 +288,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>26</id>
-<position>46,44</position>
+<position>61,44</position>
 <text>12PSLL0114.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -300,7 +300,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>27</id>
-<position>46,8</position>
+<position>61,8</position>
 <text>12PSH0114.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -128,6 +128,60 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
+<id>37</id>
+<AT_position>65,25</AT_position>
+<text>13QC1300_LG_NN4</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>39</id>
+<AT_position>65,25</AT_position>
+<text>13QC1300_LG_NN1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>41</id>
+<AT_position>65,25</AT_position>
+<text>13QC1300_LG_NN4</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>43</id>
+<AT_position>65,25</AT_position>
+<text>13QC1300_LG_NN1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>45</id>
+<AT_position>65,29</AT_position>
+<text>13QC1300_LG_NN5</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>47</id>
+<AT_position>65,29</AT_position>
+<text>13QC1300_LG_NN6</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
 <id>10</id>
 <AT_position>35,29</AT_position>
 <text>TRUE</text>
@@ -402,9 +456,93 @@ END_VAR]]>
 <input inputid="20" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
-<element type="output">
+<element type="box">
 <id>36</id>
-<position>61,2</position>
+<AT_position>66,23</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>15</sortid>
+<input inputid="33" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="37" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>38</id>
+<AT_position>66,23</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>16</sortid>
+<input inputid="33" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="39" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>40</id>
+<AT_position>66,23</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>17</sortid>
+<input inputid="32" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="41" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>42</id>
+<AT_position>66,23</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>18</sortid>
+<input inputid="32" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="43" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>44</id>
+<AT_position>66,27</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>19</sortid>
+<input inputid="34" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="45" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>46</id>
+<AT_position>66,27</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>20</sortid>
+<input inputid="35" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="47" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="output">
+<id>48</id>
+<position>76,2</position>
 <text>13QC1300_SW2.S1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -412,79 +550,79 @@ END_VAR]]>
 <Inputid>1</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>15</sortid>
+<sortid>21</sortid>
 </element>
 <element type="output">
-<id>37</id>
-<position>61,23</position>
+<id>49</id>
+<position>76,23</position>
 <text>16QIC0004.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>33</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>36</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>16</sortid>
+<sortid>22</sortid>
 </element>
 <element type="output">
-<id>38</id>
-<position>61,23</position>
+<id>50</id>
+<position>76,23</position>
 <text>16QIC0004.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>33</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>38</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>17</sortid>
+<sortid>23</sortid>
 </element>
 <element type="output">
-<id>39</id>
-<position>61,23</position>
+<id>51</id>
+<position>76,23</position>
 <text>16QICA0013.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>32</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>40</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>18</sortid>
+<sortid>24</sortid>
 </element>
 <element type="output">
-<id>40</id>
-<position>61,23</position>
+<id>52</id>
+<position>76,23</position>
 <text>16QICA0013.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>32</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>42</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>19</sortid>
+<sortid>25</sortid>
 </element>
 <element type="output">
-<id>41</id>
-<position>61,27</position>
+<id>53</id>
+<position>76,27</position>
 <text>13QC1300_SW3.OUTRAT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>34</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>44</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>20</sortid>
+<sortid>26</sortid>
 </element>
 <element type="output">
-<id>42</id>
-<position>61,27</position>
+<id>54</id>
+<position>76,27</position>
 <text>13QC1300_SW3.OUTRAT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>35</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>46</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>21</sortid>
+<sortid>27</sortid>
 </element>
 </cfc>
 </pou>

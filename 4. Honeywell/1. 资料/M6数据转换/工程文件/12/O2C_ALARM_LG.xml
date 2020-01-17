@@ -255,7 +255,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>23</id>
-<position>46,28</position>
+<position>61,28</position>
 <text>13ALARM_2_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -267,7 +267,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>24</id>
-<position>46,32</position>
+<position>61,32</position>
 <text>13ALARM_2_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -279,7 +279,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>25</id>
-<position>46,36</position>
+<position>61,36</position>
 <text>13ALARM_2_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -291,7 +291,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>26</id>
-<position>46,40</position>
+<position>61,40</position>
 <text>13ALARM_1_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>

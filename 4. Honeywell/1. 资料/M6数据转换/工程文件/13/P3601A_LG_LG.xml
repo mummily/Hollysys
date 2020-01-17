@@ -103,7 +103,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>31,8</position>
+<position>46,8</position>
 <text>P3601A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -115,7 +115,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>31,2</position>
+<position>46,2</position>
 <text>P3601A_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

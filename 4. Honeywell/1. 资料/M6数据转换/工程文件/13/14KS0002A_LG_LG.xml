@@ -53,7 +53,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>4</id>
-<position>31,2</position>
+<position>46,2</position>
 <text>14KS0002A_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>

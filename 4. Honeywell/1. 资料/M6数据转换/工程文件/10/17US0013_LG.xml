@@ -195,7 +195,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>46,14</position>
+<position>61,14</position>
 <text>P1708A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -207,7 +207,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>46,14</position>
+<position>61,14</position>
 <text>P1708B.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -219,7 +219,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>46,8</position>
+<position>61,8</position>
 <text>P1708A.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -231,7 +231,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>46,8</position>
+<position>61,8</position>
 <text>P1708B.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>

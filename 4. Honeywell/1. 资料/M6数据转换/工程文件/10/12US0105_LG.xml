@@ -149,7 +149,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>61,23</position>
+<position>76,23</position>
 <text>12XV0127.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -161,7 +161,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>61,23</position>
+<position>76,23</position>
 <text>12XV0126.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -173,7 +173,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>61,23</position>
+<position>76,23</position>
 <text>12XV0131.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -185,7 +185,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>61,23</position>
+<position>76,23</position>
 <text>12XV0132.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>

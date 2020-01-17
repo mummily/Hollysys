@@ -62,7 +62,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>5</id>
-<position>31,2</position>
+<position>46,2</position>
 <text>13P3402_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

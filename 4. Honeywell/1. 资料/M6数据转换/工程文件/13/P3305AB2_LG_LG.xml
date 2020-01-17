@@ -479,7 +479,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>43</id>
-<position>76,8</position>
+<position>91,8</position>
 <text>P3305A2.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -491,7 +491,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>44</id>
-<position>76,2</position>
+<position>91,2</position>
 <text>P3305A_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -503,7 +503,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>45</id>
-<position>76,8</position>
+<position>91,8</position>
 <text>P3305A2.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -515,7 +515,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>46</id>
-<position>76,14</position>
+<position>91,14</position>
 <text>P3305B2.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -527,7 +527,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>47</id>
-<position>76,20</position>
+<position>91,20</position>
 <text>P3305B_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -539,7 +539,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>48</id>
-<position>76,26</position>
+<position>91,26</position>
 <text>P3305B2.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -65,7 +65,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>5</id>
-<position>46,2</position>
+<position>61,2</position>
 <text>13XV0118.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -77,7 +77,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>6</id>
-<position>46,2</position>
+<position>61,2</position>
 <text>13XV0218.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -89,7 +89,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>7</id>
-<position>46,2</position>
+<position>61,2</position>
 <text>13XV0318.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -101,7 +101,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>46,2</position>
+<position>61,2</position>
 <text>13XV0418.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -351,7 +351,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>31</id>
-<position>61,10</position>
+<position>76,10</position>
 <text>F1101A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -363,7 +363,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>32</id>
-<position>61,28</position>
+<position>76,28</position>
 <text>F1101B.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>

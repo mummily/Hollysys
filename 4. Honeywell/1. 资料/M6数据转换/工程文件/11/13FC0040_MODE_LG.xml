@@ -65,6 +65,24 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
+<id>14</id>
+<AT_position>65,4</AT_position>
+<text>13FC0040_MODE_NN2</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>16</id>
+<AT_position>65,4</AT_position>
+<text>13FC0040_MODE_NN1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
 <id>7</id>
 <AT_position>50,13</AT_position>
 <text>T#2s</text>
@@ -148,33 +166,61 @@ END_VAR]]>
 <output negate="false" visible="true" pinname="Q"/>
 <output negate="false" visible="true" pinname="ET"/>
 </element>
-<element type="output">
+<element type="box">
 <id>13</id>
-<position>61,2</position>
+<AT_position>66,2</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>5</sortid>
+<input inputid="8" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="14" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>15</id>
+<AT_position>66,2</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>6</sortid>
+<input inputid="8" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="16" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="output">
+<id>17</id>
+<position>76,2</position>
 <text>13FIC0040.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>8</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>13</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>5</sortid>
+<sortid>7</sortid>
 </element>
 <element type="output">
-<id>14</id>
-<position>61,2</position>
+<id>18</id>
+<position>76,2</position>
 <text>13FIC0040.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>8</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>15</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>6</sortid>
+<sortid>8</sortid>
 </element>
 <element type="output">
-<id>15</id>
-<position>61,11</position>
+<id>19</id>
+<position>76,11</position>
 <text>13XV0041.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -182,7 +228,7 @@ END_VAR]]>
 <Inputid>12</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>7</sortid>
+<sortid>9</sortid>
 </element>
 </cfc>
 </pou>

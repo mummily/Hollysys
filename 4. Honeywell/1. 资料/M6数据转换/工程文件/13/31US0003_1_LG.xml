@@ -408,7 +408,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>36</id>
-<position>106,2</position>
+<position>121,2</position>
 <text>31HS5US03.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -420,7 +420,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>37</id>
-<position>106,14</position>
+<position>121,14</position>
 <text>31HS4US03.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -432,7 +432,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>38</id>
-<position>106,26</position>
+<position>121,26</position>
 <text>31US0003_PO2_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -444,7 +444,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>39</id>
-<position>106,8</position>
+<position>121,8</position>
 <text>31HS3US03.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -456,7 +456,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>40</id>
-<position>106,26</position>
+<position>121,26</position>
 <text>31US0003_1_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

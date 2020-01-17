@@ -161,7 +161,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>31,2</position>
+<position>46,2</position>
 <text>I1IA.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -173,7 +173,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>31,8</position>
+<position>46,8</position>
 <text>I1IB.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -185,7 +185,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>31,14</position>
+<position>46,14</position>
 <text>I1IC.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -197,7 +197,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>31,20</position>
+<position>46,20</position>
 <text>I1ID.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -209,7 +209,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>31,20</position>
+<position>46,20</position>
 <text>I1IE.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -221,7 +221,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>31,2</position>
+<position>46,2</position>
 <text>15HS1US17.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -233,7 +233,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>31,8</position>
+<position>46,8</position>
 <text>15HS2US17.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -245,7 +245,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>21</id>
-<position>31,14</position>
+<position>46,14</position>
 <text>15HS3US17.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -257,7 +257,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>22</id>
-<position>31,5</position>
+<position>46,5</position>
 <text>15FILTER_START.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

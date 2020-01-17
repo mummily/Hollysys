@@ -259,7 +259,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>23</id>
-<position>46,5</position>
+<position>61,5</position>
 <text>A1101A34.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -271,7 +271,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>24</id>
-<position>46,11</position>
+<position>61,11</position>
 <text>A1101A34.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -283,7 +283,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>25</id>
-<position>46,23</position>
+<position>61,23</position>
 <text>A1101B34.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -295,7 +295,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>26</id>
-<position>46,29</position>
+<position>61,29</position>
 <text>A1101B34.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>

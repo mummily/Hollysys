@@ -195,7 +195,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>61,10</position>
+<position>76,10</position>
 <text>X1401.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -207,7 +207,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>61,16</position>
+<position>76,16</position>
 <text>X1401.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -219,7 +219,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>61,10</position>
+<position>76,10</position>
 <text>14US0015_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -231,7 +231,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>61,16</position>
+<position>76,16</position>
 <text>14US0015_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>

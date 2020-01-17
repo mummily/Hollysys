@@ -211,7 +211,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>76,12</position>
+<position>91,12</position>
 <text>17XV0008.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -223,7 +223,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>76,12</position>
+<position>91,12</position>
 <text>17XV0006.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -235,7 +235,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>76,12</position>
+<position>91,12</position>
 <text>17XV0007.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -247,7 +247,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>21</id>
-<position>76,12</position>
+<position>91,12</position>
 <text>17XV0009.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -259,7 +259,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>22</id>
-<position>76,12</position>
+<position>91,12</position>
 <text>S1702.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -250,7 +250,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>22</id>
-<position>76,14</position>
+<position>91,14</position>
 <text>P1401A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -262,7 +262,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>23</id>
-<position>76,14</position>
+<position>91,14</position>
 <text>P1401B.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -274,7 +274,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>24</id>
-<position>76,24</position>
+<position>91,24</position>
 <text>14US0004_1_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -286,7 +286,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>25</id>
-<position>76,18</position>
+<position>91,18</position>
 <text>14US0004_1_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>

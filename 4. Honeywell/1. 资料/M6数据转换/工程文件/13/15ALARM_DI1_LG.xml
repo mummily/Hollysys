@@ -97,7 +97,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>61,2</position>
+<position>76,2</position>
 <text>15CONTROL_FILTER_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>

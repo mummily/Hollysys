@@ -126,7 +126,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>46,16</position>
+<position>61,16</position>
 <text>13KS03_FL1.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

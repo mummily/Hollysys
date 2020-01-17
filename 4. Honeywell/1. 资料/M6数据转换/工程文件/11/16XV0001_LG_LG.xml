@@ -149,7 +149,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>46,5</position>
+<position>61,5</position>
 <text>16XV0001.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -161,7 +161,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>46,11</position>
+<position>61,11</position>
 <text>16XV0001.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -173,7 +173,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>46,5</position>
+<position>61,5</position>
 <text>16XV0001_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>

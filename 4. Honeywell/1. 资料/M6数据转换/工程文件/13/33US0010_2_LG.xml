@@ -383,7 +383,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>34</id>
-<position>76,16</position>
+<position>91,16</position>
 <text>33XV0001.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -395,7 +395,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>35</id>
-<position>76,17</position>
+<position>91,17</position>
 <text>33XV0001.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -407,7 +407,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>36</id>
-<position>76,32</position>
+<position>91,32</position>
 <text>P3301A_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -419,7 +419,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>37</id>
-<position>76,32</position>
+<position>91,32</position>
 <text>P3301B_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

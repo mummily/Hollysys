@@ -447,7 +447,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>40</id>
-<position>91,29</position>
+<position>106,29</position>
 <text>13ALARM_3_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -291,7 +291,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>26</id>
-<position>91,29</position>
+<position>106,29</position>
 <text>X1101B.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -138,7 +138,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>46,14</position>
+<position>61,14</position>
 <text>13P1301A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -150,7 +150,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>46,5</position>
+<position>61,5</position>
 <text>13P1301A.ONEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -162,7 +162,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>46,5</position>
+<position>61,5</position>
 <text>13P1301A.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>

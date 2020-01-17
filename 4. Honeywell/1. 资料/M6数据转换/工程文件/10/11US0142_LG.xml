@@ -65,7 +65,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>5</id>
-<position>46,2</position>
+<position>61,2</position>
 <text>X1102B.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>

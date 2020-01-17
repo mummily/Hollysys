@@ -94,7 +94,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>46,10</position>
+<position>61,10</position>
 <text>P1402A.ONEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -106,7 +106,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>46,10</position>
+<position>61,10</position>
 <text>P1402B.ONEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -150,7 +150,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>31,2</position>
+<position>46,2</position>
 <text>13TI0018_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -162,7 +162,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>31,8</position>
+<position>46,8</position>
 <text>13TI0018_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -174,7 +174,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>31,14</position>
+<position>46,14</position>
 <text>13TI0018_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -186,7 +186,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>31,26</position>
+<position>46,26</position>
 <text>13TI0018_SLG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -198,7 +198,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>31,44</position>
+<position>46,44</position>
 <text>13TI0018_SLG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>

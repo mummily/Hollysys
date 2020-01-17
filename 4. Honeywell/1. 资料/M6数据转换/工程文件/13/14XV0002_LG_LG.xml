@@ -181,7 +181,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>76,18</position>
+<position>91,18</position>
 <text>14XV0002.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>

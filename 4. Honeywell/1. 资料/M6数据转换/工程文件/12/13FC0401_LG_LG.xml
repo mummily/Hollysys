@@ -191,7 +191,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>61,17</position>
+<position>76,17</position>
 <text>13FY0401_SW1.S2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -203,7 +203,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>61,17</position>
+<position>76,17</position>
 <text>13FY0401_SW1.S1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -215,7 +215,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>61,26</position>
+<position>76,26</position>
 <text>13FY0401_AO.AI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

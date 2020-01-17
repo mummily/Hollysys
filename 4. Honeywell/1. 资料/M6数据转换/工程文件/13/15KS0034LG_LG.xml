@@ -213,7 +213,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>31,2</position>
+<position>46,2</position>
 <text>15KS0034LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -225,7 +225,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>31,8</position>
+<position>46,8</position>
 <text>15KS0034LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -237,7 +237,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>21</id>
-<position>31,14</position>
+<position>46,14</position>
 <text>15KS0034LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -249,7 +249,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>22</id>
-<position>31,20</position>
+<position>46,20</position>
 <text>15KS0034LG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -261,7 +261,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>23</id>
-<position>31,26</position>
+<position>46,26</position>
 <text>15KS0034LG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -273,7 +273,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>24</id>
-<position>31,32</position>
+<position>46,32</position>
 <text>15KS0034LG_FL12</text>
 <Comment>?????</Comment>
 <negate>false</negate>

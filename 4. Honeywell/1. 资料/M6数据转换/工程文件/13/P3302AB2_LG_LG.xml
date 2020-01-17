@@ -359,7 +359,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>33</id>
-<position>61,8</position>
+<position>76,8</position>
 <text>P3302A2.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -371,7 +371,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>34</id>
-<position>61,2</position>
+<position>76,2</position>
 <text>P3302A_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -383,7 +383,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>35</id>
-<position>61,8</position>
+<position>76,8</position>
 <text>P3302A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -395,7 +395,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>36</id>
-<position>61,14</position>
+<position>76,14</position>
 <text>P3302B2.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -407,7 +407,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>37</id>
-<position>61,20</position>
+<position>76,20</position>
 <text>P3302B_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -419,7 +419,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>38</id>
-<position>61,26</position>
+<position>76,26</position>
 <text>P3302B.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -431,7 +431,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>39</id>
-<position>61,8</position>
+<position>76,8</position>
 <text>P3302A2.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -443,7 +443,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>40</id>
-<position>61,26</position>
+<position>76,26</position>
 <text>P3302B2.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>

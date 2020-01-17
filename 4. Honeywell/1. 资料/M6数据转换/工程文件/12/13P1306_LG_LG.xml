@@ -30,7 +30,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>2</id>
-<position>23,2</position>
+<position>38,2</position>
 <text>13P1306.ONEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>

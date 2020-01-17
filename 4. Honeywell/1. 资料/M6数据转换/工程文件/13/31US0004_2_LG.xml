@@ -377,7 +377,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>33</id>
-<position>76,23</position>
+<position>91,23</position>
 <text>31US0004_PO2_FL12</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -389,7 +389,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>34</id>
-<position>76,26</position>
+<position>91,26</position>
 <text>31US0004_2_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -401,7 +401,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>35</id>
-<position>76,10</position>
+<position>91,10</position>
 <text>XVS9001B.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -413,7 +413,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>36</id>
-<position>76,10</position>
+<position>91,10</position>
 <text>31US0004_2_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -425,7 +425,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>37</id>
-<position>76,2</position>
+<position>91,2</position>
 <text>31HS1US04.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -437,7 +437,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>38</id>
-<position>76,8</position>
+<position>91,8</position>
 <text>31HS2US04.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

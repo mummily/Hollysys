@@ -294,7 +294,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>27</id>
-<position>61,8</position>
+<position>76,8</position>
 <text>16QSL0014_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -306,7 +306,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>28</id>
-<position>61,20</position>
+<position>76,20</position>
 <text>16PV0008B_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -318,7 +318,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>29</id>
-<position>61,29</position>
+<position>76,29</position>
 <text>16GSC0304_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -330,7 +330,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>30</id>
-<position>61,38</position>
+<position>76,38</position>
 <text>16PVGSC0008B_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -342,7 +342,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>31</id>
-<position>61,44</position>
+<position>76,44</position>
 <text>16GSO0304_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -354,7 +354,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>32</id>
-<position>61,59</position>
+<position>76,59</position>
 <text>13KS0003_FL38</text>
 <Comment>?????</Comment>
 <negate>false</negate>

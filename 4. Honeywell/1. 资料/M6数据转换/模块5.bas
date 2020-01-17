@@ -38,6 +38,20 @@ Type T_HN_BOX
 End Type
 
 '-----------------------------------------------------------------------------------------------------------
+'Purpose: ULOGIC E数据结构，对应M6 Move数据结构
+'History: 1-15-2020
+'-----------------------------------------------------------------------------------------------------------
+Type T_HN_E
+    ElementID As Integer
+    ElementSortID As Integer
+    Element_X As Integer
+    Element_Y As Integer
+    
+    ElementInputID As Integer 'BOX、Input的元素ID
+    ElementID_NF As Integer 'NN、FL的元素ID
+End Type
+
+'-----------------------------------------------------------------------------------------------------------
 'Purpose: ULOGIC INPUT数据结构
 'History: 9-24-2019
 '-----------------------------------------------------------------------------------------------------------
@@ -79,6 +93,7 @@ Type T_EXCELINFO
     HN_INPUT(1 To 12) As T_HN_INPUT     'INPUT信息
     HN_OUTPUT(1 To 12) As T_HN_OUTPUT   'OUTPUT信息
     HN_BOX(1 To 24) As T_HN_BOX         'BOX信息
+    HN_E(1 To 12) As T_HN_E             'E信息
 End Type
 
 '-----------------------------------------------------------------------------------------------------------

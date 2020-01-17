@@ -74,7 +74,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>32</id>
+<id>36</id>
 <AT_position>11,39</AT_position>
 <text>16XV0002.FBKON</text>
 <Comment>?????</Comment>
@@ -83,7 +83,7 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>33</id>
+<id>37</id>
 <AT_position>11,40</AT_position>
 <text>16XV0002.FBKOF</text>
 <Comment>?????</Comment>
@@ -99,9 +99,9 @@ END_VAR]]>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>15</sortid>
-<input inputid="32" inputidx="0" negate="True" visible="true" pinname=""/>
-<input inputid="33" inputidx="0" negate="False" visible="true" pinname=""/>
+<sortid>17</sortid>
+<input inputid="36" inputidx="0" negate="True" visible="true" pinname=""/>
+<input inputid="37" inputidx="0" negate="False" visible="true" pinname=""/>
 </element>
 <element type="input">
 <id>8</id>
@@ -152,6 +152,24 @@ END_VAR]]>
 <id>15</id>
 <AT_position>20,52</AT_position>
 <text>13KS0010_LG2_NN2</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>22</id>
+<AT_position>50,30</AT_position>
+<text>13KS0010_LG2_NN1</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>24</id>
+<AT_position>50,30</AT_position>
+<text>13KS0010_LG2_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -239,9 +257,37 @@ END_VAR]]>
 <input inputid="16" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
-<element type="output">
+<element type="box">
 <id>21</id>
-<position>46,2</position>
+<AT_position>51,28</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>4</sortid>
+<input inputid="20" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="22" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>23</id>
+<AT_position>51,28</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>5</sortid>
+<input inputid="20" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="24" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="output">
+<id>25</id>
+<position>61,2</position>
 <text>13UZ0010G_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -249,11 +295,11 @@ END_VAR]]>
 <Inputid>1</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>4</sortid>
+<sortid>6</sortid>
 </element>
 <element type="output">
-<id>22</id>
-<position>46,8</position>
+<id>26</id>
+<position>61,8</position>
 <text>13UZ0010H_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -261,11 +307,11 @@ END_VAR]]>
 <Inputid>2</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>5</sortid>
+<sortid>7</sortid>
 </element>
 <element type="output">
-<id>23</id>
-<position>46,14</position>
+<id>27</id>
+<position>61,14</position>
 <text>13UZ0010I_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -273,35 +319,35 @@ END_VAR]]>
 <Inputid>3</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>6</sortid>
+<sortid>8</sortid>
 </element>
 <element type="output">
-<id>24</id>
-<position>46,28</position>
+<id>28</id>
+<position>61,28</position>
 <text>16PIRCSA0008B.MODATTR</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>20</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>21</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>7</sortid>
+<sortid>9</sortid>
 </element>
 <element type="output">
-<id>25</id>
-<position>46,28</position>
+<id>29</id>
+<position>61,28</position>
 <text>16PIRCSA0008B.MODE</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>20</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>23</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>8</sortid>
+<sortid>10</sortid>
 </element>
 <element type="output">
-<id>26</id>
-<position>46,28</position>
+<id>30</id>
+<position>61,28</position>
 <text>16UZ0001_IN.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -309,11 +355,11 @@ END_VAR]]>
 <Inputid>20</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>9</sortid>
+<sortid>11</sortid>
 </element>
 <element type="output">
-<id>27</id>
-<position>46,41</position>
+<id>31</id>
+<position>61,41</position>
 <text>16XV02_P8A_KS10.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -321,11 +367,11 @@ END_VAR]]>
 <Inputid>19</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>10</sortid>
+<sortid>12</sortid>
 </element>
 <element type="output">
-<id>28</id>
-<position>46,56</position>
+<id>32</id>
+<position>61,56</position>
 <text>16GSC0007_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -333,11 +379,11 @@ END_VAR]]>
 <Inputid>10</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>11</sortid>
+<sortid>13</sortid>
 </element>
 <element type="output">
-<id>29</id>
-<position>46,62</position>
+<id>33</id>
+<position>61,62</position>
 <text>16GSO0003_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -345,11 +391,11 @@ END_VAR]]>
 <Inputid>11</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>12</sortid>
+<sortid>14</sortid>
 </element>
 <element type="output">
-<id>30</id>
-<position>46,68</position>
+<id>34</id>
+<position>61,68</position>
 <text>16GSO0004_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -357,11 +403,11 @@ END_VAR]]>
 <Inputid>12</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>13</sortid>
+<sortid>15</sortid>
 </element>
 <element type="output">
-<id>31</id>
-<position>46,50</position>
+<id>35</id>
+<position>61,50</position>
 <text>16PIRCS0008B_CAS.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -369,7 +415,7 @@ END_VAR]]>
 <Inputid>18</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>14</sortid>
+<sortid>16</sortid>
 </element>
 </cfc>
 </pou>

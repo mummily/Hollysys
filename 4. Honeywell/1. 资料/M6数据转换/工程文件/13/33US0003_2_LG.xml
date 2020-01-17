@@ -448,7 +448,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>39</id>
-<position>106,12</position>
+<position>121,12</position>
 <text>P3303A.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -460,7 +460,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>40</id>
-<position>106,16</position>
+<position>121,16</position>
 <text>P3303B.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -472,7 +472,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>41</id>
-<position>106,2</position>
+<position>121,2</position>
 <text>P3303AB_BK.ONEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -484,7 +484,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>42</id>
-<position>106,14</position>
+<position>121,14</position>
 <text>P3303AB_BK.OFFEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>

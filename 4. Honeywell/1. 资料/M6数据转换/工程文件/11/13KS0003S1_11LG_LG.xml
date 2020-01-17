@@ -222,7 +222,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>76,38</position>
+<position>91,38</position>
 <text>13KS03_FL2.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

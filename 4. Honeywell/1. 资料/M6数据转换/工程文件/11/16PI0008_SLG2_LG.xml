@@ -58,29 +58,57 @@ END_VAR]]>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
-<element type="output">
+<element type="box">
 <id>5</id>
-<position>31,2</position>
+<AT_position>36,14</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>1</sortid>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>6</id>
+<AT_position>36,14</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>2</sortid>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="output">
+<id>7</id>
+<position>46,2</position>
 <text>16PI0008_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>1</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>1</sortid>
+<sortid>3</sortid>
 </element>
 <element type="output">
-<id>6</id>
-<position>31,8</position>
+<id>8</id>
+<position>46,8</position>
 <text>16PI0008_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>2</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>2</sortid>
+<sortid>4</sortid>
 </element>
 </cfc>
 </pou>

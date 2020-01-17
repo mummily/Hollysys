@@ -62,7 +62,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>5</id>
-<position>31,5</position>
+<position>46,5</position>
 <text>P3301A_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -74,7 +74,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>6</id>
-<position>31,5</position>
+<position>46,5</position>
 <text>P3301B_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -86,7 +86,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>7</id>
-<position>31,5</position>
+<position>46,5</position>
 <text>P3302A_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -98,7 +98,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>31,5</position>
+<position>46,5</position>
 <text>P3302B_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -110,7 +110,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>31,5</position>
+<position>46,5</position>
 <text>P3303A.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -122,7 +122,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>31,5</position>
+<position>46,5</position>
 <text>P3303B.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -134,7 +134,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>31,5</position>
+<position>46,5</position>
 <text>33US0001_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

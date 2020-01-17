@@ -71,7 +71,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>6</id>
-<position>31,2</position>
+<position>46,2</position>
 <text>13X1306C.ONEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -83,7 +83,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>7</id>
-<position>31,5</position>
+<position>46,5</position>
 <text>13X1306C.OFFEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>

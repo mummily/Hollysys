@@ -518,7 +518,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>46</id>
-<position>76,17</position>
+<position>91,17</position>
 <text>11ALARM_2_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

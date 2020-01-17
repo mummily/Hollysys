@@ -563,7 +563,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>50</id>
-<position>76,26</position>
+<position>91,26</position>
 <text>11ALARM_1_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

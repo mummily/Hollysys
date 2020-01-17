@@ -152,7 +152,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>76,5</position>
+<position>91,5</position>
 <text>X1402A_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -164,7 +164,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>76,5</position>
+<position>91,5</position>
 <text>X1402B_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -176,7 +176,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>76,5</position>
+<position>91,5</position>
 <text>X1403.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>

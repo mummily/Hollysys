@@ -62,7 +62,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>5</id>
-<position>31,5</position>
+<position>46,5</position>
 <text>17XV0003_LG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -74,7 +74,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>6</id>
-<position>31,5</position>
+<position>46,5</position>
 <text>17XV0001_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -86,7 +86,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>7</id>
-<position>31,5</position>
+<position>46,5</position>
 <text>17FIC0001_LG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -98,7 +98,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>31,5</position>
+<position>46,5</position>
 <text>17FIC0004_LG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>

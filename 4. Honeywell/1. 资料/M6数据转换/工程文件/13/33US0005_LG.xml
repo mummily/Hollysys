@@ -269,7 +269,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>23</id>
-<position>91,5</position>
+<position>106,5</position>
 <text>P3305A.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -281,7 +281,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>24</id>
-<position>91,11</position>
+<position>106,11</position>
 <text>P3305B.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -293,7 +293,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>25</id>
-<position>91,2</position>
+<position>106,2</position>
 <text>P3305AB_BK.OFFEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -305,7 +305,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>26</id>
-<position>91,14</position>
+<position>106,14</position>
 <text>P3305AB_BK.ONEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -402,7 +402,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>35</id>
-<position>106,14</position>
+<position>121,14</position>
 <text>P1601A.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -414,7 +414,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>36</id>
-<position>106,17</position>
+<position>121,17</position>
 <text>P1601B.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -426,7 +426,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>37</id>
-<position>106,14</position>
+<position>121,14</position>
 <text>16US0002_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -438,7 +438,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>38</id>
-<position>106,20</position>
+<position>121,20</position>
 <text>16US0002_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -450,7 +450,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>39</id>
-<position>106,8</position>
+<position>121,8</position>
 <text>P1601AB_BK.OFFEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -462,7 +462,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>40</id>
-<position>106,20</position>
+<position>121,20</position>
 <text>P1601AB_BK.ONEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>

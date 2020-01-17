@@ -96,7 +96,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>46,2</position>
+<position>61,2</position>
 <text>16PC0008HS6.S1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -108,7 +108,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>46,8</position>
+<position>61,8</position>
 <text>16PC0008HS6.S2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -120,7 +120,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>46,8</position>
+<position>61,8</position>
 <text>16PC0008HS6_LG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -431,7 +431,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>39</id>
-<position>151,18</position>
+<position>166,18</position>
 <text>I1I3.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -443,7 +443,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>40</id>
-<position>151,29</position>
+<position>166,29</position>
 <text>DO1.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -455,7 +455,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>41</id>
-<position>151,49</position>
+<position>166,49</position>
 <text>15FILTER_ALARM.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -467,7 +467,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>42</id>
-<position>151,38</position>
+<position>166,38</position>
 <text>ALARM_ACK.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -479,7 +479,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>43</id>
-<position>151,56</position>
+<position>166,56</position>
 <text>ALARM_TEST.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -491,7 +491,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>44</id>
-<position>151,38</position>
+<position>166,38</position>
 <text>CBSTOP_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -503,7 +503,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>45</id>
-<position>151,34</position>
+<position>166,34</position>
 <text>15ALARM_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

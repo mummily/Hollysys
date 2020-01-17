@@ -356,7 +356,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>31</id>
-<position>91,10</position>
+<position>106,10</position>
 <text>13P1304A.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -368,7 +368,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>32</id>
-<position>91,12</position>
+<position>106,12</position>
 <text>13P1304B.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -380,7 +380,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>33</id>
-<position>91,2</position>
+<position>106,2</position>
 <text>P1304AB_BK.OFFEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -392,7 +392,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>34</id>
-<position>91,8</position>
+<position>106,8</position>
 <text>P1304AB_BK.ONEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>

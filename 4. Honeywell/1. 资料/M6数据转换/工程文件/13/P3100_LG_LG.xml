@@ -85,7 +85,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>7</id>
-<position>46,8</position>
+<position>61,8</position>
 <text>P3100.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>

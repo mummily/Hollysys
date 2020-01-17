@@ -71,7 +71,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>6</id>
-<position>31,8</position>
+<position>46,8</position>
 <text>13DZL0302_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -83,7 +83,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>7</id>
-<position>31,2</position>
+<position>46,2</position>
 <text>13KS0013_FL34</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -95,7 +95,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>31,14</position>
+<position>46,14</position>
 <text>13KS0013_FL35</text>
 <Comment>?????</Comment>
 <negate>false</negate>

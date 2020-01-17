@@ -101,6 +101,24 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
+<id>33</id>
+<AT_position>65,29</AT_position>
+<text>16PC0008HS7_LG_NN3</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>35</id>
+<AT_position>65,29</AT_position>
+<text>16PC0008HS7_LG_NN4</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
 <id>17</id>
 <AT_position>50,7</AT_position>
 <text>T#2s</text>
@@ -361,9 +379,37 @@ END_VAR]]>
 <input inputid="16" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
-<element type="output">
+<element type="box">
 <id>32</id>
-<position>61,2</position>
+<AT_position>66,27</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>14</sortid>
+<input inputid="30" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="33" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>34</id>
+<AT_position>66,27</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>15</sortid>
+<input inputid="31" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="35" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="output">
+<id>36</id>
+<position>76,2</position>
 <text>16PC0008HS7.S1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -371,11 +417,11 @@ END_VAR]]>
 <Inputid>19</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>14</sortid>
+<sortid>16</sortid>
 </element>
 <element type="output">
-<id>33</id>
-<position>61,5</position>
+<id>37</id>
+<position>76,5</position>
 <text>16PC0008HS7.S2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -383,11 +429,11 @@ END_VAR]]>
 <Inputid>29</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>15</sortid>
+<sortid>17</sortid>
 </element>
 <element type="output">
-<id>34</id>
-<position>61,5</position>
+<id>38</id>
+<position>76,5</position>
 <text>16PC0008HS7_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -395,31 +441,31 @@ END_VAR]]>
 <Inputid>24</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>16</sortid>
-</element>
-<element type="output">
-<id>35</id>
-<position>61,27</position>
-<text>16PC0008HS7.OUTRAT</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Inputid>30</Inputid>
-<Inputidx>0</Inputidx>
-<negate>false</negate>
-<sortid>17</sortid>
-</element>
-<element type="output">
-<id>36</id>
-<position>61,27</position>
-<text>16PC0008HS7.OUTRAT</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Inputid>31</Inputid>
-<Inputidx>0</Inputidx>
-<negate>false</negate>
 <sortid>18</sortid>
+</element>
+<element type="output">
+<id>39</id>
+<position>76,27</position>
+<text>16PC0008HS7.OUTRAT</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>32</Inputid>
+<Inputidx>1</Inputidx>
+<negate>false</negate>
+<sortid>19</sortid>
+</element>
+<element type="output">
+<id>40</id>
+<position>76,27</position>
+<text>16PC0008HS7.OUTRAT</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>34</Inputid>
+<Inputidx>1</Inputidx>
+<negate>false</negate>
+<sortid>20</sortid>
 </element>
 </cfc>
 </pou>

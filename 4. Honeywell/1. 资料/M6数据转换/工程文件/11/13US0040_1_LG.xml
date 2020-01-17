@@ -84,7 +84,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>7</id>
-<position>31,2</position>
+<position>46,2</position>
 <text>P1301ABC_BK.ONEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -96,7 +96,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>8</id>
-<position>31,8</position>
+<position>46,8</position>
 <text>P1301ABC_BK.OFFEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -108,7 +108,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>31,14</position>
+<position>46,14</position>
 <text>P1301ABC_BK.P2</text>
 <Comment>?????</Comment>
 <negate>false</negate>

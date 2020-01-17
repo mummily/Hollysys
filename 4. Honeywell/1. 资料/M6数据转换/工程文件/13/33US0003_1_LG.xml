@@ -328,7 +328,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>29</id>
-<position>106,23</position>
+<position>121,23</position>
 <text>33XV0004.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -340,7 +340,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>30</id>
-<position>106,28</position>
+<position>121,28</position>
 <text>33XV0004.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -352,7 +352,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>31</id>
-<position>106,28</position>
+<position>121,28</position>
 <text>33XV0005.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -364,7 +364,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>32</id>
-<position>106,22</position>
+<position>121,22</position>
 <text>33US0003_1_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

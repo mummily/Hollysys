@@ -307,9 +307,23 @@ END_VAR]]>
 <input inputid="14" inputidx="0" negate="false" visible="true" pinname="DLYTIME"/>
 <output negate="false" visible="true" pinname="SO"/>
 </element>
-<element type="output">
+<element type="box">
 <id>27</id>
-<position>76,5</position>
+<AT_position>81,14</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>12</sortid>
+<input inputid="19" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="output">
+<id>28</id>
+<position>91,5</position>
 <text>TIME1_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -317,11 +331,11 @@ END_VAR]]>
 <Inputid>25</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>12</sortid>
+<sortid>13</sortid>
 </element>
 <element type="output">
-<id>28</id>
-<position>76,5</position>
+<id>29</id>
+<position>91,5</position>
 <text>TIME1_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -329,11 +343,11 @@ END_VAR]]>
 <Inputid>26</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>13</sortid>
+<sortid>14</sortid>
 </element>
 <element type="output">
-<id>29</id>
-<position>76,14</position>
+<id>30</id>
+<position>91,14</position>
 <text>TIME1_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -341,19 +355,19 @@ END_VAR]]>
 <Inputid>23</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>14</sortid>
+<sortid>15</sortid>
 </element>
 <element type="output">
-<id>30</id>
-<position>76,14</position>
+<id>31</id>
+<position>91,14</position>
 <text>TIME1_NN5</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>3</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>15</sortid>
+<sortid>16</sortid>
 </element>
 </cfc>
 </pou>

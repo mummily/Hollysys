@@ -257,8 +257,44 @@ Private Sub InitProperty(sPouName As String)
         Next
     Next
     
+    'E 赋值
+    LElement_X = LElementLevel_X_Max + 15
+    For index = 1 To 12
+        With ExcelInfo.HN_OUTPUT(index)
+            If .LODSTN <> "" And .LODSTN <> "--.--" Then
+                If .LOENBL Like "SO*" Then
+                    ExcelInfo.HN_E(index).ElementID = LElement_ID
+                    LElement_ID = LElement_ID + 1
+                    
+                    ExcelInfo.HN_E(index).Element_X = LElement_X
+                    ExcelInfo.HN_E(index).Element_Y = ExcelInfo.HN_BOX(CInt(Right(.LOENBL, Len(.LOENBL) - 2))).Element_Y
+                    ExcelInfo.HN_E(index).ElementInputID = ExcelInfo.HN_BOX(CInt(Right(.LOENBL, Len(.LOENBL) - 2))).ElementID
+                    
+                    ExcelInfo.HN_E(index).ElementSortID = LSort_ID
+                    LSort_ID = LSort_ID + 1
+                ElseIf .LOENBL Like "L*" Then
+                    ExcelInfo.HN_E(index).ElementID = LElement_ID
+                    LElement_ID = LElement_ID + 1
+                    
+                    ExcelInfo.HN_E(index).Element_X = LElement_X
+                    ExcelInfo.HN_E(index).Element_Y = ExcelInfo.HN_INPUT(CInt(Right(.LOENBL, Len(.LOENBL) - 1))).Element_Y
+                    ExcelInfo.HN_E(index).ElementInputID = ExcelInfo.HN_INPUT(CInt(Right(.LOENBL, Len(.LOENBL) - 1))).ElementID
+                    
+                    ExcelInfo.HN_E(index).ElementSortID = LSort_ID
+                    LSort_ID = LSort_ID + 1
+                End If
+                
+                If .LOSRC Like "NN*" Then
+                    ExcelInfo.HN_E(index).ElementID_NF = LElement_ID
+                    LElement_ID = LElement_ID + 1
+                End If
+            End If
+        End With
+    Next
+    
+    
     '输出 赋值
-    LElement_X = LElementLevel_X_Max + 10
+    LElement_X = LElement_X + 10
     LElement_Y = 2
     For index = 1 To 12
         With ExcelInfo.HN_OUTPUT(index)
@@ -270,15 +306,19 @@ Private Sub InitProperty(sPouName As String)
                 .Element_Y = GetOutputYPosition(ExcelInfo.HN_OUTPUT(index), LElement_Y)
                 LElement_Y = .Element_Y
                 
-                Dim strSo As String
-                strSo = .LOSRC
-                If strSo Like "NN*" Or strSo Like "FL*" Then
-                    strSo = .LOENBL
+                If .LOSRC Like "SO*" Or .LOSRC Like "L*" Then
+                    .ElementInputID = GetInputIndex(.LOSRC)
+                    .ElementSortID = LSort_ID
+                    LSort_ID = LSort_ID + 1
+                ElseIf .LOENBL Like "SO*" Then
+                    .ElementInputID = ExcelInfo.HN_E(index).ElementID
+                    .ElementSortID = LSort_ID
+                    LSort_ID = LSort_ID + 1
+                ElseIf .LOENBL Like "L*" Then
+                    .ElementInputID = ExcelInfo.HN_E(index).ElementID
+                    .ElementSortID = LSort_ID
+                    LSort_ID = LSort_ID + 1
                 End If
-                
-                .ElementInputID = GetInputIndex(strSo)
-                .ElementSortID = LSort_ID
-                LSort_ID = LSort_ID + 1
             End If
         End With
     Next
@@ -507,6 +547,35 @@ Private Sub WriteInput(sPouName As String)
         End With
     Next
     
+    'E的NN、FL写入XML
+    For index = 1 To 12
+        With ExcelInfo.HN_OUTPUT(index)
+            If .LODSTN <> "" And .LODSTN <> "--.--" Then
+                If .LOSRC Like "NN*" Then
+                    POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+                    POU.WriteLine "<id>" & ExcelInfo.HN_E(index).ElementID_NF & "</id>"
+                    POU.WriteLine "<AT_position>" & ExcelInfo.HN_E(index).Element_X - 1 & "," & ExcelInfo.HN_E(index).Element_Y + 2 & "</AT_position>"
+                    POU.WriteLine "<text>" & sPouName & "_" & .LOSRC & "</text>"
+                    POU.WriteLine "<Comment>?????</Comment>"
+                    POU.WriteLine "<negate>false</negate>"
+                    POU.WriteLine "<ttype>4</ttype>"
+                    POU.WriteLine "<Flag>FALSE</Flag>"
+                    POU.WriteLine "</element>"
+                ElseIf .LOSRC Like "FL*" Then
+                    POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+                    POU.WriteLine "<id>" & ExcelInfo.HN_E(index).ElementID_NF & "</id>"
+                    POU.WriteLine "<AT_position>" & ExcelInfo.HN_E(index).Element_X - 1 & "," & ExcelInfo.HN_E(index).Element_Y + 2 & "</AT_position>"
+                    POU.WriteLine "<text>TRUE</text>"
+                    POU.WriteLine "<Comment>?????</Comment>"
+                    POU.WriteLine "<negate>false</negate>"
+                    POU.WriteLine "<ttype>4</ttype>"
+                    POU.WriteLine "<Flag>FALSE</Flag>"
+                    POU.WriteLine "</element>"
+                End If
+            End If
+        End With
+    Next
+    
     'DLYTIME  写入XML
     For index = 1 To 24
         With ExcelInfo.HN_BOX(index)
@@ -633,6 +702,30 @@ Private Sub WriteBox(sPouName As String)
             End If
         End With
     Next
+    'E 写入XML
+    For index = 1 To 12
+        With ExcelInfo.HN_E(index)
+           If .ElementID <> 0 Then
+                POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+                POU.WriteLine "<id>" & .ElementID & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
+                POU.WriteLine "<isinst>TRUE</isinst>"
+                POU.WriteLine "<text></text>"
+                POU.WriteLine "<AT_type>MOVE</AT_type>"
+                POU.WriteLine "<typetext>BT_FB</typetext>"
+                POU.WriteLine "<ttype>9</ttype>"
+                POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
+                
+                ' TODO 完善inputid值
+                POU.WriteLine "<input inputid=""" & .ElementInputID & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""EN""/>"
+                POU.WriteLine "<input inputid=""" & .ElementID_NF & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
+                POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""ENO""/>"
+                POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
+                
+                POU.WriteLine "</element>"
+            End If
+        End With
+    Next
 End Sub
 
 '-----------------------------------------------------------------------------------------------------------
@@ -652,7 +745,11 @@ Private Sub WriteOutput()
                 POU.WriteLine "<negate>false</negate>"
                 POU.WriteLine "<ttype>4</ttype>"
                 POU.WriteLine "<Inputid>" & .ElementInputID & "</Inputid>"
-                POU.WriteLine "<Inputidx>0</Inputidx>"
+                If .LOENBL Like "SO*" Or .LOENBL Like "L*" Then
+                    POU.WriteLine "<Inputidx>1</Inputidx>"
+                Else
+                    POU.WriteLine "<Inputidx>0</Inputidx>"
+                End If
                 POU.WriteLine "<negate>false</negate>"
                 POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
                 POU.WriteLine "</element>"

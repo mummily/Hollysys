@@ -228,7 +228,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>46,8</position>
+<position>61,8</position>
 <text>12PALLL0214_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -240,7 +240,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>21</id>
-<position>46,8</position>
+<position>61,8</position>
 <text>12PSHH0214.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

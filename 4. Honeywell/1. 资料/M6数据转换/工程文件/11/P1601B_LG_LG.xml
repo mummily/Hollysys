@@ -152,7 +152,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>61,2</position>
+<position>76,2</position>
 <text>P1601B_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -164,7 +164,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>61,5</position>
+<position>76,5</position>
 <text>P1601B.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -117,7 +117,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>61,6</position>
+<position>76,6</position>
 <text>16FIA0015_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

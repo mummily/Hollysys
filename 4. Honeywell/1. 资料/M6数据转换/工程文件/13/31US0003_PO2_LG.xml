@@ -356,7 +356,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>31</id>
-<position>136,8</position>
+<position>151,8</position>
 <text>31US0003_PO2_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -368,7 +368,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>32</id>
-<position>136,8</position>
+<position>151,8</position>
 <text>31US0003_PO2_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -380,7 +380,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>33</id>
-<position>136,8</position>
+<position>151,8</position>
 <text>31US0003_PO2_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -392,7 +392,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>34</id>
-<position>136,8</position>
+<position>151,8</position>
 <text>31US0003_PO2_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -404,7 +404,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>35</id>
-<position>136,8</position>
+<position>151,8</position>
 <text>XVS9002A.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -416,7 +416,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>36</id>
-<position>136,8</position>
+<position>151,8</position>
 <text>D9001.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -428,7 +428,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>37</id>
-<position>136,8</position>
+<position>151,8</position>
 <text>D9002.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -440,7 +440,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>38</id>
-<position>136,8</position>
+<position>151,8</position>
 <text>D9003.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

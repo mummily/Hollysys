@@ -364,7 +364,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>32</id>
-<position>76,11</position>
+<position>91,11</position>
 <text>X1402A_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -376,7 +376,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>33</id>
-<position>76,20</position>
+<position>91,20</position>
 <text>X1402B_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

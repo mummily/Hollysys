@@ -140,7 +140,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>76,17</position>
+<position>91,17</position>
 <text>13XV0006.INON</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -152,7 +152,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>76,17</position>
+<position>91,17</position>
 <text>13XV0006.ONEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>

@@ -29,6 +29,15 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
+<id>0</id>
+<AT_position>-1,2</AT_position>
+<text>TRUE</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
 <id>2</id>
 <AT_position>20,4</AT_position>
 <text>15XV0036_LG_FL8</text>
@@ -103,7 +112,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>9</id>
-<position>31,2</position>
+<position>46,2</position>
 <text>15XV0036.ONEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -115,7 +124,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>10</id>
-<position>31,4</position>
+<position>46,4</position>
 <text>15XV0036.OFFEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -123,11 +132,11 @@ END_VAR]]>
 <Inputid>0</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>3</sortid>
+<sortid>0</sortid>
 </element>
 <element type="output">
 <id>11</id>
-<position>31,8</position>
+<position>46,8</position>
 <text>15XV0036.INOF</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -135,7 +144,7 @@ END_VAR]]>
 <Inputid>8</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>4</sortid>
+<sortid>3</sortid>
 </element>
 </cfc>
 </pou>

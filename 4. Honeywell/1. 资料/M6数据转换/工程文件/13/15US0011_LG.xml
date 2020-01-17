@@ -63,7 +63,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>5</id>
-<position>31,2</position>
+<position>46,2</position>
 <text>15XV0037_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -75,7 +75,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>6</id>
-<position>31,8</position>
+<position>46,8</position>
 <text>15XV0036_LG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>

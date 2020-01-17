@@ -111,7 +111,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>11</id>
-<position>23,2</position>
+<position>38,2</position>
 <text>13FALL9001A_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -123,7 +123,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>23,8</position>
+<position>38,8</position>
 <text>13FALL9001B_FL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -135,7 +135,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>13</id>
-<position>23,14</position>
+<position>38,14</position>
 <text>30PALLL0002.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -147,7 +147,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>14</id>
-<position>23,20</position>
+<position>38,20</position>
 <text>13UZ0010J_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -159,7 +159,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>23,26</position>
+<position>38,26</position>
 <text>13UZ0010A_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -171,7 +171,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>23,32</position>
+<position>38,32</position>
 <text>13UZ0010B_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -183,7 +183,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>23,38</position>
+<position>38,38</position>
 <text>13UZ0010C_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -195,7 +195,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>23,44</position>
+<position>38,44</position>
 <text>13UZ0010D_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -207,7 +207,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>23,50</position>
+<position>38,50</position>
 <text>13UZ0010E_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -219,7 +219,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>20</id>
-<position>23,56</position>
+<position>38,56</position>
 <text>13UZ0010F_DO.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>

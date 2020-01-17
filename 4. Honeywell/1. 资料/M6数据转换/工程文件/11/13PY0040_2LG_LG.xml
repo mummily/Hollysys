@@ -170,7 +170,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>15</id>
-<position>46,2</position>
+<position>61,2</position>
 <text>13PC0040_SW1.S2</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -182,7 +182,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>16</id>
-<position>46,14</position>
+<position>61,14</position>
 <text>13PC0040_SW1.S1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -194,7 +194,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>17</id>
-<position>46,14</position>
+<position>61,14</position>
 <text>13PC0040_SW3.S1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -206,7 +206,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>18</id>
-<position>46,14</position>
+<position>61,14</position>
 <text>13PC0040_SW1_SEL.DI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -218,7 +218,7 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>19</id>
-<position>46,26</position>
+<position>61,26</position>
 <text>13XV0043.OFFEN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
