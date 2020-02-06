@@ -284,14 +284,21 @@ Private Sub InitProperty(sPouName As String)
                     LSort_ID = LSort_ID + 1
                 End If
                 
-                If .LOSRC Like "NN*" Then
+                If .LOSRC Like "NN*" Or .LOSRC Like "FL*" Then
                     ExcelInfo.HN_E(index).ElementID_NF = LElement_ID
                     LElement_ID = LElement_ID + 1
+                End If
+                
+                If .LOSRC Like "L*" Then
+                    ExcelInfo.HN_E(index).ElementID_NF = ExcelInfo.HN_INPUT(CInt(Right(.LOSRC, Len(.LOSRC) - 1))).ElementID
+                End If
+                
+                If .LOSRC Like "SO*" Then
+                    ExcelInfo.HN_E(index).ElementID_NF = ExcelInfo.HN_BOX(CInt(Right(.LOSRC, Len(.LOSRC) - 2))).ElementID
                 End If
             End If
         End With
     Next
-    
     
     'Êä³ö ¸³Öµ
     LElement_X = LElement_X + 10
@@ -306,16 +313,12 @@ Private Sub InitProperty(sPouName As String)
                 .Element_Y = GetOutputYPosition(ExcelInfo.HN_OUTPUT(index), LElement_Y)
                 LElement_Y = .Element_Y
                 
-                If .LOSRC Like "SO*" Or .LOSRC Like "L*" Then
+                If .LOENBL Like "SO*" Or .LOENBL Like "L*" Then
+                    .ElementInputID = ExcelInfo.HN_E(index).ElementID
+                    .ElementSortID = LSort_ID
+                    LSort_ID = LSort_ID + 1
+                ElseIf .LOSRC Like "SO*" Or .LOSRC Like "L*" Then
                     .ElementInputID = GetInputIndex(.LOSRC)
-                    .ElementSortID = LSort_ID
-                    LSort_ID = LSort_ID + 1
-                ElseIf .LOENBL Like "SO*" Then
-                    .ElementInputID = ExcelInfo.HN_E(index).ElementID
-                    .ElementSortID = LSort_ID
-                    LSort_ID = LSort_ID + 1
-                ElseIf .LOENBL Like "L*" Then
-                    .ElementInputID = ExcelInfo.HN_E(index).ElementID
                     .ElementSortID = LSort_ID
                     LSort_ID = LSort_ID + 1
                 End If

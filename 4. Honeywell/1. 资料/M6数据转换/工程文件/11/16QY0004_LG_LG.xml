@@ -177,7 +177,7 @@ END_VAR]]>
 <ttype>9</ttype>
 <sortid>6</sortid>
 <input inputid="11" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname="ENO"/>
 <output negate="false" visible="true" pinname=""/>
 </element>
@@ -191,7 +191,7 @@ END_VAR]]>
 <ttype>9</ttype>
 <sortid>7</sortid>
 <input inputid="10" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname="ENO"/>
 <output negate="false" visible="true" pinname=""/>
 </element>
@@ -205,7 +205,7 @@ END_VAR]]>
 <ttype>9</ttype>
 <sortid>8</sortid>
 <input inputid="12" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname="ENO"/>
 <output negate="false" visible="true" pinname=""/>
 </element>
@@ -252,7 +252,7 @@ END_VAR]]>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>15</Inputid>
 <Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>12</sortid>
@@ -264,7 +264,7 @@ END_VAR]]>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>5</Inputid>
+<Inputid>16</Inputid>
 <Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>13</sortid>
@@ -276,7 +276,7 @@ END_VAR]]>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>4</Inputid>
+<Inputid>17</Inputid>
 <Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>14</sortid>
