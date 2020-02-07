@@ -200,10 +200,10 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>3</sortid>
-<input inputid="14" inputidx="0" negate="false" visible="true" pinname="SET"/>
-<input inputid="13" inputidx="0" negate="false" visible="true" pinname="RESET1"/>
-<input inputid="6" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="Q1"/>
+<input inputid="14" inputidx="0" negate="false" visible="true" pinname="S1"/>
+<input inputid="13" inputidx="0" negate="false" visible="true" pinname="S2"/>
+<input inputid="6" inputidx="0" negate="false" visible="true" pinname="S3"/>
+<output negate="false" visible="true" pinname="SO"/>
 </element>
 <element type="box">
 <id>17</id>
@@ -256,10 +256,10 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>2</sortid>
-<input inputid="3" inputidx="0" negate="false" visible="true" pinname="SET"/>
-<input inputid="1" inputidx="0" negate="false" visible="true" pinname="RESET1"/>
-<input inputid="8" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="Q1"/>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname="S1"/>
+<input inputid="1" inputidx="0" negate="false" visible="true" pinname="S2"/>
+<input inputid="8" inputidx="0" negate="false" visible="true" pinname="S3"/>
+<output negate="false" visible="true" pinname="SO"/>
 </element>
 <element type="box">
 <id>20</id>

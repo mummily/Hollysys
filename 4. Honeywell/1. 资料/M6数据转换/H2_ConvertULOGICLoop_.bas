@@ -915,7 +915,7 @@ Private Function WriteBoxOutputs(iIndex As Integer)
             Call WriteBoxOutput("Q")
             Call WriteBoxOutput("ET")
         ElseIf .LOGALGID = "FLIPFLOP" Then
-            Call WriteBoxOutput("Q1")
+            Call WriteBoxOutput("SO")
         Else
             Call WriteBoxOutput("")
         End If
@@ -1058,7 +1058,7 @@ Private Function ConvertPinName(strBoxName As String, strPinName As String) As S
     ElseIf strBoxName = "OFFDLY" Then
         ConvertPinName = ConvertOFFDLYPinName(strPinName)
     ElseIf strBoxName = "FLIPFLOP" Then
-        ConvertPinName = ConvertFLIPFLOPPinName(strPinName, "RS")
+        ConvertPinName = ConvertFLIPFLOPPinName(strPinName)
     Else
         ConvertPinName = ""
     End If
@@ -1174,21 +1174,13 @@ End Function
 ' History: sw create function on 2019.9.25
 '
 '-----------------------------------------------------------------------------------------------------------
-Private Function ConvertFLIPFLOPPinName(strPinName As String, strPinType As String)
+Private Function ConvertFLIPFLOPPinName(strPinName As String)
     If strPinName = "S1" Then
-        If strPinType = "RS" Then
-            ConvertFLIPFLOPPinName = "SET"
-        Else
-            ConvertFLIPFLOPPinName = "SET1"
-        End If
+        ConvertFLIPFLOPPinName = "S1"
     ElseIf strPinName = "S2" Then
-        If strPinType = "RS" Then
-            ConvertFLIPFLOPPinName = "RESET1"
-        Else
-            ConvertFLIPFLOPPinName = "RESET"
-        End If
+        ConvertFLIPFLOPPinName = "S2"
     Else
-        ConvertFLIPFLOPPinName = ""
+        ConvertFLIPFLOPPinName = "S3"
     End If
 End Function
 

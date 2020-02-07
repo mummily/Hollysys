@@ -230,10 +230,10 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>13</sortid>
-<input inputid="28" inputidx="0" negate="false" visible="true" pinname="SET"/>
-<input inputid="1" inputidx="0" negate="false" visible="true" pinname="RESET1"/>
-<input inputid="10" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="Q1"/>
+<input inputid="28" inputidx="0" negate="false" visible="true" pinname="S1"/>
+<input inputid="1" inputidx="0" negate="false" visible="true" pinname="S2"/>
+<input inputid="10" inputidx="0" negate="false" visible="true" pinname="S3"/>
+<output negate="false" visible="true" pinname="SO"/>
 </element>
 <element type="box">
 <id>24</id>

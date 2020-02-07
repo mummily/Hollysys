@@ -307,10 +307,10 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>5</sortid>
-<input inputid="4" inputidx="0" negate="false" visible="true" pinname="SET"/>
-<input inputid="21" inputidx="0" negate="false" visible="true" pinname="RESET1"/>
-<input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="Q1"/>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname="S1"/>
+<input inputid="21" inputidx="0" negate="false" visible="true" pinname="S2"/>
+<input inputid="5" inputidx="0" negate="false" visible="true" pinname="S3"/>
+<output negate="false" visible="true" pinname="SO"/>
 </element>
 <element type="box">
 <id>27</id>
@@ -321,10 +321,10 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>9</sortid>
-<input inputid="6" inputidx="0" negate="false" visible="true" pinname="SET"/>
-<input inputid="25" inputidx="0" negate="false" visible="true" pinname="RESET1"/>
-<input inputid="7" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="Q1"/>
+<input inputid="6" inputidx="0" negate="false" visible="true" pinname="S1"/>
+<input inputid="25" inputidx="0" negate="false" visible="true" pinname="S2"/>
+<input inputid="7" inputidx="0" negate="false" visible="true" pinname="S3"/>
+<output negate="false" visible="true" pinname="SO"/>
 </element>
 <element type="box">
 <id>30</id>
@@ -335,10 +335,10 @@ END_VAR]]>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>12</sortid>
-<input inputid="8" inputidx="0" negate="false" visible="true" pinname="SET"/>
-<input inputid="28" inputidx="0" negate="false" visible="true" pinname="RESET1"/>
-<input inputid="9" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="Q1"/>
+<input inputid="8" inputidx="0" negate="false" visible="true" pinname="S1"/>
+<input inputid="28" inputidx="0" negate="false" visible="true" pinname="S2"/>
+<input inputid="9" inputidx="0" negate="false" visible="true" pinname="S3"/>
+<output negate="false" visible="true" pinname="SO"/>
 </element>
 <element type="box">
 <id>18</id>
