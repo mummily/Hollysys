@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>13,2</AT_position>
-<text>11PDIA0206.AV</text>
+<text>11PDIA0206.PV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

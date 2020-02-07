@@ -67,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>13,32</AT_position>
-<text>15PDI0002_SET.AV</text>
+<text>15PDI0002_SET.PV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -94,7 +94,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>13,50</AT_position>
-<text>15PI0003_ALARM.AV</text>
+<text>15PI0003_ALARM.PV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

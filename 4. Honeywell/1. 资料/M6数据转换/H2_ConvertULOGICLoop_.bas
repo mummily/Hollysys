@@ -1367,8 +1367,11 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
         If "PID" = NameType(Left(newLISRC, Len(newLISRC) - 7)) Then
             newLISRC = ReplaceSuffix(newLISRC, ".OPLOLM", ".ENGL")
         End If
+    ElseIf ".PV" = Right(newLISRC, 3) Then
+        If "UAI" = NameType(Left(newLISRC, Len(newLISRC) - 3)) Then
+            newLISRC = ReplaceSuffix(newLISRC, ".PV", ".AV")
+        End If
     Else
-        newLISRC = ReplaceSuffix(newLISRC, ".PV", ".AV")
         newLISRC = ReplaceCommonSuffix(newLISRC)
     End If
 
@@ -1447,8 +1450,11 @@ Private Function ReplaceLODSTNSuffix(LODSTN As String)
         If "PID" = NameType(Left(newLODSTN, Len(newLODSTN) - 7)) Then
             newLODSTN = ReplaceSuffix(newLODSTN, ".OPLOLM", ".ENGL")
         End If
+    ElseIf ".PV" = Right(newLODSTN, 3) Then
+        If "UAI" = NameType(Left(newLODSTN, Len(newLODSTN) - 3)) Then
+            newLODSTN = ReplaceSuffix(newLODSTN, ".PV", ".AV")
+        End If
     Else
-        newLODSTN = ReplaceSuffix(newLODSTN, ".PV", ".AI")
         newLODSTN = ReplaceSuffix(newLODSTN, ".RESETFL", "_RS")
         newLODSTN = ReplaceCommonSuffix(newLODSTN)
     End If

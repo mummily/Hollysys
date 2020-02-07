@@ -49,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>13,20</AT_position>
-<text>13TI0020.AV</text>
+<text>13TI0020.PV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
