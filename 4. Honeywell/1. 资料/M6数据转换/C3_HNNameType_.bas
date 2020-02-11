@@ -27,6 +27,13 @@ With NameType
        
     Next
     
+    'UDC
+    For i = 2 To UBound(UDC_arr(), 1)
+    
+       .Add UDC_arr(i, UDC("NAME")), "UDC" 'µãÃû
+       
+    Next
+    
     'UDI
     For i = 2 To UBound(UDI_arr(), 1)
     

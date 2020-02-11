@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="input">
 <id>3</id>
 <AT_position>13,14</AT_position>
-<text>F1101A.DI(1)</text>
+<text>F1101A.OUT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -67,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>13,32</AT_position>
-<text>F1101B.DI(1)</text>
+<text>F1101B.OUT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

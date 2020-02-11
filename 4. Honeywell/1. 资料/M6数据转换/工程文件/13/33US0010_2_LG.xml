@@ -67,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>13,32</AT_position>
-<text>P3301AB_BK.DI(1)</text>
+<text>P3301AB_BK.OUT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

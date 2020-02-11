@@ -22,7 +22,7 @@ END_VAR]]>
 <element type="input">
 <id>1</id>
 <AT_position>13,2</AT_position>
-<text>P3601A.DI(1)</text>
+<text>P3601A.OUT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="input">
 <id>2</id>
 <AT_position>13,8</AT_position>
-<text>P3601B.DI(1)</text>
+<text>P3601B.OUT</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
