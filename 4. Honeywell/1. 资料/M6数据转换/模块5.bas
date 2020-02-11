@@ -39,7 +39,7 @@ End Type
 
 '-----------------------------------------------------------------------------------------------------------
 'Purpose: ULOGIC E数据结构，对应M6 Move数据结构
-'History: 1-15-2020
+'History: 9-24-2019
 '-----------------------------------------------------------------------------------------------------------
 Type T_HN_E
     ElementID As Integer
@@ -61,7 +61,10 @@ Type T_HN_INPUT
     Element_X As Integer
     Element_Y As Integer
     
-    LISRC As String
+    ElementID_Ref As Integer ' Input是个组合，这里记录实际指出的ID值
+    
+    LISRC As String ' 从Excel中读取的输入数据，可修改适配为M6风格
+    LISRC_BAK As String ' 从Excel中读取的输入数据，始终不修改
 End Type
 
 '-----------------------------------------------------------------------------------------------------------

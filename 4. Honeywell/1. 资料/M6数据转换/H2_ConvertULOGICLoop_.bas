@@ -82,6 +82,7 @@ Private Sub InitProperty(sPouName As String)
         For index = 1 To 12
             With .HN_INPUT(index)
                 .LISRC = ULOGIC_arr(rowLogic, ULOGIC("LISRC(" & index & ")"))
+                .LISRC_BAK = .LISRC
                 .LISRC = ReplaceLISRCSuffix(.LISRC)
             End With
         Next
@@ -154,6 +155,14 @@ Private Sub InitProperty(sPouName As String)
                 .Element_X = LElement_X
                 .Element_Y = LElement_Y
                 LElement_Y = LElement_Y + 6
+                
+                If ".SO(0)" = Right(.LISRC_BAK, 6) Then
+                    If "UDC" = NameType(Left(.LISRC_BAK, Len(.LISRC_BAK) - 6)) Then
+                        .ElementID_Ref = LElement_ID
+                        LElement_ID = LElement_ID + 1
+                    End If
+                End If
+                
              End If
         End With
     Next
@@ -684,6 +693,7 @@ End Sub
 'History: 12-05-2019
 '-----------------------------------------------------------------------------------------------------------
 Private Sub WriteBox(sPouName As String)
+
     'BOX 写入XML
     For index = 1 To 24
         With ExcelInfo.HN_BOX(index)
@@ -705,6 +715,7 @@ Private Sub WriteBox(sPouName As String)
             End If
         End With
     Next
+    
     'E 写入XML
     For index = 1 To 12
         With ExcelInfo.HN_E(index)
@@ -719,7 +730,6 @@ Private Sub WriteBox(sPouName As String)
                 POU.WriteLine "<ttype>9</ttype>"
                 POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
                 
-                ' TODO 完善inputid值
                 POU.WriteLine "<input inputid=""" & .ElementInputID & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""EN""/>"
                 POU.WriteLine "<input inputid=""" & .ElementID_NF & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
                 POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""ENO""/>"
@@ -729,6 +739,28 @@ Private Sub WriteBox(sPouName As String)
             End If
         End With
     Next
+    
+    'Input组合 写入XML
+    For index = 1 To 12
+        With ExcelInfo.HN_INPUT(index)
+            If .ElementID_Ref <> 0 Then
+                POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+                POU.WriteLine "<id>" & .ElementID_Ref & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X + 2 & "," & .Element_Y - 1 & "</AT_position>"
+                POU.WriteLine "<AT_isen>false</AT_isen>"
+                POU.WriteLine "<AT_iseno>false</AT_iseno>"
+                POU.WriteLine "<AT_type>NOT</AT_type>"
+                POU.WriteLine "<typetext>BT_OPERATOR</typetext>"
+                POU.WriteLine "<sortid>0</sortid>"
+                
+                POU.WriteLine "<input inputid=""" & .ElementID & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
+                POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
+                
+                POU.WriteLine "</element>"
+            End If
+        End With
+    Next
+    
 End Sub
 
 '-----------------------------------------------------------------------------------------------------------
@@ -1013,7 +1045,11 @@ Private Function GetInputIndex(strIndexName As String)
     
     If strIndexName Like "L*" Then
         nIndex = CInt(Right(strIndexName, Len(strIndexName) - 1))
-        GetInputIndex = ExcelInfo.HN_INPUT(nIndex).ElementID
+        If ExcelInfo.HN_INPUT(nIndex).ElementID_Ref <> 0 Then
+            GetInputIndex = ExcelInfo.HN_INPUT(nIndex).ElementID_Ref
+        Else
+            GetInputIndex = ExcelInfo.HN_INPUT(nIndex).ElementID
+        End If
     ElseIf strIndexName Like "SO*" Then
         nIndex = CInt(Right(strIndexName, Len(strIndexName) - 2))
         GetInputIndex = ExcelInfo.HN_BOX(nIndex).ElementID
@@ -1367,6 +1403,10 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
         If "UDC" = NameType(Left(newLISRC, Len(newLISRC) - 6)) Then
             newLISRC = ReplaceSuffix(newLISRC, ".SO(1)", ".OUT")
         End If
+    ElseIf ".SO(0)" = Right(newLISRC, 6) Then
+        If "UDC" = NameType(Left(newLISRC, Len(newLISRC) - 6)) Then
+            newLISRC = ReplaceSuffix(newLISRC, ".SO(0)", ".OUT")
+        End If
     Else
         newLISRC = ReplaceCommonSuffix(newLISRC)
     End If
@@ -1449,10 +1489,6 @@ Private Function ReplaceLODSTNSuffix(LODSTN As String)
     ElseIf ".PV" = Right(newLODSTN, 3) Then
         If "UAI" = NameType(Left(newLODSTN, Len(newLODSTN) - 3)) Then
             newLODSTN = ReplaceSuffix(newLODSTN, ".PV", ".AV")
-        End If
-    ElseIf ".SO(1)" = Right(newLODSTN, 6) Then
-        If "UDC" = NameType(Left(newLODSTN, Len(newLODSTN) - 6)) Then
-            newLODSTN = ReplaceSuffix(newLODSTN, ".SO(1)", ".OUT")
         End If
     Else
         newLODSTN = ReplaceSuffix(newLODSTN, ".RESETFL", "_RS")
