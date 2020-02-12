@@ -344,7 +344,7 @@ Private Sub InitVar(sPouName As String)
     ' 计时器变量
     For index = 1 To 24
         With ExcelInfo.HN_BOX(index)
-            If .ElementATType = "TON" Or .ElementATType = "TOF" Or .ElementATType = "TP" Or .ElementATType = "QOR2" Or .ElementATType = "QOR3" Then
+            If .ElementATType = "TON" Or .ElementATType = "TOF" Or .ElementATType = "TP" Or .ElementATType = "QOR2" Or .ElementATType = "QOR3" Or .ElementATType = "MINPULSE" Or .ElementATType = "MAXPULSE" Or .ElementATType = "FLIPFLOP" Or .ElementATType = "CHDETECT" Or .ElementATType = "DISCREP3" Then
                 Dim var As T_HN_VAR
                 
                 var.TT = .ElementATType
@@ -1549,6 +1549,22 @@ Sub WriteVar()
         
         .Sheets("QOR3").Select
         WriteQOR ("QOR3")
+                
+        .Sheets("MINPULSE").Select
+        WriteMINPULSE
+                
+        .Sheets("MAXPULSE").Select
+        WriteMAXPULSE
+                
+        .Sheets("FLIPFLOP").Select
+        WriteFLIPFLOP
+                
+        .Sheets("CHDETECT").Select
+        WriteCHDETECT
+                
+        .Sheets("DISCREP3").Select
+        WriteDISCREP3
+        
     End With
      
     ActiveWorkbook.Save
@@ -1658,6 +1674,150 @@ Private Sub WriteQOR(strQOR As String)
             arr(index, 2) = ""
             arr(index, 3) = ""
             arr(index, 4) = VarInfo.HN_VAR(varindex).SN
+            
+            index = index + 1
+        End If
+    Next
+    
+    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).Value = arr
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Purpose: 写入MINPULSE的变量信息
+' Remark:
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Private Sub WriteMINPULSE()
+    Dim arr(1 To 1000, 1 To 10)
+    Dim index As Integer
+    index = 1
+    
+    For varindex = 1 To VarInfo.VarNum
+        If VarInfo.HN_VAR(varindex).TT = "MINPULSE" Then
+            arr(index, 1) = VarInfo.HN_VAR(varindex).PN
+            arr(index, 2) = "最小脉冲"
+            arr(index, 3) = ""
+            arr(index, 4) = VarInfo.HN_VAR(varindex).SN
+            arr(index, 5) = ""
+            arr(index, 6) = ""
+            arr(index, 7) = ""
+            arr(index, 8) = ""
+            arr(index, 9) = ""
+            arr(index, 10) = ""
+            
+            index = index + 1
+        End If
+    Next
+    
+    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).Value = arr
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Purpose: 写入MAXPULSE的变量信息
+' Remark:
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Private Sub WriteMAXPULSE()
+    Dim arr(1 To 1000, 1 To 10)
+    Dim index As Integer
+    index = 1
+    
+    For varindex = 1 To VarInfo.VarNum
+        If VarInfo.HN_VAR(varindex).TT = "MAXPULSE" Then
+            arr(index, 1) = VarInfo.HN_VAR(varindex).PN
+            arr(index, 2) = "最大脉冲"
+            arr(index, 3) = ""
+            arr(index, 4) = VarInfo.HN_VAR(varindex).SN
+            arr(index, 5) = ""
+            arr(index, 6) = ""
+            arr(index, 7) = ""
+            arr(index, 8) = ""
+            arr(index, 9) = ""
+            arr(index, 10) = ""
+            
+            index = index + 1
+        End If
+    Next
+    
+    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).Value = arr
+End Sub
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Purpose: 写入FLIPFLOP的变量信息
+' Remark:
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Private Sub WriteFLIPFLOP()
+    Dim arr(1 To 1000, 1 To 10)
+    Dim index As Integer
+    index = 1
+    
+    For varindex = 1 To VarInfo.VarNum
+        If VarInfo.HN_VAR(varindex).TT = "FLIPFLOP" Then
+            arr(index, 1) = VarInfo.HN_VAR(varindex).PN
+            arr(index, 2) = "双稳态触发器"
+            arr(index, 3) = ""
+            arr(index, 4) = VarInfo.HN_VAR(varindex).SN
+            arr(index, 5) = ""
+            arr(index, 6) = ""
+            arr(index, 7) = ""
+            arr(index, 8) = ""
+            arr(index, 9) = ""
+            arr(index, 10) = ""
+            
+            index = index + 1
+        End If
+    Next
+    
+    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).Value = arr
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Purpose: 写入CHDETECT的变量信息
+' Remark:
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Private Sub WriteCHDETECT()
+    Dim arr(1 To 1000, 1 To 10)
+    Dim index As Integer
+    index = 1
+    
+    For varindex = 1 To VarInfo.VarNum
+        If VarInfo.HN_VAR(varindex).TT = "CHDETECT" Then
+            arr(index, 1) = VarInfo.HN_VAR(varindex).PN
+            arr(index, 2) = "变化检测"
+            arr(index, 3) = ""
+            arr(index, 4) = VarInfo.HN_VAR(varindex).SN
+            arr(index, 5) = ""
+            arr(index, 6) = ""
+            arr(index, 7) = ""
+            arr(index, 8) = ""
+            arr(index, 9) = ""
+            arr(index, 10) = ""
+            
+            index = index + 1
+        End If
+    Next
+    
+    ActiveSheet.Range("A3").Resize(UBound(arr, 1), UBound(arr, 2)).Value = arr
+End Sub
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Purpose: 写入DISCREP3的变量信息
+' Remark:
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Private Sub WriteDISCREP3()
+    Dim arr(1 To 1000, 1 To 10)
+    Dim index As Integer
+    index = 1
+    
+    For varindex = 1 To VarInfo.VarNum
+        If VarInfo.HN_VAR(varindex).TT = "DISCREP3" Then
+            arr(index, 1) = VarInfo.HN_VAR(varindex).PN
+            arr(index, 2) = "三输入异或"
+            arr(index, 3) = ""
+            arr(index, 4) = VarInfo.HN_VAR(varindex).SN
+            arr(index, 5) = ""
+            arr(index, 6) = ""
+            arr(index, 7) = ""
+            arr(index, 8) = ""
+            arr(index, 9) = ""
+            arr(index, 10) = ""
             
             index = index + 1
         End If
