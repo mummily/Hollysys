@@ -49,7 +49,7 @@ END_VAR]]>
 <element type="input">
 <id>4</id>
 <AT_position>13,20</AT_position>
-<text>13LY0040A_1.ALIND</text>
+<text>13LY0040A_1.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -58,7 +58,7 @@ END_VAR]]>
 <element type="input">
 <id>5</id>
 <AT_position>13,26</AT_position>
-<text>13LY0040B_1.ALIND</text>
+<text>13LY0040B_1.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -67,7 +67,7 @@ END_VAR]]>
 <element type="input">
 <id>6</id>
 <AT_position>13,32</AT_position>
-<text>13LY0040C_1.ALIND</text>
+<text>13LY0040C_1.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -76,7 +76,7 @@ END_VAR]]>
 <element type="input">
 <id>7</id>
 <AT_position>13,38</AT_position>
-<text>13LY0040A_1.AHIND</text>
+<text>13LY0040A_1.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -85,7 +85,7 @@ END_VAR]]>
 <element type="input">
 <id>8</id>
 <AT_position>13,44</AT_position>
-<text>13LY0040B_1.AHIND</text>
+<text>13LY0040B_1.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -94,7 +94,7 @@ END_VAR]]>
 <element type="input">
 <id>9</id>
 <AT_position>13,50</AT_position>
-<text>13LY0040C_1.AHIND</text>
+<text>13LY0040C_1.AV</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

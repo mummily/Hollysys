@@ -40,7 +40,7 @@ END_VAR]]>
 <element type="output">
 <id>3</id>
 <position>38,2</position>
-<text>11FQ0101_24_RS</text>
+<text>11FQ0101_24.AI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -52,7 +52,7 @@ END_VAR]]>
 <element type="output">
 <id>4</id>
 <position>38,2</position>
-<text>11FQ0201_24_RS</text>
+<text>11FQ0201_24.AI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -64,7 +64,7 @@ END_VAR]]>
 <element type="output">
 <id>5</id>
 <position>38,2</position>
-<text>11FQ0102_24_RS</text>
+<text>11FQ0102_24.AI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -76,7 +76,7 @@ END_VAR]]>
 <element type="output">
 <id>6</id>
 <position>38,2</position>
-<text>11FQ0202_24_RS</text>
+<text>11FQ0202_24.AI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -88,7 +88,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>38,8</position>
-<text>11FQ0101_8_RS</text>
+<text>11FQ0101_8.AI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -100,7 +100,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>38,8</position>
-<text>11FQ0101_8_RS</text>
+<text>11FQ0101_8.AI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -112,7 +112,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>38,8</position>
-<text>11FQ0201_8_RS</text>
+<text>11FQ0201_8.AI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -124,7 +124,7 @@ END_VAR]]>
 <element type="output">
 <id>10</id>
 <position>38,8</position>
-<text>11FQ0102_8_RS</text>
+<text>11FQ0102_8.AI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -136,7 +136,7 @@ END_VAR]]>
 <element type="output">
 <id>11</id>
 <position>38,8</position>
-<text>11FQ0202_8_RS</text>
+<text>11FQ0202_8.AI</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
