@@ -1436,8 +1436,9 @@ Private Function ReplaceCommonSuffix(str As String)
         DicStr.Add ".PVHHFL", ".HHIND"
         DicStr.Add ".I0", ".INOF"
         DicStr.Add ".I1", ".INON"
-        DicStr.Add ".P0", ".OFFEN"
-        DicStr.Add ".P1", ".ONEN"
+        ' 2020.02.28和李工沟通，暂先注掉P0、P1
+        ' DicStr.Add ".P0", ".OFFEN"
+        ' DicStr.Add ".P1", ".ONEN"
         DicStr.Add ".OPHILM", ".ENGU"
         DicStr.Add ".OPROCLM", ".OUTRAT"
         
@@ -1485,10 +1486,6 @@ Private Function ReplaceLODSTNSuffix(LODSTN As String)
     ElseIf ".OPLOLM" = Right(newLODSTN, 7) Then
         If "PID" = NameType(Left(newLODSTN, Len(newLODSTN) - 7)) Then
             newLODSTN = ReplaceSuffix(newLODSTN, ".OPLOLM", ".ENGL")
-        End If
-    ElseIf ".PV" = Right(newLODSTN, 3) Then
-        If "UAI" = NameType(Left(newLODSTN, Len(newLODSTN) - 3)) Then
-            newLODSTN = ReplaceSuffix(newLODSTN, ".PV", ".AV")
         End If
     Else
         newLODSTN = ReplaceSuffix(newLODSTN, ".RESETFL", "_RS")
