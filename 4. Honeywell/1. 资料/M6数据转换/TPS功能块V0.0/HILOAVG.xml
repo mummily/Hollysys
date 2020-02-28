@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWAlgorithms]]></path>
+	<name>HILOAVG</name>
+	<secondName>¸ßµÍÆ½¾ù</secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-24 10:03:37</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION_BLOCK HILOAVG
+VAR
+		NMIN(1092): BYTE := 1;		(*×´Ì¬ºÃ²ÎÊý×îÐ¡¸öÊý*)
+		FRCPERM(1094): BOOL := FALSE;		(*ÊÇ·ñÔÊÐíÇ¿ÖÆ*)
+		FSELIN(1094): BYTE := 0;		(*Ç¿ÖÆÑ¡ÔñÏî1-6*)
+		PVEQN(1094): BYTE := 0;		(*Ä£Ê½Ñ¡Ôñ0-¸ßÑ¡1-µÍÑ¡2-È¡Æ½¾ù*)
+		STGN(1092): BYTE := 0;		(*×´Ì¬ºÃ²ÎÊýµ±Ç°¸öÊý*)
+		PP(1028): ARRAY [1..6] OF REAL := 6(0);		(*×´Ì¬ºÃµã´æ´¢*)
+		PINP(1028): ARRAY [1..6] OF BYTE := 6(0);		(*×´Ì¬ºÃµãÐòºÅ´æ´¢*)
+		RET(1028): BOOL := FALSE;		(*º¯Êý·µ»ØÖµ*)
+END_VAR
+VAR_INPUT
+		P1(1095): REAL := 0;		(*ÊäÈë1*)
+		P1STS(1095): WORD := 0;		(*ÊäÈë1×´Ì¬0-ºÃ*)
+		P2(1095): REAL := 0;		(*ÊäÈë2*)
+		P2STS(1095): WORD := 0;		(*ÊäÈë2×´Ì¬0-ºÃ*)
+		P3(1095): REAL := 0;		(*ÊäÈë3*)
+		P3STS(1095): WORD := 0;		(*ÊäÈë3×´Ì¬0-ºÃ*)
+		P4(1095): REAL := 0;		(*ÊäÈë4*)
+		P4STS(1095): WORD := 0;		(*ÊäÈë4×´Ì¬0-ºÃ*)
+		P5(1095): REAL := 0;		(*ÊäÈë5*)
+		P5STS(1095): WORD := 0;		(*ÊäÈë5×´Ì¬0-ºÃ*)
+		P6(1095): REAL := 0;		(*ÊäÈë6*)
+		P6STS(1095): WORD := 0;		(*ÊäÈë6×´Ì¬0-ºÃ*)
+		FORCE1(2119): BOOL := FALSE;		(*Ç¿ÖÆÐÅºÅ*)
+END_VAR
+VAR_IN_OUT
+END_VAR
+VAR_OUTPUT
+		PVCALC(1094): REAL := 0;		(*Êä³ö*)
+		PVAUTOST(1094): WORD := 0;		(*Êä³ö×´Ì¬0-ºÃ*)
+		SELXINP(1092): REAL := 0;		(*±»Ñ¡²ÎÊýºÅ1-6*)
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[;
+(*
+1.Ç¿ÖÆÑ¡ÔñÊä³öÄ£Ê½
+µ±Ç¿ÖÆÔÊÐí²ÎÊýFRCPERMÎªTRUE²¢ÇÒÇ¿ÖÆÐÅºÅFORCE1ÎªTRUEÊ±£¬Êä³öÓÉ²ÎÊýÇ¿ÖÆÑ¡ÔñÏîFSELIN¿ØÖÆ
+
+2.·ÇÇ¿ÖÆÑ¡ÔñÊä³ö
+¸ù¾Ý²ÎÊýÉè¶¨£¬Êä³öÊäÈëÖÊÁ¿ÐÅºÅÕý³£µÄ×î¸ß¡¢×îµÍ¡¢Æ½¾ùÖµ¡£
+Êä³öÐÅºÅÖÊÁ¿ÓÉÊäÈëÐÅºÅÖÊÁ¿¾ö¶¨£¬²¢ÇÒµ±ÊäÈëÐÅºÅÖÊÁ¿Õý³£µÄÊýÁ¿Ð¡ÓÚ²ÎÊýNMINÊ±£¬Êä³öÐÅºÅÖÊÁ¿Îª»µ¡£
+
+°æ±¾£ºV0.0
+
+
+*******************************************************************************************************************)
+
+(*Ç¿ÖÆÑ¡ÔñÊä³ö*
+µ±Ç¿ÖÆÔÊÐí²ÎÊýFRCPERMÎªTRUE²¢ÇÒÇ¿ÖÆÐÅºÅFORCE1ÎªTRUEÊ±£¬Êä³öÓÉ²ÎÊýÇ¿ÖÆÑ¡ÔñÏîFSELIN¿ØÖÆ
+*)
+IF FORCE1 AND FRCPERM THEN
+	CASE FSELIN OF
+		1:
+			PVCALC:=P1;
+			PVAUTOST:=P1STS;
+			SELXINP:=1;
+		2:
+			PVCALC:=P2;
+			PVAUTOST:=P2STS;
+			SELXINP:=2;
+		3:
+			PVCALC:=P3;
+			PVAUTOST:=P3STS;
+			SELXINP:=3;
+		4:
+			PVCALC:=P4;
+			PVAUTOST:=P4STS;
+			SELXINP:=4;
+		5:
+			PVCALC:=P5;
+			PVAUTOST:=P5STS;
+			SELXINP:=5;
+		6:
+			PVCALC:=P6;
+			PVAUTOST:=P6STS;
+			SELXINP:=6;
+	ELSE
+		;
+	END_CASE
+ELSE
+
+	STGN:=0;
+	PVAUTOST:=0;(*Êä³ö×´Ì¬ÎªºÃ*)
+	IF P1STS=0 THEN
+		STGN:=STGN+1;
+		PP[STGN]:=P1;
+		PINP[STGN]:=1;
+	END_IF
+	IF P2STS=0 THEN
+		STGN:=STGN+1;
+		PP[STGN]:=P2;
+		PINP[STGN]:=2;
+	END_IF
+	IF P3STS=0 THEN
+		STGN:=STGN+1;
+		PP[STGN]:=P3;
+		PINP[STGN]:=3;
+	END_IF
+	IF P4STS=0 THEN
+		STGN:=STGN+1;
+		PP[STGN]:=P4;
+		PINP[STGN]:=4;
+	END_IF
+	IF P5STS=0 THEN
+		STGN:=STGN+1;
+		PP[STGN]:=P5;
+		PINP[STGN]:=5;
+	END_IF
+	IF P6STS=0 THEN
+		STGN:=STGN+1;
+		PP[STGN]:=P6;
+		PINP[STGN]:=6;
+	END_IF
+IF STGN=0 THEN
+	PVAUTOST:=1;	(*Êä³öÖµºÍÐòºÅ±£³Ö£¬×´Ì¬Îª»µ*)
+ELSE
+				CASE PVEQN OF
+				0: (*¸ßÑ¡*)
+					RET:=NMAX(PP,STGN,PINP,PVCALC,SELXINP);
+				1: (*µÍÑ¡*)
+					RET:=NMIN(PP,STGN,PINP,PVCALC,SELXINP);
+				2: (*È¡Æ½¾ù*)
+					PVCALC:=NAVE(PP,STGN);
+					SELXINP:=0;	
+			END_CASE	
+		IF STGN<NMIN THEN
+			PVAUTOST:=1;
+		END_IF
+	END_IF
+END_IF
+												
+	]]>
+		</body>
+	</st>
+</pou>

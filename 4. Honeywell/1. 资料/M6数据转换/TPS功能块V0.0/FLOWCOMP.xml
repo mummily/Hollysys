@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWAlgorithms]]></path>
+	<name>FLOWCOMP</name>
+	<secondName>Á÷Á¿²¹³¥</secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-22 15:28:12</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION_BLOCK FLOWCOMP
+VAR
+		RG(2118): REAL := 1;		(*Éè¼ÆµÄ²Î¿¼±ÈÖØ/·Ö×ÓÁ¿*)
+		RP(2118): REAL := 1;		(*Éè¼ÆÑ¹Á¦£¨¾øÑ¹£©*)
+		RQ(2118): REAL := 1;		(*Éè¼ÆµÄË®ÕôÆø¸É¶È*)
+		RT(2118): REAL := 1;		(*Éè¼ÆÎÂ¶È£¨¾ø¶ÔÎÂ¶È£©*)
+		P0(2118): REAL := 0.101325;		(*Ñ¹Á¦Áãµã²Î¿¼,ÓëPµÄµ¥Î»Ò»ÖÂ½øÐÐµ÷Õû*)
+		T0(2118): REAL := 273.15;		(*¾ø¶ÔÎÂ¶È×ª»»ÒòÊý*)
+		RX(2118): REAL := 1;		(*²Î¿¼ÕôÆûÑ¹ËõÏµÊý*)
+		C(2118): REAL := 1;		(*¿Ì¶ÈÒò×Ó*)
+		C1(2118): REAL := 1;		(*Ð£Õý³£Á¿1*)
+		C2(2118): REAL := 1;		(*Ð£Õý³£Á¿2*)
+		COMPTERM(2118): REAL := 0;		(*²¹³¥Ïî*)
+		PVEQN(1094): BYTE := 0;		(*²¹³¥¹«Ê½Ñ¡Ôñ0-4*)
+		PVCHAR(2118): BOOL := FALSE;		(*FALSE-LinearÏßÐÔ TRUE-Sqrroot¿ª·½*)
+		COMPLOLM(2118): REAL := 0.8;		(*²¹³¥ÏîµÍÏÞ*)
+		COMPHILM(2118): REAL := 1.25;		(*²¹³¥Ïî¸ßÏÞ*)
+END_VAR
+VAR_INPUT
+		P(2119): REAL := 0;		(*²âÁ¿µÄÊµ¼Ê±íÑ¹*)
+		G(2119): REAL := 0;		(*²âÁ¿»ò¼ÆËãµÄ±ÈÖØ/·Ö×ÓÁ¿*)
+		Q(2119): REAL := 0;		(*²âÁ¿µÄÊµ¼ÊË®ÕôÆøµÄ¸É¶ÈÏµÊý*)
+		X(2119): REAL := 0;		(*²âÁ¿µÄÊµ¼ÊË®ÕôÆøµÄÑ¹ËõÏµÊý*)
+		T(2119): REAL := 0;		(*²âÁ¿µÄÊµ¼ÊÉãÊÏÎÂ¶È*)
+		F(2119): REAL := 0;		(*Î´²¹³¥µÄ²âÁ¿Á÷Á¿*)
+		FSTS(2119): WORD := 0;		(*²âÁ¿Á÷Á¿µÄÆ·ÖÊ0-»µ·Ç0Õý³£*)
+		PSTS(2119): WORD := 0;		(*²âÁ¿µÄÊµ¼Ê±íÑ¹Æ·ÖÊ0-»µ·Ç0Õý³£*)
+		GSTS(2119): WORD := 0;		(*²âÁ¿»ò¼ÆËãµÄ±ÈÖØ/·Ö×ÓÁ¿Æ·ÖÊ0-»µ·Ç0Õý³£*)
+		QSTS(2119): WORD := 0;		(*²âÁ¿µÄÊµ¼ÊË®ÕôÆøµÄ¸É¶ÈÏµÊýÆ·ÖÊ0-»µ·Ç0Õý³£*)
+		XSTS(2119): WORD := 0;		(*²âÁ¿µÄÊµ¼ÊË®ÕôÆøµÄÑ¹ËõÏµÊýÆ·ÖÊ0-»µ·Ç0Õý³£*)
+		TSTS(2119): WORD := 0;		(*²âÁ¿µÄÊµ¼ÊÉãÊÏÎÂ¶ÈÆ·ÖÊ0-»µ·Ç0Õý³£*)
+END_VAR
+VAR_IN_OUT
+END_VAR
+VAR_OUTPUT
+		PVCALC(2118): REAL := 0;		(*²¹³¥ºóÊä³ö*)
+		PVAUTOST(2118): WORD := 0;		(*Êä³ö×´Ì¬0-ºÃ*)
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[;
+(*0-EQA£ºÓÃÓÚÒºÌåµÄÖÊÁ¿Á÷Á¿»òÌå»ýÁ÷Á¿µÄ²¹³¥;Êµ¼ÊÁ÷Á¿¡¢²âÁ¿»ò¼ÆËãµÄ±ÈÖØ×öÎª²¹³¥ÊäÈë;
+   1-EQB£ºÓÃÓÚÆøÌå»òÕôÆûµÄÖÊÁ¿Á÷Á¿²¹³¥¡£Êµ¼ÊÁ÷Á¿¡¢Êµ¼ÊÉãÊÏÎÂ¶È¡¢Êµ¼Ê±íÑ¹Îª²¹³¥ÊäÈë;
+   2-EQC£ºÓÃÓÚÆøÌå»òÕôÆûµÄÖÊÁ¿Á÷Á¿²¹³¥¡£Êµ¼ÊÁ÷Á¿¡¢²âÁ¿»ò¼ÆËãµÄ±ÈÖØ¡¢Êµ¼ÊÉãÊÏÎÂ¶È¡¢±íÑ¹Îª²¹³¥ÊäÈë;
+   3-EQD£ºÓÃÓÚÆøÌå»òÕôÆûµÄÌå»ýÁ÷Á¿²¹³¥¡£Êµ¼ÊÁ÷Á¿¡¢Êµ¼ÊÉãÊÏÎÂ¶È¡¢±íÑ¹¡¢²âÁ¿»ò¼ÆËãµÄ·Ö×ÓÁ¿Îª²¹³¥ÊäÈë;
+   4-EQE£ºÓÃÓÚË®ÕôÆûµÄÖÊÁ¿Á÷Á¿²¹³¥¡£Êµ¼ÊÁ÷Á¿¡¢Êµ¼ÊÉãÊÏÎÂ¶È¡¢±íÑ¹¡¢ÕôÆûÑ¹ËõÏµÊý£¨X£©ºÍÕôÆû¸É¶ÈÏµÊý£¨Q£©×öÎª²¹³¥ÊäÈë¡£Ò²¿ÉÓÃÓÚÆøÌå»òÒºÌåµÄ½»½Ó¼ÆÁ¿¡£
+	¸ù¾Ý²¹³¥¹«Ê½¼ÆËãµÄ²¹³¥ÏîCOMPTERMÏÞ¶¨ÔÚCOMPHILMºÍCOMPLOLMÖ®¼ä¡£
+	Êä³öÖÊÁ¿ÓÉËùÊ¹ÓÃµÄ¸÷ÊäÈëÐÅºÅµÄÖÊÁ¿¾ö¶¨¡£
+
+°æ±¾£º V0.0
+
+*)
+IF COMPHILM<COMPLOLM THEN
+	COMPHILM:=1.25;
+END_IF
+IF COMPLOLM>COMPHILM THEN
+	COMPLOLM:=0.8;
+END_IF
+IF C2=0 THEN
+	C2:=1;
+END_IF;
+CASE PVEQN OF
+	0:
+		COMPTERM:=DIV0(G,RG);
+		PVAUTOST:=FSTS OR GSTS ;
+	1:
+		COMPTERM:=DIV0((P+P0)*RT,(RP*(T+T0)));
+		PVAUTOST:=FSTS OR PSTS OR TSTS;
+	2:
+		COMPTERM:=DIV0((P+P0)*RT*G,RP*(T+T0)*RG);
+		PVAUTOST:=FSTS OR PSTS OR GSTS OR TSTS;
+	3:
+		COMPTERM:=DIV0((P+P0)*RT*RG,RP*(T+T0)*G);
+		PVAUTOST:=FSTS OR PSTS OR GSTS OR TSTS;
+	4:
+		COMPTERM:=DIV0((P+P0)*RT*X*RQ,RP*(T+T0)*RX*Q);
+		PVAUTOST:=FSTS OR PSTS OR GSTS OR QSTS OR XSTS OR TSTS;
+END_CASE
+IF PVCHAR THEN
+	COMPTERM:=LREAL_TO_REAL(SQRT0(COMPTERM));
+END_IF
+COMPTERM:=MAX(MIN(COMPTERM,COMPHILM),COMPLOLM);
+PVCALC:=C*DIV0(C1,C2)*F*COMPTERM;
+
+]]>
+		</body>
+	</st>
+</pou>

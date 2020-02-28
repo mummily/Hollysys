@@ -1,5 +1,5 @@
-Attribute VB_Name = "C3_HNNameType_"
-'ver20190814_by cjt
+Attribute VB_Name = "C3_HNNameType_0226"
+'ver20200226_by cjt
 Public NameType As Object '数据类型
 'HN数据库需要的name的数据类型存到NameType字典
 Sub C3_HNNameType()

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWLOGIC]]></path>
+	<name>CHDETECT</name>
+	<secondName>±ä»¯¼ì²â</secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-22 10:36:38</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION_BLOCK CHDETECT
+VAR
+		LASTS1(1092): BOOL := FALSE;		(*ÉÏÖÜÆÚÊäÈë1*)
+		LASTS2(1092): BOOL := FALSE;		(*ÉÏÖÜÆÚÊäÈë2*)
+		LASTS3(1092): BOOL := FALSE;		(*ÉÏÖÜÆÚÊäÈë3*)
+END_VAR
+VAR_INPUT
+		S1(1093): BOOL := FALSE;		(*ÊäÈë1*)
+		S2(1093): BOOL := FALSE;		(*ÊäÈë2*)
+		S3(1093): BOOL := FALSE;		(*ÊäÈë3*)
+END_VAR
+VAR_IN_OUT
+END_VAR
+VAR_OUTPUT
+		SO(834): BOOL := FALSE;		(*Êä³ö*)
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[;
+(*
+±ä»¯¼ì²â
+°æ±¾£ºV0.0
+*)
+SO:= (S1<>LASTS1) OR (S2<>LASTS2) OR (S3<>LASTS3) ;
+LASTS1:=S1;
+LASTS2:=S2;
+LASTS3:=S3;]]>
+		</body>
+	</st>
+</pou>

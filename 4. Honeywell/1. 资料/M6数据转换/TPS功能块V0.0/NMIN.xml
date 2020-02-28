@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWAlgorithms]]></path>
+	<name>NMIN</name>
+	<secondName></secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-22 23:52:08</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION NMIN : BOOL
+VAR
+		i(2112): BYTE := 0;
+		j(2112): BYTE := 0;
+END_VAR
+VAR_INPUT
+		p(2113): ARRAY [1..6] OF REAL := 6(0);
+		NUM(2113): BYTE := 1;
+		SN(2113): ARRAY [1..6] OF BYTE := 6(0);
+END_VAR
+VAR_IN_OUT
+		minp(2112): REAL := 0;
+		SELX(2112): REAL := 0;
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[;
+minp:=p[1];
+j:=1;
+FOR i:=1 TO NUM BY 1 DO
+	IF p[i]<minp THEN
+		minp:=p[i];
+		j:=i;
+	END_IF
+ SELX:=SN[j];
+END_FOR
+ ]]>
+		</body>
+	</st>
+</pou>

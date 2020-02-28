@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWLOGIC]]></path>
+	<name>NOR</name>
+	<secondName>ÈýÊäÈë»ò·Ç</secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-22 10:40:20</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION_BLOCK NOR
+VAR
+END_VAR
+VAR_INPUT
+		S1(2113): BOOL := FALSE;		(*ÊäÈë1*)
+		S2(2113): BOOL := FALSE;		(*ÊäÈë2*)
+		S3(2113): BOOL := FALSE;		(*ÊäÈë3*)
+END_VAR
+VAR_IN_OUT
+END_VAR
+VAR_OUTPUT
+		SO(834): BOOL := FALSE;		(*Êä³ö¶Ë*)
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[;
+(*
+3ÊäÈë»ò£¬½á¹ûÈ¡·Ç
+°æ±¾£ºV0.0
+*)
+IF NOT(S1 OR S2 OR S3) THEN
+	SO:=1;
+ELSE
+	SO:=0;
+END_IF]]>
+		</body>
+	</st>
+</pou>

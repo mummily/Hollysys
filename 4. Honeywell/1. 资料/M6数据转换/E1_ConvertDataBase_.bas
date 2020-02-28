@@ -1,5 +1,5 @@
-Attribute VB_Name = "E1_ConvertDataBase_"
-'ver20190814_by cjt
+Attribute VB_Name = "E1_ConvertDataBase_0226"
+'ver20200226_by cjt
 '转换HN数据库到M6数据库
 
 Dim AIArr(1 To 844) As T_HN_DN
@@ -12,7 +12,7 @@ Dim DOArr(1 To 511) As T_HN_DN
 'History: 12-26-2019
 '-----------------------------------------------------------------------------------------------------------
 Sub E1_ConvertDataBase()
-    Dim i, j, k, l, m, N As Integer 'HN数据库循环变量
+    Dim i, j, k, l, M, N As Integer 'HN数据库循环变量
     Dim ii, jj, kk, ll, mm, nn As Integer 'M6数据库循环变量
     Dim i1, i2, i3, i4, i5, i6 As Integer 'M6数据库循环变量
     Dim J1, j2, j3, j4, j5, j6 As Integer 'M6数据库循环变量
@@ -31,6 +31,11 @@ Sub E1_ConvertDataBase()
     Dim NextChalRD As Variant
     Dim LastChalRD As Variant
     Dim PVALGID As String 'UREGPV类型
+    
+    Dim ConvDic As Object '字符转换字典
+    
+    '00-----初始化变量
+    Set ConvDic = CreateObject("Scripting.Dictionary") '实例化字符转换字典
     '0---------------------------------------------------------------初始化设备号通道号
     For i = 10 To 30
         dn_arr(i) = 10
@@ -78,6 +83,12 @@ Sub E1_ConvertDataBase()
                 LastChalRD = ThisChalRD
                 '---------------------------------------------------------------------
                 AO_arr(AO_i, AO("RD")) = ThisChalRD '是否冗余
+                
+                
+                If controllerModel = "K-CU03" Then
+                   AO_arr(AO_i, AO("IO_LPS")) = "2" '链路号
+                End If
+                
                 'M6数据库
                 AO_i = AO_i + 1 '行计数
             End If
@@ -161,6 +172,18 @@ Sub E1_ConvertDataBase()
                     End If
                 End If
         
+                If controllerModel = "K-CU03" Then
+                   AI_arr(AI_i, AI("IO_LPS")) = "2" '链路号
+                End If
+                
+
+                If UAI_arr(i, UAI("INPTDIR")) = "REVERSE" Then
+                AI_arr(AI_i, AI("REVOPT")) = "1" '反量程
+                Else
+                AI_arr(AI_i, AI("REVOPT")) = "0" '反量程
+                End If
+        
+        
                 '---------------------------------------------------------------------
                 '记录冗余信息
                 LastChalRD = ThisChalRD
@@ -198,6 +221,13 @@ Sub E1_ConvertDataBase()
                 DI_arr(DI_i, DI("DAMLV")) = DAMLV(UDI_arr(i, UDI("OFFNRMPR"))) '报警优先级OFFNRMPR对应DAMLV
                 DI_arr(DI_i, DI("RD")) = ThisChalRD '是否冗余根据站号设备号查询
     
+    
+                If controllerModel = "K-CU03" Then
+                   DI_arr(DI_i, DI("IO_LPS")) = "2" '链路号
+                End If
+    
+                DI_arr(DI_i, DI("E1")) = UDI_arr(i, UDI("STATETXT(1)")) '置1描述
+                DI_arr(DI_i, DI("E0")) = UDI_arr(i, UDI("STATETXT(0)")) '置0描述
                 '---------------------------------------------------------------------
                 '记录冗余信息
                 LastChalRD = ThisChalRD
@@ -230,6 +260,11 @@ Sub E1_ConvertDataBase()
                 End If
                        
                 DOV_arr(DO_i, DOV("RD")) = ThisChalRD '是否冗余根据站号设备号查询
+                
+                If controllerModel = "K-CU03" Then
+                   DOV_arr(DO_i, DOV("IO_LPS")) = "2" '链路号
+                End If
+                
                 
                 '记录冗余信息
                 LastChalRD = ThisChalRD
@@ -389,8 +424,22 @@ Sub E1_ConvertDataBase()
             SWITCH_arr(i3, SWITCH("PN")) = UREGC_arr(i, UREGC("NAME")) '点名
             SWITCH_arr(i3, SWITCH("DS")) = UREGC_arr(i, UREGC("PTDESC")) '点描述
             SWITCH_arr(i3, SWITCH("SN")) = SN(UREGC_arr(i, UREGC("NODENUM")))  '站号
-    
+            
+            SWITCH_arr(i3, SWITCH("CVEUHI")) = UREGC_arr(i, UREGC("OPHILM"))  '输出高限
+            SWITCH_arr(i3, SWITCH("CVEULO")) = UREGC_arr(i, UREGC("OPLOLM")) '输出低限
+            SWITCH_arr(i3, SWITCH("XEUHI")) = UREGC_arr(i, UREGC("XEUHI"))  '输入高限
+            SWITCH_arr(i3, SWITCH("XEULO")) = UREGC_arr(i, UREGC("XEULO"))  '输入低限
+            
+            If UREGC_arr(i, UREGC("CTLEQN")) = "EQA" Then
+               SWITCH_arr(i3, SWITCH("PVEQN")) = "0"  '模式选择0-EQA,1-EQB
+            End If
+            
+            If UREGC_arr(i, UREGC("CTLEQN")) = "EQB" Then
+               SWITCH_arr(i3, SWITCH("PVEQN")) = "1"  '模式选择0-EQA,1-EQB
+            End If
+            
             i3 = i3 + 1 '行计数
+            
         End If
       
         If UREGC_arr(i, UREGC("CTLALGID")) Like "ORSEL" Then
@@ -398,7 +447,35 @@ Sub E1_ConvertDataBase()
             ORSEL_arr(i4, ORSEL("PN")) = UREGC_arr(i, UREGC("NAME")) '点名
             ORSEL_arr(i4, ORSEL("DS")) = UREGC_arr(i, UREGC("PTDESC")) '点描述
             ORSEL_arr(i4, ORSEL("SN")) = SN(UREGC_arr(i, UREGC("NODENUM")))  '站号
-    
+            
+        '    OROPT:BOOL:=FALSE;(*超驰选项：0-未被选中输入不跟踪被选值 1-未被选中输入跟踪被选值*)
+        '    CTLEQN:BOOL:=FALSE;(*模式选择：0-高选 1-低选*)===
+        '    BYPASS:BOOL:=FALSE;(*输入旁路是否使能:ON允许旁路输入；OFF不允许旁路输入*)
+        '    BYPASS1:BOOL:=FALSE;(*输入1旁路开关*)
+        '    BYPASS2:BOOL:=FALSE;(*输入2旁路开关*)
+        '    BYPASS3:BOOL:=FALSE;(*输入3旁路开关*)
+        '    BYPASS4:BOOL:=FALSE;(*输入4旁路开关*)
+        '    OROFFSET:BOOL:=FALSE;(*超驰偏移参数:控制未被选中值的跟踪值*)
+        '    XEULO:REAL:=0;(*输入量程下限*)===
+        '    XEUHI:REAL:=100;(*输入量程上限*)===
+        '    CVEULO:REAL:=0;(*输出量程下限*)==
+        '    CVEUHI:REAL:=100;(*输出量程上限*)==
+
+        '    M:BYTE:=2;(*输入个数*)
+            ConvDic.RemoveAll: ConvDic.Add "OFF", "0": ConvDic.Add "ON", "1" '超驰选项：0-未被选中输入不跟踪被选值 1-未被选中输入跟踪被选值
+            ORSEL_arr(i4, ORSEL("OROPT")) = ConvDic(UREGC_arr(i, UREGC("OROPT")))
+            ConvDic.RemoveAll: ConvDic.Add "EQA", "0": ConvDic.Add "EQB", "1" '模式选择：0-高选 1-低选
+            ORSEL_arr(i4, ORSEL("CTLEQN")) = ConvDic(UREGC_arr(i, UREGC("CTLEQN")))
+            
+            
+            ORSEL_arr(i4, ORSEL("OROFFSET")) = UREGC_arr(i, UREGC("OROFFSET"))  '超驰偏移参数:控制未被选中值的跟踪值
+            ORSEL_arr(i4, ORSEL("CVEUHI")) = UREGC_arr(i, UREGC("OPHILM"))  '输出高限
+            ORSEL_arr(i4, ORSEL("CVEULO")) = UREGC_arr(i, UREGC("OPLOLM")) '输出低限
+            ORSEL_arr(i4, ORSEL("XEUHI")) = UREGC_arr(i, UREGC("XEUHI"))  '输入高限
+            ORSEL_arr(i4, ORSEL("XEULO")) = UREGC_arr(i, UREGC("XEULO"))  '输入低限
+            ORSEL_arr(i4, ORSEL("M")) = UREGC_arr(i, UREGC("M"))  '输入个数
+            
+
             i4 = i4 + 1 '行计数
         End If
       
@@ -407,17 +484,46 @@ Sub E1_ConvertDataBase()
             MULDIV_arr(i5, MULDIV("PN")) = UREGC_arr(i, UREGC("NAME")) '点名
             MULDIV_arr(i5, MULDIV("DS")) = UREGC_arr(i, UREGC("PTDESC")) '点描述
             MULDIV_arr(i5, MULDIV("SN")) = SN(UREGC_arr(i, UREGC("NODENUM")))  '站号
-    
+            
+            MULDIV_arr(i5, MULDIV("CVEUHI")) = UREGC_arr(i, UREGC("OPHILM"))  '输出高限
+            MULDIV_arr(i5, MULDIV("CVEULO")) = UREGC_arr(i, UREGC("OPLOLM")) '输出低限
+            MULDIV_arr(i5, MULDIV("XEUHI")) = UREGC_arr(i, UREGC("XEUHI"))  '输入高限
+            MULDIV_arr(i5, MULDIV("XEULO")) = UREGC_arr(i, UREGC("XEULO"))  '输入低限
+            
+            MULDIV_arr(i5, MULDIV("K")) = UREGC_arr(i, UREGC("K"))   '比例因子
+            MULDIV_arr(i5, MULDIV("K1")) = UREGC_arr(i, UREGC("K1"))  '输入1比例因子
+            MULDIV_arr(i5, MULDIV("K2")) = UREGC_arr(i, UREGC("K2"))  '输入2比例因子
+            MULDIV_arr(i5, MULDIV("K3")) = UREGC_arr(i, UREGC("K3"))  '输入3比例因子
+            MULDIV_arr(i5, MULDIV("B")) = UREGC_arr(i, UREGC("B"))   '偏置
+            MULDIV_arr(i5, MULDIV("B1")) = UREGC_arr(i, UREGC("B1")) '输入1偏置
+            MULDIV_arr(i5, MULDIV("B2")) = UREGC_arr(i, UREGC("B2")) '输入2偏置
+            MULDIV_arr(i5, MULDIV("B3")) = UREGC_arr(i, UREGC("B3")) '输入3偏置
+            MULDIV_arr(i5, MULDIV("PVEQN")) = CTLEQN(UREGC_arr(i, UREGC("CTLEQN"))) '模式选择0-A,1-B,2-C,3-D,4-E
+            
             i5 = i5 + 1 '行计数
+            
         End If
       
         If UREGC_arr(i, UREGC("CTLALGID")) Like "SUMMER" Then
       
-            SUMMER_arr(i6, SUMMER("PN")) = UREGC_arr(i, UREGC("NAME")) '点名
-            SUMMER_arr(i6, SUMMER("DS")) = UREGC_arr(i, UREGC("PTDESC")) '点描述
-            SUMMER_arr(i6, SUMMER("SN")) = SN(UREGC_arr(i, UREGC("NODENUM")))  '站号
-    
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("PN")) = UREGC_arr(i, UREGC("NAME")) '点名
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("DS")) = UREGC_arr(i, UREGC("PTDESC")) '点描述
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("SN")) = SN(UREGC_arr(i, UREGC("NODENUM")))  '站号
+            
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("CVEUHI")) = UREGC_arr(i, UREGC("OPHILM"))  '输出高限
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("CVEULO")) = UREGC_arr(i, UREGC("OPLOLM")) '输出低限
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("XEUHI")) = UREGC_arr(i, UREGC("XEUHI"))  '输入高限
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("XEULO")) = UREGC_arr(i, UREGC("XEULO"))  '输入低限
+            
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("K")) = UREGC_arr(i, UREGC("K"))  '比例因子
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("K1")) = UREGC_arr(i, UREGC("K1"))  '输入1比例因子
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("K2")) = UREGC_arr(i, UREGC("K2"))  '输入2比例因子
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("K3")) = UREGC_arr(i, UREGC("K3"))  '输入3比例因子
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("K4")) = UREGC_arr(i, UREGC("K4"))  '输入4比例因子
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("B")) = UREGC_arr(i, UREGC("B"))   '偏置
+            
             i6 = i6 + 1 '行计数
+            
         End If
       
     Next
@@ -432,11 +538,35 @@ Sub E1_ConvertDataBase()
     j7 = 3 '第三行开始
     j8 = 3 '第三行开始
     For i = 2 To UBound(UREGPV_arr, 1)
+    
         If UREGPV_arr(i, UREGPV("PVALGID")) = "FLOWCOMP" Then
+        
             FLOWCOMP_arr(J1, FLOWCOMP("PN")) = UREGPV_arr(i, UREGPV("NAME")) & "_OMP" '点名
             FLOWCOMP_arr(J1, FLOWCOMP("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
             FLOWCOMP_arr(J1, FLOWCOMP("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
             FLOWCOMP_arr(J1, FLOWCOMP("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
+
+            FLOWCOMP_arr(J1, FLOWCOMP("RG")) = UREGPV_arr(i, UREGPV("RG"))  '设计的参考比重/分子量
+            FLOWCOMP_arr(J1, FLOWCOMP("RP")) = UREGPV_arr(i, UREGPV("RP"))  '设计压力（绝压）
+            FLOWCOMP_arr(J1, FLOWCOMP("RT")) = UREGPV_arr(i, UREGPV("RT"))  '设计温度（绝对温度）
+            FLOWCOMP_arr(J1, FLOWCOMP("P0")) = UREGPV_arr(i, UREGPV("P0"))  '压力零点参考,与P的单位一致进行调整
+            FLOWCOMP_arr(J1, FLOWCOMP("T0")) = UREGPV_arr(i, UREGPV("T0"))  '绝对温度转换因数
+            FLOWCOMP_arr(J1, FLOWCOMP("RX")) = UREGPV_arr(i, UREGPV("RX"))  '参考蒸汽压缩系数
+            FLOWCOMP_arr(J1, FLOWCOMP("C")) = UREGPV_arr(i, UREGPV("C"))    '刻度因子
+            FLOWCOMP_arr(J1, FLOWCOMP("C1")) = UREGPV_arr(i, UREGPV("C1"))  '校正常量1
+            FLOWCOMP_arr(J1, FLOWCOMP("C2")) = UREGPV_arr(i, UREGPV("C2"))  '校正常量2
+            
+            
+            ConvDic.RemoveAll: ConvDic.Add "EQA", "0": ConvDic.Add "EQB", "1" '补偿公式选择0-4
+                               ConvDic.Add "EQC", "2": ConvDic.Add "EQD", "3": ConvDic.Add "EQE", "4"
+            FLOWCOMP_arr(J1, FLOWCOMP("PVEQN")) = ConvDic(UREGPV_arr(i, UREGPV("PVEQN")))
+            
+            ConvDic.RemoveAll: ConvDic.Add "SQRROOT", "1": ConvDic.Add "LINEAR", "0" 'FALSE-Linear线性 TRUE-Sqrroot开方
+            FLOWCOMP_arr(J1, FLOWCOMP("PVCHAR")) = ConvDic(UREGPV_arr(i, UREGPV("PVCHAR")))
+            
+            FLOWCOMP_arr(J1, FLOWCOMP("COMPLOLM")) = UREGPV_arr(i, UREGPV("COMPLOLM"))  '补偿项低限
+            FLOWCOMP_arr(J1, FLOWCOMP("COMPHILM")) = UREGPV_arr(i, UREGPV("COMPHILM"))  '补偿项高限
+            
             J1 = J1 + 1 '行计数
         End If
     
@@ -461,6 +591,24 @@ Sub E1_ConvertDataBase()
             HILOAVG_arr(j3, HILOAVG("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
             HILOAVG_arr(j3, HILOAVG("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
             HILOAVG_arr(j3, HILOAVG("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
+            
+            HILOAVG_arr(j3, HILOAVG("PVEUHI")) = UREGPV_arr(i, UREGPV("PVEUHI"))  '量程上限
+            HILOAVG_arr(j3, HILOAVG("PVEULO")) = UREGPV_arr(i, UREGPV("PVEULO"))  '量程下限
+            HILOAVG_arr(j3, HILOAVG("PVEXEUHI")) = UREGPV_arr(i, UREGPV("PVEXEUHI"))  '输入上限
+            HILOAVG_arr(j3, HILOAVG("PVEXEULO")) = UREGPV_arr(i, UREGPV("PVEXEULO"))  '输入下限
+            
+            HILOAVG_arr(j3, HILOAVG("NMIN")) = UREGPV_arr(i, UREGPV("NMIN"))  '状态好参数最小个数
+            
+            ConvDic.RemoveAll: ConvDic.Add "ON", "1": ConvDic.Add "OFF", "0" '是否允许强制
+            HILOAVG_arr(j3, HILOAVG("FRCPERM")) = ConvDic(UREGPV_arr(i, UREGPV("FRCPERM")))
+            
+            ConvDic.RemoveAll: ConvDic.Add "EQA", "0": ConvDic.Add "EQB", "1": ConvDic.Add "EQC", "2" '模式选择0-高选1-低选2-取平均
+            HILOAVG_arr(j3, HILOAVG("PVEQN")) = ConvDic(UREGPV_arr(i, UREGPV("PVEQN")))
+            
+            ConvDic.RemoveAll: ConvDic.Add "SELECTP1", "1": ConvDic.Add "SELECTP2", "2": ConvDic.Add "SELECTP3", "3" '强制选择项1-6
+                               ConvDic.Add "SELECTP4", "4": ConvDic.Add "SELECTP5", "5": ConvDic.Add "SELECTP6", "6"
+            HILOAVG_arr(j3, HILOAVG("FSELIN")) = ConvDic(UREGPV_arr(i, UREGPV("FSELIN")))
+            
             j3 = j3 + 1 '行计数
         End If
     
@@ -469,6 +617,13 @@ Sub E1_ConvertDataBase()
             MIDOF3_arr(j4, MIDOF3("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
             MIDOF3_arr(j4, MIDOF3("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
             MIDOF3_arr(j4, MIDOF3("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
+            
+            'STGN:BYTE:=0;(*状态好参数当前个数*)
+            'PVEQN:BYTE:=0;(*模式选择0-高选1-低选2-取平均*)
+
+            ConvDic.RemoveAll: ConvDic.Add "EQA", "0": ConvDic.Add "EQB", "1": ConvDic.Add "EQC", "2" '模式选择0-高选1-低选2-取平均
+            MIDOF3_arr(j4, MIDOF3("PVEQN")) = ConvDic(UREGPV_arr(i, UREGPV("PVEQN")))
+            
             j4 = j4 + 1 '行计数
         End If
     
@@ -494,9 +649,53 @@ Sub E1_ConvertDataBase()
             VDTLDLAG_arr(j6, VDTLDLAG("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
             VDTLDLAG_arr(j6, VDTLDLAG("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
             VDTLDLAG_arr(j6, VDTLDLAG("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
+            
+            'C:REAL:=1;(*刻度因子*)
+            'D:REAL:=0;(*偏置*)
+            'TS:REAL:=0;(*采样时间,程序的扫描周期,S*)
+            'DP1:REAL:=0;(*P1延时TD后的值*)
+            'NRATE:WORD:=0;(*数据表移位因子*)
+            'NLOC:WORD:=0;(*数据表使用区域大小*)
+            'INC:WORD:=0;(*间隔的计数器*)
+            'ARRIN:ARRAY[1..30] OF REAL;(*最多30个历史数据*)
+            'FIRSTFLAG:BOOL:=TRUE;(*第一次运行标记*)
+            'I:BYTE:=0;(*循环参数*)
+            VDTLDLAG_arr(j6, VDTLDLAG("C")) = UREGPV_arr(i, UREGPV("C"))  '刻度因子
+            VDTLDLAG_arr(j6, VDTLDLAG("D")) = UREGPV_arr(i, UREGPV("D"))  '偏置
+            
+            
             j6 = j6 + 1 '行计数
         End If
-    
+        
+        If UREGPV_arr(i, UREGPV("PVALGID")) = "SUMMER" Then
+            SUMMER_arr(j7, SUMMER("PN")) = UREGPV_arr(i, UREGPV("NAME")) & "_SUM" '点名
+            SUMMER_arr(j7, SUMMER("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
+            SUMMER_arr(j7, SUMMER("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
+            SUMMER_arr(j7, SUMMER("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
+            
+            'C:REAL:=1;(*比例因子*)
+            'C1:REAL:=1;(*输入1比例因子*)
+            'C2:REAL:=1;(*输入2比例因子*)
+            'C3:REAL:=1;(*输入3比例因子*)
+            'C4:REAL:=1;(*输入4比例因子*)
+            'C5:REAL:=1;(*输入5比例因子*)
+            'C6:REAL:=1;(*输入6比例因子*)
+            'D:REAL:=0;(*偏置*)
+            'PVEQN:BOOL:=FALSE;(*模式选择0-A,1-B*)
+             SUMMER_arr(j7, SUMMER("C")) = UREGPV_arr(i, UREGPV("C"))   '比例因子
+             SUMMER_arr(j7, SUMMER("C1")) = UREGPV_arr(i, UREGPV("C1")) '输入1比例因子
+             SUMMER_arr(j7, SUMMER("C2")) = UREGPV_arr(i, UREGPV("C2")) '输入2比例因子
+             SUMMER_arr(j7, SUMMER("C3")) = UREGPV_arr(i, UREGPV("C3")) '输入3比例因子
+             SUMMER_arr(j7, SUMMER("C4")) = UREGPV_arr(i, UREGPV("C4")) '输入4比例因子
+             SUMMER_arr(j7, SUMMER("C5")) = UREGPV_arr(i, UREGPV("C5")) '输入5比例因子
+             SUMMER_arr(j7, SUMMER("C6")) = UREGPV_arr(i, UREGPV("C6")) '输入6比例因子
+             SUMMER_arr(j7, SUMMER("D")) = UREGPV_arr(i, UREGPV("D"))   '偏置
+             ConvDic.RemoveAll: ConvDic.Add "EQA", "0": ConvDic.Add "EQB", "1" '模式选择0-A,1-B
+             SUMMER_arr(j7, SUMMER("PVEQN")) = ConvDic(UREGPV_arr(i, UREGPV("PVEQN")))
+             
+            j7 = j7 + 1 '行计数
+        End If
+        
     Next
     '1-09--------------------转换DM
     ii = 3 '第三行开始
@@ -514,12 +713,12 @@ Sub E1_ConvertDataBase()
     'UFLG转化为DM
     For i = 2 To UBound(UFLG_arr, 1)
   
-            DM_arr(ii, DM("PN")) = UFLG_arr(i, UFLG("NAME")) & "_RS" '点名
+            DM_arr(ii, DM("PN")) = UFLG_arr(i, UFLG("NAME")) '点名
             DM_arr(ii, DM("DS")) = UFLG_arr(i, UFLG("PTDESC")) '点描述
             DM_arr(ii, DM("SN")) = SN(UFLG_arr(i, UFLG("NODENUM")))  '站号
             DM_arr(ii, DM("E0")) = UFLG_arr(i, UFLG("STATETXT(0)")) '置0说明
             DM_arr(ii, DM("E1")) = UFLG_arr(i, UFLG("STATETXT(1)")) '置0说明
-            
+            DM_arr(ii, DM("DAMLV")) = DAMLV(UFLG_arr(i, UFLG("OFFNRMPR"))) '报警优先级OFFNRMPR对应DAMLV
             ii = ii + 1 '行计数
 
     Next
@@ -551,19 +750,56 @@ Sub E1_ConvertDataBase()
     jj = 3 '第三行开始
     'UDC转化为VAL2和MOT2
     For i = 2 To UBound(UDC_arr, 1)
-        If UDCType(UDC_arr(i, UDC("NAME")), UDC_arr(i, UDC("DISRC(1)")), UDC_arr(i, UDC("DISRC(2)")), UDC_arr(i, UDC("DODSTN(1)")), UDC_arr(i, UDC("DODSTN(2)")), UDC_arr(i, UDC("DODSTN(3)"))) = "VAL2" Then
+        If UDC_arr(i, UDC("M6BlockType")) = "VAL2" Then
             VAL2_arr(ii, VAL2("PN")) = UDC_arr(i, UDC("NAME"))  '点名
             VAL2_arr(ii, VAL2("DS")) = UDC_arr(i, UDC("PTDESC")) '点描述
             VAL2_arr(ii, VAL2("SN")) = SN(UDC_arr(i, UDC("NODENUM")))  '站号
+            VAL2_arr(ii, VAL2("ONDESC")) = UDC_arr(i, UDC("STATETXT(1)"))  '开/启描述
+            VAL2_arr(ii, VAL2("OFDESC")) = UDC_arr(i, UDC("STATETXT(0)"))  '关/停描述
             ii = ii + 1 '行计数
         End If
         
-        If UDCType(UDC_arr(i, UDC("NAME")), UDC_arr(i, UDC("DISRC(1)")), UDC_arr(i, UDC("DISRC(2)")), UDC_arr(i, UDC("DODSTN(1)")), UDC_arr(i, UDC("DODSTN(2)")), UDC_arr(i, UDC("DODSTN(3)"))) = "MOT2" Then
-            MOT2_arr(jj, VAL2("PN")) = UDC_arr(i, UDC("NAME"))  '点名
-            MOT2_arr(jj, VAL2("DS")) = UDC_arr(i, UDC("PTDESC")) '点描述
-            MOT2_arr(jj, VAL2("SN")) = SN(UDC_arr(i, UDC("NODENUM")))  '站号
+        If UDC_arr(i, UDC("M6BlockType")) = "MOT2" Then
+            MOT2_arr(jj, MOT2("PN")) = UDC_arr(i, UDC("NAME"))  '点名
+            MOT2_arr(jj, MOT2("DS")) = UDC_arr(i, UDC("PTDESC")) '点描述
+            MOT2_arr(jj, MOT2("SN")) = SN(UDC_arr(i, UDC("NODENUM")))  '站号
+            MOT2_arr(jj, MOT2("ONDESC")) = UDC_arr(i, UDC("STATETXT(1)"))  '开/启描述
+            MOT2_arr(jj, MOT2("OFDESC")) = UDC_arr(i, UDC("STATETXT(0)"))  '关/停描述
             jj = jj + 1 '行计数
         End If
+    Next
+    
+     '1-12-----转换UTIM
+    ii = 3 '第三行开始
+    For i = 2 To UBound(UTIM_arr, 1)
+
+            HTIMER_arr(ii, HTIMER("PN")) = UTIM_arr(i, UTIM("NAME"))  '点名
+            HTIMER_arr(ii, HTIMER("DS")) = UTIM_arr(i, UTIM("PTDESC")) '点描述
+            HTIMER_arr(ii, HTIMER("SN")) = SN(UTIM_arr(i, UTIM("NODENUM")))  '站号
+            HTIMER_arr(ii, HTIMER("UT")) = UTIM_arr(i, UTIM("EUDESC")) '单位
+ 
+            'TIMEBASE:BOOL:=FALSE;(*SP时间量纲：0-秒 1-分钟*)
+            'SP:WORD:=0;(*设定时间*)
+            'RTSTIME01:RTSTIME;
+            'STARTTIME:DWORD:=0;
+            'RTSTIME02:RTSTIME;
+            'CURTIME:DWORD:=0;
+            'PRECOMM:BYTE:=0;
+            'TEMSP:WORD:=0;(*设定时间*)
+            'SPC:DWORD:=0;
+            'SFLAG:BOOL:=FALSE;
+            'TFLAG:WORD:=0;
+            'TS:REAL:=0;(*采集周期 MS*)
+            
+            ConvDic.RemoveAll: ConvDic.Add "SECONDS", "0": ConvDic.Add "MINUTES", "1" 'SP时间量纲：0-秒 1-分钟
+            HTIMER_arr(ii, HTIMER("TIMEBASE")) = ConvDic(UTIM_arr(i, UTIM("TIMEBASE")))
+            
+            HTIMER_arr(ii, HTIMER("SP")) = UTIM_arr(i, UTIM("SP")) 'SP时间量纲：0-秒 1-分钟
+            
+            
+ 
+            ii = ii + 1 '行计数
+
     Next
     
     '2---------------------------------------------------------------数据写到当前工作簿
@@ -945,6 +1181,38 @@ Sub E1_ConvertDataBase()
         .Cells(1, 1).Resize(UBound(DS_arr(), 1), UBound(DS_arr(), 2)) = DS_arr
     End With
         
+   '2-23------删除旧表建立新表-SUMMER_CTRL
+    Application.DisplayAlerts = False '关闭删除工作表提示框
+    For Each sht In Workbooks(wb_name).Worksheets
+        If sht.NAME = "SUMMER_CTRL" Then
+            sht.Delete
+        End If
+    Next
+    
+    Sheets.Add After:=ActiveSheet
+    ActiveSheet.NAME = "SUMMER_CTRL"
+    Sheets("SUMMER_CTRL").Select
+    
+    With Sheets("SUMMER_CTRL")
+        .Cells(1, 1).Resize(UBound(SUMMER_CTRL_arr(), 1), UBound(SUMMER_CTRL_arr(), 2)) = SUMMER_CTRL_arr
+    End With
+    
+   '2-23------删除旧表建立新表-TIMER
+    Application.DisplayAlerts = False '关闭删除工作表提示框
+    For Each sht In Workbooks(wb_name).Worksheets
+        If sht.NAME = "TIMER" Then
+            sht.Delete
+        End If
+    Next
+    
+    Sheets.Add After:=ActiveSheet
+    ActiveSheet.NAME = "TIMER"
+    Sheets("TIMER").Select
+    
+    With Sheets("TIMER")
+        .Cells(1, 1).Resize(UBound(HTIMER_arr(), 1), UBound(HTIMER_arr(), 2)) = HTIMER_arr
+    End With
+    
     '3---------------------------------------------------------------读取当前目录下文件并建立副本
     CC = PATH & "\源文件\通用版组态数据库.xlsx"                              '模板文件
     ftime = Replace(Replace(Replace(VBA.Now, "/", "_"), " ", "_"), ":", "_") '时间
@@ -982,7 +1250,8 @@ Sub E1_ConvertDataBase()
     Workbooks(project_sjk).Sheets("FLOWSUM").Cells(1, 1).Resize(UBound(FLOWSUM_arr(), 1), UBound(FLOWSUM_arr(), 2)) = FLOWSUM_arr
     Workbooks(project_sjk).Sheets("DM").Cells(1, 1).Resize(UBound(DM_arr(), 1), UBound(DM_arr(), 2)) = DM_arr
     Workbooks(project_sjk).Sheets("DS").Cells(1, 1).Resize(UBound(DS_arr(), 1), UBound(DS_arr(), 2)) = DS_arr
-    
+    Workbooks(project_sjk).Sheets("SUMMER_CTRL").Cells(1, 1).Resize(UBound(SUMMER_CTRL_arr(), 1), UBound(SUMMER_CTRL_arr(), 2)) = SUMMER_CTRL_arr
+    Workbooks(project_sjk).Sheets("TIMER").Cells(1, 1).Resize(UBound(HTIMER_arr(), 1), UBound(HTIMER_arr(), 2)) = HTIMER_arr
     Workbooks(project_sjk).Save
     Workbooks(project_sjk).Close
     

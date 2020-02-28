@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWAlgorithms]]></path>
+	<name>SUMMER_CTRL</name>
+	<secondName>RCÇóºÍ</secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-22 10:44:23</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION_BLOCK SUMMER_CTRL
+VAR
+		K(1862): REAL := 1;		(*±ÈÀýÒò×Ó*)
+		K1(1862): REAL := 1;		(*ÊäÈë1±ÈÀýÒò×Ó*)
+		K2(1862): REAL := 1;		(*ÊäÈë2±ÈÀýÒò×Ó*)
+		K3(1862): REAL := 1;		(*ÊäÈë3±ÈÀýÒò×Ó*)
+		K4(1862): REAL := 1;		(*ÊäÈë4±ÈÀýÒò×Ó*)
+		B(1862): REAL := 0;		(*Æ«ÖÃ*)
+		XEULO(2118): REAL := 0;		(*ÊäÈëÁ¿³ÌÏÂÏÞ*)
+		XEUHI(2118): REAL := 100;		(*ÊäÈëÁ¿³ÌÉÏÏÞ*)
+		CVEULO(2118): REAL := 0;		(*Êä³öÁ¿³ÌÏÂÏÞ*)
+		CVEUHI(2118): REAL := 100;		(*Êä³öÁ¿³ÌÉÏÏÞ*)
+END_VAR
+VAR_INPUT
+END_VAR
+VAR_IN_OUT
+		X1(1094): REAL := 0;		(*ÊäÈë1*)
+		X2(1094): REAL := 0;		(*ÊäÈë2*)
+		X3(1094): REAL := 0;		(*ÊäÈë3*)
+		X4(1094): REAL := 0;		(*ÊäÈë4*)
+		M(2118): USINT := 2;		(*ÊäÈëÊýÁ¿*)
+END_VAR
+VAR_OUTPUT
+		CV(1094): REAL := 0;		(*Êä³ö*)
+		PVAUTOST(2118): WORD := 0;		(*ÖÊÁ¿ 0-ºÃ*)
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[;
+(*
+ÊäÈë¸öÊýMÎª1Ê±£¬CV:=K*X1+B
+ÊäÈë¸öÊýM´óÓÚ1Ê±£¬CV:=K*(K1*X1+K2*X2+K3*X3+K4*X4)+B
+¶Ô¼ÆËãµÄCV½øÐÐÏÞ·ù£¬ÏÞÖÆÔÚCVEUHI ºÍCVEULOÖ®¼ä
+
+°æ±¾£ºV0.0
+*)
+IF M=0 THEN
+	M:=1;
+END_IF;
+IF M>4 THEN
+	M:=4;
+END_IF;
+IF XEULO>=XEUHI THEN
+	XEULO:=0;
+	XEUHI:=100;
+END_IF
+IF CVEULO>=CVEUHI THEN
+	CVEULO:=0;
+	CVEUHI:=100;
+END_IF
+IF X1>XEUHI THEN
+	X1:=XEUHI;
+ELSIF X1<XEULO THEN
+	X1:=XEULO;
+END_IF
+IF X2>XEUHI THEN
+	X2:=XEUHI;
+ELSIF X2<XEULO THEN
+	X2:=XEULO;
+END_IF
+IF X3>XEUHI THEN
+	X3:=XEUHI;
+ELSIF X3<XEULO THEN
+	X3:=XEULO;
+END_IF
+IF M=1 THEN
+	CV:=K*X1+B;
+ELSE
+	CV:=K*(K1*X1+K2*X2+K3*X3+K4*X4)+B;
+END_IF;
+IF CV>CVEUHI THEN
+	CV:=CVEUHI;
+ELSIF CV<CVEULO THEN
+	CV:=CVEULO;
+END_IF]]>
+		</body>
+	</st>
+</pou>

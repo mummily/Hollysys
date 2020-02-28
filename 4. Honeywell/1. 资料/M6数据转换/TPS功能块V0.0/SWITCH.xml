@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWAlgorithms]]></path>
+	<name>SWITCH</name>
+	<secondName>ÐÅºÅÑ¡Ôñ¿ª¹Ø</secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-22 10:44:31</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION_BLOCK SWITCH
+VAR
+		PVEQN(1862): BOOL := FALSE;		(*Ä£Ê½Ñ¡Ôñ0-EQA,1-EQB*)
+END_VAR
+VAR_INPUT
+		X1(1093): REAL := 0;		(*ÊäÈë1*)
+		X2(1093): REAL := 0;		(*ÊäÈë2*)
+		X3(1093): REAL := 0;		(*ÊäÈë3*)
+		X4(1093): REAL := 0;		(*ÊäÈë3*)
+END_VAR
+VAR_IN_OUT
+		SELXINP(1092): REAL := 0;		(*±»Ñ¡²ÎÊýºÅ1-4*)
+		S1(1092): BOOL := FALSE;		(*Ñ¡ÔñÊäÈë1±ê¼Ç*)
+		S2(1092): BOOL := FALSE;		(*Ñ¡ÔñÊäÈë2±ê¼Ç*)
+		S3(1092): BOOL := FALSE;		(*Ñ¡ÔñÊäÈë3±ê¼Ç*)
+		S4(1092): BOOL := FALSE;		(*Ñ¡ÔñÊäÈë4±ê¼Ç*)
+END_VAR
+VAR_OUTPUT
+		CV(2118): REAL := 0;		(*Ñ¡ÔñÊä³ö*)
+		PVAUTOST(2118): WORD := 0;		(*Êä³ö×´Ì¬0-»µ1-ºÃ*)
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[;
+(*EQAÄ£Ê½£¬ÓÉ²Ù×÷Ô±Í¨¹ý²Ù×÷SELXINPÖµÀ´¾ö¶¨Ñ¡ÔñÄÄÂ·
+	EQBÄ£Ê½£¬ÓÉÂß¼­Í¨¹ýÊäÈëS1~S4µÄÖµ£¬À´¾ö¶¨Ñ¡ÔñÄÄÂ·²¢Í¨¹ýSELXINPÖ¸Ê¾£¬ S1ÓÅÏÈ¼¶×î¸ß£¬S4ÓÅÏÈ¼¶×îµÍ
+
+°æ±¾£ºV0.0
+*)
+PVAUTOST:=1;  
+IF PVEQN THEN
+	IF S1 THEN
+		SELXINP:=1;
+		CV:=X1;
+	ELSIF S2 THEN
+		SELXINP:=2;
+		CV:=X2;
+	ELSIF S3 THEN
+		SELXINP:=3;
+		CV:=X3;
+	ELSIF S4 THEN
+		SELXINP:=4;
+		CV:=X4;
+	ELSE
+		PVAUTOST:=0;
+	END_IF	
+ELSE
+		IF (SELXINP=1) THEN
+				CV:=X1;
+				S1:=1;
+				S2:=0;
+				S3:=0;
+				S4:=0;
+			ELSIF (SELXINP=2) THEN
+				CV:=X2;
+				S1:=0;
+				S2:=1;
+				S3:=0;
+				S4:=0;
+			ELSIF (SELXINP=3) THEN
+				CV:=X3;
+				S1:=0;
+				S2:=0;
+				S3:=1;
+				S4:=0;
+			ELSIF (SELXINP=4) THEN
+				CV:=X4;
+				S1:=0;
+				S2:=0;
+				S3:=0;
+				S4:=1;
+			END_IF
+END_IF]]>
+		</body>
+	</st>
+</pou>

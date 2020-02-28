@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWAlgorithms]]></path>
+	<name>NAVE</name>
+	<secondName></secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-22 23:40:12</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION NAVE : REAL
+VAR
+		i(2112): BYTE := 0;
+END_VAR
+VAR_INPUT
+		p(2113): ARRAY [1..6] OF REAL := 6(0);
+		NUM(2113): BYTE := 1;
+END_VAR
+VAR_IN_OUT
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[;
+FOR i:=1 TO NUM BY 1 DO
+	NAVE:=NAVE+p[i];
+END_FOR
+ NAVE:=NAVE/NUM;]]>
+		</body>
+	</st>
+</pou>

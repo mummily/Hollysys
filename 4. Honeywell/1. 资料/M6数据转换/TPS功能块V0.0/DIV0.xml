@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWAlgorithms]]></path>
+	<name>DIV0</name>
+	<secondName>³ý·¨</secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-21 10:55:48</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION DIV0 : REAL
+VAR
+END_VAR
+VAR_INPUT
+		DIVEND(2117): REAL := 0;		(*±»³ýÊý*)
+		DIVISOR(2117): REAL := 0;		(*³ýÊý*)
+END_VAR
+VAR_IN_OUT
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[;
+(*´Ëº¯ÊýÓÃÓÚÏÞÖÆ³ýÊýÎª0µÄÒì³£Çé¿ö*)
+IF DIVISOR<>0 THEN
+	DIV0:=DIVEND/DIVISOR;
+END_IF;
+	]]>
+		</body>
+	</st>
+</pou>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWLOGIC]]></path>
+	<name>DISCREP3</name>
+	<secondName>ÑÓÊ±Òì»ò</secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-22 10:37:48</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION_BLOCK DISCREP3
+VAR
+		S12Delay(772): REAL := 0;		(*12²»ÏàµÈ³ÖÐøÊ±¼ä*)
+		S23Delay(772): REAL := 0;		(*23²»ÏàµÈ³ÖÐøÊ±¼ä*)
+		S13Delay(772): REAL := 0;		(*13²»ÏàµÈ³ÖÐøÊ±¼ä*)
+		CP(1024): DWORD := 0;		(*ÈÎÎñÖÜÆÚ*)
+END_VAR
+VAR_INPUT
+		S1(1093): BOOL := FALSE;		(*ÊäÈë1*)
+		S2(1093): BOOL := FALSE;		(*ÊäÈë2*)
+		S3(1093): BOOL := FALSE;		(*ÊäÈë3*)
+		DLYTIME(2151): TIME := T#2MS;		(*ÑÓÊ±Ê±¼ä*)
+END_VAR
+VAR_IN_OUT
+END_VAR
+VAR_OUTPUT
+		SO(834): BOOL := FALSE;		(*Êä³ö¶Ë*)
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[(*
+´øÑÓÊ±µÄÒì»ò
+°æ±¾£ºV0.0
+*)
+IF S1<>S2 THEN
+	S12Delay:=S12Delay+1;
+ELSE
+	S12Delay:=0;
+END_IF
+IF S2<>S3 THEN
+	S23Delay:=S23Delay+1;
+ELSE
+	S23Delay:=0;
+END_IF
+IF S1<>S3 THEN
+	S13Delay:=S13Delay+1;
+ELSE
+	S13Delay:=0;
+END_IF
+
+CP:=GetIECInterval(1);
+IF (S12Delay*CP>TIME_TO_DWORD (DLYTIME)) OR (S23Delay*CP>TIME_TO_DWORD (DLYTIME))  OR (S13Delay*CP>TIME_TO_DWORD (DLYTIME))  THEN
+	SO:=1;
+ELSE
+	SO:=0;
+END_IF]]>
+		</body>
+	</st>
+</pou>

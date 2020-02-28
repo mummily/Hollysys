@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWLOGIC]]></path>
+	<name>FILPFLOP</name>
+	<secondName>Ë«ÎÈÌ¬´¥·¢Æ÷</secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-22 10:36:05</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION_BLOCK FILPFLOP
+VAR
+END_VAR
+VAR_INPUT
+		S1(1093): BOOL := FALSE;		(*ÊäÈë1*)
+		S2(1093): BOOL := FALSE;		(*ÊäÈë2*)
+		S3(1093): BOOL := FALSE;		(*ÊäÈë3*)
+END_VAR
+VAR_IN_OUT
+END_VAR
+VAR_OUTPUT
+		SO(834): BOOL := FALSE;		(*Êä³ö¶Ë*)
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[;
+(*
+Ë«ÎÈÌ¬´¥·¢Æ÷
+°æ±¾£ºV0.0
+*)
+IF S2 THEN
+	IF S1 THEN
+		SO:=S3;
+	ELSE
+		SO:=1;		
+	END_IF
+ELSE
+	IF S1 THEN
+		SO:=0;
+	ELSE
+		;
+	END_IF
+END_IF]]>
+		</body>
+	</st>
+</pou>

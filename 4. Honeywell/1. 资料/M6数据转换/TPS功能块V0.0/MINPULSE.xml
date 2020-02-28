@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWLOGIC]]></path>
+	<name>MINPULSE</name>
+	<secondName>×îÐ¡Âö³å</secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-22 10:38:56</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION_BLOCK MINPULSE
+VAR
+		pdelay(772): BOOL := FALSE;		(*ÉÏÉýÑØ±ê¼Ç*)
+		NC(1024): DWORD := 10;		(*Ô¤ÖÃÉ¨ÃèÖÜÆÚÊý£¬ÓÉRT×ª»»¶øÀ´£¬×î´óÎª65000*)
+		CP(1024): DWORD := 0;		(*ÈÎÎñÖÜÆÚ*)
+		CT(834): DWORD := 0;		(*µ±Ç°Ö´ÐÐµÄÖÜÆÚ¼ÆÊý*)
+		CY(1028): DWORD := 0;		(*ÉÏÉýÑØ³ÖÐøÖÜÆÚÊý*)
+		PRES1(1028): BOOL := FALSE;		(*ÉÏÒ»ÅÄÊäÈë*)
+END_VAR
+VAR_INPUT
+		S1(1093): BOOL := FALSE;		(*ÊäÈë*)
+		DLYTIME(2151): TIME := T#2MS;		(*ÑÓÊ±Ê±¼ä*)
+END_VAR
+VAR_IN_OUT
+END_VAR
+VAR_OUTPUT
+		SO(834): BOOL := FALSE;		(*Êä³ö*)
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[;
+(*
+×îÐ¡Âö³å
+°æ±¾£ºV0.0
+*)
+
+CP:=GetIECInterval(1);
+NC:=TIME_TO_DWORD(DLYTIME)/CP;(*20120323_1*)
+(*
+IF NC >65000 THEN
+    NC :=65000;
+END_IF;
+*)
+IF (NOT PRES1) AND S1 THEN
+	pdelay:=1;
+	SO:=1;
+END_IF
+IF pdelay THEN
+	CT:=CT+1;
+	IF NOT(S1) THEN
+		CY:=CT;
+	END_IF	
+END_IF
+IF (NOT(S1)  AND CY<NC AND CT=NC) OR (CY>NC ) THEN
+	SO:=0;
+	pdelay:=0;
+	CT:=0;
+	CY:=0;
+END_IF
+
+PRES1:=S1;]]>
+		</body>
+	</st>
+</pou>

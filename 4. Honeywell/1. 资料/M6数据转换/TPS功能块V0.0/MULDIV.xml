@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWAlgorithms]]></path>
+	<name>MULDIV</name>
+	<secondName>³Ë³ý</secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-22 11:10:40</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION_BLOCK MULDIV
+VAR
+		K(1862): REAL := 1;		(*±ÈÀýÒò×Ó*)
+		K1(1862): REAL := 1;		(*ÊäÈë1±ÈÀýÒò×Ó*)
+		K2(1862): REAL := 1;		(*ÊäÈë2±ÈÀýÒò×Ó*)
+		K3(1862): REAL := 1;		(*ÊäÈë3±ÈÀýÒò×Ó*)
+		B(1862): REAL := 0;		(*Æ«ÖÃ*)
+		B1(1862): REAL := 0;		(*ÊäÈë1Æ«ÖÃ*)
+		B2(1862): REAL := 0;		(*ÊäÈë2Æ«ÖÃ*)
+		B3(1862): REAL := 0;		(*ÊäÈë3Æ«ÖÃ*)
+		PVEQN(1862): BYTE := 0;		(*Ä£Ê½Ñ¡Ôñ0-A,1-B,2-C,3-D,4-E*)
+		CVEUHI(2118): REAL := 100;		(*Êä³ö¸ßÏÞ*)
+		CVEULO(2118): REAL := 0;		(*Êä³öµÍÏÞ*)
+		XEUHI(2118): REAL := 100;		(*ÊäÈë¸ßÏÞ*)
+		XEULO(2118): REAL := 0;		(*ÊäÈëµÍÏÞ*)
+END_VAR
+VAR_INPUT
+END_VAR
+VAR_IN_OUT
+		X1(2118): REAL := 0;		(*ÊäÈë1*)
+		X2(2118): REAL := 0;		(*ÊäÈë2*)
+		X3(2118): REAL := 0;		(*ÊäÈë3*)
+END_VAR
+VAR_OUTPUT
+		CV(2118): REAL := 0;		(*Ñ¡ÔñÊä³ö*)
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[;
+(*
+¶ÔÊäÈëX1~X4½øÐÐÏÞ·ù£¬ÏÞÖÆÔÚXEUHI ºÍXEULOÖ®¼ä
+¶Ô¼ÆËãµÄCV½øÐÐÏÞ·ù£¬ÏÞÖÆÔÚCVEUHI ºÍCVEULOÖ®¼ä
+EQA  CV:=K*(K1*X1+B1)*(K2*X2+B2)+B;
+EQB	CV:=K*(K1*X1+B1)/(K2*X2+B2)+B;
+EQC CV:=K*(K2*X2+B2)/(K1*X1+B1)+B;
+EQD CV:=K*(K1*X1+B1)*(K3*X3+B3)/(K2*X2+B2)+B;
+EQE CV:=K*(K2*X2+B2)*(K3*X3+B3)/(K1*X1+B1)+B;
+
+°æ±¾£º V0.0
+*)
+IF PVEQN<0 THEN
+	PVEQN:=0;
+END_IF;
+IF PVEQN>4 THEN
+	PVEQN:=4;
+END_IF;
+IF XEULO>=XEUHI THEN
+	XEULO:=0;
+	XEUHI:=100;
+END_IF
+IF CVEULO>=CVEUHI THEN
+	CVEULO:=0;
+	CVEUHI:=100;
+END_IF
+IF X1>XEUHI THEN
+	X1:=XEUHI;
+ELSIF X1<XEULO THEN
+	X1:=XEULO;
+END_IF
+IF X2>XEUHI THEN
+	X2:=XEUHI;
+ELSIF X2<XEULO THEN
+	X2:=XEULO;
+END_IF
+IF X3>XEUHI THEN
+	X3:=XEUHI;
+ELSIF X3<XEULO THEN
+	X3:=XEULO;
+END_IF
+CASE PVEQN OF
+	0:
+		CV:=K*(K1*X1+B1)*(K2*X2+B2)+B;
+	1:
+		IF (K2*X2+B2)=0 THEN
+			RETURN;
+		END_IF
+		CV:=K*DIV0((K1*X1+B1),(K2*X2+B2))+B;
+	2:
+		IF (K1*X1+B1)=0 THEN
+			RETURN;
+		END_IF
+		CV:=K*DIV0((K2*X2+B2),(K1*X1+B1))+B;
+	3:
+		IF (K2*X2+B2)=0 THEN
+			RETURN;
+		END_IF
+		CV:=K*DIV0((K1*X1+B1)*(K3*X3+B3),(K2*X2+B2))+B;
+	4:
+		IF (K1*X1+B1)=0 THEN
+			RETURN;
+		END_IF
+		CV:=K*DIV0((K2*X2+B2)*(K3*X3+B3),(K1*X1+B1))+B;
+END_CASE
+IF CV>CVEUHI THEN
+	CV:=CVEUHI;
+ELSIF CV<CVEULO THEN
+	CV:=CVEULO;
+END_IF]]>
+		</body>
+	</st>
+</pou>

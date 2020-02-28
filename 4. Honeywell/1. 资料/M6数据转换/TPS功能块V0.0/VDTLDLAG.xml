@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWAlgorithms]]></path>
+	<name>VDTLDLAG</name>
+	<secondName>¹Ì¶¨Ê±¼äËÀÇø</secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-24 10:01:59</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION_BLOCK VDTLDLAG
+VAR
+		C(2118): REAL := 1;		(*¿Ì¶ÈÒò×Ó*)
+		D(2118): REAL := 0;		(*Æ«ÖÃ*)
+		TS(2118): REAL := 0;		(*²ÉÑùÊ±¼ä,³ÌÐòµÄÉ¨ÃèÖÜÆÚ,S*)
+		DP1(2118): REAL := 0;		(*P1ÑÓÊ±TDºóµÄÖµ*)
+		NRATE(2118): WORD := 0;		(*Êý¾Ý±íÒÆÎ»Òò×Ó*)
+		NLOC(2118): WORD := 0;		(*Êý¾Ý±íÊ¹ÓÃÇøÓò´óÐ¡*)
+		inC(1024): WORD := 0;		(*¼ä¸ôµÄ¼ÆÊýÆ÷*)
+		ArrIN(832): ARRAY [1..30] OF REAL := 30(0);		(*×î¶à30¸öÀúÊ·Êý¾Ý*)
+		FirstFlag(2118): BOOL := TRUE;		(*µÚÒ»´ÎÔËÐÐ±ê¼Ç*)
+		i(1024): BYTE := 0;		(*Ñ­»·²ÎÊý*)
+END_VAR
+VAR_INPUT
+		P1(2119): REAL := 0;		(*¹ý³ÌÊäÈëÖµ*)
+END_VAR
+VAR_IN_OUT
+		TD(2118): REAL := 0;		(*ÑÓÊ±Ê±¼ä,min*)
+END_VAR
+VAR_OUTPUT
+		PVCALC(2118): REAL := 0;		(*²¹³¥ºóÊä³ö*)
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[;
+(*
+¹Ì¶¨Ê±¼äËÀÇø¹¦ÄÜ¿é
+Êä³ö¸ù¾ÝÉè¶¨µÄTDÊ±¼ä£¨min£©½«ÊäÈëP1ÑÓ³ÙÊä³ö¡£
+TD=0Ôò²»ÑÓÊ±£¬Á¢¼´½«P1Êä³ö¡£
+
+°æ±¾£ºV0.0
+*)
+IF TD=0 THEN
+	PVCALC:=C*P1+D;
+	RETURN;
+END_IF
+
+TS:=DWORD_TO_REAL(GetIECInterval(1))/1000;
+
+NRATE:=ROUNDUP(TD*60/(TS*30));(*²ÉÑùÆµÂÊ£¬¶à³¤Ê±¼ä²É¼¯Ò»´Î£¬ÏòÉÏÈ¡Õû 2=51/1*30*)
+NLOC:=ROUNDUP(TD*60/(TS*NRATE)) ;(*Êý×éÇøÓò  26=51/1*2*)
+TD:=NLOC*NRATE*TS/60;(*52*)
+
+IF NOT(FirstFlag) THEN
+	FOR I:=NLOC TO 2 BY -1 DO 
+		ArrIN[i]:=P1;
+	END_FOR
+END_IF
+
+IF inC=NRATE THEN
+	FOR I:=NLOC TO 2 BY -1 DO 
+		ArrIN[i]:=ArrIN[i-1];
+	END_FOR
+	ArrIN[1]:=P1;
+	inC:=1;
+ELSIF inC>NRATE THEN
+	inC:=1;
+ELSE
+	inC:=inC+1;
+END_IF
+
+PVCALC:=C*ArrIN[NLOC]+D;
+
+FirstFlag:=1;]]>
+		</body>
+	</st>
+</pou>

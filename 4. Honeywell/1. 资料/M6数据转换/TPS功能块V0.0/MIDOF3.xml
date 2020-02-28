@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/HWAlgorithms]]></path>
+	<name>MIDOF3</name>
+	<secondName>ÈýÈ¡ÖÐ</secondName>
+	<description></description>
+	<flags>2048</flags>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-02-24 10:10:53</exporttime>
+	<amendtime>2020-02-22 11:24:15</amendtime>
+	<downloadtime></downloadtime>
+	<modifier></modifier>
+	<PouPaperSize>A4</PouPaperSize>
+	<PouPrintType>1</PouPrintType>
+	<PouExcuteOrder>0</PouExcuteOrder>
+	<interface>
+<![CDATA[FUNCTION_BLOCK MIDOF3
+VAR
+		STGN(1092): BYTE := 0;		(*×´Ì¬ºÃ²ÎÊýµ±Ç°¸öÊý*)
+		PVEQN(1094): BYTE := 0;		(*Ä£Ê½Ñ¡Ôñ0-¸ßÑ¡1-µÍÑ¡2-È¡Æ½¾ù*)
+END_VAR
+VAR_INPUT
+		P1(1095): REAL := 0;		(*ÊäÈë1*)
+		P1STS(1095): WORD := 0;		(*ÊäÈë1×´Ì¬0-ºÃ*)
+		P2(1095): REAL := 0;		(*ÊäÈë2*)
+		P2STS(1095): WORD := 0;		(*ÊäÈë2×´Ì¬0-ºÃ*)
+		P3(1095): REAL := 0;		(*ÊäÈë3*)
+		P3STS(1095): WORD := 0;		(*ÊäÈë3×´Ì¬0-ºÃ*)
+END_VAR
+VAR_IN_OUT
+END_VAR
+VAR_OUTPUT
+		PVCALC(1094): REAL := 0;		(*Êä³ö*)
+		PVAUTOST(1094): WORD := 0;		(*Êä³ö×´Ì¬0-ºÃ*)
+		SELXINP(1092): BYTE := 0;		(*±»Ñ¡²ÎÊýºÅ1-3*)
+END_VAR]]>
+	</interface>
+	<st>
+		<body>
+<![CDATA[;
+(*
+µ±3¸öÊäÈëÖÊÁ¿ºÃÊ±£¬½øÐÐÈýÈ¡ÖÐÊä³ö¡£
+µ±Ö»ÓÐ2¸öÊäÈëÖÊÁ¿ºÃÊ±£¬¸ù¾ÝÉè¶¨µÄ²ÎÊýPVEQN½øÐÐ0-¸ßÑ¡1-µÍÑ¡2-È¡Æ½¾ù£¬Êä³öCV
+µ±Ö»ÓÐ1¸öÊäÈëÖÊÁ¿ºÃÊ±£¬Êä³ö¸ÃºÃÖµ
+
+°æ±¾£º V0.0
+*)
+PVEQN:=MAX(MIN(PVEQN,2),0);
+STGN:=0;
+IF P1STS=0 THEN
+	STGN:=STGN+1;
+END_IF
+IF P2STS=0 THEN
+	STGN:=STGN+1;
+END_IF
+IF P3STS=0 THEN
+	STGN:=STGN+1;
+END_IF
+PVAUTOST:=0;
+CASE STGN OF
+	0:
+		PVAUTOST:=1;
+	1:
+		IF P1STS=0 THEN	
+			PVCALC:=P1;
+			SELXINP:=1;
+		ELSIF P2STS=0 THEN
+			PVCALC:=P2;
+			SELXINP:=2;	
+		ELSIF P3STS=0 THEN
+			PVCALC:=P3;
+			SELXINP:=3;	
+		END_IF
+	2:
+		IF P1STS<>0 THEN	
+			CASE PVEQN OF
+				0:
+					IF P2>P3 THEN						
+						PVCALC:=P2;
+						SELXINP:=2;
+					ELSE
+						PVCALC:=P3;
+						SELXINP:=3;	
+					END_IF
+				1:
+					IF P2>P3 THEN						
+						PVCALC:=P3;
+						SELXINP:=3;
+					ELSE
+						PVCALC:=P2;
+						SELXINP:=2;	
+					END_IF
+				2:						
+						PVCALC:=(P2+P3)/2;
+						SELXINP:=0;	
+				END_CASE
+		ELSIF P2STS<>0 THEN	
+			CASE PVEQN OF
+				0:
+					IF P1>P3 THEN						
+						PVCALC:=P1;
+						SELXINP:=1;
+					ELSE
+						PVCALC:=P3;
+						SELXINP:=3;	
+					END_IF
+				1:
+					IF P1>P3 THEN						
+						PVCALC:=P3;
+						SELXINP:=3;
+					ELSE
+						PVCALC:=P1;
+						SELXINP:=1;	
+					END_IF
+				2:						
+						PVCALC:=(P1+P3)/2;
+						SELXINP:=0;	
+				END_CASE	
+		ELSIF P3STS<>0 THEN	
+			CASE PVEQN OF
+				0:
+					IF P2>P1 THEN						
+						PVCALC:=P2;
+						SELXINP:=2;
+					ELSE
+						PVCALC:=P1;
+						SELXINP:=1;	
+					END_IF
+				1:
+					IF P2>P1 THEN						
+						PVCALC:=P1;
+						SELXINP:=1;
+					ELSE
+						PVCALC:=P2;
+						SELXINP:=2;	
+					END_IF
+				2:						
+						PVCALC:=(P2+P1)/2;
+						SELXINP:=0;	
+				END_CASE
+		END_IF
+	3:	
+			IF	P1 > P2 THEN
+				IF P1 > P3 THEN
+					IF P2>P3 THEN
+						PVCALC:=P2;
+						SELXINP:=2;
+					ELSE
+						PVCALC:=P3;
+						SELXINP:=3;
+					END_IF
+				ELSE
+					PVCALC := P1;
+					SELXINP:=1;
+				END_IF
+			ELSE
+				IF P2 > P3 THEN
+					IF P1>P3 THEN
+						PVCALC:=P1;
+					   	SELXINP:=1;
+					ELSE
+						PVCALC:=P3;
+					    SELXINP:=3;
+					END_IF
+			ELSE
+				PVCALC := P2;
+				SELXINP:=2;
+			END_IF
+		END_IF;
+	IF (P1=P2 AND P2=P3)  OR (P1=P2) OR (P1=P3) THEN
+		PVCALC:=P1;
+		SELXINP:=1;
+	ELSIF P2=P3 THEN
+		PVCALC:=P2;
+		SELXINP:=2;
+	END_IF
+END_CASE
+	]]>
+		</body>
+	</st>
+</pou>
