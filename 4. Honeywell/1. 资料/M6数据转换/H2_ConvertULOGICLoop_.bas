@@ -1385,13 +1385,6 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
     Dim newLISRC As String
     newLISRC = LISRC
     
-    Call F2_ConvertPN_TI(newLISRC) '转换子程序
-    newLISRC = LISRC
-    
-    Dim m6LISRC As String
-    m6LISRC = M6PN_TI 'M6位号
-    M6PN_TI = ""
-    
     If ".PVFL" = Right(newLISRC, 5) Then
         newLISRC = Replace(newLISRC, ".PVFL", ".DV")
     ElseIf ".OP" = Right(newLISRC, 3) Then
@@ -1405,6 +1398,8 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
     ElseIf ".PV" = Right(newLISRC, 3) Then
         If "UAI" = NameType(Left(newLISRC, Len(newLISRC) - 3)) Then
             newLISRC = ReplaceSuffix(newLISRC, ".PV", ".AV")
+        ElseIf "PID" <> NameType(Left(newLISRC, Len(newLISRC) - 3)) Then
+            newLISRC = ReplaceSuffix(newLISRC, ".PV", ".AV")
         End If
     ElseIf ".SO(1)" = Right(newLISRC, 6) Then
         If "UDC" = NameType(Left(newLISRC, Len(newLISRC) - 6)) Then
@@ -1414,8 +1409,6 @@ Private Function ReplaceLISRCSuffix(LISRC As String)
         If "UDC" = NameType(Left(newLISRC, Len(newLISRC) - 6)) Then
             newLISRC = ReplaceSuffix(newLISRC, ".SO(0)", ".OUT")
         End If
-    ElseIf ".AI" = Right(m6LISRC, 3) Then
-        newLISRC = ReplaceSuffix(m6LISRC, ".AI", ".AV")
     Else
         newLISRC = ReplaceCommonSuffix(newLISRC)
     End If
@@ -1486,13 +1479,6 @@ Private Function ReplaceLODSTNSuffix(LODSTN As String)
     Dim newLODSTN As String
     newLODSTN = LODSTN
     
-    Call F2_ConvertPN_TI(newLODSTN) '转换子程序
-    newLODSTN = LODSTN
-    
-    Dim m6LODSTN As String
-    m6LODSTN = M6PN_TI 'M6位号
-    M6PN_TI = ""
-    
     If ".PVFL" = Right(newLODSTN, 5) Then
         newLODSTN = Replace(newLODSTN, ".PVFL", ".DI")
     ElseIf ".OP" = Right(newLODSTN, 3) Then
@@ -1503,8 +1489,10 @@ Private Function ReplaceLODSTNSuffix(LODSTN As String)
         If "PID" = NameType(Left(newLODSTN, Len(newLODSTN) - 7)) Then
             newLODSTN = ReplaceSuffix(newLODSTN, ".OPLOLM", ".ENGL")
         End If
-    ElseIf ".AI" = Right(m6LODSTN, 3) Then
-        newLODSTN = m6LODSTN
+    ElseIf ".PV" = Right(newLODSTN, 3) Then
+        If "PID" <> NameType(Left(newLODSTN, Len(newLODSTN) - 3)) Then
+            newLODSTN = ReplaceSuffix(newLODSTN, ".PV", ".AV")
+        End If
     Else
         newLODSTN = ReplaceSuffix(newLODSTN, ".RESETFL", "_RS")
         newLODSTN = ReplaceCommonSuffix(newLODSTN)
