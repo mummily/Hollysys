@@ -1,0 +1,112 @@
+typedef struct 											
+{
+	struct										
+	{										
+		UINT32 fms_bypass:1;									
+		UINT32 ar_type:3;									
+		UINT32 ar_role:4;									
+	}	fas_ar_type_and_role;	
+    
+	UINT32	fas_dll_local_addr;									
+	UINT32	fas_dll_configured_remote_addr;
+    
+	struct										
+	{										
+	  	UINT32 priority:2;									
+		UINT32 dlpdu_auth:2;									
+		UINT32 dlcep_delivery:3;									
+		UINT32 las_scheduled:1;									
+	}	fas_dll_sdap;				/*Scheduled, Delivery, Authentication, Priority.*/	
+    
+	UINT16	fas_dll_max_cnf_delay_on_conn;									
+	UINT16	fas_dll_max_cnf_delay_on_data;									
+	UINT16	fas_dll_max_dlsdu_size;									
+	BOOL	fas_dll_resid_act_supp;		/*QUB VCR only.*/
+    
+	struct										
+	{										
+		UINT32	subscriber_timeliness:3;								
+		UINT32	duppdu_supported:1;								
+		UINT32	publisher_timeliness:3;								
+	}	fas_dll_timeliness_class;		/*BNU VCR only, Pub/Sub Timeliness Class, Dup PDU detection.*/	
+    
+	UINT16	fas_dll_pub_timewin_size;	/*BNU VCR only, Constraint: TimelinessClass is not NONE.*/								
+	UINT32	fas_dll_pub_syn_dlcep;		/*BNU VCR only, Constraint: TimelinessClass is UPDATE or SYN.*/							
+	UINT16	fas_dll_sub_timewin_size;	/*BNU VCR only, Constraint: TimelinessClass is not NONE.*/								
+	UINT32	fas_dll_sub_syn_dlcep;		/*BNU VCR only, Constraint: TimelinessClass is UPDATE or SYN.*/							
+	UINT32	fms_vfd_id;									
+	UINT8	fms_max_scc;				/*QUB VCR only, FmsMaxOutstandingServicesCalling.*/					
+	UINT8	fms_max_rcc;				/*QUB VCR only, FmaMaxOutstandingServicesCalled.*/					
+	UINT8	fms_feature_supp[FEAT_SUPP_LEN];	/*FMS feature support.*/								
+} VCR_STATIC_ENTRY;											
+
+
+主站填充的数据						
+有2个从站，每个从站有2个vcr，共有4个vcr，对应j=0~3						
+vcr_static[ucChip][j].fas_ar_type_and_role.ar_type = QUB;						
+if( j == 0 )						
+{						
+    vcr_static[ucChip][j].fas_dll_local_addr = 0x1020;					
+    vcr_static[ucChip][j].fas_dll_configured_remote_addr = 0x1107;					
+    vcr_static[ucChip][j].fas_ar_type_and_role.ar_role = 0x0A;					
+}						
+if( j == 1 )						
+{						
+    vcr_static[ucChip][j].fas_dll_local_addr = 0x1021;					
+    vcr_static[ucChip][j].fas_dll_configured_remote_addr = 0x1307;					
+}						
+
+if( j == 2 )						
+{						
+    vcr_static[ucChip][j].fas_dll_local_addr = 0x1022;					
+    vcr_static[ucChip][j].fas_dll_configured_remote_addr = 0x1107;					
+    vcr_static[ucChip][j].fas_ar_type_and_role.ar_role = 0x0A;					
+}						
+if( j == 3 )						
+{						
+    vcr_static[ucChip][j].fas_dll_local_addr = 0x1023;					
+    vcr_static[ucChip][j].fas_dll_configured_remote_addr = 0x1307;					
+}						
+
+if(j==0)//11F8						
+{						
+    vcr_static[ucChip][j].fms_max_scc = 10;					
+    vcr_static[ucChip][j].fms_max_rcc = 10;					
+    vcr_static[ucChip][j].fas_dll_max_dlsdu_size = 0x80;					
+    vcr_static[ucChip][j].fas_ar_type_and_role.ar_role = 0x0A;					
+    vcr_static[ucChip][j].fas_dll_max_cnf_delay_on_conn = 0xEA60;					
+    vcr_static[ucChip][j].fas_dll_max_cnf_delay_on_data = 0x2710;					
+    vcr_static[ucChip][j].fas_dll_max_dlsdu_size = 0x80;					
+}						
+if(j==1)//13F8						
+{						
+    vcr_static[ucChip][j].fms_max_scc = 3;					
+    vcr_static[ucChip][j].fms_max_rcc = 3;					
+    vcr_static[ucChip][j].fas_dll_max_dlsdu_size = 0x80;					
+    vcr_static[ucChip][j].fas_ar_type_and_role.ar_role = 0x0A;					
+    vcr_static[ucChip][j].fas_dll_max_cnf_delay_on_conn = 0xEA60;					
+    vcr_static[ucChip][j].fas_dll_max_cnf_delay_on_data = 0x2710;					
+    vcr_static[ucChip][j].fas_dll_max_dlsdu_size = 0x80;					
+}						
+
+if(j==2)//11F6						
+{						
+    vcr_static[ucChip][j].fms_max_scc = 10;					
+    vcr_static[ucChip][j].fms_max_rcc = 10;					
+    vcr_static[ucChip][j].fas_dll_max_dlsdu_size = 0x80;					
+    vcr_static[ucChip][j].fas_ar_type_and_role.ar_role = 0x0A;					
+    vcr_static[ucChip][j].fas_dll_max_cnf_delay_on_conn = 0xEA60;					
+    vcr_static[ucChip][j].fas_dll_max_cnf_delay_on_data = 0x2710;					
+    vcr_static[ucChip][j].fas_dll_max_dlsdu_size = 0x80;					
+}						
+if(j==3)//1320						
+{						
+    vcr_static[ucChip][j].fms_max_scc = 3;					
+    vcr_static[ucChip][j].fms_max_rcc = 3;					
+    vcr_static[ucChip][j].fas_dll_max_dlsdu_size = 0x80;					
+    vcr_static[ucChip][j].fas_ar_type_and_role.ar_role = 0x0A;					
+    vcr_static[ucChip][j].fas_dll_max_cnf_delay_on_conn = 0xEA60;					
+    vcr_static[ucChip][j].fas_dll_max_cnf_delay_on_data = 0x2710;					
+    vcr_static[ucChip][j].fas_dll_max_dlsdu_size = 0x80;					
+}						
+vcr_static[ucChip][j].fas_dll_sdap.priority = 1;
