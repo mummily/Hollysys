@@ -49,7 +49,7 @@ END_VAR]]>
 <element type="output">
 <id>4</id>
 <position>38,2</position>
-<text>13FQ0901_24.AI</text>
+<text>13FQ0901_24_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -61,7 +61,7 @@ END_VAR]]>
 <element type="output">
 <id>5</id>
 <position>38,8</position>
-<text>13FQ0901_8.AI</text>
+<text>13FQ0901_8_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -73,7 +73,7 @@ END_VAR]]>
 <element type="output">
 <id>6</id>
 <position>38,2</position>
-<text>13FQ0903_24.AI</text>
+<text>13FQ0903_24_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -85,7 +85,7 @@ END_VAR]]>
 <element type="output">
 <id>7</id>
 <position>38,8</position>
-<text>13FQ0903_8.AI</text>
+<text>13FQ0903_8_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -97,7 +97,7 @@ END_VAR]]>
 <element type="output">
 <id>8</id>
 <position>38,14</position>
-<text>13FQ0901_DAY.AI</text>
+<text>13FQ0901_DAY_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -109,7 +109,7 @@ END_VAR]]>
 <element type="output">
 <id>9</id>
 <position>38,14</position>
-<text>13FQ0903_DAY.AI</text>
+<text>13FQ0903_DAY_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

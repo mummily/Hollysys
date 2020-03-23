@@ -223,7 +223,7 @@ END_VAR]]>
 <element type="output">
 <id>19</id>
 <position>46,8</position>
-<text>13FQ0401.AI</text>
+<text>13FQ0401.STARTFL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -235,7 +235,7 @@ END_VAR]]>
 <element type="output">
 <id>20</id>
 <position>46,14</position>
-<text>13FQ0401.AI</text>
+<text>13FQ0401.STOPFL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -247,7 +247,7 @@ END_VAR]]>
 <element type="output">
 <id>21</id>
 <position>46,20</position>
-<text>13FQ0401.AI</text>
+<text>13FQ0401_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -259,7 +259,7 @@ END_VAR]]>
 <element type="output">
 <id>22</id>
 <position>46,8</position>
-<text>13FQ0401_X.AI</text>
+<text>13FQ0401_X.STARTFL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -271,7 +271,7 @@ END_VAR]]>
 <element type="output">
 <id>23</id>
 <position>46,14</position>
-<text>13FQ0401_X.AI</text>
+<text>13FQ0401_X.STOPFL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -283,7 +283,7 @@ END_VAR]]>
 <element type="output">
 <id>24</id>
 <position>46,20</position>
-<text>13FQ0401_X.AI</text>
+<text>13FQ0401_X_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

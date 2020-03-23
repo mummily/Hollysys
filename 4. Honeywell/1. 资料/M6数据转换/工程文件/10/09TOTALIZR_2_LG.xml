@@ -31,7 +31,7 @@ END_VAR]]>
 <element type="output">
 <id>2</id>
 <position>38,2</position>
-<text>11FQ0101_DAY.AI</text>
+<text>11FQ0101_DAY_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -43,7 +43,7 @@ END_VAR]]>
 <element type="output">
 <id>3</id>
 <position>38,2</position>
-<text>11FQ0201_DAY.AI</text>
+<text>11FQ0201_DAY_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -55,7 +55,7 @@ END_VAR]]>
 <element type="output">
 <id>4</id>
 <position>38,2</position>
-<text>11FQ0102_DAY.AI</text>
+<text>11FQ0102_DAY_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -67,7 +67,7 @@ END_VAR]]>
 <element type="output">
 <id>5</id>
 <position>38,2</position>
-<text>11FQ0202_DAY.AI</text>
+<text>11FQ0202_DAY_RS</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
