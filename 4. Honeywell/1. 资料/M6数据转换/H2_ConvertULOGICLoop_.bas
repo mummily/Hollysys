@@ -351,6 +351,10 @@ Private Sub InitVar(sPouName As String)
                 var.PN = sPouName & "_" & .ElementATType & "_" & .ElementSortID
                 var.SN = SN(ULOGIC_arr(ULOGIC_i, ULOGIC("NODENUM")))
                 
+                If .DLYTIME <> "" Then
+                    var.PT = "T#" & .DLYTIME & "s"
+                End If
+                
                 VarInfo.VarNum = VarInfo.VarNum + 1
                 VarInfo.HN_VAR(VarInfo.VarNum) = var
             End If
@@ -1594,7 +1598,7 @@ Private Sub WriteTOF()
             arr(index, 7) = "0"
             arr(index, 8) = "0"
             arr(index, 9) = ""
-            arr(index, 10) = "T#0ms"
+            arr(index, 10) = VarInfo.HN_VAR(varindex).PT
             
             index = index + 1
         End If
@@ -1624,7 +1628,7 @@ Private Sub WriteTON()
             arr(index, 7) = "0"
             arr(index, 8) = "0"
             arr(index, 9) = ""
-            arr(index, 10) = "T#0ms"
+            arr(index, 10) = VarInfo.HN_VAR(varindex).PT
             
             index = index + 1
         End If
@@ -1653,7 +1657,7 @@ Private Sub WriteTP()
             arr(index, 7) = ""
             arr(index, 8) = "0"
             arr(index, 9) = ""
-            arr(index, 10) = "T#0ms"
+            arr(index, 10) = VarInfo.HN_VAR(varindex).PT
             
             index = index + 1
         End If
