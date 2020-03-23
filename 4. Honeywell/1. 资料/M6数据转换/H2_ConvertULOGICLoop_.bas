@@ -348,7 +348,7 @@ Private Sub InitVar(sPouName As String)
                 Dim var As T_HN_VAR
                 
                 var.TT = .ElementATType
-                var.PN = sPouName & "_" & .ElementATType & .ElementSortID
+                var.PN = sPouName & "_" & .ElementATType & "_" & .ElementSortID
                 var.SN = SN(ULOGIC_arr(ULOGIC_i, ULOGIC("NODENUM")))
                 
                 VarInfo.VarNum = VarInfo.VarNum + 1
