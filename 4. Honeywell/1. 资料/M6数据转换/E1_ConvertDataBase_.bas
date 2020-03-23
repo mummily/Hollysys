@@ -6,6 +6,7 @@ Dim AIArr(1 To 844) As T_HN_DN
 Dim AOArr(1 To 184) As T_HN_DN
 Dim DIArr(1 To 1213) As T_HN_DN
 Dim DOArr(1 To 511) As T_HN_DN
+Dim Num As Variant
 
 '-----------------------------------------------------------------------------------------------------------
 'Purpose: 转换组态数据库 - cjt
@@ -218,7 +219,7 @@ Sub E1_ConvertDataBase()
                 End If
     
                 DI_arr(DI_i, DI("DAMOPT")) = DAMOPT(UDI_arr(i, UDI("ALMOPT")), UDI_arr(i, UDI("PVNORMAL"))) '报警属性
-                DI_arr(DI_i, DI("DAMLV")) = DAMLV(UDI_arr(i, UDI("OFFNRMPR"))) '报警优先级OFFNRMPR对应DAMLV
+                DI_arr(DI_i, DI("DAMLV")) = AlMLVl(UDI_arr(i, UDI("OFFNRMPR"))) '报警优先级OFFNRMPR对应DAMLV
                 DI_arr(DI_i, DI("RD")) = ThisChalRD '是否冗余根据站号设备号查询
     
     
@@ -265,6 +266,8 @@ Sub E1_ConvertDataBase()
                    DOV_arr(DO_i, DOV("IO_LPS")) = "2" '链路号
                 End If
                 
+                DOV_arr(DO_i, DOV("E1")) = UDO_arr(i, UDO("STATETXT(1)")) '置1描述
+                DOV_arr(DO_i, DOV("E0")) = UDO_arr(i, UDO("STATETXT(0)")) '置0描述
                 
                 '记录冗余信息
                 LastChalRD = ThisChalRD
@@ -371,6 +374,40 @@ Sub E1_ConvertDataBase()
                 AM_arr(ii, AM("UT")) = UREGPV_arr(i, UREGPV("EUDESC")) '量纲
                 AM_arr(ii, AM("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))  '站号
         
+        
+                AM_arr(ii, AM("OF")) = DelDit(UREGPV_arr(i, UREGPV("PVFORMAT"))) '格式
+    
+                Num = UREGPV_arr(i, UREGPV("PVHITP"))
+                If VBA.IsNumeric(Num) Then
+                  AM_arr(ii, AM("AH")) = Num '报警高限
+                End If
+                
+                AM_arr(ii, AM("H1")) = AlMLVl(UREGPV_arr(i, UREGPV("PVHIPR"))) '高限报警级
+                
+                Num = UREGPV_arr(i, UREGPV("PVLOTP"))
+                If VBA.IsNumeric(Num) Then
+                  AM_arr(ii, AM("AL")) = Num '报警低限
+                End If
+            
+                AM_arr(ii, AM("L1")) = AlMLVl(UREGPV_arr(i, UREGPV("PVLOPR"))) '低限报警级
+                
+                Num = UREGPV_arr(i, UREGPV("PVHHTP"))
+                If VBA.IsNumeric(Num) Then
+                  AM_arr(ii, AM("HH")) = Num '报警高高限
+                End If
+                          
+                AM_arr(ii, AM("H2")) = AlMLVl(UREGPV_arr(i, UREGPV("PVHHPR")))  '高高限报警级
+                
+                Num = UREGPV_arr(i, UREGPV("PVLLTP"))
+                If VBA.IsNumeric(Num) Then
+                  AM_arr(ii, AM("LL")) = Num '报警低低限
+                End If
+                
+                AM_arr(ii, AM("L2")) = AlMLVl(UREGPV_arr(i, UREGPV("PVLLPR"))) '低低限报警级
+        
+        
+                AM_arr(ii, AM("ALMDB")) = ALMDB(UREGPV_arr(i, UREGPV("PVALDB")), UREGPV_arr(i, UREGPV("PVALDBEU")), UREGPV_arr(i, UREGPV("PVEUHI")), UREGPV_arr(i, UREGPV("PVEULO"))) '报警死区PVALDB对应ALMDB。当PVALDB=EU时，报警死区为工程量值PVALDBEU，需要根据量程转换为百分比（M6参数为量程百分比）。当PVALDB=Half为0.5%，PVALDB=one为1%…………PVALDB=five为5%
+       
                 ii = ii + 1 '行计数
             
     Next
@@ -404,6 +441,93 @@ Sub E1_ConvertDataBase()
             PIDA_arr(i1, PIDA("TI")) = UREGC_arr(i, UREGC("T1"))  '积分
             PIDA_arr(i1, PIDA("KD")) = 1  '微分增益
             PIDA_arr(i1, PIDA("TD")) = UREGC_arr(i, UREGC("T2"))  '微分
+            
+            
+            '   2020.03.04增加：
+            '    输出量程；
+            '    测量值输出格式；
+            '    输出值单位；
+            '    输出值格式；
+            '    运行模式；
+            '    SP跟踪PV；TRACK NOTRACK
+            '    设定值；
+            '    输出上限；
+            '    输出下限；
+            '    报警限值及报警级别；
+            
+            
+             '如果是主调PID输出上下限、量纲、单位取副调输入的
+            '找副调位号
+            Dim tag_ft As Variant
+            Dim tag_ft_i As Integer
+            tag_ft = Replace(UREGC_arr(i, UREGC("CODSTN(1)")), ".SP", "")
+            
+            If UREGCPIDAux.Exists(tag_ft) Then
+                tag_ft_i = UREGCPIDAux(tag_ft)
+                PIDA_arr(i1, PIDA("ENGU")) = UREGC_arr(tag_ft_i, UREGC("PVEUHI")) '输出量程上
+                PIDA_arr(i1, PIDA("ENGL")) = UREGC_arr(tag_ft_i, UREGC("PVEULO")) '输出量程下
+                
+                PIDA_arr(i1, PIDA("OUTU")) = UREGC_arr(tag_ft_i, UREGC("PVEUHI")) '输出量程上限
+                PIDA_arr(i1, PIDA("OUTL")) = UREGC_arr(tag_ft_i, UREGC("PVEULO")) '输出量程下限
+                
+                PIDA_arr(i1, PIDA("AVUT")) = UREGC_arr(tag_ft_i, UREGC("EUDESC")) '输出值单位
+                PIDA_arr(i1, PIDA("AVOF")) = DelDit(UREGC_arr(tag_ft_i, UREGC("PVFORMAT"))) '输出格式
+            End If
+            
+
+'            PIDA_arr(i1, PIDA("OUTU")) = UREGC_arr(i, UREGC("XXX")) '输出上限值
+'            PIDA_arr(i1, PIDA("OUTL")) = UREGC_arr(i, UREGC("XXX")) '输出下限值
+
+'            PIDA_arr(i1, PIDA("MODE")) = UREGC_arr(i, UREGC("XXXX")) '运行模式
+            
+            PIDA_arr(i1, PIDA("PVOF")) = DelDit(UREGC_arr(i, UREGC("PVFORMAT"))) '测量值输出格式
+            ConvDic.RemoveAll: ConvDic.Add "NOTRACK", "0": ConvDic.Add "TRACK", "1" 'SP跟踪PV
+            PIDA_arr(i1, PIDA("TRKOPT")) = ConvDic(UREGC_arr(i, UREGC("PVTRACK")))
+            PIDA_arr(i1, PIDA("SP")) = UREGC_arr(i, UREGC("SP")) '设定值
+            
+            
+            Num = UREGC_arr(i, UREGC("PVHITP"))
+            If VBA.IsNumeric(Num) Then
+              PIDA_arr(i1, PIDA("AH")) = Num '报警高限
+            End If
+            
+            PIDA_arr(i1, PIDA("H1")) = AlMLVl(UREGC_arr(i, UREGC("PVHIPR"))) '高限报警级
+            
+            Num = UREGC_arr(i, UREGC("PVLOTP"))
+            If VBA.IsNumeric(Num) Then
+              PIDA_arr(i1, PIDA("AL")) = Num '报警低限
+            End If
+        
+            PIDA_arr(i1, PIDA("L1")) = AlMLVl(UREGC_arr(i, UREGC("PVLOPR"))) '低限报警级
+            
+            Num = UREGC_arr(i, UREGC("PVHHTP"))
+            If VBA.IsNumeric(Num) Then
+              PIDA_arr(i1, PIDA("HH")) = Num '报警高高限
+            End If
+                      
+            PIDA_arr(i1, PIDA("H2")) = AlMLVl(UREGC_arr(i, UREGC("PVHHPR")))  '高高限报警级
+            
+            Num = UREGC_arr(i, UREGC("PVLLTP"))
+            If VBA.IsNumeric(Num) Then
+              PIDA_arr(i1, PIDA("LL")) = Num '报警低低限
+            End If
+            
+            PIDA_arr(i1, PIDA("L2")) = AlMLVl(UREGC_arr(i, UREGC("PVLLPR"))) '低低限报警级
+            
+            Num = UREGC_arr(i, UREGC("OPROCLM"))
+            If VBA.IsNumeric(Num) Then
+               PIDA_arr(i1, PIDA("OUTRAT")) = Num / 60 '输出变化率
+            End If
+            
+            PIDA_arr(i1, AM("ALMDB")) = ALMDB(UREGC_arr(i, UREGC("PVALDB")), UREGC_arr(i, UREGC("PVALDBEU")), UREGC_arr(i, UREGC("PVEUHI")), UREGC_arr(i, UREGC("PVEULO"))) '报警死区PVALDB对应ALMDB。当PVALDB=EU时，报警死区为工程量值PVALDBEU，需要根据量程转换为百分比（M6参数为量程百分比）。当PVALDB=Half为0.5%，PVALDB=one为1%…………PVALDB=five为5%
+           
+            
+            Num = UREGC_arr(i, UREGC("DEVHITP")) 'DAL偏差报警限(%)
+            If VBA.IsNumeric(Num) Then
+               PIDA_arr(i1, PIDA("DAL")) = Num
+            End If
+            PIDA_arr(i1, PIDA("DALLV")) = AlMLVl(UREGC_arr(i, UREGC("DEVHIPR")))  '偏差报警级DEVHIPR
+            
             i1 = i1 + 1 '行计数
         End If
       
@@ -415,7 +539,12 @@ Sub E1_ConvertDataBase()
             MAN_arr(i2, MAN("ENGU")) = UREGC_arr(i, UREGC("PVEUHI")) '上限
             MAN_arr(i2, MAN("UT")) = UREGC_arr(i, UREGC("EUDESC")) '量纲
             MAN_arr(i2, MAN("SN")) = SN(UREGC_arr(i, UREGC("NODENUM")))  '站号
-    
+            
+            Num = UREGC_arr(i, UREGC("OPROCLM"))
+            If VBA.IsNumeric(Num) Then
+               MAN_arr(i2, MAN("OUTRAT")) = Num / 60 '输出变化率
+            End If
+            
             i2 = i2 + 1 '行计数
         End If
       
@@ -425,8 +554,8 @@ Sub E1_ConvertDataBase()
             SWITCH_arr(i3, SWITCH("DS")) = UREGC_arr(i, UREGC("PTDESC")) '点描述
             SWITCH_arr(i3, SWITCH("SN")) = SN(UREGC_arr(i, UREGC("NODENUM")))  '站号
             
-            SWITCH_arr(i3, SWITCH("CVEUHI")) = UREGC_arr(i, UREGC("OPHILM"))  '输出高限
-            SWITCH_arr(i3, SWITCH("CVEULO")) = UREGC_arr(i, UREGC("OPLOLM")) '输出低限
+            SWITCH_arr(i3, SWITCH("OPHILM")) = UREGC_arr(i, UREGC("OPHILM"))  '输出高限
+            SWITCH_arr(i3, SWITCH("OPLOLM")) = UREGC_arr(i, UREGC("OPLOLM")) '输出低限
             SWITCH_arr(i3, SWITCH("XEUHI")) = UREGC_arr(i, UREGC("XEUHI"))  '输入高限
             SWITCH_arr(i3, SWITCH("XEULO")) = UREGC_arr(i, UREGC("XEULO"))  '输入低限
             
@@ -437,6 +566,18 @@ Sub E1_ConvertDataBase()
             If UREGC_arr(i, UREGC("CTLEQN")) = "EQB" Then
                SWITCH_arr(i3, SWITCH("PVEQN")) = "1"  '模式选择0-EQA,1-EQB
             End If
+            
+            'OPROCLM输出速率限制%/min
+            'OPLOLM OP输出低限
+            'OPHILM OP输出高限
+            
+            SWITCH_arr(i3, SWITCH("OPHILM")) = UREGC_arr(i, UREGC("OPHILM"))  '输出高限
+            SWITCH_arr(i3, SWITCH("OPLOLM")) = UREGC_arr(i, UREGC("OPLOLM")) '输出低限
+            Num = UREGC_arr(i, UREGC("OPROCLM")) '输出速率限制%/min
+            If VBA.IsNumeric(Num) Then
+               SWITCH_arr(i3, SWITCH("OPROCLM")) = Num
+            End If
+            SWITCH_arr(i6, SWITCH("UT")) = UREGC_arr(i, UREGC("EUDESC"))   '单位
             
             i3 = i3 + 1 '行计数
             
@@ -475,7 +616,14 @@ Sub E1_ConvertDataBase()
             ORSEL_arr(i4, ORSEL("XEULO")) = UREGC_arr(i, UREGC("XEULO"))  '输入低限
             ORSEL_arr(i4, ORSEL("M")) = UREGC_arr(i, UREGC("M"))  '输入个数
             
-
+            ORSEL_arr(i4, ORSEL("OPHILM")) = UREGC_arr(i, UREGC("OPHILM"))  '输出高限
+            ORSEL_arr(i4, ORSEL("OPLOLM")) = UREGC_arr(i, UREGC("OPLOLM")) '输出低限
+            Num = UREGC_arr(i, UREGC("OPROCLM")) '输出速率限制%/min
+            If VBA.IsNumeric(Num) Then
+               ORSEL_arr(i4, ORSEL("OPROCLM")) = Num
+            End If
+            ORSEL_arr(i6, ORSEL("UT")) = UREGC_arr(i, UREGC("EUDESC"))   '单位
+            
             i4 = i4 + 1 '行计数
         End If
       
@@ -485,8 +633,9 @@ Sub E1_ConvertDataBase()
             MULDIV_arr(i5, MULDIV("DS")) = UREGC_arr(i, UREGC("PTDESC")) '点描述
             MULDIV_arr(i5, MULDIV("SN")) = SN(UREGC_arr(i, UREGC("NODENUM")))  '站号
             
-            MULDIV_arr(i5, MULDIV("CVEUHI")) = UREGC_arr(i, UREGC("OPHILM"))  '输出高限
-            MULDIV_arr(i5, MULDIV("CVEULO")) = UREGC_arr(i, UREGC("OPLOLM")) '输出低限
+            MULDIV_arr(i5, MULDIV("OPHILM")) = UREGC_arr(i, UREGC("OPHILM"))  '输出高限
+            MULDIV_arr(i5, MULDIV("OPLOLM")) = UREGC_arr(i, UREGC("OPLOLM")) '输出低限
+            
             MULDIV_arr(i5, MULDIV("XEUHI")) = UREGC_arr(i, UREGC("XEUHI"))  '输入高限
             MULDIV_arr(i5, MULDIV("XEULO")) = UREGC_arr(i, UREGC("XEULO"))  '输入低限
             
@@ -500,6 +649,15 @@ Sub E1_ConvertDataBase()
             MULDIV_arr(i5, MULDIV("B3")) = UREGC_arr(i, UREGC("B3")) '输入3偏置
             MULDIV_arr(i5, MULDIV("PVEQN")) = CTLEQN(UREGC_arr(i, UREGC("CTLEQN"))) '模式选择0-A,1-B,2-C,3-D,4-E
             
+            MULDIV_arr(i5, MULDIV("OPHILM")) = UREGC_arr(i, UREGC("OPHILM")) '输出高限
+            MULDIV_arr(i5, MULDIV("OPLOLM")) = UREGC_arr(i, UREGC("OPLOLM")) '输出低限
+            Num = UREGC_arr(i, UREGC("OPROCLM")) '输出速率限制%/min
+            If VBA.IsNumeric(Num) Then
+               MULDIV_arr(i5, MULDIV("OPROCLM")) = Num
+            End If
+            
+            MULDIV_arr(i6, MULDIV("UT")) = UREGC_arr(i, UREGC("EUDESC"))   '单位
+            
             i5 = i5 + 1 '行计数
             
         End If
@@ -510,8 +668,8 @@ Sub E1_ConvertDataBase()
             SUMMER_CTRL_arr(i6, SUMMER_CTRL("DS")) = UREGC_arr(i, UREGC("PTDESC")) '点描述
             SUMMER_CTRL_arr(i6, SUMMER_CTRL("SN")) = SN(UREGC_arr(i, UREGC("NODENUM")))  '站号
             
-            SUMMER_CTRL_arr(i6, SUMMER_CTRL("CVEUHI")) = UREGC_arr(i, UREGC("OPHILM"))  '输出高限
-            SUMMER_CTRL_arr(i6, SUMMER_CTRL("CVEULO")) = UREGC_arr(i, UREGC("OPLOLM")) '输出低限
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("OPHILM")) = UREGC_arr(i, UREGC("OPHILM"))  '输出高限
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("OPLOLM")) = UREGC_arr(i, UREGC("OPLOLM")) '输出低限
             SUMMER_CTRL_arr(i6, SUMMER_CTRL("XEUHI")) = UREGC_arr(i, UREGC("XEUHI"))  '输入高限
             SUMMER_CTRL_arr(i6, SUMMER_CTRL("XEULO")) = UREGC_arr(i, UREGC("XEULO"))  '输入低限
             
@@ -521,6 +679,15 @@ Sub E1_ConvertDataBase()
             SUMMER_CTRL_arr(i6, SUMMER_CTRL("K3")) = UREGC_arr(i, UREGC("K3"))  '输入3比例因子
             SUMMER_CTRL_arr(i6, SUMMER_CTRL("K4")) = UREGC_arr(i, UREGC("K4"))  '输入4比例因子
             SUMMER_CTRL_arr(i6, SUMMER_CTRL("B")) = UREGC_arr(i, UREGC("B"))   '偏置
+            
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("OPHILM")) = UREGC_arr(i, UREGC("OPHILM")) '输出高限
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("OPLOLM")) = UREGC_arr(i, UREGC("OPLOLM")) '输出低限
+            Num = UREGC_arr(i, UREGC("OPROCLM")) '输出速率限制%/min
+            If VBA.IsNumeric(Num) Then
+               SUMMER_CTRL_arr(i6, SUMMER_CTRL("OPROCLM")) = Num
+            End If
+            
+            SUMMER_CTRL_arr(i6, SUMMER_CTRL("UT")) = UREGC_arr(i, UREGC("EUDESC"))   '单位
             
             i6 = i6 + 1 '行计数
             
@@ -541,7 +708,7 @@ Sub E1_ConvertDataBase()
     
         If UREGPV_arr(i, UREGPV("PVALGID")) = "FLOWCOMP" Then
         
-            FLOWCOMP_arr(J1, FLOWCOMP("PN")) = UREGPV_arr(i, UREGPV("NAME")) & "_OMP" '点名
+            FLOWCOMP_arr(J1, FLOWCOMP("PN")) = UREGPV_arr(i, UREGPV("NAME")) & "_COMP" '点名
             FLOWCOMP_arr(J1, FLOWCOMP("DS")) = UREGPV_arr(i, UREGPV("PTDESC"))  '点描述
             FLOWCOMP_arr(J1, FLOWCOMP("UT")) = UREGPV_arr(i, UREGPV("EUDESC"))  '量纲
             FLOWCOMP_arr(J1, FLOWCOMP("SN")) = SN(UREGPV_arr(i, UREGPV("NODENUM")))   '站号
@@ -718,7 +885,13 @@ Sub E1_ConvertDataBase()
             DM_arr(ii, DM("SN")) = SN(UFLG_arr(i, UFLG("NODENUM")))  '站号
             DM_arr(ii, DM("E0")) = UFLG_arr(i, UFLG("STATETXT(0)")) '置0说明
             DM_arr(ii, DM("E1")) = UFLG_arr(i, UFLG("STATETXT(1)")) '置0说明
-            DM_arr(ii, DM("DAMLV")) = DAMLV(UFLG_arr(i, UFLG("OFFNRMPR"))) '报警优先级OFFNRMPR对应DAMLV
+            DM_arr(ii, DM("DAMLV")) = AlMLVl(UFLG_arr(i, UFLG("OFFNRMPR"))) '报警优先级OFFNRMPR对应DAMLV
+            
+            If UFLG_arr(i, UFLG("PNTFORM")) = "FULL" Then '报警属性
+               DM_arr(ii, DM("DAMOPT")) = "1"
+            Else
+               DM_arr(ii, DM("DAMOPT")) = "0"
+            End If
             ii = ii + 1 '行计数
 
     Next
