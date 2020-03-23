@@ -139,7 +139,7 @@ Private Sub InitProperty(sPouName As String)
     End With
     
     Dim LElement_X As Integer, LElement_Y As Integer, LElement_ID As Integer, LSort_ID As Integer
-    LSort_ID = 0
+    LSort_ID = 1
     LElement_ID = 1
     LElement_Y = 2
     LElement_X = 13
@@ -208,6 +208,14 @@ Private Sub InitProperty(sPouName As String)
     Next
     
     'BOX ¸³Öµ
+    For index = 1 To 24
+       With ExcelInfo.HN_BOX(index)
+            .ElementSortID = LSort_ID
+            LSort_ID = LSort_ID + 1
+       End With
+    Next
+    
+    'BOX ²ã¼¶
     Call InitAllBoxLevel
     
     LElement_Y = 2
@@ -221,9 +229,9 @@ Private Sub InitProperty(sPouName As String)
     nLevelMax = 0
     For index = 1 To 24
        With ExcelInfo.HN_BOX(index)
-             If .ElementLevel > nLevelMax Then
-                nLevelMax = .ElementLevel
-             End If
+            If .ElementLevel > nLevelMax Then
+               nLevelMax = .ElementLevel
+            End If
        End With
     Next
     
@@ -258,9 +266,6 @@ Private Sub InitProperty(sPouName As String)
                     Else
                         .ElementATType = .LOGALGID
                     End If
-                    
-                    .ElementSortID = LSort_ID
-                    LSort_ID = LSort_ID + 1
                 End If
             End With
         Next
@@ -706,7 +711,7 @@ Private Sub WriteBox(sPouName As String)
                 POU.WriteLine "<id>" & .ElementID & "</id>"
                 POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
                 POU.WriteLine "<isinst>TRUE</isinst>"
-                POU.WriteLine "<text>" & sPouName & "_" & .ElementATType & .ElementSortID & "</text>"
+                POU.WriteLine "<text>" & sPouName & "_" & .ElementATType & "_" & .ElementSortID & "</text>"
                 POU.WriteLine "<AT_type>" & .ElementATType & "</AT_type>"
                 POU.WriteLine "<typetext>BT_FB</typetext>"
                 POU.WriteLine "<ttype>9</ttype>"

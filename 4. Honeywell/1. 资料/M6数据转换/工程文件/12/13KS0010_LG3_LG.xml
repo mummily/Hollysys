@@ -65,7 +65,7 @@ END_VAR]]>
 <Inputid>1</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>0</sortid>
+<sortid>25</sortid>
 </element>
 <element type="output">
 <id>6</id>
@@ -77,7 +77,7 @@ END_VAR]]>
 <Inputid>2</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>1</sortid>
+<sortid>26</sortid>
 </element>
 <element type="output">
 <id>7</id>
@@ -89,7 +89,7 @@ END_VAR]]>
 <Inputid>3</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>2</sortid>
+<sortid>27</sortid>
 </element>
 <element type="output">
 <id>8</id>
@@ -101,7 +101,7 @@ END_VAR]]>
 <Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>3</sortid>
+<sortid>28</sortid>
 </element>
 </cfc>
 </pou>

@@ -68,11 +68,11 @@ END_VAR]]>
 <id>6</id>
 <AT_position>21,14</AT_position>
 <isinst>TRUE</isinst>
-<text>13X1305B2_LG_OR0</text>
+<text>13X1305B2_LG_OR_1</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>0</sortid>
+<sortid>1</sortid>
 <input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -82,11 +82,11 @@ END_VAR]]>
 <id>7</id>
 <AT_position>36,8</AT_position>
 <isinst>TRUE</isinst>
-<text>13X1305B2_LG_OR1</text>
+<text>13X1305B2_LG_OR_2</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>1</sortid>
+<sortid>2</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="6" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -102,7 +102,7 @@ END_VAR]]>
 <Inputid>7</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>2</sortid>
+<sortid>25</sortid>
 </element>
 </cfc>
 </pou>

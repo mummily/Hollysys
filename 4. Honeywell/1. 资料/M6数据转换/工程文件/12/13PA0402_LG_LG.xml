@@ -59,11 +59,11 @@ END_VAR]]>
 <id>5</id>
 <AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
-<text>13PA0402_LG_TON0</text>
+<text>13PA0402_LG_TON_1</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>0</sortid>
+<sortid>1</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="4" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -73,11 +73,11 @@ END_VAR]]>
 <id>6</id>
 <AT_position>36,5</AT_position>
 <isinst>TRUE</isinst>
-<text>13PA0402_LG_AND1</text>
+<text>13PA0402_LG_AND_2</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>1</sortid>
+<sortid>2</sortid>
 <input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>

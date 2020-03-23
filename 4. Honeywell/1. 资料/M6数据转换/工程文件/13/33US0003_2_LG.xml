@@ -203,11 +203,11 @@ END_VAR]]>
 <id>21</id>
 <AT_position>21,20</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_AND0</text>
+<text>33US0003_2_AND_1</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>0</sortid>
+<sortid>1</sortid>
 <input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="6" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -217,11 +217,11 @@ END_VAR]]>
 <id>22</id>
 <AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_TOF1</text>
+<text>33US0003_2_TOF_2</text>
 <AT_type>TOF</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>1</sortid>
+<sortid>2</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="15" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -231,11 +231,11 @@ END_VAR]]>
 <id>33</id>
 <AT_position>66,5</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_AND12</text>
+<text>33US0003_2_AND_3</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>12</sortid>
+<sortid>3</sortid>
 <input inputid="22" inputidx="0" negate="true" visible="true" pinname=""/>
 <input inputid="7" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="31" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -245,11 +245,11 @@ END_VAR]]>
 <id>35</id>
 <AT_position>81,12</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_OR14</text>
+<text>33US0003_2_OR_4</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>14</sortid>
+<sortid>4</sortid>
 <input inputid="21" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="33" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="26" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -259,11 +259,11 @@ END_VAR]]>
 <id>37</id>
 <AT_position>96,12</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_TP16</text>
+<text>33US0003_2_TP_5</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>16</sortid>
+<sortid>5</sortid>
 <input inputid="35" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="16" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -273,11 +273,11 @@ END_VAR]]>
 <id>23</id>
 <AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_XOR2</text>
+<text>33US0003_2_XOR_6</text>
 <AT_type>XOR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>2</sortid>
+<sortid>6</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
@@ -286,11 +286,11 @@ END_VAR]]>
 <id>29</id>
 <AT_position>36,8</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_TOF8</text>
+<text>33US0003_2_TOF_7</text>
 <AT_type>TOF</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>8</sortid>
+<sortid>7</sortid>
 <input inputid="23" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="17" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -300,11 +300,11 @@ END_VAR]]>
 <id>31</id>
 <AT_position>51,8</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_AND10</text>
+<text>33US0003_2_AND_8</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>10</sortid>
+<sortid>8</sortid>
 <input inputid="29" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="8" inputidx="0" negate="true" visible="true" pinname=""/>
 <input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -314,11 +314,11 @@ END_VAR]]>
 <id>24</id>
 <AT_position>21,14</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_TOF3</text>
+<text>33US0003_2_TOF_9</text>
 <AT_type>TOF</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>3</sortid>
+<sortid>9</sortid>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="18" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -328,11 +328,11 @@ END_VAR]]>
 <id>34</id>
 <AT_position>66,11</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_AND13</text>
+<text>33US0003_2_AND_10</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>13</sortid>
+<sortid>10</sortid>
 <input inputid="31" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="9" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="24" inputidx="0" negate="true" visible="true" pinname=""/>
@@ -342,11 +342,11 @@ END_VAR]]>
 <id>25</id>
 <AT_position>21,20</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_AND4</text>
+<text>33US0003_2_AND_11</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>4</sortid>
+<sortid>11</sortid>
 <input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="10" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="11" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -356,11 +356,11 @@ END_VAR]]>
 <id>36</id>
 <AT_position>81,16</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_OR15</text>
+<text>33US0003_2_OR_12</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>15</sortid>
+<sortid>12</sortid>
 <input inputid="25" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="34" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="32" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -370,11 +370,11 @@ END_VAR]]>
 <id>38</id>
 <AT_position>96,16</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_TP17</text>
+<text>33US0003_2_TP_13</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>17</sortid>
+<sortid>13</sortid>
 <input inputid="36" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="19" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -384,11 +384,11 @@ END_VAR]]>
 <id>26</id>
 <AT_position>21,20</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_AND5</text>
+<text>33US0003_2_AND_14</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>5</sortid>
+<sortid>14</sortid>
 <input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="12" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="13" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -398,11 +398,11 @@ END_VAR]]>
 <id>32</id>
 <AT_position>51,17</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_AND11</text>
+<text>33US0003_2_AND_15</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>11</sortid>
+<sortid>15</sortid>
 <input inputid="14" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="3" inputidx="0" negate="true" visible="true" pinname=""/>
 <input inputid="30" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -412,11 +412,11 @@ END_VAR]]>
 <id>27</id>
 <AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_NOT6</text>
+<text>33US0003_2_NOT_16</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>6</sortid>
+<sortid>16</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
@@ -424,11 +424,11 @@ END_VAR]]>
 <id>28</id>
 <AT_position>21,14</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_NOT7</text>
+<text>33US0003_2_NOT_17</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>7</sortid>
+<sortid>17</sortid>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
@@ -436,11 +436,11 @@ END_VAR]]>
 <id>30</id>
 <AT_position>36,20</AT_position>
 <isinst>TRUE</isinst>
-<text>33US0003_2_TON9</text>
+<text>33US0003_2_TON_18</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>9</sortid>
+<sortid>18</sortid>
 <input inputid="26" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="20" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -456,7 +456,7 @@ END_VAR]]>
 <Inputid>37</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>18</sortid>
+<sortid>25</sortid>
 </element>
 <element type="output">
 <id>40</id>
@@ -468,7 +468,7 @@ END_VAR]]>
 <Inputid>38</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>19</sortid>
+<sortid>26</sortid>
 </element>
 <element type="output">
 <id>41</id>
@@ -480,7 +480,7 @@ END_VAR]]>
 <Inputid>27</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>20</sortid>
+<sortid>27</sortid>
 </element>
 <element type="output">
 <id>42</id>
@@ -492,7 +492,7 @@ END_VAR]]>
 <Inputid>28</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>21</sortid>
+<sortid>28</sortid>
 </element>
 </cfc>
 </pou>

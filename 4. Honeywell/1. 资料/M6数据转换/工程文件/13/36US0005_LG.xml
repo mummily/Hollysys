@@ -50,11 +50,11 @@ END_VAR]]>
 <id>4</id>
 <AT_position>21,5</AT_position>
 <isinst>TRUE</isinst>
-<text>36US0005_AND0</text>
+<text>36US0005_AND_1</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>0</sortid>
+<sortid>1</sortid>
 <input inputid="1" inputidx="0" negate="true" visible="true" pinname=""/>
 <input inputid="2" inputidx="0" negate="true" visible="true" pinname=""/>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -70,7 +70,7 @@ END_VAR]]>
 <Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>1</sortid>
+<sortid>25</sortid>
 </element>
 <element type="output">
 <id>6</id>
@@ -82,7 +82,7 @@ END_VAR]]>
 <Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>2</sortid>
+<sortid>26</sortid>
 </element>
 <element type="output">
 <id>7</id>
@@ -94,7 +94,7 @@ END_VAR]]>
 <Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>3</sortid>
+<sortid>27</sortid>
 </element>
 <element type="output">
 <id>8</id>
@@ -106,7 +106,7 @@ END_VAR]]>
 <Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>4</sortid>
+<sortid>28</sortid>
 </element>
 </cfc>
 </pou>

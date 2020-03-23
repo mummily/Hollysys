@@ -45,7 +45,7 @@ END_VAR]]>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>2</sortid>
+<sortid>26</sortid>
 <input inputid="5" inputidx="0" negate="False" visible="true" pinname=""/>
 <input inputid="6" inputidx="0" negate="True" visible="true" pinname=""/>
 </element>
@@ -62,11 +62,11 @@ END_VAR]]>
 <id>3</id>
 <AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
-<text>11KS0021_LG_TON0</text>
+<text>11KS0021_LG_TON_1</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>0</sortid>
+<sortid>1</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="2" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -82,7 +82,7 @@ END_VAR]]>
 <Inputid>3</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>1</sortid>
+<sortid>25</sortid>
 </element>
 </cfc>
 </pou>

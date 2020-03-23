@@ -63,7 +63,7 @@ END_VAR]]>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>11</sortid>
+<sortid>29</sortid>
 <input inputid="24" inputidx="0" negate="True" visible="true" pinname=""/>
 <input inputid="25" inputidx="0" negate="False" visible="true" pinname=""/>
 </element>
@@ -93,7 +93,7 @@ END_VAR]]>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>12</sortid>
+<sortid>30</sortid>
 <input inputid="26" inputidx="0" negate="True" visible="true" pinname=""/>
 <input inputid="27" inputidx="0" negate="False" visible="true" pinname=""/>
 </element>
@@ -123,7 +123,7 @@ END_VAR]]>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>13</sortid>
+<sortid>31</sortid>
 <input inputid="28" inputidx="0" negate="True" visible="true" pinname=""/>
 <input inputid="29" inputidx="0" negate="False" visible="true" pinname=""/>
 </element>
@@ -194,11 +194,11 @@ END_VAR]]>
 <id>13</id>
 <AT_position>21,5</AT_position>
 <isinst>TRUE</isinst>
-<text>12KS0001_2LG_AND0</text>
+<text>12KS0001_2LG_AND_1</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>0</sortid>
+<sortid>1</sortid>
 <input inputid="1" inputidx="0" negate="true" visible="true" pinname=""/>
 <input inputid="2" inputidx="0" negate="true" visible="true" pinname=""/>
 <input inputid="7" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -208,11 +208,11 @@ END_VAR]]>
 <id>17</id>
 <AT_position>36,5</AT_position>
 <isinst>TRUE</isinst>
-<text>12KS0001_2LG_TON4</text>
+<text>12KS0001_2LG_TON_2</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>4</sortid>
+<sortid>2</sortid>
 <input inputid="13" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="9" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -222,11 +222,11 @@ END_VAR]]>
 <id>14</id>
 <AT_position>21,17</AT_position>
 <isinst>TRUE</isinst>
-<text>12KS0001_2LG_AND1</text>
+<text>12KS0001_2LG_AND_3</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>1</sortid>
+<sortid>3</sortid>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="8" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -236,11 +236,11 @@ END_VAR]]>
 <id>18</id>
 <AT_position>36,17</AT_position>
 <isinst>TRUE</isinst>
-<text>12KS0001_2LG_TON5</text>
+<text>12KS0001_2LG_TON_4</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>5</sortid>
+<sortid>4</sortid>
 <input inputid="14" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="10" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -250,11 +250,11 @@ END_VAR]]>
 <id>15</id>
 <AT_position>21,26</AT_position>
 <isinst>TRUE</isinst>
-<text>12KS0001_2LG_NOT2</text>
+<text>12KS0001_2LG_NOT_5</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>2</sortid>
+<sortid>5</sortid>
 <input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
@@ -262,7 +262,7 @@ END_VAR]]>
 <id>19</id>
 <AT_position>36,26</AT_position>
 <isinst>TRUE</isinst>
-<text>12KS0001_2LG_TON6</text>
+<text>12KS0001_2LG_TON_6</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -276,11 +276,11 @@ END_VAR]]>
 <id>16</id>
 <AT_position>21,32</AT_position>
 <isinst>TRUE</isinst>
-<text>12KS0001_2LG_TON3</text>
+<text>12KS0001_2LG_TON_7</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>3</sortid>
+<sortid>7</sortid>
 <input inputid="6" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="12" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -296,7 +296,7 @@ END_VAR]]>
 <Inputid>17</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>7</sortid>
+<sortid>25</sortid>
 </element>
 <element type="output">
 <id>21</id>
@@ -308,7 +308,7 @@ END_VAR]]>
 <Inputid>18</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>8</sortid>
+<sortid>26</sortid>
 </element>
 <element type="output">
 <id>22</id>
@@ -320,7 +320,7 @@ END_VAR]]>
 <Inputid>19</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>9</sortid>
+<sortid>27</sortid>
 </element>
 <element type="output">
 <id>23</id>
@@ -332,7 +332,7 @@ END_VAR]]>
 <Inputid>16</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>10</sortid>
+<sortid>28</sortid>
 </element>
 </cfc>
 </pou>

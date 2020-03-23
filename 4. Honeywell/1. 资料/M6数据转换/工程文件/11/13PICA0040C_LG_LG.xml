@@ -122,11 +122,11 @@ END_VAR]]>
 <id>9</id>
 <AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
-<text>13PICA0040C_LG_GE0</text>
+<text>13PICA0040C_LG_GE_1</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>0</sortid>
+<sortid>1</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
@@ -135,11 +135,11 @@ END_VAR]]>
 <id>10</id>
 <AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
-<text>13PICA0040C_LG_GE1</text>
+<text>13PICA0040C_LG_GE_2</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>1</sortid>
+<sortid>2</sortid>
 <input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
@@ -148,11 +148,11 @@ END_VAR]]>
 <id>11</id>
 <AT_position>21,14</AT_position>
 <isinst>TRUE</isinst>
-<text>13PICA0040C_LG_GE2</text>
+<text>13PICA0040C_LG_GE_3</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>2</sortid>
+<sortid>3</sortid>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="6" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
@@ -161,11 +161,11 @@ END_VAR]]>
 <id>12</id>
 <AT_position>36,8</AT_position>
 <isinst>TRUE</isinst>
-<text>13PICA0040C_LG_QOR23</text>
+<text>13PICA0040C_LG_QOR2_4</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>3</sortid>
+<sortid>4</sortid>
 <input inputid="9" inputidx="0" negate="false" visible="true" pinname="S1"/>
 <input inputid="10" inputidx="0" negate="false" visible="true" pinname="S2"/>
 <input inputid="11" inputidx="0" negate="false" visible="true" pinname="S3"/>
@@ -176,11 +176,11 @@ END_VAR]]>
 <id>13</id>
 <AT_position>51,8</AT_position>
 <isinst>TRUE</isinst>
-<text>13PICA0040C_LG_TP4</text>
+<text>13PICA0040C_LG_TP_5</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>4</sortid>
+<sortid>5</sortid>
 <input inputid="12" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="8" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -194,7 +194,7 @@ END_VAR]]>
 <AT_type>MOVE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>5</sortid>
+<sortid>25</sortid>
 <input inputid="13" inputidx="0" negate="false" visible="true" pinname="EN"/>
 <input inputid="15" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname="ENO"/>
@@ -208,7 +208,7 @@ END_VAR]]>
 <AT_type>MOVE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>6</sortid>
+<sortid>26</sortid>
 <input inputid="13" inputidx="0" negate="false" visible="true" pinname="EN"/>
 <input inputid="17" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname="ENO"/>
@@ -222,7 +222,7 @@ END_VAR]]>
 <AT_type>MOVE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>7</sortid>
+<sortid>27</sortid>
 <input inputid="13" inputidx="0" negate="false" visible="true" pinname="EN"/>
 <input inputid="19" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname="ENO"/>
@@ -238,7 +238,7 @@ END_VAR]]>
 <Inputid>14</Inputid>
 <Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>8</sortid>
+<sortid>28</sortid>
 </element>
 <element type="output">
 <id>21</id>
@@ -250,7 +250,7 @@ END_VAR]]>
 <Inputid>16</Inputid>
 <Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>9</sortid>
+<sortid>29</sortid>
 </element>
 <element type="output">
 <id>22</id>
@@ -262,7 +262,7 @@ END_VAR]]>
 <Inputid>18</Inputid>
 <Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>10</sortid>
+<sortid>30</sortid>
 </element>
 </cfc>
 </pou>

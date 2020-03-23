@@ -59,11 +59,11 @@ END_VAR]]>
 <id>5</id>
 <AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
-<text>13KS0013_LG_TON0</text>
+<text>13KS0013_LG_TON_1</text>
 <AT_type>TON</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>0</sortid>
+<sortid>1</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="4" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -79,7 +79,7 @@ END_VAR]]>
 <Inputid>2</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>1</sortid>
+<sortid>25</sortid>
 </element>
 <element type="output">
 <id>7</id>
@@ -91,7 +91,7 @@ END_VAR]]>
 <Inputid>5</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>2</sortid>
+<sortid>26</sortid>
 </element>
 <element type="output">
 <id>8</id>
@@ -103,7 +103,7 @@ END_VAR]]>
 <Inputid>3</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>3</sortid>
+<sortid>27</sortid>
 </element>
 </cfc>
 </pou>

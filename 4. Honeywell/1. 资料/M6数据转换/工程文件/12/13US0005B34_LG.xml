@@ -86,11 +86,11 @@ END_VAR]]>
 <id>8</id>
 <AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
-<text>13US0005B34_TP0</text>
+<text>13US0005B34_TP_1</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>0</sortid>
+<sortid>1</sortid>
 <input inputid="2" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="6" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -100,7 +100,7 @@ END_VAR]]>
 <id>10</id>
 <AT_position>36,8</AT_position>
 <isinst>TRUE</isinst>
-<text>13US0005B34_NOT2</text>
+<text>13US0005B34_NOT_2</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -112,11 +112,11 @@ END_VAR]]>
 <id>12</id>
 <AT_position>51,5</AT_position>
 <isinst>TRUE</isinst>
-<text>13US0005B34_FLIPFLOP4</text>
+<text>13US0005B34_FLIPFLOP_3</text>
 <AT_type>FLIPFLOP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>4</sortid>
+<sortid>3</sortid>
 <input inputid="10" inputidx="0" negate="false" visible="true" pinname="S1"/>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname="S2"/>
 <input inputid="4" inputidx="0" negate="false" visible="true" pinname="S3"/>
@@ -126,11 +126,11 @@ END_VAR]]>
 <id>9</id>
 <AT_position>21,14</AT_position>
 <isinst>TRUE</isinst>
-<text>13US0005B34_NOT1</text>
+<text>13US0005B34_NOT_4</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>1</sortid>
+<sortid>4</sortid>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
@@ -138,7 +138,7 @@ END_VAR]]>
 <id>13</id>
 <AT_position>51,11</AT_position>
 <isinst>TRUE</isinst>
-<text>13US0005B34_FLIPFLOP5</text>
+<text>13US0005B34_FLIPFLOP_5</text>
 <AT_type>FLIPFLOP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -152,11 +152,11 @@ END_VAR]]>
 <id>11</id>
 <AT_position>36,8</AT_position>
 <isinst>TRUE</isinst>
-<text>13US0005B34_TP3</text>
+<text>13US0005B34_TP_6</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>3</sortid>
+<sortid>6</sortid>
 <input inputid="8" inputidx="0" negate="false" visible="true" pinname="IN"/>
 <input inputid="7" inputidx="0" negate="false" visible="true" pinname="PT"/>
 <output negate="false" visible="true" pinname="Q"/>
@@ -172,7 +172,7 @@ END_VAR]]>
 <Inputid>12</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>6</sortid>
+<sortid>25</sortid>
 </element>
 <element type="output">
 <id>15</id>
@@ -184,7 +184,7 @@ END_VAR]]>
 <Inputid>13</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>7</sortid>
+<sortid>26</sortid>
 </element>
 </cfc>
 </pou>

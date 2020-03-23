@@ -68,11 +68,11 @@ END_VAR]]>
 <id>6</id>
 <AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
-<text>16PC0008HS5_LG_AND0</text>
+<text>16PC0008HS5_LG_AND_1</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>0</sortid>
+<sortid>1</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -82,11 +82,11 @@ END_VAR]]>
 <id>7</id>
 <AT_position>36,14</AT_position>
 <isinst>TRUE</isinst>
-<text>16PC0008HS5_LG_OR1</text>
+<text>16PC0008HS5_LG_OR_2</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>1</sortid>
+<sortid>2</sortid>
 <input inputid="6" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="5" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -96,11 +96,11 @@ END_VAR]]>
 <id>8</id>
 <AT_position>51,14</AT_position>
 <isinst>TRUE</isinst>
-<text>16PC0008HS5_LG_NOT2</text>
+<text>16PC0008HS5_LG_NOT_3</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>2</sortid>
+<sortid>3</sortid>
 <input inputid="7" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
@@ -114,7 +114,7 @@ END_VAR]]>
 <Inputid>7</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>3</sortid>
+<sortid>25</sortid>
 </element>
 <element type="output">
 <id>10</id>
@@ -126,7 +126,7 @@ END_VAR]]>
 <Inputid>8</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>4</sortid>
+<sortid>26</sortid>
 </element>
 <element type="output">
 <id>11</id>
@@ -138,7 +138,7 @@ END_VAR]]>
 <Inputid>6</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>5</sortid>
+<sortid>27</sortid>
 </element>
 <element type="output">
 <id>12</id>
@@ -150,7 +150,7 @@ END_VAR]]>
 <Inputid>4</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>6</sortid>
+<sortid>28</sortid>
 </element>
 </cfc>
 </pou>

@@ -104,11 +104,11 @@ END_VAR]]>
 <id>10</id>
 <AT_position>21,8</AT_position>
 <isinst>TRUE</isinst>
-<text>13XV0010_LG_OR0</text>
+<text>13XV0010_LG_OR_1</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>0</sortid>
+<sortid>1</sortid>
 <input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
@@ -118,7 +118,7 @@ END_VAR]]>
 <id>12</id>
 <AT_position>36,2</AT_position>
 <isinst>TRUE</isinst>
-<text>13XV0010_LG_OR2</text>
+<text>13XV0010_LG_OR_2</text>
 <AT_type>OR</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -132,7 +132,7 @@ END_VAR]]>
 <id>13</id>
 <AT_position>51,5</AT_position>
 <isinst>TRUE</isinst>
-<text>13XV0010_LG_AND3</text>
+<text>13XV0010_LG_AND_3</text>
 <AT_type>AND</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -146,7 +146,7 @@ END_VAR]]>
 <id>14</id>
 <AT_position>66,5</AT_position>
 <isinst>TRUE</isinst>
-<text>13XV0010_LG_TP4</text>
+<text>13XV0010_LG_TP_4</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -160,11 +160,11 @@ END_VAR]]>
 <id>11</id>
 <AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
-<text>13XV0010_LG_GE1</text>
+<text>13XV0010_LG_GE_5</text>
 <AT_type>GE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>1</sortid>
+<sortid>5</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="8" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
@@ -179,7 +179,7 @@ END_VAR]]>
 <Inputid>14</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>5</sortid>
+<sortid>25</sortid>
 </element>
 <element type="output">
 <id>16</id>
@@ -191,7 +191,7 @@ END_VAR]]>
 <Inputid>10</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>6</sortid>
+<sortid>26</sortid>
 </element>
 </cfc>
 </pou>

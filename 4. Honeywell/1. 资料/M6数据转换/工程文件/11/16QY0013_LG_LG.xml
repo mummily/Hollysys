@@ -59,11 +59,11 @@ END_VAR]]>
 <id>4</id>
 <AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
-<text>16QY0013_LG_LE0</text>
+<text>16QY0013_LG_LE_1</text>
 <AT_type>LE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>0</sortid>
+<sortid>1</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
@@ -72,11 +72,11 @@ END_VAR]]>
 <id>5</id>
 <AT_position>36,2</AT_position>
 <isinst>TRUE</isinst>
-<text>16QY0013_LG_NOT1</text>
+<text>16QY0013_LG_NOT_2</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>1</sortid>
+<sortid>2</sortid>
 <input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
@@ -88,7 +88,7 @@ END_VAR]]>
 <AT_type>MOVE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>2</sortid>
+<sortid>25</sortid>
 <input inputid="4" inputidx="0" negate="false" visible="true" pinname="EN"/>
 <input inputid="7" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname="ENO"/>
@@ -102,7 +102,7 @@ END_VAR]]>
 <AT_type>MOVE</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>3</sortid>
+<sortid>26</sortid>
 <input inputid="5" inputidx="0" negate="false" visible="true" pinname="EN"/>
 <input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname="ENO"/>
@@ -118,7 +118,7 @@ END_VAR]]>
 <Inputid>6</Inputid>
 <Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>4</sortid>
+<sortid>27</sortid>
 </element>
 <element type="output">
 <id>10</id>
@@ -130,7 +130,7 @@ END_VAR]]>
 <Inputid>8</Inputid>
 <Inputidx>1</Inputidx>
 <negate>false</negate>
-<sortid>5</sortid>
+<sortid>28</sortid>
 </element>
 </cfc>
 </pou>

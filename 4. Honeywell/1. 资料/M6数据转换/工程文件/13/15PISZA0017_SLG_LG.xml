@@ -158,11 +158,11 @@ END_VAR]]>
 <id>16</id>
 <AT_position>21,26</AT_position>
 <isinst>TRUE</isinst>
-<text>15PISZA0017_SLG_QOR20</text>
+<text>15PISZA0017_SLG_QOR2_1</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>0</sortid>
+<sortid>1</sortid>
 <input inputid="4" inputidx="0" negate="false" visible="true" pinname="S1"/>
 <input inputid="5" inputidx="0" negate="false" visible="true" pinname="S2"/>
 <input inputid="6" inputidx="0" negate="false" visible="true" pinname="S3"/>
@@ -173,11 +173,11 @@ END_VAR]]>
 <id>17</id>
 <AT_position>21,44</AT_position>
 <isinst>TRUE</isinst>
-<text>15PISZA0017_SLG_QOR21</text>
+<text>15PISZA0017_SLG_QOR2_2</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>1</sortid>
+<sortid>2</sortid>
 <input inputid="7" inputidx="0" negate="false" visible="true" pinname="S1"/>
 <input inputid="8" inputidx="0" negate="false" visible="true" pinname="S2"/>
 <input inputid="9" inputidx="0" negate="false" visible="true" pinname="S3"/>
@@ -188,11 +188,11 @@ END_VAR]]>
 <id>18</id>
 <AT_position>21,62</AT_position>
 <isinst>TRUE</isinst>
-<text>15PISZA0017_SLG_QOR22</text>
+<text>15PISZA0017_SLG_QOR2_3</text>
 <AT_type>QOR2</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>2</sortid>
+<sortid>3</sortid>
 <input inputid="10" inputidx="0" negate="false" visible="true" pinname="S1"/>
 <input inputid="11" inputidx="0" negate="false" visible="true" pinname="S2"/>
 <input inputid="12" inputidx="0" negate="false" visible="true" pinname="S3"/>
@@ -209,7 +209,7 @@ END_VAR]]>
 <Inputid>1</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>3</sortid>
+<sortid>25</sortid>
 </element>
 <element type="output">
 <id>20</id>
@@ -221,7 +221,7 @@ END_VAR]]>
 <Inputid>2</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>4</sortid>
+<sortid>26</sortid>
 </element>
 <element type="output">
 <id>21</id>
@@ -233,7 +233,7 @@ END_VAR]]>
 <Inputid>3</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>5</sortid>
+<sortid>27</sortid>
 </element>
 <element type="output">
 <id>22</id>
@@ -245,7 +245,7 @@ END_VAR]]>
 <Inputid>16</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>6</sortid>
+<sortid>28</sortid>
 </element>
 <element type="output">
 <id>23</id>
@@ -257,7 +257,7 @@ END_VAR]]>
 <Inputid>17</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>7</sortid>
+<sortid>29</sortid>
 </element>
 <element type="output">
 <id>24</id>
@@ -269,7 +269,7 @@ END_VAR]]>
 <Inputid>18</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>8</sortid>
+<sortid>30</sortid>
 </element>
 </cfc>
 </pou>

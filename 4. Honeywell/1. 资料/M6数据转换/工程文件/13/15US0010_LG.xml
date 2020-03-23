@@ -32,11 +32,11 @@ END_VAR]]>
 <id>2</id>
 <AT_position>21,2</AT_position>
 <isinst>TRUE</isinst>
-<text>15US0010_NOT0</text>
+<text>15US0010_NOT_1</text>
 <AT_type>NOT</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
-<sortid>0</sortid>
+<sortid>1</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
@@ -50,7 +50,7 @@ END_VAR]]>
 <Inputid>2</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
-<sortid>1</sortid>
+<sortid>25</sortid>
 </element>
 </cfc>
 </pou>
