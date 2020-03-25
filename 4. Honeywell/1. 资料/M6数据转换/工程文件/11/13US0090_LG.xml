@@ -163,6 +163,24 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
+<element type="input">
+<id>33</id>
+<AT_position>104,13</AT_position>
+<text>TRUE</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>36</id>
+<AT_position>104,15</AT_position>
+<text>TRUE</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="box">
 <id>17</id>
 <AT_position>21,2</AT_position>
@@ -354,32 +372,60 @@ END_VAR]]>
 <input inputid="11" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
+<element type="box">
+<id>32</id>
+<AT_position>106,11</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="29" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="33" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>35</id>
+<AT_position>106,13</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="30" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="36" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
 <element type="output">
 <id>31</id>
-<position>106,11</position>
-<text>13P1308A.INON</text>
+<position>116,13</position>
+<text>13P1308A.ILIN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>29</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>32</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>25</sortid>
 </element>
 <element type="output">
-<id>32</id>
-<position>106,13</position>
-<text>13P1308B.INON</text>
+<id>34</id>
+<position>116,15</position>
+<text>13P1308B.ILIN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>30</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>35</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>26</sortid>
 </element>
 <element type="output">
-<id>33</id>
+<id>37</id>
 <position>106,2</position>
 <text>P1308AB_BK.P0</text>
 <Comment>?????</Comment>
@@ -391,7 +437,7 @@ END_VAR]]>
 <sortid>27</sortid>
 </element>
 <element type="output">
-<id>34</id>
+<id>38</id>
 <position>106,8</position>
 <text>P1308AB_BK.P1</text>
 <Comment>?????</Comment>

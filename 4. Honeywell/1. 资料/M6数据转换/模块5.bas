@@ -78,9 +78,27 @@ Type T_HN_OUTPUT
     Element_X As Integer
     Element_Y As Integer
     
+    ElementID_Ref As Integer ' Output是个组合，这里记录实际指出的ID值
+    
     LOSRC As String
-    LODSTN As String
+    LODSTN As String ' 从Excel中读取的输入数据，可修改适配为M6风格
+    LODSTN_BAK As String ' 从Excel中读取的输入数据，始终不修改
     LOENBL As String
+End Type
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: ULOGIC I0I1匹配对信息
+'History: 3-23-2020
+'-----------------------------------------------------------------------------------------------------------
+Type T_HN_I0I1
+    ElementID As Integer
+    ElementInputID1 As Integer
+    ElementInputID2 As Integer
+    ElementOutputID As Integer
+    Text As String
+    
+    Element_X As Integer
+    Element_Y As Integer
 End Type
 
 '-----------------------------------------------------------------------------------------------------------
@@ -97,6 +115,7 @@ Type T_EXCELINFO
     HN_OUTPUT(1 To 12) As T_HN_OUTPUT   'OUTPUT信息
     HN_BOX(1 To 24) As T_HN_BOX         'BOX信息
     HN_E(1 To 12) As T_HN_E             'E信息
+    HN_I0I1(1 To 6) As T_HN_I0I1        'I0I1对信息
 End Type
 
 '-----------------------------------------------------------------------------------------------------------

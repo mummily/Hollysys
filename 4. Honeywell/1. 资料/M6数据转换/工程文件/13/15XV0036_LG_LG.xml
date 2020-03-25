@@ -82,6 +82,15 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
+<element type="input">
+<id>14</id>
+<AT_position>44,10</AT_position>
+<text>FALSE</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="box">
 <id>7</id>
 <AT_position>21,2</AT_position>
@@ -110,6 +119,20 @@ END_VAR]]>
 <input inputid="6" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
+<element type="box">
+<id>13</id>
+<AT_position>46,8</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="8" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="14" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
 <element type="output">
 <id>10</id>
 <position>46,2</position>
@@ -136,13 +159,13 @@ END_VAR]]>
 </element>
 <element type="output">
 <id>12</id>
-<position>46,8</position>
-<text>15XV0036.INOF</text>
+<position>56,10</position>
+<text>15XV0036.ILIN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>8</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>13</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>26</sortid>
 </element>

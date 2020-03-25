@@ -109,6 +109,24 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
+<element type="input">
+<id>21</id>
+<AT_position>59,4</AT_position>
+<text>FALSE</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>27</id>
+<AT_position>59,10</AT_position>
+<text>TRUE</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
 <element type="box">
 <id>6</id>
 <AT_position>21,8</AT_position>
@@ -221,20 +239,62 @@ END_VAR]]>
 <output negate="false" visible="true" pinname="ENO"/>
 <output negate="false" visible="true" pinname=""/>
 </element>
+<element type="box">
+<id>20</id>
+<AT_position>61,2</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="1" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="21" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>26</id>
+<AT_position>61,8</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="7" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="27" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>30</id>
+<AT_position>61,5</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>OR</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="7" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname=""/>
+</element>
 <element type="output">
 <id>19</id>
-<position>61,2</position>
-<text>30XV0001.INOF</text>
+<position>71,4</position>
+<text>30XV0001.ILIN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>1</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>20</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>30</sortid>
 </element>
 <element type="output">
-<id>20</id>
+<id>22</id>
 <position>61,2</position>
 <text>30PICA0001.MODATTR</text>
 <Comment>?????</Comment>
@@ -246,7 +306,7 @@ END_VAR]]>
 <sortid>31</sortid>
 </element>
 <element type="output">
-<id>21</id>
+<id>23</id>
 <position>61,2</position>
 <text>30PICA0001.MODE</text>
 <Comment>?????</Comment>
@@ -258,7 +318,7 @@ END_VAR]]>
 <sortid>32</sortid>
 </element>
 <element type="output">
-<id>22</id>
+<id>24</id>
 <position>61,2</position>
 <text>30PICA0001.OP</text>
 <Comment>?????</Comment>
@@ -270,19 +330,19 @@ END_VAR]]>
 <sortid>33</sortid>
 </element>
 <element type="output">
-<id>23</id>
-<position>61,8</position>
-<text>30XV0001.INON</text>
+<id>25</id>
+<position>71,10</position>
+<text>30XV0001.ILIN</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>7</Inputid>
-<Inputidx>0</Inputidx>
+<Inputid>26</Inputid>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>34</sortid>
 </element>
 <element type="output">
-<id>24</id>
+<id>28</id>
 <position>61,8</position>
 <text>30PICA0001.MODATTR</text>
 <Comment>?????</Comment>
@@ -294,7 +354,7 @@ END_VAR]]>
 <sortid>35</sortid>
 </element>
 <element type="output">
-<id>25</id>
+<id>29</id>
 <position>61,8</position>
 <text>30PICA0001.MODE</text>
 <Comment>?????</Comment>
@@ -304,6 +364,17 @@ END_VAR]]>
 <Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>36</sortid>
+</element>
+<element type="output">
+<id>31</id>
+<position>71,6</position>
+<text> 30XV0001.ILSW</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>30</Inputid>
+<negate>false</negate>
+<sortid>0</sortid>
 </element>
 </cfc>
 </pou>

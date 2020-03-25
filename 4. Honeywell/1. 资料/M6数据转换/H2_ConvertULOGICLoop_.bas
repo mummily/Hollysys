@@ -90,7 +90,9 @@ Private Sub InitProperty(sPouName As String)
         For index = 1 To 12
             With .HN_OUTPUT(index)
                 .LODSTN = ULOGIC_arr(rowLogic, ULOGIC("LODSTN(" & index & ")"))
+                .LODSTN_BAK = .LODSTN
                 .LODSTN = ReplaceLODSTNSuffix(.LODSTN)
+                
                 .LOSRC = ULOGIC_arr(rowLogic, ULOGIC("LOSRC(" & index & ")"))
                 .LOENBL = ULOGIC_arr(rowLogic, ULOGIC("LOENBL(" & index & ")"))
             End With
@@ -336,8 +338,59 @@ Private Sub InitProperty(sPouName As String)
                     .ElementSortID = LSort_ID
                     LSort_ID = LSort_ID + 1
                 End If
+
+                If ".I0" = Right(.LODSTN_BAK, 3) Or ".I1" = Right(.LODSTN_BAK, 3) Then
+                    .ElementID_Ref = LElement_ID
+                    LElement_ID = LElement_ID + 2 '1个MOVE，1个TRUE或FALSE
+                End If
             End If
         End With
+    Next
+    
+    Dim i0i1Index As Integer
+    i0i1Index = 1
+    
+    'I0I1 赋值
+    For index1 = 1 To 12
+        Dim output1 As T_HN_OUTPUT
+        output1 = ExcelInfo.HN_OUTPUT(index1)
+            
+        For index2 = index1 + 1 To 12
+            Dim output2 As T_HN_OUTPUT
+            output2 = ExcelInfo.HN_OUTPUT(index2)
+        
+            If output1.LODSTN_BAK <> "" And output1.LODSTN_BAK <> "--.--" And output2.LODSTN_BAK <> "" And output2.LODSTN_BAK <> "--.--" Then
+                If output1.LODSTN_BAK Like "*.I0" And output2.LODSTN_BAK = Left(output1.LODSTN_BAK, Len(output1.LODSTN_BAK) - 1) + "1" Then
+                    ExcelInfo.HN_I0I1(i0i1Index).ElementInputID1 = output1.ElementInputID
+                    ExcelInfo.HN_I0I1(i0i1Index).ElementInputID2 = output2.ElementInputID
+                    ExcelInfo.HN_I0I1(i0i1Index).Text = Left(output1.LODSTN_BAK, Len(output1.LODSTN_BAK) - 2) + "ILSW"
+                    ExcelInfo.HN_I0I1(i0i1Index).Element_X = output1.Element_X
+                    ExcelInfo.HN_I0I1(i0i1Index).Element_Y = (output1.Element_Y + output2.Element_Y) / 2
+                    
+                    ExcelInfo.HN_I0I1(i0i1Index).ElementID = LElement_ID
+                    LElement_ID = LElement_ID + 1
+                    ExcelInfo.HN_I0I1(i0i1Index).ElementOutputID = LElement_ID
+                    LElement_ID = LElement_ID + 1
+                    
+                    i0i1Index = i0i1Index + 1
+                End If
+                
+                If output1.LODSTN_BAK Like "*.I1" And output2.LODSTN_BAK = Left(output1.LODSTN_BAK, Len(output1.LODSTN_BAK) - 1) + "0" Then
+                    ExcelInfo.HN_I0I1(i0i1Index).ElementInputID1 = output1.ElementInputID
+                    ExcelInfo.HN_I0I1(i0i1Index).ElementInputID2 = output2.ElementInputID
+                    ExcelInfo.HN_I0I1(i0i1Index).Text = Left(output1.LODSTN_BAK, Len(output1.LODSTN_BAK) - 2) + "ILSW"
+                    ExcelInfo.HN_I0I1(i0i1Index).Element_X = output1.Element_X
+                    ExcelInfo.HN_I0I1(i0i1Index).Element_Y = (output1.Element_Y + output2.Element_Y) / 2
+                    
+                    ExcelInfo.HN_I0I1(i0i1Index).ElementID = LElement_ID
+                    LElement_ID = LElement_ID + 1
+                    ExcelInfo.HN_I0I1(i0i1Index).ElementOutputID = LElement_ID
+                    LElement_ID = LElement_ID + 1
+                    
+                    i0i1Index = i0i1Index + 1
+                End If
+            End If
+        Next
     Next
 End Sub
 
@@ -695,6 +748,27 @@ Private Sub WriteInput(sPouName As String)
            End If
         End With
     Next
+    
+    'Output组合 写入XML
+    For index = 1 To 12
+        With ExcelInfo.HN_OUTPUT(index)
+            If .ElementID_Ref <> 0 Then
+                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+                POU.WriteLine "<id>" & .ElementID_Ref + 1 & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X - 2 & "," & .Element_Y + 2 & "</AT_position>"
+                If ".I0" = Right(.LODSTN_BAK, 3) Then
+                    POU.WriteLine "<text>FALSE</text>"
+                Else
+                    POU.WriteLine "<text>TRUE</text>"
+                End If
+                POU.WriteLine "<Comment>?????</Comment>"
+                POU.WriteLine "<negate>false</negate>"
+                POU.WriteLine "<ttype>4</ttype>"
+                POU.WriteLine "<Flag>FALSE</Flag>"
+                POU.WriteLine "</element>"
+            End If
+        End With
+    Next
 End Sub
 
 '-----------------------------------------------------------------------------------------------------------
@@ -770,6 +844,54 @@ Private Sub WriteBox(sPouName As String)
         End With
     Next
     
+    'Output组合 写入XML
+    For index = 1 To 12
+        With ExcelInfo.HN_OUTPUT(index)
+            If .ElementID_Ref <> 0 Then
+                POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+                POU.WriteLine "<id>" & .ElementID_Ref & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
+                POU.WriteLine "<isinst>TRUE</isinst>"
+                POU.WriteLine "<text></text>"
+                POU.WriteLine "<AT_type>MOVE</AT_type>"
+                POU.WriteLine "<typetext>BT_FB</typetext>"
+                POU.WriteLine "<ttype>9</ttype>"
+                POU.WriteLine "<sortid>0</sortid>"
+                
+                POU.WriteLine "<input inputid=""" & .ElementInputID & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""EN""/>"
+                POU.WriteLine "<input inputid=""" & .ElementID_Ref + 1 & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
+                POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""ENO""/>"
+                POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
+                
+                POU.WriteLine "</element>"
+            End If
+        End With
+    Next
+    
+    'I0I1 OR 输出
+    For index = 1 To 6
+        With ExcelInfo.HN_I0I1(index)
+            If .ElementID <> 0 Then
+                POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+                POU.WriteLine "<id>" & .ElementID & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
+                POU.WriteLine "<isinst>TRUE</isinst>"
+                POU.WriteLine "<text></text>"
+                POU.WriteLine "<AT_type>OR</AT_type>"
+                POU.WriteLine "<typetext>BT_FB</typetext>"
+                POU.WriteLine "<ttype>9</ttype>"
+                POU.WriteLine "<sortid>0</sortid>"
+                
+                POU.WriteLine "<input inputid=""" & .ElementInputID2 & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
+                POU.WriteLine "<input inputid=""" & .ElementInputID1 & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
+                POU.WriteLine "<input inputid=""0"" inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
+                POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
+                
+                POU.WriteLine "</element>"
+            End If
+        End With
+    Next
+    
 End Sub
 
 '-----------------------------------------------------------------------------------------------------------
@@ -783,19 +905,57 @@ Private Sub WriteOutput()
             If .LODSTN <> "" And .LODSTN <> "--.--" Then
                 POU.WriteLine "<element type=" & Lab & "output" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID & "</id>"
-                POU.WriteLine "<position>" & .Element_X & "," & .Element_Y & "</position>"
+                
+                If .ElementID_Ref = 0 Then
+                    POU.WriteLine "<position>" & .Element_X & "," & .Element_Y & "</position>"
+                Else
+                    POU.WriteLine "<position>" & .Element_X + 10 & "," & .Element_Y + 2 & "</position>"
+                End If
+                
                 POU.WriteLine "<text>" & .LODSTN & "</text>"
                 POU.WriteLine "<Comment>?????</Comment>"
                 POU.WriteLine "<negate>false</negate>"
                 POU.WriteLine "<ttype>4</ttype>"
-                POU.WriteLine "<Inputid>" & .ElementInputID & "</Inputid>"
+                
+                If .ElementID_Ref = 0 Then
+                    POU.WriteLine "<Inputid>" & .ElementInputID & "</Inputid>"
+                Else
+                    POU.WriteLine "<Inputid>" & .ElementID_Ref & "</Inputid>"
+                End If
+                
                 If .LOENBL Like "SO*" Or .LOENBL Like "L*" Then
+                    POU.WriteLine "<Inputidx>1</Inputidx>"
+                ElseIf .ElementID_Ref <> 0 Then
                     POU.WriteLine "<Inputidx>1</Inputidx>"
                 Else
                     POU.WriteLine "<Inputidx>0</Inputidx>"
                 End If
+                
                 POU.WriteLine "<negate>false</negate>"
                 POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
+                POU.WriteLine "</element>"
+            End If
+        End With
+    Next
+    
+    'I0I1 OR 输出
+    For index = 1 To 6
+        With ExcelInfo.HN_I0I1(index)
+            If .ElementID <> 0 Then
+                 POU.WriteLine "<element type=" & Lab & "output" & Lab & ">"
+                POU.WriteLine "<id>" & .ElementOutputID & "</id>"
+                
+                POU.WriteLine "<position>" & .Element_X + 10 & "," & .Element_Y + 1 & "</position>"
+
+                POU.WriteLine "<text> " & .Text & "</text>"
+                POU.WriteLine "<Comment>?????</Comment>"
+                POU.WriteLine "<negate>false</negate>"
+                POU.WriteLine "<ttype>4</ttype>"
+                
+                POU.WriteLine "<Inputid>" & .ElementID & "</Inputid>"
+
+                POU.WriteLine "<negate>false</negate>"
+                POU.WriteLine "<sortid>0</sortid>"
                 POU.WriteLine "</element>"
             End If
         End With
@@ -1445,8 +1605,6 @@ Private Function ReplaceCommonSuffix(str As String)
         DicStr.Add ".PVLLFL", ".LLIND"
         DicStr.Add ".PVHIFL", ".AHIND"
         DicStr.Add ".PVHHFL", ".HHIND"
-        DicStr.Add ".I0", ".INOF"
-        DicStr.Add ".I1", ".INON"
         ' 2020.02.28和李工沟通，暂先注掉P0、P1
         ' DicStr.Add ".P0", ".OFFEN"
         ' DicStr.Add ".P1", ".ONEN"
@@ -1502,6 +1660,10 @@ Private Function ReplaceLODSTNSuffix(LODSTN As String)
         If "PID" <> NameType(Left(newLODSTN, Len(newLODSTN) - 3)) Then
             newLODSTN = ReplaceSuffix(newLODSTN, ".PV", ".AV")
         End If
+    ElseIf ".I0" = Right(newLODSTN, 3) Then
+        newLODSTN = Replace(newLODSTN, ".I0", ".ILIN")
+    ElseIf ".I1" = Right(newLODSTN, 3) Then
+        newLODSTN = Replace(newLODSTN, ".I1", ".ILIN")
     Else
         newLODSTN = ReplaceSuffix(newLODSTN, ".RESETFL", "_RS")
         newLODSTN = ReplaceCommonSuffix(newLODSTN)
