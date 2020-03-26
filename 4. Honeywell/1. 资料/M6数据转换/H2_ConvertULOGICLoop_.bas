@@ -41,7 +41,7 @@ Sub H2_ConvertULOGICLoop()
     For ULOGIC_i = 2 To UBound(ULOGIC_arr(), 1)
         Dim sPouName As String '块类型
         sPouName = ULOGIC_arr(ULOGIC_i, ULOGIC("NAME")) '名称位号
-        If sPouName <> "" Then
+        If sPouName <> "" Then '17FIC0004_LG
             '初始化ExcelInfo
             Dim ExcelInfo_Temp As T_EXCELINFO
             ExcelInfo = ExcelInfo_Temp
@@ -350,13 +350,14 @@ Private Sub InitProperty(sPouName As String)
     Dim i0i1Index As Integer
     i0i1Index = 1
     
+    
     'I0I1 赋值
+    Dim output1 As T_HN_OUTPUT, output2 As T_HN_OUTPUT
+    
     For index1 = 1 To 12
-        Dim output1 As T_HN_OUTPUT
         output1 = ExcelInfo.HN_OUTPUT(index1)
             
         For index2 = index1 + 1 To 12
-            Dim output2 As T_HN_OUTPUT
             output2 = ExcelInfo.HN_OUTPUT(index2)
         
             If output1.LODSTN_BAK <> "" And output1.LODSTN_BAK <> "--.--" And output2.LODSTN_BAK <> "" And output2.LODSTN_BAK <> "--.--" Then
@@ -391,6 +392,55 @@ Private Sub InitProperty(sPouName As String)
                 End If
             End If
         Next
+    Next
+    
+    Call InitPID_MMO
+    
+    If True = ExcelInfo.HN_PID_MMO Then
+        For index = 1 To 12
+            With ExcelInfo.HN_OUTPUT(index)
+                If Right(.LODSTN, 3) = ".OP" Then
+                    ' .LODSTN = Replace(.LODSTN, ".OP", ".TRKVAL")
+                End If
+            End With
+        Next
+    End If
+End Sub
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: 初始化PID_MMO
+'History: 3-25-2020
+'-----------------------------------------------------------------------------------------------------------
+Private Sub InitPID_MMO()
+    'PID MMO 赋值 PID功能块做输出的MODE，MODATTR, OP同时出现在一个POU中
+    Dim array1, array2, array3
+    Dim output1 As T_HN_OUTPUT, output2 As T_HN_OUTPUT, output3 As T_HN_OUTPUT
+    
+    For index1 = 1 To 12
+        output1 = ExcelInfo.HN_OUTPUT(index1)
+        If output1.LODSTN_BAK Like "*.*" Then
+            array1 = Split(output1.LODSTN_BAK, ".")
+    
+            For index2 = index1 + 1 To 12
+                output2 = ExcelInfo.HN_OUTPUT(index2)
+                If output2.LODSTN_BAK Like "*.*" Then
+                    array2 = Split(output2.LODSTN_BAK, ".")
+                    For index3 = index2 + 1 To 12
+                        output3 = ExcelInfo.HN_OUTPUT(index3)
+                        If output3.LODSTN_BAK Like "*.*" Then
+                            array3 = Split(output3.LODSTN_BAK, ".")
+                            
+                            If UBound(array1) = 1 And UBound(array2) = 1 And UBound(array3) = 1 And "PID" = NameType(array1(0)) And "PID" = NameType(array2(0)) And "PID" = NameType(array3(0)) Then
+                                If (array1(1) = "MODE" Or array1(1) = "MODATTR" Or array1(1) = "OP") And (array2(1) = "MODE" Or array2(1) = "MODATTR" Or array2(1) = "OP") And (array3(1) = "MODE" Or array3(1) = "MODATTR" Or array3(1) = "OP") And array1(1) <> array2(1) And array1(1) <> array3(1) And array2(1) <> array3(1) Then
+                                    ExcelInfo.HN_PID_MMO = True
+                                    Exit Sub
+                                End If
+                            End If
+                        End If
+                    Next
+                End If
+            Next
+        End If
     Next
 End Sub
 
@@ -489,141 +539,64 @@ End Sub
 
 '-----------------------------------------------------------------------------------------------------------
 'Purpose: EXCEL信息写入XML
-'History: 12-05-2019
+'History: 3-25-2020
 '-----------------------------------------------------------------------------------------------------------
-Private Sub WriteInput(sPouName As String)
-    Dim ElementID As Integer, SortID As Integer
-    
-    For index = 1 To 12
-        With ExcelInfo.HN_INPUT(index)
-            If .ElementID > ElementID Then
-                ElementID = .ElementID
-            End If
-        End With
-    Next
-    
-    For index = 1 To 24
-        With ExcelInfo.HN_BOX(index)
-            If .ElementID > ElementID Then
-                ElementID = .ElementID
-            End If
-            If .ElementSortID > SortID Then
-                SortID = .ElementSortID
-            End If
-        End With
-    Next
-    
-    For index = 1 To 12
-        With ExcelInfo.HN_OUTPUT(index)
-            If .ElementID > ElementID Then
-                ElementID = .ElementID
-            End If
-            If .ElementSortID > SortID Then
-                SortID = .ElementSortID
-            End If
-        End With
-    Next
-    
-    '输入 写入XML
-    For index = 1 To 12
-        With ExcelInfo.HN_INPUT(index)
-            If .LISRC Like "*.PVFL(0)" Or .LISRC Like "*.PVFL(1)" Then
-                Dim liSrcPrefix As String
-                liSrcPrefix = Left(.LISRC, Len(.LISRC) - 8)
-                
-                Dim liSrcSuffix As String
-                liSrcSuffix = Mid(.LISRC, Len(.LISRC) - 1, 1)
-                
-                ElementID = ElementID + 1
-                
-                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
-                POU.WriteLine "<id>" & ElementID & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X - 2 & "," & .Element_Y + 1 & "</AT_position>"
-                POU.WriteLine "<text>" & liSrcPrefix & ".FBKON" & "</text>"
-                POU.WriteLine "<Comment>?????</Comment>"
-                POU.WriteLine "<negate>false</negate>"
-                POU.WriteLine "<ttype>4</ttype>"
-                POU.WriteLine "<Flag>FALSE</Flag>"
-                POU.WriteLine "</element>"
-                
-                ElementID = ElementID + 1
-                
-                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
-                POU.WriteLine "<id>" & ElementID & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X - 2 & "," & .Element_Y + 2 & "</AT_position>"
-                POU.WriteLine "<text>" & liSrcPrefix & ".FBKOF" & "</text>"
-                POU.WriteLine "<Comment>?????</Comment>"
-                POU.WriteLine "<negate>false</negate>"
-                POU.WriteLine "<ttype>4</ttype>"
-                POU.WriteLine "<Flag>FALSE</Flag>"
-                POU.WriteLine "</element>"
-                
-                SortID = SortID + 1
-                
-                POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
-                POU.WriteLine "<id>" & .ElementID & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
-                POU.WriteLine "<isinst>TRUE</isinst>"
-                POU.WriteLine "<text></text>"
-                POU.WriteLine "<AT_type>AND</AT_type>"
-                POU.WriteLine "<typetext>BT_FB</typetext>"
-                POU.WriteLine "<ttype>9</ttype>"
-                POU.WriteLine "<sortid>" & SortID & "</sortid>"
+Private Sub WriteInput_NN(sPouName As String, HN_BOX As T_HN_BOX)
+    With HN_BOX
+        If .R1 Like "NN*" Then
+            POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+            POU.WriteLine "<id>" & .ElementID_R1 & "</id>"
+            POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
+            POU.WriteLine "<text>" & sPouName & "_" & .R1 & "</text>"
+            POU.WriteLine "<Comment>?????</Comment>"
+            POU.WriteLine "<negate>false</negate>"
+            POU.WriteLine "<ttype>4</ttype>"
+            POU.WriteLine "<Flag>FALSE</Flag>"
+            POU.WriteLine "</element>"
+        End If
+        If .R2 Like "NN*" Then
+            POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+            POU.WriteLine "<id>" & .ElementID_R2 & "</id>"
+            POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
+            POU.WriteLine "<text>" & sPouName & "_" & .R2 & "</text>"
+            POU.WriteLine "<Comment>?????</Comment>"
+            POU.WriteLine "<negate>false</negate>"
+            POU.WriteLine "<ttype>4</ttype>"
+            POU.WriteLine "<Flag>FALSE</Flag>"
+            POU.WriteLine "</element>"
+         End If
+    End With
+End Sub
 
-                If liSrcSuffix = "0" Then
-                    POU.WriteLine "<input inputid=""" & ElementID - 1 & """ inputidx=""0"" negate=""True"" visible=""true"" pinname=""" & sPinname & """/>"
-                    POU.WriteLine "<input inputid=""" & ElementID & """ inputidx=""0"" negate=""False"" visible=""true"" pinname=""" & sPinname & """/>"
-                Else
-                    POU.WriteLine "<input inputid=""" & ElementID - 1 & """ inputidx=""0"" negate=""False"" visible=""true"" pinname=""" & sPinname & """/>"
-                    POU.WriteLine "<input inputid=""" & ElementID & """ inputidx=""0"" negate=""True"" visible=""true"" pinname=""" & sPinname & """/>"
-                End If
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 3-25-2020
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteInput_DLYTIME(HN_BOX As T_HN_BOX)
+    With HN_BOX
+        If .DLYTIME = "" Then
+            Exit Sub
+        End If
+        
+        POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+        POU.WriteLine "<id>" & .ElementID_DT & "</id>"
+        POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
+        POU.WriteLine "<text>" & "T#" & .DLYTIME & "s" & "</text>"
+        POU.WriteLine "<Comment>?????</Comment>"
+        POU.WriteLine "<negate>false</negate>"
+        POU.WriteLine "<ttype>4</ttype>"
+        POU.WriteLine "<Flag>FALSE</Flag>"
+        POU.WriteLine "</element>"
+    End With
+End Sub
 
-                POU.WriteLine "</element>"
-            ElseIf .LISRC <> "" And .LISRC <> "--.--" Then
-                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
-                POU.WriteLine "<id>" & .ElementID & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
-                POU.WriteLine "<text>" & .LISRC & "</text>"
-                POU.WriteLine "<Comment>?????</Comment>"
-                POU.WriteLine "<negate>false</negate>"
-                POU.WriteLine "<ttype>4</ttype>"
-                POU.WriteLine "<Flag>FALSE</Flag>"
-                POU.WriteLine "</element>"
-             End If
-        End With
-    Next
-    
-    'NN  写入XML
-    For index = 1 To 24
-        With ExcelInfo.HN_BOX(index)
-            If .R1 Like "NN*" Then
-                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
-                POU.WriteLine "<id>" & .ElementID_R1 & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
-                POU.WriteLine "<text>" & sPouName & "_" & .R1 & "</text>"
-                POU.WriteLine "<Comment>?????</Comment>"
-                POU.WriteLine "<negate>false</negate>"
-                POU.WriteLine "<ttype>4</ttype>"
-                POU.WriteLine "<Flag>FALSE</Flag>"
-                POU.WriteLine "</element>"
-            End If
-            If .R2 Like "NN*" Then
-                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
-                POU.WriteLine "<id>" & .ElementID_R2 & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
-                POU.WriteLine "<text>" & sPouName & "_" & .R2 & "</text>"
-                POU.WriteLine "<Comment>?????</Comment>"
-                POU.WriteLine "<negate>false</negate>"
-                POU.WriteLine "<ttype>4</ttype>"
-                POU.WriteLine "<Flag>FALSE</Flag>"
-                POU.WriteLine "</element>"
-             End If
-        End With
-    Next
-    
-    'E的NN、FL写入XML
-    For index = 1 To 12
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 3-25-2020
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteInput_E_NN_FL(sPouName As String, index As Integer)
         With ExcelInfo.HN_OUTPUT(index)
+        
             If .LODSTN <> "" And .LODSTN <> "--.--" Then
                 If .LOSRC Like "NN*" Then
                     POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
@@ -648,28 +621,15 @@ Private Sub WriteInput(sPouName As String)
                 End If
             End If
         End With
-    Next
-    
-    'DLYTIME  写入XML
-    For index = 1 To 24
-        With ExcelInfo.HN_BOX(index)
-           If .DLYTIME <> "" Then
-                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
-                POU.WriteLine "<id>" & .ElementID_DT & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X - 1 & "," & .Element_Y + 2 & "</AT_position>"
-                POU.WriteLine "<text>" & "T#" & .DLYTIME & "s" & "</text>"
-                POU.WriteLine "<Comment>?????</Comment>"
-                POU.WriteLine "<negate>false</negate>"
-                POU.WriteLine "<ttype>4</ttype>"
-                POU.WriteLine "<Flag>FALSE</Flag>"
-                POU.WriteLine "</element>"
-           End If
-        End With
-    Next
-    
-    'S1 S2 S3 S4中FL写入XML
-    For index = 1 To 24
-        With ExcelInfo.HN_BOX(index)
+End Sub
+
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 3-25-2020
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteInput_S_FL(sPouName As String, HN_BOX As T_HN_BOX)
+        With HN_BOX
            If .S1 Like "FL*" Then
                 POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                 POU.WriteLine "<id>" & .ElementID_S1 & "</id>"
@@ -747,28 +707,359 @@ Private Sub WriteInput(sPouName As String)
                 POU.WriteLine "</element>"
            End If
         End With
+End Sub
+
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 3-25-2020
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteInput_ByOutput(HN_OUTPUT As T_HN_OUTPUT)
+    With HN_OUTPUT
+        If .ElementID_Ref = 0 Then
+            Exit Sub
+        End If
+        
+        POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+        POU.WriteLine "<id>" & .ElementID_Ref + 1 & "</id>"
+        POU.WriteLine "<AT_position>" & .Element_X - 2 & "," & .Element_Y + 2 & "</AT_position>"
+        If ".I0" = Right(.LODSTN_BAK, 3) Then
+            POU.WriteLine "<text>FALSE</text>"
+        Else
+            POU.WriteLine "<text>TRUE</text>"
+        End If
+        POU.WriteLine "<Comment>?????</Comment>"
+        POU.WriteLine "<negate>false</negate>"
+        POU.WriteLine "<ttype>4</ttype>"
+        POU.WriteLine "<Flag>FALSE</Flag>"
+        POU.WriteLine "</element>"
+    End With
+End Sub
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: 最大元件ID
+'History: 12-05-2019
+'-----------------------------------------------------------------------------------------------------------
+Private Function GetMaxElementID()
+    Dim ElementID As Integer
+    
+    For index = 1 To 12
+        With ExcelInfo.HN_INPUT(index)
+            If .ElementID > ElementID Then
+                ElementID = .ElementID
+            End If
+        End With
     Next
     
-    'Output组合 写入XML
+    For index = 1 To 24
+        With ExcelInfo.HN_BOX(index)
+            If .ElementID > ElementID Then
+                ElementID = .ElementID
+            End If
+        End With
+    Next
+    
     For index = 1 To 12
         With ExcelInfo.HN_OUTPUT(index)
-            If .ElementID_Ref <> 0 Then
+            If .ElementID > ElementID Then
+                ElementID = .ElementID
+            End If
+        End With
+    Next
+    
+    GetMaxElementID = ElementID
+End Function
+
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: 最大元件ID
+'History: 12-05-2019
+'-----------------------------------------------------------------------------------------------------------
+Private Function GetMaxSortID()
+    Dim SortID As Integer
+    
+    For index = 1 To 24
+        With ExcelInfo.HN_BOX(index)
+            If .ElementSortID > SortID Then
+                SortID = .ElementSortID
+            End If
+        End With
+    Next
+    
+    For index = 1 To 12
+        With ExcelInfo.HN_OUTPUT(index)
+            If .ElementSortID > SortID Then
+                SortID = .ElementSortID
+            End If
+        End With
+    Next
+    
+    GetMaxSortID = SortID
+End Function
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 12-05-2019
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteInput_Normal(sPouName As String)
+    Dim ElementID As Integer, SortID As Integer
+    
+    ElementID = GetMaxElementID()
+    SortID = GetMaxSortID
+        
+    '输入 写入XML
+    For index = 1 To 12
+        With ExcelInfo.HN_INPUT(index)
+            If .LISRC Like "*.PVFL(0)" Or .LISRC Like "*.PVFL(1)" Then
+                Dim liSrcPrefix As String
+                liSrcPrefix = Left(.LISRC, Len(.LISRC) - 8)
+                
+                Dim liSrcSuffix As String
+                liSrcSuffix = Mid(.LISRC, Len(.LISRC) - 1, 1)
+                
+                ElementID = ElementID + 1
+                
                 POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
-                POU.WriteLine "<id>" & .ElementID_Ref + 1 & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X - 2 & "," & .Element_Y + 2 & "</AT_position>"
-                If ".I0" = Right(.LODSTN_BAK, 3) Then
-                    POU.WriteLine "<text>FALSE</text>"
-                Else
-                    POU.WriteLine "<text>TRUE</text>"
-                End If
+                POU.WriteLine "<id>" & ElementID & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X - 2 & "," & .Element_Y + 1 & "</AT_position>"
+                POU.WriteLine "<text>" & liSrcPrefix & ".FBKON" & "</text>"
                 POU.WriteLine "<Comment>?????</Comment>"
                 POU.WriteLine "<negate>false</negate>"
                 POU.WriteLine "<ttype>4</ttype>"
                 POU.WriteLine "<Flag>FALSE</Flag>"
                 POU.WriteLine "</element>"
-            End If
+                
+                ElementID = ElementID + 1
+                
+                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+                POU.WriteLine "<id>" & ElementID & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X - 2 & "," & .Element_Y + 2 & "</AT_position>"
+                POU.WriteLine "<text>" & liSrcPrefix & ".FBKOF" & "</text>"
+                POU.WriteLine "<Comment>?????</Comment>"
+                POU.WriteLine "<negate>false</negate>"
+                POU.WriteLine "<ttype>4</ttype>"
+                POU.WriteLine "<Flag>FALSE</Flag>"
+                POU.WriteLine "</element>"
+                
+                SortID = SortID + 1
+                
+                POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+                POU.WriteLine "<id>" & .ElementID & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
+                POU.WriteLine "<isinst>TRUE</isinst>"
+                POU.WriteLine "<text></text>"
+                POU.WriteLine "<AT_type>AND</AT_type>"
+                POU.WriteLine "<typetext>BT_FB</typetext>"
+                POU.WriteLine "<ttype>9</ttype>"
+                POU.WriteLine "<sortid>" & SortID & "</sortid>"
+
+                If liSrcSuffix = "0" Then
+                    POU.WriteLine "<input inputid=""" & ElementID - 1 & """ inputidx=""0"" negate=""True"" visible=""true"" pinname=""" & sPinname & """/>"
+                    POU.WriteLine "<input inputid=""" & ElementID & """ inputidx=""0"" negate=""False"" visible=""true"" pinname=""" & sPinname & """/>"
+                Else
+                    POU.WriteLine "<input inputid=""" & ElementID - 1 & """ inputidx=""0"" negate=""False"" visible=""true"" pinname=""" & sPinname & """/>"
+                    POU.WriteLine "<input inputid=""" & ElementID & """ inputidx=""0"" negate=""True"" visible=""true"" pinname=""" & sPinname & """/>"
+                End If
+
+                POU.WriteLine "</element>"
+            ElseIf .LISRC <> "" And .LISRC <> "--.--" Then
+                POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+                POU.WriteLine "<id>" & .ElementID & "</id>"
+                POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
+                POU.WriteLine "<text>" & .LISRC & "</text>"
+                POU.WriteLine "<Comment>?????</Comment>"
+                POU.WriteLine "<negate>false</negate>"
+                POU.WriteLine "<ttype>4</ttype>"
+                POU.WriteLine "<Flag>FALSE</Flag>"
+                POU.WriteLine "</element>"
+             End If
         End With
     Next
+End Sub
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 12-05-2019
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteInput(sPouName As String)
+    '输入 写入XML
+    WriteInput_Normal sPouName
+    
+    'NN  写入XML
+    For index = 1 To 24
+        WriteInput_NN sPouName, ExcelInfo.HN_BOX(index)
+    Next
+    
+    'E的NN、FL写入XML
+    For index = 1 To 12
+        WriteInput_E_NN_FL sPouName, CInt(index)
+    Next
+    
+    'DLYTIME  写入XML
+    For index = 1 To 24
+        WriteInput_DLYTIME ExcelInfo.HN_BOX(index)
+    Next
+    
+    'S1 S2 S3 S4中FL写入XML
+    For index = 1 To 24
+        WriteInput_S_FL sPouName, ExcelInfo.HN_BOX(index)
+    Next
+    
+    'Output组合 写入XML
+    For index = 1 To 12
+        WriteInput_ByOutput ExcelInfo.HN_OUTPUT(index)
+    Next
+End Sub
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 3-25-2020
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteBox_Normal(sPouName As String, index As Integer)
+    With ExcelInfo.HN_BOX(index)
+    
+        If .LOGALGID = "" Or .LOGALGID = "NULL" Or .ElementLevel < 1 Then
+            Exit Sub
+        End If
+        
+        POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+        POU.WriteLine "<id>" & .ElementID & "</id>"
+        POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
+        POU.WriteLine "<isinst>TRUE</isinst>"
+        POU.WriteLine "<text>" & sPouName & "_" & .ElementATType & "_" & .ElementSortID & "</text>"
+        POU.WriteLine "<AT_type>" & .ElementATType & "</AT_type>"
+        POU.WriteLine "<typetext>BT_FB</typetext>"
+        POU.WriteLine "<ttype>9</ttype>"
+        POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
+                
+        Call WriteBoxInputs(CInt(index))
+        Call WriteBoxOutputs(CInt(index))
+        
+        POU.WriteLine "</element>"
+        
+    End With
+End Sub
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 3-25-2020
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteBox_E(HN_E As T_HN_E)
+    With HN_E
+    
+        If .ElementID = 0 Then
+            Exit Sub
+        End If
+        
+        POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+        POU.WriteLine "<id>" & .ElementID & "</id>"
+        POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
+        POU.WriteLine "<isinst>TRUE</isinst>"
+        POU.WriteLine "<text></text>"
+        POU.WriteLine "<AT_type>MOVE</AT_type>"
+        POU.WriteLine "<typetext>BT_FB</typetext>"
+        POU.WriteLine "<ttype>9</ttype>"
+        POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
+        
+        POU.WriteLine "<input inputid=""" & .ElementInputID & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""EN""/>"
+        POU.WriteLine "<input inputid=""" & .ElementID_NF & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
+        POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""ENO""/>"
+        POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
+        
+        POU.WriteLine "</element>"
+    End With
+End Sub
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 3-25-2020
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteBox_ByInput(HN_INPUT As T_HN_INPUT)
+    With HN_INPUT
+        
+        If .ElementID_Ref = 0 Then
+            Exit Sub
+        End If
+        
+        POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+        POU.WriteLine "<id>" & .ElementID_Ref & "</id>"
+        POU.WriteLine "<AT_position>" & .Element_X + 2 & "," & .Element_Y - 1 & "</AT_position>"
+        POU.WriteLine "<AT_isen>false</AT_isen>"
+        POU.WriteLine "<AT_iseno>false</AT_iseno>"
+        POU.WriteLine "<AT_type>NOT</AT_type>"
+        POU.WriteLine "<typetext>BT_OPERATOR</typetext>"
+        POU.WriteLine "<sortid>0</sortid>"
+        
+        POU.WriteLine "<input inputid=""" & .ElementID & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
+        POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
+        
+        POU.WriteLine "</element>"
+    End With
+End Sub
+
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 3-25-2020
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteBox_ByOutput(HN_OUTPUT As T_HN_OUTPUT)
+    With HN_OUTPUT
+    
+        If .ElementID_Ref = 0 Then
+            Exit Sub
+        End If
+    
+        POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+        POU.WriteLine "<id>" & .ElementID_Ref & "</id>"
+        POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
+        POU.WriteLine "<isinst>TRUE</isinst>"
+        POU.WriteLine "<text></text>"
+        POU.WriteLine "<AT_type>MOVE</AT_type>"
+        POU.WriteLine "<typetext>BT_FB</typetext>"
+        POU.WriteLine "<ttype>9</ttype>"
+        POU.WriteLine "<sortid>0</sortid>"
+        
+        POU.WriteLine "<input inputid=""" & .ElementInputID & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""EN""/>"
+        POU.WriteLine "<input inputid=""" & .ElementID_Ref + 1 & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
+        POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""ENO""/>"
+        POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
+        
+        POU.WriteLine "</element>"
+    
+    End With
+End Sub
+
+
+
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 3-25-2020
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteBox_I0I1(HN_I0I1 As T_HN_I0I1)
+    With HN_I0I1
+    
+        If .ElementID = 0 Then
+            Exit Sub
+        End If
+        
+        POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+        POU.WriteLine "<id>" & .ElementID & "</id>"
+        POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
+        POU.WriteLine "<isinst>TRUE</isinst>"
+        POU.WriteLine "<text></text>"
+        POU.WriteLine "<AT_type>OR</AT_type>"
+        POU.WriteLine "<typetext>BT_FB</typetext>"
+        POU.WriteLine "<ttype>9</ttype>"
+        POU.WriteLine "<sortid>0</sortid>"
+        
+        POU.WriteLine "<input inputid=""" & .ElementInputID2 & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
+        POU.WriteLine "<input inputid=""" & .ElementInputID1 & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
+        POU.WriteLine "<input inputid=""0"" inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
+        POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
+        
+        POU.WriteLine "</element>"
+        
+    End With
 End Sub
 
 '-----------------------------------------------------------------------------------------------------------
@@ -779,121 +1070,110 @@ Private Sub WriteBox(sPouName As String)
 
     'BOX 写入XML
     For index = 1 To 24
-        With ExcelInfo.HN_BOX(index)
-           If .LOGALGID <> "" And .LOGALGID <> "NULL" And .ElementLevel > 0 Then
-                POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
-                POU.WriteLine "<id>" & .ElementID & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
-                POU.WriteLine "<isinst>TRUE</isinst>"
-                POU.WriteLine "<text>" & sPouName & "_" & .ElementATType & "_" & .ElementSortID & "</text>"
-                POU.WriteLine "<AT_type>" & .ElementATType & "</AT_type>"
-                POU.WriteLine "<typetext>BT_FB</typetext>"
-                POU.WriteLine "<ttype>9</ttype>"
-                POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
-                
-                Call WriteBoxInputs(CInt(index))
-                Call WriteBoxOutputs(CInt(index))
-                
-                POU.WriteLine "</element>"
-            End If
-        End With
+        WriteBox_Normal sPouName, CInt(index)
     Next
     
     'E 写入XML
     For index = 1 To 12
-        With ExcelInfo.HN_E(index)
-           If .ElementID <> 0 Then
-                POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
-                POU.WriteLine "<id>" & .ElementID & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
-                POU.WriteLine "<isinst>TRUE</isinst>"
-                POU.WriteLine "<text></text>"
-                POU.WriteLine "<AT_type>MOVE</AT_type>"
-                POU.WriteLine "<typetext>BT_FB</typetext>"
-                POU.WriteLine "<ttype>9</ttype>"
-                POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
-                
-                POU.WriteLine "<input inputid=""" & .ElementInputID & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""EN""/>"
-                POU.WriteLine "<input inputid=""" & .ElementID_NF & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
-                POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""ENO""/>"
-                POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
-                
-                POU.WriteLine "</element>"
-            End If
-        End With
+        WriteBox_E ExcelInfo.HN_E(index)
     Next
     
     'Input组合 写入XML
     For index = 1 To 12
-        With ExcelInfo.HN_INPUT(index)
-            If .ElementID_Ref <> 0 Then
-                POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
-                POU.WriteLine "<id>" & .ElementID_Ref & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X + 2 & "," & .Element_Y - 1 & "</AT_position>"
-                POU.WriteLine "<AT_isen>false</AT_isen>"
-                POU.WriteLine "<AT_iseno>false</AT_iseno>"
-                POU.WriteLine "<AT_type>NOT</AT_type>"
-                POU.WriteLine "<typetext>BT_OPERATOR</typetext>"
-                POU.WriteLine "<sortid>0</sortid>"
-                
-                POU.WriteLine "<input inputid=""" & .ElementID & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
-                POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
-                
-                POU.WriteLine "</element>"
-            End If
-        End With
+        WriteBox_ByInput ExcelInfo.HN_INPUT(index)
     Next
     
     'Output组合 写入XML
     For index = 1 To 12
-        With ExcelInfo.HN_OUTPUT(index)
-            If .ElementID_Ref <> 0 Then
-                POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
-                POU.WriteLine "<id>" & .ElementID_Ref & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
-                POU.WriteLine "<isinst>TRUE</isinst>"
-                POU.WriteLine "<text></text>"
-                POU.WriteLine "<AT_type>MOVE</AT_type>"
-                POU.WriteLine "<typetext>BT_FB</typetext>"
-                POU.WriteLine "<ttype>9</ttype>"
-                POU.WriteLine "<sortid>0</sortid>"
-                
-                POU.WriteLine "<input inputid=""" & .ElementInputID & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""EN""/>"
-                POU.WriteLine "<input inputid=""" & .ElementID_Ref + 1 & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
-                POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""ENO""/>"
-                POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
-                
-                POU.WriteLine "</element>"
-            End If
-        End With
+        WriteBox_ByOutput ExcelInfo.HN_OUTPUT(index)
     Next
     
     'I0I1 OR 输出
     For index = 1 To 6
-        With ExcelInfo.HN_I0I1(index)
-            If .ElementID <> 0 Then
-                POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
-                POU.WriteLine "<id>" & .ElementID & "</id>"
-                POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
-                POU.WriteLine "<isinst>TRUE</isinst>"
-                POU.WriteLine "<text></text>"
-                POU.WriteLine "<AT_type>OR</AT_type>"
-                POU.WriteLine "<typetext>BT_FB</typetext>"
-                POU.WriteLine "<ttype>9</ttype>"
-                POU.WriteLine "<sortid>0</sortid>"
-                
-                POU.WriteLine "<input inputid=""" & .ElementInputID2 & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
-                POU.WriteLine "<input inputid=""" & .ElementInputID1 & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
-                POU.WriteLine "<input inputid=""0"" inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
-                POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
-                
-                POU.WriteLine "</element>"
-            End If
-        End With
+        WriteBox_I0I1 ExcelInfo.HN_I0I1(index)
     Next
     
 End Sub
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 3-25-2020
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteOutput_Normal(Output As T_HN_OUTPUT)
+    With Output
+    
+        If .LODSTN = "" Or .LODSTN = "--.--" Then
+            Exit Sub
+        End If
+        
+        ' 李攀2020.3.23邮件 MOVE连接的点项.MODATTR所在的MOVE分支删除
+        'If True = ExcelInfo.HN_PID_MMO And Right(.LODSTN, 8) = ".MODATTR" Then
+        '    Exit Sub
+        'End If
+        
+        POU.WriteLine "<element type=" & Lab & "output" & Lab & ">"
+        POU.WriteLine "<id>" & .ElementID & "</id>"
+        
+        If .ElementID_Ref = 0 Then
+            POU.WriteLine "<position>" & .Element_X & "," & .Element_Y & "</position>"
+        Else
+            POU.WriteLine "<position>" & .Element_X + 10 & "," & .Element_Y + 2 & "</position>"
+        End If
+        
+        POU.WriteLine "<text>" & .LODSTN & "</text>"
+        POU.WriteLine "<Comment>?????</Comment>"
+        POU.WriteLine "<negate>false</negate>"
+        POU.WriteLine "<ttype>4</ttype>"
+        
+        If .ElementID_Ref = 0 Then
+            POU.WriteLine "<Inputid>" & .ElementInputID & "</Inputid>"
+        Else
+            POU.WriteLine "<Inputid>" & .ElementID_Ref & "</Inputid>"
+        End If
+        
+        If .LOENBL Like "SO*" Or .LOENBL Like "L*" Then
+            POU.WriteLine "<Inputidx>1</Inputidx>"
+        ElseIf .ElementID_Ref <> 0 Then
+            POU.WriteLine "<Inputidx>1</Inputidx>"
+        Else
+            POU.WriteLine "<Inputidx>0</Inputidx>"
+        End If
+        
+        POU.WriteLine "<negate>false</negate>"
+        POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
+        POU.WriteLine "</element>"
+    End With
+    
+End Sub
 
+'-----------------------------------------------------------------------------------------------------------
+'Purpose: EXCEL信息写入XML
+'History: 3-25-2020
+'-----------------------------------------------------------------------------------------------------------
+Private Sub WriteOutput_I0I1(Output As T_HN_I0I1)
+    With Output
+        
+        If .ElementID = 0 Then
+            Exit Sub
+        End If
+        
+        POU.WriteLine "<element type=" & Lab & "output" & Lab & ">"
+        POU.WriteLine "<id>" & .ElementOutputID & "</id>"
+        
+        POU.WriteLine "<position>" & .Element_X + 10 & "," & .Element_Y + 1 & "</position>"
+
+        POU.WriteLine "<text> " & .Text & "</text>"
+        POU.WriteLine "<Comment>?????</Comment>"
+        POU.WriteLine "<negate>false</negate>"
+        POU.WriteLine "<ttype>4</ttype>"
+        
+        POU.WriteLine "<Inputid>" & .ElementID & "</Inputid>"
+
+        POU.WriteLine "<negate>false</negate>"
+        POU.WriteLine "<sortid>0</sortid>"
+        POU.WriteLine "</element>"
+        
+    End With
+End Sub
 '-----------------------------------------------------------------------------------------------------------
 'Purpose: EXCEL信息写入XML
 'History: 12-05-2019
@@ -901,64 +1181,12 @@ End Sub
 Private Sub WriteOutput()
     '输出  写入XML
     For index = 1 To 12
-        With ExcelInfo.HN_OUTPUT(index)
-            If .LODSTN <> "" And .LODSTN <> "--.--" Then
-                POU.WriteLine "<element type=" & Lab & "output" & Lab & ">"
-                POU.WriteLine "<id>" & .ElementID & "</id>"
-                
-                If .ElementID_Ref = 0 Then
-                    POU.WriteLine "<position>" & .Element_X & "," & .Element_Y & "</position>"
-                Else
-                    POU.WriteLine "<position>" & .Element_X + 10 & "," & .Element_Y + 2 & "</position>"
-                End If
-                
-                POU.WriteLine "<text>" & .LODSTN & "</text>"
-                POU.WriteLine "<Comment>?????</Comment>"
-                POU.WriteLine "<negate>false</negate>"
-                POU.WriteLine "<ttype>4</ttype>"
-                
-                If .ElementID_Ref = 0 Then
-                    POU.WriteLine "<Inputid>" & .ElementInputID & "</Inputid>"
-                Else
-                    POU.WriteLine "<Inputid>" & .ElementID_Ref & "</Inputid>"
-                End If
-                
-                If .LOENBL Like "SO*" Or .LOENBL Like "L*" Then
-                    POU.WriteLine "<Inputidx>1</Inputidx>"
-                ElseIf .ElementID_Ref <> 0 Then
-                    POU.WriteLine "<Inputidx>1</Inputidx>"
-                Else
-                    POU.WriteLine "<Inputidx>0</Inputidx>"
-                End If
-                
-                POU.WriteLine "<negate>false</negate>"
-                POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
-                POU.WriteLine "</element>"
-            End If
-        End With
+        WriteOutput_Normal ExcelInfo.HN_OUTPUT(index)
     Next
     
     'I0I1 OR 输出
     For index = 1 To 6
-        With ExcelInfo.HN_I0I1(index)
-            If .ElementID <> 0 Then
-                 POU.WriteLine "<element type=" & Lab & "output" & Lab & ">"
-                POU.WriteLine "<id>" & .ElementOutputID & "</id>"
-                
-                POU.WriteLine "<position>" & .Element_X + 10 & "," & .Element_Y + 1 & "</position>"
-
-                POU.WriteLine "<text> " & .Text & "</text>"
-                POU.WriteLine "<Comment>?????</Comment>"
-                POU.WriteLine "<negate>false</negate>"
-                POU.WriteLine "<ttype>4</ttype>"
-                
-                POU.WriteLine "<Inputid>" & .ElementID & "</Inputid>"
-
-                POU.WriteLine "<negate>false</negate>"
-                POU.WriteLine "<sortid>0</sortid>"
-                POU.WriteLine "</element>"
-            End If
-        End With
+        WriteOutput_I0I1 ExcelInfo.HN_I0I1(index)
     Next
 End Sub
 

@@ -116,6 +116,8 @@ Type T_EXCELINFO
     HN_BOX(1 To 24) As T_HN_BOX         'BOX信息
     HN_E(1 To 12) As T_HN_E             'E信息
     HN_I0I1(1 To 6) As T_HN_I0I1        'I0I1对信息
+    
+    HN_PID_MMO As Boolean               'PID功能块的输出是否同时出现MODE，MODATTR, OP
 End Type
 
 '-----------------------------------------------------------------------------------------------------------
