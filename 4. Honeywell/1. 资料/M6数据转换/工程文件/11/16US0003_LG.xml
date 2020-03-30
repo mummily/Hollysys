@@ -245,5 +245,27 @@ END_VAR]]>
 <negate>false</negate>
 <sortid>30</sortid>
 </element>
+<element type="output">
+<id>21</id>
+<position>71,6</position>
+<text> 16XV0003.ILSW</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>10</Inputid>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
+<element type="output">
+<id>22</id>
+<position>71,6</position>
+<text> 16XV0004.ILSW</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>10</Inputid>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
 </cfc>
 </pou>

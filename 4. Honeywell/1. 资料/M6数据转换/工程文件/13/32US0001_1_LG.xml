@@ -617,5 +617,38 @@ END_VAR]]>
 <negate>false</negate>
 <sortid>28</sortid>
 </element>
+<element type="output">
+<id>54</id>
+<position>146,13</position>
+<text> P3202A.ILSW</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>41</Inputid>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
+<element type="output">
+<id>55</id>
+<position>146,14</position>
+<text> P3202B.ILSW</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>43</Inputid>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
+<element type="output">
+<id>56</id>
+<position>146,6</position>
+<text> 32XV0001.ILSW</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>29</Inputid>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
 </cfc>
 </pou>

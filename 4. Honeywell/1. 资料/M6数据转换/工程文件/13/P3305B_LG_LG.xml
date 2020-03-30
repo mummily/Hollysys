@@ -95,5 +95,16 @@ END_VAR]]>
 <negate>false</negate>
 <sortid>25</sortid>
 </element>
+<element type="output">
+<id>8</id>
+<position>56,9</position>
+<text> P3305B.ILSW</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>4</Inputid>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
 </cfc>
 </pou>

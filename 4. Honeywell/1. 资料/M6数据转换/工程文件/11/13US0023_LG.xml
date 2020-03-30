@@ -232,5 +232,27 @@ END_VAR]]>
 <negate>false</negate>
 <sortid>32</sortid>
 </element>
+<element type="output">
+<id>23</id>
+<position>71,15</position>
+<text> 13XV0323.ILSW</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>7</Inputid>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
+<element type="output">
+<id>24</id>
+<position>71,15</position>
+<text> 13XV0324.ILSW</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>7</Inputid>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
 </cfc>
 </pou>

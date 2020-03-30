@@ -353,45 +353,50 @@ Private Sub InitProperty(sPouName As String)
     
     'I0I1 ¸³Öµ
     Dim output1 As T_HN_OUTPUT, output2 As T_HN_OUTPUT
+    Set ElementIDs = CreateObject("Scripting.Dictionary")
     
     For index1 = 1 To 12
         output1 = ExcelInfo.HN_OUTPUT(index1)
-            
-        For index2 = index1 + 1 To 12
-            output2 = ExcelInfo.HN_OUTPUT(index2)
         
-            If output1.LODSTN_BAK <> "" And output1.LODSTN_BAK <> "--.--" And output2.LODSTN_BAK <> "" And output2.LODSTN_BAK <> "--.--" Then
+        If (output1.LODSTN_BAK Like "*.I0" Or output1.LODSTN_BAK Like "*.I1") And Not ElementIDs.Exists(output1.ElementID) Then
+        
+            ExcelInfo.HN_I0I1(i0i1Index).ElementInputID1 = output1.ElementInputID
+            ExcelInfo.HN_I0I1(i0i1Index).Text = Left(output1.LODSTN_BAK, Len(output1.LODSTN_BAK) - 2) + "ILSW"
+            ExcelInfo.HN_I0I1(i0i1Index).Element_X = output1.Element_X
+            ExcelInfo.HN_I0I1(i0i1Index).Element_Y = output1.Element_Y
+            ExcelInfo.HN_I0I1(i0i1Index).ElementID = LElement_ID
+            LElement_ID = LElement_ID + 1
+            
+            For index2 = index1 + 1 To 12
+                output2 = ExcelInfo.HN_OUTPUT(index2)
+            
                 If output1.LODSTN_BAK Like "*.I0" And output2.LODSTN_BAK = Left(output1.LODSTN_BAK, Len(output1.LODSTN_BAK) - 1) + "1" Then
-                    ExcelInfo.HN_I0I1(i0i1Index).ElementInputID1 = output1.ElementInputID
                     ExcelInfo.HN_I0I1(i0i1Index).ElementInputID2 = output2.ElementInputID
-                    ExcelInfo.HN_I0I1(i0i1Index).Text = Left(output1.LODSTN_BAK, Len(output1.LODSTN_BAK) - 2) + "ILSW"
-                    ExcelInfo.HN_I0I1(i0i1Index).Element_X = output1.Element_X
+                    
+                    ElementIDs.Add output1.ElementID, ""
+                    ElementIDs.Add output2.ElementID, ""
+                    
                     ExcelInfo.HN_I0I1(i0i1Index).Element_Y = (output1.Element_Y + output2.Element_Y) / 2
                     
-                    ExcelInfo.HN_I0I1(i0i1Index).ElementID = LElement_ID
-                    LElement_ID = LElement_ID + 1
                     ExcelInfo.HN_I0I1(i0i1Index).ElementOutputID = LElement_ID
                     LElement_ID = LElement_ID + 1
-                    
-                    i0i1Index = i0i1Index + 1
                 End If
                 
                 If output1.LODSTN_BAK Like "*.I1" And output2.LODSTN_BAK = Left(output1.LODSTN_BAK, Len(output1.LODSTN_BAK) - 1) + "0" Then
-                    ExcelInfo.HN_I0I1(i0i1Index).ElementInputID1 = output1.ElementInputID
                     ExcelInfo.HN_I0I1(i0i1Index).ElementInputID2 = output2.ElementInputID
-                    ExcelInfo.HN_I0I1(i0i1Index).Text = Left(output1.LODSTN_BAK, Len(output1.LODSTN_BAK) - 2) + "ILSW"
-                    ExcelInfo.HN_I0I1(i0i1Index).Element_X = output1.Element_X
+                    
+                    ElementIDs.Add output1.ElementID, ""
+                    ElementIDs.Add output2.ElementID, ""
+                    
                     ExcelInfo.HN_I0I1(i0i1Index).Element_Y = (output1.Element_Y + output2.Element_Y) / 2
                     
-                    ExcelInfo.HN_I0I1(i0i1Index).ElementID = LElement_ID
-                    LElement_ID = LElement_ID + 1
                     ExcelInfo.HN_I0I1(i0i1Index).ElementOutputID = LElement_ID
                     LElement_ID = LElement_ID + 1
-                    
-                    i0i1Index = i0i1Index + 1
                 End If
-            End If
-        Next
+            Next
+                    
+            i0i1Index = i0i1Index + 1
+        End If
     Next
     
     Call InitPID_MMO
@@ -1098,6 +1103,10 @@ Private Sub WriteBox_I0I1(HN_I0I1 As T_HN_I0I1)
             Exit Sub
         End If
         
+        If .ElementInputID2 = 0 Then
+            Exit Sub
+        End If
+        
         POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
         POU.WriteLine "<id>" & .ElementID & "</id>"
         POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
@@ -1144,7 +1153,7 @@ Private Sub WriteBox(sPouName As String)
     Next
     
     'I0I1 OR Êä³ö
-    For index = 1 To 6
+    For index = 1 To 12
         WriteBox_I0I1 ExcelInfo.HN_I0I1(index)
     Next
     
@@ -1211,21 +1220,39 @@ Private Sub WriteOutput_I0I1(Output As T_HN_I0I1)
             Exit Sub
         End If
         
-        POU.WriteLine "<element type=" & Lab & "output" & Lab & ">"
-        POU.WriteLine "<id>" & .ElementOutputID & "</id>"
-        
-        POU.WriteLine "<position>" & .Element_X + 10 & "," & .Element_Y + 1 & "</position>"
-
-        POU.WriteLine "<text> " & .Text & "</text>"
-        POU.WriteLine "<Comment>?????</Comment>"
-        POU.WriteLine "<negate>false</negate>"
-        POU.WriteLine "<ttype>4</ttype>"
-        
-        POU.WriteLine "<Inputid>" & .ElementID & "</Inputid>"
-
-        POU.WriteLine "<negate>false</negate>"
-        POU.WriteLine "<sortid>0</sortid>"
-        POU.WriteLine "</element>"
+        If .ElementInputID2 <> 0 Then
+            POU.WriteLine "<element type=" & Lab & "output" & Lab & ">"
+            POU.WriteLine "<id>" & .ElementOutputID & "</id>"
+            
+            POU.WriteLine "<position>" & .Element_X + 10 & "," & .Element_Y + 1 & "</position>"
+    
+            POU.WriteLine "<text> " & .Text & "</text>"
+            POU.WriteLine "<Comment>?????</Comment>"
+            POU.WriteLine "<negate>false</negate>"
+            POU.WriteLine "<ttype>4</ttype>"
+            
+            POU.WriteLine "<Inputid>" & .ElementID & "</Inputid>"
+    
+            POU.WriteLine "<negate>false</negate>"
+            POU.WriteLine "<sortid>0</sortid>"
+            POU.WriteLine "</element>"
+        Else
+            POU.WriteLine "<element type=" & Lab & "output" & Lab & ">"
+            POU.WriteLine "<id>" & .ElementID & "</id>"
+            
+            POU.WriteLine "<position>" & .Element_X + 10 & "," & .Element_Y + 1 & "</position>"
+    
+            POU.WriteLine "<text> " & .Text & "</text>"
+            POU.WriteLine "<Comment>?????</Comment>"
+            POU.WriteLine "<negate>false</negate>"
+            POU.WriteLine "<ttype>4</ttype>"
+            
+            POU.WriteLine "<Inputid>" & .ElementInputID1 & "</Inputid>"
+    
+            POU.WriteLine "<negate>false</negate>"
+            POU.WriteLine "<sortid>0</sortid>"
+            POU.WriteLine "</element>"
+        End If
         
     End With
 End Sub
@@ -1240,7 +1267,7 @@ Private Sub WriteOutput()
     Next
     
     'I0I1 OR Êä³ö
-    For index = 1 To 6
+    For index = 1 To 12
         WriteOutput_I0I1 ExcelInfo.HN_I0I1(index)
     Next
 End Sub

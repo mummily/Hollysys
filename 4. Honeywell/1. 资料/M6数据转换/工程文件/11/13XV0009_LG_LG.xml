@@ -267,5 +267,16 @@ END_VAR]]>
 <negate>false</negate>
 <sortid>0</sortid>
 </element>
+<element type="output">
+<id>23</id>
+<position>71,9</position>
+<text> 13XV0008.ILSW</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>10</Inputid>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
 </cfc>
 </pou>

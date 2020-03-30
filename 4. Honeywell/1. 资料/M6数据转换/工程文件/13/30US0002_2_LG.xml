@@ -291,7 +291,7 @@ END_VAR]]>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>36</id>
+<id>38</id>
 <AT_position>46,5</AT_position>
 <isinst>TRUE</isinst>
 <text></text>
@@ -436,13 +436,35 @@ END_VAR]]>
 <sortid>41</sortid>
 </element>
 <element type="output">
+<id>36</id>
+<position>56,3</position>
+<text> 30XV0010.ILSW</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>4</Inputid>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
+<element type="output">
 <id>37</id>
+<position>56,3</position>
+<text> 30XV0002.ILSW</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Inputid>4</Inputid>
+<negate>false</negate>
+<sortid>0</sortid>
+</element>
+<element type="output">
+<id>39</id>
 <position>56,6</position>
 <text> 30XV0011.ILSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>36</Inputid>
+<Inputid>38</Inputid>
 <negate>false</negate>
 <sortid>0</sortid>
 </element>
