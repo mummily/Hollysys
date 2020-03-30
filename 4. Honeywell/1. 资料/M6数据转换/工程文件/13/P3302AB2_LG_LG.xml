@@ -506,7 +506,6 @@ END_VAR]]>
 <sortid>0</sortid>
 <input inputid="31" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="23" inputidx="0" negate="false" visible="true" pinname=""/>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
@@ -520,7 +519,6 @@ END_VAR]]>
 <sortid>0</sortid>
 <input inputid="32" inputidx="0" negate="false" visible="true" pinname=""/>
 <input inputid="26" inputidx="0" negate="false" visible="true" pinname=""/>
-<input inputid="0" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="output">

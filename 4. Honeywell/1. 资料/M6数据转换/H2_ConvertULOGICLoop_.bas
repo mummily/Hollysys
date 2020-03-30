@@ -1110,7 +1110,6 @@ Private Sub WriteBox_I0I1(HN_I0I1 As T_HN_I0I1)
         
         POU.WriteLine "<input inputid=""" & .ElementInputID2 & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
         POU.WriteLine "<input inputid=""" & .ElementInputID1 & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
-        POU.WriteLine "<input inputid=""0"" inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
         POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
         
         POU.WriteLine "</element>"
