@@ -101,18 +101,9 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>25</id>
-<AT_position>65,10</AT_position>
-<text>13LC0040A_MODE_NN1</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
 <id>27</id>
 <AT_position>65,10</AT_position>
-<text>13LC0040A_MODE_NN3</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -128,18 +119,9 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>31</id>
-<AT_position>65,10</AT_position>
-<text>13LC0040A_MODE_NN1</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
 <id>33</id>
 <AT_position>65,10</AT_position>
-<text>13LC0040A_MODE_NN2</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -327,32 +309,18 @@ END_VAR]]>
 <output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="box">
-<id>24</id>
-<AT_position>66,8</AT_position>
-<isinst>TRUE</isinst>
-<text></text>
-<AT_type>MOVE</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>25</sortid>
-<input inputid="22" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="25" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="ENO"/>
-<output negate="false" visible="true" pinname=""/>
-</element>
-<element type="box">
 <id>26</id>
 <AT_position>66,8</AT_position>
 <isinst>TRUE</isinst>
-<text></text>
-<AT_type>MOVE</AT_type>
+<text>13LC0040A_MODE_TP_26</text>
+<AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>26</sortid>
-<input inputid="22" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="27" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="ENO"/>
-<output negate="false" visible="true" pinname=""/>
+<input inputid="22" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="27" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<output negate="false" visible="true" pinname="Q"/>
+<output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="box">
 <id>28</id>
@@ -369,32 +337,18 @@ END_VAR]]>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>30</id>
-<AT_position>66,8</AT_position>
-<isinst>TRUE</isinst>
-<text></text>
-<AT_type>MOVE</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>28</sortid>
-<input inputid="23" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="31" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="ENO"/>
-<output negate="false" visible="true" pinname=""/>
-</element>
-<element type="box">
 <id>32</id>
 <AT_position>66,8</AT_position>
 <isinst>TRUE</isinst>
-<text></text>
-<AT_type>MOVE</AT_type>
+<text>13LC0040A_MODE_TP_29</text>
+<AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>29</sortid>
-<input inputid="23" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="33" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="ENO"/>
-<output negate="false" visible="true" pinname=""/>
+<input inputid="23" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="33" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<output negate="false" visible="true" pinname="Q"/>
+<output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="box">
 <id>34</id>
@@ -411,21 +365,9 @@ END_VAR]]>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="output">
-<id>36</id>
-<position>76,8</position>
-<text>13LC0040A.MODATTR</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Inputid>24</Inputid>
-<Inputidx>1</Inputidx>
-<negate>false</negate>
-<sortid>31</sortid>
-</element>
-<element type="output">
 <id>37</id>
 <position>76,8</position>
-<text>13LC0040A.MODE</text>
+<text>13LC0040A.TRKVAL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -447,21 +389,9 @@ END_VAR]]>
 <sortid>33</sortid>
 </element>
 <element type="output">
-<id>39</id>
-<position>76,8</position>
-<text>13LC0040A.MODATTR</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Inputid>30</Inputid>
-<Inputidx>1</Inputidx>
-<negate>false</negate>
-<sortid>34</sortid>
-</element>
-<element type="output">
 <id>40</id>
 <position>76,8</position>
-<text>13LC0040A.MODE</text>
+<text>13LC0040A.TRKVAL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -473,7 +403,7 @@ END_VAR]]>
 <element type="output">
 <id>41</id>
 <position>76,8</position>
-<text>13LC0040A.OP</text>
+<text>13LC0040A.TRKVAL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

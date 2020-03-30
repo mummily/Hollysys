@@ -41,7 +41,7 @@ Sub H2_ConvertULOGICLoop()
     For ULOGIC_i = 2 To UBound(ULOGIC_arr(), 1)
         Dim sPouName As String '块类型
         sPouName = ULOGIC_arr(ULOGIC_i, ULOGIC("NAME")) '名称位号
-        If sPouName <> "" Then '17FIC0004_LG
+        If sPouName <> "" Then
             '初始化ExcelInfo
             Dim ExcelInfo_Temp As T_EXCELINFO
             ExcelInfo = ExcelInfo_Temp
@@ -400,15 +400,23 @@ Private Sub InitProperty(sPouName As String)
         For index = 1 To 12
             With ExcelInfo.HN_OUTPUT(index)
                 If Right(.LODSTN, 3) = ".OP" Then
-                    ' .LODSTN = Replace(.LODSTN, ".OP", ".TRKVAL")
+                    .LODSTN = Replace(.LODSTN, ".OP", ".TRKVAL")
+                ElseIf Right(.LODSTN, 5) = ".MODE" Then
+                    .LODSTN = Replace(.LODSTN, ".MODE", ".TRKVAL")
                 End If
+                
+                If Right(.LODSTN_BAK, 8) = ".MODATTR" Then
+                    Dim EInfo_Temp As T_HN_E
+                    ExcelInfo.HN_E(index) = EInfo_Temp
+                End If
+                
             End With
         Next
     End If
 End Sub
 
 '-----------------------------------------------------------------------------------------------------------
-'Purpose: 初始化PID_MMO
+'Purpose: 初始化PID_MMO，依赖Output，需要放到Output初始化之后
 'History: 3-25-2020
 '-----------------------------------------------------------------------------------------------------------
 Private Sub InitPID_MMO()
@@ -450,10 +458,11 @@ End Sub
 '-----------------------------------------------------------------------------------------------------------
 Private Sub InitVar(sPouName As String)
     ' 计时器变量
+    Dim var As T_HN_VAR
+    
     For index = 1 To 24
         With ExcelInfo.HN_BOX(index)
             If .ElementATType = "TON" Or .ElementATType = "TOF" Or .ElementATType = "TP" Or .ElementATType = "QOR2" Or .ElementATType = "QOR3" Or .ElementATType = "MINPULSE" Or .ElementATType = "MAXPULSE" Or .ElementATType = "FLIPFLOP" Or .ElementATType = "CHDETECT" Or .ElementATType = "DISCREP3" Then
-                Dim var As T_HN_VAR
                 
                 var.TT = .ElementATType
                 var.PN = sPouName & "_" & .ElementATType & "_" & .ElementSortID
@@ -468,6 +477,24 @@ Private Sub InitVar(sPouName As String)
             End If
         End With
     Next
+    
+    If ExcelInfo.HN_PID_MMO = True Then
+        For index = 1 To 12
+            With ExcelInfo.HN_OUTPUT(index)
+                If Right(.LODSTN_BAK, 5) = ".MODE" Then
+                        
+                    var.TT = "TP"
+                    var.PN = sPouName & "_TP_" & .ElementSortID
+                    var.SN = SN(ULOGIC_arr(ULOGIC_i, ULOGIC("NODENUM")))
+                    var.PT = "T#2s"
+                    
+                    VarInfo.VarNum = VarInfo.VarNum + 1
+                    VarInfo.HN_VAR(VarInfo.VarNum) = var
+                End If
+            End With
+        Next
+    End If
+    
 End Sub
 
 '-----------------------------------------------------------------------------------------------------------
@@ -597,8 +624,18 @@ End Sub
 Private Sub WriteInput_E_NN_FL(sPouName As String, index As Integer)
         With ExcelInfo.HN_OUTPUT(index)
         
-            If .LODSTN <> "" And .LODSTN <> "--.--" Then
-                If .LOSRC Like "NN*" Then
+            If ExcelInfo.HN_E(index).ElementID_NF <> 0 Then
+                If ExcelInfo.HN_PID_MMO = True And Right(ExcelInfo.HN_OUTPUT(index).LODSTN_BAK, 5) = ".MODE" Then
+                    POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
+                    POU.WriteLine "<id>" & ExcelInfo.HN_E(index).ElementID_NF & "</id>"
+                    POU.WriteLine "<AT_position>" & .Element_X - 11 & "," & .Element_Y + 2 & "</AT_position>"
+                    POU.WriteLine "<text>" & "T#2s" & "</text>"
+                    POU.WriteLine "<Comment>?????</Comment>"
+                    POU.WriteLine "<negate>false</negate>"
+                    POU.WriteLine "<ttype>4</ttype>"
+                    POU.WriteLine "<Flag>FALSE</Flag>"
+                    POU.WriteLine "</element>"
+                ElseIf .LOSRC Like "NN*" Then
                     POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                     POU.WriteLine "<id>" & ExcelInfo.HN_E(index).ElementID_NF & "</id>"
                     POU.WriteLine "<AT_position>" & ExcelInfo.HN_E(index).Element_X - 1 & "," & ExcelInfo.HN_E(index).Element_Y + 2 & "</AT_position>"
@@ -944,29 +981,48 @@ End Sub
 'Purpose: EXCEL信息写入XML
 'History: 3-25-2020
 '-----------------------------------------------------------------------------------------------------------
-Private Sub WriteBox_E(HN_E As T_HN_E)
-    With HN_E
+Private Sub WriteBox_E(sPouName As String, index As Integer)
+    With ExcelInfo.HN_E(index)
     
         If .ElementID = 0 Then
             Exit Sub
         End If
         
-        POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
-        POU.WriteLine "<id>" & .ElementID & "</id>"
-        POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
-        POU.WriteLine "<isinst>TRUE</isinst>"
-        POU.WriteLine "<text></text>"
-        POU.WriteLine "<AT_type>MOVE</AT_type>"
-        POU.WriteLine "<typetext>BT_FB</typetext>"
-        POU.WriteLine "<ttype>9</ttype>"
-        POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
-        
-        POU.WriteLine "<input inputid=""" & .ElementInputID & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""EN""/>"
-        POU.WriteLine "<input inputid=""" & .ElementID_NF & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
-        POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""ENO""/>"
-        POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
-        
-        POU.WriteLine "</element>"
+        If ExcelInfo.HN_PID_MMO = True And Right(ExcelInfo.HN_OUTPUT(index).LODSTN_BAK, 5) = ".MODE" Then
+            POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+            POU.WriteLine "<id>" & .ElementID & "</id>"
+            POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
+            POU.WriteLine "<isinst>TRUE</isinst>"
+            POU.WriteLine "<text>" & sPouName & "_TP_" & .ElementSortID & "</text>"
+            POU.WriteLine "<AT_type>TP</AT_type>"
+            POU.WriteLine "<typetext>BT_FB</typetext>"
+            POU.WriteLine "<ttype>9</ttype>"
+            POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
+            
+            POU.WriteLine "<input inputid=""" & .ElementInputID & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""IN""/>"
+            POU.WriteLine "<input inputid=""" & .ElementID_NF & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""PT""/>"
+            POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""Q""/>"
+            POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""ET""/>"
+            
+            POU.WriteLine "</element>"
+        Else
+            POU.WriteLine "<element type=" & Lab & "box" & Lab & ">"
+            POU.WriteLine "<id>" & .ElementID & "</id>"
+            POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
+            POU.WriteLine "<isinst>TRUE</isinst>"
+            POU.WriteLine "<text></text>"
+            POU.WriteLine "<AT_type>MOVE</AT_type>"
+            POU.WriteLine "<typetext>BT_FB</typetext>"
+            POU.WriteLine "<ttype>9</ttype>"
+            POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"
+            
+            POU.WriteLine "<input inputid=""" & .ElementInputID & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""EN""/>"
+            POU.WriteLine "<input inputid=""" & .ElementID_NF & """ inputidx=""0"" negate=""false"" visible=""true"" pinname=""""/>"
+            POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""ENO""/>"
+            POU.WriteLine "<output negate=""false"" visible=""true"" pinname=""""/>"
+            
+            POU.WriteLine "</element>"
+        End If
     End With
 End Sub
 
@@ -1075,7 +1131,7 @@ Private Sub WriteBox(sPouName As String)
     
     'E 写入XML
     For index = 1 To 12
-        WriteBox_E ExcelInfo.HN_E(index)
+        WriteBox_E sPouName, CInt(index)
     Next
     
     'Input组合 写入XML
@@ -1106,9 +1162,9 @@ Private Sub WriteOutput_Normal(Output As T_HN_OUTPUT)
         End If
         
         ' 李攀2020.3.23邮件 MOVE连接的点项.MODATTR所在的MOVE分支删除
-        'If True = ExcelInfo.HN_PID_MMO And Right(.LODSTN, 8) = ".MODATTR" Then
-        '    Exit Sub
-        'End If
+        If True = ExcelInfo.HN_PID_MMO And Right(.LODSTN, 8) = ".MODATTR" Then
+            Exit Sub
+        End If
         
         POU.WriteLine "<element type=" & Lab & "output" & Lab & ">"
         POU.WriteLine "<id>" & .ElementID & "</id>"

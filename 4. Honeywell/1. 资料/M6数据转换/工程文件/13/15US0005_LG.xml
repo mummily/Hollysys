@@ -65,18 +65,9 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>11</id>
-<AT_position>65,19</AT_position>
-<text>15US0005_NN2</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
 <id>13</id>
 <AT_position>65,19</AT_position>
-<text>15US0005_NN1</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -152,32 +143,18 @@ END_VAR]]>
 <output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="box">
-<id>10</id>
-<AT_position>66,17</AT_position>
-<isinst>TRUE</isinst>
-<text></text>
-<AT_type>MOVE</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>25</sortid>
-<input inputid="8" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="11" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="ENO"/>
-<output negate="false" visible="true" pinname=""/>
-</element>
-<element type="box">
 <id>12</id>
 <AT_position>66,17</AT_position>
 <isinst>TRUE</isinst>
-<text></text>
-<AT_type>MOVE</AT_type>
+<text>15US0005_TP_26</text>
+<AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>26</sortid>
-<input inputid="8" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="13" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="ENO"/>
-<output negate="false" visible="true" pinname=""/>
+<input inputid="8" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="13" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<output negate="false" visible="true" pinname="Q"/>
+<output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="box">
 <id>14</id>
@@ -280,21 +257,9 @@ END_VAR]]>
 <sortid>33</sortid>
 </element>
 <element type="output">
-<id>24</id>
-<position>76,17</position>
-<text>15PIC0005.MODATTR</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Inputid>10</Inputid>
-<Inputidx>1</Inputidx>
-<negate>false</negate>
-<sortid>34</sortid>
-</element>
-<element type="output">
 <id>25</id>
 <position>76,17</position>
-<text>15PIC0005.MODE</text>
+<text>15PIC0005.TRKVAL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -306,7 +271,7 @@ END_VAR]]>
 <element type="output">
 <id>26</id>
 <position>76,17</position>
-<text>15PIC0005.OP</text>
+<text>15PIC0005.TRKVAL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>

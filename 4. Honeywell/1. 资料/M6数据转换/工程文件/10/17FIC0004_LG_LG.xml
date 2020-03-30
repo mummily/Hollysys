@@ -20,18 +20,9 @@ END_VAR]]>
 </interface>
 <cfc>
 <element type="input">
-<id>9</id>
-<AT_position>50,10</AT_position>
-<text>17FIC0004_LG_NN2</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
 <id>11</id>
 <AT_position>50,10</AT_position>
-<text>17FIC0004_LG_NN1</text>
+<text>T#2s</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -120,32 +111,18 @@ END_VAR]]>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>8</id>
-<AT_position>51,8</AT_position>
-<isinst>TRUE</isinst>
-<text></text>
-<AT_type>MOVE</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>25</sortid>
-<input inputid="7" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="9" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="ENO"/>
-<output negate="false" visible="true" pinname=""/>
-</element>
-<element type="box">
 <id>10</id>
 <AT_position>51,8</AT_position>
 <isinst>TRUE</isinst>
-<text></text>
-<AT_type>MOVE</AT_type>
+<text>17FIC0004_LG_TP_26</text>
+<AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
 <sortid>26</sortid>
-<input inputid="7" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="11" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="ENO"/>
-<output negate="false" visible="true" pinname=""/>
+<input inputid="7" inputidx="0" negate="false" visible="true" pinname="IN"/>
+<input inputid="11" inputidx="0" negate="false" visible="true" pinname="PT"/>
+<output negate="false" visible="true" pinname="Q"/>
+<output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="box">
 <id>12</id>
@@ -162,21 +139,9 @@ END_VAR]]>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="output">
-<id>14</id>
-<position>61,8</position>
-<text>17FIC0004.MODATTR</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Inputid>8</Inputid>
-<Inputidx>1</Inputidx>
-<negate>false</negate>
-<sortid>28</sortid>
-</element>
-<element type="output">
 <id>15</id>
 <position>61,8</position>
-<text>17FIC0004.MODE</text>
+<text>17FIC0004.TRKVAL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -188,7 +153,7 @@ END_VAR]]>
 <element type="output">
 <id>16</id>
 <position>61,8</position>
-<text>17FIC0004.OP</text>
+<text>17FIC0004.TRKVAL</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
