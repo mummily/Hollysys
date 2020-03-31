@@ -167,12 +167,12 @@ END_VAR]]>
 <element type="output">
 <id>19</id>
 <position>76,5</position>
-<text>33PIC0002.TRKVAL</text>
+<text>33PIC0002.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>10</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>31</sortid>
 </element>
@@ -191,12 +191,12 @@ END_VAR]]>
 <element type="output">
 <id>22</id>
 <position>76,5</position>
-<text>33PIC0002.TRKVAL</text>
+<text>33PIC0002.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>16</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>34</sortid>
 </element>

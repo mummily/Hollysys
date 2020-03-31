@@ -65,15 +65,6 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>14</id>
-<AT_position>65,4</AT_position>
-<text>13FC0040_MODE_NN2</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
 <id>16</id>
 <AT_position>65,4</AT_position>
 <text>13FC0040_MODE_NN1</text>
@@ -176,20 +167,6 @@ END_VAR]]>
 <output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="box">
-<id>13</id>
-<AT_position>66,2</AT_position>
-<isinst>TRUE</isinst>
-<text></text>
-<AT_type>MOVE</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>25</sortid>
-<input inputid="8" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="14" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="ENO"/>
-<output negate="false" visible="true" pinname=""/>
-</element>
-<element type="box">
 <id>15</id>
 <AT_position>66,2</AT_position>
 <isinst>TRUE</isinst>
@@ -216,18 +193,6 @@ END_VAR]]>
 <input inputid="21" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname="ENO"/>
 <output negate="false" visible="true" pinname=""/>
-</element>
-<element type="output">
-<id>17</id>
-<position>76,2</position>
-<text>13FIC0040.MODATTR</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Inputid>13</Inputid>
-<Inputidx>1</Inputidx>
-<negate>false</negate>
-<sortid>27</sortid>
 </element>
 <element type="output">
 <id>18</id>

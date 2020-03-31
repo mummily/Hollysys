@@ -196,12 +196,12 @@ END_VAR]]>
 <element type="output">
 <id>19</id>
 <position>38,2</position>
-<text>17FICA0002.TRKVAL</text>
+<text>17FICA0002.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>4</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>37</sortid>
 </element>

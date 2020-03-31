@@ -401,23 +401,24 @@ Private Sub InitProperty(sPouName As String)
     
     Call InitPID_MMO
     
-    If True = ExcelInfo.HN_PID_MMO Then
-        For index = 1 To 12
-            With ExcelInfo.HN_OUTPUT(index)
+    For index = 1 To 12
+        With ExcelInfo.HN_OUTPUT(index)
+            If True = ExcelInfo.HN_PID_MMO Then
                 If Right(.LODSTN, 3) = ".OP" Then
                     .LODSTN = Replace(.LODSTN, ".OP", ".TRKVAL")
                 ElseIf Right(.LODSTN, 5) = ".MODE" Then
-                    .LODSTN = Replace(.LODSTN, ".MODE", ".TRKVAL")
+                    .LODSTN = Replace(.LODSTN, ".MODE", ".TRKSW")
                 End If
-                
-                If Right(.LODSTN_BAK, 8) = ".MODATTR" Then
-                    Dim EInfo_Temp As T_HN_E
-                    ExcelInfo.HN_E(index) = EInfo_Temp
-                End If
-                
-            End With
-        Next
-    End If
+            End If
+            
+            ' 李攀0330需求，所有MODATTR的输出均删除
+            If Right(.LODSTN_BAK, 8) = ".MODATTR" Then
+                Dim EInfo_Temp As T_HN_E
+                ExcelInfo.HN_E(index) = EInfo_Temp
+            End If
+            
+        End With
+    Next
 End Sub
 
 '-----------------------------------------------------------------------------------------------------------
@@ -1169,8 +1170,8 @@ Private Sub WriteOutput_Normal(Output As T_HN_OUTPUT)
             Exit Sub
         End If
         
-        ' 李攀2020.3.23邮件 MOVE连接的点项.MODATTR所在的MOVE分支删除
-        If True = ExcelInfo.HN_PID_MMO And Right(.LODSTN, 8) = ".MODATTR" Then
+        ' 李攀2020.3.30邮件 MOVE连接的点项.MODATTR所在的MOVE分支删除
+        If Right(.LODSTN, 8) = ".MODATTR" Then
             Exit Sub
         End If
         
@@ -1194,13 +1195,21 @@ Private Sub WriteOutput_Normal(Output As T_HN_OUTPUT)
             POU.WriteLine "<Inputid>" & .ElementID_Ref & "</Inputid>"
         End If
         
+        Dim sInputidx As String
+        sInputidx = "0"
+        
         If .LOENBL Like "SO*" Or .LOENBL Like "L*" Then
-            POU.WriteLine "<Inputidx>1</Inputidx>"
+            sInputidx = "1"
         ElseIf .ElementID_Ref <> 0 Then
-            POU.WriteLine "<Inputidx>1</Inputidx>"
-        Else
-            POU.WriteLine "<Inputidx>0</Inputidx>"
+            sInputidx = "1"
         End If
+        
+        ' 李攀0330需求，.MODE的输入E会转换为TP类型，此时输出的引脚为Q，索引为0
+        If ExcelInfo.HN_PID_MMO = True And Right(.LODSTN_BAK, 5) = ".MODE" Then
+            sInputidx = "0"
+        End If
+        
+        POU.WriteLine "<Inputidx>" & sInputidx & "</Inputidx>"
         
         POU.WriteLine "<negate>false</negate>"
         POU.WriteLine "<sortid>" & .ElementSortID & "</sortid>"

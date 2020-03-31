@@ -65,27 +65,9 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>22</id>
-<AT_position>80,8</AT_position>
-<text>36US0007_1_NN1</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
 <id>24</id>
 <AT_position>80,8</AT_position>
 <text>36US0007_1_NN2</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
-<id>26</id>
-<AT_position>80,8</AT_position>
-<text>36US0007_1_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -303,20 +285,6 @@ END_VAR]]>
 <output negate="false" visible="true" pinname="ET"/>
 </element>
 <element type="box">
-<id>21</id>
-<AT_position>81,6</AT_position>
-<isinst>TRUE</isinst>
-<text></text>
-<AT_type>MOVE</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>25</sortid>
-<input inputid="20" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="22" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="ENO"/>
-<output negate="false" visible="true" pinname=""/>
-</element>
-<element type="box">
 <id>23</id>
 <AT_position>81,6</AT_position>
 <isinst>TRUE</isinst>
@@ -327,20 +295,6 @@ END_VAR]]>
 <sortid>26</sortid>
 <input inputid="20" inputidx="0" negate="false" visible="true" pinname="EN"/>
 <input inputid="24" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="ENO"/>
-<output negate="false" visible="true" pinname=""/>
-</element>
-<element type="box">
-<id>25</id>
-<AT_position>81,6</AT_position>
-<isinst>TRUE</isinst>
-<text></text>
-<AT_type>MOVE</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>27</sortid>
-<input inputid="20" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="26" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname="ENO"/>
 <output negate="false" visible="true" pinname=""/>
 </element>
@@ -425,18 +379,6 @@ END_VAR]]>
 <sortid>30</sortid>
 </element>
 <element type="output">
-<id>35</id>
-<position>91,6</position>
-<text>36FIC0001.MODATTR</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Inputid>21</Inputid>
-<Inputidx>1</Inputidx>
-<negate>false</negate>
-<sortid>31</sortid>
-</element>
-<element type="output">
 <id>36</id>
 <position>91,6</position>
 <text>36FIC0001.MODE</text>
@@ -459,18 +401,6 @@ END_VAR]]>
 <Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>33</sortid>
-</element>
-<element type="output">
-<id>40</id>
-<position>91,6</position>
-<text>36FIC0002.MODATTR</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Inputid>25</Inputid>
-<Inputidx>1</Inputidx>
-<negate>false</negate>
-<sortid>34</sortid>
 </element>
 <element type="output">
 <id>41</id>

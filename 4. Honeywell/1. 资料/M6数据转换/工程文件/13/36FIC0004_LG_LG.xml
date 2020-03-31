@@ -144,12 +144,12 @@ END_VAR]]>
 <element type="output">
 <id>15</id>
 <position>76,2</position>
-<text>36FIC0004.TRKVAL</text>
+<text>36FIC0004.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>10</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>29</sortid>
 </element>

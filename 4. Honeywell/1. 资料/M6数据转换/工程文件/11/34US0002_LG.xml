@@ -462,12 +462,12 @@ END_VAR]]>
 <element type="output">
 <id>39</id>
 <position>76,5</position>
-<text>34LICA0002.TRKVAL</text>
+<text>34LICA0002.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>24</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>33</sortid>
 </element>
@@ -510,12 +510,12 @@ END_VAR]]>
 <element type="output">
 <id>48</id>
 <position>76,17</position>
-<text>34LICA0002.TRKVAL</text>
+<text>34LICA0002.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>30</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>38</sortid>
 </element>

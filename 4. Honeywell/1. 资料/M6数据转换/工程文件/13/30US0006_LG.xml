@@ -249,12 +249,12 @@ END_VAR]]>
 <element type="output">
 <id>23</id>
 <position>61,2</position>
-<text>30PDICSA0008.TRKVAL</text>
+<text>30PDICSA0008.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>11</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>32</sortid>
 </element>
@@ -285,12 +285,12 @@ END_VAR]]>
 <element type="output">
 <id>29</id>
 <position>61,8</position>
-<text>30PDICSA0008.TRKVAL</text>
+<text>30PDICSA0008.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>17</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>36</sortid>
 </element>

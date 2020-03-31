@@ -29,15 +29,6 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>4</id>
-<AT_position>35,4</AT_position>
-<text>33US0004_NN2</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
 <id>6</id>
 <AT_position>35,4</AT_position>
 <text>33US0004_NN1</text>
@@ -65,20 +56,6 @@ END_VAR]]>
 <ttype>9</ttype>
 <sortid>1</sortid>
 <input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname=""/>
-</element>
-<element type="box">
-<id>3</id>
-<AT_position>36,2</AT_position>
-<isinst>TRUE</isinst>
-<text></text>
-<AT_type>MOVE</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>25</sortid>
-<input inputid="2" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="4" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="ENO"/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
@@ -120,18 +97,6 @@ END_VAR]]>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>28</sortid>
-</element>
-<element type="output">
-<id>10</id>
-<position>46,2</position>
-<text>33LV0001B_AM.MODATTR</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Inputid>3</Inputid>
-<Inputidx>1</Inputidx>
-<negate>false</negate>
-<sortid>29</sortid>
 </element>
 <element type="output">
 <id>11</id>

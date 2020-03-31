@@ -227,12 +227,12 @@ END_VAR]]>
 <element type="output">
 <id>24</id>
 <position>38,2</position>
-<text>30PY0003A.TRKVAL</text>
+<text>30PY0003A.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>4</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>36</sortid>
 </element>
@@ -251,12 +251,12 @@ END_VAR]]>
 <element type="output">
 <id>27</id>
 <position>38,2</position>
-<text>30PY0003B.TRKVAL</text>
+<text>30PY0003B.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>10</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>39</sortid>
 </element>
@@ -287,12 +287,12 @@ END_VAR]]>
 <element type="output">
 <id>33</id>
 <position>38,2</position>
-<text>30PICA0004.TRKVAL</text>
+<text>30PICA0004.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>16</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>43</sortid>
 </element>

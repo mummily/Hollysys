@@ -128,27 +128,9 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>37</id>
-<AT_position>65,25</AT_position>
-<text>13QC1300_LG_NN4</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
 <id>39</id>
 <AT_position>65,25</AT_position>
 <text>13QC1300_LG_NN1</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
-<id>41</id>
-<AT_position>65,25</AT_position>
-<text>13QC1300_LG_NN4</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
@@ -457,20 +439,6 @@ END_VAR]]>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>36</id>
-<AT_position>66,23</AT_position>
-<isinst>TRUE</isinst>
-<text></text>
-<AT_type>MOVE</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>25</sortid>
-<input inputid="33" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="37" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="ENO"/>
-<output negate="false" visible="true" pinname=""/>
-</element>
-<element type="box">
 <id>38</id>
 <AT_position>66,23</AT_position>
 <isinst>TRUE</isinst>
@@ -481,20 +449,6 @@ END_VAR]]>
 <sortid>26</sortid>
 <input inputid="33" inputidx="0" negate="false" visible="true" pinname="EN"/>
 <input inputid="39" inputidx="0" negate="false" visible="true" pinname=""/>
-<output negate="false" visible="true" pinname="ENO"/>
-<output negate="false" visible="true" pinname=""/>
-</element>
-<element type="box">
-<id>40</id>
-<AT_position>66,23</AT_position>
-<isinst>TRUE</isinst>
-<text></text>
-<AT_type>MOVE</AT_type>
-<typetext>BT_FB</typetext>
-<ttype>9</ttype>
-<sortid>27</sortid>
-<input inputid="32" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="41" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname="ENO"/>
 <output negate="false" visible="true" pinname=""/>
 </element>
@@ -553,18 +507,6 @@ END_VAR]]>
 <sortid>31</sortid>
 </element>
 <element type="output">
-<id>49</id>
-<position>76,23</position>
-<text>16QIC0004.MODATTR</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Inputid>36</Inputid>
-<Inputidx>1</Inputidx>
-<negate>false</negate>
-<sortid>32</sortid>
-</element>
-<element type="output">
 <id>50</id>
 <position>76,23</position>
 <text>16QIC0004.MODE</text>
@@ -575,18 +517,6 @@ END_VAR]]>
 <Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>33</sortid>
-</element>
-<element type="output">
-<id>51</id>
-<position>76,23</position>
-<text>16QICA0013.MODATTR</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Inputid>40</Inputid>
-<Inputidx>1</Inputidx>
-<negate>false</negate>
-<sortid>34</sortid>
 </element>
 <element type="output">
 <id>52</id>

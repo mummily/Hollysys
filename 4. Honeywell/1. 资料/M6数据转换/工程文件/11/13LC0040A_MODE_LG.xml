@@ -367,12 +367,12 @@ END_VAR]]>
 <element type="output">
 <id>37</id>
 <position>76,8</position>
-<text>13LC0040A.TRKVAL</text>
+<text>13LC0040A.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>26</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>32</sortid>
 </element>
@@ -391,12 +391,12 @@ END_VAR]]>
 <element type="output">
 <id>40</id>
 <position>76,8</position>
-<text>13LC0040A.TRKVAL</text>
+<text>13LC0040A.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>32</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>35</sortid>
 </element>

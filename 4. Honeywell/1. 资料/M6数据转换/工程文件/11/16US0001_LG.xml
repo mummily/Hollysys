@@ -218,12 +218,12 @@ END_VAR]]>
 <element type="output">
 <id>23</id>
 <position>61,2</position>
-<text>16FICA0012.TRKVAL</text>
+<text>16FICA0012.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>7</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>37</sortid>
 </element>
@@ -242,12 +242,12 @@ END_VAR]]>
 <element type="output">
 <id>26</id>
 <position>61,2</position>
-<text>16FICSA0015.TRKVAL</text>
+<text>16FICSA0015.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>13</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>40</sortid>
 </element>

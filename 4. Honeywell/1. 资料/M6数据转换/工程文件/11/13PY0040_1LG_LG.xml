@@ -443,24 +443,24 @@ END_VAR]]>
 <element type="output">
 <id>42</id>
 <position>106,20</position>
-<text>13PICA0040B.TRKVAL</text>
+<text>13PICA0040B.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>27</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>35</sortid>
 </element>
 <element type="output">
 <id>44</id>
 <position>106,14</position>
-<text>13PICA0040B.TRKVAL</text>
+<text>13PICA0040B.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>31</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>37</sortid>
 </element>

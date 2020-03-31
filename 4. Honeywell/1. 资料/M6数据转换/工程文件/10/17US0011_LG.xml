@@ -499,12 +499,12 @@ END_VAR]]>
 <element type="output">
 <id>44</id>
 <position>106,23</position>
-<text>17LICSA0009.TRKVAL</text>
+<text>17LICSA0009.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>27</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>33</sortid>
 </element>

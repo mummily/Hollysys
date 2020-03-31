@@ -284,24 +284,24 @@ END_VAR]]>
 <element type="output">
 <id>26</id>
 <position>76,11</position>
-<text>13FICA0008.TRKVAL</text>
+<text>13FICA0008.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>17</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>31</sortid>
 </element>
 <element type="output">
 <id>28</id>
 <position>76,17</position>
-<text>13FICA0008.TRKVAL</text>
+<text>13FICA0008.TRKSW</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>21</Inputid>
-<Inputidx>1</Inputidx>
+<Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>33</sortid>
 </element>
