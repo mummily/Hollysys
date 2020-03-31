@@ -327,7 +327,7 @@ END_VAR]]>
 <id>27</id>
 <AT_position>96,20</AT_position>
 <isinst>TRUE</isinst>
-<text>13PY0040_1LG_TP_27</text>
+<text>13PY0040_1LG_TP_6</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -341,7 +341,7 @@ END_VAR]]>
 <id>31</id>
 <AT_position>96,14</AT_position>
 <isinst>TRUE</isinst>
-<text>13PY0040_1LG_TP_29</text>
+<text>13PY0040_1LG_TP_8</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>

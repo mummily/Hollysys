@@ -224,7 +224,7 @@ END_VAR]]>
 <id>19</id>
 <AT_position>66,6</AT_position>
 <isinst>TRUE</isinst>
-<text>17FIC0006_LG_TP_26</text>
+<text>17FIC0006_LG_TP_2</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -238,7 +238,7 @@ END_VAR]]>
 <id>23</id>
 <AT_position>66,6</AT_position>
 <isinst>TRUE</isinst>
-<text>17FIC0006_LG_TP_28</text>
+<text>17FIC0006_LG_TP_5</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>

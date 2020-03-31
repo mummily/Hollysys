@@ -490,7 +490,7 @@ Private Sub InitVar(sPouName As String)
                 If Right(.LODSTN_BAK, 5) = ".MODE" Then
                         
                     var.TT = "TP"
-                    var.PN = sPouName & "_TP_" & .ElementSortID
+                    var.PN = sPouName & "_TP_" & index
                     var.SN = SN(ULOGIC_arr(ULOGIC_i, ULOGIC("NODENUM")))
                     var.PT = "T#2s"
                     
@@ -999,7 +999,7 @@ Private Sub WriteBox_E(sPouName As String, index As Integer)
             POU.WriteLine "<id>" & .ElementID & "</id>"
             POU.WriteLine "<AT_position>" & .Element_X & "," & .Element_Y & "</AT_position>"
             POU.WriteLine "<isinst>TRUE</isinst>"
-            POU.WriteLine "<text>" & sPouName & "_TP_" & .ElementSortID & "</text>"
+            POU.WriteLine "<text>" & sPouName & "_TP_" & index & "</text>" '0331 李攀需求，索引使用LODETN的序号
             POU.WriteLine "<AT_type>TP</AT_type>"
             POU.WriteLine "<typetext>BT_FB</typetext>"
             POU.WriteLine "<ttype>9</ttype>"

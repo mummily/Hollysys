@@ -184,7 +184,7 @@ END_VAR]]>
 <id>15</id>
 <AT_position>66,5</AT_position>
 <isinst>TRUE</isinst>
-<text>13PDC0076_MODE_TP_26</text>
+<text>13PDC0076_MODE_TP_2</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -212,7 +212,7 @@ END_VAR]]>
 <id>21</id>
 <AT_position>66,5</AT_position>
 <isinst>TRUE</isinst>
-<text>13PDC0076_MODE_TP_29</text>
+<text>13PDC0076_MODE_TP_5</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>

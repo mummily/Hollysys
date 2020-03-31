@@ -312,7 +312,7 @@ END_VAR]]>
 <id>26</id>
 <AT_position>66,8</AT_position>
 <isinst>TRUE</isinst>
-<text>13LC0040A_MODE_TP_26</text>
+<text>13LC0040A_MODE_TP_2</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -340,7 +340,7 @@ END_VAR]]>
 <id>32</id>
 <AT_position>66,8</AT_position>
 <isinst>TRUE</isinst>
-<text>13LC0040A_MODE_TP_29</text>
+<text>13LC0040A_MODE_TP_5</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>

@@ -155,7 +155,7 @@ END_VAR]]>
 <id>11</id>
 <AT_position>51,2</AT_position>
 <isinst>TRUE</isinst>
-<text>30US0006_TP_26</text>
+<text>30US0006_TP_3</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
@@ -183,7 +183,7 @@ END_VAR]]>
 <id>17</id>
 <AT_position>51,8</AT_position>
 <isinst>TRUE</isinst>
-<text>30US0006_TP_29</text>
+<text>30US0006_TP_7</text>
 <AT_type>TP</AT_type>
 <typetext>BT_FB</typetext>
 <ttype>9</ttype>
