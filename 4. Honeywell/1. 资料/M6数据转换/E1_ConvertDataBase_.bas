@@ -929,6 +929,12 @@ Sub E1_ConvertDataBase()
             VAL2_arr(ii, VAL2("SN")) = SN(UDC_arr(i, UDC("NODENUM")))  '站号
             VAL2_arr(ii, VAL2("ONDESC")) = UDC_arr(i, UDC("STATETXT(1)"))  '开/启描述
             VAL2_arr(ii, VAL2("OFDESC")) = UDC_arr(i, UDC("STATETXT(0)"))  '关/停描述
+            
+            If Len(UDC_arr(i, UDC("DISRC(1)"))) = 0 And Len(UDC_arr(i, UDC("DISRC(2)"))) = 0 Then
+               VAL2_arr(ii, VAL2("FBKONEN")) = "1"
+               VAL2_arr(ii, VAL2("FBKOFEN")) = "1"
+            End If
+            
             ii = ii + 1 '行计数
         End If
         
@@ -938,6 +944,12 @@ Sub E1_ConvertDataBase()
             MOT2_arr(jj, MOT2("SN")) = SN(UDC_arr(i, UDC("NODENUM")))  '站号
             MOT2_arr(jj, MOT2("ONDESC")) = UDC_arr(i, UDC("STATETXT(1)"))  '开/启描述
             MOT2_arr(jj, MOT2("OFDESC")) = UDC_arr(i, UDC("STATETXT(0)"))  '关/停描述
+            
+            If Len(UDC_arr(i, UDC("DISRC(1)"))) = 0 And Len(UDC_arr(i, UDC("DISRC(2)"))) = 0 Then
+               MOT2_arr(ii, MOT2("FBKONEN")) = "1"
+               MOT2_arr(ii, MOT2("FBKOFEN")) = "1"
+           End If
+            
             jj = jj + 1 '行计数
         End If
     Next

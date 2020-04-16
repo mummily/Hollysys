@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pou>
+	<path><![CDATA[\/PID]]></path>
+	<name>11TICRS0104_PID</name>
+	<secondName></secondName>
+	<description></description>
+	<flags>2048</flags>
+	<POUCycle>500</POUCycle>
+	<auto-sort>0</auto-sort>
+	<exporttime>2020-04-07 10:50:08</exporttime>
+	<amendtime>2020-04-03 13:52:40</amendtime>
+	<downloadtime></downloadtime>
+	<modifier>AAAA</modifier>
+	<PouPaperSize>A3</PouPaperSize>
+	<PouPrintType>0</PouPrintType>
+	<PouExcuteOrder>93</PouExcuteOrder>
+	<interface>
+<![CDATA[PROGRAM 11TICRS0104_PID
+VAR
+END_VAR]]>
+	</interface>
+	<cfc>
+		<element type="box">
+			<id>1</id>
+			<AT_position>19,2</AT_position>
+			<isinst>TRUE</isinst>
+			<text>11TICRS0104</text>
+			<AT_type>PIDA</AT_type>
+			<typetext>BT_FB</typetext>
+			<ttype>4</ttype>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>0</sortid>
+			<input inputid="2" inputidx="0" negate="false" visible="true" pinname="PV" />
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="INCOMP"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="OUTCOMP"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="TRKVAL"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="TRKSW"/>
+			<input inputid="11" inputidx="0" negate="false" visible="true" pinname="PIDTYPE" />
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="AUXMODE"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="AUXCOMP"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="AUXOVE"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="TD"/>
+			<input inputid="9" inputidx="0" negate="false" visible="true" pinname="Q" />
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="ALMOPT"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="SP"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="CYC"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="MODE"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="KP"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="TI"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="KD"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="OUTU"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="OUTL"/>
+			<output negate="false" visible="true" pinname="OUT"/>
+			<output negate="false" visible="true" pinname="SP"/>
+			<output negate="false" visible="false" pinname="CYC"/>
+			<output negate="false" visible="false" pinname="MODE"/>
+			<output negate="false" visible="false" pinname="KP"/>
+			<output negate="false" visible="false" pinname="TI"/>
+			<output negate="false" visible="false" pinname="KD"/>
+			<output negate="false" visible="false" pinname="OUTU"/>
+			<output negate="false" visible="false" pinname="OUTL"/>
+		</element>
+		<element type="input">
+			<id>2</id>
+			<AT_position>17,3</AT_position>
+			<text>11TI0104.AV</text>
+			<Comment>Ä¥Ãº»úA-1101A³ö¿Ú·ÛÃºÎÂ¶È</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>9</id>
+			<AT_position>17,13</AT_position>
+			<text>11TI0104.Q</text>
+			<Comment>Ä¥Ãº»úA-1101A³ö¿Ú·ÛÃºÎÂ¶È</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>11</id>
+			<AT_position>17,8</AT_position>
+			<text>1</text>
+			<negate>false</negate>
+			<ttype>5</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="box">
+			<id>5</id>
+			<AT_position>68,4</AT_position>
+			<Comment>SYNGAS FLOW TO F1101A</Comment>
+			<isinst>TRUE</isinst>
+			<text>11FIC0111</text>
+			<AT_type>PIDA</AT_type>
+			<typetext>BT_FB</typetext>
+			<ttype>4</ttype>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>4</sortid>
+			<input inputid="6" inputidx="0" negate="false" visible="true" pinname="PV" />
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="INCOMP"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="OUTCOMP"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="TRKVAL"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="TRKSW"/>
+			<input inputid="15" inputidx="0" negate="false" visible="true" pinname="PIDTYPE" />
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="AUXMODE"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="AUXCOMP"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="AUXOVE"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="TD"/>
+			<input inputid="10" inputidx="0" negate="false" visible="true" pinname="Q" />
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="ALMOPT"/>
+			<input inputid="108" inputidx="0" negate="false" visible="true" pinname="SP" />
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="CYC"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="MODE"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="KP"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="TI"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="KD"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="OUTU"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="OUTL"/>
+			<output negate="false" visible="true" pinname="OUT"/>
+			<output negate="false" visible="true" pinname="SP"/>
+			<output negate="false" visible="false" pinname="CYC"/>
+			<output negate="false" visible="false" pinname="MODE"/>
+			<output negate="false" visible="false" pinname="KP"/>
+			<output negate="false" visible="false" pinname="TI"/>
+			<output negate="false" visible="false" pinname="KD"/>
+			<output negate="false" visible="false" pinname="OUTU"/>
+			<output negate="false" visible="false" pinname="OUTL"/>
+		</element>
+		<element type="input">
+			<id>6</id>
+			<AT_position>66,5</AT_position>
+			<text>11FI0111.AV</text>
+			<Comment>È¥F-1101AÈÈ·çÂ¯ºÏ³ÉÆøÁ÷Á¿</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>10</id>
+			<AT_position>66,11</AT_position>
+			<text>11FI0111.Q</text>
+			<Comment>È¥F-1101AÈÈ·çÂ¯ºÏ³ÉÆøÁ÷Á¿</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>15</id>
+			<AT_position>66,10</AT_position>
+			<text>2</text>
+			<negate>false</negate>
+			<ttype>5</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="output">
+			<id>8</id>
+			<position>63,0</position>
+			<text>11FV0111.AI</text>
+			<Comment>1#ÈÈ·çÂ¯ºÏ³ÉÆø¹ÜÁ÷Á¿µ÷½Ú</Comment>
+			<ttype>4</ttype>
+			<Inputid>5</Inputid>
+			<Inputidx>0</Inputidx>
+			<negate>false</negate>
+			<sortid>5</sortid>
+		</element>
+		<element type="box">
+			<id>3</id>
+			<AT_position>66,30</AT_position>
+			<Comment>DIESEL FLOW TO F1101A</Comment>
+			<isinst>TRUE</isinst>
+			<text>11FIC0112</text>
+			<AT_type>PIDA</AT_type>
+			<typetext>BT_FB</typetext>
+			<ttype>4</ttype>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>9</sortid>
+			<input inputid="4" inputidx="0" negate="false" visible="true" pinname="PV" />
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="INCOMP"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="OUTCOMP"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="TRKVAL"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="TRKSW"/>
+			<input inputid="20" inputidx="0" negate="false" visible="true" pinname="PIDTYPE" />
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="AUXMODE"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="AUXCOMP"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="AUXOVE"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="TD"/>
+			<input inputid="7" inputidx="0" negate="false" visible="true" pinname="Q" />
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="ALMOPT"/>
+			<input inputid="144" inputidx="0" negate="false" visible="true" pinname="SP" />
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="CYC"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="MODE"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="KP"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="TI"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="KD"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="OUTU"/>
+			<input inputid="0" inputidx="0" negate="false" visible="true" pinname="OUTL"/>
+			<output negate="false" visible="true" pinname="OUT"/>
+			<output negate="false" visible="true" pinname="SP"/>
+			<output negate="false" visible="false" pinname="CYC"/>
+			<output negate="false" visible="false" pinname="MODE"/>
+			<output negate="false" visible="false" pinname="KP"/>
+			<output negate="false" visible="false" pinname="TI"/>
+			<output negate="false" visible="false" pinname="KD"/>
+			<output negate="false" visible="false" pinname="OUTU"/>
+			<output negate="false" visible="false" pinname="OUTL"/>
+		</element>
+		<element type="input">
+			<id>4</id>
+			<AT_position>65,31</AT_position>
+			<text>11FI0112.AV</text>
+			<Comment>È¥F-1101AÈÈ·çÂ¯²ñÓÍÁ÷Á¿</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>7</id>
+			<AT_position>65,38</AT_position>
+			<text>11FI0112.Q</text>
+			<Comment>È¥F-1101AÈÈ·çÂ¯²ñÓÍÁ÷Á¿</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="box">
+			<id>272</id>
+			<AT_position>24,38</AT_position>
+			<AT_type>MOVE</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>true</AT_isen>
+			<AT_iseno>true</AT_iseno>
+			<sortid>22</sortid>
+			<input inputid="270" inputidx="0" negate="false" visible="true" pinname="EN" />
+			<input inputid="275" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname="ENO"/>
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="input">
+			<id>273</id>
+			<AT_position>21,37</AT_position>
+			<text>11FIC0112.MODE</text>
+			<Comment>DIESEL FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="output">
+			<id>274</id>
+			<position>28,37</position>
+			<text>11TICRS0104.MODE</text>
+			<ttype>4</ttype>
+			<Inputid>271</Inputid>
+			<Inputidx>1</Inputidx>
+			<negate>false</negate>
+			<sortid>21</sortid>
+		</element>
+		<element type="input">
+			<id>275</id>
+			<AT_position>21,40</AT_position>
+			<text>11FIC0112.OVE</text>
+			<Comment>DIESEL FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="output">
+			<id>276</id>
+			<position>28,40</position>
+			<text>11TICRS0104.AUXOVE</text>
+			<ttype>4</ttype>
+			<Inputid>272</Inputid>
+			<Inputidx>1</Inputidx>
+			<negate>false</negate>
+			<sortid>23</sortid>
+		</element>
+		<element type="box">
+			<id>16</id>
+			<AT_position>18,46</AT_position>
+			<AT_type>NE</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>27</sortid>
+			<input inputid="17" inputidx="0" negate="false" visible="true" pinname="" />
+			<input inputid="18" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="input">
+			<id>17</id>
+			<AT_position>16,47</AT_position>
+			<text>11FIC0111.MODE</text>
+			<Comment>SYNGAS FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>18</id>
+			<AT_position>16,48</AT_position>
+			<text>2</text>
+			<negate>false</negate>
+			<ttype>5</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="box">
+			<id>19</id>
+			<AT_position>39,50</AT_position>
+			<AT_type>SEL</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>30</sortid>
+			<input inputid="320" inputidx="0" negate="false" visible="true" pinname="" />
+			<input inputid="21" inputidx="0" negate="false" visible="true" pinname="" />
+			<input inputid="22" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="input">
+			<id>21</id>
+			<AT_position>37,52</AT_position>
+			<text>11TICRS0104.MODE</text>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>22</id>
+			<AT_position>37,53</AT_position>
+			<text>0</text>
+			<negate>false</negate>
+			<ttype>5</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="output">
+			<id>23</id>
+			<position>43,51</position>
+			<text>11TICRS0104.MODE</text>
+			<ttype>4</ttype>
+			<Inputid>19</Inputid>
+			<Inputidx>0</Inputidx>
+			<negate>false</negate>
+			<sortid>31</sortid>
+		</element>
+		<element type="input">
+			<id>20</id>
+			<AT_position>64,36</AT_position>
+			<text>2</text>
+			<negate>false</negate>
+			<ttype>5</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="output">
+			<id>24</id>
+			<position>65,26</position>
+			<text>11FV0112.AI</text>
+			<Comment>1#ÈÈ·çÂ¯²ñÓÍ¹ÜÁ÷Á¿µ÷½Ú</Comment>
+			<ttype>4</ttype>
+			<Inputid>3</Inputid>
+			<Inputidx>0</Inputidx>
+			<negate>false</negate>
+			<sortid>10</sortid>
+		</element>
+		<element type="box">
+			<id>25</id>
+			<AT_position>15,32</AT_position>
+			<isinst>TRUE</isinst>
+			<text>11FIC0111_CASI</text>
+			<AT_type>CASI</AT_type>
+			<typetext>BT_FB</typetext>
+			<ttype>4</ttype>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>16</sortid>
+			<input inputid="298" inputidx="0" negate="false" visible="true" pinname="CAS" />
+			<output negate="false" visible="true" pinname="OUT"/>
+		</element>
+		<element type="box">
+			<id>28</id>
+			<AT_position>55,18</AT_position>
+			<isinst>TRUE</isinst>
+			<text>11FIC0111_CASO</text>
+			<AT_type>CASO</AT_type>
+			<typetext>BT_FB</typetext>
+			<ttype>4</ttype>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>2</sortid>
+			<input inputid="1" inputidx="0" negate="false" visible="true" pinname="IN" />
+			<input inputid="48" inputidx="0" negate="false" visible="true" pinname="CAS" />
+			<output negate="false" visible="true" pinname="OUT"/>
+		</element>
+		<element type="input">
+			<id>298</id>
+			<AT_position>14,33</AT_position>
+			<text>11FIC0111</text>
+			<Comment>SYNGAS FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="box">
+			<id>299</id>
+			<AT_position>24,31</AT_position>
+			<AT_type>MOVE</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>true</AT_isen>
+			<AT_iseno>true</AT_iseno>
+			<sortid>17</sortid>
+			<input inputid="148" inputidx="0" negate="false" visible="true" pinname="EN" />
+			<input inputid="25" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname="ENO"/>
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="output">
+			<id>300</id>
+			<position>28,33</position>
+			<text>11TICRS0104.AUXCOMP</text>
+			<ttype>4</ttype>
+			<Inputid>299</Inputid>
+			<Inputidx>1</Inputidx>
+			<negate>false</negate>
+			<sortid>18</sortid>
+		</element>
+		<element type="box">
+			<id>301</id>
+			<AT_position>15,43</AT_position>
+			<isinst>TRUE</isinst>
+			<text>11FIC0112_CASI</text>
+			<AT_type>CASI</AT_type>
+			<typetext>BT_FB</typetext>
+			<ttype>4</ttype>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>24</sortid>
+			<input inputid="302" inputidx="0" negate="false" visible="true" pinname="CAS" />
+			<output negate="false" visible="true" pinname="OUT"/>
+		</element>
+		<element type="input">
+			<id>302</id>
+			<AT_position>14,44</AT_position>
+			<text>11FIC0112</text>
+			<Comment>DIESEL FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="box">
+			<id>303</id>
+			<AT_position>24,42</AT_position>
+			<AT_type>MOVE</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>true</AT_isen>
+			<AT_iseno>true</AT_iseno>
+			<sortid>25</sortid>
+			<input inputid="270" inputidx="0" negate="false" visible="true" pinname="EN" />
+			<input inputid="301" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname="ENO"/>
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="output">
+			<id>304</id>
+			<position>28,44</position>
+			<text>11TICRS0104.AUXCOMP</text>
+			<ttype>4</ttype>
+			<Inputid>303</Inputid>
+			<Inputidx>1</Inputidx>
+			<negate>false</negate>
+			<sortid>26</sortid>
+		</element>
+		<element type="box">
+			<id>305</id>
+			<AT_position>18,49</AT_position>
+			<AT_type>NE</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>28</sortid>
+			<input inputid="306" inputidx="0" negate="false" visible="true" pinname="" />
+			<input inputid="307" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="input">
+			<id>306</id>
+			<AT_position>16,50</AT_position>
+			<text>11FIC0112.MODE</text>
+			<Comment>DIESEL FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>307</id>
+			<AT_position>16,51</AT_position>
+			<text>2</text>
+			<negate>false</negate>
+			<ttype>5</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>48</id>
+			<AT_position>54,20</AT_position>
+			<text>11FIC0111</text>
+			<Comment>SYNGAS FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="box">
+			<id>320</id>
+			<AT_position>24,46</AT_position>
+			<AT_type>AND</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>29</sortid>
+			<input inputid="16" inputidx="0" negate="false" visible="true" pinname="" />
+			<input inputid="305" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="input">
+			<id>65</id>
+			<AT_position>55,13</AT_position>
+			<text>11FIC0111.MODE</text>
+			<Comment>SYNGAS FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>86</id>
+			<AT_position>55,14</AT_position>
+			<text>2</text>
+			<negate>false</negate>
+			<ttype>5</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="box">
+			<id>97</id>
+			<AT_position>56,12</AT_position>
+			<AT_type>EQ</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>1</sortid>
+			<input inputid="65" inputidx="0" negate="false" visible="true" pinname="" />
+			<input inputid="86" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="box">
+			<id>108</id>
+			<AT_position>62,12</AT_position>
+			<AT_type>SEL</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>3</sortid>
+			<input inputid="97" inputidx="0" negate="false" visible="true" pinname="" />
+			<input inputid="138" inputidx="0" negate="false" visible="true" pinname="" />
+			<input inputid="28" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="input">
+			<id>138</id>
+			<AT_position>60,15</AT_position>
+			<text>11FIC0111.SP</text>
+			<Comment>SYNGAS FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="box">
+			<id>139</id>
+			<AT_position>53,47</AT_position>
+			<isinst>TRUE</isinst>
+			<text>11FIC0112_CASO</text>
+			<AT_type>CASO</AT_type>
+			<typetext>BT_FB</typetext>
+			<ttype>4</ttype>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>7</sortid>
+			<input inputid="1" inputidx="0" negate="false" visible="true" pinname="IN" />
+			<input inputid="140" inputidx="0" negate="false" visible="true" pinname="CAS" />
+			<output negate="false" visible="true" pinname="OUT"/>
+		</element>
+		<element type="input">
+			<id>140</id>
+			<AT_position>52,49</AT_position>
+			<text>11FIC0112</text>
+			<Comment>DIESEL FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>141</id>
+			<AT_position>53,42</AT_position>
+			<text>11FIC0112.MODE</text>
+			<Comment>DIESEL FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>142</id>
+			<AT_position>53,43</AT_position>
+			<text>2</text>
+			<negate>false</negate>
+			<ttype>5</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="box">
+			<id>143</id>
+			<AT_position>54,41</AT_position>
+			<AT_type>EQ</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>6</sortid>
+			<input inputid="141" inputidx="0" negate="false" visible="true" pinname="" />
+			<input inputid="142" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="box">
+			<id>144</id>
+			<AT_position>60,41</AT_position>
+			<AT_type>SEL</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>8</sortid>
+			<input inputid="143" inputidx="0" negate="false" visible="true" pinname="" />
+			<input inputid="145" inputidx="0" negate="false" visible="true" pinname="" />
+			<input inputid="139" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="input">
+			<id>145</id>
+			<AT_position>58,44</AT_position>
+			<text>11FIC0112.SP</text>
+			<Comment>DIESEL FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>146</id>
+			<AT_position>16,24</AT_position>
+			<text>11FIC0111.MODE</text>
+			<Comment>SYNGAS FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>147</id>
+			<AT_position>16,25</AT_position>
+			<text>2</text>
+			<negate>false</negate>
+			<ttype>5</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="box">
+			<id>148</id>
+			<AT_position>17,23</AT_position>
+			<AT_type>EQ</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>11</sortid>
+			<input inputid="146" inputidx="0" negate="false" visible="true" pinname="" />
+			<input inputid="147" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="box">
+			<id>201</id>
+			<AT_position>24,24</AT_position>
+			<AT_type>MOVE</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>true</AT_isen>
+			<AT_iseno>true</AT_iseno>
+			<sortid>12</sortid>
+			<input inputid="148" inputidx="0" negate="false" visible="true" pinname="EN" />
+			<input inputid="225" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname="ENO"/>
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="box">
+			<id>203</id>
+			<AT_position>24,27</AT_position>
+			<AT_type>MOVE</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>true</AT_isen>
+			<AT_iseno>true</AT_iseno>
+			<sortid>14</sortid>
+			<input inputid="148" inputidx="0" negate="false" visible="true" pinname="EN" />
+			<input inputid="243" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname="ENO"/>
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="input">
+			<id>225</id>
+			<AT_position>21,26</AT_position>
+			<text>11FIC0111.MODE</text>
+			<Comment>SYNGAS FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="output">
+			<id>242</id>
+			<position>28,26</position>
+			<text>11TICRS0104.MODE</text>
+			<ttype>4</ttype>
+			<Inputid>201</Inputid>
+			<Inputidx>1</Inputidx>
+			<negate>false</negate>
+			<sortid>13</sortid>
+		</element>
+		<element type="input">
+			<id>243</id>
+			<AT_position>21,29</AT_position>
+			<text>11FIC0111.OVE</text>
+			<Comment>SYNGAS FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="output">
+			<id>267</id>
+			<position>28,29</position>
+			<text>11TICRS0104.AUXOVE</text>
+			<ttype>4</ttype>
+			<Inputid>203</Inputid>
+			<Inputidx>1</Inputidx>
+			<negate>false</negate>
+			<sortid>15</sortid>
+		</element>
+		<element type="input">
+			<id>268</id>
+			<AT_position>16,35</AT_position>
+			<text>11FIC0112.MODE</text>
+			<Comment>DIESEL FLOW TO F1101A</Comment>
+			<negate>false</negate>
+			<ttype>4</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="input">
+			<id>269</id>
+			<AT_position>16,36</AT_position>
+			<text>2</text>
+			<negate>false</negate>
+			<ttype>5</ttype>
+			<Flag>FALSE</Flag>
+		</element>
+		<element type="box">
+			<id>270</id>
+			<AT_position>17,34</AT_position>
+			<AT_type>EQ</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>false</AT_isen>
+			<AT_iseno>false</AT_iseno>
+			<sortid>19</sortid>
+			<input inputid="268" inputidx="0" negate="false" visible="true" pinname="" />
+			<input inputid="269" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+		<element type="box">
+			<id>271</id>
+			<AT_position>24,35</AT_position>
+			<AT_type>MOVE</AT_type>
+			<typetext>BT_OPERATOR</typetext>
+			<AT_isen>true</AT_isen>
+			<AT_iseno>true</AT_iseno>
+			<sortid>20</sortid>
+			<input inputid="270" inputidx="0" negate="false" visible="true" pinname="EN" />
+			<input inputid="273" inputidx="0" negate="false" visible="true" pinname="" />
+			<output negate="false" visible="true" pinname="ENO"/>
+			<output negate="false" visible="true" pinname=""/>
+		</element>
+	</cfc>
+</pou>
