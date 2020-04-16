@@ -19,44 +19,8 @@ VAR
 END_VAR]]>
 </interface>
 <cfc>
-<element type="input">
-<id>1</id>
-<AT_position>-1,2</AT_position>
-<text>TRUE</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
-<id>2</id>
-<AT_position>-1,2</AT_position>
-<text>TRUE</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
-<id>3</id>
-<AT_position>-1,2</AT_position>
-<text>TRUE</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
-<element type="input">
-<id>4</id>
-<AT_position>-1,2</AT_position>
-<text>TRUE</text>
-<Comment>?????</Comment>
-<negate>false</negate>
-<ttype>4</ttype>
-<Flag>FALSE</Flag>
-</element>
 <element type="output">
-<id>5</id>
+<id>1</id>
 <position>38,4</position>
 <text>13QC1300_SW3.S1</text>
 <Comment>?????</Comment>
@@ -68,7 +32,7 @@ END_VAR]]>
 <sortid>0</sortid>
 </element>
 <element type="output">
-<id>6</id>
+<id>2</id>
 <position>38,6</position>
 <text>13QC1300_SW3.S2</text>
 <Comment>?????</Comment>
@@ -80,7 +44,7 @@ END_VAR]]>
 <sortid>0</sortid>
 </element>
 <element type="output">
-<id>7</id>
+<id>3</id>
 <position>38,8</position>
 <text>13QC1300_SW2.S1</text>
 <Comment>?????</Comment>
@@ -92,7 +56,7 @@ END_VAR]]>
 <sortid>0</sortid>
 </element>
 <element type="output">
-<id>8</id>
+<id>4</id>
 <position>38,10</position>
 <text>13QC1300_SW2.S2</text>
 <Comment>?????</Comment>

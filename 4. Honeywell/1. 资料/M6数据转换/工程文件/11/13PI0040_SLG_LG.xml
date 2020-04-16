@@ -146,7 +146,34 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
-<id>27</id>
+<id>26</id>
+<AT_position>50,4</AT_position>
+<text>13PI0040_SLG_FL7</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>28</id>
+<AT_position>50,10</AT_position>
+<text>13PI0040_SLG_FL8</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>30</id>
+<AT_position>50,16</AT_position>
+<text>13PI0040_SLG_FL9</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>33</id>
 <AT_position>50,64</AT_position>
 <text>13PI0040_SLG_NN3</text>
 <Comment>?????</Comment>
@@ -279,6 +306,48 @@ END_VAR]]>
 </element>
 <element type="box">
 <id>25</id>
+<AT_position>51,2</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="26" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>27</id>
+<AT_position>51,8</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="28" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>29</id>
+<AT_position>51,14</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="30" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>31</id>
 <AT_position>51,62</AT_position>
 <isinst>TRUE</isinst>
 <text></text>
@@ -292,7 +361,7 @@ END_VAR]]>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="box">
-<id>26</id>
+<id>32</id>
 <AT_position>51,62</AT_position>
 <isinst>TRUE</isinst>
 <text></text>
@@ -301,48 +370,48 @@ END_VAR]]>
 <ttype>9</ttype>
 <sortid>26</sortid>
 <input inputid="23" inputidx="0" negate="false" visible="true" pinname="EN"/>
-<input inputid="27" inputidx="0" negate="false" visible="true" pinname=""/>
+<input inputid="33" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname="ENO"/>
 <output negate="false" visible="true" pinname=""/>
 </element>
 <element type="output">
-<id>28</id>
+<id>34</id>
 <position>61,2</position>
 <text>13PI0040_SLG_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>1</Inputid>
+<Inputid>25</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>27</sortid>
 </element>
 <element type="output">
-<id>29</id>
+<id>35</id>
 <position>61,8</position>
 <text>13PI0040_SLG_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>2</Inputid>
+<Inputid>27</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>28</sortid>
 </element>
 <element type="output">
-<id>30</id>
+<id>36</id>
 <position>61,14</position>
 <text>13PI0040_SLG_NN3</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>29</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>29</sortid>
 </element>
 <element type="output">
-<id>31</id>
+<id>37</id>
 <position>61,26</position>
 <text>13PI0040_SLG_FL10</text>
 <Comment>?????</Comment>
@@ -354,7 +423,7 @@ END_VAR]]>
 <sortid>30</sortid>
 </element>
 <element type="output">
-<id>32</id>
+<id>38</id>
 <position>61,44</position>
 <text>13PI0040_SLG_FL11</text>
 <Comment>?????</Comment>
@@ -366,7 +435,7 @@ END_VAR]]>
 <sortid>31</sortid>
 </element>
 <element type="output">
-<id>33</id>
+<id>39</id>
 <position>61,8</position>
 <text>13PI0040_SLG_FL12</text>
 <Comment>?????</Comment>
@@ -378,25 +447,25 @@ END_VAR]]>
 <sortid>32</sortid>
 </element>
 <element type="output">
-<id>34</id>
+<id>40</id>
 <position>61,56</position>
 <text>13PI0040_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>25</Inputid>
+<Inputid>31</Inputid>
 <Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>33</sortid>
 </element>
 <element type="output">
-<id>35</id>
+<id>41</id>
 <position>61,62</position>
 <text>13PI0040_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>26</Inputid>
+<Inputid>32</Inputid>
 <Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>34</sortid>

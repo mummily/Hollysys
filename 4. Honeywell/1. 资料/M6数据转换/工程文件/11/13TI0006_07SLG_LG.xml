@@ -37,26 +37,72 @@ END_VAR]]>
 <ttype>4</ttype>
 <Flag>FALSE</Flag>
 </element>
-<element type="output">
+<element type="input">
+<id>4</id>
+<AT_position>27,4</AT_position>
+<text>13TI0006_07SLG_FL7</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>6</id>
+<AT_position>27,10</AT_position>
+<text>13TI0006_07SLG_FL8</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="box">
 <id>3</id>
+<AT_position>28,2</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="4" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>5</id>
+<AT_position>28,8</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="6" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="output">
+<id>7</id>
 <position>38,2</position>
 <text>13TI0006_07SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>1</Inputid>
+<Inputid>3</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>25</sortid>
 </element>
 <element type="output">
-<id>4</id>
+<id>8</id>
 <position>38,8</position>
 <text>13TI0006_07SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>2</Inputid>
+<Inputid>5</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>26</sortid>

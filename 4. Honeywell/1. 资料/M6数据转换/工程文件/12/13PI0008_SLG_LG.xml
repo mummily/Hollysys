@@ -83,6 +83,33 @@ END_VAR]]>
 <Flag>FALSE</Flag>
 </element>
 <element type="input">
+<id>15</id>
+<AT_position>50,4</AT_position>
+<text>13PI0008_SLG_FL7</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>17</id>
+<AT_position>50,10</AT_position>
+<text>13PI0008_SLG_FL8</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
+<id>19</id>
+<AT_position>50,16</AT_position>
+<text>13PI0008_SLG_FL9</text>
+<Comment>?????</Comment>
+<negate>false</negate>
+<ttype>4</ttype>
+<Flag>FALSE</Flag>
+</element>
+<element type="input">
 <id>10</id>
 <AT_position>20,40</AT_position>
 <text>T#5s</text>
@@ -152,44 +179,86 @@ END_VAR]]>
 <input inputid="9" inputidx="0" negate="false" visible="true" pinname=""/>
 <output negate="false" visible="true" pinname=""/>
 </element>
-<element type="output">
+<element type="box">
 <id>14</id>
+<AT_position>51,2</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="15" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="1" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>16</id>
+<AT_position>51,8</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="17" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="2" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="box">
+<id>18</id>
+<AT_position>51,14</AT_position>
+<isinst>TRUE</isinst>
+<text></text>
+<AT_type>MOVE</AT_type>
+<typetext>BT_FB</typetext>
+<ttype>9</ttype>
+<sortid>0</sortid>
+<input inputid="19" inputidx="0" negate="false" visible="true" pinname="EN"/>
+<input inputid="3" inputidx="0" negate="false" visible="true" pinname=""/>
+<output negate="false" visible="true" pinname="ENO"/>
+<output negate="false" visible="true" pinname=""/>
+</element>
+<element type="output">
+<id>20</id>
 <position>61,2</position>
 <text>13PI0008_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>1</Inputid>
+<Inputid>14</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>25</sortid>
 </element>
 <element type="output">
-<id>15</id>
+<id>21</id>
 <position>61,8</position>
 <text>13PI0008_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>2</Inputid>
+<Inputid>16</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>26</sortid>
 </element>
 <element type="output">
-<id>16</id>
+<id>22</id>
 <position>61,14</position>
 <text>13PI0008_SLG_NN1</text>
 <Comment>?????</Comment>
 <negate>false</negate>
 <ttype>4</ttype>
-<Inputid>3</Inputid>
+<Inputid>18</Inputid>
 <Inputidx>0</Inputidx>
 <negate>false</negate>
 <sortid>27</sortid>
 </element>
 <element type="output">
-<id>17</id>
+<id>23</id>
 <position>61,26</position>
 <text>13PAL0008.DI</text>
 <Comment>?????</Comment>
