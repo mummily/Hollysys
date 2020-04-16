@@ -653,10 +653,11 @@ Private Sub WriteInput_E_NN_FL(sPouName As String, index As Integer)
                 ElseIf .LOSRC Like "NN*" Or .LOENBL Like "NN*" Then
                     POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                     POU.WriteLine "<id>" & ExcelInfo.HN_E(index).ElementID_NF & "</id>"
-                    POU.WriteLine "<AT_position>" & ExcelInfo.HN_E(index).Element_X - 1 & "," & ExcelInfo.HN_E(index).Element_Y + 2 & "</AT_position>"
                     If .LOSRC Like "NN*" Then
+                        POU.WriteLine "<AT_position>" & ExcelInfo.HN_E(index).Element_X - 1 & "," & ExcelInfo.HN_E(index).Element_Y + 2 & "</AT_position>"
                         POU.WriteLine "<text>" & sPouName & "_" & .LOSRC & "</text>"
                     Else
+                        POU.WriteLine "<AT_position>" & ExcelInfo.HN_E(index).Element_X - 1 & "," & ExcelInfo.HN_E(index).Element_Y + 1 & "</AT_position>"
                         POU.WriteLine "<text>" & sPouName & "_" & .LOENBL & "</text>"
                     End If
                     POU.WriteLine "<Comment>?????</Comment>"
@@ -667,10 +668,11 @@ Private Sub WriteInput_E_NN_FL(sPouName As String, index As Integer)
                 ElseIf .LOSRC Like "FL*" Or .LOENBL Like "FL*" Then
                     POU.WriteLine "<element type=" & Lab & "input" & Lab & ">"
                     POU.WriteLine "<id>" & ExcelInfo.HN_E(index).ElementID_NF & "</id>"
-                    POU.WriteLine "<AT_position>" & ExcelInfo.HN_E(index).Element_X - 1 & "," & ExcelInfo.HN_E(index).Element_Y + 2 & "</AT_position>"
                     If .LOSRC Like "FL*" Then
+                        POU.WriteLine "<AT_position>" & ExcelInfo.HN_E(index).Element_X - 1 & "," & ExcelInfo.HN_E(index).Element_Y + 2 & "</AT_position>"
                         POU.WriteLine "<text>TRUE</text>"
                     Else
+                        POU.WriteLine "<AT_position>" & ExcelInfo.HN_E(index).Element_X - 1 & "," & ExcelInfo.HN_E(index).Element_Y + 1 & "</AT_position>"
                         POU.WriteLine "<text>" & sPouName & "_" & .LOENBL & "</text>"
                     End If
                     POU.WriteLine "<Comment>?????</Comment>"
@@ -1220,7 +1222,7 @@ Private Sub WriteOutput_Normal(Output As T_HN_OUTPUT)
         Dim sInputidx As String
         sInputidx = "0"
         
-        If .LOENBL Like "SO*" Or .LOENBL Like "L*" Then
+        If (.LOENBL Like "SO*" Or .LOENBL Like "L*") Or ((.LOSRC Like "SO*" Or .LOSRC Like "L*") And (.LOENBL Like "NN*" Or .LOENBL Like "FL*") And .LOENBL <> "FL1" And .LOENBL <> "FL2") Then
             sInputidx = "1"
         ElseIf .ElementID_Ref <> 0 Then
             sInputidx = "1"

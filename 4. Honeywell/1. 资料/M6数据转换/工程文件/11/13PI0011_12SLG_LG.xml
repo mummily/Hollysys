@@ -75,7 +75,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>10</id>
-<AT_position>35,4</AT_position>
+<AT_position>35,3</AT_position>
 <text>13PI0011_12SLG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -84,7 +84,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>12</id>
-<AT_position>35,10</AT_position>
+<AT_position>35,9</AT_position>
 <text>13PI0011_12SLG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -153,7 +153,7 @@ END_VAR]]>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>9</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>25</sortid>
 </element>
@@ -165,7 +165,7 @@ END_VAR]]>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>11</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>26</sortid>
 </element>

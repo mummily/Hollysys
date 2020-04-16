@@ -129,7 +129,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>20</id>
-<AT_position>35,4</AT_position>
+<AT_position>35,3</AT_position>
 <text>15PISZA0017_SLG_FL10</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -138,7 +138,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>22</id>
-<AT_position>35,10</AT_position>
+<AT_position>35,9</AT_position>
 <text>15PISZA0017_SLG_FL11</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -147,7 +147,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>24</id>
-<AT_position>35,16</AT_position>
+<AT_position>35,15</AT_position>
 <text>15PISZA0017_SLG_FL12</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -276,7 +276,7 @@ END_VAR]]>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>19</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>25</sortid>
 </element>
@@ -288,7 +288,7 @@ END_VAR]]>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>21</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>26</sortid>
 </element>
@@ -300,7 +300,7 @@ END_VAR]]>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>23</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>27</sortid>
 </element>

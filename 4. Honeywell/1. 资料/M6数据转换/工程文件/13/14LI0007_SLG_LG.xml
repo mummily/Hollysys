@@ -39,7 +39,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>4</id>
-<AT_position>27,4</AT_position>
+<AT_position>27,3</AT_position>
 <text>14LI0007_SLG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -48,7 +48,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>6</id>
-<AT_position>27,10</AT_position>
+<AT_position>27,9</AT_position>
 <text>14LI0007_SLG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -91,7 +91,7 @@ END_VAR]]>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>3</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>25</sortid>
 </element>
@@ -103,7 +103,7 @@ END_VAR]]>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>5</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>26</sortid>
 </element>

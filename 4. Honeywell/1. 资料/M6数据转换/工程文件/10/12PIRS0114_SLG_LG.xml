@@ -129,7 +129,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>23</id>
-<AT_position>50,4</AT_position>
+<AT_position>50,3</AT_position>
 <text>12PIRS0114_SLG_FL7</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -138,7 +138,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>25</id>
-<AT_position>50,10</AT_position>
+<AT_position>50,9</AT_position>
 <text>12PIRS0114_SLG_FL8</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -147,7 +147,7 @@ END_VAR]]>
 </element>
 <element type="input">
 <id>27</id>
-<AT_position>50,16</AT_position>
+<AT_position>50,15</AT_position>
 <text>12PIRS0114_SLG_FL9</text>
 <Comment>?????</Comment>
 <negate>false</negate>
@@ -315,7 +315,7 @@ END_VAR]]>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>22</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>25</sortid>
 </element>
@@ -327,7 +327,7 @@ END_VAR]]>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>24</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>26</sortid>
 </element>
@@ -339,7 +339,7 @@ END_VAR]]>
 <negate>false</negate>
 <ttype>4</ttype>
 <Inputid>26</Inputid>
-<Inputidx>0</Inputidx>
+<Inputidx>1</Inputidx>
 <negate>false</negate>
 <sortid>27</sortid>
 </element>
