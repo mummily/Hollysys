@@ -1,0 +1,369 @@
+//============================================
+// Header Information Section
+//============================================
+
+// File Header Section
+
+[File Header]
+Description="This is a Capabilities File for Master Device"
+FileType=CapabilitiesFile
+FileDate=2018,08,17
+CffVersion=1,0
+
+// Device Header
+
+[Device Header]
+DeviceName = "FIELDBUS"
+CommGroup = 3
+CommClass = Class32
+CommSubClass = 
+DeviceClass = FIELDBUS
+
+//============================================
+//============================================
+// VFD Section
+//============================================
+//============================================
+
+// Device VFD
+
+[Device VFD 1]	// Management VFD
+VendorName = "HollySys Inc"
+ModelName = "MIB"
+Revision = "1.0"
+VersionOD = 0x01
+ProfileNumber = 0x4d47
+
+[Device VFD 2]	// FB VFD
+VendorName = "HollySys Inc"
+ModelName = "FIELDBUS"
+Revision = "1.0"
+VersionOD = 0x01
+ProfileNumber = 0x0000
+
+//============================================
+//============================================
+// Network Management Section
+//============================================
+//============================================
+
+// Network Management OD Directory
+
+[NM OD Directory]
+DirectoryRevisionNumber = 1
+NumberOfDirectoryObjects = 1
+TotalNumberOfDirectoryEntries = 8
+DirectoryIndexOfFirstCompositeListReference = 9
+NumberOfCompositeListReferences = 1
+StackMgtOdIndex = 300
+NumberOfObjectsInStackManagement = 1
+VcrListOdIndex = 301
+NumberOfObjectsInVcrList = 50
+DlmeBasicOdIndex = 360
+NumberOfObjectsInDllBasic = 2
+DlmeLinkMasterOdIndex = 0x16d
+NumberOfObjectsInDllLme = 0x8
+LinkScheduleListOdIndex = 0x175
+NumberOfObjectsInDllLinkSchedule = 0x6
+DlmeBridgeOdIndex = 0
+NumberOfObjectsInDllBridge = 0
+PlmeBasicOdIndex = 362
+NumberOfObjectsInPhyLme = 3
+ListOfMmeReferences = 9
+NumberOfMmeComposites = 0
+
+//============================================
+//============================================
+// Network Management Restrictions
+//============================================
+//============================================
+
+[NM Restrictions]
+
+//============================================
+// Physical Layer
+//============================================
+
+MediumAndDataRatesSupported = 0x4900000000000000
+IecVersion = 0x0001
+PowerMode = BUS_POWERED
+InterfaceMode = HALF_DUPLEX
+PowerRequired = 17
+
+ChannelStatisticsSupported = FALSE
+NumberOfChannels = 1
+
+//============================================
+// Data Link Parameters
+//============================================
+
+MaximumResponseDelaySlotTime = 9
+MinimumInterPduDelay = 3
+SlotTime =  3
+
+//============================================
+// Stack Capabilities
+//============================================
+
+FasArTypesAndRolesSupported = QUB_SERVER+\
+                              QUU_SOURCE+\
+                              BNU_SUBSCRIBER+\
+                              BNU_PUBLISHER
+MaxDlSapAddressSupported = 23
+MaxDlCepAddressSupported = 24
+VersionOfNmSpecSupported = 0x105                        // Version 1.4
+DlcepDeliveryFeaturesSupported=S_CLASSICAL+S_DISORDERED+S_ORDERED+S_UNORDERED\
+                              +R_CLASSICAL+R_DISORDERED+R_ORDERED+R_UNORDERED
+
+
+AgentFunctionsSupported = INDIVIDUAL_VCR_ENTRY_DOWNLOADABLE+\
+                          LAS_SCHEDULE_DOWNLOADABLE+\
+                          VCR_LIST_DOWNLOADABLE
+FmsFeaturesSupported = INFO_REPORT+\
+                       EVENT,\
+                       GET_OD+\
+                       READ+\
+                       WRITE+\
+                       INFO_REPORT+\
+                       ACK_EVENT+\
+                       GEN_DOWNLOAD
+
+//============================================
+// Dlme Basic Characteristics
+//============================================
+
+Version = 1
+BasicStatisticsSupportedFlag = FALSE
+DlDeviceConformance = 0x20010365
+DlOperatFunctionalClass = LINKMASTER
+MaxEntries = 24
+NumPermanentEntries = 1
+DynamicsSupportedFlag = TRUE
+StatisticsSupported = FALSE
+MaximumNumberOfClientVcrs = 0
+MaximumNumberOfServerVcrs = 24
+MaximumNumberOfSourceVcrs = 23
+MaximumNumberOfSinkVcrs = 0
+MaximumNumberOfSubscriberVcrs = 23
+MaximumNumberOfPublisherVcrs = 23
+
+DlmeLinkMasterCapabilitiesVariable = 0x04
+MaximumSchedulingOverhead = 5
+NumOfSchedules = 2
+NumOfSubSchedulesPerSchedule = 1
+MaximumSingleLasScheduleSize = 1024
+NumOfSequencesPerSubSchedule = 25
+NumOfElementsPerSequence = 25
+
+//============================================
+//============================================
+// Server Restrictions
+//============================================
+//============================================
+
+[Server Restrictions]
+//FmsMaxOutstandingServicesCalling = 0
+//FmsMaxOutstandingServicesCalled = 1
+
+//============================================
+//============================================
+// Network Management VCR Usage Section
+//============================================
+//============================================
+
+[NM VCR Usage 1]
+FasArTypeAndRole = QUB+\
+                   SERVER+\
+                   NOBYPASS
+FasDllLocalAddr = 0xF8
+FasDllConfiguredRemoteAddr = FREE
+FasDllSDAP = TIMEAVAILABLE+\
+             AUTH_SOURCE+\
+             NONSCHEDULED+\
+             DISORDERED
+FasDllResidualActivitySupported = RESIDUAL
+FasDllTimelinessClass = 0x00
+FmsFeaturesSupported = NONE,\
+                       GET_OD+\
+                       READ+\
+                       WRITE+\
+                       GEN_DOWNLOAD
+FmsMaxOutstandingServicesCalling = 0
+FmsMaxOutstandingServicesCalled = 1
+FasDllMaxDlsduSize = 128
+FmsVfdId = 1
+FasDllPublisherTimeWindowSize = 0
+FasDllPublisherSynchronizingDlcep = 0
+FasDllSubscriberTimeWindowSize = 0
+FasDllSubscriberSynchronizingDlcep = 0
+FasDllMaxConfirmDelayOnConnect = 60000
+FasDllMaxConfirmDelayOnData = 60000
+
+//============================================
+// System Management Section
+//============================================
+
+// System Management OD Directory
+
+[SM OD Directory]
+DirectoryRevisionNumber = 1
+NumberOfDirectoryObjects = 1
+TotalNumberOfDirectoryEntries = 5
+DirectoryIndexOfFirstCompositeListReference = 0
+NumberOfCompositeListReference = 0
+SmAgentStartingOdIndex = 258
+NumberOfSmAgentObjects = 4
+SyncAndSchedulingStartingOdIndex = 262
+NumberOfSyncAndSchedulingObjects = 8
+AddressAssignmentStartingOdIndex = 270
+NumberOfAddressAssignmentObjects = 3
+VfdListStartingOdIndex = 273
+NumberOfVfdListObjects = 2
+FbScheduleStartingOdIndex = 275
+NumberOfFbScheduleObjects = 17
+
+// System and Network Management VFD
+
+[SM VFD 1]
+VFD_REF = 1
+VFD_TAG = "MIB"
+
+// Function Block Application VFD
+
+[SM VFD 2]
+VFD_REF = 0x1234
+VFD_TAG = "FB Metso Application"
+
+// System Management Capability
+
+[SM Capability]
+SM_SUPPORT = SET_PDTAG_AGENT+\
+             SET_ADDR_AGENT+\
+             CLR_ADDR_AGENT+\
+             IDENTIFY_AGENT+\
+             LOC_FB_AGENT+\
+             FMS_SERVER+\
+             TIME_SLAVE+\
+             SCHEDULE_FB
+
+//============================================
+// Function Block Application Process Section
+//============================================
+
+// Function Block Application Process OD Directory
+
+[VFD 2 OD Directory]
+OdIndexForStartingActionObject = 0
+NumberOfActionObjects = 0
+OdIndexOfTheStartingLinkObjectInTheVfd = 750
+NumberOfLinkObjectsInTheVfd = 22
+OdIndexOfTheStartingAlertObjectInTheVfd = 800
+NumberOfAlertObjectsInTheVfd = 3
+OdIndexOfTheStartingTrendObjectInTheVfd = 850
+NumberOfTrendObjectsInTheVfd = 0x10
+OdIndexOfTheStartingDomainObjectInTheVfd = 0
+NumberOfDomainObjectsInTheVfd = 0
+DirectoryIndexForTheResourceBlock = 0x17
+NumberOfResourceBlocksInTheVfd = 1
+DirectoryRevisionNumber = 2
+NumberOfDirectoryObjects = 1
+TotalNumberOfDirectoryEntries = 0xf
+DirectoryIndexOfFirstCompositeListReference = 17
+NumberOfCompositeListReference = 3
+DirectoryIndexForTheFirstTransducerBlockPointer = 25
+NumberOfTransducerBlocksInTheVfd = 1
+DirectoryIndexForTheFirstFunctionBlockPointer = 27
+NumberOfFunctionBlocksInTheVfd = 1
+
+// Channels for I/O
+
+//[VFD 2 Channels]
+//Channel1 = "Analog Input Value"
+//Channel2 = "Discrete Input Value"
+//Channel3 = "Analog Output Value"
+//Channel4 = "Discrete Output Value"
+
+// Modificated by Sko 27.3.03
+// Modificated by PaHe 21.3.03
+
+//============================================
+// Resource Block
+//============================================
+
+[VFD 2 Resource Block] 
+DD_ITEM = 0x80020AF0
+BLOCK_INDEX = 300
+NUM_OF_PARMS = 50
+VIEWS_INDEX = 900
+NUMBER_VIEW_3 = 1
+NUMBER_VIEW_4 = 2
+PROFILE = 0x133
+PROFILE_REVISION = 0x0101
+//BLOCK_TYPE = RESOURCE
+
+//============================================
+// Resource Block Defaults
+//============================================
+
+[VFD 2 Resource Block Defaults]
+MANUFAC_ID = 0x000E05
+DEV_TYPE = 0x2328
+DD_REV = 0x01
+DEV_REV = 0x01
+DD_RESOURCE = "                                "
+HARD_TYPES = 0x7000
+FEATURES = 0x6C00
+CYCLE_TYPE = 0xC000
+MIN_CYCLE_T = 1600
+MEMORY_SIZE = 0
+NV_CYCLE_T = 0
+MAX_NOTIFY = 15
+ITK_VER = 4
+
+
+//============================================
+// Transducer Block 1 - APTB
+//============================================
+
+[VFD 2 Transducer Block 1]
+DD_ITEM = 0x20016
+BLOCK_INDEX = 580
+NUM_OF_PARMS = 117
+VIEWS_INDEX = 960
+NUMBER_VIEW_3 = 11
+NUMBER_VIEW_4 = 5
+PROFILE = 0x8009
+PROFILE_REVISION = 0x0001
+//BLOCK_TYPE = APTB
+
+
+//============================================
+// Function Block 1 - AO
+//============================================
+
+[VFD 2 Function Block 1]
+DD_ITEM = 0x800201F0
+NUM_OF_PARMS = 31
+NUMBER_VIEW_3 = 1
+NUMBER_VIEW_4 = 1
+PROFILE = 0x102
+PROFILE_REVISION = 0x0001
+EXECUTION_TIME = 960
+BLOCK_INDEX = 350
+VIEWS_INDEX = 910
+//BLOCK_TYPE = AO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
