@@ -1,0 +1,382 @@
+class CPOU
+{
+public:
+	CPOU();
+	virtual ~CPOU();
+    
+public:	
+	void SetChildPOUMap(CMap<CString,LPCTSTR,CPOU*,CPOU*> *pChildPOUMap);
+	CMap<CString,LPCTSTR,CPOU*,CPOU*> *GetChildPOUMap(); //获取POU中的action/trans POU map 
+	void DeleteLocalCrossRecord();
+	void AddLocalCrossRecord(CCrossRecord *pCrossRecord);
+	//判断是否是枚举常量
+	BOOL IsEnumConst(CString strContent, int &iEnumValue, CString &strEnumType);
+	//更新所有的POU
+	static void UpdatePouBox(CString strBoxName,CString strNewName,CString strInstName,char cTag);
+	virtual void ChangeBoxName(CString strBoxName, CString strNewName);
+	virtual void UpdataBox(CString strBoxName);
+	virtual void UpdataBoxToFBVar(CString strInstName,CString strTypeName,char cType);
+
+	BOOL GetNetVarInfo(CString strNetVarName, CBaseDB *&pVar);
+	void RemoveAllInfoGeneratedByCompile();
+	CStringArray& GetTempVarOrderString();
+	CMap<CString,LPCSTR,CBaseDB*,CBaseDB*>* GetPOUTempVarMap();
+	void ClearAllTempVarGeneratedByCompile();
+	void ReleaseObjMemFile();
+	void ReleasePPCObjMemFile();
+	void ReleaseX86ObjMemFile();
+	CErrorList* GetErrorList();
+	void InitPOUDataInProject();
+	BOOL IsOnLine();
+	HccType* LookupHccType(CString strType);
+	HccSymbol* LookupForceMarkSymbol(CString strVarName);
+	HccSymbol* LookupHccSymbol(CString strVarName);
+	BOOL LookupVarInUserDefVar(CString strName,CBaseDB *pUserDefVar,CBaseDB*&pVar);
+	BOOL LookupLocalVar(CString strName,CBaseDB *&pVar);
+	BOOL LookupGlobalVar(CString strName,CBaseDB *&pVar);
+
+	static BOOL CPOU::LookupVarInPRGPOU(CString strVarName, CBaseDB *&pVar, CString strPOUName);
+	//检查POU的局部变量的类型是否合法
+	BOOL CheckLocalVar(CErrorList* pErrorList);
+	//字符信息输出到窗口
+	void OutputInformation(CString strText,int iIndex);
+
+	//获得hcc编译得到PPC的二进制的内存文件指针
+	CMemFile* GetPPCObjMemFile();
+	//获得hcc编译得到的X86的二进制的内存文件指针
+	CMemFile* GetX86ObjMemFile();
+
+	//得到用户自定义数据类型容器指针
+	CUserTypeContainer* GetUserDefinedTypeContainer();
+	//得到全局数据容器指针
+	CDBContainer* GetDBContainer();
+	//设置用户自定义数据类型容器指针
+	void SetPOUUserDefinedTypeContainer(CUserTypeContainer *pUserDefinedTypeContainer);
+	//设置用户全局数据容器指针
+	void SetPOUDBContainer(CDBContainer *pGlobalVarContainer);
+	//设置工程改变标志
+	void SetProjectChanged(BOOL bProjectMark = TRUE);
+	//得到调用数组指针
+	CStringArray * GetInvokeArray();
+	//设置函数返回值类型字符串
+	void SetReturnTypeString(CString strReturnType);
+	//得到函数返回值字符串
+	CString GetReturnTypeString();
+	//设置pou内容发生改变
+	void SetPOUChanged(BOOL bChanged);
+	//添加设置POU改变标志的接口　因为编译成功的工程，
+	//拖动某个POU到任务中时，bcalled接口没有序列化成功 zxf 2010.05.25 bug AT2_INTEG-01852
+	void SetPOUChangedForSave(BOOL bChanged);
+	BOOL IsPOUChanged();
+	//设置pou被编译标志，ture为通过编译
+	void SetPOUCompiled(BOOL bCompoild);
+	//获得pou编译通过标志
+	BOOL IsPOUCompiled();
+	//设置pou被禁用标志
+	void SetPOUForbidden(BOOL bForbidder);
+	//判断pou是否被禁用
+	BOOL IsPOUForbidden();
+	//设置pou的描述语言，是cfc、ld、sfc等等
+	void SetPOULanguage(char chPOULanguage);
+	//获得pou描述语言
+	char GetPOULanguage();
+	//设置pou类型，如prg、fb或者fun。
+	void SetPOUType(char chPOUType);
+	//获得pou类型
+	char GetPOUType();
+	//设置pou的描述信息，即注释字符串
+	void SetPOUDesc(CString strPOUDesc);
+	//获得pou的描述信息
+	CString GetPOUDesc();
+	//设置pou名称
+	void SetPOUName(CString strPOUName);
+	//获得pou名称
+	CString GetPOUName();
+	//设置POU别名
+	void SetPOUByName(CString strPOUByName);
+	//获得pou的别名
+	CString GetPOUByName();
+	//派生类调用pou序列化函数
+	virtual void Serialize(CArchive &ar);
+	//对POU进行语法检查，不生成对应的中间语法树
+	virtual BOOL CheckPOUErrors();
+	//编译POU，如果语法正确生成对应的中间语言代码和二进制代码
+	virtual BOOL CompilePOU();
+	//判断POU是否被调用，只有编译通过才有效
+	char IsPOUCalled();	
+	//设置POU是否被调用
+	void SetPOUCalled(char cCalled);
+	//得到编译生成的中间变量的名字的数组指针
+	CStringArray* GetCplTempVarArray();
+	//设置Hcc编译的参数
+	void SetHccEnvironment(char cTag);
+	//设置逆序调用关系	供库变化/类型变化使用
+	void FillReverseList(CMap<CString,LPCTSTR
+		,CList<CString,CString>*,CList<CString,CString>*>&);
+
+	virtual BOOL OnPreReplace(CString strFind, CString strReplace, BOOL bWholeWord, BOOL bMatchCase, char& chType, BOOL bReplaceDown,BOOL bAllProject);
+	virtual void GetCountOfWarningAndError(int &iWarningCount, int &iErrorCount);
+
+	int GetMonitorVarChange();
+	void SetMonitorVarChange(int flag);
+	void ClearAllError();
+	bool GetPOUIsAllChecked();
+	void SetPOUIsAllChecked(bool bIsAllChecked);
+	void RemoveFunPOUReturnVar();
+	// 设置打印方向
+	void SetPouPrintType(char chPrintType);
+	//获取打印方向
+	char GetPouPrintType();
+
+	//added by huweiguo 2015.11.09 for xuqiu
+    CString GetXMLPaperSize();
+	//end added
+
+public:
+	BOOL CanBeOnLine();
+	DWORD GetPOUTypeVersion();
+	void SetPOUTypeVersion(DWORD dwTypeVersion);
+	BOOL LookupGlobalVar(CString strVarName,CBaseDB *&pVar,CString strPOUName);
+	tagHccSymbol* LookupForceMarkSymbol(CString strVarName, CString strPOUName);
+	tagHccSymbol* LookupHccSymbol(CString strPOUName,CString strVarName);
+	virtual CString GetSelectStringWhenFindReplace();
+	static void GotoTypeDefinition(CString strType);
+	static BOOL LookupVarByKKS(CString strKKS,CBaseDB*&pBaseDB,CString &strPOUName);
+	virtual void UpdateForSyncWithVar();
+	static BOOL IsVariableForced(CBaseDB *pBaseDB);
+
+	BOOL IsDefinedInPRGPOU(CString strVarName);
+	void RemoveAllOnLineVarOfList();
+	void AddCrossRecordListToProject();
+	void ReleaseCrossRecordList();
+	void AddCrossRecord(CCrossRecord *pCrossRecord);
+	void InitCrossRecordList();
+	void SetX86ObjChanged(BOOL bChanged);
+	void SetPPCObjChanged(BOOL bChanged);
+	BOOL IsObjChangedInPlatformSpecified();
+	BOOL IsX86ObjChanged();
+	BOOL IsPPCObjChanged();
+	static BOOL ImportXMLPOUVar(CPOU *pPOU,CString strFilePath);
+	BOOL IsFunPOUInOutVar(CString strVarName);
+	void OutputBeginCompile();
+	void OutputBeginCheckErrors();
+	CLocalVarContainer* GetLocalVarContainer();
+	// add for 设置POU调度周期 by wxm on 2012/5/11
+	void SetPouCycle(USHORT usPouCycle);
+	USHORT GetPouCycle();
+	/* 2012-03-12,chx add,为了实现功能块数据分离工能                        */
+	/************************************************************************/
+	HccSymbol* LookupHccSymbol(CString strVarName,int iRegion);
+	tagHccSymbol* LookupHccSymbol(CString strPOUName,CString strVarName,int iRegion);
+	HccSymbol* LookupForceMarkSymbol(CString strName,int iRegion);
+	tagHccSymbol* LookupForceMarkSymbol(CString strVarName, CString strPOUName,int iRegion);
+	//added by huweiguo 2012.05.25 for bug 2051
+	virtual void UpdataBoxType(CString strBoxName,CString strNewName){};
+	virtual int ExportXMLPOUContent(CString strPathName, UINT uExportType = ET_POU);//add by chx 导出POU接口函数 2012.7.23
+	unsigned long GetPOUCplSuccessTime();// 得到POU编译时间，为历史版本下装准备 by wxm on 2012/9/6
+	//void SetPOUModifyTime(CTime ctModifyTime);//Add For设置POU修改时间    [4/12/2013 By lbl]
+	CString GetPOUModifyTime();//获取POU修改时间[4/12/2013 By lbl]
+	void SetPOUModifyUserAndTime();//设置POU修改人和修改时间[4/12/2013 By lbl]
+	CString GetPOUModifyUser();//获取POU修改人[4/12/2013 By lbl]
+	void SetPOULastDownLoadTime();//设置POU最后下装时间[4/12/2013 By lbl]
+	CString GetPOULastDownLoadTime();//获取POU最后下装时间[4/12/2013 By lbl]
+	UINT GetPOUExecuteSequence();//设置POU执行顺序[4/12/2013 By lbl]
+	void SetPOUExecuteSequence(UINT uiExecuteSequence);//获取POU执行顺序[4/12/2013 By lbl]
+	void SetPOUDateFlowOrder(BOOL DateFlowOrder );//设置POU的数据流排序
+	BOOL GetPOUDateFlowOrder();//获取POU的数据流排序
+	void SetPOUModifyTime(CString strTime); //设置POU的修改时间
+	void SetPOUModifyUser(CString strUser);//设置POU修改人
+	void SetPOULastDownLoadTime(CString strDownLoadTime);//设置POU最后下装时间
+	//added by huweiguo 2015.11.23 for ratio xuqiu
+    void SetPouCopyFlag(BOOL flag){ CopyFlag=flag;}
+	//end added
+
+    //功能块在线监视add by wxm 2013.4.12	
+public:
+	inline const CBaseDB * GetFBOnlineFather() const;
+	void SetFBOnlineFather(CBaseDB *pBaseDb);
+	//框架得到实例名设置在线打开实例的标题
+	CString GetFBInstanceName();
+	//IEC在线时设置要打开的FB的实例名
+	void SetFBInstanceName(CString strFBInstanceName);
+	//设置是否需要重新关联变量; 调用POU的checkPouErrors之后，调用交叉引用表之前，遍历工程中所有的POU，若POU编译通过则设置此标志为true；POU编译没有通过则设置此标志位false by wxm on 2013/5/7
+	void SetOutOfCheck(bool bOutOfCheck);
+	bool GetOutOfCheck();
+    
+public:
+   virtual void ImportM5TOM6RefeshBoxContent();//图形语言的块元件刷新接口函数
+   virtual void M5TOM6Replace();//查找替换接口函数
+//end added
+   void SetPOUShowName(CString strShowName);
+   CString GetPOUShowName();
+   BOOL IsLinkedToTemplate();
+   void SetLinkedToTemplate(BOOL bLinked);
+   virtual BOOL EliminateLinkingToTempalte();
+   UCHAR GetTemplateType();
+   void SetTemplateType(UCHAR ucType);
+
+   CString GetPOUPath(CString strSeperator);//获取POU路径
+   //获取引用的模板名，键值为模板名，值均为0
+   virtual BOOL GetReferenceTemplates(CMap<CString,LPCTSTR,int,int>& mapTemplate); 
+
+   void SetPOUEncrypt128(UCHAR *ucPassWord, int iLen);//设置POU的读写密码
+   UCHAR* GetPOUEncrypt128();//得到POU的读写密码
+   void SetWhetherInPutPassWord(BOOL bIsNeedPassWord);//设置工程关闭之前用户不用再次输入密码
+   BOOL GetWhetherInPutPassWord();
+      
+private:
+	void DeletePOUCrossTable();
+protected:
+	void SetPOUCplSuccessTime();// 设置POU编译时间，为历史版本下装准备 by wxm on 2012/9/6
+    
+//added by zhw,2010.09.09,local cross record list
+private:
+	CMap<CString,LPCTSTR,CList<CCrossRecord*,CCrossRecord*>*,CList<CCrossRecord*,CCrossRecord*>*> *m_pMapCrossRecord;
+	
+	//POU中包含的动作、转换POU名称和POU对象的MAP(用于sfc)
+	CMap<CString,LPCTSTR,CPOU*,CPOU*>* m_pChildPOUMap; //add by ftx on 2011.10.27 for sfc action/trans pou
+	CString m_strShowName;                         //POU显示名，普通POU与POU名相同，动作、转换POU与步、转换元件同名
+	//add for init value,2010.4.20
+	DWORD m_dwTypeVersion;		
+	//add by lzj  库管理器调用pou序列化接口的时候，需要进入库的分支
+	unsigned long m_ulPOUCplSuccessTime;// POU编译时间,初始值为0 by wxm on 2012/9/6
+    
+public:
+	CPOU* m_pFatherPOU;
+	static bool s_bLibTag;
+	// 算法库中英文支持 [2012年5月3日 yewen]
+	CMap<CString, LPCTSTR, CString, LPCTSTR> m_strPOUByNameMap;
+	CMap<CString, LPCTSTR, CString, LPCTSTR> m_strPOUDescMap;
+	// end 算法库中英文支
+    
+//add by qwq for cmp
+public:
+	BOOL m_bInitiate;
+	BOOL m_bCMP;
+//end add by qwq for cmp
+
+protected:
+	//POU名称
+	CString		m_strPOUName;
+
+	//POU别名(库的POU使用的)
+	CString		 m_strPOUByName;
+	
+	//POU描述，对POU做进一步注释
+	CString		m_strPOUDesc;
+
+	//POU类型
+	char		m_chPOUType;
+    
+	//POU描述语言
+	char		m_chPOULanguage;
+    
+	//标示POU是否被禁用，true 禁用不参与编译,false不参与编译的POU不进入调用数组中 
+	//添加了禁止调度的概念，此标志已不用 by lbl
+	BOOL		m_bPOUForbidden;	
+
+	//表示POU是否被调用，本标志在上次编译的时候设置
+	char		m_cPOUCalled;
+
+	//标示POU是否需要重新编译,true代表通过编译
+	BOOL		m_bPOUCompiled;
+
+	//标示POU是否内容发生变化,true代表发生变化
+	BOOL		m_bPOUChanged;
+
+	//标识该POU声称的PPC下位机可执行代码是否发生变化,ture代表发生变化
+	BOOL		m_bPOUPPCObjChanged;
+    
+	//标识仿真机机器代码是否发生变化，true为变化
+	BOOL		m_bPOUX86ObjChanged;
+
+	//函数才需要	
+	CString		m_strReturnType;  
+
+	//调用数组,用于库变化模块/预编译模块
+	CStringArray m_aInvokeArray;
+	
+	///*PRG作为全局变量分配内存，FB作为功能块实例中变量，FUN作为栈中局部变量*/////////////////////////
+	//工程中生成的中间变量顺序数组
+	CStringArray m_strTempVarOrder;
+
+	//工程中块生成的中间变量
+	CMap<CString,LPCSTR,CBaseDB*,CBaseDB*> *m_pMapStringToTempVar;
+    
+	///////////////////////////////////////////////////////////////////////////////////////////////////
+	//存储相关局部变量
+
+	CLocalVarContainer *m_pLocalVarContainer;
+	//全局数据容器指针
+	CDBContainer *m_pDBContainer;
+
+	//自定义数据类型原形信息容器
+	CUserTypeContainer *m_pUserDefinedTypeContainer;
+	
+	//pou自己包含自己的错误信息
+	CErrorList *m_pErrorList;
+
+	//PPC二进制数据的内存文件
+	CMemFile *m_pPPCObjMemFile;
+	//x86对应的二进值数据的内存文件
+	CMemFile *m_pX86ObjMemFile;
+
+	//用于替换|查找下一个时，标志当前POU已经查找完毕 true已经查找完毕 false没有查找完毕
+	bool m_bIsAllChecked;
+
+	//local variable symbol map,for fun
+	CMap<CString,LPCSTR,tagHccSymbol*,tagHccSymbol*> *m_pMapStringToTempSymbol;
+	//parameter variable symbol map
+	CMap<CString,LPCSTR,tagHccSymbol*,tagHccSymbol*> *m_pMapStringToParameterSymbol;
+
+	//collect online variable list
+	CList<CBaseDB*,CBaseDB*> *m_pOnLineVarList;
+
+	//on line var list in App
+	CList<CBaseDB*,CBaseDB*> *m_pAppOnLineVarList;
+
+	//cross record list,temp data
+	CrossRecordList *m_pCrossRecordList;
+
+	//记录在线时搜集的数组变量（下标为变量）
+	CList<CArrayMonitorInfo*,CArrayMonitorInfo*> *m_pListMonitorInfo;
+	USHORT m_usPOUCycle;// add for POU调度周期 by wxm on 2012/5/11
+	//Add For POU信息列表增加[4/8/2013 By lbl]
+	//POU修改时间
+    CString       m_strPOUModifyTime;
+	//POU修改人
+	CString     m_strModifyUserName;
+	//执行顺序
+    UINT        m_uiExecuteSequence;
+	//最后下装时间
+	CString       m_strLastDownloadTime;
+	//POU路径
+	CString     m_strPouPathONProTree;
+	//数据流排序
+	BOOL      m_bDateFlowOrder;
+	
+	//End Add For POU信息 [4/12/2013 By lbl]
+	// POU打印时方向设置
+	char	m_chPrintType;
+
+	BOOL	m_bLinkedToTemplateFlag;		//该POU是否连接到模板 模板导入导出功能
+	
+	UCHAR	m_ucTemplateType;				//模板类型，该成员参与序列化，创建模板时设置
+	//added by huweiguo 2015.11.09 for xuqiu
+	CString m_strXmlPouPaperType;
+	//end added
+    
+	//added by huweiguo 2015.11.23 for ratio xuqiu
+	BOOL  CopyFlag;
+	//end added
+
+private:
+	//为了保存待监视的功能块实例
+	CBaseDB *m_pOnLineFBVar;
+	//在线FB的实例路径名PRG.FB1.FB2等
+	CString m_strFBInstanceName;
+	bool    m_bOutOfCheck; //设置是否需要重新关联变量; 调用POU的checkPouErrors之后，调用交叉引用表之前，遍历工程中所有的POU，若POU编译通过则设置此标志为true；POU编译没有通过则设置此标志位false by wxm on 2013/5/7
+
+	UCHAR   m_ucPouEncryptPassword[16]; //经过MD5转换后的POU密码	
+	BOOL    m_bIsNeedPassWord; //是否需要输入密码
+};
