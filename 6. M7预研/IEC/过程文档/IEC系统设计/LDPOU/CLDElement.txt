@@ -1,0 +1,136 @@
+class CLDElement : public CElement  
+{
+public:
+	CLDElement();
+	virtual ~CLDElement();
+    
+	virtual bool ImportXml();
+	virtual bool ExportXml(CFile* pFile,CLDPOU* pLDPOU,CString strtab);
+
+	virtual void StrReplace(SearchAndReplace& sechAndRplac_t,CLDPOU* pPOU);
+	//替换过程中，根据当前索引值依次查找下一个节点
+	virtual bool FindNextByIndex(int iIndex,SearchAndReplace &sechAndRplc_t,CLDPOU* pPOU);
+	//查找下一个
+	virtual bool FindNextText(SearchAndReplace&sechAndRplc_t,CLDPOU* pPOU);
+	//查找替换过程中，定位元素位置
+	virtual bool FindElementPosition(CElementPosition* pElementPos,CLDView* pView);
+	//元素全局查找和全部替换的入口函数
+	virtual void GlobalSearch(CString strFind,BOOL bMatchCase, BOOL bMatchWholeWord,CLDPOU* pPOU);
+	//替换过程中，定位查找到元素的位置信息
+	void LocateStrPosition(CLDPOU* pPOU,int ID, char chModuleType,char chPinType, char chPinIndex, 
+		                   CString strPouName,char chTextType,int iFindTextIndex,int iTextLength);
+	//全局查找过程中，将查找到的信息添加到输出信息表中
+	void AddFindElementPositionToCFind(CString strNetwork,CString strDest,CString strFind,int ID, char chModuleType,
+				char chPinType, char chPinIndex, CString strPouName,char chTextType,int iFindTextIndex,CLDPOU* pPOU);
+	virtual bool SearchStr(SearchAndReplace &sechAndRplc,CLDPOU* pPOU);
+	void ShowAutoDeclare(SearchAndReplace &sechAndRplc_t,CLDPOU* pPOU);
+	void ShowAutoDeclareFB(SearchAndReplace &sechAndRplc_t,CLDPOU* pPOU,CString strType);
+	virtual void CalcRelation(CLDPOU* pLDPOU);
+	virtual void DelElementClear(CLDPOU* pLDPOU);
+	void CleanUnReTag(CLDPOU* pLDPOU);
+	void SetUnReTag(CLDPOU* pLDPOU);
+	virtual void FindOnlineVar(CLDPOU* pLDPOU);
+	virtual void FindVar(CLDPOU* pLDPOU,CString &strMes);
+	virtual void CollectOnLineVars(CLDPOU* pLDPOU);
+	virtual void Copy(CFixedSharedFile &sf,CLDPOU* pLDPOU);
+	virtual void Paste(CFixedSharedFile &sf,CLDPOU* pPOU);
+	virtual bool Factory(CLDElement* pElement);
+	virtual void Serialize(CArchive& ar);
+	virtual bool DrawElementSel(CDC* pDC,CLDPOU* pLDPOU,COLORREF color);
+	virtual bool CalcSize(CLDPOU* pLDPOU,CDC* pDC);
+	virtual bool CalcPosition(CPoint pnt,CLDPOU* pLDPOU);
+	virtual	bool DrawElement(CDC *pDC,CRect rectScreen,bool bOnLineFlag,CLDPOU* pLDPOU);
+    virtual void DrawMovePoint(CDC* pDC,CLDView* pView,CLDElement* pChooseElement,CPoint ptPoint,bool& bExitOutput, bool& bExitBoxOrContact);
+ 	virtual void CalcMoveDistance(CLDView* pView,CPoint ptPoint,bool& bExitBoxOrContact);
+	virtual char ChoiceType( CLDPOU* pLDPOU);
+	virtual bool MouseClick(CPoint point, unsigned char& uchSelType,
+		int& iID, char& chPinIndex, CLDPOU* pLDPOU);
+	virtual void GetInvokeArray(CLDPOU *pLDPOU);
+	int	GetChildID(int iIndex);
+	int GetChildIndex(int iID);
+	inline void		SetDeleteFlag(bool bDelete);
+	inline bool		GetDeleteFlag()const;	
+	inline void		SetDeepIndex(int iDeep);
+	inline int		GetDeepIndex() const;
+	inline void     SetBHeadLogic(bool bLogic);
+	inline bool     GetBHeadLogic() const;
+	inline void     SetBTailLogic(bool bLogic);
+	inline bool     GetBTailLogic() const;
+	inline void		SetParentID(int iID);
+	inline int		GetParentID() const;
+	inline void		SetNetworkID(int iID);
+	inline int		GetNetworkID() const;
+	inline void		SetText(CString strText);
+	inline CString	GetText() const;
+	inline void		    SetTypeID(ElementType chType);
+	inline ElementType	GetTypeID() const;
+	inline void		SetIndex(int iIndex);
+	inline int		GetIndex() const;
+
+
+	inline void		SetLogic(CString strLogic);
+	inline void		SetSelfLogic(CString strSelfLogic);
+	inline void		SetHeadLogic(CString strHeadLogic);
+	inline void		SetTailLogic(CString strTialLogic);
+
+	inline CString	GetLogic()const;
+	inline CString	GetSelfLogic()const;
+	inline CString	GetHeadLogic()const;
+	inline CString  GetTailLogic() const;
+
+	inline void		AddChild(int iID);
+	inline bool		DelChild(int iID);
+	void			DeleteLineArray();
+	bool			AddLine(char chLineType, char chPinIndex, CPoint pntSrc, CPoint pntDes);
+	
+	virtual bool CheckErrors(UINT &uiErrorCount,UINT &uiWarnCount
+		,CMap<int,int,CElementTextInfo*,CElementTextInfo*>& tempVarMap,CLDPOU* pPOU);
+	virtual void CalcSelfLogic(CLDPOU* pLDPOU);
+	//将文本输出到pdf
+//	virtual void DrawElementToPdf(PDFlib* pdf,CLDPOU* pLDPOU);
+	//add by YXY for POUCMP on 2012.12.12
+	virtual bool Compare(CLDElement *pLDElement,CLDPOU* pPOU1,CLDPOU* pPOU2);
+	//add end by YXY for POUCMP on 2012.12.12
+public:
+	virtual void CollectFBOnlineVars(CLDPOU* pLDPOU);
+	CString GetNetworkNumber(CLDPOU* pLDPOU);
+	virtual void CalcLogic(HccTreeNode*& pCurrentNode, HccTreeNode*& pTempNode, CString &strMonitor, CLDPOU *pLDPOU  );
+	virtual bool TextAnalyzeAndCheck(UINT &uiErrorCount,UINT &uiWarnCount
+		,CMap<int,int,CElementTextInfo*,CElementTextInfo*>& tempVarMap,CLDPOU* pPOU);
+	//跳过语法检查阶段，生成中间代码时关联元素相关变量的信息
+	virtual void CreateElementVarInfo(CLDPOU* pLDPou);
+	virtual char GetMoveDirectionFlag();
+	virtual CRect GetRightMoveRect();
+	virtual CRect GetLeftMoveRect();
+	virtual void SetMoveDirectionFlag(char direct);
+	void SetMoveFlag(bool flag);
+	bool GetMoveFlag();
+	virtual void CalcOnlineLogic(bool bHeadLogic,bool& bUpdateLogic,CLDPOU* pLDPOU,CRect rtClient);
+	//与位置相关的
+	int				m_iUpHalf;//元素上部分，以水平电力线划分
+	int				m_iDownHalf;//元素下部分，以水平电力线划分
+	CRect			m_virtualRect;
+	CRect			m_textRect;
+	CLineArray		m_aLineArray;
+
+	CArray<int,int>		m_childrenIDList;//其子结点点的所有ID 号列表 
+	CElementTextInfo	m_typeItem;
+	
+
+private:
+	bool			m_bMoveFlag;	//add by gyk 2009-11-06 ,flag of move element 
+	int				m_iParentID;	//父结点ID号
+	int				m_iNetworkID;	//记录每一个元素它所在的网络节点的ID号
+	int				m_iIndex;		//当其作为子节点时，是其父节点的第几个节点
+	
+	int				m_iDeepIndex;	//在树中的层次 root = 0
+	ElementType		m_emTypeID;		//类型//Box  Input  output  contact return jump and or等
+	CString			m_strText;		//元素中的具体内容
+	CString			m_strLogic;	
+	CString			m_strSelfLogic;
+	CString			m_strHeadLogic;
+	CString			m_strTailLogic;
+	bool            m_bHeadLogic;//前逻辑布尔值
+	bool            m_bTailLogic;//后逻辑布尔值
+	bool			m_bDeleteTag;//删除标志	
+};

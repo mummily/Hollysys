@@ -1,0 +1,24 @@
+class CCFCPOU : public CIECPOU  
+{
+public:
+	CCFCPOU();
+	virtual ~CCFCPOU();	
+	
+    1.	POU信息的修改（POU重命名等）
+    2.	POU复制（注：对外接口，如在用户程序中选中POU复制）
+    3.	查找替换
+    4.	设置元件执行次序
+    5.	引脚能否连线
+    6.	数据成员的增删
+    7.	元件（输入、网络输入、输出、输出、返回、标注、注释、跳转）的增、删、改、移
+    8.	信号流线的增、删、改
+    9.	使能的设置/取消设置
+    10.	BOX元件输入引脚的新增、删除
+    11.	POU数据的出库、入库
+    12.	语法检查virtual bool CheckPOUErrors();
+    13.	编译virtual bool CompilePOU();
+    14.	导入、导出POU
+    
+private:
+	CCFCElementList *m_pCFCElementList; // 元件列表
+};

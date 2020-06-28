@@ -1,0 +1,37 @@
+void CLDElement::Serialize(CArchive& ar)
+{   //°üÀ¨ID
+	if(ar.IsStoring())
+	{
+		char chTemp = m_emTypeID;
+		ar  <<  GetID();
+		ar << chTemp;
+		ar << m_strText;
+		ar << m_strHeadLogic;
+		ar << m_strTailLogic;
+		int iCount = m_childrenIDList.GetSize();
+		ar << iCount;
+		for(int i = 0; i< m_childrenIDList.GetSize(); i ++)
+		{
+			ar << GetChildID(i);
+		}
+	}
+	if(ar.IsLoading())
+	{
+		int iID = 0;
+		char chTemp = -1;
+		ar >> iID;
+		ar >> chTemp;
+		ar >> m_strText;
+		ar >> m_strHeadLogic;
+		ar >> m_strTailLogic;
+		m_emTypeID = (ElementType)chTemp;
+		SetID(iID);
+		int iCount = 0;
+		ar >> iCount;
+		for(int i = 0; i < iCount; i++)
+		{
+			ar >> iID;
+			AddChild(iID);
+		}
+	}
+}

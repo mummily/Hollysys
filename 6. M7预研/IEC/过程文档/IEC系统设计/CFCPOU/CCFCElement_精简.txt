@@ -1,0 +1,32 @@
+class CCFCElement : public CElement  
+{
+public:
+	CCFCElement();
+	virtual ~CCFCElement();
+    
+    1. 元件属性操作，如：位置、大小、名称修改等
+    2. 引脚操作，如：引脚显隐、输入引脚增删等
+    3. 关联元件操作，如：获取当前元件的输入元件、当前元件的输出元件等
+    4. 元件类型修改，如：AND修改为ADD
+    5. 元件顺序号前移、后移
+    6. 语法检查 virtual BOOL CheckErrors();
+
+private:
+	//元件ID
+	unsigned short m_iElementID;	
+    //元件执行顺序序号
+	int m_iExecuteOrder;		
+    //元件文本
+	CString m_strCFCElementText;	
+    //别名
+	CString m_strCFCElementAlias;	
+    //注释
+	CString m_strCFCElementComment;    
+    //位置
+	int m_iBeginPos, m_iEndPos;    
+    //大小
+	int m_iLength, m_iWidth;    
+    //引脚
+    CCFCInputPinList* m_pInputPinList;
+    CCFCOutputPinList* m_pOutputPinList;
+};

@@ -1,0 +1,31 @@
+{
+¡°pou¡±:
+{
+	¡°name¡±:¡±¡±,
+	¡°description¡±:¡±¡±, 
+	¡°path¡±:¡±¡±,
+	¡°poucycle¡±:¡±¡±,
+	¡°auto-sort¡±:¡±¡±, 
+	¡°pouexcuteorder¡±:¡±¡±
+},
+¡°sfc¡±:
+{
+	¡°element¡±:
+	{
+		¡°type¡±:¡±iecstep|trans|jump|return¡±,
+		¡°id¡±:¡±¡±,
+		¡°texttype¡±:¡±¡±, 
+		¡°name¡±:¡±¡±,
+		¡°action¡±:"cfc01.cfc"
+    }
+},
+"cfc01.cfc":
+{
+},
+"ld01.ld":
+{
+},
+"st01.st":
+{
+}
+}

@@ -1,0 +1,15 @@
+class CIECPOUFactory
+{
+public:
+    static CIECPOUFactory* getInstance();
+    static void freeInstance() { delete m_pInstance; }
+    
+    CPOU* Create(tagPOUInfo* pPouInfo);
+    void  Delete(CPOU* pPou);
+    
+private:
+	void CIECPOUFactory();
+	void ~CIECPOUFactory();
+        
+    static CIECPOUFactory* m_pInstance;
+}

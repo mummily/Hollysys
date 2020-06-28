@@ -1,0 +1,27 @@
+class CIECPOU : public CPOU
+{
+public:
+	CIECPOU();
+	virtual ~CIECPOU();
+    
+public:
+    // 组态语言转为C语言
+    bool ToC();
+	// 能否被强制
+	BOOL CanBeForced(CElementTextInfo *pTextInfo);
+    
+public:	
+	//与图形语言共享的公共函数	
+	
+public:
+	//xml文件中写入内容
+	BOOL WriteXMLContent(CFile *pFile,CString &strContent);
+    
+protected:	
+	//检查复杂变量实例是否和所定义的类型一致
+	BOOL IsValidComplexVar(CBaseDB *pComplexDb,CBaseType *pType);
+    //比较复杂变量的简单类型引脚是否相同
+	BOOL CompareSimplePinOfComplexVar(CBaseDB *pLeftDb, CBaseDB *pRightDb ,BOOL bStructPin);
+	//检查POU调度周期是否合法
+	BOOL CheckPOUCycle();
+};

@@ -1,0 +1,121 @@
+//IEC POU类型
+enum emPOUType		
+{
+	PT_PRG,				//program  pou
+	PT_FB,				//function block pou
+	PT_FUN				//funciton pou
+};
+
+//SFC类型
+enum emPOUType		
+{
+	PT_PRG,				//program  pou
+	PT_FB,				//function block pou
+	PT_FUN,				//funciton pou
+	PT_TRANS,			//transition in sfc
+	PT_ACTION,			//action in sfc
+};
+
+//IEC语言
+enum emPOULanguage
+{
+	PL_LD,				//ladder diagram
+	PL_CFC,				//continuous funciton chart
+	PL_ST,				//structured text
+	PL_SFC,				//sequential function chart	
+	PL_IL,				//instruction list
+	PL_FBD				//function block diagram
+};
+
+// POU信息
+struct tagPOUInfo
+{
+	//POU名称
+	CString		    m_strPOUName;
+	//POU别名(库的POU使用的)
+	CString	        m_strPOUByName;	
+	//POU描述，对POU做进一步注释
+	CString		    m_strPOUDesc;
+	//POU描述语言
+    emPOULanguage   m_emPOULanguage;
+	//POU类型
+    emPOUType       m_emPOUType;
+    //POU调度周期
+    USHORT          m_usPOUCycle;
+	//调度顺序
+    UINT            m_uiExecuteSequence;
+	//数据流排序
+	BOOL            m_bDataFlowOrder;
+	//POU修改时间
+    CString         m_strPOUModifyTime;
+	//POU修改人
+	CString         m_strModifyUserName;
+	//最后下装时间
+	CString         m_strLastDownloadTime;
+};
+
+
+// CFC POU信息
+struct tagCFCInfo
+{
+    //POU名称
+    std::string     m_strPOUName;
+    //POU描述
+    std::string     m_strPOUDesc;
+    //POU类型
+    emPOUType       m_emPOUType;
+    //POU调度周期
+    short           m_usPOUCycle;
+    //调度顺序
+    int             m_uiExecuteSequence;
+    //数据流排序
+    bool            m_bDataFlowOrder;
+};
+
+
+// ST POU信息
+struct tagSTInfo
+{
+    //POU名称
+    std::string     m_strPOUName;
+    //POU描述
+    std::string     m_strPOUDesc;
+    //POU类型
+    emPOUType       m_emPOUType;
+    //POU调度周期
+    short           m_usPOUCycle;
+    //调度顺序
+    int             m_uiExecuteSequence;
+};
+
+
+// LD POU信息
+struct tagLDInfo
+{
+    //POU名称
+    std::string     m_strPOUName;
+    //POU描述
+    std::string     m_strPOUDesc;
+    //POU类型
+    emPOUType       m_emPOUType;
+    //POU调度周期
+    short           m_usPOUCycle;
+    //调度顺序
+    int             m_uiExecuteSequence;
+};
+
+
+// SFC POU信息
+struct tagSFCInfo
+{
+    //POU名称
+    std::string     m_strPOUName;
+    //POU描述
+    std::string     m_strPOUDesc;
+    //POU类型
+    emPOUType       m_emPOUType;
+    //POU调度周期
+    short           m_usPOUCycle;
+    //调度顺序
+    int             m_uiExecuteSequence;
+};

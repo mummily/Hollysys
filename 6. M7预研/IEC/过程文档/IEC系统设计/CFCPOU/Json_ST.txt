@@ -1,0 +1,12 @@
+{
+¡°pou¡±:
+{
+	¡°name¡±:¡±¡±,
+	¡°description¡±:¡±¡±, 
+	¡°path¡±:¡±¡±,
+	¡°poucycle¡±:¡±¡±,
+	¡°auto-sort¡±:¡±¡±, 
+	¡°pouexcuteorder¡±:¡±¡±
+},
+¡°st¡±:¡±¡±
+}

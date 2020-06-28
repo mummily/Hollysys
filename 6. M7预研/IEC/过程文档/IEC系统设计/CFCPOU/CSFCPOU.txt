@@ -1,0 +1,490 @@
+class CSFCPOU : public CIECPOU  
+{
+public:
+	CSFCPOU();
+	virtual ~CSFCPOU();
+	virtual void Serialize(CArchive &ar);
+    
+public:
+	virtual void ChangeBoxName(CString strBoxName, CString strNewName);
+	virtual void UpdataBox(CString strBoxName);
+	virtual void UpdataBoxToFBVar(CString strInstName,CString strTypeName,char cType);
+	CModifyTextEdit* GetEditCtrl();
+
+	//added by huweiguo
+	void CheckParallalNameDuplicate();
+	void CreatTempForCheck();
+	void SetLoadlibFlag(BOOL);
+	BOOL GetLoadlibFlag();
+
+	//创建中间变量函数
+	void CreateTempVarForControllerTime();
+	CString GetTempVarNameForControllerTime();
+	void CreateTempVarForSFCTansition(CSFCElement *pSFCElement);
+	void CreateTempVarForSFCStep(CSFCElement *pSFCElement);
+	void CreateTempVarForSFCControlBlock(CString strActionName);
+	void CreateTempVarForSFCAction(CSFCActionBlock*m_paction);
+	void CreateTempVarForCallFlag(CString strPOUName);
+	void RecordCrossReference();
+	void RecordCrossReference(CSFCElement *pSFCElement,CElementTextInfo *pTextInfo,int referType);
+	CCrossRecord* CreateCrossRecord(CString strVarName,CSFCElement *pSFCElement);
+	void CreateTempVarForTransReturnValue(CString strPOUName);
+	//记录POU是否发生改变
+	BOOL IsPOUContainerChange();
+ 	void CreateRTSTimeTempVar(CString strRTSTime);
+	//tip控件响应等待时间函数
+ 	void OnTimer(UINT nIDEvent);
+	//鼠标移动函数
+	void OnMouseMove(UINT nFlags, CPoint point);
+	//设置剪贴板参数，用来控制是否进行粘贴
+	void ResetClipboardParm();
+	//设置活动视图
+	void ActiveView();
+	void ClearSyntaxElementStack();
+	//工具条和框架菜单使能控制函数
+	void OnUpdateEdit(CCmdUI* pCmdUI);
+	//初始化POU描述信息表
+	void InitPOUDetail();
+	//重设SFC视图大小
+	void ResetSFCViewSize();
+	//根据纸张大小设置视图大小
+	void SetViewSizeAccordToPaperSize(int x, int y);
+	//根据视图大小设置纸张大小
+	void AdjustSFCViewToPage(CString strpagesize);
+	void SetPagesize(CString strpagesize);
+	CString GetPaperType();
+	//打开动作POU或者转换POU视图
+	void OpenPOUView(CPOU *pPOU);
+	//关闭删除POU的视图
+	void ClosePouView(CPOU *pPOU);
+	//end added
+	//删除动作POU或者转换POU
+	BOOL DelPOU(CString strPOUName);
+	//删除操作
+	BOOL OnEditDel();
+	//增加POU，包括出口入口动作POU和转换POU
+	BOOL AddPOU(emPOUType POUType, CString strPOUName, char ePOULang);
+	//视图区隐藏相关函数
+	void ToggleSplitterWnd(int iSide=0);
+	CPOUTreeNode *GetSelectedNode(CString strNodeName);
+	
+	//视图打开之前调用，由视图类调用
+	void OnInitialUpdate();
+	//增加并行分支标号
+	void OnExtrasAddLebel();
+	//右键菜单响应条件控制
+	void OnContextMenu(CWnd *pWnd, CPoint point,CMenu *popupMenu);
+	//复制
+	BOOL OnEditCopy();
+	//剪切
+	BOOL OnEditCut();
+	//粘贴
+	void OnEditPaste();
+    //modify by qwq
+    //	void OnModifyText();
+	void OnModifyText(BOOL bc=FALSE);
+    //end modify by qwq
+	CSFCFlow * GetSFCFlow() const;
+	//增加动作转换
+	void OnExtrasAddActionOrTrans();
+	//移除动作转换
+	void OnExtrasClearActionOrTrans();
+	//关联出口动作
+	void OnInsertExitAction();
+	//关联入口动作
+	void OnInsertEntryAction();
+	//鼠标双击响应函数
+	void OnLButtonDblClk(UINT nFlags, CPoint point);
+	//关联动作
+	void OnExtrasAssociateAction();
+	//插入跳转
+	void OnInsertSFCJump();
+	//插入转换跳转
+	void OnInsertTransJump();
+	//左并行分支操作
+	void OnInsertLeftParallel();
+	//右并行分支
+	void OnInsertRightParallel();
+	//左选择分支
+	void OnInsertLeftAlternative();
+	//右选择分支
+	void OnInsertRightAlternative();
+	//插入向后的步和转换
+	void OnInsertNextStep();
+	//更新POU，重新设置步大小，元素大小以及逻辑块大小
+	BOOL UpdatePOU();
+	//向前插入步和转换
+	void OnInsertPreviousstep();
+    //modify by qwq
+	//绘制选中标志
+	void DrawSelectedRect(CDC *pDC);
+    //end modify by qwq
+	//鼠标按下响应函数
+	void OnLButtonDown(UINT nFlags, CPoint point);
+	//初始化POU
+	void InitializePOU();
+	//获取视图
+	CScrollView * GetView();
+	void SetView(CScrollView *pScrollview);
+	//绘制离线POU
+	void DrawOfflinePOU(CDC *pDC);
+	//绘图函数
+	void OnDraw(CDC *pDC);
+    //add by qwq
+	void SetSelectedRect(CRect rect);
+	void SetMultiSelectedRect(CRect rect);
+	BOOL GetSelectedFlag(void);
+	void SetSelectedFlag(BOOL bSelected);
+	BOOL GetMultiSelectedFlag(void);
+	void SetMultiSelectedFlag(BOOL bSelected);
+	BOOL GetSelectActionBlockFlag(void);
+	void SetSelectActionBlockFlag(BOOL flag);
+	void FlushRedoCmdList(void);
+	CSFCMultiSelected * GetMultiSelected(void);
+	void Redo();
+	void Undo();
+	BOOL AddPOU(emPOUType POUType,CPOU * pPOU);
+	BOOL DelPOU(CPOU * pPOU);
+	BOOL RecoverPOU(CPOU * pPOU);
+	CPOU * GetPOU(CString pouname);
+	CSFCActionBlock * GetSelectActionBlock(void);
+	void SetSelectActionBlock(CSFCActionBlock *pActionBlock);
+	BOOL GetEditState(void);
+	void OnlyEditDel(void);
+	void OnlyEditUndo(void);
+	void OnlyEditPaste(void);
+	void OnlyEditCut(void);
+	void OnlyEditCopy(void);
+	void OnlyEditAllSelected(void);
+	enum TEXT_TYPE GetEditType(void);
+	CSFCElement * GetEditElement(void);
+	CSFCActionBlock * GetEditActionBlock(void);
+	CSFCLogicBlock * GetEditLogicBlock(void);
+	void AddLogicBlock(CSFCLogicBlock *plogicblock);
+	void RemoveLogicBlock(CSFCLogicBlock *plogicblock);
+	CTypedPtrList<CObList,CSFCLogicBlock *> *GetlabelLogicBlockList(void);
+	void RefreshSelect(void);
+	char GetClipboardLogiclistType(void);
+	BOOL CreakClipboardLogiclist(SFCLogicBlockList &LogicBlockList,CPOUList &POUList);
+	void CreatePOU(emPOUType POUType,CString strPOUName,CString strPOUShowName,CPOUList &POUList,CPOU * psPOU);
+	BOOL IsRectHasElement(CRect rect);//判断指定区域中是否含有元件，用于打印预览
+	BOOL GetTextChange(void);
+	void SetTextChange(BOOL flag);
+	int GetStringWidth(CString str);
+	void AdjustUndoList(void);
+	CListBoxEdit * GetListBox();
+	BOOL GetListBoxState();
+	void SetListBoxState(BOOL state);
+	BOOL CanInsertJump2(CSFCLogicBlock * plogicblock);
+	void OnHelp();
+private:
+	void CopyPOU(CPOU * pdPOU,CPOU * psPOU);
+    //end add by qwq
+    
+public:
+	tagHccTreeNode* GetControllerTime();
+	tagHccTreeNode *ResetStepLastTime();
+	tagHccTreeNode *GetStepLastTime();
+	tagHccTreeNode *AsgnStepStartTime();
+	//初始化动作控制块的输入引脚
+	tagHccTreeNode* InitActionBlockInputPin(CString strActionBlockName);
+	//获取动作关联bool变量的对应的动作控制块名称数组
+	CStringArray* GetConstActionArray();
+	void OnF2Help();
+	BOOL IsValidAndUndefinedVar(const char* pchars);
+	//调用动作控制块实例
+	tagHccTreeNode* CallACFB(CString strACFBName);
+	//调用RTSTime实例
+	tagHccTreeNode* CallRTSTimeFB(CString strRTSTimeFB);
+	//
+	tagHccTreeNode* GetACFBParameter();
+	tagHccTreeNode* InitACParameter(CString strActionTempName);
+	
+	//处理POU信息表修改情况
+	void DealWithPOUDetailModify(CString strTemp);
+
+	CSize m_szSFCViewPageSize;//纸张大小
+	//添加元素到MAP
+	void SetElementMap();
+	//替换所有
+	void SFCReplaceAll(CString strFind, CString strReplace, BOOL bWholeWord, BOOL bMatchCase);
+	//替换
+	void SFCReplace(CString strFind, CString strReplace, BOOL bWholeWord, BOOL bMatchCase);
+	//查找下一个
+	CFind *SFCFindNext(CString strFind, BOOL bWholeWord, BOOL bMatchCase);
+	//检查替换的条件
+	int CheckReplaceCondition(CString &strFind, CString &strReplace);
+	//查找替换入口
+	BOOL OnReplace(CString strFind, CString strReplace, BOOL bWholeWord, BOOL bMatchCase, char &chType);
+	//把查找到的信息添加到CFind对象中，主要是步上关联的动作块和并行分支标号
+    //modify by qwq for bug652
+	void AddFindElementToCFind(CSFCPOU *pSFCPOU,CString strFind,int id,int nIndex,int  chModulType,CString strName,CString strStyle,int num);
+    //end modify by qwq for bug652	
+	//双击输出窗口时，显示对应的元素
+	void FixElementPositionWhenSFCFind(CElementPosition *pElementPos);
+	//把查找到的信息添加到CFind对象中，主要是步、转换和跳转
+	void AddFindElementToCFind(CSFCPOU *pSFCPOU,CString strFind,int ID,int nIndex,int chModuleType);
+	//查找字符串
+	BOOL FindStr(CString strFind,CString strText,BOOL bMatchCase,BOOL bMatchWholeWord,int &nIndex);
+	//查找
+	void OnSearch(CString strFind,BOOL bMatchCase,BOOL bMatchWholeWord);
+	tagHccTreeNode* RemovePauseFlag();
+	tagHccTreeNode* SetPauseFlag();
+	tagHccTreeNode* RemoveResetFlag();
+	tagHccTreeNode* SetResetFlag();
+	tagHccTreeNode* RemoveInitFlag();
+	tagHccTreeNode* SetInitFlag();
+	tagHccTreeNode* DealWithPOUPause();
+	tagHccTreeNode* DealWithPOUReset();
+	tagHccTreeNode* DealWithPOUInit();
+	tagHccTreeNode* DealWithPOUFlags();
+
+	//销毁编辑框
+	void DestroyEditWindow();
+	//收集在线变量
+	void CollectOnlineVars();
+	//绘制在线POU
+	void DrawOnlinePOU(CDC *pDC);
+
+	void SetSelectShow(int nSelectShow);
+	int GetSelectShow();
+	//选项
+	void OnExtrasOption();
+	//时间总览
+	void OnExtrasTimeOverview();
+	//步属性
+	void OnExtrasStepOption();
+	//粘贴到右边
+	void OnExtrasPasteRight();
+	//粘贴到后面
+	void OnExtrasPasteAfter();
+	//从元素的MAP中删除元素
+	BOOL RemoveElement(int elementID);
+	COLORREF GetSFCColor(char cColorType);
+	CSFCLogicBlock* FindJumpTargetBlock(CString strTarget);
+	
+	void UpdateForSyncWithVar();
+	//视图缩放时，更新视图
+	void SFCViewZoom(float ratio);
+	tagHccTreeNode* CallACFBandRunAction();
+	tagHccTreeNode* CallExitAction();
+	tagHccTreeNode* CallEntryAction();
+	tagHccTreeNode* ResetStepsState(CString strStepName);
+	void FindErrorElementPosition(CElementPosition *pElementPos);
+	//找到动作名称
+	CString  FindActionName();
+	//找到动作
+	CSFCElement * FindElementAction();
+	CRect GetSelectedRect();
+	CRect GetMultiSelectedRect();
+	BOOL FindTwoSameStep(const CStringArray & StringArray, int iLen, CString strFindStep);
+	void CheckStepNameDuplicate();
+	//编译相关
+	void GetParallelLabelArray(CStringArray*);
+	void GetAllStepName(CStringArray*);
+	void GetAllJumpTargetArray(CStringArray*);
+	CStructType* GetStepStructType();
+	void AddSFCError(CError *pSFCError);
+	virtual BOOL CompilePOU();
+	virtual BOOL CheckPOUErrors();
+	void FindVar();
+	void SetElement(CSFCElement *pSFCElement);
+	int GetNewID();
+	//根据替换的位置，获取选中的字符串
+ 	CString GetSFCSelectStringWhenFindReplace();
+	virtual CString GetSelectStringWhenFindReplace();
+	
+	//获取动作POU或者转换POU
+	virtual BOOL GetActionPOU(CString strActionName, CPOU *&pPOU);
+	//动作POU或者转换POU容器的赋值
+	void SerializeFromFile(CArchive &ar);
+	//动作POU或者转换POU容器的存储
+	void SerializeToFile(CArchive &ar);
+ 	CPOUDetail* m_pPOUDetail; //POU描述信息表
+	CPOUContainer	m_SFCPOUContainer; //SFC POU 中动作转换POU容器
+	CStructType *m_pStructType;
+	CArray<CSyntaxElement*,CSyntaxElement*> m_syntaxElementStack;
+	BOOL CreateTempVarForSFCTansition(CString strTransName);
+    
+public:
+	BOOL IsActionPOUInProManagerTree(CPOU *pPOU);
+	BOOL GetFBInstanceCplVar(const CBaseDB* pFBVar,CString strCplVarName,CBaseDB*&pVar);
+	BOOL CheckParseNode(XMLTagNode *pTagRootNode, int iFlowType);
+	BOOL WriteChildPOUXML(CFile *pFile, CPOU *pChildPOU, BOOL bInProTree, CString strNameNode, int iActionType = 0);
+	BOOL WriteElememtXML(CFile *pFile, CSFCElement *pElement);
+	int ImportChildPOU(XMLTagNode *pActionTagNode, char cPOUType, CString strPOUName = _T(""),CString strPOUShowName = _T(""));
+	static int ImportXMLPOUContent(CSFCPOU *pSFCPOU,CString strPathName);
+	void ActiveEditWindow();
+	virtual BOOL WriteXMLPOULogicContent(CFile *pFile);
+	virtual int ExportXMLPOUContent(CString strPathName, UINT uExportType = ET_POU);
+	CSFCStep * GetStepElement(CString strStepName);
+	void AutoVarDeclear(CString strVarname);
+	void UpdatePOUAcionBlock(CString strActionName, BOOL bIsLoading = FALSE, CString strActionNewName = _T(""));
+	void RecordCrossReference(CString strVarName);
+	tagHccTreeNode* GetPOUFlagState();
+	void CreateTempVarForPOUFlagState();
+	tagHccTreeNode* GetPOUExecLogicWithSFCFlag();
+	void LinkTwoHccTree(tagHccTreeNode *pRef, tagHccTreeNode *pNewNode);
+	tagHccTreeNode* CompilePOULogic();
+	tagHccTreeNode* DealWithSFCReset(CBaseDB *pResetVar, CBaseDB *pPauseVar);
+	tagHccTreeNode* DealWithSFCInit(CBaseDB *pInitVar, CBaseDB *pResetVar, CBaseDB *pPauseVar);
+	BOOL IsJumpToSelfLogicBlock(CSFCElement *pSFCElement, CString strJumpTarget);
+	virtual void UpdataBoxType(CString strBoxName, CString strNewName);
+	tagHccTreeNode* JudgePOUFlag(CBaseDB *pInitVar, CBaseDB *pResetVar, CBaseDB *pPauseVar);
+	tagHccTreeNode* GetIECInterval();
+	//获取剪贴板中步和转换元件的个数
+	void GetClipboardTransAndStepAndChildPOUAccount(UINT &uiTrans, UINT &uiStep, UINT &uiChildPOU);
+	//调用pou中的步动作
+	tagHccTreeNode* CallStepAction();
+	//给入口出口动作的动作控制块参数赋值
+	//给动作转换pou的传参
+	tagHccTreeNode* AssgnAllParameterOfTransOrActionPOU(CString strPOUName);
+	//获取FB实例的四个区的首地址
+	tagHccTreeNode* GetAllFBVarPointer(CString strFBVarName);
+	//文本对应的变量所在的区
+	int GetVarRegion(CString strVarText);
+	//根据IECSFC库是否添加更新步中间变量
+	void UpdateStepTempVarByIECSFClib();
+	//编辑时移除步名对应的中间变量
+	void RemoveTempVarForStepWhenEdit(CString strStepName);
+	//编辑时创建步名对应的中间变量
+	void CreateTempVarForStepWhenEdit(CString strStepName);
+	//检查步名是否合法
+	BOOL CheckForStepName(CString strStepName);
+	//检查S88内置变量
+	BOOL CheckS88InternalVar(int& nS88VarCount);
+	//创建S88控制批量状态转换类型对应的中间变量
+	void CreateS88StateTempVar();
+	//初始化动作控制块的输出
+	tagHccTreeNode* InitActionControlOutpout();
+	//动作限定符的状态，与关联到的步有关
+	tagHccTreeNode* GetQualitifierState(CStringArray *pStringArray);
+	//创建assgn节点
+	tagHccTreeNode* CreateAssgnNode(CString strLeftName, CString strRightName);
+	//给动作控制块传实参
+	tagHccTreeNode* AssgnActionControlParameter(CString strActionName);
+	//sfc pou首次调用处理
+	tagHccTreeNode * InitPOUState();
+	//add by qwq for M5
+ 	virtual void ImportM5TOM6RefeshBoxContent();
+ 	virtual void M5TOM6Replace();
+	//end add by qwq for M5
+    
+private:
+	CBaseDB *__GetSFCInitVar();
+	CBaseDB *__GetSFCPauseVar();
+	CBaseDB *__GetSFCResetVar();
+    //add by qwq for POU导入
+	void __CollectChildPOUInfo(enum emChildPOUType emChildType,XMLTagNode *pPOUTagNode,CList<stChildPOUInfo*,stChildPOUInfo*>& POUInfoList);
+	int __ImportXMLFlowCompare(XMLTagNode *pFlowTagNode,CList<stElementInfo*,stElementInfo*>& InfoList);
+	void __CollectChildPOUInfo(CList<stElementInfo*,stElementInfo*>& InfoList);//收集子POU信息
+	void __DeleteElementInfo(CList<stElementInfo*,stElementInfo*>& InfoList);
+	void __CompareElementInfo(CList<stElementInfo*,stElementInfo*>& InfoList1,
+							  CList<stElementInfo*,stElementInfo*>& InfoList2,CStringArray& strarrLog);
+	bool __CompareStepPOUInfoList(CList<stChildPOUInfo*,stChildPOUInfo*>*POUInfoList1,
+							  CList<stChildPOUInfo*,stChildPOUInfo*>*POUInfoList2,CString&strInfo);
+public:	
+	//added by huweiguo 2015.05.19 for bug 17030
+    BOOL CollectSFCChildPou(CList<stElementInfo*,stElementInfo*>& InfoList,CSFCElement *pSFCElement);
+	//end added
+	int ImportXMLPOUCompare(CString strPathName,CSFCPOU *pSFCPOU,CStringArray& strarrLog);
+    //end add by qwq for POU导入
+	void UpdateChildPOUShowName();
+	void UpdateChildPOUShowNameAndDocTitle(CSFCElement *pElement);
+	BOOL NeedSupportS88();
+	HccTreeNode *CompileToS88();
+	HccTreeNode *CallS88State();
+	HccTreeNode *CompileS88Running();
+	HccTreeNode *CompileS88Stopping();
+	HccTreeNode *CompileS88Holding();
+	HccTreeNode *CompileS88Pausing();
+	HccTreeNode *CompileS88Aborting();
+	HccTreeNode *CompileS88Restarting();
+	HccTreeNode *CompileS88FailureMonitor();
+	HccTreeNode *CompileS88SafeStepActive();
+	HccTreeNode *CreateS88StateEQNode(CString strState,int nValue);
+	HccTreeNode *CreateS88StateTransTree(int nValue);
+	HccTreeNode *CreateS88StateTransConditionTree(int nValue,bool bActionExist);
+	HccTreeNode *CreateAsgnHCCTree(CString strLeft, CString strRight);
+	HccTreeNode *CallAction(CString strActionPOUName);
+	HccTreeNode *CreateS88FailureCondition(bool bFail);
+	HccTreeNode *CreateS88RestartType(bool bInit);
+	HccTreeNode *CreateS88ReRunningToCurrentStep();
+	HccTreeNode *CreateS88RestartingToRunning();
+	void OnExtraSafeStepOverview();
+    
+public:
+	int m_iEditIndex; //输入助手时，记录一下当前输入字符位置的索引
+	int m_iReplaceCount; //记录替换次数
+	int m_FIindex; //查找系数
+	BOOL m_bFindReplaceEnd; //是否替换到最后一个
+	SFCFindInfo *m_FindInfoList; //查找信息表
+    //add by qwq
+	BOOL m_bFindNext;//当点击查找下一个时置为TRUE
+    //end add by qwq
+	int m_SelectShow;  //属性选中类型
+	UINT m_CommentWidth; //注释长度
+	UINT m_StepWidth; //步宽度
+	UINT m_StepLength; //步长度
+	CToolTipCtrl *m_pToolTipCtrl;//tip控件
+	float m_ratio;//缩放比例
+	UINT m_nSFCStepCount; //pou中步的总数量
+	UINT m_nSFCTransCount; //pou中转换的总数量
+
+public:
+	BOOL m_bDetailEdit;//是否在编辑POU信息表
+	CString m_strTansStatement;
+	int m_iFontHeight;//字体高度
+	//add by qwq
+	LPRedoUndoCmdList m_pUndoCmdList;
+	LPRedoUndoCmdList m_pRedoCmdList;
+	//end add by qwq
+	BOOL m_bCutFlag;
+
+private:
+	BOOL m_bSFClibloadflag;  //SFC库加载标志
+	BOOL m_bSelectActionBlock;
+	CStringArray m_strConstActionArray;   //POU中包含的变量Action名称数组
+	//元件Map
+	CMap<int,int,CSFCElement*,CSFCElement*> m_SFCElementMap;
+	//翻译成中间代码语法树时，使用的跳转对应的指针
+	CMap<CString,LPCTSTR,HccTreeNode*,HccTreeNode*> m_hccLabelNode;
+	//跳转目标地址
+	 CStringArray m_strJumpTargetArray;
+	 CScrollView *m_pView; //视图对象
+	 CSFCFlow *m_pSFCFlow; //POU中包含的流
+	 
+	 CRect m_rtSelectedRect;//选中区域
+	 CRect m_rtMultiSelectedRect;//多选区域
+	 BOOL m_bMultiSelected;//是否多选
+	 int m_SFC_CLipboard;//剪贴板参数
+	 int m_POU_Clipboard;
+	
+	 CModifyTextEdit* m_pModifytextedit;//文本编辑框
+	 CPoint m_point ;//记录鼠标上一时间所在的点
+ 
+	 BOOL m_bSelected; //是否被选中
+	 BOOL m_bEditState; //编辑标志
+	 CPoint m_ptBegin; //鼠标开始点
+	 CPoint m_ptEnd; //结束点
+    //add by qwq
+	CSFCElement * m_pFirstElement;//记录m_ptBegin点对应的元件
+	CSFCElement * m_pEndElement;//记录m_ptEnd点对应的元件
+    //end add by qwq
+	 CSFCMultiSelected *m_pSelected; //选中单元
+	 CString m_strPaperType; //纸张类型
+
+    //add by qwq
+	CSFCActionBlock * m_pActionBlock;//被选中的动作
+	struct {
+		enum TEXT_TYPE textType;//编辑文本类型
+		CSFCElement * pElement;
+		CSFCActionBlock * pActionBlock;
+		CSFCLogicBlock * pLogicBlock;
+	} m_edit;//记录编辑信息
+	CTypedPtrList<CObList,CSFCLogicBlock *>	m_labelLogicBlockList;//记录具有标号的并行块
+	BOOL m_bTextChange;//文本修改标志
+	CListBoxEdit * m_pListBox;
+	BOOL m_bListBox;
+    //end add by qwq
+};

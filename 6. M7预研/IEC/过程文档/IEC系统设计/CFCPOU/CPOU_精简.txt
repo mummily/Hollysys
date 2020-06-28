@@ -1,0 +1,39 @@
+class CPOU
+{
+public:
+	CPOU();
+	virtual ~CPOU();
+
+protected:
+	//POU名称
+	CString		m_strPOUName;
+	//POU别名(库的POU使用的)
+	CString	    m_strPOUByName;	
+	//POU描述，对POU做进一步注释
+	CString		m_strPOUDesc;
+	//POU类型
+	char		m_chPOUType;    
+	//POU描述语言
+	char		m_chPOULanguage;
+	//表示POU是否被调用，本标志在上次编译的时候设置
+	char		m_cPOUCalled;
+	//标示POU是否需要重新编译,true代表通过编译
+	BOOL		m_bPOUCompiled;
+	//标示POU是否内容发生变化,true代表发生变化
+	BOOL		m_bPOUChanged;
+	USHORT      m_usPOUCycle;// add for POU调度周期 by wxm on 2012/5/11	
+	//POU修改时间
+    CString     m_strPOUModifyTime;
+	//POU修改人
+	CString     m_strModifyUserName;
+	//执行顺序
+    UINT        m_uiExecuteSequence;
+	//最后下装时间
+	CString     m_strLastDownloadTime;
+	//POU路径
+	CString     m_strPouPath;
+	//数据流排序
+	BOOL        m_bDataFlowOrder;	
+	BOOL	    m_bLinkedToTemplateFlag;		//该POU是否连接到模板 模板导入导出功能	
+	UCHAR	    m_ucTemplateType;				//模板类型，该成员参与序列化，创建模板时设置
+};

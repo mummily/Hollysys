@@ -1,0 +1,272 @@
+class CFC_DLL_DECL CCFCElement : public CElement  
+{
+	//add serialize mechanism
+	DECLARE_SERIAL(CCFCElement)
+
+public:
+	int GetEndPos();
+	int GetBeginPos();
+	void SetEndPos(int end);
+	void SetBeginPos(int begin);
+	void DrawRectByLackSide(CDC *pDC, CRect rect, int side);
+	emTextTypeEditState GetEditState();
+	void SetEditState(char chState);
+	BOOL CheckEndWhenFindNext(CString strFind, BOOL bWholeWord, BOOL bMatchCase,CCFCPOU *pCFCPOU);
+	BOOL SetSingleTextFindIndex(char type, int order, CString strSingle, CString strFind, BOOL wholewordflag, BOOL matchcaseflag, CCFCPOU *pCFCPOU);
+	BOOL SetElementTextFindIndex(char type, int order,CString strFind, BOOL wholewordflag, BOOL matchcaseflag,CCFCPOU *pCFCPOU);
+	BOOL FindAndFillInfoOnSingleText(char type, CString strSingle,CString strFind, BOOL wholewordflag, BOOL matchcaseflag,CCFCPOU *pCFCPOU);
+	BOOL FillSingleTextFindInfo(char type, CString strFind, BOOL wholewordflag, BOOL matchcaseflag,CCFCPOU *pCFCPOU);
+	void SetTextFindInfo(char type,CString strFind, BOOL wholewordflag, BOOL matchcaseflag, CCFCPOU *pCFCPOU);
+	void FillFindResultsToList(CString strFind,BOOL wholewordflag,BOOL matchcaseflag, CCFCPOU *pCFCPOU);
+	BOOL IsVAP();
+	CArrayMonitorInfo* GetArrayMonitorInfo(CCFCPOU *pCFCPOU);
+//	int DrawShowOrderOnPDF(CCFCPOU *pCFCPOU,PDFlib &pdf);
+//	virtual	int DrawOnPDF(CCFCPOU *pCFCPOU,PDFlib &pdf);
+	CRect GetCommentRect();
+	void SetCommentRect(CRect rect);
+	CRect GetAliasRect();
+	void SetAliasRect(CRect rect);
+	CString GetElementComment();
+	void SetElementComment(CString strcomment);
+	CString GetElementAlias();
+	void SetElementAlias(CString stralias);
+	virtual CString GetCFCElementErrorDes();
+	void DrawShowOrder(CDC *pDC,CCFCPOU *pCFCPOU);
+	BOOL GetSelect();
+	CString GetOnLineName();
+	void SetOnLineName(CString str);
+	virtual void DrawUnvisibleConnectElement(CDC *pDC, CCFCPOU *pCFCPOU);
+	virtual tagHccTreeNode* CompileCFCElement(CCFCPOU *pCFCPOU);
+	virtual BOOL IsInSelectRegion(CPoint pt);
+	virtual void SetShowOrder(int order);
+	virtual int GetShowOrder();
+	virtual void RemoveAllLineSelect();
+	virtual BOOL CheckErrors(CCFCPOU *pCFCPOU);
+	virtual CCFCPin * GetSorbPin(CCFCPin *pCFCPin,CCFCPOU *pCFCPOU);
+	BOOL IsInCFCLineList(CCFCLine *pLine,CCFCLineList *pList);
+	virtual void RemoveAllLine();
+	virtual void FillLineToList(CCFCLineList *pList);
+	virtual void ClearLineCorreElementNotInList(CCFCPOU *pCFCPOU, CCFCElementList *pList);
+	virtual void SetLineCorreElementID();
+	virtual void SetPinParentID();
+	CElementTextInfo* GetElementTextInfo();
+	virtual void GetConnectInputElement(CCFCPOU *pCFCPOU,CCFCElementList *pList);
+	virtual void GetDirectConnectElement(CCFCPOU *pCFCPOU,CCFCElementList *pList);
+	virtual void GetConnectElement(CCFCPOU *pCFCPOU,CCFCElementList *pList){};
+	int GetOldOrder();
+	void SetOldOrder(int order);
+	void SetSum(int sum);
+	int GetSum();
+	int GetExcuteOrder();
+	void SetExcuteOrder(int order);
+	BOOL IsInCFCElementList(CCFCElement *pCFCElement,CCFCElementList *pCFCElementList);
+	virtual void SetLines(CCFCPOU *pCFCPOU,CCFCElementList *pCFCElementList){};
+	virtual void RemoveLines(CCFCPOU *pCFCPOU,CCFCElementList *pCFCElementList){};
+	//added by huweiguo 2015.11.20 for bug 19364
+    virtual void RemoveLinesForModule(CCFCPOU *pCFCPOU,CCFCElementList *pCFCElementList){};
+	//end added
+	virtual CCFCOutputPin* GetOutputPinByIndex(int iPinIndex);
+	virtual CCFCInputPin * GetInputPinByIndex(int iPinIndex);
+	virtual void RefreshPins();
+	void SetSelect(BOOL bSelect = true);
+	int GetElementID();
+	void SetElementID(int iID);
+	void SetWholeRegionRect(CRect rt);
+	CRect GetTextRegionRect();
+	void SetTextRegionRect(CRect rtTextRegion);
+	CRect GetWholeRegionRect();
+	CRect GetInnerRegionRect();
+	void SetInnerRegionRect(CRect rt);
+	BOOL IsSelected();
+	CPoint GetTopLeftPoint();
+	CString GetElementText();
+	void SetElementText(CString strElementText);
+	void SetTopLeftPoint(CPoint ptTopLeft);
+	virtual BOOL SelectCFCElement(CPoint ptLogic,CCFCPOU *pCFCPOU);
+//modify by qwq for cmp
+//	virtual void SetOffLineShape(CCFCPOU *pCFCPOU,CDC *pDC=NULL);
+	virtual void SetOffLineShape(CCFCPOU *pCFCPOU,CDC *pDC = NULL,BOOL bCmp = FALSE,BOOL bInit = FALSE);
+//end modify by qwq for cmp
+	virtual void SetOnLineShape(CCFCPOU *pCFCPOU);
+//modify by qwq for cmp
+//	virtual void DrawOffLineElement(CDC *pDC,CCFCPOU *pCFCPOU);
+	virtual void DrawOffLineElement(CDC *pDC,CCFCPOU *pCFCPOU,BOOL bCmp = FALSE,BOOL bInit = FALSE);
+//end modify by qwq for cmp
+	virtual void DrawOnLineElement(CDC *pDC,CCFCPOU *pCFCPOU);
+	virtual void Serialize(CArchive &ar);
+
+//added by huweiguo 2012.09.24 for default dot
+    void SetDotFlag(BOOL flag ){m_dotflag=flag;}
+	BOOL GetDotFlag(){return m_dotflag;}
+//end added
+
+	CCFCElement();
+	virtual ~CCFCElement();
+//add by qwq for cmp
+	void SetCMPResult(emElementCMP type);
+	emElementCMP GetCMPResult(void);
+	void SetCMPElement(CCFCElement* pElement);
+	CCFCElement* GetCMPElement(void);
+//end add by qwq for cmp
+
+//added by huweiguo 2012.09.29 for bug
+    void cleargetidcount(BOOL flag1=FALSE)
+	{
+		if(!flag1)
+		{
+		 commentgrid=0;
+	     aliansgrid=0;
+         textgrid=0;
+		}
+		else 
+		{
+		    if(COptionsInfo::GetIECDIRMode()==1)
+			{
+			 textgrid=0;
+			}
+			else
+			{
+                commentgrid=0;
+                textgrid=0;
+			}
+		}
+	}
+// 	void SetZOOMFlag(BOOL flag)
+// 	{
+// 		m_zoomflag=flag;
+// 	}
+// 	BOOL GetZOOMFlag()
+// 	{
+//        return m_zoomflag;
+// 	}
+//end added
+
+//added by huweiguo 2012.10.09 for bug
+	void SetCopyFlag(BOOL flag)
+	{
+		m_copyflag=flag;
+	}
+//end added
+
+//added by huweiguo 2012.10.10 for bug
+ 	void SetVarFlag(BOOL flag){m_varflag=flag;}
+ 	BOOL GetVarFlag(){return m_varflag;}
+//end added
+
+//added by huweiguo 2012.10.18 for bug
+	void SetFBVarFlag(BOOL flag){m_FBVarListflag=flag;}
+	BOOL GetFBVarFlag(){return m_FBVarListflag;}
+//end added
+
+//added by huweiguo 2012.10.18 for bug 3598
+	void SetFindFlag(BOOL flag){m_findflag=flag;}
+	BOOL GetFindFlag(){return m_findflag;}
+//end added
+
+//added by huweiguo 2012.12.13 for bug fugai
+	CList <int,int>m_IDList;
+//end added
+
+	//added by huweiguo 2015.03.11 for xuqiu
+	BOOL m_PositionFlag;
+	//end added
+	
+	//added by huweiguo 2015.2.18 for xuqiu
+	BOOL m_Negate;
+	int m_AssignID;
+//end added
+
+protected:
+	CString m_strNameOnLine;
+	CString m_strDebug;
+	CString m_strOrigin;
+	//for on line fix position
+	int m_iBeginPos;
+	int m_iEndPos;
+
+private:
+	BOOL m_bOnLineFlag;
+	//元件ID
+	unsigned short m_iElementID;
+	//元件执行顺序序号
+	int m_iExecuteOrder;
+
+	//元素的左上角坐标
+	CPoint			m_ptTopLeft;
+	//保存当前元件整体的物理矩形区域，包括引脚文本的最大矩形框
+	CRect			m_rtWholeRegion;	
+	//保存元件除引脚和外层文本的内层矩形框区域
+	CRect			m_rtInnerRegion;
+	
+	//元件文本，如果为基本元件即位其所带参数，如果为块元件为描述该元件类型的文本（如操作符的AND）
+	//功能块元件所带功能块类型变量实例在类CCFCBOX中有对应变量描述
+	CString m_strCFCElementText;
+	//别名
+	CString m_strCFCElementAlias;
+	//注释
+	CString m_strCFCElementComment;
+
+	//元件文本矩形区域
+	CRect			m_rtCFCElementText;	
+	//元件别名矩形区域
+	CRect m_rtCFCElementAlias;
+	//元件注释矩形区域
+	CRect m_rtCFCElementComment;
+
+	//选中标志，如果元件被选中则此标志置为true
+	BOOL			m_bSelect;
+
+	//元件文本类型信息,如果元件为普通元件,那么这个即位元件所带参数文本类型
+	//如果是块元件包含两个文本:
+	//一为标识块元件类型的文本,二为功能块实例名(如果有),
+	//此标致标识实例名文本类型
+	emTextType	m_emTextType;
+	
+	//记录删除多个元素时，小于某个非删除元素执行号的删除元素个数
+	int m_isum;
+	//元素原来的执行序号便于按数据流排序的撤销重做
+	int m_ioldorder;
+	//标识是否处于编辑状态
+	emTextTypeEditState m_emTTES;
+protected:
+	//element text type info
+	CElementTextInfo m_elementTextInfo;
+//add by qwq for cmp
+    emElementCMP m_cmptype;
+	CCFCElement* m_pCMPElement;
+//end add by qwq for cmp
+
+//added by huweiguo 2012.09.24 for default dot
+    BOOL m_dotflag;
+//end added
+
+//added by huweiguo 2012.09.29 for bug
+//注释，别名，文本所占栅格
+   int commentgrid;
+   int aliansgrid;
+   int textgrid;
+//  BOOL m_zoomflag;
+//end added
+
+//added by huweiguo 2012.09.29 for bug
+BOOL m_copyflag;
+//end added
+
+//added by huweiguo 2012.10.10 for bug
+BOOL m_varflag;
+//end added
+
+//added by huweiguo 2012.10.10 for bug
+BOOL m_FBVarListflag;
+//end added
+
+//added by huweiguo 2012.10.24 for bug 3598
+BOOL m_findflag;
+//end added
+
+//added by huweiguo 2013.03.27 for bug
+// CString oldtype;
+   CString dotitem;
+//end added
+};
+

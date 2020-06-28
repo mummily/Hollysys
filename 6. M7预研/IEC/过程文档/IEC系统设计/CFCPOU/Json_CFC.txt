@@ -1,0 +1,63 @@
+{
+¡°pou¡±:
+{
+	¡°name¡±:¡±¡±,
+	¡°description¡±:¡±¡±, 
+	¡°path¡±:¡±¡±,
+	¡°poucycle¡±:¡±¡±,
+	¡°auto-sort¡±:¡±¡±, 
+	¡°pouexcuteorder¡±:¡±¡±
+},
+¡°cfc¡±:
+{
+¡°input¡±:
+{
+	{
+		¡°id¡±:1,
+		¡°position.x¡±:1,
+		¡°position.y¡±:1,
+		¡°length:1,
+		¡°width:1,		
+		¡°text¡±:¡±¡±,
+		¡°isen¡±:¡±false¡±, 
+		¡°iseno¡±:¡±false¡±,
+		¡°input¡±:
+				{
+				}
+		¡°output¡±:
+				{
+					{
+						¡°pinname¡±:¡±DV¡±,
+						¡°visible¡±:¡±true¡±,
+						¡°negate¡±:¡±false¡±
+                    },
+                    {
+						¡°pinname¡±:¡±DV¡±,
+						¡°visible¡±:¡±true¡±, 
+						¡°negate¡±:¡±false¡±
+                    },
+                }
+    },
+	{
+    },
+},
+¡°box¡±:
+{
+},
+¡°output¡±:
+{
+},
+¡°return¡±:
+{
+},
+¡°jump¡±:
+{
+},
+¡°label¡±:
+{
+},
+¡°comment¡±:
+{
+}
+}
+}

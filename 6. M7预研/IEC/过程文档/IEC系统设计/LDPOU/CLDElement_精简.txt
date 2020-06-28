@@ -1,0 +1,16 @@
+class CLDElement : public CElement  
+{
+public:
+	CLDElement();
+	virtual ~CLDElement();
+    
+    1. POU导入导出XML
+	2. 语法检查
+    
+private:
+	ElementType		m_emTypeID;		//类型//Box  Input  output  contact return jump and or等
+	CString			m_strText;		//元素中的具体内容
+	CString			m_strHeadLogic;
+	CString			m_strTailLogic;
+	list<int>		m_childrenIDList; //其子结点点的所有ID 号列表 
+};

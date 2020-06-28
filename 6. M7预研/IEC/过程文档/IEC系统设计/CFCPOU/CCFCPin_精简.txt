@@ -1,0 +1,62 @@
+class CCFCPin
+{
+public:
+	CCFCPin();
+	virtual ~CCFCPin();
+    
+public:
+    1. 变量操作
+	2. 引脚类型
+	3. 信号流线操作
+	4. 属性操作
+    5. Json操作
+
+private:
+	//引脚依附的CFC元件
+    CCFCElement*    m_pCFCElement;
+	//引脚所在的输入引脚（输出引脚）索引值//0为使能引脚，其他顺序排列
+	int				m_iIndex;
+	//引脚类型(0,InputPin;1,OutputPin;2,InOutPin)
+	int             m_iPinType;
+	//引脚名称，可以为空
+	CString			m_strPinName;
+	//引脚对应变量的名称（若变量为空，则使用该则）
+	CString			m_strVarName;
+    //是否显示引脚	
+	bool			m_bVisible;		
+    //取反标志
+	bool			m_bNegative;	
+	//引脚关联的变量
+	CBaseDB*		m_pPinVar;
+};
+
+class CCFCInputPin : public CCFCPin  
+{
+public:
+	CCFCInputPin();
+	virtual ~CCFCInputPin();
+
+public:    
+	1. 信号流线 增删
+	2. 语法检查 bool CheckErrors();
+    3. 引脚是否被连接 bool DoesHaveLine(); 
+
+private:
+	//输入引脚连接的线，输入引脚只能连一条线
+	CCFCLine* m_pCFCLine;
+};
+
+class CCFCOutputPin : public CCFCPin  
+{
+public:
+	CCFCOutputPin();
+	virtual ~CCFCOutputPin();
+    
+public:	
+    1. 信号流线 增删
+	2. 语法检查 bool CheckErrors();
+    3. 引脚是否被连接 bool DoesHaveLine();
+	
+private:
+	CCFCLineList *m_pCFCLineList; //输出引脚链表
+};

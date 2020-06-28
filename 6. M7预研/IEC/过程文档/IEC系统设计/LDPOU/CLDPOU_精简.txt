@@ -1,0 +1,17 @@
+class CLDPOU : public CIECPOU  
+{
+public:
+	CLDPOU();
+	virtual ~CLDPOU();
+	
+    删除元件、是否允许删除判断
+	添加元件、是否允许添加判断
+    出库、入库    
+	导出导出POU
+    语法检查
+    合并条件/分支的操作
+    
+public:
+	list<CLDElement* > m_LDELementList; // LD子元件
+	std::string        m_strComment;    // LD POU 备注
+};

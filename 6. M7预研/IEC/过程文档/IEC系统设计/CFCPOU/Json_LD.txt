@@ -1,0 +1,28 @@
+{
+¡°pou¡±:
+{
+	¡°name¡±:¡±¡±,
+	¡°description¡±:¡±¡±, 
+	¡°path¡±:¡±¡±,
+	¡°poucycle¡±:¡±¡±,
+	¡°auto-sort¡±:¡±¡±, 
+	¡°pouexcuteorder¡±:¡±¡±
+},
+¡°ld¡±:
+{
+	¡°comment¡±:¡±¡±,
+	¡°network¡±:
+{
+	{
+		¡°id¡±:¡±¡±,
+		¡°label¡±:¡±¡±,
+		¡°comment¡±:¡±¡±,
+		¡°element¡±:
+		{
+}
+},
+{
+}
+}
+}
+}

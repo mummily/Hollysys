@@ -1,0 +1,360 @@
+class CIECPOU : public CPOU
+{
+public:
+	CIECPOU();
+	virtual ~CIECPOU();
+	virtual void Serialize(CArchive &ar);
+    
+public:
+	void AddOnLineVarToList(CBaseDB *pBaseDB);
+	BOOL GetToolTipShowType(CString strContent,CString &strShowType);
+	CString GetUniqueFBName(CString strPOUName,CString strFBType);
+	int InvokeHccEntrance(pTagHccParameter pParameterList, pTagHccTreeNode pFunction);
+	BOOL AddBoxVarToPOUTempVarMap(CBaseDB *pBaseDB);
+	tagHccTreeNode* GetFBVarPointer(CString strFBVarName);
+
+    //start
+	//图形语言，如CFC、LD中使用的HCC语法树构造的相关函数
+	tagHccTreeNode* GetLocalVarForceMarkRightValue(CTextInfoVariable *pVarInfo);
+	tagHccTreeNode* GetGlobalVarForceMarkRightValue(CTextInfoVariable*pVarInfo);
+	tagHccTreeNode* GetForceMarkRightValueByTextInfo(CElementTextInfo *pTextInfo);
+	tagHccTreeNode* GetForceMarkRightValueByVarText(CString strVarText);
+	tagHccTreeNode* GetLocalVarLeftValue(CTextInfoVariable *pVarInfo,int &iPointerHCCType);
+	tagHccTreeNode* GetGlobalVarLeftValue(CTextInfoVariable *pVarInfo,int &iPointerHCCType);
+	tagHccTreeNode* GetLeftValueByTextInfo(CElementTextInfo *pTextInfo,int &iPointerHCCType);
+	tagHccTreeNode* GetLeftValueByVarText(CString strVarText,int &iPointerHCCType);
+	tagHccTreeNode* GetRightValueByVarText(CString strVarText);
+	tagHccTreeNode* GetLocalVarRightValue(CTextInfoVariable *pVarInfo);
+	tagHccTreeNode* GetGlobalVarRightValue(CTextInfoVariable *pVarInfo);
+	tagHccTreeNode* GetRightValueByTextInfo(CElementTextInfo *pTextInfo);
+	tagHccTreeNode* GetIntOffsetTreeNodeOfArrayPin(CTextInfoVariable *pArrayInfo);
+	tagHccTreeNode* GetComplicatedVarAsgnTreeNode(CElementTextInfo *pLeftTextInfo,CElementTextInfo *pRightTextInfo);
+	void SetCNSTTreeNodeConstValue(tagHccTreeNode *pCNSTTreeNode,CTextInfoConst *pConstInfo);
+	//end_start
+
+	tagHccTreeNode * GetEqual0LogicTreeNode(tagHccTreeNode *pRightValue);
+	tagHccTreeNode* GetDefaultReturnLogic();
+	void GetTypeConversionOperatorType(CString strOperatorType,CString& strLeftType,CString& strRightType);
+	CString GetFunReturnTypeString(CString strFunName);
+	
+	static BOOL IsBasicMathOperators(CString strOperatorType);
+	static BOOL IsSelectionOperators(CString strOperatorType);
+	static BOOL IsComparisionOperators(CString strOperatorType);
+	static BOOL IsBitShiftOperators(CString strOperatorType);
+	static BOOL IsLogicOperators(CString strOperatorType);
+	static BOOL IsArithmeticOperators(CString strOperatorType);
+	static BOOL IsTypeConversionOperator(CString strOperatorType);
+
+	static BOOL NeedProtectArrayIndexOverFlow();
+	static BOOL NeedProtectDivideZero();
+	static BOOL PrintInSinglePage();
+
+	tagHccTreeNode* GetTreeNodeCopy(tagHccTreeNode*pTreeNode);
+	int GetForceMarkRegionOffset();
+
+	BOOL LookupTempVarOfBox(CString strVarName,CBaseDB *&pBaseDB);
+
+	void DeleteBoxVarFromTempVarMap(CString strVarName);
+	CMap<CString,LPCSTR,CBaseDB*,CBaseDB*>* GetPOUTempVarMap();
+	tagHccSymbol* GetFunTempSymbol(CBaseDB *pBaseDB);
+	BOOL CanBeForced(CElementTextInfo *pTextInfo);
+	BOOL CanBeForced(CString strVarText);
+	int  GetBaseDBIndex(CBaseDB* pBaseDB);
+	int  GetBaseDBIndex(emDataType emIECType);
+	int  GetBaseDBIndexByHccType(int iHccType);
+	int  GetHCCTypeSize(int iHccType);
+	BOOL IsFBPOUTempVar(CString strName);
+	void CreateFunPOUReturnVar();
+	void InitPOUDataInProject();
+	tagHccSymbol* GetSymbolInFun(CString strVarName);
+	BOOL IsFunPOUTempVar(CString strVarName);
+	BOOL LookupParameterSymbol(CString strName,tagHccSymbol *&pHccSymbol);
+	void AddParameterSymbolToMap(CString strName,tagHccSymbol *pHccSymbol);
+	int GetHccTypeTransferOperatorType(int iHccType);
+	BOOL LookupLocalSymbol(CString strKey,tagHccSymbol *&pLocalSymbol);
+	void AddLocalSymbolToRecordMap(CString strKey,tagHccSymbol *pHccSymbol);
+	void InitTempVariable(tagHccTreeNode *pHccEndNode,CBaseDB *pBaseDB,CList<CBaseDB*,CBaseDB*> *pFatherList);
+	static tagHccTreeNode* NewHccTreeNode(char cOp,char cTypeKind);
+	tagHccSymbol* NewHccSymbol(char cSymKind,char cSymScope,CString strIECType);
+	tagHccSymbol* NewHccSymbol(char cSymKind,char cSymScope,CString strIECType,UINT uSize);
+	tagHccParameter* NewHccParameter();
+	tagHccParameter* GetHccParameterList();
+	void DealWithTempVariable(tagHccTreeNode *pHccEndNode);
+	static BOOL GetPOUInfo(CString strPOUName,CPOUInfo &pouInfo);
+	void RecognizeData(CString strContent,CElementTextInfo *pTextInfo,CBaseDB *&pVar);
+	//复杂变量的赋值
+	HccTreeNode* CreateComplicatedVarAsgnTreeNode(CBaseDB* pVar, HccTreeNode* pRightNode,HccTreeNode* pLeftNode );
+	//添加节点到树中
+	char AddNodeToTree(HccTreeNode* pRef,HccTreeNode* pNewNode,char cAddType);
+	//完成对Hcc节点的完全的备份(因为树中的节点不能复用)
+	HccTreeNode* CopyHccNode(HccTreeNode* pOrig);
+	//增加DATA节点
+	HccTreeNode* CreateHCCDataNode(emDataType emType, CString strData);
+	//增加not节点，完成取反
+	char CreateNotNode(HccTreeNode* pNodeEnd,HccTreeNode*& pNotNode);
+	//创建IF条件树
+	HccTreeNode* CreateIFNode(HccTreeNode* pCondition);
+	//创建IFELSE条件树
+	HccTreeNode* CreateIFELSENode(HccTreeNode* pCondition);
+	//强制标志的if节点
+	bool CreateForceMarkIFNode(CBaseDB* pVar,HccTreeNode*& pTreeNode,HccTreeNode* pVarAddressNode);
+	//复杂变量成员的赋值
+	HccTreeNode* CreateSimpleMemAssignTreeNode(CBaseDB* pVar, int iOffset, HccTreeNode* pRightNode,HccTreeNode* pLeftNode);
+
+	HccTreeNode* CreateStringAssignTreeNode(HccTreeNode* pLeftNode,HccTreeNode* pRightNode,int nCapacity);
+	
+	void GetInitTempSimpleVarAsgnAndRightTreeNode(CBaseDB *pBaseDB,tagHccTreeNode *&pAsgn,tagHccTreeNode *&pRightValue);
+
+	BOOL CanElementDataBeWritten(CElementTextInfo *pTextInfo);
+	BOOL IsFunPOUInOutVar(CString strVarName);
+	// add at 2011.4.1 by KLQ
+	HccTreeNode* GetABSTreeNode(HccTreeNode *pRightValue);
+	// add at 2014.8.18 by hk
+	int GetLeftWidth();
+	int GetTopWidth();
+	HccTreeNode* CreateCallForceExtLibTreeNode(CBaseDB* pVar, int iOffset, HccTreeNode* pRightNode,HccTreeNode* pLeftNode);
+	HccTreeNode* CreateCallPRGForceExLibTreeNode(CBaseDB* pVar, int iOffset, HccTreeNode* pRightNode,HccTreeNode* pLeftNode);
+	HccTreeNode* CreateCallFBForceExLibTreeNode(CBaseDB* pVar, int iOffset,  HccTreeNode* pRightNode,HccTreeNode* pLeftNode);
+	HccTreeNode* CallFBForceCallPrgExLib(CBaseDB* pVar, int iOffset, HccTreeNode* pRightNode,HccTreeNode* pLeftNode);
+	int GetFBLocalOffset(CElementTextInfo* pTextInfo);
+public:
+	BOOL LookupOnLineDirectVar(CString strVarName,CBaseDB *&pVar);
+	void AddDirectOnLineVar(CBaseDB *pBaseDB);
+public:
+	static CString GetCommentByTextInfo(CElementTextInfo *pTextInfo);
+	static CString GetKKSByTextInfo(CElementTextInfo *pTextInfo);
+	static BOOL NeedAutoHideVar();
+	static int GetNEGIECDataTypePromoted(int iDataType);
+	static int GetMODIECDataTypePromoted(int iDataType1,int iDataType2);
+	static int GetTopRealType();
+	static int GetBasicMathReturnType();
+	static int GetIECDataTypePromoted(int iDataType);
+	void SetArrayMonitorInfo(CString strText,CArrayMonitorInfo *pInfo);
+	BOOL LookupArrayMonitorInfo(CString strName,CArrayMonitorInfo *&pArrayMonitorInfo);
+	void AddArrayMonitorInfo(CString strText,CElementTextInfo *pTextInfo);
+	// added by huweiguo 2012.07.09 for 功能块在线监视
+	void AddArrayMonitorInfo(CString strText,const CBaseDB *ptext,CElementTextInfo *pTextInfo);
+    //end added
+	void RemoveArrayMonitorInfo(CString strText);
+	static BOOL IsPrgPOUName(CString strContent);
+	BOOL HasMemberOfType(CString strType, CMap<CString,LPCTSTR,CBaseDB*,CBaseDB*>*pMap);
+	BOOL HasMemberOfType(CString strType);
+	BOOL TypeCanBeDefined(CString strType);
+	BOOL IsFunPOUName(CString strText);
+	static COLORREF GetOnLineDebugColor();
+	virtual void UpdateForSyncWithVar();
+	static CString GetEnumTypeString();
+	static int GetEnumTypeID();
+	static int GetPinTypeOfPOU(int iInputIndex,CString strPOUName);
+	static BOOL IsPinInOutOfFunPOU(CString strPinName,CString strPOUName);
+	void AddGlobalCrossRecord(CCrossRecord *pCrossRecord);
+	void CheckLocalCrossRecord();
+    //added by zhw end
+
+	/************************************************************************/
+	/*  用来对由文本字符串表达的组态逻辑进行HCC语法树构造					*/
+	/*  如ST语言、SFC转换条件												*/
+	/*  2011.8.15 chx 添加													*/
+	/*  来源:从STPOU中移除，并添加至此										*/
+	/************************************************************************/
+public:
+	//
+	//数组引脚索引
+	BOOL CompareExpressionConst(CExpressionConst *pLeftExprConst, CExpressionConst *pRightExprConst);
+	BOOL GetCanBeForcedMarkByExpression(CExpression *pExpression);
+	tagHccTreeNode* GetArrayIndexRightValue(CExpression *pExpr, int iDimensionNO, CArrayDB *pArrayDB);
+
+	tagHccTreeNode* GetForceMarkLeftValueByExpression(CExpression *pExpression);
+	tagHccTreeNode* GetForceMarkRightValueByExpression(CExpression *pExpression);
+
+	tagHccTreeNode* GetIntCompareWith0(CExpression *pExpression,int iHccOpType);
+
+	tagHccTreeNode* GetGlobalVarForceMarkLeftValue(CExpressionVariable *pExprVariable);
+	tagHccTreeNode* GetGlobalVarForceMarkRightValue(CExpressionVariable *pExprVariable);
+
+	tagHccTreeNode* GetLocalVarForceMarkLeftValue(CExpressionVariable* pExprVariable);
+
+	//重载部分函数图形语言中的相关函数使之能够处理文本语言
+	void SetCNSTTreeNodeConstValue(tagHccTreeNode *pCNSTTreeNode, CExpressionConst *pExpressionConst);
+	tagHccTreeNode* GetGlobalVarRightValue(CExpressionVariable *pExprVariable);
+	tagHccTreeNode* GetGlobalVarLeftValue(CExpressionVariable *pExprVariable, int &iPointerHCCType);
+	tagHccTreeNode* GetLocalVarLeftValue(CExpressionVariable *pExprVariable, int &iPointerHCCType);
+	tagHccTreeNode* GetLocalVarRightValue(CExpressionVariable *pExprVariable);
+	tagHccTreeNode* GetIntOffsetTreeNodeOfArrayPin(CExpressionVariable *pExprVariable);
+
+	tagHccTreeNode* GetLocalVarForceMarkRightValue(CExpressionVariable *pExprVariable);
+
+	//与类型提升相关函数
+	int GetHccTreeNodeType(tagHccTreeNode *pTreeNode);
+	int GetHccTypeTransferType(tagHccTreeNode *pTreeNode);
+
+	//与算术运算和选择预算相关的语法树构造函数
+	tagHccTreeNode* GetAddMulSubLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+	tagHccTreeNode* GetDivModLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+	tagHccTreeNode* GetSELOperatorLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+	tagHccTreeNode* GetMAXOperatorLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+	tagHccTreeNode* GetMINOperatorLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+	tagHccTreeNode* GetLIMITOperatorLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+	tagHccTreeNode* GetMUXOperatorLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+
+	//以下这些函数用来支持基本表达式和调用表达式的HCC语法树构造
+	tagHccTreeNode* GetNegativeExpressionRightValue(CExpression *pExpreession);
+	tagHccTreeNode* GetRightValueByExpression(CExpression *pExpression);
+	tagHccTreeNode* GetLogicOperatorsLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+	tagHccTreeNode* GetComparisionOperatorsLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+	tagHccTreeNode* GetArithmeticOperatorsLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+	tagHccTreeNode* GetFunRealParameters(CSyntaxElement *pSyntaxElement,tagHccTreeNode **pReturnLocal = NULL);
+	tagHccTreeNode* GetTypeConversionLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+	tagHccTreeNode* GetBasicMathLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+	tagHccTreeNode* GetBitShiftOperatorsLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+	tagHccTreeNode* GetSelectionOperatorsLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+	tagHccTreeNode* GetSizeOfOperatorLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+	tagHccTreeNode* GetLeftValueByExpression(CExpression *pExpression, int &iPointerHCCType,tagHccTreeNode **pReturnLocal = NULL);
+	tagHccTreeNode* GetMOVOperatorLogicTreeNode(CString strCallString,int iHccType,CExpressionList *pExprList);
+
+public:
+	BOOL IsSFCTempVar(CString strVarName);
+	//2011.10.20 ftx 添加 为了能够让语法分析器支持SFC转换条件
+	//获取SFC动作POU
+	virtual BOOL GetActionPOU(CString strActionName, CPOU *&pPOU);
+
+	/************************************************************************/
+public:
+	// 2012-03-12,chx add,为了功能块数据分离
+	//主要针对ST语言设计
+	tagHccTreeNode* GetGlobalVarLeftValue(CExpressionVariable *pExprVariable, int &iPointerHCCType,int iRegion);
+	tagHccTreeNode* GetGlobalVarRightValue(CExpressionVariable *pExprVariable,int iRegion);
+	tagHccTreeNode* GetRightValueByExpression(CExpression *pExpression,int iRegion);
+	tagHccTreeNode* GetLeftValueByExpression(CExpression *pExpression, int &iPointerHCCType,int iRegion);
+	tagHccTreeNode* GetArrayIndexRightValue(CExpression *pExpr, int iDimensionNO, CArrayDB *pArrayDB,int iRegion);
+	
+	//复杂变量成员的赋值
+	HccTreeNode* CreateSimpleMemAssignTreeNode(CBaseDB* pVar, int iOffset, HccTreeNode* pRightNode,HccTreeNode* pLeftNode,int iRegion);
+	tagHccTreeNode* GetForceMarkRightValueByExpression(CExpression *pExpression,int iRegion);
+	tagHccTreeNode* GetForceMarkLeftValueByExpression(CExpression *pExpression,int iRegion);
+	tagHccTreeNode* GetGlobalVarForceMarkRightValue(CExpressionVariable *pExprVariable,int iRegion);
+	tagHccTreeNode* GetGlobalVarForceMarkLeftValue(CExpressionVariable *pExprVariable,int iRegion);
+	
+	//功能块调用相关
+	tagHccTreeNode* GetFBVarPointer(CString strFBVarName,int iRegion);
+	tagHccTreeNode* GetLeftValueByVarText(CString strVarText,int &iPointerHCCType,int iRegion);
+	tagHccTreeNode* GetLocalVarRightValue(CExpressionVariable *pExprVariable,int iRegion);
+	tagHccTreeNode* GetLocalVarLeftValue(CExpressionVariable *pExprVariable, int &iPointerHCCType,int iRegion);
+	tagHccTreeNode* GetLocalVarForceMarkRightValue(CExpressionVariable *pExprVariable,int iRegion);
+	tagHccTreeNode* GetLocalVarForceMarkLeftValue(CExpressionVariable* pExprVariable,int iRegion);
+	
+	//与图形语言共享的公共函数
+	BOOL LookupParameterSymbol(CString strName, tagHccSymbol *&pHccSymbol,int iRegion);
+	BOOL LookupLocalSymbol(CString strKey, tagHccSymbol *&pLocalSymbol,int iRegion);
+	tagHccSymbol* GetSymbolInFun(CString strVarName,int Region);
+	tagHccTreeNode* GetLeftValueByTextInfo(CElementTextInfo *pTextInfo,int &iPointerHCCType,int iRegion);
+	tagHccTreeNode* GetGlobalVarLeftValue(CTextInfoVariable *pVarInfo,int &iPointerHCCType,int iRegion);
+	HccTreeNode* CreateComplicatedVarAsgnTreeNode(CBaseDB* pVar, HccTreeNode* pRightNode,HccTreeNode* pLeftNode,int iRegion);
+	tagHccTreeNode* GetLocalVarLeftValue(CTextInfoVariable *pVarInfo,int &iPointerHCCType,int iRegion);
+	
+	/************************************************************************/
+    //added by huweiguo , 2012.03.15为了功能块数据分离
+	//主要针对cfc语言与SFC语言设计
+    tagHccTreeNode* GetForceMarkRightValueByVarText(CString strVarText,int iRegion);
+    tagHccTreeNode* GetForceMarkRightValueByTextInfo(CElementTextInfo *pTextInfo,int iRegion);
+    tagHccTreeNode* GetLocalVarForceMarkRightValue(CTextInfoVariable *pVarInfo,int iRegion);
+    tagHccTreeNode* GetRightValueByVarText(CString strVarText,int iRegion);
+    tagHccTreeNode* GetRightValueByTextInfo(CElementTextInfo *pTextInfo,int iRegion);
+	tagHccTreeNode* GetGlobalVarRightValue(CTextInfoVariable *pVarInfo,int iRegion);
+    tagHccTreeNode* GetComplicatedVarAsgnTreeNode(CElementTextInfo *pLeftTextInfo,CElementTextInfo *pRightTextInfo,int iRegion);
+    tagHccTreeNode* CreateComplicatedVarAsgnTreeNodeforGraph(CBaseDB* pVar, HccTreeNode* pRightNode,HccTreeNode* pLeftNode,int iRegion);
+    HccTreeNode* CreateSimpleMemAssignTreeNodeforGraph(CBaseDB* pVar, int iOffset, HccTreeNode* pRightNode,HccTreeNode* pLeftNode,int iRegion);
+   	tagHccTreeNode* GetLocalVarRightValue(CTextInfoVariable *pVarInfo,int iRegion);
+	tagHccTreeNode* GetGlobalVarForceMarkRightValue(CTextInfoVariable *pVarInfo,int iRegion);
+	tagHccTreeNode* GetIntOffsetTreeNodeOfArrayPin(CTextInfoVariable *pArrayInfo,int iRegion);
+	/*************************************************************************/
+	/***********************************************************************************************************************/
+	//added by ZGH on 2012.03.19,功能块数据分离相关
+	//函数POU中 类型为功能块型和结构体型变量符号的生成
+	tagHccSymbol* GetFunTempSymbol(CBaseDB* pBaseDB,UINT uiRegion);
+	//获取带分区标志的字符串
+    CString GetRegionMarkString(CString strOriginal,UINT uiRegion);
+	//FUN POU功能块型中间变量初始化
+	void InitTempVariable(tagHccTreeNode *pHccEndNode,CBaseDB *pBaseDB,CList<CBaseDB*,CBaseDB*> *pFatherList,UINT uiRegion);
+	/***********************************************************************************************************************/
+    //POU异常处理子树（CALL树）构造接口 added by ZZT on 2012.03.22
+	HccTreeNode* CreateExceptionInfoNode(POUExceptionID exceptionID);
+    /***********************************************************************************************************************/
+	//数组异常处理接口函数 added by ZGH on 2012.03.23
+	HccTreeNode* CreateArrayException(CElementTextInfo* pItemInfo);
+	HccTreeNode* CreateDimException(CElementTextInfo* pSubItemInfo,int iStart,int iEnd);
+	/***********************************************************************************************************************/
+	HccTreeNode* CreateStringLocalTreeNode(CString strReturnType,CString strFunName);
+    
+	/************************************************************************/
+	//2012-07-23,chx add,为了实现pou导出xml功能
+public:
+	//2012-07-23,chx add,为了实现pou导出xml功能
+	virtual int ExportXMLPOUContent(CString strPathName, UINT uExportType = ET_POU);
+	//2012-07-23,chx add,IEC模块通过该接口编写自己的POU导出逻辑
+	virtual BOOL WriteXMLPOULogicContent(CFile *pFile);
+	//2012-07-23,chx add,向xml文件中写入内容
+	BOOL WriteXMLContent(CFile *pFile,CString &strContent);
+	/************************************************************************/
+public:
+	BOOL IsVarUserAvilable(CString strVarName);
+
+    //added by huweiguo 2013.11.20 for M5升级
+    virtual char ParsePinMapTable(CString & TypeName, CList<CString,CString>*& PinNameList);
+    //end added
+
+    //added by huweiguo 2013.11.26 for 跳转至变量处菜单使能
+	BOOL IsUnEnableGoToVarDefMenu(CString strtext);
+    //end added
+
+    //added by huweiguo 2014.02.13 for 打开POU属性对话框
+    void OpenPouAttributeDialog();
+    //end added
+	CString GetPOUShowInfoToWriteLog();
+
+    //added by huweiguo 2015.3.10 for dayin
+	BOOL GetLanguageType();
+    //end added
+
+	void SetTokenContent(tagLexToken &tagToken,CString strValue);
+	void ReleaseTokenContent(tagLexToken &tagToken);
+    
+public:
+	//2011.8.19 chx 添加
+	//为了在IECCOMMEN模块中能够存储语法分析器的分析结果，因此,设计一个指向ST或SFC转换条件的分析结果的指针
+	//如，在ST语言模块中定义一个翻译成中间代码时所用的栈m_sytaxElementStack，那么这个指针就指向这个栈
+	CArray<CSyntaxElement*,CSyntaxElement*> *m_pIECSyntaxElementStack;
+    
+protected:
+	// 2012-05-07,chx add,为了实现对FB或FUN中定义的复杂变量的有效性进行检查
+	BOOL CheckComplexVarValidforFBorFUN();
+	//2012-05-07,chx add, 检查复杂变量实例是否和所定义的类型一致
+	BOOL IsValidComplexVar(CBaseDB *pComplexDb,CBaseType *pType);
+    //2012-05-09,chx add, 比较复杂变量的简单类型引脚是否相同
+	BOOL CompareSimplePinOfComplexVar(CBaseDB *pLeftDb, CBaseDB *pRightDb ,BOOL bStructPin);
+
+	//2012-06-19,chx add, 实现PRG POU调用前设置POU调度周期功能
+	tagHccTreeNode * SetPRGInterval();
+	//2012-11-23,chx add,检查POU调度周期是否合法
+	BOOL CheckPOUCycle();
+    
+protected:
+	//2012-07-27,chx add,分析函数pou的返回值类型
+	BOOL XMLParseFunRetType(CString strContent);
+    
+private:
+	//2012-07-23,chx add,写入xml文件格式
+	BOOL WriteXMLHeader(CFile *pFile); 
+	BOOL WriteXMLPOUBlockStart(CFile *pFile);
+	BOOL WriteXMLPOUBlockHeader(CFile *pFile, UINT uExportType);
+	BOOL WriteXMLVarBlock(CFile *pFile);
+	BOOL WriteXMLPOUBlockEnd(CFile *pFile);
+    void WriteXMLTemplateFalg( CFile * pFile );
+    void WriteXMLCompiledFlag( CFile * pFile );
+
+private:
+	void CreateArrayOnlineInfo(CArrayMonitorInfo *pInfo,CElementTextInfo* eleTextInfo);
+    // added by huweiguo 2013.07.31 for 功能块在线监视
+	void CreateArrayOnlineInfo(CArrayMonitorInfo *pInfo,const CBaseDB *ptext,CElementTextInfo* eleTextInfo);
+    //end added  
+};
