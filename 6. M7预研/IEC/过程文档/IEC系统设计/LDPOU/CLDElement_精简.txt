@@ -14,3 +14,23 @@ private:
 	CString			m_strTailLogic;
 	list<int>		m_childrenIDList; //其子结点点的所有ID 号列表 
 };
+
+
+// CFC元件类
+class CCFCElement : public CElement  
+{
+public:
+	CCFCElement();
+	virtual ~CCFCElement();
+    
+    1. 引脚操作（实现函数），如：引脚显隐、输入引脚增删等
+    2. 关联元件操作，如：获取当前元件的输入元件、当前元件的输出元件等
+    3. 元件顺序号前移、后移
+
+private:
+	//元件执行顺序序号
+	int m_iExecuteOrder;		
+    //引脚
+    CCFCInputPinList* m_pInputPinList;
+    CCFCOutputPinList* m_pOutputPinList;
+};
