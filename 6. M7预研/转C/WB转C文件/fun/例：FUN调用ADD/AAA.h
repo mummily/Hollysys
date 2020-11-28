@@ -5,12 +5,15 @@
 #include <stdint.h>
 #include <math.h>
 
+// Fun
 #pragma pack(1)
-struct aaa
+struct AAA
 {
-int16_t* a;
-int16_t* b;
-int16_t* c;
+// IN
+bool* p1;
+bool* p2;
+// INOUT
+bool* p3;
 };
 #pragma pack()
 #endif
