@@ -10,10 +10,10 @@
 struct AAA
 {
 // IN
-int16_t* a;
-int16_t* b;
+int16_t* A;
+int16_t* B;
 // OUT
-int16_t* c;
+int16_t* C;
 // INOUT
 // TEMP
 };
