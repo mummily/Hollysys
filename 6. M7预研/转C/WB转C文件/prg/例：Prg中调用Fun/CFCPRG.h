@@ -1,10 +1,10 @@
-#ifndef __BBB_H_
-#define __BBB_H_
+#ifndef __CFCPRG_H_
+#define __CFCPRG_H_
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <math.h>
 
 // Prg
-void BBB();
+void CFCPRG();
 #endif
