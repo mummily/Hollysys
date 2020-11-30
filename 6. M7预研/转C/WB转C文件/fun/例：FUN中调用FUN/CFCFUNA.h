@@ -1,5 +1,5 @@
-#ifndef __AAA_H_
-#define __AAA_H_
+#ifndef __CFCFUNA_H_
+#define __CFCFUNA_H_
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdint.h>
@@ -7,11 +7,14 @@
 
 // Fun
 #pragma pack(1)
-struct AAA
+struct CFCFUNA
 {
 // IN
 int16_t* A;
+int16_t* B;
+int16_t* C;
 // INOUT
+int16_t* D;
 };
 #pragma pack()
 #endif
