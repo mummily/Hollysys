@@ -4,21 +4,22 @@
 
 void CFCPRG_FB() {
 bool __AT__CFCPRG_FB_EN_1 = true;
-
 if((bool)__AT__CFCPRG_FB_EN_1){
-
-struct CFCFB FB01;
-FB01.P1 = ((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_FB01_P1));
-FB01.P2 = ((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_FB01_P2));
-FB01.P3 = ((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_FB01_P3));
-FB01.P5 = ((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_FB01_P5));
-FB01.P4 = ((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_FB01_P4));
-(*(FB01.P1)) = (*(((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_A))));
-(*(FB01.P2)) = (*(((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_B))));
-(*(FB01.P4)) = (*(((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_C))));
-CFCFB(&FB01);
-
+struct CFCFB fb01;
+fb01.p1 = ((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_FB01_p1));
+fb01.p2 = ((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_FB01_p2));
+fb01.p3 = ((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_FB01_p3));
+fb01.p5 = ((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_FB01_p5));
+fb01.p4 = ((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_FB01_p4));
+(*(fb01.p1)) = (*(((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_A))));
+(*(fb01.p2)) = (*(((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_B))));
+(*(fb01.p4)) = (*(((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_C))));
+CFCFB(&fb01);
 }
-if((bool)__AT__CFCPRG_FB_EN_1) { (*(((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_D)))) = (*(FB01.P3));; }
-if((bool)__AT__CFCPRG_FB_EN_1) { (*(((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_E)))) = (*(FB01.P4));; }
+if((bool)__AT__CFCPRG_FB_EN_1){
+(*(((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_D)))) = (*(fb01.p3));
+}
+if((bool)__AT__CFCPRG_FB_EN_1){
+(*(((int16_t*)(gl_ulDatRangeHeadAdress + H_GrVarHAdr + H_CFCPRG_FB_E)))) = (*(fb01.p4));
+}
 }

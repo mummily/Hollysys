@@ -10,11 +10,11 @@
 struct CFCFUNA
 {
 // IN
-int16_t* A;
-int16_t* B;
-int16_t* C;
+int16_t* a;
+int16_t* b;
+int16_t* c;
 // INOUT
-int16_t* D;
+int16_t* d;
 };
 #pragma pack()
 #endif

@@ -5,18 +5,19 @@
 #include <stdint.h>
 #include <math.h>
 #include "CFCFB.h"
+
 // Fun
 #pragma pack(1)
 struct FUN_FB
 {
 // IN
-int16_t* A;
-int16_t* B;
-int16_t* C;
+int16_t* a;
+int16_t* b;
+int16_t* c;
+struct CFCFB fb01;
 // INOUT
-int16_t* D;
-int16_t* E;
-struct CFCFB FB01;
+int16_t* d;
+int16_t* e;
 };
 #pragma pack()
 #endif

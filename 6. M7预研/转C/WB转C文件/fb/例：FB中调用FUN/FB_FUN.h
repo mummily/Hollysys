@@ -4,17 +4,18 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <math.h>
+
 // FB
 #pragma pack(1)
 struct FB_FUN
 {
 // IN
-int16_t* A;
-int16_t* B;
-int16_t* C;
+int16_t* a;
+int16_t* b;
+int16_t* c;
 // OUT
 // INOUT
-bool* D;
+bool* d;
 // TEMP
 };
 #pragma pack()

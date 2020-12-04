@@ -5,18 +5,19 @@
 #include <stdint.h>
 #include <math.h>
 #include "CFCFB.h"
+
 // FB
 #pragma pack(1)
 struct FB_FB
 {
 // IN
-int16_t* A;
-int16_t* B;
-int16_t* C;
-struct CFCFB FB01;
+int16_t* a;
+int16_t* b;
+int16_t* c;
+struct CFCFB fb01;
 // OUT
-bool* D;
-int16_t* E;
+bool* d;
+int16_t* e;
 // INOUT
 // TEMP
 };

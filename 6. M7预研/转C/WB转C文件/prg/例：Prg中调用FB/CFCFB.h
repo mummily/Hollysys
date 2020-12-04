@@ -10,14 +10,14 @@
 struct CFCFB
 {
 // IN
-int16_t* P1;
-int16_t* P2;
+int16_t* p1;
+int16_t* p2;
 // OUT
-int16_t* P3;
+int16_t* p3;
 // INOUT
-int16_t* P4;
+int16_t* p4;
 // TEMP
-int16_t* P5;
+int16_t* p5;
 };
 #pragma pack()
 #endif
