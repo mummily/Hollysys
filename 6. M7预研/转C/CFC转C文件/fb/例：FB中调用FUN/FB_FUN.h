@@ -19,4 +19,14 @@ bool* d;
 // TEMP
 };
 #pragma pack()
+
+// Struct Copy
+inline void FB_FUN_Copy(struct FB_FUN* pSrc, struct FB_FUN* pDesc)
+{
+*(pDesc->a) = *(pSrc->a);
+*(pDesc->b) = *(pSrc->b);
+*(pDesc->c) = *(pSrc->c);
+*(pDesc->d) = *(pSrc->d);
+}
+
 #endif

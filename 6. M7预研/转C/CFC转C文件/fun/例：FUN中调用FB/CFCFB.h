@@ -20,4 +20,15 @@ int16_t* p4;
 int16_t* p5;
 };
 #pragma pack()
+
+// Struct Copy
+inline void CFCFB_Copy(struct CFCFB* pSrc, struct CFCFB* pDesc)
+{
+*(pDesc->p1) = *(pSrc->p1);
+*(pDesc->p2) = *(pSrc->p2);
+*(pDesc->p3) = *(pSrc->p3);
+*(pDesc->p4) = *(pSrc->p4);
+*(pDesc->p5) = *(pSrc->p5);
+}
+
 #endif

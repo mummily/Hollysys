@@ -16,4 +16,13 @@ int16_t* p2;
 int16_t* p3;
 };
 #pragma pack()
+
+// Struct Copy
+inline void CFCFUN_Copy(struct CFCFUN* pSrc, struct CFCFUN* pDesc)
+{
+*(pDesc->p1) = *(pSrc->p1);
+*(pDesc->p2) = *(pSrc->p2);
+*(pDesc->p3) = *(pSrc->p3);
+}
+
 #endif

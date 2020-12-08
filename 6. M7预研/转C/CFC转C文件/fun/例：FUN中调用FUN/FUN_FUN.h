@@ -1,37 +1,30 @@
-#ifndef __FB_FB_H_
-#define __FB_FB_H_
+#ifndef __FUN_FUN_H_
+#define __FUN_FUN_H_
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <math.h>
-#include "CFCFB.h"
 
-// FB
+// Fun
 #pragma pack(1)
-struct FB_FB
+struct FUN_FUN
 {
 // IN
 int16_t* a;
 int16_t* b;
 int16_t* c;
-struct CFCFB fb01;
-// OUT
-bool* d;
-int16_t* e;
 // INOUT
-// TEMP
+int16_t* d;
 };
 #pragma pack()
 
 // Struct Copy
-inline void FB_FB_Copy(struct FB_FB* pSrc, struct FB_FB* pDesc)
+inline void FUN_FUN_Copy(struct FUN_FUN* pSrc, struct FUN_FUN* pDesc)
 {
-CFCFB_Copy(&(pSrc->fb01), &(pDesc->fb01));
 *(pDesc->a) = *(pSrc->a);
 *(pDesc->b) = *(pSrc->b);
 *(pDesc->c) = *(pSrc->c);
 *(pDesc->d) = *(pSrc->d);
-*(pDesc->e) = *(pSrc->e);
 }
 
 #endif
