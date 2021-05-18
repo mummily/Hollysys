@@ -1,0 +1,57 @@
+[ SYM_1_PLC_PRG ]
+cSymKind = HCC_SK_FUNCTION
+cSymScope = HCC_SS_GLOBAL
+pType = TYPE_1_VOID
+address.iByteOffset = 696
+address.iBitOffset = 0
+address.pName = PLC_PRG
+
+[ SYM_2_BLINK1 ]
+cSymKind = HCC_SK_VARIABLE
+cSymScope = HCC_SS_GLOBAL
+pType = TYPE_2_COMPLEX
+address.iByteOffset = 14516
+address.iBitOffset = 0
+address.pName = BLINK1
+
+[ SYM_3_BLINK ]
+cSymKind = HCC_SK_FUNCTION
+cSymScope = HCC_SS_GLOBAL
+pType = TYPE_1_VOID
+address.iByteOffset = 700
+address.iBitOffset = 0
+address.pName = BLINK
+
+[ SYM_4_AT_PLC_PRG_45_EN ]
+cSymKind = HCC_SK_VARIABLE
+cSymScope = HCC_SS_GLOBAL
+pType = TYPE_3_BOOL
+address.iByteOffset = 13856
+address.iBitOffset = 0
+address.pName = AT_PLC_PRG_45_EN
+
+[ SYM_5_AT_PLC_PRG_45 ]
+cSymKind = HCC_SK_VARIABLE
+cSymScope = HCC_SS_GLOBAL
+pType = TYPE_3_BOOL
+address.iByteOffset = 13855
+address.iBitOffset = 0
+address.pName = AT_PLC_PRG_45
+
+[ SYM_6_BB ]
+cSymKind = HCC_SK_VARIABLE
+cSymScope = HCC_SS_GLOBAL
+pType = TYPE_4_U16
+address.iByteOffset = 13880
+address.iBitOffset = 0
+address.pName = BB
+
+[ SYM_7_bbbbb ]
+cSymKind = HCC_SK_VARIABLE
+cSymScope = HCC_SS_GLOBAL
+pType = TYPE_3_BOOL
+address.iByteOffset = 13847
+address.iBitOffset = 0
+address.pName = bbbbb
+
+[ SYM_0_END ]

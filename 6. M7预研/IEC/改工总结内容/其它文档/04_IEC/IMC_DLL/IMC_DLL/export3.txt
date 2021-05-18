@@ -1,0 +1,4 @@
+[EXPORT]
+TYPEFILE = D:\MyCode\02.ДњТы\IMC_DLL\type3.txt
+SYMBFILE = D:\MyCode\02.ДњТы\IMC_DLL\symbol3.txt
+NODEFILE = D:\MyCode\02.ДњТы\IMC_DLL\node3.txt

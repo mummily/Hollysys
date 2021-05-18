@@ -1,0 +1,5 @@
+BOOL CSFCPOU::CompilePOU()
+// 语法树生成完成后， InvokeHccEntrance之前
+	HCCToolkit tk;
+	tk.Generate(GetPOUName(), m_pMapStringToParameterSymbol, m_pMapStringToParameterSymbol, pHccStartNode);
+

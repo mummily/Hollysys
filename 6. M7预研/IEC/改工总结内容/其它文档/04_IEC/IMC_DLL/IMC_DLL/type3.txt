@@ -1,0 +1,21 @@
+[ TYPE_1_VOID ]
+cTypeKind = HCC_TK_VOID
+cAlign = 1
+usSize = 0
+
+[ TYPE_2_COMPLEX ]
+cTypeKind = HCC_TK_COMPLEX
+cAlign = 4
+usSize = 36
+
+[ TYPE_3_BOOL ]
+cTypeKind = HCC_TK_BOOL
+cAlign = 1
+usSize = 1
+
+[ TYPE_4_U16 ]
+cTypeKind = HCC_TK_U16
+cAlign = 2
+usSize = 2
+
+[ TYPE_0_END ]

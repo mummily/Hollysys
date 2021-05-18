@@ -1,0 +1,647 @@
+CNTS = 46
+
+[ NODE_1_START-PLC_PRG ]
+cOp = HCC_OP_START
+cTypeKind = HCC_TK_VOID
+pFather = NULL
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = SYM_1_PLC_PRG
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NODE_2_ASGN
+pStandby = NODE_46_END
+pRemarkNode = NULL
+
+[ NODE_2_ASGN ]
+cOp = HCC_OP_ASGN
+cTypeKind = HCC_TK_BOOL
+pFather = NULL
+pKids[0] = NODE_3_ADDP
+pKids[1] = NODE_6_CNST-1
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NODE_1_START-PLC_PRG
+pNext = NODE_7_ASGN
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_3_ADDP ]
+cOp = HCC_OP_ADDP
+cTypeKind = HCC_TK_POINTER
+pFather = NODE_2_ASGN
+pKids[0] = NODE_4_ADDRG-BLINK1
+pKids[1] = NODE_5_CNST-20
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_4_ADDRG-BLINK1 ]
+cOp = HCC_OP_ADDRG
+cTypeKind = HCC_TK_POINTER
+pFather = NODE_3_ADDP
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = SYM_2_BLINK1
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_5_CNST-20 ]
+cOp = HCC_OP_CNST
+cTypeKind = HCC_TK_I32
+pFather = NODE_3_ADDP
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 20
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_6_CNST-1 ]
+cOp = HCC_OP_CNST
+cTypeKind = HCC_TK_BOOL
+pFather = NODE_2_ASGN
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 1
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_7_ASGN ]
+cOp = HCC_OP_ASGN
+cTypeKind = HCC_TK_U32
+pFather = NULL
+pKids[0] = NODE_8_ADDP
+pKids[1] = NODE_11_CNST-2000
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NODE_2_ASGN
+pNext = NODE_12_ASGN
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_8_ADDP ]
+cOp = HCC_OP_ADDP
+cTypeKind = HCC_TK_POINTER
+pFather = NODE_7_ASGN
+pKids[0] = NODE_9_ADDRG-BLINK1
+pKids[1] = NODE_10_CNST-24
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_9_ADDRG-BLINK1 ]
+cOp = HCC_OP_ADDRG
+cTypeKind = HCC_TK_POINTER
+pFather = NODE_8_ADDP
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = SYM_2_BLINK1
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_10_CNST-24 ]
+cOp = HCC_OP_CNST
+cTypeKind = HCC_TK_I32
+pFather = NODE_8_ADDP
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 24
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_11_CNST-2000 ]
+cOp = HCC_OP_CNST
+cTypeKind = HCC_TK_U32
+pFather = NODE_7_ASGN
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 2000
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_12_ASGN ]
+cOp = HCC_OP_ASGN
+cTypeKind = HCC_TK_U32
+pFather = NULL
+pKids[0] = NODE_13_ADDP
+pKids[1] = NODE_16_CNST-2000
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NODE_7_ASGN
+pNext = NODE_17_CALL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_13_ADDP ]
+cOp = HCC_OP_ADDP
+cTypeKind = HCC_TK_POINTER
+pFather = NODE_12_ASGN
+pKids[0] = NODE_14_ADDRG-BLINK1
+pKids[1] = NODE_15_CNST-28
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_14_ADDRG-BLINK1 ]
+cOp = HCC_OP_ADDRG
+cTypeKind = HCC_TK_POINTER
+pFather = NODE_13_ADDP
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = SYM_2_BLINK1
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_15_CNST-28 ]
+cOp = HCC_OP_CNST
+cTypeKind = HCC_TK_I32
+pFather = NODE_13_ADDP
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 28
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_16_CNST-2000 ]
+cOp = HCC_OP_CNST
+cTypeKind = HCC_TK_U32
+pFather = NODE_12_ASGN
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 2000
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_17_CALL ]
+cOp = HCC_OP_CALL
+cTypeKind = HCC_TK_VOID
+pFather = NULL
+pKids[0] = NODE_18_ARG
+pKids[1] = NODE_21_ADDRG-BLINK
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NODE_12_ASGN
+pNext = NODE_22_IF_ELSE
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_18_ARG ]
+cOp = HCC_OP_ARG
+cTypeKind = HCC_TK_POINTER
+pFather = NODE_17_CALL
+pKids[0] = NODE_19_ADDRG-BLINK1
+pKids[1] = NODE_20_ARG
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_19_ADDRG-BLINK1 ]
+cOp = HCC_OP_ADDRG
+cTypeKind = HCC_TK_POINTER
+pFather = NODE_18_ARG
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = SYM_2_BLINK1
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_20_ARG ]
+cOp = HCC_OP_ARG
+cTypeKind = HCC_TK_VOID
+pFather = NODE_18_ARG
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_21_ADDRG-BLINK ]
+cOp = HCC_OP_ADDRG
+cTypeKind = HCC_TK_POINTER
+pFather = NODE_17_CALL
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = SYM_3_BLINK
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_22_IF_ELSE ]
+cOp = HCC_OP_IF_ELSE
+cTypeKind = HCC_TK_VOID
+pFather = NULL
+pKids[0] = NODE_23_INDIR
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NODE_17_CALL
+pNext = NODE_27_ASGN
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_23_INDIR ]
+cOp = HCC_OP_INDIR
+cTypeKind = HCC_TK_BOOL
+pFather = NODE_22_IF_ELSE
+pKids[0] = NODE_24_ADDP
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_24_ADDP ]
+cOp = HCC_OP_ADDP
+cTypeKind = HCC_TK_POINTER
+pFather = NODE_23_INDIR
+pKids[0] = NODE_25_ADDRG-BLINK1
+pKids[1] = NODE_26_CNST-32
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_25_ADDRG-BLINK1 ]
+cOp = HCC_OP_ADDRG
+cTypeKind = HCC_TK_POINTER
+pFather = NODE_24_ADDP
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = SYM_2_BLINK1
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_26_CNST-32 ]
+cOp = HCC_OP_CNST
+cTypeKind = HCC_TK_I32
+pFather = NODE_24_ADDP
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 32
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_27_ASGN ]
+cOp = HCC_OP_ASGN
+cTypeKind = HCC_TK_BOOL
+pFather = NULL
+pKids[0] = NODE_28_ADDRG-AT_PLC_PRG_45_EN
+pKids[1] = NODE_29_CNST-1
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NODE_22_IF_ELSE
+pNext = NODE_30_IF
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_28_ADDRG-AT_PLC_PRG_45_EN ]
+cOp = HCC_OP_ADDRG
+cTypeKind = HCC_TK_POINTER
+pFather = NODE_27_ASGN
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = SYM_4_AT_PLC_PRG_45_EN
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_29_CNST-1 ]
+cOp = HCC_OP_CNST
+cTypeKind = HCC_TK_BOOL
+pFather = NODE_27_ASGN
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 1
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_30_IF ]
+cOp = HCC_OP_IF
+cTypeKind = HCC_TK_VOID
+pFather = NULL
+pKids[0] = NODE_31_VAR-AT_PLC_PRG_45_EN
+pKids[1] = NODE_32_ASGN
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NODE_27_ASGN
+pNext = NODE_44_IF_ELSE
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_31_VAR-AT_PLC_PRG_45_EN ]
+cOp = HCC_OP_VAR
+cTypeKind = HCC_TK_BOOL
+pFather = NODE_30_IF
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = SYM_4_AT_PLC_PRG_45_EN
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_32_ASGN ]
+cOp = HCC_OP_ASGN
+cTypeKind = HCC_TK_BOOL
+pFather = NODE_30_IF
+pKids[0] = NODE_33_ADDRG-AT_PLC_PRG_45
+pKids[1] = NODE_34_BITTO
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NODE_41_ASGN
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_33_ADDRG-AT_PLC_PRG_45 ]
+cOp = HCC_OP_ADDRG
+cTypeKind = HCC_TK_POINTER
+pFather = NODE_32_ASGN
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = SYM_5_AT_PLC_PRG_45
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_34_BITTO ]
+cOp = HCC_OP_BITTO
+cTypeKind = HCC_TK_BOOL
+pFather = NODE_32_ASGN
+pKids[0] = NODE_35_BOOLTO
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_35_BOOLTO ]
+cOp = HCC_OP_BOOLTO
+cTypeKind = HCC_TK_BIT
+pFather = NODE_34_BITTO
+pKids[0] = NODE_36_EQ
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_36_EQ ]
+cOp = HCC_OP_EQ
+cTypeKind = HCC_TK_I32
+pFather = NODE_35_BOOLTO
+pKids[0] = NODE_37_U16TO
+pKids[1] = NODE_39_U8TO
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_37_U16TO ]
+cOp = HCC_OP_U16TO
+cTypeKind = HCC_TK_I32
+pFather = NODE_36_EQ
+pKids[0] = NODE_38_VAR-BB
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_38_VAR-BB ]
+cOp = HCC_OP_VAR
+cTypeKind = HCC_TK_U16
+pFather = NODE_37_U16TO
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = SYM_6_BB
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_39_U8TO ]
+cOp = HCC_OP_U8TO
+cTypeKind = HCC_TK_I32
+pFather = NODE_36_EQ
+pKids[0] = NODE_40_CNST-10
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_40_CNST-10 ]
+cOp = HCC_OP_CNST
+cTypeKind = HCC_TK_U8
+pFather = NODE_39_U8TO
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 10
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_41_ASGN ]
+cOp = HCC_OP_ASGN
+cTypeKind = HCC_TK_BOOL
+pFather = NULL
+pKids[0] = NODE_42_ADDRG-bbbbb
+pKids[1] = NODE_43_VAR-AT_PLC_PRG_45
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NODE_32_ASGN
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_42_ADDRG-bbbbb ]
+cOp = HCC_OP_ADDRG
+cTypeKind = HCC_TK_POINTER
+pFather = NODE_41_ASGN
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = SYM_7_bbbbb
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_43_VAR-AT_PLC_PRG_45 ]
+cOp = HCC_OP_VAR
+cTypeKind = HCC_TK_BOOL
+pFather = NODE_41_ASGN
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = SYM_5_AT_PLC_PRG_45
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_44_IF_ELSE ]
+cOp = HCC_OP_IF_ELSE
+cTypeKind = HCC_TK_VOID
+pFather = NULL
+pKids[0] = NODE_45_VAR-AT_PLC_PRG_45_EN
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NODE_30_IF
+pNext = NODE_46_END
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_45_VAR-AT_PLC_PRG_45_EN ]
+cOp = HCC_OP_VAR
+cTypeKind = HCC_TK_BOOL
+pFather = NODE_44_IF_ELSE
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = SYM_4_AT_PLC_PRG_45_EN
+hccSymbol.constValue = 
+pPrev = NULL
+pNext = NULL
+pStandby = NULL
+pRemarkNode = NULL
+
+[ NODE_46_END ]
+cOp = HCC_OP_END
+cTypeKind = HCC_TK_VOID
+pFather = NULL
+pKids[0] = NULL
+pKids[1] = NULL
+pKids[2] = NULL
+hccSymbol.pSymbol = NULL
+hccSymbol.constValue = 
+pPrev = NODE_44_IF_ELSE
+pNext = NULL
+pStandby = NODE_1_START-PLC_PRG
+pRemarkNode = NULL
+
+[ NODE_0_END ]
